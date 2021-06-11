@@ -22,17 +22,21 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagementGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagementGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagementGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagementGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagementGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_management_group(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurse</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagementGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_management_group(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">recurse</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagementGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagementGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagementGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagementGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagementGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagementGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagementGroup` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagementGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagementGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagementGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -254,14 +258,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The friendly name of the management group.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span>
@@ -321,14 +317,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of the management group.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">[]Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -390,14 +378,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The friendly name of the management group.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
@@ -458,14 +438,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The friendly name of the management group.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
@@ -492,7 +464,7 @@ The following output properties are available:
 <a href="#children_csharp" style="color: inherit; text-decoration: inherit;">Children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +596,7 @@ The following output properties are available:
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,9 +644,17 @@ The following output properties are available:
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -712,6 +692,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">[]Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
@@ -748,6 +736,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
 </span>
@@ -780,9 +776,17 @@ The following output properties are available:
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>

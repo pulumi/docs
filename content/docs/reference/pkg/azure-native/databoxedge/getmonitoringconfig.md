@@ -22,17 +22,20 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitoringConfig<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitoringConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitoringConfigResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitoringConfig<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitoringConfigArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitoringConfigResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitoring_config(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitoringConfigResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitoring_config(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitoringConfigResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitoringConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitoringConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitoringConfigResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitoringConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitoringConfigArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitoringConfigResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMonitoringConfig` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMonitoringConfig </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitoringConfigResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitoringConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitoringConfigResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitoringConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -332,7 +335,7 @@ The following output properties are available:
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -440,7 +443,7 @@ The following output properties are available:
 <a href="#counter_sets_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -488,7 +491,7 @@ The following output properties are available:
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +499,7 @@ The following output properties are available:
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +599,7 @@ The following output properties are available:
 <a href="#additional_dimensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -604,7 +607,7 @@ The following output properties are available:
 <a href="#dimension_filter_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +631,7 @@ The following output properties are available:
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +667,7 @@ The following output properties are available:
 <a href="#counters_python" style="color: inherit; text-decoration: inherit;">counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">Sequence[Metric<wbr>Counter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">Sequence[Metric<wbr>Counter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}

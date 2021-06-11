@@ -324,6 +324,12 @@
       "package_name": "pulumi_splunk",
       "pulumi_provider_name": "splunk",
       "terraform_provider_name": "splunk"
+    },
+    {
+      "name": "Pulumi Yandex",
+      "package_name": "pulumi_yandex",
+      "pulumi_provider_name": "yandex",
+      "terraform_provider_name": ""
     }
   ]
 }

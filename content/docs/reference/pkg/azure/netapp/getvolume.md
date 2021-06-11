@@ -62,8 +62,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/netapp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -92,17 +92,22 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolume<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolume<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVolumeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_volume(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVolumeResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVolumeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVolumeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVolumeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVolume` in the Go SDK.
 
@@ -111,7 +116,7 @@ func main() {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVolume </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVolumeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -157,6 +162,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitystyle_csharp">
+<a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -197,6 +211,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitystyle_go">
+<a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -237,6 +260,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitystyle_nodejs">
+<a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -277,6 +309,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the NetApp Volume exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_style_python">
+<a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -306,7 +347,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">List&lt;Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Volume data protection block
+*
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -357,7 +400,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of protocol types enabled on volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -401,6 +445,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitystyle_csharp">
+<a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -421,7 +474,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">[]Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Volume data protection block
+*
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -472,7 +527,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of protocol types enabled on volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -516,6 +572,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitystyle_go">
+<a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -536,7 +601,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Volume data protection block
+*
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -587,7 +654,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of protocol types enabled on volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -631,6 +699,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitystyle_nodejs">
+<a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -651,7 +728,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvolumedataprotectionreplication">Sequence[Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Volume data protection block
+*
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -702,7 +781,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of protocol types enabled on volume.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -746,6 +826,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="security_style_python">
+<a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume security style
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -768,7 +857,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The endpoint type.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumelocation_csharp">
 <a href="#remotevolumelocation_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Location</a>
@@ -776,7 +866,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Location of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumeresourceid_csharp">
 <a href="#remotevolumeresourceid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
@@ -784,15 +875,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Resource ID of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="replicationfrequency_csharp">
+<a href="#replicationfrequency_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency of replication.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="replicationschedule_csharp">
 <a href="#replicationschedule_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not in use and will be removed in version 3.0 of the provider. Please use `replication_frequency` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -804,7 +905,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The endpoint type.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumelocation_go">
 <a href="#remotevolumelocation_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Location</a>
@@ -812,7 +914,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Location of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumeresourceid_go">
 <a href="#remotevolumeresourceid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
@@ -820,15 +923,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Resource ID of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="replicationfrequency_go">
+<a href="#replicationfrequency_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency of replication.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="replicationschedule_go">
 <a href="#replicationschedule_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not in use and will be removed in version 3.0 of the provider. Please use `replication_frequency` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -840,7 +953,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The endpoint type.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumelocation_nodejs">
 <a href="#remotevolumelocation_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Location</a>
@@ -848,7 +962,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Location of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotevolumeresourceid_nodejs">
 <a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
@@ -856,15 +971,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Resource ID of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="replicationfrequency_nodejs">
+<a href="#replicationfrequency_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency of replication.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="replicationschedule_nodejs">
 <a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not in use and will be removed in version 3.0 of the provider. Please use `replication_frequency` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -876,7 +1001,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The endpoint type.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_volume_location_python">
 <a href="#remote_volume_location_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>location</a>
@@ -884,7 +1010,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Location of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_volume_resource_id_python">
 <a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
@@ -892,15 +1019,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Resource ID of the primary volume.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="replication_frequency_python">
+<a href="#replication_frequency_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Frequency of replication.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="replication_schedule_python">
 <a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is not in use and will be removed in version 3.0 of the provider. Please use `replication_frequency` instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 

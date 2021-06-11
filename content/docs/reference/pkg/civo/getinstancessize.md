@@ -19,17 +19,19 @@ meta_desc: "Documentation for the civo.getInstancesSize function with examples, 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstancesSize<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstancesSizeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstancesSize<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstancesSizeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances_size(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSizeFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSizeSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesSizeResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances_size(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSizeFilter]]</span> = None<span class="p">,</span>
+                       <span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSizeSort]]</span> = None<span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesSizeResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstancesSize<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstancesSizeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstancesSize<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstancesSizeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetInstancesSize` in the Go SDK.
 
@@ -38,7 +40,7 @@ meta_desc: "Documentation for the civo.getInstancesSize function with examples, 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstancesSize </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstancesSizeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstancesSizeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -54,7 +56,7 @@ The following arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessizefilter">List&lt;Get<wbr>Instances<wbr>Size<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancessizefilter">List&lt;Get<wbr>Instances<wbr>Size<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62,7 +64,7 @@ The following arguments are supported:
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessizesort">List&lt;Get<wbr>Instances<wbr>Size<wbr>Sort<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancessizesort">List&lt;Get<wbr>Instances<wbr>Size<wbr>Sort&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -114,7 +116,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessizefilter">Sequence[Get<wbr>Instances<wbr>Size<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancessizefilter">Sequence[Get<wbr>Instances<wbr>Size<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -122,7 +124,7 @@ The following arguments are supported:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessizesort">Sequence[Get<wbr>Instances<wbr>Size<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancessizesort">Sequence[Get<wbr>Instances<wbr>Size<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -311,6 +313,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -330,6 +348,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -351,6 +385,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -371,6 +421,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -381,8 +447,8 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cpucores_csharp">
-<a href="#cpucores_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -397,8 +463,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="diskgb_csharp">
-<a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
+        <span id="disk_csharp">
+<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -413,16 +479,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nicename_csharp">
-<a href="#nicename_csharp" style="color: inherit; text-decoration: inherit;">Nice<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rammb_csharp">
-<a href="#rammb_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
+        <span id="ram_csharp">
+<a href="#ram_csharp" style="color: inherit; text-decoration: inherit;">Ram</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -435,14 +493,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cpucores_go">
-<a href="#cpucores_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -457,8 +523,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="diskgb_go">
-<a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
+        <span id="disk_go">
+<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -473,16 +539,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nicename_go">
-<a href="#nicename_go" style="color: inherit; text-decoration: inherit;">Nice<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rammb_go">
-<a href="#rammb_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
+        <span id="ram_go">
+<a href="#ram_go" style="color: inherit; text-decoration: inherit;">Ram</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -495,14 +553,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cpucores_nodejs">
-<a href="#cpucores_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cores</a>
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -517,8 +583,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="diskgb_nodejs">
-<a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
+        <span id="disk_nodejs">
+<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -533,16 +599,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nicename_nodejs">
-<a href="#nicename_nodejs" style="color: inherit; text-decoration: inherit;">nice<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rammb_nodejs">
-<a href="#rammb_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Mb</a>
+        <span id="ram_nodejs">
+<a href="#ram_nodejs" style="color: inherit; text-decoration: inherit;">ram</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -555,14 +613,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cpu_cores_python">
-<a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -577,8 +643,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="disk_gb_python">
-<a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
+        <span id="disk_python">
+<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -593,16 +659,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nice_name_python">
-<a href="#nice_name_python" style="color: inherit; text-decoration: inherit;">nice_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ram_mb_python">
-<a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
+        <span id="ram_python">
+<a href="#ram_python" style="color: inherit; text-decoration: inherit;">ram</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -614,6 +672,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

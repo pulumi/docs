@@ -182,7 +182,7 @@ import (
 	"fmt"
 
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -527,19 +527,41 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[SmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[VoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">action_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArmRoleReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationRunbookReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureAppPushReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFunctionReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EmailReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">group_short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ItsmReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogicAppReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[SmsReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[VoiceReceiverArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookReceiverArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -550,46 +572,44 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -600,33 +620,25 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -638,25 +650,19 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -973,7 +979,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#armrolereceivers_nodejs" style="color: inherit; text-decoration: inherit;">arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiver">Arm<wbr>Role<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#armrolereceiver">Arm<wbr>Role<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +987,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automationrunbookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiver">Automation<wbr>Runbook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiver">Automation<wbr>Runbook<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +995,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureapppushreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiver">Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#azureapppushreceiver">Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1003,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azurefunctionreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiver">Azure<wbr>Function<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiver">Azure<wbr>Function<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1011,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#emailreceivers_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiver">Email<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#emailreceiver">Email<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1019,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsmreceivers_nodejs" style="color: inherit; text-decoration: inherit;">itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiver">Itsm<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#itsmreceiver">Itsm<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1035,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logicappreceivers_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiver">Logic<wbr>App<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#logicappreceiver">Logic<wbr>App<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1043,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#smsreceivers_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiver">Sms<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#smsreceiver">Sms<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1059,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voicereceivers_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiver">Voice<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#voicereceiver">Voice<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1067,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiver">Webhook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#webhookreceiver">Webhook<wbr>Receiver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1410,8 +1416,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -1438,8 +1444,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -1466,8 +1472,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -1494,8 +1500,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -1524,8 +1530,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -1552,8 +1558,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -1580,8 +1586,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -1608,8 +1614,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -1648,14 +1654,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_csharp">
-<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhookresourceid_csharp">
 <a href="#webhookresourceid_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Resource<wbr>Id</a>
 </span>
@@ -1678,7 +1676,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_csharp">
+<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1708,14 +1714,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_go">
-<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhookresourceid_go">
 <a href="#webhookresourceid_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Resource<wbr>Id</a>
 </span>
@@ -1738,7 +1736,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_go">
+<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1768,14 +1774,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_nodejs">
-<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhookresourceid_nodejs">
 <a href="#webhookresourceid_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
 </span>
@@ -1798,7 +1796,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_nodejs">
+<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1828,14 +1834,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="use_common_alert_schema_python">
-<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhook_resource_id_python">
 <a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span>
@@ -1858,7 +1856,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationrunbookreceiverresponse">Automation<wbr>Runbook<wbr>Receiver<wbr>Response</h4>
@@ -1890,14 +1896,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_csharp">
-<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhookresourceid_csharp">
 <a href="#webhookresourceid_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Resource<wbr>Id</a>
 </span>
@@ -1920,7 +1918,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_csharp">
+<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1950,14 +1956,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_go">
-<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhookresourceid_go">
 <a href="#webhookresourceid_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Resource<wbr>Id</a>
 </span>
@@ -1980,7 +1978,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_go">
+<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2010,14 +2016,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="usecommonalertschema_nodejs">
-<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhookresourceid_nodejs">
 <a href="#webhookresourceid_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
 </span>
@@ -2040,7 +2038,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_nodejs">
+<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2070,14 +2076,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="use_common_alert_schema_python">
-<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="webhook_resource_id_python">
 <a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span>
@@ -2100,7 +2098,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureapppushreceiver">Azure<wbr>App<wbr>Push<wbr>Receiver</h4>
@@ -2302,8 +2308,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2346,8 +2352,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2390,8 +2396,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2434,8 +2440,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -2480,8 +2486,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2524,8 +2530,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2568,8 +2574,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2612,8 +2618,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -2642,8 +2648,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2670,8 +2676,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2698,8 +2704,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2726,8 +2732,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -2764,8 +2770,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2800,8 +2806,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2836,8 +2842,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -2872,8 +2878,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -3266,8 +3272,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -3302,8 +3308,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -3338,8 +3344,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -3374,8 +3380,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -3412,8 +3418,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -3448,8 +3454,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -3484,8 +3490,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
@@ -3520,8 +3526,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
@@ -4038,15 +4044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="usecommonalertschema_csharp">
-<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_csharp">
 <a href="#identifieruri_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uri</a>
@@ -4078,7 +4076,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_csharp">
+<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4098,15 +4104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="usecommonalertschema_go">
-<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_go">
 <a href="#identifieruri_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uri</a>
@@ -4138,7 +4136,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_go">
+<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4158,15 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="usecommonalertschema_nodejs">
-<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_nodejs">
 <a href="#identifieruri_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
@@ -4198,7 +4196,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_nodejs">
+<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4218,15 +4224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="use_common_alert_schema_python">
-<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_uri_python">
 <a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
@@ -4258,7 +4256,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webhookreceiverresponse">Webhook<wbr>Receiver<wbr>Response</h4>
@@ -4280,15 +4286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="usecommonalertschema_csharp">
-<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_csharp">
 <a href="#identifieruri_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uri</a>
@@ -4320,7 +4318,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_csharp">
+<a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4340,15 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="usecommonalertschema_go">
-<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_go">
 <a href="#identifieruri_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uri</a>
@@ -4380,7 +4378,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_go">
+<a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4400,15 +4406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="usecommonalertschema_nodejs">
-<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_nodejs">
 <a href="#identifieruri_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
@@ -4440,7 +4438,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usecommonalertschema_nodejs">
+<a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4460,15 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="use_common_alert_schema_python">
-<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_uri_python">
 <a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
@@ -4500,7 +4498,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_common_alert_schema_python">
+<a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

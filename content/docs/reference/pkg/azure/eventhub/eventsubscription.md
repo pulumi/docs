@@ -76,10 +76,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/eventgrid"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -199,19 +199,45 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,46 +248,44 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -270,35 +294,27 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -310,25 +326,19 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -726,7 +736,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +745,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +763,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -780,7 +790,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -825,7 +835,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +862,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +871,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +880,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -888,7 +898,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1141,20 +1151,42 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EventSubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventSubscription</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EventSubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventSubscription</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">) -&gt;</span> EventSubscription</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">,</span>
+        <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
+        <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">,</span>
+        <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">,</span>
+        <span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">,</span>
+        <span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">,</span>
+        <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">) -&gt;</span> EventSubscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EventSubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EventSubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventSubscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EventSubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventSubscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EventSubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1631,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1690,7 @@ The following state arguments are supported:
 <a href="#state_eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1685,7 +1717,7 @@ The following state arguments are supported:
 <a href="#state_hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1730,7 +1762,7 @@ The following state arguments are supported:
 <a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1798,7 @@ The following state arguments are supported:
 <a href="#state_storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1775,7 +1807,7 @@ The following state arguments are supported:
 <a href="#state_storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1784,7 +1816,7 @@ The following state arguments are supported:
 <a href="#state_subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1802,7 +1834,7 @@ The following state arguments are supported:
 <a href="#state_webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2234,7 +2266,7 @@ The following state arguments are supported:
 <a href="#boolequals_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2275,7 @@ The following state arguments are supported:
 <a href="#numbergreaterthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2284,7 @@ The following state arguments are supported:
 <a href="#numbergreaterthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2293,7 @@ The following state arguments are supported:
 <a href="#numberins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2302,7 @@ The following state arguments are supported:
 <a href="#numberlessthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2311,7 @@ The following state arguments are supported:
 <a href="#numberlessthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2320,7 @@ The following state arguments are supported:
 <a href="#numbernotins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2329,7 @@ The following state arguments are supported:
 <a href="#stringbeginswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Begins<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2338,7 @@ The following state arguments are supported:
 <a href="#stringcontains_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Contains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2347,7 @@ The following state arguments are supported:
 <a href="#stringendswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ends<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2356,7 @@ The following state arguments are supported:
 <a href="#stringins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2365,7 @@ The following state arguments are supported:
 <a href="#stringnotins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In[]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd></dl>

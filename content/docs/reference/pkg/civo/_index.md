@@ -20,6 +20,7 @@ A Pulumi package for creating and managing Civo cloud resources.
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="kubernetescluster" title="KubernetesCluster"><span class="symbol resource"></span>KubernetesCluster</a></li>
+    <li><a href="kubernetesnodepool" title="KubernetesNodePool"><span class="symbol resource"></span>KubernetesNodePool</a></li>
     <li><a href="loadbalancer" title="LoadBalancer"><span class="symbol resource"></span>LoadBalancer</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -41,6 +42,7 @@ A Pulumi package for creating and managing Civo cloud resources.
     <li><a href="getkubernetesversion" title="GetKubernetesVersion"><span class="symbol function"></span>GetKubernetesVersion</a></li>
     <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="symbol function"></span>GetLoadBalancer</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
     <li><a href="gettemplate" title="GetTemplate"><span class="symbol function"></span>GetTemplate</a></li>
@@ -56,6 +58,6 @@ A Pulumi package for creating and managing Civo cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>1.0.1</dd>
 </dl>
 

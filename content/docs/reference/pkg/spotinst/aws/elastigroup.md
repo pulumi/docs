@@ -163,19 +163,100 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupCpuOptionsArgs]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">,</span>
+                <span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">,</span>
+                <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">,</span>
+                <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">,</span>
+                <span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">,</span>
+                <span class="nx">stateful_instance_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupStatefulInstanceActionArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">,</span>
+                <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewElastigroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Elastigroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewElastigroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Elastigroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,46 +267,44 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,35 +313,27 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -274,25 +345,19 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -885,6 +950,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulinstanceactions_csharp">
+<a href="#statefulinstanceactions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,6 +1624,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="statefulinstanceactions_go">
+<a href="#statefulinstanceactions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">[]Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -1732,7 +1813,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</a></span>
+        <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1849,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1893,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1955,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#instancetypesweights_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Weights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight[]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1883,7 +1964,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationbeanstalk_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Beanstalk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1972,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationcodedeploy_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Codedeploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1981,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationdockerswarm_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Docker<wbr>Swarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1990,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationecs_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Ecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1999,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationgitlab_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +2008,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationkubernetes_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Kubernetes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +2017,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationmesosphere_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Mesosphere</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +2026,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationmultairuntime_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Multai<wbr>Runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1954,7 +2035,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationnomad_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Nomad</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +2044,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationrancher_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Rancher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +2053,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#integrationroute53_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Route53</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +2088,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +2115,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#multaitargetsets_nodejs" style="color: inherit; text-decoration: inherit;">multai<wbr>Target<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2052,7 +2133,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2215,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#reverttospot_nodejs" style="color: inherit; text-decoration: inherit;">revert<wbr>To<wbr>Spot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</a></span>
+        <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2143,7 +2224,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2232,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scalingstrategies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2241,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scalingtargetpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Target<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2249,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Up<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2257,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2274,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#signals_nodejs" style="color: inherit; text-decoration: inherit;">signals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsignal">Elastigroup<wbr>Signal[]</a></span>
+        <span class="property-type"><a href="#elastigroupsignal">Elastigroup<wbr>Signal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2210,7 +2291,15 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#statefuldeallocation_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Deallocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
+        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulinstanceactions_nodejs">
+<a href="#statefulinstanceactions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2317,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouptag">Elastigroup<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#elastigrouptag">Elastigroup<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2335,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2877,6 +2966,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stateful_instance_actions_python">
+<a href="#stateful_instance_actions_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>instance_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Sequence[Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
@@ -3021,20 +3118,97 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ElastigroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Elastigroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ElastigroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Elastigroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupCpuOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">,</span>
+        <span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">stateful_instance_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupStatefulInstanceActionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElastigroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ElastigroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Elastigroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElastigroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ElastigroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Elastigroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Elastigroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ElastigroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Elastigroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ElastigroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3718,6 +3892,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statefulinstanceactions_csharp">
+<a href="#state_statefulinstanceactions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnetids_csharp">
 <a href="#state_subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -4381,6 +4563,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_statefulinstanceactions_go">
+<a href="#state_statefulinstanceactions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">[]Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subnetids_go">
 <a href="#state_subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -4507,7 +4697,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</a></span>
+        <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
 {{% /md %}}</dd><dt class="property-optional"
@@ -4543,7 +4733,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4587,7 +4777,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4676,7 +4866,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_instancetypesweights_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Weights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight[]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -4685,7 +4875,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationbeanstalk_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Beanstalk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4693,7 +4883,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationcodedeploy_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Codedeploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4702,7 +4892,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationdockerswarm_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Docker<wbr>Swarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4711,7 +4901,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationecs_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Ecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4720,7 +4910,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationgitlab_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4729,7 +4919,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationkubernetes_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Kubernetes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4738,7 +4928,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationmesosphere_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Mesosphere</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4747,7 +4937,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationmultairuntime_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Multai<wbr>Runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4756,7 +4946,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationnomad_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Nomad</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4765,7 +4955,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationrancher_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Rancher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4774,7 +4964,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_integrationroute53_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Route53</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4809,7 +4999,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
 {{% /md %}}</dd><dt class="property-optional"
@@ -4836,7 +5026,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_multaitargetsets_nodejs" style="color: inherit; text-decoration: inherit;">multai<wbr>Target<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4854,7 +5044,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4955,7 +5145,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_reverttospot_nodejs" style="color: inherit; text-decoration: inherit;">revert<wbr>To<wbr>Spot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</a></span>
+        <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4964,7 +5154,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4972,7 +5162,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scalingstrategies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4981,7 +5171,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scalingtargetpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Target<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4989,7 +5179,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Up<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4997,7 +5187,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5023,7 +5213,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_signals_nodejs" style="color: inherit; text-decoration: inherit;">signals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsignal">Elastigroup<wbr>Signal[]</a></span>
+        <span class="property-type"><a href="#elastigroupsignal">Elastigroup<wbr>Signal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5040,7 +5230,15 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 <a href="#state_statefuldeallocation_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Deallocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
+        <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_statefulinstanceactions_nodejs">
+<a href="#state_statefulinstanceactions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Instance<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5058,7 +5256,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouptag">Elastigroup<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#elastigrouptag">Elastigroup<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5076,7 +5274,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5704,6 +5902,14 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_stateful_instance_actions_python">
+<a href="#state_stateful_instance_actions_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>instance_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupstatefulinstanceaction">Sequence[Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6446,7 +6652,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#deploymentpreferences_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
 {{% /md %}}</dd><dt class="property-optional"
@@ -6463,7 +6669,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#managedactions_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
 {{% /md %}}</dd></dl>
@@ -6615,7 +6821,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
 {{% /md %}}</dd></dl>
@@ -6786,7 +6992,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#platformupdate_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
 {{% /md %}}</dd></dl>
@@ -7011,7 +7217,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#deploymentgroups_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specify the deployment groups details.
 {{% /md %}}</dd><dt class="property-required"
@@ -7299,7 +7505,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7308,7 +7514,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7789,7 +7995,7 @@ Usage:
 <a href="#autoscaleattributes_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute[]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7807,7 +8013,7 @@ Usage:
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7816,7 +8022,7 @@ Usage:
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7852,7 +8058,7 @@ Usage:
 <a href="#batch_nodejs" style="color: inherit; text-decoration: inherit;">batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Batch configuration object:
 {{% /md %}}</dd></dl>
@@ -8338,7 +8544,7 @@ Usage:
 <a href="#runner_nodejs" style="color: inherit; text-decoration: inherit;">runner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Gitlab runner.
 {{% /md %}}</dd></dl>
@@ -8624,7 +8830,7 @@ Usage:
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8633,7 +8839,7 @@ Usage:
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8660,7 +8866,7 @@ Usage:
 <a href="#autoscalelabels_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9347,7 +9553,7 @@ Usage:
 <a href="#autoscaleconstraints_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint[]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9365,7 +9571,7 @@ Usage:
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9374,7 +9580,7 @@ Usage:
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9932,7 +10138,7 @@ Usage:
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53domain">Elastigroup<wbr>Integration<wbr>Route53Domain[]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53domain">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of one or more domains to register.
 {{% /md %}}</dd></dl>
@@ -10049,7 +10255,7 @@ Usage:
 <a href="#recordsets_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of records containing authoritative DNS information for the specified domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11255,7 +11461,7 @@ Usage:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11993,7 +12199,7 @@ Usage:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12677,7 +12883,7 @@ Usage:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13875,6 +14081,96 @@ Usage:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="elastigroupstatefulinstanceaction">Elastigroup<wbr>Stateful<wbr>Instance<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statefulinstanceid_csharp">
+<a href="#statefulinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statefulinstanceid_go">
+<a href="#statefulinstanceid_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="statefulinstanceid_nodejs">
+<a href="#statefulinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="stateful_instance_id_python">
+<a href="#stateful_instance_id_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>instance_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String, Stateful Instance ID on which the action should be performed.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}String, Action type. Supported action types: `pause`, `resume`, `recycle`, `deallocate`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="elastigrouptag">Elastigroup<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
@@ -14077,7 +14373,7 @@ Usage:
 <a href="#rollconfig_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
 {{% /md %}}</dd></dl>
@@ -14275,7 +14571,7 @@ Usage:
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
 {{% /md %}}</dd><dt class="property-optional"
@@ -14464,7 +14760,7 @@ Usage:
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure</a></span>
+        <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set detach options to the deployment.
 {{% /md %}}</dd><dt class="property-optional"

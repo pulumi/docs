@@ -45,7 +45,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
             role: "roles/storage.objectViewer",
         },
     ],
-}, { async: true }));
+}));
 ```
 
 This data source is used to define IAM policies to apply to other resources.
@@ -61,17 +61,19 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIAMPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIAMPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIAMPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIAMPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIAMPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIAMPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy(</span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyAuditConfigArgs]]</span> = None<span class="p">, </span><span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyBindingArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIAMPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy(</span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyAuditConfig]]</span> = None<span class="p">,</span>
+                   <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyBinding]]</span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIAMPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIAMPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIAMPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIAMPolicy` in the Go SDK.
 
@@ -80,7 +82,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIAMPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIAMPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIAMPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIAMPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIAMPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -96,7 +98,7 @@ The following arguments are supported:
 <a href="#auditconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -105,7 +107,7 @@ The following arguments are supported:
 <a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
@@ -168,7 +170,7 @@ defining a binding to be included in the policy document. Multiple
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -177,7 +179,7 @@ defining a binding to be included in the policy document. Multiple
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">Sequence[Get<wbr>IAMPolicy<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">Sequence[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
@@ -367,7 +369,7 @@ referencing from a resource that supports IAM.
 <a href="#auditlogconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd><dt class="property-required"
@@ -433,7 +435,7 @@ referencing from a resource that supports IAM.
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd><dt class="property-required"
@@ -578,7 +580,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -698,7 +700,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
 {{% /md %}}</dd></dl>

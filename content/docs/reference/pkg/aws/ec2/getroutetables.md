@@ -13,138 +13,6 @@ meta_desc: "Documentation for the aws.ec2.getRouteTables function with examples,
 This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dict = Output.Create(Initialize());
-    }
-
-    private async Task<IDictionary<string, Output<string>>> Initialize()
-    {
-        var rts = await Aws.Ec2.GetRouteTables.InvokeAsync(new Aws.Ec2.GetRouteTablesArgs
-        {
-            VpcId = @var.Vpc_id,
-            Filters = 
-            {
-                new Aws.Ec2.Inputs.GetRouteTablesFilterArgs
-                {
-                    Name = "tag:kubernetes.io/kops/role",
-                    Values = 
-                    {
-                        "private*",
-                    },
-                },
-            },
-        });
-        var route = new List<Aws.Ec2.Route>();
-        for (var rangeIndex = 0; rangeIndex < rts.Ids.Length; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            route.Add(new Aws.Ec2.Route($"route-{range.Value}", new Aws.Ec2.RouteArgs
-            {
-                RouteTableId = rts.Ids[range.Value],
-                DestinationCidrBlock = "10.0.1.0/22",
-                VpcPeeringConnectionId = "pcx-0e9a7a9ecd137dc54",
-            }));
-        }
-
-        return new Dictionary<string, Output<string>>
-        {
-        };
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_aws as aws
-
-rts = aws.ec2.get_route_tables(vpc_id=var["vpc_id"],
-    filters=[aws.ec2.GetRouteTablesFilterArgs(
-        name="tag:kubernetes.io/kops/role",
-        values=["private*"],
-    )])
-route = []
-for range in [{"value": i} for i in range(0, len(rts.ids))]:
-    route.append(aws.ec2.Route(f"route-{range['value']}",
-        route_table_id=rts.ids[range["value"]],
-        destination_cidr_block="10.0.1.0/22",
-        vpc_peering_connection_id="pcx-0e9a7a9ecd137dc54"))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-export = async () => {
-    const rts = await aws.ec2.getRouteTables({
-        vpcId: _var.vpc_id,
-        filters: [{
-            name: "tag:kubernetes.io/kops/role",
-            values: ["private*"],
-        }],
-    });
-    const route: aws.ec2.Route[];
-    for (const range = {value: 0}; range.value < rts.ids.length; range.value++) {
-        route.push(new aws.ec2.Route(`route-${range.value}`, {
-            routeTableId: rts.ids[range.value],
-            destinationCidrBlock: "10.0.1.0/22",
-            vpcPeeringConnectionId: "pcx-0e9a7a9ecd137dc54",
-        }));
-    }
-}
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getRouteTables {#using}
@@ -153,17 +21,20 @@ export = async () => {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRouteTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRouteTablesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRouteTablesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRouteTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRouteTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRouteTablesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRouteTablesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRouteTablesFilter]]</span> = None<span class="p">,</span>
+                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRouteTablesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRouteTablesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetRouteTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRouteTablesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetRouteTables` in the Go SDK.
 
@@ -172,7 +43,7 @@ export = async () => {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRouteTables </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRouteTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRouteTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRouteTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRouteTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -188,7 +59,7 @@ The following arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablesfilter">List&lt;Get<wbr>Route<wbr>Tables<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getroutetablesfilter">List&lt;Get<wbr>Route<wbr>Tables<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -284,7 +155,7 @@ a pair on the desired route tables.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablesfilter">Sequence[Get<wbr>Route<wbr>Tables<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getroutetablesfilter">Sequence[Get<wbr>Route<wbr>Tables<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd><dt class="property-optional"

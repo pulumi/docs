@@ -34,10 +34,10 @@ class MyStack : Stack
     {
         var time = new Datadog.Dashboard("time", new Datadog.DashboardArgs
         {
-            Description = "Created using the Datadog provider in TF",
-            IsReadOnly = true,
-            LayoutType = "ordered",
             Title = "TF Test Layout Dashboard",
+            Description = "Created using the Datadog provider",
+            LayoutType = "ordered",
+            IsReadOnly = true,
             Widgets = 
             {
                 new Datadog.Inputs.DashboardWidgetArgs
@@ -45,39 +45,33 @@ class MyStack : Stack
                     AlertGraphDefinition = new Datadog.Inputs.DashboardWidgetAlertGraphDefinitionArgs
                     {
                         AlertId = "1234",
-                        Time = new Datadog.Inputs.DashboardWidgetAlertGraphDefinitionTimeArgs
-                        {
-                            LiveSpan = "1h",
-                        },
-                        Title = "Widget Title",
                         VizType = "timeseries",
+                        Title = "Widget Title",
+                        LiveSpan = "1h",
                     },
                 },
             },
         });
         var screen = new Datadog.Dashboard("screen", new Datadog.DashboardArgs
         {
-            Description = "Created using the Datadog provider in TF",
-            IsReadOnly = false,
-            LayoutType = "free",
             Title = "TF Test Free Layout Dashboard",
+            Description = "Created using the Datadog provider",
+            LayoutType = "free",
+            IsReadOnly = false,
             Widgets = 
             {
                 new Datadog.Inputs.DashboardWidgetArgs
                 {
                     EventStreamDefinition = new Datadog.Inputs.DashboardWidgetEventStreamDefinitionArgs
                     {
-                        EventSize = "l",
                         Query = "*",
-                        Time = new Datadog.Inputs.DashboardWidgetEventStreamDefinitionTimeArgs
-                        {
-                            LiveSpan = "1h",
-                        },
+                        EventSize = "l",
                         Title = "Widget Title",
-                        TitleAlign = "left",
                         TitleSize = "16",
+                        TitleAlign = "left",
+                        LiveSpan = "1h",
                     },
-                    Layout = new Datadog.Inputs.DashboardWidgetLayoutArgs
+                    WidgetLayout = new Datadog.Inputs.DashboardWidgetWidgetLayoutArgs
                     {
                         Height = 43,
                         Width = 32,
@@ -87,28 +81,29 @@ class MyStack : Stack
                 },
             },
         });
+        // Create a new Dashboard List with two Dashboards
         var newList = new Datadog.DashboardList("newList", new Datadog.DashboardListArgs
         {
+            Name = "Automated Created List",
             DashItems = 
             {
                 new Datadog.Inputs.DashboardListDashItemArgs
                 {
-                    DashId = time.Id,
                     Type = "custom_timeboard",
+                    DashId = time.Id,
                 },
                 new Datadog.Inputs.DashboardListDashItemArgs
                 {
-                    DashId = screen.Id,
                     Type = "custom_screenboard",
+                    DashId = screen.Id,
                 },
             },
-            Name = "TF Created List",
         }, new CustomResourceOptions
         {
             DependsOn = 
             {
-                "datadog_dashboard.screen",
-                "datadog_dashboard.time",
+                screen,
+                time,
             },
         });
     }
@@ -126,26 +121,24 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		time, err := datadog.NewDashboard(ctx, "time", &datadog.DashboardArgs{
-			Description: pulumi.String("Created using the Datadog provider in TF"),
-			IsReadOnly:  pulumi.Bool(true),
-			LayoutType:  pulumi.String("ordered"),
 			Title:       pulumi.String("TF Test Layout Dashboard"),
+			Description: pulumi.String("Created using the Datadog provider"),
+			LayoutType:  pulumi.String("ordered"),
+			IsReadOnly:  pulumi.Bool(true),
 			Widgets: datadog.DashboardWidgetArray{
 				&datadog.DashboardWidgetArgs{
 					AlertGraphDefinition: &datadog.DashboardWidgetAlertGraphDefinitionArgs{
-						AlertId: pulumi.String("1234"),
-						Time: &datadog.DashboardWidgetAlertGraphDefinitionTimeArgs{
-							LiveSpan: pulumi.String("1h"),
-						},
-						Title:   pulumi.String("Widget Title"),
-						VizType: pulumi.String("timeseries"),
+						AlertId:  pulumi.String("1234"),
+						VizType:  pulumi.String("timeseries"),
+						Title:    pulumi.String("Widget Title"),
+						LiveSpan: pulumi.String("1h"),
 					},
 				},
 			},
@@ -154,27 +147,25 @@ func main() {
 			return err
 		}
 		screen, err := datadog.NewDashboard(ctx, "screen", &datadog.DashboardArgs{
-			Description: pulumi.String("Created using the Datadog provider in TF"),
-			IsReadOnly:  pulumi.Bool(false),
-			LayoutType:  pulumi.String("free"),
 			Title:       pulumi.String("TF Test Free Layout Dashboard"),
+			Description: pulumi.String("Created using the Datadog provider"),
+			LayoutType:  pulumi.String("free"),
+			IsReadOnly:  pulumi.Bool(false),
 			Widgets: datadog.DashboardWidgetArray{
 				&datadog.DashboardWidgetArgs{
 					EventStreamDefinition: &datadog.DashboardWidgetEventStreamDefinitionArgs{
-						EventSize: pulumi.String("l"),
-						Query:     pulumi.String("*"),
-						Time: &datadog.DashboardWidgetEventStreamDefinitionTimeArgs{
-							LiveSpan: pulumi.String("1h"),
-						},
+						Query:      pulumi.String("*"),
+						EventSize:  pulumi.String("l"),
 						Title:      pulumi.String("Widget Title"),
-						TitleAlign: pulumi.String("left"),
 						TitleSize:  pulumi.String("16"),
+						TitleAlign: pulumi.String("left"),
+						LiveSpan:   pulumi.String("1h"),
 					},
-					Layout: &datadog.DashboardWidgetLayoutArgs{
-						Height: pulumi.Float64(43),
-						Width:  pulumi.Float64(32),
-						X:      pulumi.Float64(5),
-						Y:      pulumi.Float64(5),
+					WidgetLayout: &datadog.DashboardWidgetWidgetLayoutArgs{
+						Height: pulumi.Int(43),
+						Width:  pulumi.Int(32),
+						X:      pulumi.Int(5),
+						Y:      pulumi.Int(5),
 					},
 				},
 			},
@@ -183,20 +174,20 @@ func main() {
 			return err
 		}
 		_, err = datadog.NewDashboardList(ctx, "newList", &datadog.DashboardListArgs{
+			Name: pulumi.String("Automated Created List"),
 			DashItems: datadog.DashboardListDashItemArray{
 				&datadog.DashboardListDashItemArgs{
-					DashId: time.ID(),
 					Type:   pulumi.String("custom_timeboard"),
+					DashId: time.ID(),
 				},
 				&datadog.DashboardListDashItemArgs{
-					DashId: screen.ID(),
 					Type:   pulumi.String("custom_screenboard"),
+					DashId: screen.ID(),
 				},
 			},
-			Name: pulumi.String("TF Created List"),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"datadog_dashboard.screen",
-			"datadog_dashboard.time",
+			screen,
+			time,
 		}))
 		if err != nil {
 			return err
@@ -217,58 +208,55 @@ import pulumi
 import pulumi_datadog as datadog
 
 time = datadog.Dashboard("time",
-    description="Created using the Datadog provider in TF",
-    is_read_only=True,
-    layout_type="ordered",
     title="TF Test Layout Dashboard",
+    description="Created using the Datadog provider",
+    layout_type="ordered",
+    is_read_only=True,
     widgets=[datadog.DashboardWidgetArgs(
         alert_graph_definition=datadog.DashboardWidgetAlertGraphDefinitionArgs(
             alert_id="1234",
-            time=datadog.DashboardWidgetAlertGraphDefinitionTimeArgs(
-                live_span="1h",
-            ),
-            title="Widget Title",
             viz_type="timeseries",
+            title="Widget Title",
+            live_span="1h",
         ),
     )])
 screen = datadog.Dashboard("screen",
-    description="Created using the Datadog provider in TF",
-    is_read_only=False,
-    layout_type="free",
     title="TF Test Free Layout Dashboard",
+    description="Created using the Datadog provider",
+    layout_type="free",
+    is_read_only=False,
     widgets=[datadog.DashboardWidgetArgs(
         event_stream_definition=datadog.DashboardWidgetEventStreamDefinitionArgs(
-            event_size="l",
             query="*",
-            time=datadog.DashboardWidgetEventStreamDefinitionTimeArgs(
-                live_span="1h",
-            ),
+            event_size="l",
             title="Widget Title",
-            title_align="left",
             title_size="16",
+            title_align="left",
+            live_span="1h",
         ),
-        layout=datadog.DashboardWidgetLayoutArgs(
+        widget_layout=datadog.DashboardWidgetWidgetLayoutArgs(
             height=43,
             width=32,
             x=5,
             y=5,
         ),
     )])
+# Create a new Dashboard List with two Dashboards
 new_list = datadog.DashboardList("newList",
+    name="Automated Created List",
     dash_items=[
         datadog.DashboardListDashItemArgs(
-            dash_id=time.id,
             type="custom_timeboard",
+            dash_id=time.id,
         ),
         datadog.DashboardListDashItemArgs(
-            dash_id=screen.id,
             type="custom_screenboard",
+            dash_id=screen.id,
         ),
     ],
-    name="TF Created List",
     opts=pulumi.ResourceOptions(depends_on=[
-            "datadog_dashboard.screen",
-            "datadog_dashboard.time",
+            screen,
+            time,
         ]))
 ```
 
@@ -284,38 +272,34 @@ import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
 const time = new datadog.Dashboard("time", {
-    description: "Created using the Datadog provider in TF",
-    isReadOnly: true,
-    layoutType: "ordered",
     title: "TF Test Layout Dashboard",
+    description: "Created using the Datadog provider",
+    layoutType: "ordered",
+    isReadOnly: true,
     widgets: [{
         alertGraphDefinition: {
             alertId: "1234",
-            time: {
-                live_span: "1h",
-            },
-            title: "Widget Title",
             vizType: "timeseries",
+            title: "Widget Title",
+            liveSpan: "1h",
         },
     }],
 });
 const screen = new datadog.Dashboard("screen", {
-    description: "Created using the Datadog provider in TF",
-    isReadOnly: false,
-    layoutType: "free",
     title: "TF Test Free Layout Dashboard",
+    description: "Created using the Datadog provider",
+    layoutType: "free",
+    isReadOnly: false,
     widgets: [{
         eventStreamDefinition: {
-            eventSize: "l",
             query: "*",
-            time: {
-                live_span: "1h",
-            },
+            eventSize: "l",
             title: "Widget Title",
+            titleSize: 16,
             titleAlign: "left",
-            titleSize: "16",
+            liveSpan: "1h",
         },
-        layout: {
+        widgetLayout: {
             height: 43,
             width: 32,
             x: 5,
@@ -323,19 +307,25 @@ const screen = new datadog.Dashboard("screen", {
         },
     }],
 });
-const newList = new datadog.DashboardList("new_list", {
+// Create a new Dashboard List with two Dashboards
+const newList = new datadog.DashboardList("newList", {
+    name: "Automated Created List",
     dashItems: [
         {
-            dashId: time.id,
             type: "custom_timeboard",
+            dashId: time.id,
         },
         {
-            dashId: screen.id,
             type: "custom_screenboard",
+            dashId: screen.id,
         },
     ],
-    name: "TF Created List",
-}, { dependsOn: [screen, time] });
+}, {
+    dependsOn: [
+        screen,
+        time,
+    ],
+});
 ```
 
 
@@ -355,19 +345,27 @@ const newList = new datadog.DashboardList("new_list", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardListDashItemArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardListDashItemArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboardList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DashboardList</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboardList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DashboardList</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DashboardList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DashboardListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -378,46 +376,44 @@ const newList = new datadog.DashboardList("new_list", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DashboardListArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DashboardListArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -426,35 +422,27 @@ const newList = new datadog.DashboardList("new_list", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DashboardListArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -466,25 +454,19 @@ const newList = new datadog.DashboardList("new_list", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DashboardListArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -516,7 +498,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List&lt;Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -538,7 +520,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">[]Dashboard<wbr>List<wbr>Dash<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -558,9 +540,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 <a href="#dashitems_nodejs" style="color: inherit; text-decoration: inherit;">dash<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -582,7 +564,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">Sequence[Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -649,20 +631,24 @@ Get an existing DashboardList resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardListState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DashboardList</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardListState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DashboardList</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardListDashItemArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DashboardList</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardListDashItemArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DashboardList</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboardList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardListState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DashboardList</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboardList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardListState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DashboardList</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DashboardList</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DashboardListState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DashboardList</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DashboardListState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -773,7 +759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List&lt;Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -795,7 +781,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">[]Dashboard<wbr>List<wbr>Dash<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -815,9 +801,9 @@ The following state arguments are supported:
 <a href="#state_dashitems_nodejs" style="color: inherit; text-decoration: inherit;">dash<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -839,7 +825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">Sequence[Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of dashbaord items that belong to this list
+    <dd>{{% md %}}A set of dashboard items that belong to this list
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -872,7 +858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of the dashboard to add
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -880,7 +867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -892,7 +880,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of the dashboard to add
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -900,7 +889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -912,7 +902,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of the dashboard to add
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -920,7 +911,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -932,7 +924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ID of the dashboard to add
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -940,12 +933,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
-
-dashboard lists can be imported using their id, e.g.
 
 ```sh
  $ pulumi import datadog:index/dashboardList:DashboardList new_list 123456

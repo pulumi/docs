@@ -36,11 +36,11 @@ class MyStack : Stack
         var step = new AzureNative.DeploymentManager.Step("step", new AzureNative.DeploymentManager.StepArgs
         {
             Location = "centralus",
-            Properties = 
+            Properties = new AzureNative.DeploymentManager.Inputs.HealthCheckStepPropertiesArgs
             {
-                { "attributes", 
+                Attributes = new AzureNative.DeploymentManager.Inputs.RestHealthCheckStepAttributesArgs
                 {
-                    { "healthChecks", 
+                    HealthChecks = 
                     {
                         new AzureNative.DeploymentManager.Inputs.RestHealthCheckArgs
                         {
@@ -109,13 +109,13 @@ class MyStack : Stack
                                 },
                             },
                         },
-                    } },
-                    { "healthyStateDuration", "PT2H" },
-                    { "maxElasticDuration", "PT30M" },
-                    { "type", "REST" },
-                    { "waitDuration", "PT15M" },
-                } },
-                { "stepType", "HealthCheck" },
+                    },
+                    HealthyStateDuration = "PT2H",
+                    MaxElasticDuration = "PT30M",
+                    Type = "REST",
+                    WaitDuration = "PT15M",
+                },
+                StepType = "HealthCheck",
             },
             ResourceGroupName = "myResourceGroup",
             StepName = "healthCheckStep",
@@ -147,9 +147,9 @@ import pulumi_azure_native as azure_native
 
 step = azure_native.deploymentmanager.Step("step",
     location="centralus",
-    properties={
-        "attributes": {
-            "healthChecks": [
+    properties=azure_native.deploymentmanager.HealthCheckStepPropertiesArgs(
+        attributes=azure_native.deploymentmanager.RestHealthCheckStepAttributesArgs(
+            health_checks=[
                 azure_native.deploymentmanager.RestHealthCheckArgs(
                     name="appHealth",
                     request=azure_native.deploymentmanager.RestRequestArgs(
@@ -200,13 +200,13 @@ step = azure_native.deploymentmanager.Step("step",
                     ),
                 ),
             ],
-            "healthyStateDuration": "PT2H",
-            "maxElasticDuration": "PT30M",
-            "type": "REST",
-            "waitDuration": "PT15M",
-        },
-        "stepType": "HealthCheck",
-    },
+            healthy_state_duration="PT2H",
+            max_elastic_duration="PT30M",
+            type="REST",
+            wait_duration="PT15M",
+        ),
+        step_type="HealthCheck",
+    ),
     resource_group_name="myResourceGroup",
     step_name="healthCheckStep",
     tags={})
@@ -315,13 +315,13 @@ class MyStack : Stack
         var step = new AzureNative.DeploymentManager.Step("step", new AzureNative.DeploymentManager.StepArgs
         {
             Location = "centralus",
-            Properties = 
+            Properties = new AzureNative.DeploymentManager.Inputs.WaitStepPropertiesArgs
             {
-                { "attributes", 
+                Attributes = new AzureNative.DeploymentManager.Inputs.WaitStepAttributesArgs
                 {
-                    { "duration", "PT20M" },
-                } },
-                { "stepType", "Wait" },
+                    Duration = "PT20M",
+                },
+                StepType = "Wait",
             },
             ResourceGroupName = "myResourceGroup",
             StepName = "waitStep",
@@ -339,7 +339,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
+			Location: pulumi.String("centralus"),
+			Properties: deploymentmanager.WaitStepProperties{
+				Attributes: deploymentmanager.WaitStepAttributes{
+					Duration: "PT20M",
+				},
+				StepType: "Wait",
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StepName:          pulumi.String("waitStep"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -353,12 +384,12 @@ import pulumi_azure_native as azure_native
 
 step = azure_native.deploymentmanager.Step("step",
     location="centralus",
-    properties={
-        "attributes": {
-            "duration": "PT20M",
-        },
-        "stepType": "Wait",
-    },
+    properties=azure_native.deploymentmanager.WaitStepPropertiesArgs(
+        attributes=azure_native.deploymentmanager.WaitStepAttributesArgs(
+            duration="PT20M",
+        ),
+        step_type="Wait",
+    ),
     resource_group_name="myResourceGroup",
     step_name="waitStep",
     tags={})
@@ -408,19 +439,30 @@ const step = new azure_native.deploymentmanager.Step("step", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Step</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Step</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[HealthCheckStepPropertiesArgs, WaitStepPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[HealthCheckStepPropertiesArgs, WaitStepPropertiesArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Step</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Step</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Step</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Step</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -431,46 +473,44 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StepArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -481,33 +521,25 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -519,25 +551,19 @@ const step = new azure_native.deploymentmanager.Step("step", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StepArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -646,7 +672,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties</a> | <a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties</a></span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a> | <a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1117,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Rest<wbr>Request</a></span>
+        <span class="property-type"><a href="#restrequest">Rest<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Rest<wbr>Response</a></span>
+        <span class="property-type"><a href="#restresponse">Rest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">Rest<wbr>Health<wbr>Check[]</a></span>
+        <span class="property-type"><a href="#resthealthcheck">Rest<wbr>Health<wbr>Check<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1665,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">Rest<wbr>Health<wbr>Check<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1821,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1961,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex</a></span>
+        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2557,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.botservice.getBot function with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot resource definition
-API Version: 2020-06-02.
+API Version: 2021-03-01.
 
 
 
@@ -22,17 +22,19 @@ API Version: 2020-06-02.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBotResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBotResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bot(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBotResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bot(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBotResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBot` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-06-02.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBotArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -560,6 +562,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_csharp">
+<a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -574,7 +584,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_csharp">
+<a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,6 +702,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_go">
+<a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -698,7 +724,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_go">
+<a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -808,6 +842,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_nodejs">
+<a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
@@ -822,7 +864,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_nodejs">
+<a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -932,6 +982,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_isolated_python">
+<a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
@@ -946,7 +1004,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_transformation_version_python">
+<a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>

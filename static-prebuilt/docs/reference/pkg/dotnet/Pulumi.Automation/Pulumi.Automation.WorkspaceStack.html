@@ -179,6 +179,55 @@ Will dispose the <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pul
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L639">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_WorkspaceStack_CancelAsync_" data-uid="Pulumi.Automation.WorkspaceStack.CancelAsync*"></a>
+  <h4 id="Pulumi_Automation_WorkspaceStack_CancelAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.WorkspaceStack.CancelAsync(System.Threading.CancellationToken)">CancelAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Cancel stops a stack's currently running update. It throws
+an exception if no update is currently running. Note that
+this operation is <em>very dangerous</em>, and may leave the
+stack in an inconsistent state if a resource operation was
+pending when the update was canceled. This command is not
+supported for local backends.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CancelAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Automation_WorkspaceStack_CreateAsync_" data-uid="Pulumi.Automation.WorkspaceStack.CreateAsync*"></a>
@@ -364,7 +413,7 @@ selected.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L620">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L653">View Source</a>
   </span>
   <a id="Pulumi_Automation_WorkspaceStack_Dispose_" data-uid="Pulumi.Automation.WorkspaceStack.Dispose*"></a>
   <h4 id="Pulumi_Automation_WorkspaceStack_Dispose" data-uid="Pulumi.Automation.WorkspaceStack.Dispose">Dispose()</h4>
@@ -374,6 +423,53 @@ selected.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L607">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_WorkspaceStack_ExportStackAsync_" data-uid="Pulumi.Automation.WorkspaceStack.ExportStackAsync*"></a>
+  <h4 id="Pulumi_Automation_WorkspaceStack_ExportStackAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.WorkspaceStack.ExportStackAsync(System.Threading.CancellationToken)">ExportStackAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Exports the deployment state of the stack.</p>
+<p>
+This can be combined with ImportStackAsync to edit a
+stack&apos;s state (such as recovery from failed deployments).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;StackDeployment&gt; ExportStackAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L157">View Source</a>
   </span>
@@ -522,7 +618,7 @@ selected.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L600">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L619">View Source</a>
   </span>
   <a id="Pulumi_Automation_WorkspaceStack_GetInfoAsync_" data-uid="Pulumi.Automation.WorkspaceStack.GetInfoAsync*"></a>
   <h4 id="Pulumi_Automation_WorkspaceStack_GetInfoAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.WorkspaceStack.GetInfoAsync(System.Threading.CancellationToken)">GetInfoAsync(CancellationToken)</h4>
@@ -604,6 +700,58 @@ selected.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.OutputValue.html">OutputValue</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/WorkspaceStack.cs/#L616">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_WorkspaceStack_ImportStackAsync_" data-uid="Pulumi.Automation.WorkspaceStack.ImportStackAsync*"></a>
+  <h4 id="Pulumi_Automation_WorkspaceStack_ImportStackAsync_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.WorkspaceStack.ImportStackAsync(Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)">ImportStackAsync(StackDeployment, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Imports the specified deployment state into a pre-existing stack.</p>
+<p>
+This can be combined with ExportStackAsync to edit a
+stack&apos;s state (such as recovery from failed deployments).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ImportStackAsync(StackDeployment state, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>

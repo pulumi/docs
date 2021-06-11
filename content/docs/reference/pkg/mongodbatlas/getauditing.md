@@ -15,65 +15,6 @@ meta_desc: "Documentation for the mongodbatlas.getAuditing function with example
 > **NOTE:** Groups and projects are synonymous terms. You may find **group_id** in the official documentation.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testMongodbatlasAuditing = new mongodbatlas.Auditing("test", {
-    auditAuthorizationSuccess: false,
-    auditFilter: "{ 'atype': 'authenticate', 'param': {   'user': 'auditAdmin',   'db': 'admin',   'mechanism': 'SCRAM-SHA-1' }}",
-    enabled: true,
-    projectId: "<project-id>",
-});
-const testAuditing = testMongodbatlasAuditing.id.apply(id => mongodbatlas.getAuditing({
-    projectId: id,
-}, { async: true }));
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getAuditing {#using}
@@ -82,17 +23,18 @@ const testAuditing = testMongodbatlasAuditing.id.apply(id => mongodbatlas.getAud
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAuditing<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAuditingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAuditingResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAuditing<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAuditingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAuditingResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_auditing(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAuditingResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_auditing(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAuditingResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAuditing<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAuditingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAuditingResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAuditing<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAuditingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAuditingResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAuditing` in the Go SDK.
 
@@ -101,7 +43,7 @@ const testAuditing = testMongodbatlasAuditing.id.apply(id => mongodbatlas.getAud
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAuditing </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAuditingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAuditingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAuditingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAuditingArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

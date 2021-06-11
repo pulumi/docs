@@ -18,19 +18,55 @@ meta_desc: "Documentation for the aiven.Service resource with examples, input pr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">,</span>
+            <span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">,</span>
+            <span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">,</span>
+            <span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">,</span>
+            <span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">,</span>
+            <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">,</span>
+            <span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceIntegrationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,46 +77,44 @@ meta_desc: "Documentation for the aiven.Service resource with examples, input pr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,35 +123,27 @@ meta_desc: "Documentation for the aiven.Service resource with examples, input pr
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -129,25 +155,19 @@ meta_desc: "Documentation for the aiven.Service resource with examples, input pr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -743,7 +763,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +772,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cassandrauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +790,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -779,7 +799,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#elasticsearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -788,7 +808,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -797,7 +817,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#grafanauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -806,7 +826,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb</a></span>
+        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -815,7 +835,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#influxdbuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">influxdb<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -824,7 +844,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +853,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -842,7 +862,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaconnectuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +871,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +880,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -869,7 +889,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -896,7 +916,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -905,7 +925,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mysqluserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +934,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepg">Service<wbr>Pg</a></span>
+        <span class="property-type"><a href="#servicepg">Service<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +943,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +970,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis</a></span>
+        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +979,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#redisuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +988,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceintegration">Service<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#serviceserviceintegration">Service<wbr>Service<wbr>Integration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,20 +1592,59 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComponentArgs]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComponentArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">,</span>
+        <span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">,</span>
+        <span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">,</span>
+        <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">,</span>
+        <span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceIntegrationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2368,7 +2427,7 @@ The following state arguments are supported:
 <a href="#state_cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#servicecassandra">Service<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2436,7 @@ The following state arguments are supported:
 <a href="#state_cassandrauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfig">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2395,7 +2454,7 @@ The following state arguments are supported:
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomponent">Service<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#servicecomponent">Service<wbr>Component<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -2404,7 +2463,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#serviceelasticsearch">Service<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2413,7 +2472,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfig">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2481,7 @@ The following state arguments are supported:
 <a href="#state_grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#servicegrafana">Service<wbr>Grafana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2431,7 +2490,7 @@ The following state arguments are supported:
 <a href="#state_grafanauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfig">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grafana specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2499,7 @@ The following state arguments are supported:
 <a href="#state_influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb</a></span>
+        <span class="property-type"><a href="#serviceinfluxdb">Service<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2449,7 +2508,7 @@ The following state arguments are supported:
 <a href="#state_influxdbuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">influxdb<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfig">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}InfluxDB specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2517,7 @@ The following state arguments are supported:
 <a href="#state_kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicekafka">Service<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2467,7 +2526,7 @@ The following state arguments are supported:
 <a href="#state_kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#servicekafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2476,7 +2535,7 @@ The following state arguments are supported:
 <a href="#state_kafkaconnectuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfig">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2485,7 +2544,7 @@ The following state arguments are supported:
 <a href="#state_kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2494,7 +2553,7 @@ The following state arguments are supported:
 <a href="#state_kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfig">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2503,7 +2562,7 @@ The following state arguments are supported:
 <a href="#state_kafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2530,7 +2589,7 @@ The following state arguments are supported:
 <a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#servicemysql">Service<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2539,7 +2598,7 @@ The following state arguments are supported:
 <a href="#state_mysqluserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfig">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2548,7 +2607,7 @@ The following state arguments are supported:
 <a href="#state_pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepg">Service<wbr>Pg</a></span>
+        <span class="property-type"><a href="#servicepg">Service<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2557,7 +2616,7 @@ The following state arguments are supported:
 <a href="#state_pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicepguserconfig">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2593,7 +2652,7 @@ The following state arguments are supported:
 <a href="#state_redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis</a></span>
+        <span class="property-type"><a href="#serviceredis">Service<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2602,7 +2661,7 @@ The following state arguments are supported:
 <a href="#state_redisuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfig">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2679,7 @@ The following state arguments are supported:
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceintegration">Service<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#serviceserviceintegration">Service<wbr>Service<wbr>Integration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -3173,7 +3232,7 @@ The following state arguments are supported:
 <a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3256,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigprivateaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3213,7 +3272,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigpublicaccess">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4033,7 +4092,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigelasticsearch">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4049,7 +4108,7 @@ The following state arguments are supported:
 <a href="#indexpatterns_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern[]</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4057,7 +4116,7 @@ The following state arguments are supported:
 <a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindextemplate">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4073,7 +4132,7 @@ The following state arguments are supported:
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigkibana">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4089,7 +4148,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4156,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4113,7 +4172,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6281,7 +6340,7 @@ The following state arguments are supported:
 <a href="#authgenericoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgenericoauth">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6289,7 +6348,7 @@ The following state arguments are supported:
 <a href="#authgithub_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgithub">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6297,7 +6356,7 @@ The following state arguments are supported:
 <a href="#authgitlab_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgitlab">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6305,7 +6364,7 @@ The following state arguments are supported:
 <a href="#authgoogle_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigauthgoogle">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6377,7 +6436,7 @@ The following state arguments are supported:
 <a href="#externalimagestorage_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigexternalimagestorage">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6409,7 +6468,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6417,7 +6476,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6433,7 +6492,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6457,7 +6516,7 @@ The following state arguments are supported:
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigsmtpserver">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8431,7 +8490,7 @@ The following state arguments are supported:
 <a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfiginfluxdb">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8447,7 +8506,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8455,7 +8514,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8471,7 +8530,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigpublicaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9179,7 +9238,7 @@ The following state arguments are supported:
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigkafkaconnect">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9187,7 +9246,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9195,7 +9254,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9203,7 +9262,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigpublicaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9893,7 +9952,7 @@ The following state arguments are supported:
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#servicekafkamirrormakeruserconfigkafkamirrormaker">Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10449,7 +10508,7 @@ The following state arguments are supported:
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafka">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10457,7 +10516,7 @@ The following state arguments are supported:
 <a href="#kafkaauthenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaauthenticationmethods">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10473,7 +10532,7 @@ The following state arguments are supported:
 <a href="#kafkaconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkaconnectconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10489,7 +10548,7 @@ The following state arguments are supported:
 <a href="#kafkarestconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigkafkarestconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10505,7 +10564,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivateaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10513,7 +10572,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10521,7 +10580,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigpublicaccess">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10537,7 +10596,7 @@ The following state arguments are supported:
 <a href="#schemaregistryconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicekafkauserconfigschemaregistryconfig">Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13079,6 +13138,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_csharp">
+<a href="#binlogretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -13189,6 +13256,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="backupminute_go">
 <a href="#backupminute_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlogretentionperiod_go">
+<a href="#binlogretentionperiod_go" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -13311,6 +13386,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_nodejs">
+<a href="#binlogretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -13323,7 +13406,7 @@ The following state arguments are supported:
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13331,7 +13414,7 @@ The following state arguments are supported:
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmysql">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13347,7 +13430,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13355,7 +13438,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13371,7 +13454,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicemysqluserconfigpublicaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13421,6 +13504,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="backup_minute_python">
 <a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlog_retention_period_python">
+<a href="#binlog_retention_period_python" style="color: inherit; text-decoration: inherit;">binlog_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14517,6 +14608,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -14531,6 +14630,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14557,6 +14664,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -14571,6 +14686,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14597,6 +14720,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14605,6 +14736,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14621,6 +14760,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14629,6 +14776,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14643,6 +14798,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14669,6 +14832,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -14689,6 +14860,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -14703,6 +14882,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15417,7 +15604,7 @@ The following state arguments are supported:
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
+        <span class="property-type"><a href="#servicepguserconfigmigration">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15425,7 +15612,7 @@ The following state arguments are supported:
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpg">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15457,7 +15644,7 @@ The following state arguments are supported:
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpgbouncer">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15465,7 +15652,7 @@ The following state arguments are supported:
 <a href="#pglookout_nodejs" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpglookout">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15473,7 +15660,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivateaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15481,7 +15668,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicepguserconfigprivatelinkaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15497,7 +15684,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicepguserconfigpublicaccess">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15537,7 +15724,7 @@ The following state arguments are supported:
 <a href="#timescaledb_nodejs" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
+        <span class="property-type"><a href="#servicepguserconfigtimescaledb">Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16289,6 +16476,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_csharp">
+<a href="#trackiotiming_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -16599,6 +16794,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="trackfunctions_go">
 <a href="#trackfunctions_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackiotiming_go">
+<a href="#trackiotiming_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16921,6 +17124,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_nodejs">
+<a href="#trackiotiming_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -17231,6 +17442,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="track_functions_python">
 <a href="#track_functions_python" style="color: inherit; text-decoration: inherit;">track_<wbr>functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="track_io_timing_python">
+<a href="#track_io_timing_python" style="color: inherit; text-decoration: inherit;">track_<wbr>io_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -18235,7 +18454,7 @@ The following state arguments are supported:
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigmigration">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18243,7 +18462,7 @@ The following state arguments are supported:
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18251,7 +18470,7 @@ The following state arguments are supported:
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18267,7 +18486,7 @@ The following state arguments are supported:
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#serviceredisuserconfigpublicaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

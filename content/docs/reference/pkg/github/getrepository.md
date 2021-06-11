@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-github/sdk/v4/go/github"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -96,7 +96,7 @@ import * as github from "@pulumi/github";
 
 const example = pulumi.output(github.getRepository({
     fullName: "hashicorp/terraform",
-}, { async: true }));
+}));
 ```
 
 
@@ -117,17 +117,21 @@ const example = pulumi.output(github.getRepository({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRepository<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRepositoryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRepositoryResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRepository<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRepositoryArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRepositoryResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_repository(</span><span class="nx">full_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRepositoryResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_repository(</span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">full_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">homepage_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRepositoryResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRepositoryArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRepositoryResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRepositoryArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRepositoryResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRepository` in the Go SDK.
 
@@ -136,7 +140,7 @@ const example = pulumi.output(github.getRepository({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRepository </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRepositoryResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRepositoryArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRepositoryResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRepositoryArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -148,6 +152,15 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fullname_csharp">
 <a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
 </span>
@@ -155,6 +168,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full name of the repository (in `org/name` format).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepageurl_csharp">
+<a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -170,6 +192,15 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fullname_go">
 <a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
 </span>
@@ -177,6 +208,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full name of the repository (in `org/name` format).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepageurl_go">
+<a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -192,6 +232,15 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="fullname_nodejs">
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
 </span>
@@ -199,6 +248,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full name of the repository (in `org/name` format).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepageurl_nodejs">
+<a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -214,6 +272,15 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="full_name_python">
 <a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
 </span>
@@ -221,6 +288,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full name of the repository (in `org/name` format).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="homepage_url_python">
+<a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -290,15 +366,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the default branch of the repository.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="gitcloneurl_csharp">
 <a href="#gitcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
 </span>
@@ -342,15 +409,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the repository has the GitHub Wiki enabled.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="homepageurl_csharp">
-<a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_csharp">
@@ -452,6 +510,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is public, private or internal.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fullname_csharp">
 <a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
 </span>
@@ -459,6 +526,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="homepageurl_csharp">
+<a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -517,15 +593,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the default branch of the repository.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="gitcloneurl_go">
 <a href="#gitcloneurl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
 </span>
@@ -569,15 +636,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the repository has the GitHub Wiki enabled.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="homepageurl_go">
-<a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_go">
@@ -679,6 +737,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is public, private or internal.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fullname_go">
 <a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
 </span>
@@ -686,6 +753,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="homepageurl_go">
+<a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -744,15 +820,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the default branch of the repository.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="gitcloneurl_nodejs">
 <a href="#gitcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Url</a>
 </span>
@@ -796,15 +863,6 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the repository has the GitHub Wiki enabled.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="homepageurl_nodejs">
-<a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_nodejs">
@@ -906,6 +964,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is public, private or internal.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fullname_nodejs">
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
 </span>
@@ -913,6 +980,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="homepageurl_nodejs">
+<a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -971,15 +1047,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the default branch of the repository.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the repository.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="git_clone_url_python">
 <a href="#git_clone_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>url</a>
 </span>
@@ -1023,15 +1090,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the repository has the GitHub Wiki enabled.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="homepage_url_python">
-<a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="html_url_python">
@@ -1133,6 +1191,15 @@ The following output properties are available:
     <dd>{{% md %}}Whether the repository is public, private or internal.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A description of the repository.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="full_name_python">
 <a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
 </span>
@@ -1140,6 +1207,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="homepage_url_python">
+<a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URL of a page describing the project.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1192,7 +1268,7 @@ The following output properties are available:
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrepositorypagesource">List&lt;Get<wbr>Repository<wbr>Page<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrepositorypagesource">List&lt;Get<wbr>Repository<wbr>Page<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1351,7 +1427,7 @@ The following output properties are available:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrepositorypagesource">Sequence[Get<wbr>Repository<wbr>Page<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrepositorypagesource">Sequence[Get<wbr>Repository<wbr>Page<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -69,7 +69,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -898,7 +898,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1055,7 +1055,7 @@ import (
 	"fmt"
 
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1228,7 +1228,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1396,7 +1396,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1579,7 +1579,7 @@ import (
 	"fmt"
 
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1796,7 +1796,7 @@ import (
 	"fmt"
 
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1961,19 +1961,44 @@ const pool = new azure_native.batch.Pool("pool", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchPoolIdentityArgs]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[InterNodeCommunicationState]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">,</span>
+         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchPoolIdentityArgs]</span> = None<span class="p">,</span>
+         <span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[InterNodeCommunicationState]</span> = None<span class="p">,</span>
+         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">,</span>
+         <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">,</span>
+         <span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">,</span>
+         <span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">,</span>
+         <span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+         <span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1984,46 +2009,44 @@ const pool = new azure_native.batch.Pool("pool", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PoolArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2034,33 +2057,25 @@ const pool = new azure_native.batch.Pool("pool", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2072,25 +2087,19 @@ const pool = new azure_native.batch.Pool("pool", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2447,7 +2456,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#applicationpackages_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagereference">Application<wbr>Package<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#applicationpackagereference">Application<wbr>Package<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2455,7 +2464,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatereference">Certificate<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#certificatereference">Certificate<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,7 +2472,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#deploymentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfiguration">Deployment<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#deploymentconfiguration">Deployment<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2479,7 +2488,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchpoolidentity">Batch<wbr>Pool<wbr>Identity</a></span>
+        <span class="property-type"><a href="#batchpoolidentity">Batch<wbr>Pool<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2495,7 +2504,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataitem">Metadata<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#metadataitem">Metadata<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Batch service does not assign any meaning to metadata; it is solely for the use of user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2512,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mountconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountconfiguration">Mount<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#mountconfiguration">Mount<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2520,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfiguration">Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkconfiguration">Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for a pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2536,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2544,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#starttask">Start<wbr>Task</a></span>
+        <span class="property-type"><a href="#starttask">Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2543,7 +2552,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#taskschedulingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Scheduling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedulingpolicy">Task<wbr>Scheduling<wbr>Policy</a></span>
+        <span class="property-type"><a href="#taskschedulingpolicy">Task<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2568,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#useraccounts_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccount">User<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#useraccount">User<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3454,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3560,7 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4870,7 +4879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6016,7 +6025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerregistries_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistry">Container<wbr>Registry[]</a></span>
+        <span class="property-type"><a href="#containerregistry">Container<wbr>Registry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6130,7 +6139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerregistries_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6852,7 +6861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfiguration">Cloud<wbr>Service<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cloudserviceconfiguration">Cloud<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6860,7 +6869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6934,7 +6943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Cloud<wbr>Service<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6942,7 +6951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8140,7 +8149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygrouprules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygrouprule">Network<wbr>Security<wbr>Group<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#networksecuritygrouprule">Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8350,7 +8359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygrouprules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8932,7 +8941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystemconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfiguration">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfiguration">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8940,7 +8949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshareconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Share<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfiguration">Azure<wbr>File<wbr>Share<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#azurefileshareconfiguration">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8948,7 +8957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifsmountconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cifs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfiguration">CIFSMount<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cifsmountconfiguration">CIFSMount<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8956,7 +8965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsmountconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfiguration">NFSMount<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#nfsmountconfiguration">NFSMount<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9078,7 +9087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystemconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9086,7 +9095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshareconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Share<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9094,7 +9103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifsmountconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cifs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">CIFSMount<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9102,7 +9111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsmountconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">NFSMount<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9436,7 +9445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfiguration">Pool<wbr>Endpoint<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolendpointconfiguration">Pool<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9444,7 +9453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfiguration">Public<wbr>IPAddress<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#publicipaddressconfiguration">Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9550,7 +9559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pool<wbr>Endpoint<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9558,7 +9567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10076,7 +10085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatpools_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpool">Inbound<wbr>Nat<wbr>Pool[]</a></span>
+        <span class="property-type"><a href="#inboundnatpool">Inbound<wbr>Nat<wbr>Pool<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10126,7 +10135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatpools_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">Inbound<wbr>Nat<wbr>Pool<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10414,7 +10423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">Resize<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Resize<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10560,7 +10569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">Resize<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Resize<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11126,7 +11135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11134,7 +11143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedscale_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettings">Fixed<wbr>Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#fixedscalesettings">Fixed<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11208,7 +11217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11216,7 +11225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedscale_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Fixed<wbr>Scale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11378,7 +11387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containersettings_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettings">Task<wbr>Container<wbr>Settings</a></span>
+        <span class="property-type"><a href="#taskcontainersettings">Task<wbr>Container<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11386,7 +11395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentsettings_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11402,7 +11411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefiles_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefile">Resource<wbr>File[]</a></span>
+        <span class="property-type"><a href="#resourcefile">Resource<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11410,7 +11419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentity">User<wbr>Identity</a></span>
+        <span class="property-type"><a href="#useridentity">User<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11620,7 +11629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containersettings_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Task<wbr>Container<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11628,7 +11637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentsettings_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">Environment<wbr>Setting<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">Environment<wbr>Setting<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11644,7 +11653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefiles_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">Resource<wbr>File<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">Resource<wbr>File<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11652,7 +11661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11848,7 +11857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistry">Container<wbr>Registry</a></span>
+        <span class="property-type"><a href="#containerregistry">Container<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11994,7 +12003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12264,7 +12273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxuserconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfiguration">Linux<wbr>User<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#linuxuserconfiguration">Linux<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12272,7 +12281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsuserconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfiguration">Windows<wbr>User<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#windowsuserconfiguration">Windows<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12442,7 +12451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxuserconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Linux<wbr>User<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12450,7 +12459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsuserconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Windows<wbr>User<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12548,7 +12557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autouser_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecification">Auto<wbr>User<wbr>Specification</a></span>
+        <span class="property-type"><a href="#autouserspecification">Auto<wbr>User<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12630,7 +12639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autouser_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Auto<wbr>User<wbr>Specification<wbr>Response</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13380,7 +13389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13396,7 +13405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfiguration">Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#containerconfiguration">Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13404,7 +13413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#datadisk">Data<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13412,7 +13421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13420,7 +13429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextension">VMExtension[]</a></span>
+        <span class="property-type"><a href="#vmextension">VMExtension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13440,7 +13449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeplacementconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Placement<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfiguration">Node<wbr>Placement<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#nodeplacementconfiguration">Node<wbr>Placement<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13448,7 +13457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13702,7 +13711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13718,7 +13727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Container<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13726,7 +13735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13734,7 +13743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13742,7 +13751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextensionresponse">VMExtension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#vmextensionresponse">VMExtension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13762,7 +13771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeplacementconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Placement<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13770,7 +13779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd></dl>
 {{% /choosable %}}

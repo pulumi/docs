@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import * as gcp from "@pulumi/gcp";
 const appserver = pulumi.output(gcp.compute.getInstance({
     name: "primary-application-server",
     zone: "us-central1-a",
-}, { async: true }));
+}));
 ```
 
 
@@ -125,17 +125,21 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupInstance` in the Go SDK.
 
@@ -144,7 +148,7 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -541,6 +545,14 @@ The following output properties are available:
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="reservationaffinities_csharp">
+<a href="#reservationaffinities_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinity">List&lt;Get<wbr>Instance<wbr>Reservation<wbr>Affinity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
 </span>
@@ -839,6 +851,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservationaffinities_go">
+<a href="#reservationaffinities_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinity">[]Get<wbr>Instance<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepolicies_go">
 <a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -1139,6 +1159,14 @@ The following output properties are available:
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="reservationaffinities_nodejs">
+<a href="#reservationaffinities_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinity">Get<wbr>Instance<wbr>Reservation<wbr>Affinity[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
@@ -1437,6 +1465,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservation_affinities_python">
+<a href="#reservation_affinities_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinity">Sequence[Get<wbr>Instance<wbr>Reservation<wbr>Affinity]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_policies_python">
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
@@ -1814,7 +1850,7 @@ under `/dev/disk/by-id/`
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List&lt;Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List&lt;Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
@@ -2039,7 +2075,7 @@ under `/dev/disk/by-id/`
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param]</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
@@ -2391,7 +2427,7 @@ Structure is documented below.
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
@@ -2401,7 +2437,7 @@ instance can be accessed via the Internet. Structure documented below.
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2619,7 +2655,7 @@ instance can be accessed via the Internet. Structure documented below.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
@@ -2629,7 +2665,7 @@ instance can be accessed via the Internet. Structure documented below.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2920,6 +2956,178 @@ range.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getinstancereservationaffinity">Get<wbr>Instance<wbr>Reservation<wbr>Affinity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_csharp">
+<a href="#specificreservations_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinityspecificreservation">List&lt;Get<wbr>Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_go">
+<a href="#specificreservations_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinityspecificreservation">[]Get<wbr>Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_nodejs">
+<a href="#specificreservations_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinityspecificreservation">Get<wbr>Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specific_reservations_python">
+<a href="#specific_reservations_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancereservationaffinityspecificreservation">Sequence[Get<wbr>Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancereservationaffinityspecificreservation">Get<wbr>Instance<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getinstancescheduling">Get<wbr>Instance<wbr>Scheduling</h4>
 
 
@@ -2949,7 +3157,7 @@ restarted if it was terminated by Compute Engine (not a user).
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List&lt;Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List&lt;Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3099,7 +3307,7 @@ restarted if it was terminated by Compute Engine (not a user).
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

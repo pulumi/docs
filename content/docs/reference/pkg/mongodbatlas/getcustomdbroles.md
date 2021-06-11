@@ -37,23 +37,23 @@ class MyStack : Stack
     {
         var testDatabaseUser = new Mongodbatlas.DatabaseUser("testDatabaseUser", new Mongodbatlas.DatabaseUserArgs
         {
-            DatabaseName = "admin",
+            Username = "test-acc-username",
             Password = "test-acc-password",
             ProjectId = "<PROJECT-ID>",
+            DatabaseName = "admin",
             Roles = 
             {
                 new Mongodbatlas.Inputs.DatabaseUserRoleArgs
                 {
-                    DatabaseName = "admin",
                     RoleName = "readWrite",
+                    DatabaseName = "admin",
                 },
                 new Mongodbatlas.Inputs.DatabaseUserRoleArgs
                 {
-                    DatabaseName = "admin",
                     RoleName = "atlasAdmin",
+                    DatabaseName = "admin",
                 },
             },
-            Username = "test-acc-username",
         });
         var testCustomDbRoles = Output.Create(Mongodbatlas.GetCustomDbRoles.InvokeAsync(new Mongodbatlas.GetCustomDbRolesArgs
         {
@@ -74,27 +74,27 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewDatabaseUser(ctx, "testDatabaseUser", &mongodbatlas.DatabaseUserArgs{
-			DatabaseName: pulumi.String("admin"),
+			Username:     pulumi.String("test-acc-username"),
 			Password:     pulumi.String("test-acc-password"),
 			ProjectId:    pulumi.String("<PROJECT-ID>"),
+			DatabaseName: pulumi.String("admin"),
 			Roles: mongodbatlas.DatabaseUserRoleArray{
 				&mongodbatlas.DatabaseUserRoleArgs{
-					DatabaseName: pulumi.String("admin"),
 					RoleName:     pulumi.String("readWrite"),
+					DatabaseName: pulumi.String("admin"),
 				},
 				&mongodbatlas.DatabaseUserRoleArgs{
-					DatabaseName: pulumi.String("admin"),
 					RoleName:     pulumi.String("atlasAdmin"),
+					DatabaseName: pulumi.String("admin"),
 				},
 			},
-			Username: pulumi.String("test-acc-username"),
 		})
 		if err != nil {
 			return err
@@ -121,20 +121,20 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 test_database_user = mongodbatlas.DatabaseUser("testDatabaseUser",
-    database_name="admin",
+    username="test-acc-username",
     password="test-acc-password",
     project_id="<PROJECT-ID>",
+    database_name="admin",
     roles=[
         mongodbatlas.DatabaseUserRoleArgs(
-            database_name="admin",
             role_name="readWrite",
+            database_name="admin",
         ),
         mongodbatlas.DatabaseUserRoleArgs(
-            database_name="admin",
             role_name="atlasAdmin",
+            database_name="admin",
         ),
-    ],
-    username="test-acc-username")
+    ])
 test_custom_db_roles = mongodbatlas.get_custom_db_roles(project_id=mongodbatlas_custom_db_role["test"]["project_id"])
 ```
 
@@ -149,25 +149,25 @@ test_custom_db_roles = mongodbatlas.get_custom_db_roles(project_id=mongodbatlas_
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const testDatabaseUser = new mongodbatlas.DatabaseUser("test", {
-    databaseName: "admin",
+const testDatabaseUser = new mongodbatlas.DatabaseUser("testDatabaseUser", {
+    username: "test-acc-username",
     password: "test-acc-password",
     projectId: "<PROJECT-ID>",
+    databaseName: "admin",
     roles: [
         {
-            databaseName: "admin",
             roleName: "readWrite",
+            databaseName: "admin",
         },
         {
-            databaseName: "admin",
             roleName: "atlasAdmin",
+            databaseName: "admin",
         },
     ],
-    username: "test-acc-username",
 });
-const testCustomDbRoles = mongodbatlas_custom_db_role_test.projectId.apply(projectId => mongodbatlas.getCustomDbRoles({
-    projectId: projectId,
-}, { async: true }));
+const testCustomDbRoles = mongodbatlas.getCustomDbRoles({
+    projectId: mongodbatlas_custom_db_role.test.project_id,
+});
 ```
 
 
@@ -188,17 +188,18 @@ const testCustomDbRoles = mongodbatlas_custom_db_role_test.projectId.apply(proje
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomDbRoles<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomDbRolesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomDbRolesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomDbRoles<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomDbRolesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomDbRolesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_db_roles(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomDbRolesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_db_roles(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomDbRolesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomDbRoles<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCustomDbRolesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCustomDbRolesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomDbRoles<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetCustomDbRolesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCustomDbRolesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetCustomDbRoles` in the Go SDK.
 
@@ -207,7 +208,7 @@ const testCustomDbRoles = mongodbatlas_custom_db_role_test.projectId.apply(proje
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCustomDbRoles </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomDbRolesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomDbRolesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomDbRolesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomDbRolesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -414,7 +415,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultaction">List&lt;Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultaction">List&lt;Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -422,7 +423,7 @@ The following output properties are available:
 <a href="#inheritedroles_csharp" style="color: inherit; text-decoration: inherit;">Inherited<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">List&lt;Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">List&lt;Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +499,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultaction">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultaction">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -506,7 +507,7 @@ The following output properties are available:
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -539,7 +540,7 @@ The following output properties are available:
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">List&lt;Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">List&lt;Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd></dl>
@@ -605,7 +606,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}(Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd></dl>

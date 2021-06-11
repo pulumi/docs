@@ -19,6 +19,7 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="datasetmysql" title="DatasetMysql"><span class="symbol resource"></span>DatasetMysql</a></li>
     <li><a href="datasetparquet" title="DatasetParquet"><span class="symbol resource"></span>DatasetParquet</a></li>
     <li><a href="datasetpostgresql" title="DatasetPostgresql"><span class="symbol resource"></span>DatasetPostgresql</a></li>
+    <li><a href="datasetsnowflake" title="DatasetSnowflake"><span class="symbol resource"></span>DatasetSnowflake</a></li>
     <li><a href="datasetsqlservertable" title="DatasetSqlServerTable"><span class="symbol resource"></span>DatasetSqlServerTable</a></li>
     <li><a href="factory" title="Factory"><span class="symbol resource"></span>Factory</a></li>
     <li><a href="integrationruntimemanaged" title="IntegrationRuntimeManaged"><span class="symbol resource"></span>IntegrationRuntimeManaged</a></li>
@@ -26,6 +27,7 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="integrationruntimeselfhosted" title="IntegrationRuntimeSelfHosted"><span class="symbol resource"></span>IntegrationRuntimeSelfHosted</a></li>
     <li><a href="integrationruntimessis" title="IntegrationRuntimeSsis"><span class="symbol resource"></span>IntegrationRuntimeSsis</a></li>
     <li><a href="linkedserviceazureblobstorage" title="LinkedServiceAzureBlobStorage"><span class="symbol resource"></span>LinkedServiceAzureBlobStorage</a></li>
+    <li><a href="linkedserviceazuredatabricks" title="LinkedServiceAzureDatabricks"><span class="symbol resource"></span>LinkedServiceAzureDatabricks</a></li>
     <li><a href="linkedserviceazurefilestorage" title="LinkedServiceAzureFileStorage"><span class="symbol resource"></span>LinkedServiceAzureFileStorage</a></li>
     <li><a href="linkedserviceazurefunction" title="LinkedServiceAzureFunction"><span class="symbol resource"></span>LinkedServiceAzureFunction</a></li>
     <li><a href="linkedserviceazuresqldatabase" title="LinkedServiceAzureSqlDatabase"><span class="symbol resource"></span>LinkedServiceAzureSqlDatabase</a></li>
@@ -58,6 +60,6 @@ Explore the resources and functions of the azure.datafactory module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.56.0</dd>
+	<dd>4.6.0</dd>
 </dl>
 

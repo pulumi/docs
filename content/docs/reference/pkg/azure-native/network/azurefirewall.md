@@ -241,7 +241,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -872,7 +872,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1510,7 +1510,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2141,7 +2141,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2791,7 +2791,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -3287,7 +3287,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -3423,19 +3423,42 @@ const azureFirewall = new azure_native.network.AzureFirewall("azureFirewall", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">application_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallApplicationRuleCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">hub_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[HubIPAddressesArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallIPConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[AzureFirewallIPConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">nat_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallNatRuleCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">network_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallNetworkRuleCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AzureFirewallSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AzureFirewallThreatIntelMode]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                  <span class="nx">application_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallApplicationRuleCollectionArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">hub_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[HubIPAddressesArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallIPConfigurationArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[AzureFirewallIPConfigurationArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">nat_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallNatRuleCollectionArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">network_rule_collections</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFirewallNetworkRuleCollectionArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AzureFirewallSkuArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                  <span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AzureFirewallThreatIntelMode]]</span> = None<span class="p">,</span>
+                  <span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAzureFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AzureFirewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAzureFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AzureFirewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AzureFirewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AzureFirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3446,46 +3469,44 @@ const azureFirewall = new azure_native.network.AzureFirewall("azureFirewall", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AzureFirewallArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AzureFirewallArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3496,33 +3517,25 @@ const azureFirewall = new azure_native.network.AzureFirewall("azureFirewall", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AzureFirewallArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -3534,25 +3547,19 @@ const azureFirewall = new azure_native.network.AzureFirewall("azureFirewall", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AzureFirewallArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -3869,7 +3876,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#applicationrulecollections_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of application rule collections used by Azure Firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3885,7 +3892,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewallPolicy associated with this azure firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3893,7 +3900,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hubipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubipaddresses">Hub<wbr>IPAddresses</a></span>
+        <span class="property-type"><a href="#hubipaddresses">Hub<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP addresses associated with AzureFirewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3916,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration[]</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3925,7 +3932,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managementipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall used for management traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3940,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#natrulecollections_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrulecollection">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrulecollection">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of NAT rule collections used by Azure Firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +3948,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#networkrulecollections_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of network rule collections used by Azure Firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3949,7 +3956,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallsku">Azure<wbr>Firewall<wbr>Sku</a></span>
+        <span class="property-type"><a href="#azurefirewallsku">Azure<wbr>Firewall<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Firewall Resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3973,7 +3980,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#virtualhub_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtualHub to which the firewall belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4504,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4690,7 +4697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4722,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrule">Azure<wbr>Firewall<wbr>Application<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrule">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4916,7 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4948,7 +4955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5360,7 +5367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5546,7 +5553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5554,7 +5561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5788,7 +5795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5796,7 +5803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6512,7 +6519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6544,7 +6551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrule">Azure<wbr>Firewall<wbr>Nat<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrule">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6738,7 +6745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6770,7 +6777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7576,7 +7583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7608,7 +7615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrule">Azure<wbr>Firewall<wbr>Network<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrule">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7802,7 +7809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7834,7 +7841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8768,7 +8775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses</a></span>
+        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8850,7 +8857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8924,7 +8931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddress">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress[]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddress">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9006,7 +9013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -78,7 +78,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -198,19 +198,45 @@ const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_internet_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_rate_limiting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_vpn_site</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_configuration</span><span class="p">:</span> <span class="nx">Optional[RoutingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrafficSelectorPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">use_local_azure_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpn_connection_protocol_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionProtocol]]</span> = None<span class="p">, </span><span class="nx">vpn_link_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnSiteLinkConnectionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">connection_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                  <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                  <span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">enable_internet_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">enable_rate_limiting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">remote_vpn_site</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">routing_configuration</span><span class="p">:</span> <span class="nx">Optional[RoutingConfigurationArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                  <span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">traffic_selector_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrafficSelectorPolicyArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">use_local_azure_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">vpn_connection_protocol_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkGatewayConnectionProtocol]]</span> = None<span class="p">,</span>
+                  <span class="nx">vpn_link_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnSiteLinkConnectionArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpnConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -221,46 +247,44 @@ const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -271,33 +295,25 @@ const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -309,25 +325,19 @@ const vpnConnection = new azure_native.network.VpnConnection("vpnConnection", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpnConnectionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -748,7 +758,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +774,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#remotevpnsite_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +782,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#routingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +806,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +838,7 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vpnlinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkconnection">Vpn<wbr>Site<wbr>Link<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#vpnsitelinkconnection">Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site link connections to the gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2107,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2287,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2295,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route</a></span>
+        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2401,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3001,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">Static<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#staticroute">Static<wbr>Route<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3051,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3363,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3395,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnsitelink_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4005,7 +4015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4037,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4045,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4109,7 +4119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnsitelink_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd></dl>
 {{% /choosable %}}

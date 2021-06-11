@@ -98,8 +98,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -199,16 +199,44 @@ class MyStack : Stack
         var webVolume = new Linode.Volume("webVolume", new Linode.VolumeArgs
         {
             Label = "web_volume",
-            Region = "us-central",
             Size = 20,
+            Region = "us-central",
         });
         var web = new Linode.Instance("web", new Linode.InstanceArgs
         {
-            BootConfigLabel = "boot_config",
+            Label = "complex_instance",
+            Group = "foo",
+            Tags = 
+            {
+                "foo",
+            },
+            Region = "us-central",
+            Type = "g6-nanode-1",
+            PrivateIp = true,
+            Disks = 
+            {
+                new Linode.Inputs.InstanceDiskArgs
+                {
+                    Label = "boot",
+                    Size = 3000,
+                    Image = "linode/ubuntu18.04",
+                    AuthorizedKeys = 
+                    {
+                        "ssh-rsa AAAA...Gw== user@example.local",
+                    },
+                    AuthorizedUsers = 
+                    {
+                        me.Apply(me => me.Username),
+                    },
+                    RootPass = "terr4form-test",
+                },
+            },
             Configs = 
             {
                 new Linode.Inputs.InstanceConfigArgs
                 {
+                    Label = "boot_config",
+                    Kernel = "linode/latest-64bit",
                     Devices = new Linode.Inputs.InstanceConfigDevicesArgs
                     {
                         Sda = new Linode.Inputs.InstanceConfigDevicesSdaArgs
@@ -220,38 +248,10 @@ class MyStack : Stack
                             VolumeId = webVolume.Id,
                         },
                     },
-                    Kernel = "linode/latest-64bit",
-                    Label = "boot_config",
                     RootDevice = "/dev/sda",
                 },
             },
-            Disks = 
-            {
-                new Linode.Inputs.InstanceDiskArgs
-                {
-                    AuthorizedKeys = 
-                    {
-                        "ssh-rsa AAAA...Gw== user@example.local",
-                    },
-                    AuthorizedUsers = 
-                    {
-                        me.Apply(me => me.Username),
-                    },
-                    Image = "linode/ubuntu18.04",
-                    Label = "boot",
-                    RootPass = "terr4form-test",
-                    Size = 3000,
-                },
-            },
-            Group = "foo",
-            Label = "complex_instance",
-            PrivateIp = true,
-            Region = "us-central",
-            Tags = 
-            {
-                "foo",
-            },
-            Type = "g6-nanode-1",
+            BootConfigLabel = "boot_config",
         });
     }
 
@@ -268,8 +268,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -280,16 +280,39 @@ func main() {
 		}
 		webVolume, err := linode.NewVolume(ctx, "webVolume", &linode.VolumeArgs{
 			Label:  pulumi.String("web_volume"),
-			Region: pulumi.String("us-central"),
 			Size:   pulumi.Int(20),
+			Region: pulumi.String("us-central"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = linode.NewInstance(ctx, "web", &linode.InstanceArgs{
-			BootConfigLabel: pulumi.String("boot_config"),
+			Label: pulumi.String("complex_instance"),
+			Group: pulumi.String("foo"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+			},
+			Region:    pulumi.String("us-central"),
+			Type:      pulumi.String("g6-nanode-1"),
+			PrivateIp: pulumi.Bool(true),
+			Disks: linode.InstanceDiskArray{
+				&linode.InstanceDiskArgs{
+					Label: pulumi.String("boot"),
+					Size:  pulumi.Int(3000),
+					Image: pulumi.String("linode/ubuntu18.04"),
+					AuthorizedKeys: pulumi.StringArray{
+						pulumi.String("ssh-rsa AAAA...Gw== user@example.local"),
+					},
+					AuthorizedUsers: pulumi.StringArray{
+						pulumi.String(me.Username),
+					},
+					RootPass: pulumi.String("terr4form-test"),
+				},
+			},
 			Configs: linode.InstanceConfigArray{
 				&linode.InstanceConfigArgs{
+					Label:  pulumi.String("boot_config"),
+					Kernel: pulumi.String("linode/latest-64bit"),
 					Devices: &linode.InstanceConfigDevicesArgs{
 						Sda: &linode.InstanceConfigDevicesSdaArgs{
 							DiskLabel: pulumi.String("boot"),
@@ -298,33 +321,10 @@ func main() {
 							VolumeId: webVolume.ID(),
 						},
 					},
-					Kernel:     pulumi.String("linode/latest-64bit"),
-					Label:      pulumi.String("boot_config"),
 					RootDevice: pulumi.String("/dev/sda"),
 				},
 			},
-			Disks: linode.InstanceDiskArray{
-				&linode.InstanceDiskArgs{
-					AuthorizedKeys: pulumi.StringArray{
-						pulumi.String("ssh-rsa AAAA...Gw== user@example.local"),
-					},
-					AuthorizedUsers: pulumi.StringArray{
-						pulumi.String(me.Username),
-					},
-					Image:    pulumi.String("linode/ubuntu18.04"),
-					Label:    pulumi.String("boot"),
-					RootPass: pulumi.String("terr4form-test"),
-					Size:     pulumi.Int(3000),
-				},
-			},
-			Group:     pulumi.String("foo"),
-			Label:     pulumi.String("complex_instance"),
-			PrivateIp: pulumi.Bool(true),
-			Region:    pulumi.String("us-central"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo"),
-			},
-			Type: pulumi.String("g6-nanode-1"),
+			BootConfigLabel: pulumi.String("boot_config"),
 		})
 		if err != nil {
 			return err
@@ -347,11 +347,26 @@ import pulumi_linode as linode
 me = linode.get_profile()
 web_volume = linode.Volume("webVolume",
     label="web_volume",
-    region="us-central",
-    size=20)
+    size=20,
+    region="us-central")
 web = linode.Instance("web",
-    boot_config_label="boot_config",
+    label="complex_instance",
+    group="foo",
+    tags=["foo"],
+    region="us-central",
+    type="g6-nanode-1",
+    private_ip=True,
+    disks=[linode.InstanceDiskArgs(
+        label="boot",
+        size=3000,
+        image="linode/ubuntu18.04",
+        authorized_keys=["ssh-rsa AAAA...Gw== user@example.local"],
+        authorized_users=[me.username],
+        root_pass="terr4form-test",
+    )],
     configs=[linode.InstanceConfigArgs(
+        label="boot_config",
+        kernel="linode/latest-64bit",
         devices=linode.InstanceConfigDevicesArgs(
             sda=linode.InstanceConfigDevicesSdaArgs(
                 disk_label="boot",
@@ -360,24 +375,9 @@ web = linode.Instance("web",
                 volume_id=web_volume.id,
             ),
         ),
-        kernel="linode/latest-64bit",
-        label="boot_config",
         root_device="/dev/sda",
     )],
-    disks=[linode.InstanceDiskArgs(
-        authorized_keys=["ssh-rsa AAAA...Gw== user@example.local"],
-        authorized_users=[me.username],
-        image="linode/ubuntu18.04",
-        label="boot",
-        root_pass="terr4form-test",
-        size=3000,
-    )],
-    group="foo",
-    label="complex_instance",
-    private_ip=True,
-    region="us-central",
-    tags=["foo"],
-    type="g6-nanode-1")
+    boot_config_label="boot_config")
 ```
 
 
@@ -391,43 +391,41 @@ web = linode.Instance("web",
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const me = pulumi.output(linode.getProfile({ async: true }));
-const webVolume = new linode.Volume("web_volume", {
+const me = linode.getProfile({});
+const webVolume = new linode.Volume("webVolume", {
     label: "web_volume",
-    region: "us-central",
     size: 20,
+    region: "us-central",
 });
 const web = new linode.Instance("web", {
-    bootConfigLabel: "boot_config",
+    label: "complex_instance",
+    group: "foo",
+    tags: ["foo"],
+    region: "us-central",
+    type: "g6-nanode-1",
+    privateIp: true,
+    disks: [{
+        label: "boot",
+        size: 3000,
+        image: "linode/ubuntu18.04",
+        authorizedKeys: ["ssh-rsa AAAA...Gw== user@example.local"],
+        authorizedUsers: [me.then(me => me.username)],
+        rootPass: "terr4form-test",
+    }],
     configs: [{
+        label: "boot_config",
+        kernel: "linode/latest-64bit",
         devices: {
             sda: {
                 diskLabel: "boot",
             },
             sdb: {
-                volumeId: webVolume.id.apply(id => Number.parseFloat(id)),
+                volumeId: webVolume.id,
             },
         },
-        kernel: "linode/latest-64bit",
-        label: "boot_config",
         rootDevice: "/dev/sda",
     }],
-    disks: [{
-        // Any of authorized_keys, authorized_users, and root_pass
-        // can be used for provisioning.
-        authorizedKeys: ["ssh-rsa AAAA...Gw== user@example.local"],
-        authorizedUsers: [me.username],
-        image: "linode/ubuntu18.04",
-        label: "boot",
-        rootPass: "terr4form-test",
-        size: 3000,
-    }],
-    group: "foo",
-    label: "complex_instance",
-    privateIp: true,
-    region: "us-central",
-    tags: ["foo"],
-    type: "g6-nanode-1",
+    bootConfigLabel: "boot_config",
 });
 ```
 
@@ -448,19 +446,46 @@ const web = new linode.Instance("web", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">,</span>
+             <span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceInterfaceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+             <span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -471,46 +496,44 @@ const web = new linode.Instance("web", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -519,35 +542,27 @@ const web = new linode.Instance("web", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -559,25 +574,19 @@ const web = new linode.Instance("web", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -609,7 +618,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedkeys_csharp">
 <a href="#authorizedkeys_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -691,13 +701,22 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfaces_csharp">
+<a href="#interfaces_csharp" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">List&lt;Instance<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateip_csharp">
@@ -791,7 +810,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedkeys_go">
 <a href="#authorizedkeys_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -873,13 +893,22 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfaces_go">
+<a href="#interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">[]Instance<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateip_go">
@@ -971,9 +1000,10 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alerts_nodejs" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedkeys_nodejs">
 <a href="#authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
@@ -1024,7 +1054,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1063,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,13 +1085,22 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfaces_nodejs">
+<a href="#interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">Instance<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateip_nodejs">
@@ -1155,7 +1194,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_keys_python">
 <a href="#authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
@@ -1237,13 +1277,22 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="interfaces_python">
+<a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">Sequence[Instance<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_python">
@@ -1391,7 +1440,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1468,7 +1518,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1545,7 +1596,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1622,7 +1674,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1642,20 +1695,50 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[InstanceBackupsArgs]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4s</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specs</span><span class="p">:</span> <span class="nx">Optional[InstanceSpecsArgs]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[InstanceBackupsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ipv4s</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">specs</span><span class="p">:</span> <span class="nx">Optional[InstanceSpecsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1766,7 +1849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedkeys_csharp">
 <a href="#state_authorizedkeys_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -1857,6 +1941,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_interfaces_csharp">
+<a href="#state_interfaces_csharp" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">List&lt;Instance<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -1892,7 +1985,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateip_csharp">
@@ -1938,7 +2031,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscriptdata_csharp">
 <a href="#state_stackscriptdata_csharp" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Data</a>
@@ -2013,7 +2107,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedkeys_go">
 <a href="#state_authorizedkeys_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Keys</a>
@@ -2104,6 +2199,15 @@ Instances in a region.
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_interfaces_go">
+<a href="#state_interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">[]Instance<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -2139,7 +2243,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateip_go">
@@ -2185,7 +2289,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscriptdata_go">
 <a href="#state_stackscriptdata_go" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Data</a>
@@ -2258,9 +2363,10 @@ Instances in a region.
 <a href="#state_alerts_nodejs" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedkeys_nodejs">
 <a href="#state_authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
@@ -2293,7 +2399,7 @@ Instances in a region.
 <a href="#state_backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2426,7 @@ Instances in a region.
 <a href="#state_configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2435,7 @@ Instances in a region.
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2349,6 +2455,15 @@ Instances in a region.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_interfaces_nodejs">
+<a href="#state_interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">Instance<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
@@ -2386,7 +2501,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateip_nodejs">
@@ -2430,9 +2545,10 @@ Instances in a region.
 <a href="#state_specs_nodejs" style="color: inherit; text-decoration: inherit;">specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscriptdata_nodejs">
 <a href="#state_stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
@@ -2507,7 +2623,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Configuration options for alert triggers on this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_keys_python">
 <a href="#state_authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
@@ -2598,6 +2715,15 @@ Instances in a region.
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_interfaces_python">
+<a href="#state_interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceinterface">Sequence[Instance<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of Network Interfaces for this Linode to be created with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
@@ -2633,7 +2759,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_python">
@@ -2679,7 +2805,8 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Information about the resources available to this Linode.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackscript_data_python">
 <a href="#state_stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
@@ -2989,7 +3116,7 @@ Instances in a region.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3107,7 +3234,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_csharp">
@@ -3136,6 +3263,14 @@ Instances in a region.
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interfaces_csharp">
+<a href="#interfaces_csharp" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfiginterface">List&lt;Instance<wbr>Config<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_csharp">
 <a href="#kernel_csharp" style="color: inherit; text-decoration: inherit;">Kernel</a>
@@ -3192,7 +3327,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_go">
@@ -3221,6 +3356,14 @@ Instances in a region.
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interfaces_go">
+<a href="#interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfiginterface">[]Instance<wbr>Config<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_go">
 <a href="#kernel_go" style="color: inherit; text-decoration: inherit;">Kernel</a>
@@ -3277,7 +3420,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_nodejs">
@@ -3293,7 +3436,7 @@ Instances in a region.
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3302,10 +3445,18 @@ Instances in a region.
 <a href="#helpers_nodejs" style="color: inherit; text-decoration: inherit;">helpers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interfaces_nodejs">
+<a href="#interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfiginterface">Instance<wbr>Config<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_nodejs">
 <a href="#kernel_nodejs" style="color: inherit; text-decoration: inherit;">kernel</a>
@@ -3362,7 +3513,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_python">
@@ -3391,6 +3542,14 @@ Instances in a region.
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interfaces_python">
+<a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceconfiginterface">Sequence[Instance<wbr>Config<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_python">
 <a href="#kernel_python" style="color: inherit; text-decoration: inherit;">kernel</a>
@@ -3585,7 +3744,7 @@ Instances in a region.
 <a href="#sda_nodejs" style="color: inherit; text-decoration: inherit;">sda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3594,7 +3753,7 @@ Instances in a region.
 <a href="#sdb_nodejs" style="color: inherit; text-decoration: inherit;">sdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3602,7 +3761,7 @@ Instances in a region.
 <a href="#sdc_nodejs" style="color: inherit; text-decoration: inherit;">sdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3610,7 +3769,7 @@ Instances in a region.
 <a href="#sdd_nodejs" style="color: inherit; text-decoration: inherit;">sdd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3618,7 +3777,7 @@ Instances in a region.
 <a href="#sde_nodejs" style="color: inherit; text-decoration: inherit;">sde</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3626,7 +3785,7 @@ Instances in a region.
 <a href="#sdf_nodejs" style="color: inherit; text-decoration: inherit;">sdf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3634,7 +3793,7 @@ Instances in a region.
 <a href="#sdg_nodejs" style="color: inherit; text-decoration: inherit;">sdg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3642,7 +3801,7 @@ Instances in a region.
 <a href="#sdh_nodejs" style="color: inherit; text-decoration: inherit;">sdh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4918,6 +5077,132 @@ Instances in a region.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="instanceconfiginterface">Instance<wbr>Config<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_csharp">
+<a href="#ipamaddress_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_csharp">
+<a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_go">
+<a href="#ipamaddress_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_go">
+<a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_nodejs">
+<a href="#ipamaddress_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_nodejs">
+<a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipam_address_python">
+<a href="#ipam_address_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_python">
+<a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="instancedisk">Instance<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
@@ -4929,7 +5214,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
@@ -5031,7 +5316,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
@@ -5133,7 +5418,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
@@ -5235,7 +5520,7 @@ Instances in a region.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
@@ -5325,6 +5610,132 @@ Instances in a region.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instanceinterface">Instance<wbr>Interface</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_csharp">
+<a href="#ipamaddress_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_csharp">
+<a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_go">
+<a href="#ipamaddress_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_go">
+<a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipamaddress_nodejs">
+<a href="#ipamaddress_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_nodejs">
+<a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ipam_address_python">
+<a href="#ipam_address_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This Network Interface’s private IP address in Classless Inter-Domain Routing (CIDR) notation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this interface. If the interface is a VLAN, a label is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purpose_python">
+<a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of interface. (`public`, `vlan`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -19,19 +19,41 @@ meta_desc: "Documentation for the akamai.properties.Property resource with examp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Property</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PropertyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Property</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PropertyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Property</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">contract</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contract_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cp_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostnames</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">is_secure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyOriginArgs]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Property</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">contract</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">contract_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">cp_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">hostnames</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyHostnameArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">is_secure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyOriginArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">product_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">rule_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">rule_warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyRuleWarningArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Property</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PropertyArgs]</a></span> = None<span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProperty</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PropertyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Property</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProperty</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PropertyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Property</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Property</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PropertyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Property</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PropertyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -42,46 +64,44 @@ meta_desc: "Documentation for the akamai.properties.Property resource with examp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PropertyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PropertyArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -90,35 +110,27 @@ meta_desc: "Documentation for the akamai.properties.Property resource with examp
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PropertyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -130,25 +142,19 @@ meta_desc: "Documentation for the akamai.properties.Property resource with examp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PropertyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -171,7 +177,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="contract_csharp">
 <a href="#contract_csharp" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -179,7 +185,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="contractid_csharp">
 <a href="#contractid_csharp" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
@@ -196,7 +202,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="group_csharp">
 <a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -204,7 +210,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -219,10 +225,9 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostnames_csharp" style="color: inherit; text-decoration: inherit;">Hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#propertyhostname">List&lt;Property<wbr>Hostname<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="issecure_csharp">
 <a href="#issecure_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure</a>
@@ -230,7 +235,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -247,7 +252,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyorigin">List&lt;Property<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -255,7 +260,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="productid_csharp">
 <a href="#productid_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Id</a>
@@ -273,7 +278,15 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="rulewarnings_csharp">
+<a href="#rulewarnings_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyrulewarning">List&lt;Property<wbr>Rule<wbr>Warning<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -290,7 +303,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,7 +315,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="contract_go">
 <a href="#contract_go" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -310,7 +323,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="contractid_go">
 <a href="#contractid_go" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
@@ -327,7 +340,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="group_go">
 <a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -335,7 +348,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -350,10 +363,9 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostnames_go" style="color: inherit; text-decoration: inherit;">Hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#propertyhostname">[]Property<wbr>Hostname</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="issecure_go">
 <a href="#issecure_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure</a>
@@ -361,7 +373,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -378,7 +390,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyorigin">[]Property<wbr>Origin</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -386,7 +398,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="productid_go">
 <a href="#productid_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Id</a>
@@ -404,7 +416,15 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="rulewarnings_go">
+<a href="#rulewarnings_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyrulewarning">[]Property<wbr>Rule<wbr>Warning</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -421,7 +441,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -433,7 +453,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="contract_nodejs">
 <a href="#contract_nodejs" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -441,7 +461,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="contractid_nodejs">
 <a href="#contractid_nodejs" style="color: inherit; text-decoration: inherit;">contract<wbr>Id</a>
@@ -458,7 +478,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="group_nodejs">
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -466,7 +486,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -481,10 +501,9 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostnames_nodejs" style="color: inherit; text-decoration: inherit;">hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="#propertyhostname">Property<wbr>Hostname<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="issecure_nodejs">
 <a href="#issecure_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secure</a>
@@ -492,7 +511,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -507,9 +526,9 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyorigin">Property<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#propertyorigin">Property<wbr>Origin<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -517,7 +536,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="productid_nodejs">
 <a href="#productid_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Id</a>
@@ -535,7 +554,15 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="rulewarnings_nodejs">
+<a href="#rulewarnings_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyrulewarning">Property<wbr>Rule<wbr>Warning<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -552,7 +579,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -564,7 +591,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="contract_python">
 <a href="#contract_python" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -572,7 +599,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="contract_id_python">
 <a href="#contract_id_python" style="color: inherit; text-decoration: inherit;">contract_<wbr>id</a>
@@ -589,7 +616,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="group_python">
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -597,7 +624,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -612,10 +639,9 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostnames_python" style="color: inherit; text-decoration: inherit;">hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type"><a href="#propertyhostname">Sequence[Property<wbr>Hostname<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="is_secure_python">
 <a href="#is_secure_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure</a>
@@ -623,7 +649,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -640,7 +666,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyorigin">Sequence[Property<wbr>Origin<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -648,7 +674,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="product_id_python">
 <a href="#product_id_python" style="color: inherit; text-decoration: inherit;">product_<wbr>id</a>
@@ -666,7 +692,15 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="rule_warnings_python">
+<a href="#rule_warnings_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyrulewarning">Sequence[Property<wbr>Rule<wbr>Warning<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -683,7 +717,7 @@ The Property resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -727,14 +761,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyruleerror">List&lt;Property<wbr>Rule<wbr>Error&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="rulewarnings_csharp">
-<a href="#rulewarnings_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Warnings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyrulewarning">List&lt;Property<wbr>Rule<wbr>Warning&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -785,14 +811,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="rulewarnings_go">
-<a href="#rulewarnings_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Warnings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyrulewarning">[]Property<wbr>Rule<wbr>Warning</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="stagingversion_go">
 <a href="#stagingversion_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Version</a>
 </span>
@@ -837,14 +855,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyruleerror">Property<wbr>Rule<wbr>Error[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="rulewarnings_nodejs">
-<a href="#rulewarnings_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Warnings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyrulewarning">Property<wbr>Rule<wbr>Warning[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -895,14 +905,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="rule_warnings_python">
-<a href="#rule_warnings_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>warnings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyrulewarning">Sequence[Property<wbr>Rule<wbr>Warning]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="staging_version_python">
 <a href="#staging_version_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>version</a>
 </span>
@@ -921,20 +923,42 @@ Get an existing Property resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PropertyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Property</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PropertyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Property</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">contract</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contract_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cp_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostnames</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">is_secure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyOriginArgs]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">production_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_errors</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyRuleErrorArgs]]</span> = None<span class="p">, </span><span class="nx">rule_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyRuleWarningArgs]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">staging_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Property</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">contract</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">contract_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cp_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hostnames</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyHostnameArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">is_secure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyOriginArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">product_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">production_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">rule_errors</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyRuleErrorArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rule_warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyRuleWarningArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">staging_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Property</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProperty<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PropertyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Property</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProperty<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PropertyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Property</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Property</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PropertyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Property</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PropertyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1045,7 +1069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_contract_csharp">
 <a href="#state_contract_csharp" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -1053,7 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_contractid_csharp">
 <a href="#state_contractid_csharp" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
@@ -1070,7 +1094,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_group_csharp">
 <a href="#state_group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -1078,7 +1102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_csharp">
 <a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1093,10 +1117,9 @@ The following state arguments are supported:
 <a href="#state_hostnames_csharp" style="color: inherit; text-decoration: inherit;">Hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#propertyhostname">List&lt;Property<wbr>Hostname<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_issecure_csharp">
 <a href="#state_issecure_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure</a>
@@ -1104,7 +1127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestversion_csharp">
 <a href="#state_latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -1130,7 +1153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyorigin">List&lt;Property<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_product_csharp">
 <a href="#state_product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1138,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_productid_csharp">
 <a href="#state_productid_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Id</a>
@@ -1173,15 +1196,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rulewarnings_csharp">
 <a href="#state_rulewarnings_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyrulewarning">List&lt;Property<wbr>Rule<wbr>Warning<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1207,7 +1230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1219,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_contract_go">
 <a href="#state_contract_go" style="color: inherit; text-decoration: inherit;">Contract</a>
@@ -1227,7 +1250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_contractid_go">
 <a href="#state_contractid_go" style="color: inherit; text-decoration: inherit;">Contract<wbr>Id</a>
@@ -1244,7 +1267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_group_go">
 <a href="#state_group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -1252,7 +1275,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_go">
 <a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1267,10 +1290,9 @@ The following state arguments are supported:
 <a href="#state_hostnames_go" style="color: inherit; text-decoration: inherit;">Hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#propertyhostname">[]Property<wbr>Hostname</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_issecure_go">
 <a href="#state_issecure_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure</a>
@@ -1278,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestversion_go">
 <a href="#state_latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -1304,7 +1326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyorigin">[]Property<wbr>Origin</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_product_go">
 <a href="#state_product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1312,7 +1334,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_productid_go">
 <a href="#state_productid_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Id</a>
@@ -1347,15 +1369,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rulewarnings_go">
 <a href="#state_rulewarnings_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyrulewarning">[]Property<wbr>Rule<wbr>Warning</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1381,7 +1403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1393,7 +1415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_contract_nodejs">
 <a href="#state_contract_nodejs" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -1401,7 +1423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_contractid_nodejs">
 <a href="#state_contractid_nodejs" style="color: inherit; text-decoration: inherit;">contract<wbr>Id</a>
@@ -1418,7 +1440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_group_nodejs">
 <a href="#state_group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -1426,7 +1448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_nodejs">
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -1441,10 +1463,9 @@ The following state arguments are supported:
 <a href="#state_hostnames_nodejs" style="color: inherit; text-decoration: inherit;">hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="#propertyhostname">Property<wbr>Hostname<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_issecure_nodejs">
 <a href="#state_issecure_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secure</a>
@@ -1452,7 +1473,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestversion_nodejs">
 <a href="#state_latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
@@ -1476,9 +1497,9 @@ The following state arguments are supported:
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyorigin">Property<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#propertyorigin">Property<wbr>Origin<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_product_nodejs">
 <a href="#state_product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1486,7 +1507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_productid_nodejs">
 <a href="#state_productid_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Id</a>
@@ -1510,7 +1531,7 @@ The following state arguments are supported:
 <a href="#state_ruleerrors_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyruleerror">Property<wbr>Rule<wbr>Error[]</a></span>
+        <span class="property-type"><a href="#propertyruleerror">Property<wbr>Rule<wbr>Error<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,15 +1542,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rulewarnings_nodejs">
 <a href="#state_rulewarnings_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertyrulewarning">Property<wbr>Rule<wbr>Warning[]</a></span>
+        <span class="property-type"><a href="#propertyrulewarning">Property<wbr>Rule<wbr>Warning<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1555,7 +1576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1567,7 +1588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;contact&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contact&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_contract_python">
 <a href="#state_contract_python" style="color: inherit; text-decoration: inherit;">contract</a>
@@ -1575,7 +1596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;contract_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;contract&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_contract_id_python">
 <a href="#state_contract_id_python" style="color: inherit; text-decoration: inherit;">contract_<wbr>id</a>
@@ -1592,7 +1613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;cp_code&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;cp_code&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_group_python">
 <a href="#state_group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -1600,7 +1621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;group_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;group&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_id_python">
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -1615,10 +1636,9 @@ The following state arguments are supported:
 <a href="#state_hostnames_python" style="color: inherit; text-decoration: inherit;">hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type"><a href="#propertyhostname">Sequence[Property<wbr>Hostname<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of edge hostname CNAMEs to other CNAMEs
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_is_secure_python">
 <a href="#state_is_secure_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure</a>
@@ -1626,7 +1646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;is_secure&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;is_secure&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_version_python">
 <a href="#state_latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
@@ -1652,7 +1672,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyorigin">Sequence[Property<wbr>Origin<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;origin&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;origin&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_product_python">
 <a href="#state_product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1660,7 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#34;product_id&#34; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;product&#34; has been deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_id_python">
 <a href="#state_product_id_python" style="color: inherit; text-decoration: inherit;">product_<wbr>id</a>
@@ -1695,15 +1715,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the rule format version (defaults to latest version available when created)
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_rule_warnings_python">
 <a href="#state_rule_warnings_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertyrulewarning">Sequence[Property<wbr>Rule<wbr>Warning<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rule warnings will not be set in state anymore{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1729,7 +1749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}&#34;variables&#34; is no longer supported by this resource type - See Akamai Terraform Upgrade Guide{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;variables&#34; has been deprecated.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1740,6 +1760,362 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="propertyhostname">Property<wbr>Hostname</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certprovisioningtype_csharp">
+<a href="#certprovisioningtype_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Provisioning<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cnamefrom_csharp">
+<a href="#cnamefrom_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cnameto_csharp">
+<a href="#cnameto_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certstatuses_csharp">
+<a href="#certstatuses_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyhostnamecertstatus">List&lt;Property<wbr>Hostname<wbr>Cert<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnametype_csharp">
+<a href="#cnametype_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="edgehostnameid_csharp">
+<a href="#edgehostnameid_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Hostname<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certprovisioningtype_go">
+<a href="#certprovisioningtype_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Provisioning<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cnamefrom_go">
+<a href="#cnamefrom_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cnameto_go">
+<a href="#cnameto_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certstatuses_go">
+<a href="#certstatuses_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyhostnamecertstatus">[]Property<wbr>Hostname<wbr>Cert<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnametype_go">
+<a href="#cnametype_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="edgehostnameid_go">
+<a href="#edgehostnameid_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Hostname<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="certprovisioningtype_nodejs">
+<a href="#certprovisioningtype_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Provisioning<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cnamefrom_nodejs">
+<a href="#cnamefrom_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cnameto_nodejs">
+<a href="#cnameto_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>To</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="certstatuses_nodejs">
+<a href="#certstatuses_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyhostnamecertstatus">Property<wbr>Hostname<wbr>Cert<wbr>Status<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cnametype_nodejs">
+<a href="#cnametype_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="edgehostnameid_nodejs">
+<a href="#edgehostnameid_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Hostname<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cert_provisioning_type_python">
+<a href="#cert_provisioning_type_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>provisioning_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cname_from_python">
+<a href="#cname_from_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cname_to_python">
+<a href="#cname_to_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>to</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cert_statuses_python">
+<a href="#cert_statuses_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propertyhostnamecertstatus">Sequence[Property<wbr>Hostname<wbr>Cert<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cname_type_python">
+<a href="#cname_type_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="edge_hostname_id_python">
+<a href="#edge_hostname_id_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>hostname_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="propertyhostnamecertstatus">Property<wbr>Hostname<wbr>Cert<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="productionstatus_csharp">
+<a href="#productionstatus_csharp" style="color: inherit; text-decoration: inherit;">Production<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stagingstatus_csharp">
+<a href="#stagingstatus_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="productionstatus_go">
+<a href="#productionstatus_go" style="color: inherit; text-decoration: inherit;">Production<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stagingstatus_go">
+<a href="#stagingstatus_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="productionstatus_nodejs">
+<a href="#productionstatus_nodejs" style="color: inherit; text-decoration: inherit;">production<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stagingstatus_nodejs">
+<a href="#stagingstatus_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="production_status_python">
+<a href="#production_status_python" style="color: inherit; text-decoration: inherit;">production_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staging_status_python">
+<a href="#staging_status_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="propertyorigin">Property<wbr>Origin</h4>
 

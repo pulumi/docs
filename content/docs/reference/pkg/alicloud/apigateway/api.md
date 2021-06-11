@@ -26,19 +26,39 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -49,46 +69,44 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApiArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,35 +115,27 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -137,25 +147,19 @@ Api gateway api can be imported using the id.Format to `<API Group Id>:<API Id>`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ApiArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -463,7 +467,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestconfig_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-required"
@@ -481,7 +485,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constantparameters_nodejs" style="color: inherit; text-decoration: inherit;">constant<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +494,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#fcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">fc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -499,7 +503,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#httpserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -508,7 +512,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#httpvpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Vpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +521,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mockserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">mock<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -535,7 +539,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +557,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#systemparameters_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd></dl>
@@ -788,20 +792,37 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Api</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Api</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApiState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApiState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Api</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApiState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Api</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApiState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1206,7 +1227,7 @@ The following state arguments are supported:
 <a href="#state_constantparameters_nodejs" style="color: inherit; text-decoration: inherit;">constant<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Api<wbr>Constant<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1245,7 @@ The following state arguments are supported:
 <a href="#state_fcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">fc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apifcserviceconfig">Api<wbr>Fc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fc_service_config defines the config when service_type selected 'FunctionCompute'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1263,7 @@ The following state arguments are supported:
 <a href="#state_httpserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apihttpserviceconfig">Api<wbr>Http<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'HTTP'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_httpvpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Vpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apihttpvpcserviceconfig">Api<wbr>Http<wbr>Vpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_vpc_service_config defines the config when service_type selected 'HTTP-VPC'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_mockserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">mock<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config</a></span>
+        <span class="property-type"><a href="#apimockserviceconfig">Api<wbr>Mock<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}http_service_config defines the config when service_type selected 'MOCK'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_requestconfig_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config</a></span>
+        <span class="property-type"><a href="#apirequestconfig">Api<wbr>Request<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request_config defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Api<wbr>Request<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_systemparameters_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Api<wbr>System<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd></dl>

@@ -19,17 +19,20 @@ meta_desc: "Documentation for the civo.getTemplate function with examples, input
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTemplateFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTemplateSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTemplateFilter]]</span> = None<span class="p">,</span>
+                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTemplateSort]]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTemplate` in the Go SDK.
 
@@ -38,7 +41,7 @@ meta_desc: "Documentation for the civo.getTemplate function with examples, input
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -54,20 +57,27 @@ The following arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatefilter">List&lt;Get<wbr>Template<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gettemplatefilter">List&lt;Get<wbr>Template<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatesort">List&lt;Get<wbr>Template<wbr>Sort<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gettemplatesort">List&lt;Get<wbr>Template<wbr>Sort&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -80,8 +90,16 @@ The `sort` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">[]Get<wbr>Template<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
@@ -90,8 +108,7 @@ The `filter` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">[]Get<wbr>Template<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -104,8 +121,16 @@ The `sort` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">Get<wbr>Template<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
@@ -114,8 +139,7 @@ The `filter` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">Get<wbr>Template<wbr>Sort[]</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -126,20 +150,27 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatefilter">Sequence[Get<wbr>Template<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gettemplatefilter">Sequence[Get<wbr>Template<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatesort">Sequence[Get<wbr>Template<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gettemplatesort">Sequence[Get<wbr>Template<wbr>Sort]</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -180,6 +211,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
 </span>
@@ -214,6 +253,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">[]Get<wbr>Template<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -254,6 +301,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span>
@@ -291,6 +346,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span>
@@ -319,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
-`name`.
+    <dd>{{% md %}}Filter the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
@@ -331,7 +393,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -343,8 +421,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
-`name`.
+    <dd>{{% md %}}Filter the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
@@ -355,7 +432,23 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -367,8 +460,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
-`name`.
+    <dd>{{% md %}}Filter the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
@@ -379,7 +471,23 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -391,8 +499,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
-`name`.
+    <dd>{{% md %}}Filter the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
@@ -403,7 +510,23 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gettemplatesort">Get<wbr>Template<wbr>Sort</h4>
@@ -419,8 +542,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
-`name`.
+    <dd>{{% md %}}Sort the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
@@ -442,8 +564,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
-`name`.
+    <dd>{{% md %}}Sort the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
@@ -465,8 +586,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
-`name`.
+    <dd>{{% md %}}Sort the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
@@ -488,8 +608,7 @@ one of the values provided here.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
-`name`.
+    <dd>{{% md %}}Sort the sizes by this key. This may be one of `id`,`name`,`version`,`label`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
@@ -509,43 +628,6 @@ one of the values provided here.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="cloudconfig_csharp">
-<a href="#cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
-the instance is first booted.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="defaultusername_csharp">
-<a href="#defaultusername_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -555,13 +637,13 @@ the instance is first booted.
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="imageid_csharp">
-<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Image ID of any default template or the ID of another template.
+    <dd>{{% md %}}The label of the template.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -573,64 +655,18 @@ the instance is first booted.
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="shortdescription_csharp">
-<a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volumeid_csharp">
-<a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
+    <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloudconfig_go">
-<a href="#cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
-the instance is first booted.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="defaultusername_go">
-<a href="#defaultusername_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -641,13 +677,13 @@ the instance is first booted.
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="imageid_go">
-<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Image ID of any default template or the ID of another template.
+    <dd>{{% md %}}The label of the template.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -659,64 +695,18 @@ the instance is first booted.
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="shortdescription_go">
-<a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volumeid_go">
-<a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
+    <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloudconfig_nodejs">
-<a href="#cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
-the instance is first booted.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="defaultusername_nodejs">
-<a href="#defaultusername_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -727,13 +717,13 @@ the instance is first booted.
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="imageid_nodejs">
-<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Image ID of any default template or the ID of another template.
+    <dd>{{% md %}}The label of the template.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -745,64 +735,18 @@ the instance is first booted.
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="shortdescription_nodejs">
-<a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volumeid_nodejs">
-<a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
+    <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="cloud_config_python">
-<a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
-the instance is first booted.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="default_username_python">
-<a href="#default_username_python" style="color: inherit; text-decoration: inherit;">default_<wbr>username</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -813,13 +757,13 @@ the instance is first booted.
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="image_id_python">
-<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Image ID of any default template or the ID of another template.
+    <dd>{{% md %}}The label of the template.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -831,22 +775,13 @@ the instance is first booted.
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="short_description_python">
-<a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volume_id_python">
-<a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
+    <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

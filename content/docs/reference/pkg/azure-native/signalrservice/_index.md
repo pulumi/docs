@@ -13,12 +13,14 @@ Explore the resources and functions of the azure-native.signalrservice module.
 <ul class="api">
     <li><a href="signalr" title="SignalR"><span class="symbol resource"></span>SignalR</a></li>
     <li><a href="signalrprivateendpointconnection" title="SignalRPrivateEndpointConnection"><span class="symbol resource"></span>SignalRPrivateEndpointConnection</a></li>
+    <li><a href="signalrsharedprivatelinkresource" title="SignalRSharedPrivateLinkResource"><span class="symbol resource"></span>SignalRSharedPrivateLinkResource</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getsignalr" title="GetSignalR"><span class="symbol function"></span>GetSignalR</a></li>
     <li><a href="getsignalrprivateendpointconnection" title="GetSignalRPrivateEndpointConnection"><span class="symbol function"></span>GetSignalRPrivateEndpointConnection</a></li>
+    <li><a href="getsignalrsharedprivatelinkresource" title="GetSignalRSharedPrivateLinkResource"><span class="symbol function"></span>GetSignalRSharedPrivateLinkResource</a></li>
     <li><a href="listsignalrkeys" title="ListSignalRKeys"><span class="symbol function"></span>ListSignalRKeys</a></li>
 </ul>
 
@@ -29,6 +31,6 @@ Explore the resources and functions of the azure-native.signalrservice module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

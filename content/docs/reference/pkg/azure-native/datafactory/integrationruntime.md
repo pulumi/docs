@@ -37,10 +37,10 @@ class MyStack : Stack
         {
             FactoryName = "exampleFactoryName",
             IntegrationRuntimeName = "exampleIntegrationRuntime",
-            Properties = 
+            Properties = new AzureNative.DataFactory.Inputs.SelfHostedIntegrationRuntimeArgs
             {
-                { "description", "A selfhosted integration runtime" },
-                { "type", "SelfHosted" },
+                Description = "A selfhosted integration runtime",
+                Type = "SelfHosted",
             },
             ResourceGroupName = "exampleResourceGroup",
         });
@@ -56,7 +56,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datafactory.NewIntegrationRuntime(ctx, "integrationRuntime", &datafactory.IntegrationRuntimeArgs{
+			FactoryName:            pulumi.String("exampleFactoryName"),
+			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
+			Properties: datafactory.SelfHostedIntegrationRuntime{
+				Description: "A selfhosted integration runtime",
+				Type:        "SelfHosted",
+			},
+			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -71,10 +99,10 @@ import pulumi_azure_native as azure_native
 integration_runtime = azure_native.datafactory.IntegrationRuntime("integrationRuntime",
     factory_name="exampleFactoryName",
     integration_runtime_name="exampleIntegrationRuntime",
-    properties={
-        "description": "A selfhosted integration runtime",
-        "type": "SelfHosted",
-    },
+    properties=azure_native.datafactory.SelfHostedIntegrationRuntimeArgs(
+        description="A selfhosted integration runtime",
+        type="SelfHosted",
+    ),
     resource_group_name="exampleResourceGroup")
 
 ```
@@ -119,19 +147,29 @@ const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("inte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ManagedIntegrationRuntimeArgs, SelfHostedIntegrationRuntimeArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ManagedIntegrationRuntimeArgs, SelfHostedIntegrationRuntimeArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntime</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntime</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -142,46 +180,44 @@ const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("inte
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -192,33 +228,25 @@ const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("inte
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -230,25 +258,19 @@ const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("inte
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -349,7 +371,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime</a> | <a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime</a></span>
+        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime<wbr>Args</a> | <a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -740,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1074,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1180,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1758,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1968,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2122,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2204,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2522,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2538,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2636,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2716,25 +2738,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Integration<wbr>Runtime<wbr>Reference</dt>
     <dd>IntegrationRuntimeReference</dd><dt>Linked<wbr>Service<wbr>Reference</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>Credential<wbr>Reference</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type<wbr>Integration<wbr>Runtime<wbr>Reference</dt>
     <dd>IntegrationRuntimeReference</dd><dt>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type<wbr>Linked<wbr>Service<wbr>Reference</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type<wbr>Credential<wbr>Reference</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Integration<wbr>Runtime<wbr>Reference</dt>
     <dd>IntegrationRuntimeReference</dd><dt>Linked<wbr>Service<wbr>Reference</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>Credential<wbr>Reference</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>INTEGRATION_RUNTIME_REFERENCE</dt>
     <dd>IntegrationRuntimeReference</dd><dt>LINKED_SERVICE_REFERENCE</dt>
-    <dd>LinkedServiceReference</dd></dl>
+    <dd>LinkedServiceReference</dd><dt>CREDENTIAL_REFERENCE</dt>
+    <dd>CredentialReference</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</h4>
@@ -2860,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3038,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3206,6 +3232,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_csharp">
+<a href="#managedcredential_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_csharp">
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
@@ -3266,6 +3300,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_go">
+<a href="#managedcredential_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_go">
 <a href="#packagestores_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
@@ -3282,7 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3290,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3298,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3314,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup | Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup[]</span>
+        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Args | Cmdkey<wbr>Setup<wbr>Args | Component<wbr>Setup<wbr>Args | Environment<wbr>Variable<wbr>Setup<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3326,11 +3368,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_nodejs">
+<a href="#managedcredential_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_nodejs">
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">Package<wbr>Store[]</a></span>
+        <span class="property-type"><a href="#packagestore">Package<wbr>Store<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3385,6 +3435,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str | <a href="#integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managed_credential_python">
+<a href="#managed_credential_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_stores_python">
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
@@ -3448,6 +3506,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_csharp">
+<a href="#managedcredential_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_csharp">
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
@@ -3508,6 +3574,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_go">
+<a href="#managedcredential_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_go">
 <a href="#packagestores_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
@@ -3524,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3556,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response | Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response[]</span>
+        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args | Cmdkey<wbr>Setup<wbr>Response<wbr>Args | Component<wbr>Setup<wbr>Response<wbr>Args | Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3568,11 +3642,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedcredential_nodejs">
+<a href="#managedcredential_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="packagestores_nodejs">
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">Package<wbr>Store<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">Package<wbr>Store<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3627,6 +3709,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managed_credential_python">
+<a href="#managed_credential_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>credential</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="package_stores_python">
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
@@ -3898,7 +3988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3948,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4374,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4390,7 +4480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4398,7 +4488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4544,7 +4634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4560,7 +4650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4568,7 +4658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4838,7 +4928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4920,7 +5010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5102,7 +5192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5184,7 +5274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}

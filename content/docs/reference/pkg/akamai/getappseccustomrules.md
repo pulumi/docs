@@ -35,17 +35,31 @@ class MyStack : Stack
     {
         var configuration = Output.Create(Akamai.GetAppSecConfiguration.InvokeAsync(new Akamai.GetAppSecConfigurationArgs
         {
-            Name = "Akamai Tools",
+            Name = @var.Security_configuration,
         }));
         var customRules = configuration.Apply(configuration => Output.Create(Akamai.GetAppSecCustomRules.InvokeAsync(new Akamai.GetAppSecCustomRulesArgs
         {
             ConfigId = configuration.ConfigId,
         })));
-        this.CustomRulesList = customRules.Apply(customRules => customRules.OutputText);
+        this.CustomRulesOutputText = customRules.Apply(customRules => customRules.OutputText);
+        this.CustomRulesJson = customRules.Apply(customRules => customRules.Json);
+        this.CustomRulesConfigId = customRules.Apply(customRules => customRules.ConfigId);
+        var specificCustomRule = configuration.Apply(configuration => Output.Create(Akamai.GetAppSecCustomRules.InvokeAsync(new Akamai.GetAppSecCustomRulesArgs
+        {
+            ConfigId = configuration.ConfigId,
+            CustomRuleId = @var.Custom_rule_id,
+        })));
+        this.SpecificCustomRuleJson = specificCustomRule.Apply(specificCustomRule => specificCustomRule.Json);
     }
 
-    [Output("customRulesList")]
-    public Output<string> CustomRulesList { get; set; }
+    [Output("customRulesOutputText")]
+    public Output<string> CustomRulesOutputText { get; set; }
+    [Output("customRulesJson")]
+    public Output<string> CustomRulesJson { get; set; }
+    [Output("customRulesConfigId")]
+    public Output<string> CustomRulesConfigId { get; set; }
+    [Output("specificCustomRuleJson")]
+    public Output<string> SpecificCustomRuleJson { get; set; }
 }
 ```
 
@@ -59,14 +73,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-akamai/sdk/go/akamai"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-akamai/sdk/v2/go/akamai"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "Akamai Tools"
-		configuration, err := akamai.GetAppSecConfiguration(ctx, &akamai.GetAppSecConfigurationArgs{
+		opt0 := _var.Security_configuration
+		configuration, err := akamai.LookupAppSecConfiguration(ctx, &akamai.LookupAppSecConfigurationArgs{
 			Name: &opt0,
 		}, nil)
 		if err != nil {
@@ -78,7 +92,18 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("customRulesList", customRules.OutputText)
+		ctx.Export("customRulesOutputText", customRules.OutputText)
+		ctx.Export("customRulesJson", customRules.Json)
+		ctx.Export("customRulesConfigId", customRules.ConfigId)
+		opt1 := _var.Custom_rule_id
+		specificCustomRule, err := akamai.GetAppSecCustomRules(ctx, &akamai.GetAppSecCustomRulesArgs{
+			ConfigId:     configuration.ConfigId,
+			CustomRuleId: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("specificCustomRuleJson", specificCustomRule.Json)
 		return nil
 	})
 }
@@ -94,9 +119,14 @@ func main() {
 import pulumi
 import pulumi_akamai as akamai
 
-configuration = akamai.get_app_sec_configuration(name="Akamai Tools")
+configuration = akamai.get_app_sec_configuration(name=var["security_configuration"])
 custom_rules = akamai.get_app_sec_custom_rules(config_id=configuration.config_id)
-pulumi.export("customRulesList", custom_rules.output_text)
+pulumi.export("customRulesOutputText", custom_rules.output_text)
+pulumi.export("customRulesJson", custom_rules.json)
+pulumi.export("customRulesConfigId", custom_rules.config_id)
+specific_custom_rule = akamai.get_app_sec_custom_rules(config_id=configuration.config_id,
+    custom_rule_id=var["custom_rule_id"])
+pulumi.export("specificCustomRuleJson", specific_custom_rule.json)
 ```
 
 
@@ -111,12 +141,19 @@ import * as pulumi from "@pulumi/pulumi";
 import * as akamai from "@pulumi/akamai";
 
 const configuration = akamai.getAppSecConfiguration({
-    name: "Akamai Tools",
+    name: _var.security_configuration,
 });
 const customRules = configuration.then(configuration => akamai.getAppSecCustomRules({
     configId: configuration.configId,
 }));
-export const customRulesList = customRules.then(customRules => customRules.outputText);
+export const customRulesOutputText = customRules.then(customRules => customRules.outputText);
+export const customRulesJson = customRules.then(customRules => customRules.json);
+export const customRulesConfigId = customRules.then(customRules => customRules.configId);
+const specificCustomRule = configuration.then(configuration => akamai.getAppSecCustomRules({
+    configId: configuration.configId,
+    customRuleId: _var.custom_rule_id,
+}));
+export const specificCustomRuleJson = specificCustomRule.then(specificCustomRule => specificCustomRule.json);
 ```
 
 
@@ -137,17 +174,19 @@ export const customRulesList = customRules.then(customRules => customRules.outpu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAppSecCustomRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAppSecCustomRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAppSecCustomRulesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAppSecCustomRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAppSecCustomRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAppSecCustomRulesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_app_sec_custom_rules(</span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAppSecCustomRulesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_app_sec_custom_rules(</span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                             <span class="nx">custom_rule_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAppSecCustomRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppSecCustomRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAppSecCustomRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAppSecCustomRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppSecCustomRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetAppSecCustomRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAppSecCustomRulesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetAppSecCustomRules` in the Go SDK.
 
@@ -156,7 +195,7 @@ export const customRulesList = customRules.then(customRules => customRules.outpu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAppSecCustomRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAppSecCustomRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAppSecCustomRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAppSecCustomRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAppSecCustomRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -175,6 +214,15 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customruleid_csharp">
+<a href="#customruleid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of a specific custom rule to use. If not supplied, information about all custom rules associated with the given security configuration will be returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -188,6 +236,15 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customruleid_go">
+<a href="#customruleid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of a specific custom rule to use. If not supplied, information about all custom rules associated with the given security configuration will be returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -201,6 +258,15 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customruleid_nodejs">
+<a href="#customruleid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ID of a specific custom rule to use. If not supplied, information about all custom rules associated with the given security configuration will be returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -214,6 +280,15 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the security configuration to use.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_rule_id_python">
+<a href="#custom_rule_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of a specific custom rule to use. If not supplied, information about all custom rules associated with the given security configuration will be returned.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -246,14 +321,31 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="json_csharp">
+<a href="#json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON-formatted display of the custom rule information.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="outputtext_csharp">
 <a href="#outputtext_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A tabular display showing the ID and name of the custom rules defined for the security configuration.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A tabular display showing the ID and name of the custom rule(s).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customruleid_csharp">
+<a href="#customruleid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,14 +368,31 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="json_go">
+<a href="#json_go" style="color: inherit; text-decoration: inherit;">Json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON-formatted display of the custom rule information.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="outputtext_go">
 <a href="#outputtext_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A tabular display showing the ID and name of the custom rules defined for the security configuration.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A tabular display showing the ID and name of the custom rule(s).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customruleid_go">
+<a href="#customruleid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -306,14 +415,31 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="json_nodejs">
+<a href="#json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON-formatted display of the custom rule information.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="outputtext_nodejs">
 <a href="#outputtext_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A tabular display showing the ID and name of the custom rules defined for the security configuration.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A tabular display showing the ID and name of the custom rule(s).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customruleid_nodejs">
+<a href="#customruleid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rule<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -336,14 +462,31 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="json_python">
+<a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A JSON-formatted display of the custom rule information.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="output_text_python">
 <a href="#output_text_python" style="color: inherit; text-decoration: inherit;">output_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A tabular display showing the ID and name of the custom rules defined for the security configuration.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A tabular display showing the ID and name of the custom rule(s).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="custom_rule_id_python">
+<a href="#custom_rule_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rule_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

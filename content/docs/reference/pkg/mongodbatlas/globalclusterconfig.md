@@ -29,7 +29,6 @@ const test = new mongodbatlas.Cluster("test", {
     providerBackupEnabled: true,
     clusterType: "GEOSHARDED",
     providerName: "AWS",
-    providerDiskIops: 240,
     providerInstanceSizeName: "M30",
     replicationSpecs: [
         {
@@ -79,7 +78,6 @@ test = mongodbatlas.Cluster("test",
     provider_backup_enabled=True,
     cluster_type="GEOSHARDED",
     provider_name="AWS",
-    provider_disk_iops=240,
     provider_instance_size_name="M30",
     replication_specs=[
         mongodbatlas.ClusterReplicationSpecArgs(
@@ -132,7 +130,6 @@ class MyStack : Stack
             ProviderBackupEnabled = true,
             ClusterType = "GEOSHARDED",
             ProviderName = "AWS",
-            ProviderDiskIops = 240,
             ProviderInstanceSizeName = "M30",
             ReplicationSpecs = 
             {
@@ -198,8 +195,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -211,7 +208,6 @@ func main() {
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			ClusterType:              pulumi.String("GEOSHARDED"),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderDiskIops:         pulumi.Int(240),
 			ProviderInstanceSizeName: pulumi.String("M30"),
 			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
 				&mongodbatlas.ClusterReplicationSpecArgs{
@@ -283,8 +279,6 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     mongoDbMajorVersion: "4.0",
     providerName: "AWS",
     diskSizeGb: 100,
-    providerDiskIops: 300,
-    providerEncryptEbsVolume: false,
     providerInstanceSizeName: "M40",
     providerRegionName: "US_EAST_1",
 });
@@ -315,8 +309,6 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     mongo_db_major_version="4.0",
     provider_name="AWS",
     disk_size_gb=100,
-    provider_disk_iops=300,
-    provider_encrypt_ebs_volume=False,
     provider_instance_size_name="M40",
     provider_region_name="US_EAST_1")
 config = mongodbatlas.GlobalClusterConfig("config",
@@ -350,8 +342,6 @@ class MyStack : Stack
             MongoDbMajorVersion = "4.0",
             ProviderName = "AWS",
             DiskSizeGb = 100,
-            ProviderDiskIops = 300,
-            ProviderEncryptEbsVolume = false,
             ProviderInstanceSizeName = "M40",
             ProviderRegionName = "US_EAST_1",
         });
@@ -385,8 +375,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -400,8 +390,6 @@ func main() {
 			MongoDbMajorVersion:      pulumi.String("4.0"),
 			ProviderName:             pulumi.String("AWS"),
 			DiskSizeGb:               pulumi.Float64(100),
-			ProviderDiskIops:         pulumi.Int(300),
-			ProviderEncryptEbsVolume: pulumi.Bool(false),
 			ProviderInstanceSizeName: pulumi.String("M40"),
 			ProviderRegionName:       pulumi.String("US_EAST_1"),
 		})
@@ -440,19 +428,29 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_zone_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigCustomZoneMappingArgs]]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">custom_zone_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigCustomZoneMappingArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalClusterConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClusterConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalClusterConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClusterConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalClusterConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalClusterConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -463,46 +461,44 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -511,35 +507,27 @@ func main() {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -551,25 +539,19 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterConfigArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -592,7 +574,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -601,7 +584,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_csharp">
@@ -632,7 +614,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -641,7 +624,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_go">
@@ -672,7 +654,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -681,14 +664,13 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_nodejs">
 <a href="#customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +679,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 <a href="#managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd></dl>
@@ -712,7 +694,8 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -721,7 +704,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_zone_mappings_python">
@@ -842,20 +824,27 @@ Get an existing GlobalClusterConfig resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClusterConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalClusterConfig</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClusterConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalClusterConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_zone_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">custom_zone_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigCustomZoneMappingArgs]]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalClusterConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_zone_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_zone_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigCustomZoneMappingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalClusterConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClusterConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClusterConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClusterConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClusterConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClusterConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClusterConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalClusterConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalClusterConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalClusterConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GlobalClusterConfigState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -966,7 +955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_csharp">
 <a href="#state_customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -1002,7 +992,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1015,7 +1004,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_go">
 <a href="#state_customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -1051,7 +1041,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1064,7 +1053,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_nodejs">
 <a href="#state_customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
@@ -1079,7 +1069,7 @@ The following state arguments are supported:
 <a href="#state_customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1088,7 +1078,7 @@ The following state arguments are supported:
 <a href="#state_managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1090,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1113,7 +1102,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the Global Cluster.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_zone_mapping_python">
 <a href="#state_custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
@@ -1149,7 +1139,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-* `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

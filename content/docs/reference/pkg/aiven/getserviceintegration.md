@@ -42,9 +42,9 @@ class MyStack : Stack
     {
         var myintegration = Output.Create(Aiven.GetServiceIntegration.InvokeAsync(new Aiven.GetServiceIntegrationArgs
         {
+            Project = aiven_project.Myproject.Project,
             DestinationServiceName = "<DESTINATION_SERVICE_NAME>",
             IntegrationType = "datadog",
-            Project = aiven_project.Myproject.Project,
             SourceServiceName = "<SOURCE_SERVICE_NAME>",
         }));
     }
@@ -62,16 +62,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupServiceIntegration(ctx, &aiven.LookupServiceIntegrationArgs{
+			Project:                aiven_project.Myproject.Project,
 			DestinationServiceName: "<DESTINATION_SERVICE_NAME>",
 			IntegrationType:        "datadog",
-			Project:                aiven_project.Myproject.Project,
 			SourceServiceName:      "<SOURCE_SERVICE_NAME>",
 		}, nil)
 		if err != nil {
@@ -92,9 +92,9 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-myintegration = aiven.get_service_integration(destination_service_name="<DESTINATION_SERVICE_NAME>",
+myintegration = aiven.get_service_integration(project=aiven_project["myproject"]["project"],
+    destination_service_name="<DESTINATION_SERVICE_NAME>",
     integration_type="datadog",
-    project=aiven_project["myproject"]["project"],
     source_service_name="<SOURCE_SERVICE_NAME>")
 ```
 
@@ -109,12 +109,12 @@ myintegration = aiven.get_service_integration(destination_service_name="<DESTINA
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const myintegration = aiven_project_myproject.project.apply(project => aiven.getServiceIntegration({
+const myintegration = aiven.getServiceIntegration({
+    project: aiven_project.myproject.project,
     destinationServiceName: "<DESTINATION_SERVICE_NAME>",
     integrationType: "datadog",
-    project: project,
     sourceServiceName: "<SOURCE_SERVICE_NAME>",
-}, { async: true }));
+});
 ```
 
 
@@ -135,17 +135,42 @@ const myintegration = aiven_project_myproject.project.apply(project => aiven.get
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceIntegrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceIntegrationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceIntegrationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceIntegrationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration(</span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalAwsCloudwatchMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSchemaRegistryProxyUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration(</span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDashboardUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDatadogUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalAwsCloudwatchLogsUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalAwsCloudwatchMetricsUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalElasticsearchLogsUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalGoogleCloudLoggingUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaConnectUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaLogsUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaMirrormakerUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationLogsUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3aggregatorUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3coordinatorUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMetricsUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMirrormakerUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationPrometheusUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationReadReplicaUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationRsyslogUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSchemaRegistryProxyUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSignalfxUserConfig]</span> = None<span class="p">,</span>
+                            <span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceIntegrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceIntegrationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceIntegrationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceIntegrationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceIntegration` in the Go SDK.
 
@@ -154,7 +179,7 @@ const myintegration = aiven_project_myproject.project.apply(project => aiven.get
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceIntegration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceIntegrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceIntegrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceIntegrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceIntegrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -207,7 +232,7 @@ The following arguments are supported:
 <a href="#dashboarduserconfig_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationdashboarduserconfig">Get<wbr>Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationdashboarduserconfig">Get<wbr>Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -215,7 +240,7 @@ The following arguments are supported:
 <a href="#datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -231,7 +256,7 @@ The following arguments are supported:
 <a href="#externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -239,7 +264,7 @@ The following arguments are supported:
 <a href="#externalawscloudwatchmetricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -247,7 +272,7 @@ The following arguments are supported:
 <a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -255,7 +280,7 @@ The following arguments are supported:
 <a href="#externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -263,7 +288,7 @@ The following arguments are supported:
 <a href="#kafkaconnectuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -271,7 +296,7 @@ The following arguments are supported:
 <a href="#kafkalogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkalogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkalogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -279,7 +304,7 @@ The following arguments are supported:
 <a href="#kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -287,7 +312,7 @@ The following arguments are supported:
 <a href="#logsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -295,7 +320,7 @@ The following arguments are supported:
 <a href="#m3aggregatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationm3aggregatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationm3aggregatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -303,7 +328,7 @@ The following arguments are supported:
 <a href="#m3coordinatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationm3coordinatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationm3coordinatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -311,7 +336,7 @@ The following arguments are supported:
 <a href="#metricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -319,7 +344,7 @@ The following arguments are supported:
 <a href="#mirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -327,7 +352,7 @@ The following arguments are supported:
 <a href="#prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -335,7 +360,7 @@ The following arguments are supported:
 <a href="#readreplicauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationreadreplicauserconfig">Get<wbr>Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationreadreplicauserconfig">Get<wbr>Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -343,7 +368,7 @@ The following arguments are supported:
 <a href="#rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -351,7 +376,7 @@ The following arguments are supported:
 <a href="#schemaregistryproxyuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -359,7 +384,7 @@ The following arguments are supported:
 <a href="#signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +859,7 @@ The following arguments are supported:
 <a href="#dashboard_user_config_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationdashboarduserconfig">Get<wbr>Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationdashboarduserconfig">Get<wbr>Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +867,7 @@ The following arguments are supported:
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +883,7 @@ The following arguments are supported:
 <a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +891,7 @@ The following arguments are supported:
 <a href="#external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +899,7 @@ The following arguments are supported:
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +907,7 @@ The following arguments are supported:
 <a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +915,7 @@ The following arguments are supported:
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +923,7 @@ The following arguments are supported:
 <a href="#kafka_logs_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkalogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkalogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +931,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +939,7 @@ The following arguments are supported:
 <a href="#logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +947,7 @@ The following arguments are supported:
 <a href="#m3aggregator_user_config_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationm3aggregatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationm3aggregatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +955,7 @@ The following arguments are supported:
 <a href="#m3coordinator_user_config_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationm3coordinatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationm3coordinatoruserconfig">Get<wbr>Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +963,7 @@ The following arguments are supported:
 <a href="#metrics_user_config_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +971,7 @@ The following arguments are supported:
 <a href="#mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +979,7 @@ The following arguments are supported:
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +987,7 @@ The following arguments are supported:
 <a href="#read_replica_user_config_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationreadreplicauserconfig">Get<wbr>Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationreadreplicauserconfig">Get<wbr>Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +995,7 @@ The following arguments are supported:
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +1003,7 @@ The following arguments are supported:
 <a href="#schema_registry_proxy_user_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>proxy_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +1011,7 @@ The following arguments are supported:
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1902,7 @@ The following output properties are available:
 <a href="#datadogtags_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">List&lt;Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">List&lt;Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,6 +1943,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxjmxmetrics_csharp">
+<a href="#maxjmxmetrics_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Jmx<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1971,6 +2004,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxjmxmetrics_go">
+<a href="#maxjmxmetrics_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Jmx<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2023,6 +2064,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxjmxmetrics_nodejs">
+<a href="#maxjmxmetrics_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Jmx<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2033,7 +2082,7 @@ The following output properties are available:
 <a href="#datadog_tags_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">Sequence[Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationdatadoguserconfigdatadogtag">Sequence[Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,6 +2123,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_jmx_metrics_python">
+<a href="#max_jmx_metrics_python" style="color: inherit; text-decoration: inherit;">max_<wbr>jmx_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2162,6 +2219,258 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getserviceintegrationexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="droppedmetrics_csharp">
+<a href="#droppedmetrics_csharp" style="color: inherit; text-decoration: inherit;">Dropped<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">List&lt;Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extrametrics_csharp">
+<a href="#extrametrics_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">List&lt;Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="droppedmetrics_go">
+<a href="#droppedmetrics_go" style="color: inherit; text-decoration: inherit;">Dropped<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">[]Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extrametrics_go">
+<a href="#extrametrics_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">[]Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="droppedmetrics_nodejs">
+<a href="#droppedmetrics_nodejs" style="color: inherit; text-decoration: inherit;">dropped<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extrametrics_nodejs">
+<a href="#extrametrics_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dropped_metrics_python">
+<a href="#dropped_metrics_python" style="color: inherit; text-decoration: inherit;">dropped_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Sequence[Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extra_metrics_python">
+<a href="#extra_metrics_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Sequence[Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationexternalawscloudwatchmetricsuserconfigdroppedmetric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Dropped<wbr>Metric</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_csharp">
+<a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_go">
+<a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_nodejs">
+<a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_python">
+<a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationexternalawscloudwatchmetricsuserconfigextrametric">Get<wbr>Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Extra<wbr>Metric</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_csharp">
+<a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_go">
+<a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_nodejs">
+<a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_python">
+<a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</h4>
 
 
@@ -2173,7 +2482,7 @@ The following output properties are available:
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2209,7 +2518,7 @@ The following output properties are available:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationkafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2585,7 +2894,7 @@ The following output properties are available:
 <a href="#sourcemysql_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +3026,7 @@ The following output properties are available:
 <a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +3050,7 @@ The following output properties are available:
 <a href="#telegraf_csharp" style="color: inherit; text-decoration: inherit;">Telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +3086,7 @@ The following output properties are available:
 <a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationmetricsuserconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3313,7 +3622,7 @@ The following output properties are available:
 <a href="#sourcemysql_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3349,7 +3658,7 @@ The following output properties are available:
 <a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3365,7 +3674,7 @@ The following output properties are available:
 <a href="#telegraf_csharp" style="color: inherit; text-decoration: inherit;">Telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3401,7 +3710,7 @@ The following output properties are available:
 <a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationprometheususerconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

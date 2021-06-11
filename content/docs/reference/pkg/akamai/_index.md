@@ -22,13 +22,49 @@ A Pulumi package for creating and managing akamai cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="appsecactivations" title="AppSecActivations"><span class="symbol resource"></span>AppSecActivations</a></li>
+    <li><a href="appsecadvancedsettingslogging" title="AppSecAdvancedSettingsLogging"><span class="symbol resource"></span>AppSecAdvancedSettingsLogging</a></li>
+    <li><a href="appsecadvancedsettingsprefetch" title="AppSecAdvancedSettingsPrefetch"><span class="symbol resource"></span>AppSecAdvancedSettingsPrefetch</a></li>
+    <li><a href="appsecapirequestconstraints" title="AppSecApiRequestConstraints"><span class="symbol resource"></span>AppSecApiRequestConstraints</a></li>
+    <li><a href="appsecattackgroupaction" title="AppSecAttackGroupAction"><span class="symbol resource"></span>AppSecAttackGroupAction</a></li>
+    <li><a href="appsecattackgroupactionconditionexception" title="AppSecAttackGroupActionConditionException"><span class="symbol resource"></span>AppSecAttackGroupActionConditionException</a></li>
+    <li><a href="appsecbypassnetworklist" title="AppSecByPassNetworkList"><span class="symbol resource"></span>AppSecByPassNetworkList</a></li>
+    <li><a href="appsecconfiguration" title="AppSecConfiguration"><span class="symbol resource"></span>AppSecConfiguration</a></li>
+    <li><a href="appsecconfigurationclone" title="AppSecConfigurationClone"><span class="symbol resource"></span>AppSecConfigurationClone</a></li>
+    <li><a href="appsecconfigurationrename" title="AppSecConfigurationRename"><span class="symbol resource"></span>AppSecConfigurationRename</a></li>
     <li><a href="appsecconfigurationversionclone" title="AppSecConfigurationVersionClone"><span class="symbol resource"></span>AppSecConfigurationVersionClone</a></li>
+    <li><a href="appseccustomdeny" title="AppSecCustomDeny"><span class="symbol resource"></span>AppSecCustomDeny</a></li>
     <li><a href="appseccustomrule" title="AppSecCustomRule"><span class="symbol resource"></span>AppSecCustomRule</a></li>
     <li><a href="appseccustomruleaction" title="AppSecCustomRuleAction"><span class="symbol resource"></span>AppSecCustomRuleAction</a></li>
+    <li><a href="appseceval" title="AppSecEval"><span class="symbol resource"></span>AppSecEval</a></li>
+    <li><a href="appsecevalhostnames" title="AppSecEvalHostnames"><span class="symbol resource"></span>AppSecEvalHostnames</a></li>
+    <li><a href="appsecevalprotecthost" title="AppSecEvalProtectHost"><span class="symbol resource"></span>AppSecEvalProtectHost</a></li>
+    <li><a href="appsecevalruleaction" title="AppSecEvalRuleAction"><span class="symbol resource"></span>AppSecEvalRuleAction</a></li>
+    <li><a href="appsecevalruleconditionexception" title="AppSecEvalRuleConditionException"><span class="symbol resource"></span>AppSecEvalRuleConditionException</a></li>
+    <li><a href="appsecipgeo" title="AppSecIPGeo"><span class="symbol resource"></span>AppSecIPGeo</a></li>
     <li><a href="appsecmatchtarget" title="AppSecMatchTarget"><span class="symbol resource"></span>AppSecMatchTarget</a></li>
     <li><a href="appsecmatchtargetsequence" title="AppSecMatchTargetSequence"><span class="symbol resource"></span>AppSecMatchTargetSequence</a></li>
+    <li><a href="appsecpenaltybox" title="AppSecPenaltyBox"><span class="symbol resource"></span>AppSecPenaltyBox</a></li>
+    <li><a href="appsecratepolicy" title="AppSecRatePolicy"><span class="symbol resource"></span>AppSecRatePolicy</a></li>
+    <li><a href="appsecratepolicyaction" title="AppSecRatePolicyAction"><span class="symbol resource"></span>AppSecRatePolicyAction</a></li>
+    <li><a href="appsecrateprotection" title="AppSecRateProtection"><span class="symbol resource"></span>AppSecRateProtection</a></li>
+    <li><a href="appsecreputationprofile" title="AppSecReputationProfile"><span class="symbol resource"></span>AppSecReputationProfile</a></li>
+    <li><a href="appsecreputationprofileaction" title="AppSecReputationProfileAction"><span class="symbol resource"></span>AppSecReputationProfileAction</a></li>
+    <li><a href="appsecreputationprofileanalysis" title="AppSecReputationProfileAnalysis"><span class="symbol resource"></span>AppSecReputationProfileAnalysis</a></li>
+    <li><a href="appsecreputationprotection" title="AppSecReputationProtection"><span class="symbol resource"></span>AppSecReputationProtection</a></li>
+    <li><a href="appsecruleaction" title="AppSecRuleAction"><span class="symbol resource"></span>AppSecRuleAction</a></li>
+    <li><a href="appsecruleconditionexception" title="AppSecRuleConditionException"><span class="symbol resource"></span>AppSecRuleConditionException</a></li>
+    <li><a href="appsecruleupgrade" title="AppSecRuleUpgrade"><span class="symbol resource"></span>AppSecRuleUpgrade</a></li>
+    <li><a href="appsecsecuritypolicy" title="AppSecSecurityPolicy"><span class="symbol resource"></span>AppSecSecurityPolicy</a></li>
     <li><a href="appsecsecuritypolicyclone" title="AppSecSecurityPolicyClone"><span class="symbol resource"></span>AppSecSecurityPolicyClone</a></li>
+    <li><a href="appsecsecuritypolicyprotections" title="AppSecSecurityPolicyProtections"><span class="symbol resource"></span>AppSecSecurityPolicyProtections</a></li>
+    <li><a href="appsecsecuritypolicyrename" title="AppSecSecurityPolicyRename"><span class="symbol resource"></span>AppSecSecurityPolicyRename</a></li>
     <li><a href="appsecselectedhostnames" title="AppSecSelectedHostnames"><span class="symbol resource"></span>AppSecSelectedHostnames</a></li>
+    <li><a href="appsecsiemsettings" title="AppSecSiemSettings"><span class="symbol resource"></span>AppSecSiemSettings</a></li>
+    <li><a href="appsecslowpost" title="AppSecSlowPost"><span class="symbol resource"></span>AppSecSlowPost</a></li>
+    <li><a href="appsecslowpostprotection" title="AppSecSlowPostProtection"><span class="symbol resource"></span>AppSecSlowPostProtection</a></li>
+    <li><a href="appsecversionnodes" title="AppSecVersionNodes"><span class="symbol resource"></span>AppSecVersionNodes</a></li>
+    <li><a href="appsecwafmode" title="AppSecWafMode"><span class="symbol resource"></span>AppSecWafMode</a></li>
+    <li><a href="appsecwafprotection" title="AppSecWafProtection"><span class="symbol resource"></span>AppSecWafProtection</a></li>
     <li><a href="cpcode" title="CpCode"><span class="symbol resource"></span>CpCode</a></li>
     <li><a href="dnsrecord" title="DnsRecord"><span class="symbol resource"></span>DnsRecord</a></li>
     <li><a href="dnszone" title="DnsZone"><span class="symbol resource"></span>DnsZone</a></li>
@@ -48,15 +84,48 @@ A Pulumi package for creating and managing akamai cloud resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getappsecadvancedsettingslogging" title="GetAppSecAdvancedSettingsLogging"><span class="symbol function"></span>GetAppSecAdvancedSettingsLogging</a></li>
+    <li><a href="getappsecadvancedsettingsprefetch" title="GetAppSecAdvancedSettingsPrefetch"><span class="symbol function"></span>GetAppSecAdvancedSettingsPrefetch</a></li>
+    <li><a href="getappsecapiendpoints" title="GetAppSecApiEndpoints"><span class="symbol function"></span>GetAppSecApiEndpoints</a></li>
+    <li><a href="getappsecapirequestconstraints" title="GetAppSecApiRequestConstraints"><span class="symbol function"></span>GetAppSecApiRequestConstraints</a></li>
+    <li><a href="getappsecattackgroupactions" title="GetAppSecAttackGroupActions"><span class="symbol function"></span>GetAppSecAttackGroupActions</a></li>
+    <li><a href="getappsecattackgroupconditionexception" title="GetAppSecAttackGroupConditionException"><span class="symbol function"></span>GetAppSecAttackGroupConditionException</a></li>
+    <li><a href="getappsecbypassnetworklists" title="GetAppSecBypassNetworkLists"><span class="symbol function"></span>GetAppSecBypassNetworkLists</a></li>
     <li><a href="getappsecconfiguration" title="GetAppSecConfiguration"><span class="symbol function"></span>GetAppSecConfiguration</a></li>
     <li><a href="getappsecconfigurationversion" title="GetAppSecConfigurationVersion"><span class="symbol function"></span>GetAppSecConfigurationVersion</a></li>
+    <li><a href="getappseccontractsgroups" title="GetAppSecContractsGroups"><span class="symbol function"></span>GetAppSecContractsGroups</a></li>
+    <li><a href="getappseccustomdeny" title="GetAppSecCustomDeny"><span class="symbol function"></span>GetAppSecCustomDeny</a></li>
     <li><a href="getappseccustomruleactions" title="GetAppSecCustomRuleActions"><span class="symbol function"></span>GetAppSecCustomRuleActions</a></li>
     <li><a href="getappseccustomrules" title="GetAppSecCustomRules"><span class="symbol function"></span>GetAppSecCustomRules</a></li>
+    <li><a href="getappseceval" title="GetAppSecEval"><span class="symbol function"></span>GetAppSecEval</a></li>
+    <li><a href="getappsecevalhostnames" title="GetAppSecEvalHostnames"><span class="symbol function"></span>GetAppSecEvalHostnames</a></li>
+    <li><a href="getappsecevalruleactions" title="GetAppSecEvalRuleActions"><span class="symbol function"></span>GetAppSecEvalRuleActions</a></li>
+    <li><a href="getappsecevalruleconditionexception" title="GetAppSecEvalRuleConditionException"><span class="symbol function"></span>GetAppSecEvalRuleConditionException</a></li>
     <li><a href="getappsecexportconfiguration" title="GetAppSecExportConfiguration"><span class="symbol function"></span>GetAppSecExportConfiguration</a></li>
+    <li><a href="getappsecfailoverhostnames" title="GetAppSecFailoverHostnames"><span class="symbol function"></span>GetAppSecFailoverHostnames</a></li>
+    <li><a href="getappsechostnamecoverage" title="GetAppSecHostnameCoverage"><span class="symbol function"></span>GetAppSecHostnameCoverage</a></li>
+    <li><a href="getappsechostnamecoveragematchtargets" title="GetAppSecHostnameCoverageMatchTargets"><span class="symbol function"></span>GetAppSecHostnameCoverageMatchTargets</a></li>
+    <li><a href="getappsechostnamecoverageoverlapping" title="GetAppSecHostnameCoverageOverlapping"><span class="symbol function"></span>GetAppSecHostnameCoverageOverlapping</a></li>
+    <li><a href="getappsecipgeo" title="GetAppSecIPGeo"><span class="symbol function"></span>GetAppSecIPGeo</a></li>
     <li><a href="getappsecmatchtargets" title="GetAppSecMatchTargets"><span class="symbol function"></span>GetAppSecMatchTargets</a></li>
+    <li><a href="getappsecpenaltybox" title="GetAppSecPenaltyBox"><span class="symbol function"></span>GetAppSecPenaltyBox</a></li>
+    <li><a href="getappsecratepolicies" title="GetAppSecRatePolicies"><span class="symbol function"></span>GetAppSecRatePolicies</a></li>
+    <li><a href="getappsecratepolicyactions" title="GetAppSecRatePolicyActions"><span class="symbol function"></span>GetAppSecRatePolicyActions</a></li>
+    <li><a href="getappsecreputationprofileactions" title="GetAppSecReputationProfileActions"><span class="symbol function"></span>GetAppSecReputationProfileActions</a></li>
+    <li><a href="getappsecreputationprofileanalysis" title="GetAppSecReputationProfileAnalysis"><span class="symbol function"></span>GetAppSecReputationProfileAnalysis</a></li>
+    <li><a href="getappsecreputationprofiles" title="GetAppSecReputationProfiles"><span class="symbol function"></span>GetAppSecReputationProfiles</a></li>
+    <li><a href="getappsecruleactions" title="GetAppSecRuleActions"><span class="symbol function"></span>GetAppSecRuleActions</a></li>
+    <li><a href="getappsecruleconditionexception" title="GetAppSecRuleConditionException"><span class="symbol function"></span>GetAppSecRuleConditionException</a></li>
+    <li><a href="getappsecruleupgradedetails" title="GetAppSecRuleUpgradeDetails"><span class="symbol function"></span>GetAppSecRuleUpgradeDetails</a></li>
     <li><a href="getappsecsecuritypolicy" title="GetAppSecSecurityPolicy"><span class="symbol function"></span>GetAppSecSecurityPolicy</a></li>
+    <li><a href="getappsecsecuritypolicyprotections" title="GetAppSecSecurityPolicyProtections"><span class="symbol function"></span>GetAppSecSecurityPolicyProtections</a></li>
     <li><a href="getappsecselectablehostnames" title="GetAppSecSelectableHostnames"><span class="symbol function"></span>GetAppSecSelectableHostnames</a></li>
     <li><a href="getappsecselectedhostnames" title="GetAppSecSelectedHostnames"><span class="symbol function"></span>GetAppSecSelectedHostnames</a></li>
+    <li><a href="getappsecsiemdefinitions" title="GetAppSecSiemDefinitions"><span class="symbol function"></span>GetAppSecSiemDefinitions</a></li>
+    <li><a href="getappsecsiemsettings" title="GetAppSecSiemSettings"><span class="symbol function"></span>GetAppSecSiemSettings</a></li>
+    <li><a href="getappsecslowpost" title="GetAppSecSlowPost"><span class="symbol function"></span>GetAppSecSlowPost</a></li>
+    <li><a href="getappsecversionnotes" title="GetAppSecVersionNotes"><span class="symbol function"></span>GetAppSecVersionNotes</a></li>
+    <li><a href="getappsecwafmode" title="GetAppSecWafMode"><span class="symbol function"></span>GetAppSecWafMode</a></li>
     <li><a href="getauthoritiesset" title="GetAuthoritiesSet"><span class="symbol function"></span>GetAuthoritiesSet</a></li>
     <li><a href="getcontract" title="GetContract"><span class="symbol function"></span>GetContract</a></li>
     <li><a href="getcontracts" title="GetContracts"><span class="symbol function"></span>GetContracts</a></li>
@@ -67,6 +136,7 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="getgtmdefaultdatacenter" title="GetGtmDefaultDatacenter"><span class="symbol function"></span>GetGtmDefaultDatacenter</a></li>
     <li><a href="getproperties" title="GetProperties"><span class="symbol function"></span>GetProperties</a></li>
     <li><a href="getproperty" title="GetProperty"><span class="symbol function"></span>GetProperty</a></li>
+    <li><a href="getpropertyhostnames" title="GetPropertyHostnames"><span class="symbol function"></span>GetPropertyHostnames</a></li>
     <li><a href="getpropertyproducts" title="GetPropertyProducts"><span class="symbol function"></span>GetPropertyProducts</a></li>
     <li><a href="getpropertyruleformats" title="GetPropertyRuleFormats"><span class="symbol function"></span>GetPropertyRuleFormats</a></li>
     <li><a href="getpropertyrules" title="GetPropertyRules"><span class="symbol function"></span>GetPropertyRules</a></li>
@@ -82,6 +152,6 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.3.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 

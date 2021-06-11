@@ -89,8 +89,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -227,17 +227,18 @@ const testDatabaseUsers = testDatabaseUser.projectId.apply(projectId => mongodba
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatabaseUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatabaseUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatabaseUsersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatabaseUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatabaseUsersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatabaseUsersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_users(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseUsersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_users(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabaseUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDatabaseUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDatabaseUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabaseUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetDatabaseUsersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDatabaseUsersResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetDatabaseUsers` in the Go SDK.
 
@@ -246,7 +247,7 @@ const testDatabaseUsers = testDatabaseUser.projectId.apply(projectId => mongodba
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatabaseUsers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatabaseUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatabaseUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatabaseUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatabaseUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -461,7 +462,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Possible values include:
-* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `admin` if `x509_type` and `aws_iam_type` and `ldap_auth_type` are omitted or NONE.
 * `$external` if:
 * `x509_type` is MANAGED or CUSTOMER, or
 * `aws_iam_type` is USER or ROLE.
@@ -480,9 +481,18 @@ Possible values include:
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultlabel">List&lt;Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultlabel">List&lt;Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldapauthtype_csharp">
+<a href="#ldapauthtype_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided username is authenticated. Default is `NONE`. Other valid values are: `USER`, `GROUP`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -497,7 +507,7 @@ Possible values include:
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultrole">List&lt;Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultrole">List&lt;Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -506,7 +516,7 @@ Possible values include:
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultscope">List&lt;Get<wbr>Database<wbr>Users<wbr>Result<wbr>Scope<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultscope">List&lt;Get<wbr>Database<wbr>Users<wbr>Result<wbr>Scope&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of clusters and Atlas Data Lakes that this user has access to.
 {{% /md %}}</dd><dt class="property-required"
@@ -541,7 +551,7 @@ Possible values include:
     </dt>
     <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Possible values include:
-* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `admin` if `x509_type` and `aws_iam_type` and `ldap_auth_type` are omitted or NONE.
 * `$external` if:
 * `x509_type` is MANAGED or CUSTOMER, or
 * `aws_iam_type` is USER or ROLE.
@@ -563,6 +573,15 @@ Possible values include:
         <span class="property-type"><a href="#getdatabaseusersresultlabel">[]Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldapauthtype_go">
+<a href="#ldapauthtype_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided username is authenticated. Default is `NONE`. Other valid values are: `USER`, `GROUP`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -621,7 +640,7 @@ Possible values include:
     </dt>
     <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Possible values include:
-* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `admin` if `x509_type` and `aws_iam_type` and `ldap_auth_type` are omitted or NONE.
 * `$external` if:
 * `x509_type` is MANAGED or CUSTOMER, or
 * `aws_iam_type` is USER or ROLE.
@@ -643,6 +662,15 @@ Possible values include:
         <span class="property-type"><a href="#getdatabaseusersresultlabel">Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldapauthtype_nodejs">
+<a href="#ldapauthtype_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided username is authenticated. Default is `NONE`. Other valid values are: `USER`, `GROUP`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -701,7 +729,7 @@ Possible values include:
     </dt>
     <dd>{{% md %}}(Required) Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Possible values include:
-* `admin` if `x509_type` and `aws_iam_type` are omitted or NONE.
+* `admin` if `x509_type` and `aws_iam_type` and `ldap_auth_type` are omitted or NONE.
 * `$external` if:
 * `x509_type` is MANAGED or CUSTOMER, or
 * `aws_iam_type` is USER or ROLE.
@@ -720,9 +748,18 @@ Possible values include:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultlabel">Sequence[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultlabel">Sequence[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ldap_auth_type_python">
+<a href="#ldap_auth_type_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>auth_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method by which the provided username is authenticated. Default is `NONE`. Other valid values are: `USER`, `GROUP`.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -737,7 +774,7 @@ Possible values include:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultrole">Sequence[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultrole">Sequence[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -746,7 +783,7 @@ Possible values include:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseusersresultscope">Sequence[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseusersresultscope">Sequence[Get<wbr>Database<wbr>Users<wbr>Result<wbr>Scope]</a></span>
     </dt>
     <dd>{{% md %}}Array of clusters and Atlas Data Lakes that this user has access to.
 {{% /md %}}</dd><dt class="property-required"

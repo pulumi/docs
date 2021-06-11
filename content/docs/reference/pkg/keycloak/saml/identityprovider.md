@@ -43,6 +43,7 @@ class MyStack : Stack
         {
             Realm = realm.Id,
             Alias = "my-saml-idp",
+            EntityId = "https://domain.com/entity_id",
             SingleSignOnServiceUrl = "https://domain.com/adfs/ls/",
             SingleLogoutServiceUrl = "https://domain.com/adfs/ls/?wa=wsignout1.0",
             BackchannelSupported = true,
@@ -68,9 +69,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/saml"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak/saml"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -85,6 +86,7 @@ func main() {
 		_, err = saml.NewIdentityProvider(ctx, "realmSamlIdentityProvider", &saml.IdentityProviderArgs{
 			Realm:                   realm.ID(),
 			Alias:                   pulumi.String("my-saml-idp"),
+			EntityId:                pulumi.String("https://domain.com/entity_id"),
 			SingleSignOnServiceUrl:  pulumi.String("https://domain.com/adfs/ls/"),
 			SingleLogoutServiceUrl:  pulumi.String("https://domain.com/adfs/ls/?wa=wsignout1.0"),
 			BackchannelSupported:    pulumi.Bool(true),
@@ -119,6 +121,7 @@ realm = keycloak.Realm("realm",
 realm_saml_identity_provider = keycloak.saml.IdentityProvider("realmSamlIdentityProvider",
     realm=realm.id,
     alias="my-saml-idp",
+    entity_id="https://domain.com/entity_id",
     single_sign_on_service_url="https://domain.com/adfs/ls/",
     single_logout_service_url="https://domain.com/adfs/ls/?wa=wsignout1.0",
     backchannel_supported=True,
@@ -148,6 +151,7 @@ const realm = new keycloak.Realm("realm", {
 const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlIdentityProvider", {
     realm: realm.id,
     alias: "my-saml-idp",
+    entityId: "https://domain.com/entity_id",
     singleSignOnServiceUrl: "https://domain.com/adfs/ls/",
     singleLogoutServiceUrl: "https://domain.com/adfs/ls/?wa=wsignout1.0",
     backchannelSupported: true,
@@ -177,19 +181,57 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backchannel_supported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_id_policy_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_binding_authn_request</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_binding_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_binding_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_sign_on_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">validate_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">want_assertions_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">want_assertions_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">xml_sign_key_info_key_name_transformer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">backchannel_supported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                     <span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">gui_order</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">name_id_policy_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">post_binding_authn_request</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">post_binding_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">post_binding_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">principal_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">principal_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">single_logout_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">single_sign_on_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">sync_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">validate_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">want_assertions_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">want_assertions_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">xml_sign_key_info_key_name_transformer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IdentityProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,46 +242,44 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -248,35 +288,27 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -288,25 +320,19 @@ const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlI
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IdentityProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -330,6 +356,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_csharp">
@@ -395,6 +430,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firstbrokerloginflowalias_csharp">
 <a href="#firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -411,6 +454,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="guiorder_csharp">
+<a href="#guiorder_csharp" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_csharp">
@@ -476,6 +528,24 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="principalattribute_csharp">
+<a href="#principalattribute_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_csharp">
+<a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
@@ -510,6 +580,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_csharp">
@@ -568,6 +647,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_go">
@@ -633,6 +721,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firstbrokerloginflowalias_go">
 <a href="#firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -649,6 +745,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="guiorder_go">
+<a href="#guiorder_go" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_go">
@@ -714,6 +819,24 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="principalattribute_go">
+<a href="#principalattribute_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_go">
+<a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
 </span>
@@ -748,6 +871,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_go">
@@ -806,6 +938,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_nodejs">
@@ -871,6 +1012,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firstbrokerloginflowalias_nodejs">
 <a href="#firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -887,6 +1036,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="guiorder_nodejs">
+<a href="#guiorder_nodejs" style="color: inherit; text-decoration: inherit;">gui<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_nodejs">
@@ -952,6 +1110,24 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="principalattribute_nodejs">
+<a href="#principalattribute_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principaltype_nodejs">
+<a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
@@ -986,6 +1162,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_nodejs">
@@ -1044,6 +1229,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_python">
@@ -1109,6 +1303,14 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="first_broker_login_flow_alias_python">
 <a href="#first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
@@ -1125,6 +1327,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gui_order_python">
+<a href="#gui_order_python" style="color: inherit; text-decoration: inherit;">gui_<wbr>order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_on_login_page_python">
@@ -1190,6 +1401,24 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="principal_attribute_python">
+<a href="#principal_attribute_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_type_python">
+<a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signature_algorithm_python">
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
@@ -1224,6 +1453,15 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trust_email_python">
@@ -1371,20 +1609,55 @@ Get an existing IdentityProvider resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IdentityProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IdentityProvider</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IdentityProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IdentityProvider</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backchannel_supported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_id_policy_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_binding_authn_request</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_binding_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_binding_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_logout_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_sign_on_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">validate_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">want_assertions_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">want_assertions_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">xml_sign_key_info_key_name_transformer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IdentityProvider</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">backchannel_supported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">gui_order</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">name_id_policy_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">post_binding_authn_request</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">post_binding_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">post_binding_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">principal_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">principal_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">single_logout_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">single_sign_on_service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">sync_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">validate_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">want_assertions_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">want_assertions_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">xml_sign_key_info_key_name_transformer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IdentityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IdentityProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IdentityProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IdentityProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IdentityProviderState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IdentityProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IdentityProviderState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1543,6 +1816,23 @@ The following state arguments are supported:
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_entityid_csharp">
+<a href="#state_entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_csharp">
+<a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firstbrokerloginflowalias_csharp">
 <a href="#state_firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -1559,6 +1849,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_guiorder_csharp">
+<a href="#state_guiorder_csharp" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_csharp">
@@ -1633,6 +1932,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_principalattribute_csharp">
+<a href="#state_principalattribute_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_principaltype_csharp">
+<a href="#state_principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_realm_csharp">
 <a href="#state_realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
 </span>
@@ -1685,6 +2002,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncmode_csharp">
+<a href="#state_syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_csharp">
@@ -1790,6 +2116,23 @@ The following state arguments are supported:
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_entityid_go">
+<a href="#state_entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_go">
+<a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firstbrokerloginflowalias_go">
 <a href="#state_firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -1806,6 +2149,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_guiorder_go">
+<a href="#state_guiorder_go" style="color: inherit; text-decoration: inherit;">Gui<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_go">
@@ -1880,6 +2232,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_principalattribute_go">
+<a href="#state_principalattribute_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_principaltype_go">
+<a href="#state_principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_realm_go">
 <a href="#state_realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
 </span>
@@ -1932,6 +2302,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncmode_go">
+<a href="#state_syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_go">
@@ -2037,6 +2416,23 @@ The following state arguments are supported:
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_entityid_nodejs">
+<a href="#state_entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extraconfig_nodejs">
+<a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_firstbrokerloginflowalias_nodejs">
 <a href="#state_firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
@@ -2053,6 +2449,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_guiorder_nodejs">
+<a href="#state_guiorder_nodejs" style="color: inherit; text-decoration: inherit;">gui<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_nodejs">
@@ -2127,6 +2532,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_principalattribute_nodejs">
+<a href="#state_principalattribute_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_principaltype_nodejs">
+<a href="#state_principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_realm_nodejs">
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
@@ -2179,6 +2602,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_syncmode_nodejs">
+<a href="#state_syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_nodejs">
@@ -2284,6 +2716,23 @@ The following state arguments are supported:
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_entity_id_python">
+<a href="#state_entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Entity ID that will be used to uniquely identify this SAML Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_extra_config_python">
+<a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_first_broker_login_flow_alias_python">
 <a href="#state_first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
@@ -2300,6 +2749,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gui_order_python">
+<a href="#state_gui_order_python" style="color: inherit; text-decoration: inherit;">gui_<wbr>order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A number defining the order of this identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_on_login_page_python">
@@ -2374,6 +2832,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_principal_attribute_python">
+<a href="#state_principal_attribute_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Attribute
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_principal_type_python">
+<a href="#state_principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Principal Type
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_realm_python">
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
@@ -2426,6 +2902,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sync_mode_python">
+<a href="#state_sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The default sync mode to use for all mappers attached to this identity provider. Can be once of `IMPORT`, `FORCE`, or `LEGACY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_email_python">

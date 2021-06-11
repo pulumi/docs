@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -130,19 +130,81 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Container</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Container</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">,</span>
+              <span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">,</span>
+              <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+              <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+              <span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+              <span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Container</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Container</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -177,22 +239,32 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ContainerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -201,7 +273,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -225,7 +297,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1344,7 +1416,7 @@ as is shown in the example above.
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1463,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">Container<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#containerdevice">Container<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1539,7 @@ when starting a container, set the entrypoint to be
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1557,7 @@ when starting a container, set the entrypoint to be
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">Container<wbr>Host[]</a></span>
+        <span class="property-type"><a href="#containerhost">Container<wbr>Host<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1584,7 @@ when starting a container, set the entrypoint to be
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#containerlabel">Container<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1587,7 +1659,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">Container<wbr>Mount[]</a></span>
+        <span class="property-type"><a href="#containermount">Container<wbr>Mount<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1712,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#networksadvanced_nodejs" style="color: inherit; text-decoration: inherit;">networks<wbr>Advanced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced[]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1730,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1857,7 @@ started after creation. If false, then the container is only created.
 <a href="#ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">Container<wbr>Ulimit[]</a></span>
+        <span class="property-type"><a href="#containerulimit">Container<wbr>Ulimit<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -1795,7 +1867,7 @@ details.
 <a href="#uploads_nodejs" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">Container<wbr>Upload[]</a></span>
+        <span class="property-type"><a href="#containerupload">Container<wbr>Upload<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1896,7 @@ by name.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">Container<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#containervolume">Container<wbr>Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2688,20 +2760,85 @@ Get an existing Container resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Container</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Container</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">,</span>
+        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworkDataArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Container</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContainerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Container</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ContainerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4004,7 +4141,7 @@ by name.
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#containercapabilities">Container<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Capabilities below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4060,7 +4197,7 @@ command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 <a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerdevice">Container<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#containerdevice">Container<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Devices below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4155,7 +4292,7 @@ NetworkSettings.
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#containerhealthcheck">Container<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4173,7 +4310,7 @@ NetworkSettings.
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerhost">Container<wbr>Host[]</a></span>
+        <span class="property-type"><a href="#containerhost">Container<wbr>Host<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4230,7 +4367,7 @@ NetworkSettings.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#containerlabel">Container<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4305,7 +4442,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermount">Container<wbr>Mount[]</a></span>
+        <span class="property-type"><a href="#containermount">Container<wbr>Mount<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4339,7 +4476,7 @@ a restart when `restart` is set to "on-failure"
 <a href="#state_networkdatas_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworkdata">Container<wbr>Network<wbr>Data[]</a></span>
+        <span class="property-type"><a href="#containernetworkdata">Container<wbr>Network<wbr>Data<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Map of a block) The IP addresses of the container on each
 network. Key are the network names, values are the IP addresses.
@@ -4368,7 +4505,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_networksadvanced_nodejs" style="color: inherit; text-decoration: inherit;">networks<wbr>Advanced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced[]</a></span>
+        <span class="property-type"><a href="#containernetworksadvanced">Container<wbr>Networks<wbr>Advanced<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Networks Advanced below for details. If this block has priority to the deprecated `network_alias` and `network` properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4386,7 +4523,7 @@ container is. *Deprecated:* use `networks_advanced` instead.
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4513,7 +4650,7 @@ started after creation. If false, then the container is only created.
 <a href="#state_ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerulimit">Container<wbr>Ulimit[]</a></span>
+        <span class="property-type"><a href="#containerulimit">Container<wbr>Ulimit<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Ulimits below for
 details.
@@ -4523,7 +4660,7 @@ details.
 <a href="#state_uploads_nodejs" style="color: inherit; text-decoration: inherit;">uploads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerupload">Container<wbr>Upload[]</a></span>
+        <span class="property-type"><a href="#containerupload">Container<wbr>Upload<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See File Upload below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4552,7 +4689,7 @@ by name.
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containervolume">Container<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#containervolume">Container<wbr>Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}See Volumes below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5941,7 +6078,7 @@ Defaults to false.
 <a href="#bindoptions_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options</a></span>
+        <span class="property-type"><a href="#containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5969,7 +6106,7 @@ Defaults to false.
 <a href="#tmpfsoptions_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
+        <span class="property-type"><a href="#containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5978,7 +6115,7 @@ Defaults to false.
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd></dl>
@@ -6300,7 +6437,7 @@ Defaults to false.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containermountvolumeoptionslabel">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#containermountvolumeoptionslabel">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Adding labels.
 {{% /md %}}</dd><dt class="property-optional"

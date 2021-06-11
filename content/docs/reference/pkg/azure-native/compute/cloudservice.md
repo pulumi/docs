@@ -116,7 +116,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -388,7 +388,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -652,7 +652,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -949,7 +949,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1159,19 +1159,30 @@ const cloudService = new azure_native.compute.CloudService("cloudService", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CloudServicePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">cloud_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CloudServicePropertiesArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1182,46 +1193,44 @@ const cloudService = new azure_native.compute.CloudService("cloudService", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CloudServiceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1232,33 +1241,25 @@ const cloudService = new azure_native.compute.CloudService("cloudService", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1270,25 +1271,19 @@ const cloudService = new azure_native.compute.CloudService("cloudService", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CloudServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1421,7 +1416,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties</a></span>
+        <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extension">Extension[]</a></span>
+        <span class="property-type"><a href="#extension">Extension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresponse">Extension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#extensionresponse">Extension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1904,7 +1899,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protectedsettingsfromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2250,7 +2245,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protectedsettingsfromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2432,7 +2427,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">Load<wbr>Balancer<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">Load<wbr>Balancer<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2440,7 +2435,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2514,7 +2509,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2522,7 +2517,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2580,7 +2575,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroup">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroup">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2630,7 +2625,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2862,7 +2857,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +2865,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2878,7 +2873,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2895,7 +2890,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#roleprofile_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3272,7 +3267,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3275,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3288,7 +3283,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3300,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#roleprofile_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3468,7 +3463,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileproperties">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileproperties">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3542,7 +3537,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku</a></span>
+        <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3624,7 +3619,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3682,7 +3677,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4014,7 +4009,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4096,7 +4091,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4270,7 +4265,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4278,7 +4273,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificate">Cloud<wbr>Service<wbr>Vault<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificate">Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4352,7 +4347,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4360,7 +4355,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4442,7 +4437,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4524,7 +4519,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4622,7 +4617,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4696,7 +4691,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration[]</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4746,7 +4741,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4836,7 +4831,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4934,7 +4929,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5032,7 +5027,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5040,7 +5035,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5146,7 +5141,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5154,7 +5149,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5244,7 +5239,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}

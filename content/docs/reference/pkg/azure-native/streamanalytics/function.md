@@ -39,10 +39,10 @@ class MyStack : Stack
             JobName = "sj8653",
             Properties = new AzureNative.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
             {
-                Binding = 
+                Binding = new AzureNative.StreamAnalytics.Inputs.JavaScriptFunctionBindingArgs
                 {
-                    { "script", "function (x, y) { return x + y; }" },
-                    { "type", "Microsoft.StreamAnalytics/JavascriptUdf" },
+                    Script = "function (x, y) { return x + y; }",
+                    Type = "Microsoft.StreamAnalytics/JavascriptUdf",
                 },
                 Inputs = 
                 {
@@ -71,7 +71,46 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function8197"),
+			JobName:      pulumi.String("sj8653"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: streamanalytics.JavaScriptFunctionBinding{
+					Script: "function (x, y) { return x + y; }",
+					Type:   "Microsoft.StreamAnalytics/JavascriptUdf",
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("Any"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("Any"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg1637"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -87,10 +126,10 @@ function = azure_native.streamanalytics.Function("function",
     function_name="function8197",
     job_name="sj8653",
     properties=azure_native.streamanalytics.ScalarFunctionPropertiesArgs(
-        binding={
-            "script": "function (x, y) { return x + y; }",
-            "type": "Microsoft.StreamAnalytics/JavascriptUdf",
-        },
+        binding=azure_native.streamanalytics.JavaScriptFunctionBindingArgs(
+            script="function (x, y) { return x + y; }",
+            type="Microsoft.StreamAnalytics/JavascriptUdf",
+        ),
         inputs=[azure_native.streamanalytics.FunctionInputArgs(
             data_type="Any",
         )],
@@ -160,12 +199,12 @@ class MyStack : Stack
             JobName = "sj9093",
             Properties = new AzureNative.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
             {
-                Binding = 
+                Binding = new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceFunctionBindingArgs
                 {
-                    { "apiKey", "someApiKey==" },
-                    { "batchSize", 1000 },
-                    { "endpoint", "someAzureMLEndpointURL" },
-                    { "inputs", new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputsArgs
+                    ApiKey = "someApiKey==",
+                    BatchSize = 1000,
+                    Endpoint = "someAzureMLEndpointURL",
+                    Inputs = new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputsArgs
                     {
                         ColumnNames = 
                         {
@@ -177,16 +216,16 @@ class MyStack : Stack
                             },
                         },
                         Name = "input1",
-                    } },
-                    { "outputs", 
+                    },
+                    Outputs = 
                     {
                         new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
                         {
                             DataType = "string",
                             Name = "Sentiment",
                         },
-                    } },
-                    { "type", "Microsoft.MachineLearning/WebService" },
+                    },
+                    Type = "Microsoft.MachineLearning/WebService",
                 },
                 Inputs = 
                 {
@@ -215,7 +254,64 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewFunction(ctx, "function", &streamanalytics.FunctionArgs{
+			FunctionName: pulumi.String("function588"),
+			JobName:      pulumi.String("sj9093"),
+			Properties: &streamanalytics.ScalarFunctionPropertiesArgs{
+				Binding: streamanalytics.AzureMachineLearningWebServiceFunctionBinding{
+					ApiKey:    "someApiKey==",
+					BatchSize: 1000,
+					Endpoint:  "someAzureMLEndpointURL",
+					Inputs: streamanalytics.AzureMachineLearningWebServiceInputs{
+						ColumnNames: []streamanalytics.AzureMachineLearningWebServiceInputColumn{
+							streamanalytics.AzureMachineLearningWebServiceInputColumn{
+								DataType: "string",
+								MapTo:    0,
+								Name:     "tweet",
+							},
+						},
+						Name: "input1",
+					},
+					Outputs: []streamanalytics.AzureMachineLearningWebServiceOutputColumn{
+						streamanalytics.AzureMachineLearningWebServiceOutputColumn{
+							DataType: "string",
+							Name:     "Sentiment",
+						},
+					},
+					Type: "Microsoft.MachineLearning/WebService",
+				},
+				Inputs: streamanalytics.FunctionInputArray{
+					&streamanalytics.FunctionInputArgs{
+						DataType: pulumi.String("nvarchar(max)"),
+					},
+				},
+				Output: &streamanalytics.FunctionOutputArgs{
+					DataType: pulumi.String("nvarchar(max)"),
+				},
+				Type: pulumi.String("Scalar"),
+			},
+			ResourceGroupName: pulumi.String("sjrg7"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -231,11 +327,11 @@ function = azure_native.streamanalytics.Function("function",
     function_name="function588",
     job_name="sj9093",
     properties=azure_native.streamanalytics.ScalarFunctionPropertiesArgs(
-        binding={
-            "apiKey": "someApiKey==",
-            "batchSize": 1000,
-            "endpoint": "someAzureMLEndpointURL",
-            "inputs": azure_native.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
+        binding=azure_native.streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs(
+            api_key="someApiKey==",
+            batch_size=1000,
+            endpoint="someAzureMLEndpointURL",
+            inputs=azure_native.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
                 column_names=[azure_native.streamanalytics.AzureMachineLearningWebServiceInputColumnArgs(
                     data_type="string",
                     map_to=0,
@@ -243,12 +339,12 @@ function = azure_native.streamanalytics.Function("function",
                 )],
                 name="input1",
             ),
-            "outputs": [azure_native.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
+            outputs=[azure_native.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
                 data_type="string",
                 name="Sentiment",
             )],
-            "type": "Microsoft.MachineLearning/WebService",
-        },
+            type="Microsoft.MachineLearning/WebService",
+        ),
         inputs=[azure_native.streamanalytics.FunctionInputArgs(
             data_type="nvarchar(max)",
         )],
@@ -324,19 +420,30 @@ const _function = new azure_native.streamanalytics.Function("function", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ScalarFunctionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ScalarFunctionPropertiesArgs]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -347,46 +454,44 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,33 +502,25 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -435,25 +532,19 @@ const _function = new azure_native.streamanalytics.Function("function", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -594,7 +685,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2081,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">Function<wbr>Input[]</a></span>
+        <span class="property-type"><a href="#functioninput">Function<wbr>Input<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2219,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">Function<wbr>Input<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Function<wbr>Input<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}

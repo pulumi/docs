@@ -36,9 +36,9 @@ class MyStack : Stack
         var assessment = new AzureNative.Security.Assessment("assessment", new AzureNative.Security.AssessmentArgs
         {
             AssessmentName = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
-            ResourceDetails = 
+            ResourceDetails = new AzureNative.Security.Inputs.AzureResourceDetailsArgs
             {
-                { "source", "Azure" },
+                Source = "Azure",
             },
             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
             Status = new AzureNative.Security.Inputs.AssessmentStatusArgs
@@ -58,7 +58,36 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := security.NewAssessment(ctx, "assessment", &security.AssessmentArgs{
+			AssessmentName: pulumi.String("8bb8be0a-6010-4789-812f-e4d661c4ed0e"),
+			ResourceDetails: security.AzureResourceDetails{
+				Source: "Azure",
+			},
+			ResourceId: pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2"),
+			Status: &security.AssessmentStatusArgs{
+				Code: pulumi.String("Healthy"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -72,9 +101,9 @@ import pulumi_azure_native as azure_native
 
 assessment = azure_native.security.Assessment("assessment",
     assessment_name="8bb8be0a-6010-4789-812f-e4d661c4ed0e",
-    resource_details={
-        "source": "Azure",
-    },
+    resource_details=azure_native.security.AzureResourceDetailsArgs(
+        source="Azure",
+    ),
     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
     status=azure_native.security.AssessmentStatusArgs(
         code="Healthy",
@@ -123,19 +152,32 @@ const assessment = new azure_native.security.Assessment("assessment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs, OnPremiseSqlResourceDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatusArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPropertiesArgs]</span> = None<span class="p">,</span>
+               <span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentPartnerDataArgs]</span> = None<span class="p">,</span>
+               <span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs, OnPremiseSqlResourceDetailsArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatusArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,46 +188,44 @@ const assessment = new azure_native.security.Assessment("assessment", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,33 +236,25 @@ const assessment = new azure_native.security.Assessment("assessment", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -234,25 +266,19 @@ const assessment = new azure_native.security.Assessment("assessment", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -393,7 +419,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -409,7 +435,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +459,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -441,7 +467,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partnersdata_nodejs" style="color: inherit; text-decoration: inherit;">partners<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1109,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="category">Category</h4>
+<h4 id="categories">Categories</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Compute</dt>
@@ -1121,11 +1147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Category<wbr>Compute</dt>
-    <dd>Compute</dd><dt>Category<wbr>Networking</dt>
-    <dd>Networking</dd><dt>Category<wbr>Data</dt>
-    <dd>Data</dd><dt>Category<wbr>Identity<wbr>And<wbr>Access</dt>
-    <dd>IdentityAndAccess</dd><dt>Category<wbr>Io<wbr>T</dt>
+<dl class="tabular"><dt>Categories<wbr>Compute</dt>
+    <dd>Compute</dd><dt>Categories<wbr>Networking</dt>
+    <dd>Networking</dd><dt>Categories<wbr>Data</dt>
+    <dd>Data</dd><dt>Categories<wbr>Identity<wbr>And<wbr>Access</dt>
+    <dd>IdentityAndAccess</dd><dt>Categories<wbr>Io<wbr>T</dt>
     <dd>IoT</dd></dl>
 {{% /choosable %}}
 
@@ -2146,11 +2172,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_csharp">
-<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Category&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Categories&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2238,8 +2264,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_go">
-<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2330,11 +2356,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_nodejs">
-<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Category[]</span>
+        <span class="property-type">string | Categories[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2358,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2422,11 +2448,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_python">
-<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Category]]</span>
+        <span class="property-type">Sequence[Union[str, Categories]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2524,8 +2550,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_csharp">
-<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -2624,8 +2650,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_go">
-<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2724,8 +2750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_nodejs">
-<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -2752,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2824,8 +2850,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_python">
-<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>

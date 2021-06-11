@@ -45,7 +45,7 @@ class MyStack : Stack
             AccountTier = "Standard",
             AccountReplicationType = "LRS",
         });
-        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        var exampleServer = new Azure.MSSql.Server("exampleServer", new Azure.MSSql.ServerArgs
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
@@ -55,7 +55,7 @@ class MyStack : Stack
         });
         var test = new Azure.MSSql.Database("test", new Azure.MSSql.DatabaseArgs
         {
-            ServerId = exampleSqlServer.Id,
+            ServerId = exampleServer.Id,
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             LicenseType = "LicenseIncluded",
             MaxSizeGb = 4,
@@ -89,11 +89,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/mssql"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -113,7 +112,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleSqlServer, err := sql.NewSqlServer(ctx, "exampleSqlServer", &sql.SqlServerArgs{
+		exampleServer, err := mssql.NewServer(ctx, "exampleServer", &mssql.ServerArgs{
 			ResourceGroupName:          exampleResourceGroup.Name,
 			Location:                   exampleResourceGroup.Location,
 			Version:                    pulumi.String("12.0"),
@@ -124,7 +123,7 @@ func main() {
 			return err
 		}
 		_, err = mssql.NewDatabase(ctx, "test", &mssql.DatabaseArgs{
-			ServerId:      exampleSqlServer.ID(),
+			ServerId:      exampleServer.ID(),
 			Collation:     pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
 			LicenseType:   pulumi.String("LicenseIncluded"),
 			MaxSizeGb:     pulumi.Int(4),
@@ -165,14 +164,14 @@ example_account = azure.storage.Account("exampleAccount",
     location=example_resource_group.location,
     account_tier="Standard",
     account_replication_type="LRS")
-example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+example_server = azure.mssql.Server("exampleServer",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     version="12.0",
     administrator_login="4dm1n157r470r",
     administrator_login_password="4-v3ry-53cr37-p455w0rd")
 test = azure.mssql.Database("test",
-    server_id=example_sql_server.id,
+    server_id=example_server.id,
     collation="SQL_Latin1_General_CP1_CI_AS",
     license_type="LicenseIncluded",
     max_size_gb=4,
@@ -208,7 +207,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
 });
-const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+const exampleServer = new azure.mssql.Server("exampleServer", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
     version: "12.0",
@@ -216,7 +215,7 @@ const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
     administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
 });
 const test = new azure.mssql.Database("test", {
-    serverId: exampleSqlServer.id,
+    serverId: exampleServer.id,
     collation: "SQL_Latin1_General_CP1_CI_AS",
     licenseType: "LicenseIncluded",
     maxSizeGb: 4,
@@ -252,19 +251,50 @@ const test = new azure.mssql.Database("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">geo_backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -275,46 +305,44 @@ const test = new azure.mssql.Database("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -323,35 +351,27 @@ const test = new azure.mssql.Database("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -363,25 +383,19 @@ const test = new azure.mssql.Database("test", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -460,6 +474,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="geobackupenabled_csharp">
+<a href="#geobackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -681,6 +704,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="geobackupenabled_go">
+<a href="#geobackupenabled_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -896,10 +928,19 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="geobackupenabled_nodejs">
+<a href="#geobackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -914,7 +955,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#longtermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `long_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1045,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#shorttermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `short_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1081,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,6 +1161,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="geo_backup_enabled_python">
+<a href="#geo_backup_enabled_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>backup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -1338,20 +1388,47 @@ Get an existing Database resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Database</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Database</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Database</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">geo_backup_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Database</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabase<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabase<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Database</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DatabaseState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Database</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DatabaseState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1509,6 +1586,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_geobackupenabled_csharp">
+<a href="#state_geobackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_csharp">
 <a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1730,6 +1816,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="state_geobackupenabled_go">
+<a href="#state_geobackupenabled_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_licensetype_go">
 <a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -1945,10 +2040,19 @@ The following state arguments are supported:
 <a href="#state_extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_geobackupenabled_nodejs">
+<a href="#state_geobackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_nodejs">
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -1963,7 +2067,7 @@ The following state arguments are supported:
 <a href="#state_longtermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaselongtermretentionpolicy">Database<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `long_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2166,7 @@ The following state arguments are supported:
 <a href="#state_shorttermretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Term<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseshorttermretentionpolicy">Database<wbr>Short<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `short_term_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2169,6 +2273,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_geo_backup_enabled_python">
+<a href="#state_geo_backup_enabled_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>backup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean that specifies if the Geo Backup Policy is enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_type_python">
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>

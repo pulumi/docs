@@ -579,7 +579,7 @@ package main
 
 import (
 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -760,19 +760,48 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_type_versions_cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationTypeVersionsCleanupPolicyArgs]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[AzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ServerCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_storage_account_config</span><span class="p">:</span> <span class="nx">Optional[DiagnosticsStorageAccountConfigArgs]</span> = None<span class="p">, </span><span class="nx">event_store_service_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SettingsSectionDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTypeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ServerCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_description</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">application_type_versions_cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationTypeVersionsCleanupPolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[AzureActiveDirectoryArgs]</span> = None<span class="p">,</span>
+            <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateDescriptionArgs]</span> = None<span class="p">,</span>
+            <span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ServerCertificateCommonNamesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateCommonNameArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateThumbprintArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">diagnostics_storage_account_config</span><span class="p">:</span> <span class="nx">Optional[DiagnosticsStorageAccountConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">event_store_service_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SettingsSectionDescriptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTypeDescriptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateDescriptionArgs]</span> = None<span class="p">,</span>
+            <span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ServerCertificateCommonNamesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">upgrade_description</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -783,46 +812,44 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -833,33 +860,25 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -871,25 +890,19 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1316,7 +1329,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodetypes_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetypedescription">Node<wbr>Type<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#nodetypedescription">Node<wbr>Type<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of node types in the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1340,7 +1353,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applicationtypeversionscleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used to clean up unused versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,7 +1361,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AAD authentication settings of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1356,7 +1369,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description</a></span>
+        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1377,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1385,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatecommonname">Client<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#clientcertificatecommonname">Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by common name that are allowed to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1380,7 +1393,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatethumbprint">Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
+        <span class="property-type"><a href="#clientcertificatethumbprint">Client<wbr>Certificate<wbr>Thumbprint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by thumbprint that are allowed to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1417,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnosticsstorageaccountconfig_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Storage<wbr>Account<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Diagnostics<wbr>Storage<wbr>Account<wbr>Config</a></span>
+        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account information for storing Service Fabric diagnostic logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1433,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabricsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescription">Settings<wbr>Section<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#settingssectiondescription">Settings<wbr>Section<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1464,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificate_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description</a></span>
+        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server certificate used by reverse proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1472,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1488,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgradedescription_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy to use when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy}</span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2281,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2289,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy}</span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2363,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2371,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3437,7 +3450,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy}</span>
+        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3607,7 +3620,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3816,7 +3829,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy}</span>
+        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3998,7 +4011,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4233,7 +4246,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4265,7 +4278,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4539,7 +4552,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4571,7 +4584,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5601,7 +5614,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5630,7 +5643,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5991,7 +6004,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6020,7 +6033,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6351,7 +6364,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonname">Server<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#servercertificatecommonname">Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6433,7 +6446,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnameresponse">Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnameresponse">Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6919,7 +6932,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">Settings<wbr>Parameter<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">Settings<wbr>Parameter<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7001,7 +7014,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}

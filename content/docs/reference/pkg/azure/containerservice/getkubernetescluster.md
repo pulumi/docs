@@ -53,8 +53,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -99,7 +99,7 @@ import * as azure from "@pulumi/azure";
 const example = pulumi.output(azure.containerservice.getKubernetesCluster({
     name: "myakscluster",
     resourceGroupName: "my-example-resource-group",
-}, { async: true }));
+}));
 ```
 
 
@@ -120,17 +120,19 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKubernetesClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKubernetesClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKubernetesClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKubernetesClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKubernetesCluster` in the Go SDK.
 
@@ -139,7 +141,7 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKubernetesClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKubernetesClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1242,7 +1244,7 @@ The following output properties are available:
 <a href="#azurepolicies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1251,16 +1253,25 @@ The following output properties are available:
 <a href="#httpapplicationroutings_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgateways_csharp">
+<a href="#ingressapplicationgateways_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubedashboards_csharp">
 <a href="#kubedashboards_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1269,7 +1280,7 @@ The following output properties are available:
 <a href="#omsagents_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd></dl>
@@ -1294,6 +1305,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgateways_go">
+<a href="#ingressapplicationgateways_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubedashboards_go">
@@ -1336,6 +1356,15 @@ The following output properties are available:
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ingressapplicationgateways_nodejs">
+<a href="#ingressapplicationgateways_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="kubedashboards_nodejs">
 <a href="#kubedashboards_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboards</a>
 </span>
@@ -1362,7 +1391,7 @@ The following output properties are available:
 <a href="#azure_policies_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1371,16 +1400,25 @@ The following output properties are available:
 <a href="#http_application_routings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingress_application_gateways_python">
+<a href="#ingress_application_gateways_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgateway">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kube_dashboards_python">
 <a href="#kube_dashboards_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1389,7 +1427,7 @@ The following output properties are available:
 <a href="#oms_agents_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd></dl>
@@ -1543,6 +1581,370 @@ The following output properties are available:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getkubernetesclusteraddonprofileingressapplicationgateway">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivegatewayid_csharp">
+<a href="#effectivegatewayid_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayid_csharp">
+<a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgatewayidentities_csharp">
+<a href="#ingressapplicationgatewayidentities_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetcidr_csharp">
+<a href="#subnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivegatewayid_go">
+<a href="#effectivegatewayid_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayid_go">
+<a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgatewayidentities_go">
+<a href="#ingressapplicationgatewayidentities_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetcidr_go">
+<a href="#subnetcidr_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivegatewayid_nodejs">
+<a href="#effectivegatewayid_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayid_nodejs">
+<a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingressapplicationgatewayidentities_nodejs">
+<a href="#ingressapplicationgatewayidentities_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetcidr_nodejs">
+<a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effective_gateway_id_python">
+<a href="#effective_gateway_id_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gateway_id_python">
+<a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when gateway_id is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ingress_application_gateway_identities_python">
+<a href="#ingress_application_gateway_identities_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnet_cidr_python">
+<a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_cidr` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. This attribute is only set when `subnet_id` is specified when configuring the `ingress_application_gateway` addon.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getkubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getkubernetesclusteraddonprofilekubedashboard">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</h4>
 
 
@@ -1628,7 +2030,7 @@ The following output properties are available:
 <a href="#omsagentidentities_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1721,7 +2123,7 @@ The following output properties are available:
 <a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1998,7 +2400,7 @@ The following output properties are available:
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2487,7 +2889,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3351,7 +3753,7 @@ The following output properties are available:
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3417,7 +3819,7 @@ The following output properties are available:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3758,7 +4160,7 @@ The following output properties are available:
 <a href="#azureactivedirectories_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3824,7 +4226,7 @@ The following output properties are available:
 <a href="#azure_active_directories_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd><dt class="property-required"

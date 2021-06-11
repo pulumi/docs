@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.kusto.Cluster resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a Kusto cluster.
-API Version: 2020-09-18.
+API Version: 2021-01-01.
 
 {{% examples %}}
 
@@ -70,7 +70,7 @@ package main
 
 import (
 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -176,19 +176,41 @@ const cluster = new azure_native.kusto.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_double_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, EngineType]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_properties</span><span class="p">:</span> <span class="nx">Optional[KeyVaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_autoscale</span><span class="p">:</span> <span class="nx">Optional[OptimizedAutoscaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AzureSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrustedExternalTenantArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_double_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, EngineType]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">,</span>
+            <span class="nx">key_vault_properties</span><span class="p">:</span> <span class="nx">Optional[KeyVaultPropertiesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">optimized_autoscale</span><span class="p">:</span> <span class="nx">Optional[OptimizedAutoscaleArgs]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AzureSkuArgs]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrustedExternalTenantArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -199,46 +221,44 @@ const cluster = new azure_native.kusto.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -249,33 +269,25 @@ const cluster = new azure_native.kusto.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -287,25 +299,19 @@ const cluster = new azure_native.kusto.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -598,7 +604,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresku">Azure<wbr>Sku</a></span>
+        <span class="property-type"><a href="#azuresku">Azure<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +660,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cluster, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +668,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault properties for the cluster encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +684,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimizedautoscale_nodejs" style="color: inherit; text-decoration: inherit;">optimized<wbr>Autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optimizedautoscale">Optimized<wbr>Autoscale</a></span>
+        <span class="property-type"><a href="#optimizedautoscale">Optimized<wbr>Autoscale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optimized auto scale definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +700,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedexternaltenants_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>External<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedexternaltenant">Trusted<wbr>External<wbr>Tenant[]</a></span>
+        <span class="property-type"><a href="#trustedexternaltenant">Trusted<wbr>External<wbr>Tenant<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster's external tenants.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +708,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,6 +871,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The cluster data ingestion URI.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -940,6 +954,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster data ingestion URI.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1017,6 +1039,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The cluster data ingestion URI.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1092,6 +1122,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster data ingestion URI.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1293,12 +1331,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_D13_v2</dd><dt>Standard_D14_<wbr>v2</dt>
     <dd>Standard_D14_v2</dd><dt>Standard_L8s</dt>
     <dd>Standard_L8s</dd><dt>Standard_L16s</dt>
-    <dd>Standard_L16s</dd><dt>Standard_D11_<wbr>v2</dt>
+    <dd>Standard_L16s</dd><dt>Standard_L8s_<wbr>v2</dt>
+    <dd>Standard_L8s_v2</dd><dt>Standard_L16s_<wbr>v2</dt>
+    <dd>Standard_L16s_v2</dd><dt>Standard_D11_<wbr>v2</dt>
     <dd>Standard_D11_v2</dd><dt>Standard_D12_<wbr>v2</dt>
     <dd>Standard_D12_v2</dd><dt>Standard_L4s</dt>
     <dd>Standard_L4s</dd><dt>Dev_No_SLA_Standard_D11_<wbr>v2</dt>
     <dd>Dev(No SLA)_Standard_D11_v2</dd><dt>Standard_E64i_<wbr>v3</dt>
-    <dd>Standard_E64i_v3</dd><dt>Standard_E2a_<wbr>v4</dt>
+    <dd>Standard_E64i_v3</dd><dt>Standard_E80ids_<wbr>v4</dt>
+    <dd>Standard_E80ids_v4</dd><dt>Standard_E2a_<wbr>v4</dt>
     <dd>Standard_E2a_v4</dd><dt>Standard_E4a_<wbr>v4</dt>
     <dd>Standard_E4a_v4</dd><dt>Standard_E8a_<wbr>v4</dt>
     <dd>Standard_E8a_v4</dd><dt>Standard_E16a_<wbr>v4</dt>
@@ -1319,12 +1360,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_D13_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_D14_<wbr>v2</dt>
     <dd>Standard_D14_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_L8s</dt>
     <dd>Standard_L8s</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_L16s</dt>
-    <dd>Standard_L16s</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_D11_<wbr>v2</dt>
+    <dd>Standard_L16s</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_L8s_<wbr>v2</dt>
+    <dd>Standard_L8s_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_L16s_<wbr>v2</dt>
+    <dd>Standard_L16s_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_D11_<wbr>v2</dt>
     <dd>Standard_D11_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_D12_<wbr>v2</dt>
     <dd>Standard_D12_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_L4s</dt>
     <dd>Standard_L4s</dd><dt>Azure<wbr>Sku<wbr>Name_Dev_No_SLA_Standard_D11_<wbr>v2</dt>
     <dd>Dev(No SLA)_Standard_D11_v2</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E64i_<wbr>v3</dt>
-    <dd>Standard_E64i_v3</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E2a_<wbr>v4</dt>
+    <dd>Standard_E64i_v3</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E80ids_<wbr>v4</dt>
+    <dd>Standard_E80ids_v4</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E2a_<wbr>v4</dt>
     <dd>Standard_E2a_v4</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E4a_<wbr>v4</dt>
     <dd>Standard_E4a_v4</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E8a_<wbr>v4</dt>
     <dd>Standard_E8a_v4</dd><dt>Azure<wbr>Sku<wbr>Name_Standard_E16a_<wbr>v4</dt>
@@ -1345,12 +1389,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_D13_v2</dd><dt>Standard_D14_<wbr>v2</dt>
     <dd>Standard_D14_v2</dd><dt>Standard_L8s</dt>
     <dd>Standard_L8s</dd><dt>Standard_L16s</dt>
-    <dd>Standard_L16s</dd><dt>Standard_D11_<wbr>v2</dt>
+    <dd>Standard_L16s</dd><dt>Standard_L8s_<wbr>v2</dt>
+    <dd>Standard_L8s_v2</dd><dt>Standard_L16s_<wbr>v2</dt>
+    <dd>Standard_L16s_v2</dd><dt>Standard_D11_<wbr>v2</dt>
     <dd>Standard_D11_v2</dd><dt>Standard_D12_<wbr>v2</dt>
     <dd>Standard_D12_v2</dd><dt>Standard_L4s</dt>
     <dd>Standard_L4s</dd><dt>Dev_No_SLA_Standard_D11_<wbr>v2</dt>
     <dd>Dev(No SLA)_Standard_D11_v2</dd><dt>Standard_E64i_<wbr>v3</dt>
-    <dd>Standard_E64i_v3</dd><dt>Standard_E2a_<wbr>v4</dt>
+    <dd>Standard_E64i_v3</dd><dt>Standard_E80ids_<wbr>v4</dt>
+    <dd>Standard_E80ids_v4</dd><dt>Standard_E2a_<wbr>v4</dt>
     <dd>Standard_E2a_v4</dd><dt>Standard_E4a_<wbr>v4</dt>
     <dd>Standard_E4a_v4</dd><dt>Standard_E8a_<wbr>v4</dt>
     <dd>Standard_E8a_v4</dd><dt>Standard_E16a_<wbr>v4</dt>
@@ -1371,12 +1418,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_D13_v2</dd><dt>STANDARD_D14_V2</dt>
     <dd>Standard_D14_v2</dd><dt>STANDARD_L8S</dt>
     <dd>Standard_L8s</dd><dt>STANDARD_L16S</dt>
-    <dd>Standard_L16s</dd><dt>STANDARD_D11_V2</dt>
+    <dd>Standard_L16s</dd><dt>STANDARD_L8S_V2</dt>
+    <dd>Standard_L8s_v2</dd><dt>STANDARD_L16S_V2</dt>
+    <dd>Standard_L16s_v2</dd><dt>STANDARD_D11_V2</dt>
     <dd>Standard_D11_v2</dd><dt>STANDARD_D12_V2</dt>
     <dd>Standard_D12_v2</dd><dt>STANDARD_L4S</dt>
     <dd>Standard_L4s</dd><dt>DEV_NO_SL_A_STANDARD_D11_V2</dt>
     <dd>Dev(No SLA)_Standard_D11_v2</dd><dt>STANDARD_E64I_V3</dt>
-    <dd>Standard_E64i_v3</dd><dt>STANDARD_E2A_V4</dt>
+    <dd>Standard_E64i_v3</dd><dt>STANDARD_E80IDS_V4</dt>
+    <dd>Standard_E80ids_v4</dd><dt>STANDARD_E2A_V4</dt>
     <dd>Standard_E2a_v4</dd><dt>STANDARD_E4A_V4</dt>
     <dd>Standard_E4a_v4</dd><dt>STANDARD_E8A_V4</dt>
     <dd>Standard_E8a_v4</dd><dt>STANDARD_E16A_V4</dt>
@@ -1741,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2273,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">Language<wbr>Extension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">Language<wbr>Extension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd></dl>
 {{% /choosable %}}

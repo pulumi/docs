@@ -62,7 +62,7 @@ class MyStack : Stack
         var mainSwitch = new AliCloud.Vpc.Switch("mainSwitch", new AliCloud.Vpc.SwitchArgs
         {
             VpcId = mainNetwork.Id,
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            ZoneId = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             VswitchName = name,
             CidrBlock = "172.16.0.0/16",
         });
@@ -139,12 +139,12 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/slb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -194,10 +194,10 @@ func main() {
 			return err
 		}
 		mainSwitch, err := vpc.NewSwitch(ctx, "mainSwitch", &vpc.SwitchArgs{
-			VpcId:            mainNetwork.ID(),
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			VswitchName:      pulumi.String(name),
-			CidrBlock:        pulumi.String("172.16.0.0/16"),
+			VpcId:       mainNetwork.ID(),
+			ZoneId:      pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName: pulumi.String(name),
+			CidrBlock:   pulumi.String("172.16.0.0/16"),
 		})
 		if err != nil {
 			return err
@@ -291,7 +291,7 @@ if number is None:
 main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
 main_switch = alicloud.vpc.Switch("mainSwitch",
     vpc_id=main_network.id,
-    availability_zone=default_zones.zones[0].id,
+    zone_id=default_zones.zones[0].id,
     vswitch_name=name,
     cidr_block="172.16.0.0/16")
 group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
@@ -361,7 +361,7 @@ const number = config.get("number") || "1";
 const mainNetwork = new alicloud.vpc.Network("mainNetwork", {cidrBlock: "172.16.0.0/16"});
 const mainSwitch = new alicloud.vpc.Switch("mainSwitch", {
     vpcId: mainNetwork.id,
-    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    zoneId: defaultZones.then(defaultZones => defaultZones.zones[0].id),
     vswitchName: name,
     cidrBlock: "172.16.0.0/16",
 });
@@ -426,17 +426,21 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMasterSlaveServerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMasterSlaveServerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_master_slave_server_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMasterSlaveServerGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_master_slave_server_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMasterSlaveServerGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMasterSlaveServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMasterSlaveServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetMasterSlaveServerGroups` in the Go SDK.
 
@@ -445,7 +449,7 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMasterSlaveServerGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -910,7 +914,7 @@ The following output properties are available:
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd></dl>
@@ -1003,7 +1007,7 @@ The following output properties are available:
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">Sequence[Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">Sequence[Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd></dl>

@@ -86,6 +86,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -107,6 +108,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -161,6 +163,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -182,6 +185,7 @@ class MyStack : Stack
                         {
                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
                             {
+                                DividePerInstance = false,
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                                 Operator = "GreaterThan",
@@ -265,6 +269,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
             rules=[
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -283,6 +288,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
                 ),
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -320,6 +326,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
             rules=[
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -338,6 +345,7 @@ autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
                 ),
                 azure_native.insights.ScaleRuleArgs(
                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+                        divide_per_instance=False,
                         metric_name="Percentage CPU",
                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator="GreaterThan",
@@ -409,6 +417,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
             rules: [
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -427,6 +436,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
                 },
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -464,6 +474,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
             rules: [
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -482,6 +493,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
                 },
                 {
                     metricTrigger: {
+                        dividePerInstance: false,
                         metricName: "Percentage CPU",
                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
                         operator: "GreaterThan",
@@ -525,19 +537,34 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleProfileArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">autoscale_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleNotificationArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleProfileArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaleSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscaleSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaleSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscaleSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -548,46 +575,44 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -598,33 +623,25 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -636,25 +653,19 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -827,7 +838,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofile">Autoscale<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#autoscaleprofile">Autoscale<wbr>Profile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +886,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotification">Autoscale<wbr>Notification[]</a></span>
+        <span class="property-type"><a href="#autoscalenotification">Autoscale<wbr>Notification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification</a></span>
+        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">Webhook<wbr>Notification[]</a></span>
+        <span class="property-type"><a href="#webhooknotification">Webhook<wbr>Notification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1256,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">Webhook<wbr>Notification<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">Webhook<wbr>Notification<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1394,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity</a></span>
+        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1410,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">Scale<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#scalerule">Scale<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1418,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Time<wbr>Window</a></span>
+        <span class="property-type"><a href="#timewindow">Time<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Recurrence</a></span>
+        <span class="property-type"><a href="#recurrence">Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1588,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">Scale<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">Scale<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2034,6 +2045,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_csharp">
+<a href="#divideperinstance_csharp" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -2118,6 +2137,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_go">
+<a href="#divideperinstance_go" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -2198,9 +2225,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">Scale<wbr>Rule<wbr>Metric<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divideperinstance_nodejs">
+<a href="#divideperinstance_nodejs" style="color: inherit; text-decoration: inherit;">divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
@@ -2285,6 +2320,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scalerulemetricdimension">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divide_per_instance_python">
+<a href="#divide_per_instance_python" style="color: inherit; text-decoration: inherit;">divide_<wbr>per_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -2372,6 +2415,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_csharp">
+<a href="#divideperinstance_csharp" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -2456,6 +2507,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="divideperinstance_go">
+<a href="#divideperinstance_go" style="color: inherit; text-decoration: inherit;">Divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -2536,9 +2595,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divideperinstance_nodejs">
+<a href="#divideperinstance_nodejs" style="color: inherit; text-decoration: inherit;">divide<wbr>Per<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
@@ -2623,6 +2690,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divide_per_instance_python">
+<a href="#divide_per_instance_python" style="color: inherit; text-decoration: inherit;">divide_<wbr>per_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}a value indicating whether metric should divide per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -2712,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2844,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3760,7 +3835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3768,7 +3843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action</a></span>
+        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4096,7 +4171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4104,7 +4179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}

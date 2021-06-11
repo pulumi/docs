@@ -65,8 +65,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -317,8 +317,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -811,6 +811,354 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
 
 
 
+### Compute Ha Vpn Gateway Encrypted Interconnect
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var address1 = new Gcp.Compute.Address("address1", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "IPSEC_INTERCONNECT",
+            Address = "192.168.1.0",
+            PrefixLength = 29,
+            Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
+        {
+            Network = network.Name,
+            EncryptedInterconnectRouter = true,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 16550,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var attachment1 = new Gcp.Compute.InterconnectAttachment("attachment1", new Gcp.Compute.InterconnectAttachmentArgs
+        {
+            EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_1",
+            Type = "PARTNER",
+            Router = router.Id,
+            Encryption = "IPSEC",
+            IpsecInternalAddresses = 
+            {
+                address1.SelfLink,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var address2 = new Gcp.Compute.Address("address2", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "IPSEC_INTERCONNECT",
+            Address = "192.168.2.0",
+            PrefixLength = 29,
+            Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var attachment2 = new Gcp.Compute.InterconnectAttachment("attachment2", new Gcp.Compute.InterconnectAttachmentArgs
+        {
+            EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_2",
+            Type = "PARTNER",
+            Router = router.Id,
+            Encryption = "IPSEC",
+            IpsecInternalAddresses = 
+            {
+                address2.SelfLink,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var vpn_gateway = new Gcp.Compute.HaVpnGateway("vpn-gateway", new Gcp.Compute.HaVpnGatewayArgs
+        {
+            Network = network.Id,
+            VpnInterfaces = 
+            {
+                new Gcp.Compute.Inputs.HaVpnGatewayVpnInterfaceArgs
+                {
+                    Id = 0,
+                    InterconnectAttachment = attachment1.SelfLink,
+                },
+                new Gcp.Compute.Inputs.HaVpnGatewayVpnInterfaceArgs
+                {
+                    Id = 1,
+                    InterconnectAttachment = attachment2.SelfLink,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		address1, err := compute.NewAddress(ctx, "address1", &compute.AddressArgs{
+			AddressType:  pulumi.String("INTERNAL"),
+			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+			Address:      pulumi.String("192.168.1.0"),
+			PrefixLength: pulumi.Int(29),
+			Network:      network.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		router, err := compute.NewRouter(ctx, "router", &compute.RouterArgs{
+			Network:                     network.Name,
+			EncryptedInterconnectRouter: pulumi.Bool(true),
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(16550),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		attachment1, err := compute.NewInterconnectAttachment(ctx, "attachment1", &compute.InterconnectAttachmentArgs{
+			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_1"),
+			Type:                   pulumi.String("PARTNER"),
+			Router:                 router.ID(),
+			Encryption:             pulumi.String("IPSEC"),
+			IpsecInternalAddresses: pulumi.StringArray{
+				address1.SelfLink,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		address2, err := compute.NewAddress(ctx, "address2", &compute.AddressArgs{
+			AddressType:  pulumi.String("INTERNAL"),
+			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+			Address:      pulumi.String("192.168.2.0"),
+			PrefixLength: pulumi.Int(29),
+			Network:      network.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		attachment2, err := compute.NewInterconnectAttachment(ctx, "attachment2", &compute.InterconnectAttachmentArgs{
+			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_2"),
+			Type:                   pulumi.String("PARTNER"),
+			Router:                 router.ID(),
+			Encryption:             pulumi.String("IPSEC"),
+			IpsecInternalAddresses: pulumi.StringArray{
+				address2.SelfLink,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewHaVpnGateway(ctx, "vpn_gateway", &compute.HaVpnGatewayArgs{
+			Network: network.ID(),
+			VpnInterfaces: compute.HaVpnGatewayVpnInterfaceArray{
+				&compute.HaVpnGatewayVpnInterfaceArgs{
+					Id:                     pulumi.Int(0),
+					InterconnectAttachment: attachment1.SelfLink,
+				},
+				&compute.HaVpnGatewayVpnInterfaceArgs{
+					Id:                     pulumi.Int(1),
+					InterconnectAttachment: attachment2.SelfLink,
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+address1 = gcp.compute.Address("address1",
+    address_type="INTERNAL",
+    purpose="IPSEC_INTERCONNECT",
+    address="192.168.1.0",
+    prefix_length=29,
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+router = gcp.compute.Router("router",
+    network=network.name,
+    encrypted_interconnect_router=True,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=16550,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+attachment1 = gcp.compute.InterconnectAttachment("attachment1",
+    edge_availability_domain="AVAILABILITY_DOMAIN_1",
+    type="PARTNER",
+    router=router.id,
+    encryption="IPSEC",
+    ipsec_internal_addresses=[address1.self_link],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+address2 = gcp.compute.Address("address2",
+    address_type="INTERNAL",
+    purpose="IPSEC_INTERCONNECT",
+    address="192.168.2.0",
+    prefix_length=29,
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+attachment2 = gcp.compute.InterconnectAttachment("attachment2",
+    edge_availability_domain="AVAILABILITY_DOMAIN_2",
+    type="PARTNER",
+    router=router.id,
+    encryption="IPSEC",
+    ipsec_internal_addresses=[address2.self_link],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+vpn_gateway = gcp.compute.HaVpnGateway("vpn-gateway",
+    network=network.id,
+    vpn_interfaces=[
+        gcp.compute.HaVpnGatewayVpnInterfaceArgs(
+            id=0,
+            interconnect_attachment=attachment1.self_link,
+        ),
+        gcp.compute.HaVpnGatewayVpnInterfaceArgs(
+            id=1,
+            interconnect_attachment=attachment2.self_link,
+        ),
+    ],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const address1 = new gcp.compute.Address("address1", {
+    addressType: "INTERNAL",
+    purpose: "IPSEC_INTERCONNECT",
+    address: "192.168.1.0",
+    prefixLength: 29,
+    network: network.selfLink,
+}, {
+    provider: google_beta,
+});
+const router = new gcp.compute.Router("router", {
+    network: network.name,
+    encryptedInterconnectRouter: true,
+    bgp: {
+        asn: 16550,
+    },
+}, {
+    provider: google_beta,
+});
+const attachment1 = new gcp.compute.InterconnectAttachment("attachment1", {
+    edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
+    type: "PARTNER",
+    router: router.id,
+    encryption: "IPSEC",
+    ipsecInternalAddresses: [address1.selfLink],
+}, {
+    provider: google_beta,
+});
+const address2 = new gcp.compute.Address("address2", {
+    addressType: "INTERNAL",
+    purpose: "IPSEC_INTERCONNECT",
+    address: "192.168.2.0",
+    prefixLength: 29,
+    network: network.selfLink,
+}, {
+    provider: google_beta,
+});
+const attachment2 = new gcp.compute.InterconnectAttachment("attachment2", {
+    edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_2",
+    type: "PARTNER",
+    router: router.id,
+    encryption: "IPSEC",
+    ipsecInternalAddresses: [address2.selfLink],
+}, {
+    provider: google_beta,
+});
+const vpn_gateway = new gcp.compute.HaVpnGateway("vpn-gateway", {
+    network: network.id,
+    vpnInterfaces: [
+        {
+            id: 0,
+            interconnectAttachment: attachment1.selfLink,
+        },
+        {
+            id: 1,
+            interconnectAttachment: attachment2.selfLink,
+        },
+    ],
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -822,19 +1170,31 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[HaVpnGatewayVpnInterfaceArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHaVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HaVpnGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHaVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HaVpnGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HaVpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HaVpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -845,46 +1205,44 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HaVpnGatewayArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">HaVpnGatewayArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -893,35 +1251,27 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HaVpnGatewayArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -933,25 +1283,19 @@ const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HaVpnGatewayArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1018,6 +1362,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpninterfaces_csharp">
+<a href="#vpninterfaces_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">List&lt;Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1074,6 +1428,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpninterfaces_go">
+<a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1130,6 +1494,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpninterfaces_nodejs">
+<a href="#vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1186,6 +1560,16 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region this gateway should sit in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpn_interfaces_python">
+<a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1214,15 +1598,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpninterfaces_csharp">
-<a href="#vpninterfaces_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">List&lt;Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1244,15 +1619,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpninterfaces_go">
-<a href="#vpninterfaces_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1274,15 +1640,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpninterfaces_nodejs">
-<a href="#vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1304,15 +1661,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="vpn_interfaces_python">
-<a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1324,20 +1672,29 @@ Get an existing HaVpnGateway resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">HaVpnGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HaVpnGateway</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">HaVpnGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HaVpnGateway</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[HaVpnGatewayVpnInterfaceArgs]]</span> = None<span class="p">) -&gt;</span> HaVpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[HaVpnGatewayVpnInterfaceArgs]]</span> = None<span class="p">) -&gt;</span> HaVpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHaVpnGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">HaVpnGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HaVpnGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHaVpnGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HaVpnGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HaVpnGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HaVpnGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">HaVpnGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HaVpnGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">HaVpnGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1510,6 +1867,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">List&lt;Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1584,6 +1942,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">[]Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1655,9 +2014,10 @@ If it is not provided, the provider project is used.
 <a href="#state_vpninterfaces_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1732,6 +2092,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1755,8 +2116,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnectattachment_csharp">
+<a href="#interconnectattachment_csharp" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1764,7 +2133,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1776,8 +2147,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnectattachment_go">
+<a href="#interconnectattachment_go" style="color: inherit; text-decoration: inherit;">Interconnect<wbr>Attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1785,7 +2164,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1797,8 +2178,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnectattachment_nodejs">
+<a href="#interconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1806,7 +2195,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1818,8 +2209,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
+    <dd>{{% md %}}The numeric ID of this VPN gateway interface.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interconnect_attachment_python">
+<a href="#interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>attachment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1827,7 +2226,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}-
+The external IP address for this VPN gateway interface.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

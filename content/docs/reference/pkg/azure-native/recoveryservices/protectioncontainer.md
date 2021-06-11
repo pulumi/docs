@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.ProtectionContai
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 
@@ -37,12 +37,12 @@ class MyStack : Stack
         {
             ContainerName = "VMAppContainer;Compute;testRG;testSQL",
             FabricName = "Azure",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureVMAppContainerProtectionContainerArgs
             {
-                { "backupManagementType", "AzureWorkload" },
-                { "containerType", "VMAppContainer" },
-                { "friendlyName", "testSQL" },
-                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL" },
+                BackupManagementType = "AzureWorkload",
+                ContainerType = "VMAppContainer",
+                FriendlyName = "testSQL",
+                SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
             },
             ResourceGroupName = "test-rg",
             VaultName = "testvault",
@@ -59,7 +59,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectionContainer(ctx, "protectionContainer", &recoveryservices.ProtectionContainerArgs{
+			ContainerName: pulumi.String("VMAppContainer;Compute;testRG;testSQL"),
+			FabricName:    pulumi.String("Azure"),
+			Properties: recoveryservices.AzureVMAppContainerProtectionContainer{
+				BackupManagementType: "AzureWorkload",
+				ContainerType:        "VMAppContainer",
+				FriendlyName:         "testSQL",
+				SourceResourceId:     "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+			},
+			ResourceGroupName: pulumi.String("test-rg"),
+			VaultName:         pulumi.String("testvault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -74,12 +105,12 @@ import pulumi_azure_native as azure_native
 protection_container = azure_native.recoveryservices.ProtectionContainer("protectionContainer",
     container_name="VMAppContainer;Compute;testRG;testSQL",
     fabric_name="Azure",
-    properties={
-        "backupManagementType": "AzureWorkload",
-        "containerType": "VMAppContainer",
-        "friendlyName": "testSQL",
-        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
-    },
+    properties=azure_native.recoveryservices.AzureVMAppContainerProtectionContainerArgs(
+        backup_management_type="AzureWorkload",
+        container_type="VMAppContainer",
+        friendly_name="testSQL",
+        source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testSQL",
+    ),
     resource_group_name="test-rg",
     vault_name="testvault")
 
@@ -128,19 +159,33 @@ const protectionContainer = new azure_native.recoveryservices.ProtectionContaine
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureBackupServerContainerArgs, AzureIaaSClassicComputeVMContainerArgs, AzureIaaSComputeVMContainerArgs, AzureSQLAGWorkloadContainerProtectionContainerArgs, AzureSqlContainerArgs, AzureStorageContainerArgs, AzureVMAppContainerProtectionContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureBackupServerContainerArgs, AzureIaaSClassicComputeVMContainerArgs, AzureIaaSComputeVMContainerArgs, AzureSQLAGWorkloadContainerProtectionContainerArgs, AzureSqlContainerArgs, AzureStorageContainerArgs, AzureVMAppContainerProtectionContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                        <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionContainer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -151,46 +196,44 @@ const protectionContainer = new azure_native.recoveryservices.ProtectionContaine
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProtectionContainerArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -201,33 +244,25 @@ const protectionContainer = new azure_native.recoveryservices.ProtectionContaine
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -239,25 +274,19 @@ const protectionContainer = new azure_native.recoveryservices.ProtectionContaine
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectionContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -462,7 +491,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a> | <a href="#dpmcontainer">Dpm<wbr>Container</a> | <a href="#genericcontainer">Generic<wbr>Container</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a> | <a href="#mabcontainer">Mab<wbr>Container</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Mab<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1323,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4371,7 +4400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4677,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4887,7 +4916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiryinfo_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinfo">Inquiry<wbr>Info</a></span>
+        <span class="property-type"><a href="#inquiryinfo">Inquiry<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4895,7 +4924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeslist_nodejs" style="color: inherit; text-decoration: inherit;">nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinfo">Distributed<wbr>Nodes<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#distributednodesinfo">Distributed<wbr>Nodes<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5001,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiryinfo_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5009,7 +5038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeslist_nodejs" style="color: inherit; text-decoration: inherit;">nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">Distributed<wbr>Nodes<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5211,7 +5240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6025,7 +6054,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6325,7 +6354,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6727,7 +6756,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7115,7 +7144,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinformation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinfo">Generic<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinfo">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7269,7 +7298,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containeridentityinfo_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinfo">Container<wbr>Identity<wbr>Info</a></span>
+        <span class="property-type"><a href="#containeridentityinfo">Container<wbr>Identity<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7383,7 +7412,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containeridentityinfo_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7553,7 +7582,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinformation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8179,7 +8208,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquirydetails_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetails">Workload<wbr>Inquiry<wbr>Details[]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetails">Workload<wbr>Inquiry<wbr>Details<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -8285,7 +8314,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8293,7 +8322,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquirydetails_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">Workload<wbr>Inquiry<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -8461,7 +8490,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9027,7 +9056,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinfo">Mab<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinfo">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9051,7 +9080,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mabcontainerhealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetails">MABContainer<wbr>Health<wbr>Details[]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetails">MABContainer<wbr>Health<wbr>Details<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9753,7 +9782,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9777,7 +9806,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mabcontainerhealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">MABContainer<wbr>Health<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9985,7 +10014,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiryvalidation_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidation">Inquiry<wbr>Validation</a></span>
+        <span class="property-type"><a href="#inquiryvalidation">Inquiry<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10099,7 +10128,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiryvalidation_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

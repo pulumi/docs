@@ -80,7 +80,7 @@ package main
 
 import (
 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -199,19 +199,29 @@ const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRec
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateRecoveryPlanInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateRecoveryPlanInputPropertiesArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,46 +232,44 @@ const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRec
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -272,33 +280,25 @@ const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRec
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -310,25 +310,19 @@ const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRec
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -421,7 +415,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recovery plan creation properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -744,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">Recovery<wbr>Plan<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">Recovery<wbr>Plan<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -776,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">Recovery<wbr>Plan<wbr>A2AInput[]</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">Recovery<wbr>Plan<wbr>A2AInput<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1362,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1622,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">Recovery<wbr>Plan<wbr>Protected<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1768,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1784,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2178,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2194,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2234,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">Recovery<wbr>Plan<wbr>Group<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

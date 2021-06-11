@@ -21,17 +21,23 @@ API Version: 2020-11-20.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSkusNestedResourceTypeThird<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSkusNestedResourceTypeThirdArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSkusNestedResourceTypeThirdResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSkusNestedResourceTypeThird<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSkusNestedResourceTypeThirdArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSkusNestedResourceTypeThirdResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_skus_nested_resource_type_third(</span><span class="nx">nested_resource_type_first</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_resource_type_second</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_resource_type_third</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSkusNestedResourceTypeThirdResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_skus_nested_resource_type_third(</span><span class="nx">nested_resource_type_first</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">nested_resource_type_second</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">nested_resource_type_third</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSkusNestedResourceTypeThirdResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSkusNestedResourceTypeThird<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSkusNestedResourceTypeThirdArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSkusNestedResourceTypeThirdResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSkusNestedResourceTypeThird<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSkusNestedResourceTypeThirdArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSkusNestedResourceTypeThirdResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSkusNestedResourceTypeThird` in the Go SDK.
 
@@ -40,7 +46,7 @@ API Version: 2020-11-20.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSkusNestedResourceTypeThird </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSkusNestedResourceTypeThirdResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSkusNestedResourceTypeThirdArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSkusNestedResourceTypeThirdResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSkusNestedResourceTypeThirdArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -651,7 +657,7 @@ The following output properties are available:
 <a href="#zonedetails_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skuzonedetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +789,7 @@ The following output properties are available:
 <a href="#zone_details_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetailresponse">Sequence[Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skuzonedetailresponse">Sequence[Sku<wbr>Zone<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +813,7 @@ The following output properties are available:
 <a href="#skusettings_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +849,7 @@ The following output properties are available:
 <a href="#sku_settings_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponse">Sequence[Sku<wbr>Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skusettingresponse">Sequence[Sku<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +873,7 @@ The following output properties are available:
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +881,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponsecapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingresponsecapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +889,7 @@ The following output properties are available:
 <a href="#costs_csharp" style="color: inherit; text-decoration: inherit;">Costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +913,7 @@ The following output properties are available:
 <a href="#locationinfo_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skulocationinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1173,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1181,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponsecapacity">Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingresponsecapacity">Sku<wbr>Setting<wbr>Response<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1189,7 @@ The following output properties are available:
 <a href="#costs_python" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucostresponse">Sequence[Sku<wbr>Cost<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucostresponse">Sequence[Sku<wbr>Cost<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1213,7 @@ The following output properties are available:
 <a href="#location_info_python" style="color: inherit; text-decoration: inherit;">location_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinforesponse">Sequence[Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skulocationinforesponse">Sequence[Sku<wbr>Location<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1417,7 @@ The following output properties are available:
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1471,7 +1477,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

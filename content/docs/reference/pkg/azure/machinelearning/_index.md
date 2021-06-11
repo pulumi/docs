@@ -11,6 +11,7 @@ Explore the resources and functions of the azure.machinelearning module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="inferencecluster" title="InferenceCluster"><span class="symbol resource"></span>InferenceCluster</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
@@ -28,6 +29,6 @@ Explore the resources and functions of the azure.machinelearning module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.56.0</dd>
+	<dd>4.6.0</dd>
 </dl>
 

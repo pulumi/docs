@@ -22,17 +22,20 @@ API Version: 2021-02-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnectivityConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectivityConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectivityConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnectivityConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectivityConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectivityConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connectivity_configuration(</span><span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectivityConfigurationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connectivity_configuration(</span><span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectivityConfigurationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnectivityConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectivityConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectivityConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnectivityConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectivityConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectivityConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupConnectivityConfiguration` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2021-02-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConnectivityConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectivityConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectivityConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectivityConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectivityConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -242,7 +245,7 @@ The following output properties are available:
 <a href="#deleteexistingpeering_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -274,7 +277,7 @@ The following output properties are available:
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +353,7 @@ The following output properties are available:
 <a href="#deleteexistingpeering_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -382,7 +385,7 @@ The following output properties are available:
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -458,7 +461,7 @@ The following output properties are available:
 <a href="#deleteexistingpeering_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -490,7 +493,7 @@ The following output properties are available:
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -566,7 +569,7 @@ The following output properties are available:
 <a href="#delete_existing_peering_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>existing_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -598,7 +601,7 @@ The following output properties are available:
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -628,7 +631,7 @@ The following output properties are available:
 <a href="#isglobal_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +647,7 @@ The following output properties are available:
 <a href="#usehubgateway_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +667,7 @@ The following output properties are available:
 <a href="#isglobal_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +683,7 @@ The following output properties are available:
 <a href="#usehubgateway_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -700,7 +703,7 @@ The following output properties are available:
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +719,7 @@ The following output properties are available:
 <a href="#usehubgateway_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -736,7 +739,7 @@ The following output properties are available:
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +755,7 @@ The following output properties are available:
 <a href="#use_hub_gateway_python" style="color: inherit; text-decoration: inherit;">use_<wbr>hub_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}

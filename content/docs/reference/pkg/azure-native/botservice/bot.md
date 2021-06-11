@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.botservice.Bot resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot resource definition
-API Version: 2020-06-02.
+API Version: 2021-03-01.
 
 {{% examples %}}
 
@@ -49,6 +49,7 @@ class MyStack : Stack
                 Endpoint = "http://mybot.coffee",
                 IconUrl = "http://myicon",
                 IsCmekEnabled = true,
+                IsIsolated = false,
                 LuisAppIds = 
                 {
                     "luisappid1",
@@ -56,6 +57,7 @@ class MyStack : Stack
                 },
                 LuisKey = "luiskey",
                 MsaAppId = "exampleappid",
+                SchemaTransformationVersion = "1.0",
             },
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
@@ -87,7 +89,7 @@ package main
 
 import (
 	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -106,12 +108,14 @@ func main() {
 				Endpoint:                          pulumi.String("http://mybot.coffee"),
 				IconUrl:                           pulumi.String("http://myicon"),
 				IsCmekEnabled:                     pulumi.Bool(true),
+				IsIsolated:                        pulumi.Bool(false),
 				LuisAppIds: pulumi.StringArray{
 					pulumi.String("luisappid1"),
 					pulumi.String("luisappid2"),
 				},
-				LuisKey:  pulumi.String("luiskey"),
-				MsaAppId: pulumi.String("exampleappid"),
+				LuisKey:                     pulumi.String("luiskey"),
+				MsaAppId:                    pulumi.String("exampleappid"),
+				SchemaTransformationVersion: pulumi.String("1.0"),
 			},
 			ResourceGroupName: pulumi.String("OneResourceGroupName"),
 			ResourceName:      pulumi.String("samplebotname"),
@@ -157,12 +161,14 @@ bot = azure_native.botservice.Bot("bot",
         endpoint="http://mybot.coffee",
         icon_url="http://myicon",
         is_cmek_enabled=True,
+        is_isolated=False,
         luis_app_ids=[
             "luisappid1",
             "luisappid2",
         ],
         luis_key="luiskey",
         msa_app_id="exampleappid",
+        schema_transformation_version="1.0",
     ),
     resource_group_name="OneResourceGroupName",
     resource_name="samplebotname",
@@ -201,12 +207,14 @@ const bot = new azure_native.botservice.Bot("bot", {
         endpoint: "http://mybot.coffee",
         iconUrl: "http://myicon",
         isCmekEnabled: true,
+        isIsolated: false,
         luisAppIds: [
             "luisappid1",
             "luisappid2",
         ],
         luisKey: "luiskey",
         msaAppId: "exampleappid",
+        schemaTransformationVersion: "1.0",
     },
     resourceGroupName: "OneResourceGroupName",
     resourceName: "samplebotname",
@@ -238,19 +246,33 @@ const bot = new azure_native.botservice.Bot("bot", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BotPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BotPropertiesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,46 +283,44 @@ const bot = new azure_native.botservice.Bot("bot", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BotArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -311,33 +331,25 @@ const bot = new azure_native.botservice.Bot("bot", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -349,25 +361,19 @@ const bot = new azure_native.botservice.Bot("bot", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">BotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -556,7 +562,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botproperties">Bot<wbr>Properties</a></span>
+        <span class="property-type"><a href="#botproperties">Bot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +578,7 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,6 +873,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_csharp">
+<a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -881,7 +895,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_csharp">
+<a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -967,6 +989,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_go">
+<a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -981,7 +1011,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_go">
+<a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1067,6 +1105,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_nodejs">
+<a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1081,7 +1127,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_nodejs">
+<a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1167,6 +1221,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_isolated_python">
+<a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
@@ -1181,7 +1243,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_transformation_version_python">
+<a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="botpropertiesresponse">Bot<wbr>Properties<wbr>Response</h4>
@@ -1293,6 +1363,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_csharp">
+<a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1307,7 +1385,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_csharp">
+<a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1417,6 +1503,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_go">
+<a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1431,7 +1525,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_go">
+<a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1541,6 +1643,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isisolated_nodejs">
+<a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
 </span>
@@ -1555,7 +1665,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schematransformationversion_nodejs">
+<a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1665,6 +1783,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_isolated_python">
+<a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
 </span>
@@ -1679,7 +1805,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_transformation_version_python">
+<a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The channel schema transformation version for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>

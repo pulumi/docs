@@ -11,28 +11,6 @@ meta_desc: "Documentation for the datadog.User resource with examples, input pro
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Datadog user resource. This can be used to create and manage Datadog users.
-## Schema
-
-### Required
-
-- **email** (String) Email address for user.
-
-### Optional
-
-- **access_role** (String, Deprecated) Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-- **disabled** (Boolean) Whether the user is disabled.
-- **handle** (String, Deprecated) The user handle, must be a valid email.
-- **id** (String) The ID of this resource.
-- **is_admin** (Boolean, Deprecated) Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan.
-- **name** (String) Name for user.
-- **role** (String, Deprecated) Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan.
-- **roles** (Set of String) A list a role IDs to assign to the user.
-- **send_user_invitation** (Boolean) Whether an invitation email should be sent when the user is created.
-
-### Read-only
-
-- **user_invitation_id** (String) The ID of the user invitation that was sent when creating the user.
-- **verified** (Boolean) Returns true if Datadog user is verified.
 
 {{% examples %}}
 
@@ -82,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -163,19 +141,34 @@ const foo = new datadog.User("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_admin</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">send_user_invitation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">handle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">is_admin</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">send_user_invitation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,46 +179,44 @@ const foo = new datadog.User("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,35 +225,27 @@ const foo = new datadog.User("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -274,25 +257,19 @@ const foo = new datadog.User("foo", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -324,9 +301,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -343,8 +319,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="isadmin_csharp">
 <a href="#isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -352,9 +328,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -371,9 +346,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -412,9 +386,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -431,8 +404,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="isadmin_go">
 <a href="#isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -440,9 +413,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -459,9 +431,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -500,9 +471,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -519,8 +489,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="isadmin_nodejs">
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
@@ -528,9 +498,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,9 +516,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -588,9 +556,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -607,8 +574,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="is_admin_python">
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
@@ -616,9 +583,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -635,9 +601,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -691,7 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -721,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -751,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -781,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -793,20 +758,33 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">handle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_admin</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">send_user_invitation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_invitation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">handle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">is_admin</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">send_user_invitation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">user_invitation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -917,9 +895,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -945,8 +922,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_isadmin_csharp">
 <a href="#state_isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -954,9 +931,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -973,9 +949,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1010,7 +985,7 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1023,9 +998,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1051,8 +1025,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_isadmin_go">
 <a href="#state_isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -1060,9 +1034,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1079,9 +1052,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1116,7 +1088,7 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1129,9 +1101,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1157,8 +1128,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_isadmin_nodejs">
 <a href="#state_isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
@@ -1166,9 +1137,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1185,9 +1155,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1222,7 +1191,7 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1235,9 +1204,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
-`access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1263,8 +1231,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The user handle, must be a valid email. **Deprecated.** This parameter is deprecated and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_is_admin_python">
 <a href="#state_is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
@@ -1272,9 +1240,8 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
-argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter is replaced by `roles` and will be removed from the next Major version.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1291,9 +1258,8 @@ argument would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
-would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan. **Deprecated.** This parameter was removed from the API and has no effect.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1328,7 +1294,7 @@ would always trigger an execution plan.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Returns true if Datadog user is verified.
+    <dd>{{% md %}}Returns `true` if the user is verified.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1338,8 +1304,6 @@ would always trigger an execution plan.
 
 ## Import
 
-
-Import is supported using the following syntax
 
 ```sh
  $ pulumi import datadog:index/user:User example_user 6f1b44c0-30b2-11eb-86bc-279f7c1ebaa4

@@ -26,6 +26,8 @@ Explore the resources and functions of the azure-native.compute module.
     <li><a href="galleryimageversion" title="GalleryImageVersion"><span class="symbol resource"></span>GalleryImageVersion</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="proximityplacementgroup" title="ProximityPlacementGroup"><span class="symbol resource"></span>ProximityPlacementGroup</a></li>
+    <li><a href="restorepoint" title="RestorePoint"><span class="symbol resource"></span>RestorePoint</a></li>
+    <li><a href="restorepointcollection" title="RestorePointCollection"><span class="symbol resource"></span>RestorePointCollection</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
     <li><a href="sshpublickey" title="SshPublicKey"><span class="symbol resource"></span>SshPublicKey</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
@@ -57,6 +59,8 @@ Explore the resources and functions of the azure-native.compute module.
     <li><a href="getloganalyticexportrequestratebyinterval" title="GetLogAnalyticExportRequestRateByInterval"><span class="symbol function"></span>GetLogAnalyticExportRequestRateByInterval</a></li>
     <li><a href="getloganalyticexportthrottledrequests" title="GetLogAnalyticExportThrottledRequests"><span class="symbol function"></span>GetLogAnalyticExportThrottledRequests</a></li>
     <li><a href="getproximityplacementgroup" title="GetProximityPlacementGroup"><span class="symbol function"></span>GetProximityPlacementGroup</a></li>
+    <li><a href="getrestorepoint" title="GetRestorePoint"><span class="symbol function"></span>GetRestorePoint</a></li>
+    <li><a href="getrestorepointcollection" title="GetRestorePointCollection"><span class="symbol function"></span>GetRestorePointCollection</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="symbol function"></span>GetSshPublicKey</a></li>
     <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
@@ -76,6 +80,6 @@ Explore the resources and functions of the azure-native.compute module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

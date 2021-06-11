@@ -74,7 +74,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-cloudinit/sdk/go/cloudinit"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -138,7 +138,7 @@ const foo = pulumi.output(cloudinit.getConfig({
         contentType: "text/x-shellscript",
         filename: "foobar.sh",
     }],
-}, { async: true }));
+}));
 ```
 
 
@@ -159,17 +159,21 @@ const foo = pulumi.output(cloudinit.getConfig({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConfig<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConfigResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConfig<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConfigArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConfigResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_config(</span><span class="nx">base64_encode</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boundary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gzip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">parts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetConfigPartArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConfigResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_config(</span><span class="nx">base64_encode</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">boundary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">gzip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">parts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetConfigPart]]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConfigResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConfigResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConfigArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConfigResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupConfig` in the Go SDK.
 
@@ -178,7 +182,7 @@ const foo = pulumi.output(cloudinit.getConfig({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConfig </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetConfigResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConfigResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +198,7 @@ The following arguments are supported:
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigpart">List&lt;Pulumi.<wbr>Cloud<wbr>Init.<wbr>Inputs.<wbr>Get<wbr>Config<wbr>Part<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getconfigpart">List&lt;Pulumi.<wbr>Cloud<wbr>Init.<wbr>Inputs.<wbr>Get<wbr>Config<wbr>Part&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested block type which adds a file to the generated
 cloud-init configuration. Use multiple `part` blocks to specify multiple
@@ -326,7 +330,7 @@ and cannot be disabled if `gzip` is `true`.
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigpart">Sequence[Get<wbr>Config<wbr>Part<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getconfigpart">Sequence[Get<wbr>Config<wbr>Part]</a></span>
     </dt>
     <dd>{{% md %}}A nested block type which adds a file to the generated
 cloud-init configuration. Use multiple `part` blocks to specify multiple

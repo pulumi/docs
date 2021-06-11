@@ -82,10 +82,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appplatform"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -224,19 +224,33 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                       <span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpringCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpringCloudService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpringCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpringCloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,46 +261,44 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -295,35 +307,27 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -335,25 +339,19 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -535,7 +533,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#configservergitsetting_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Server<wbr>Git<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +560,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +587,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#trace_nodejs" style="color: inherit; text-decoration: inherit;">trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd></dl>
@@ -696,6 +694,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_csharp">
+<a href="#requirednetworktrafficrules_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -717,6 +724,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_go">
+<a href="#requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">[]Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -738,6 +754,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_nodejs">
+<a href="#requirednetworktrafficrules_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -759,6 +784,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="required_network_traffic_rules_python">
+<a href="#required_network_traffic_rules_python" style="color: inherit; text-decoration: inherit;">required_<wbr>network_<wbr>traffic_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -770,20 +804,32 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SpringCloudServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpringCloudService</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SpringCloudServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpringCloudService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">outbound_public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">,</span>
+        <span class="nx">outbound_public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">required_network_traffic_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpringCloudServiceRequiredNetworkTrafficRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpringCloudService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SpringCloudServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpringCloudService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpringCloudService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SpringCloudServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpringCloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpringCloudService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SpringCloudServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpringCloudService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SpringCloudServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -933,6 +979,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requirednetworktrafficrules_csharp">
+<a href="#state_requirednetworktrafficrules_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1018,6 +1073,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requirednetworktrafficrules_go">
+<a href="#state_requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">[]Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1062,7 +1126,7 @@ The following state arguments are supported:
 <a href="#state_configservergitsetting_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Server<wbr>Git<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1153,7 @@ The following state arguments are supported:
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,6 +1165,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requirednetworktrafficrules_nodejs">
+<a href="#state_requirednetworktrafficrules_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1134,7 +1207,7 @@ The following state arguments are supported:
 <a href="#state_trace_nodejs" style="color: inherit; text-decoration: inherit;">trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1186,6 +1259,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_required_network_traffic_rules_python">
+<a href="#state_required_network_traffic_rules_python" style="color: inherit; text-decoration: inherit;">required_<wbr>network_<wbr>traffic_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -1368,7 +1450,7 @@ The following state arguments are supported:
 <a href="#httpbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1468,7 @@ The following state arguments are supported:
 <a href="#repositories_nodejs" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository[]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1486,7 @@ The following state arguments are supported:
 <a href="#sshauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1719,7 +1801,7 @@ The following state arguments are supported:
 <a href="#httpbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1837,7 @@ The following state arguments are supported:
 <a href="#sshauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2437,6 +2519,200 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="springcloudservicerequirednetworktrafficrule">Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_csharp">
+<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_go">
+<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_nodejs">
+<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_python">
+<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -22,17 +22,19 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_workspace(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWorkspaceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_workspace(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWorkspaceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkspaceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkspaceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWorkspace` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWorkspace </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -276,7 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purviewconfiguration_csharp">
 <a href="#purviewconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -464,7 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purviewconfiguration_go">
 <a href="#purviewconfiguration_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -652,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purviewconfiguration_nodejs">
 <a href="#purviewconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Configuration</a>
@@ -840,7 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purview_configuration_python">
 <a href="#purview_configuration_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>configuration</a>
@@ -916,7 +918,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacekeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -976,7 +978,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1084,7 +1086,7 @@ The following output properties are available:
 <a href="#cmk_csharp" style="color: inherit; text-decoration: inherit;">Cmk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1144,7 +1146,7 @@ The following output properties are available:
 <a href="#cmk_python" style="color: inherit; text-decoration: inherit;">cmk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1424,7 +1426,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1434,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1580,7 +1582,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1590,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

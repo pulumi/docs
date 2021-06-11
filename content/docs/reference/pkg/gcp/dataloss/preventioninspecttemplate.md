@@ -218,8 +218,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -721,8 +721,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -959,19 +959,29 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_config</span><span class="p">:</span> <span class="nx">Optional[PreventionInspectTemplateInspectConfigArgs]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">inspect_config</span><span class="p">:</span> <span class="nx">Optional[PreventionInspectTemplateInspectConfigArgs]</span> = None<span class="p">,</span>
+                              <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionInspectTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionInspectTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionInspectTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionInspectTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionInspectTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PreventionInspectTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -982,46 +992,44 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PreventionInspectTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PreventionInspectTemplateArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1030,35 +1038,27 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PreventionInspectTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1070,25 +1070,19 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PreventionInspectTemplateArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1230,7 +1224,7 @@ Structure is documented below.
 <a href="#inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
@@ -1385,20 +1379,27 @@ Get an existing PreventionInspectTemplate resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionInspectTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionInspectTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionInspectTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionInspectTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_config</span><span class="p">:</span> <span class="nx">Optional[PreventionInspectTemplateInspectConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PreventionInspectTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">inspect_config</span><span class="p">:</span> <span class="nx">Optional[PreventionInspectTemplateInspectConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PreventionInspectTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionInspectTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionInspectTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionInspectTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionInspectTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionInspectTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionInspectTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionInspectTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PreventionInspectTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionInspectTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PreventionInspectTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1635,7 +1636,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 <a href="#state_inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
@@ -1918,7 +1919,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 <a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
@@ -1947,7 +1948,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -1957,7 +1958,7 @@ Structure is documented below.
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
@@ -1978,7 +1979,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
@@ -2218,7 +2219,7 @@ Structure is documented below.
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -2231,7 +2232,7 @@ Structure is documented below.
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -2263,7 +2264,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -2273,7 +2274,7 @@ Structure is documented below.
 <a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
@@ -2406,7 +2407,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -2416,7 +2417,7 @@ Structure is documented below.
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -2918,7 +2919,7 @@ Structure is documented below.
 <a href="#maxfindingsperinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
@@ -3018,7 +3019,7 @@ Structure is documented below.
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -3178,7 +3179,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3188,7 +3189,7 @@ Structure is documented below.
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
@@ -3334,7 +3335,7 @@ Structure is documented below.
 <a href="#exclusionrule_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
@@ -3344,7 +3345,7 @@ Structure is documented below.
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
@@ -3482,7 +3483,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -3492,7 +3493,7 @@ Structure is documented below.
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
@@ -3502,7 +3503,7 @@ Structure is documented below.
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -3610,7 +3611,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -3620,7 +3621,7 @@ Structure is documented below.
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -3800,7 +3801,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -4058,7 +4059,7 @@ Structure is documented below.
 <a href="#hotwordregex_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
@@ -4068,7 +4069,7 @@ Structure is documented below.
 <a href="#likelihoodadjustment_nodejs" style="color: inherit; text-decoration: inherit;">likelihood<wbr>Adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
@@ -4078,7 +4079,7 @@ Structure is documented below.
 <a href="#proximity_nodejs" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
 exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be

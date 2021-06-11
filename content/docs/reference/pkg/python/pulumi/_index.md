@@ -41,7 +41,10 @@ can be instantiated and used to create other resources. These “provider resour
 <li><p><strong>t</strong> (<em>str</em>) – The type of this resource.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of this resource.</p></li>
 <li><p><strong>custom</strong> (<em>bool</em>) – True if this resource is a custom resource.</p></li>
-<li><p><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</p></li>
+<li><p><strong>props</strong> (<em>Optional</em><em>[</em><em>Inputs</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.
+If props is an input type (decorated with <code class="docutils literal notranslate"><span class="pre">&#64;input_type</span></code>), dict keys will be translated using
+the type’s and resource’s type/name metadata rather than using the <code class="docutils literal notranslate"><span class="pre">translate_input_property</span></code>
+and <code class="docutils literal notranslate"><span class="pre">translate_output_property</span></code> methods.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
 resource.</p></li>
 <li><p><strong>remote</strong> (<em>bool</em>) – True if this is a remote component resource.</p></li>
@@ -61,6 +64,9 @@ deployments.</p>
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Resource.translate_output_property" title="Permalink to this definition"></a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">props</span></code> passed to <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is an input type (decorated with <code class="docutils literal notranslate"><span class="pre">&#64;input_type</span></code>), the
+type/name metadata of the resource will be used to translate names instead of calling this
+method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
@@ -79,6 +85,9 @@ into a format of their choosing before writing those properties to the resource 
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Resource.translate_input_property" title="Permalink to this definition"></a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">props</span></code> passed to <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is an input type (decorated with <code class="docutils literal notranslate"><span class="pre">&#64;input_type</span></code>), the
+type/name metadata of <code class="docutils literal notranslate"><span class="pre">props</span></code> will be used to translate names instead of calling this
+method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
@@ -1189,14 +1198,13 @@ with a resource and stream_id if provided.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-pulumi.x.automation">
-<span id="automation-api"></span><h2>Automation API<a class="headerlink" href="#module-pulumi.x.automation" title="Permalink to this headline"></a></h2>
+<div class="section" id="module-pulumi.automation">
+<span id="automation-api"></span><h2>Automation API<a class="headerlink" href="#module-pulumi.automation" title="Permalink to this headline"></a></h2>
 <p>The automation module contains the Pulumi Automation API, the programmatic interface for driving Pulumi programs
 without the CLI.
 Generally this can be thought of as encapsulating the functionality of the CLI (<code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">preview</span></code>,
 <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">destroy</span></code>, <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">stack</span> <span class="pre">init</span></code>, etc.) but with more flexibility. This still requires a
-CLI binary to be installed and available on your $PATH. The Automation API is in Alpha (experimental package/x)
-breaking changes (mostly additive) will be made.</p>
+CLI binary to be installed and available on your $PATH.</p>
 <p>In addition to fine-grained building blocks, Automation API provides two out of the box ways to work with Stacks:</p>
 <ol class="arabic">
 <li><p>Programs locally available on-disk and addressed via a filepath (local source):</p>
@@ -1263,8 +1271,8 @@ conflicts:</p>
 </pre></div>
 </div>
 <dl class="py function">
-<dt id="pulumi.x.automation.create_stack">
-<code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">create_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.Stack<a class="headerlink" href="#pulumi.x.automation.create_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.create_stack">
+<code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">create_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.create_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a Stack with a LocalWorkspace utilizing the specified inline (in process) Pulumi program or the local
 Pulumi CLI program from the specified workdir.</p>
 <p><strong>Inline Programs</strong></p>
@@ -1294,8 +1302,8 @@ variables to pass through to every command.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="pulumi.x.automation.select_stack">
-<code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.Stack<a class="headerlink" href="#pulumi.x.automation.select_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.select_stack">
+<code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.select_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Selects a Stack with a LocalWorkspace utilizing the specified inline (in process) Pulumi program or the local
 Pulumi CLI program from the specified workdir.</p>
 <p><strong>Inline Programs</strong></p>
@@ -1325,8 +1333,8 @@ variables to pass through to every command.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="pulumi.x.automation.create_or_select_stack">
-<code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">create_or_select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.Stack<a class="headerlink" href="#pulumi.x.automation.create_or_select_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.create_or_select_stack">
+<code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">create_or_select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.create_or_select_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or selects an existing Stack with a LocalWorkspace utilizing the specified inline (in process) Pulumi
 program or the local Pulumi CLI program from the specified workdir.</p>
 <p><strong>Inline Programs</strong></p>
@@ -1356,8 +1364,8 @@ variables to pass through to every command.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi.x.automation.LocalWorkspace">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">LocalWorkspace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pulumi_home</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_vars</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets_provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._project_settings.ProjectSettings<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._stack_settings.StackSettings<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspace" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">LocalWorkspace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pulumi_home</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_vars</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets_provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._project_settings.ProjectSettings<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._stack_settings.StackSettings<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace" title="Permalink to this definition"></a></dt>
 <dd><p>LocalWorkspace is a default implementation of the Workspace interface.
 A Workspace is the execution context containing a single Pulumi project, a program,
 and multiple stacks. Workspaces are used to manage the execution environment,
@@ -1368,8 +1376,8 @@ for Project and Stack settings. Modifying ProjectSettings will
 alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.[stack].yaml file.
 This is identical to the behavior of Pulumi CLI driven workspaces.</p>
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.project_settings">
-<code class="sig-name descname">project_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._project_settings.ProjectSettings<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.project_settings" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.project_settings">
+<code class="sig-name descname">project_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pulumi.automation._project_settings.ProjectSettings<a class="headerlink" href="#pulumi.automation.LocalWorkspace.project_settings" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the settings object for the current project if any.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1379,8 +1387,8 @@ This is identical to the behavior of Pulumi CLI driven workspaces.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.save_project_settings">
-<code class="sig-name descname">save_project_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">settings</span><span class="p">:</span> <span class="n">pulumi.x.automation._project_settings.ProjectSettings</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.save_project_settings" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.save_project_settings">
+<code class="sig-name descname">save_project_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">settings</span><span class="p">:</span> <span class="n">pulumi.automation._project_settings.ProjectSettings</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.save_project_settings" title="Permalink to this definition"></a></dt>
 <dd><p>Overwrites the settings object in the current project.
 There can only be a single project per workspace. Fails is new project name does not match old.</p>
 <dl class="field-list simple">
@@ -1391,8 +1399,8 @@ There can only be a single project per workspace. Fails is new project name does
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.stack_settings">
-<code class="sig-name descname">stack_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack_settings.StackSettings<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.stack_settings" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.stack_settings">
+<code class="sig-name descname">stack_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack_settings.StackSettings<a class="headerlink" href="#pulumi.automation.LocalWorkspace.stack_settings" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the settings object for the stack matching the specified stack name if any.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1405,8 +1413,8 @@ There can only be a single project per workspace. Fails is new project name does
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.save_stack_settings">
-<code class="sig-name descname">save_stack_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">settings</span><span class="p">:</span> <span class="n">pulumi.x.automation._stack_settings.StackSettings</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.save_stack_settings" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.save_stack_settings">
+<code class="sig-name descname">save_stack_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">settings</span><span class="p">:</span> <span class="n">pulumi.automation._stack_settings.StackSettings</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.save_stack_settings" title="Permalink to this definition"></a></dt>
 <dd><p>Overwrites the settings object for the stack matching the specified stack name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1419,8 +1427,8 @@ There can only be a single project per workspace. Fails is new project name does
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.serialize_args_for_op">
-<code class="sig-name descname">serialize_args_for_op</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.serialize_args_for_op" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.serialize_args_for_op">
+<code class="sig-name descname">serialize_args_for_op</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.serialize_args_for_op" title="Permalink to this definition"></a></dt>
 <dd><p>A hook to provide additional args to CLI commands before they are executed.
 Provided with stack name, returns a list of args to append to an invoked command [“–config=…”, ]
 LocalWorkspace does not utilize this extensibility point.</p>
@@ -1432,8 +1440,8 @@ LocalWorkspace does not utilize this extensibility point.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.post_command_callback">
-<code class="sig-name descname">post_command_callback</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.post_command_callback" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.post_command_callback">
+<code class="sig-name descname">post_command_callback</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.post_command_callback" title="Permalink to this definition"></a></dt>
 <dd><p>A hook executed after every command. Called with the stack name.
 An extensibility point to perform workspace cleanup (CLI operations may create/modify a Pulumi.stack.yaml)
 LocalWorkspace does not utilize this extensibility point.</p>
@@ -1445,8 +1453,8 @@ LocalWorkspace does not utilize this extensibility point.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.get_config">
-<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._config.ConfigValue<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.get_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.get_config">
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._config.ConfigValue<a class="headerlink" href="#pulumi.automation.LocalWorkspace.get_config" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the value associated with the specified stack name and key,
 scoped to the Workspace.</p>
 <dl class="field-list simple">
@@ -1463,8 +1471,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.get_all_config">
-<code class="sig-name descname">get_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._config.ConfigValue<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.get_all_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.get_all_config">
+<code class="sig-name descname">get_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._config.ConfigValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.get_all_config" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the config map for the specified stack name, scoped to the current Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1477,8 +1485,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.set_config">
-<code class="sig-name descname">set_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">pulumi.x.automation._config.ConfigValue</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.set_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.set_config">
+<code class="sig-name descname">set_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">pulumi.automation._config.ConfigValue</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.set_config" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the specified key-value pair on the provided stack name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1492,8 +1500,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.set_all_config">
-<code class="sig-name descname">set_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._config.ConfigValue<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.set_all_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.set_all_config">
+<code class="sig-name descname">set_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._config.ConfigValue<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.set_all_config" title="Permalink to this definition"></a></dt>
 <dd><p>Sets all values in the provided config map for the specified stack name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1506,8 +1514,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.remove_config">
-<code class="sig-name descname">remove_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.remove_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.remove_config">
+<code class="sig-name descname">remove_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_config" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the specified key-value pair on the provided stack name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1520,8 +1528,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.remove_all_config">
-<code class="sig-name descname">remove_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">keys</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.remove_all_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.remove_all_config">
+<code class="sig-name descname">remove_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">keys</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_all_config" title="Permalink to this definition"></a></dt>
 <dd><p>Removes all values in the provided key list for the specified stack name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1534,8 +1542,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.refresh_config">
-<code class="sig-name descname">refresh_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.refresh_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.refresh_config">
+<code class="sig-name descname">refresh_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.refresh_config" title="Permalink to this definition"></a></dt>
 <dd><p>Gets and sets the config map used with the last update for Stack matching stack name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1545,8 +1553,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.who_am_i">
-<code class="sig-name descname">who_am_i</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._workspace.WhoAmIResult<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.who_am_i" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.who_am_i">
+<code class="sig-name descname">who_am_i</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pulumi.automation._workspace.WhoAmIResult<a class="headerlink" href="#pulumi.automation.LocalWorkspace.who_am_i" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the currently authenticated user.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1556,8 +1564,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.stack">
-<code class="sig-name descname">stack</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.x.automation._workspace.StackSummary<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.stack">
+<code class="sig-name descname">stack</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.automation._workspace.StackSummary<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.stack" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a summary of the currently selected stack, if any.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1567,8 +1575,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.create_stack">
-<code class="sig-name descname">create_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.create_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.create_stack">
+<code class="sig-name descname">create_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.create_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Creates and sets a new stack with the stack name, failing if one already exists.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1582,8 +1590,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.select_stack">
-<code class="sig-name descname">select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.select_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.select_stack">
+<code class="sig-name descname">select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.select_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Selects and sets an existing stack matching the stack stack_name, failing if none exists.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1597,8 +1605,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.remove_stack">
-<code class="sig-name descname">remove_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.remove_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.remove_stack">
+<code class="sig-name descname">remove_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes the stack and all associated configuration and history.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1608,8 +1616,8 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.list_stacks">
-<code class="sig-name descname">list_stacks</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pulumi.x.automation._workspace.StackSummary<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.list_stacks" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.list_stacks">
+<code class="sig-name descname">list_stacks</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pulumi.automation._workspace.StackSummary<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.list_stacks" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all Stacks created under the current Project.
 This queries underlying backend and may return stacks not present in the Workspace
 (as Pulumi.<span class="raw-html-m2r"><stack></span>.yaml files).</p>
@@ -1621,8 +1629,8 @@ This queries underlying backend and may return stacks not present in the Workspa
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.install_plugin">
-<code class="sig-name descname">install_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">version</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">kind</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'resource'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.install_plugin" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.install_plugin">
+<code class="sig-name descname">install_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">version</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">kind</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'resource'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.install_plugin" title="Permalink to this definition"></a></dt>
 <dd><p>Installs a plugin in the Workspace, for example to use cloud providers like AWS or GCP.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1636,8 +1644,8 @@ This queries underlying backend and may return stacks not present in the Workspa
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.remove_plugin">
-<code class="sig-name descname">remove_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_range</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'resource'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.remove_plugin" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.remove_plugin">
+<code class="sig-name descname">remove_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_range</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'resource'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_plugin" title="Permalink to this definition"></a></dt>
 <dd><p>Removes a plugin from the Workspace matching the specified name and version.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1651,8 +1659,8 @@ This queries underlying backend and may return stacks not present in the Workspa
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.list_plugins">
-<code class="sig-name descname">list_plugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pulumi.x.automation._workspace.PluginInfo<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.list_plugins" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.list_plugins">
+<code class="sig-name descname">list_plugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pulumi.automation._workspace.PluginInfo<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.list_plugins" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of all plugins installed in the Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1662,8 +1670,8 @@ This queries underlying backend and may return stacks not present in the Workspa
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.export_stack">
-<code class="sig-name descname">export_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._workspace.Deployment<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.export_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.export_stack">
+<code class="sig-name descname">export_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._workspace.Deployment<a class="headerlink" href="#pulumi.automation.LocalWorkspace.export_stack" title="Permalink to this definition"></a></dt>
 <dd><p>ExportStack exports the deployment state of the stack matching the given name.
 This can be combined with ImportStack to edit a stack’s state (such as recovery from failed deployments).</p>
 <dl class="field-list simple">
@@ -1677,8 +1685,8 @@ This can be combined with ImportStack to edit a stack’s state (such as recover
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.LocalWorkspace.import_stack">
-<code class="sig-name descname">import_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">pulumi.x.automation._workspace.Deployment</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.LocalWorkspace.import_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspace.import_stack">
+<code class="sig-name descname">import_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Deployment</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.import_stack" title="Permalink to this definition"></a></dt>
 <dd><p>ImportStack imports the specified deployment state into a pre-existing stack.
 This can be combined with ExportStack to edit a stack’s state (such as recovery from failed deployments).</p>
 <dl class="field-list simple">
@@ -1691,18 +1699,32 @@ This can be combined with ExportStack to edit a stack’s state (such as recover
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt id="pulumi.automation.LocalWorkspace.stack_outputs">
+<code class="sig-name descname">stack_outputs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._output.OutputValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.stack_outputs" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the current set of Stack outputs from the last Stack.up().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stack_name</strong> – The name of the stack.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>OutputMap</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi.x.automation.Stack">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.x.automation._workspace.Workspace</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">pulumi.x.automation._stack.StackInitMode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.Stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Workspace</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">pulumi.automation._stack.StackInitMode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.Stack" title="Permalink to this definition"></a></dt>
 <dd><p>Stack is an isolated, independently configurable instance of a Pulumi program.
 Stack exposes methods for the full pulumi lifecycle (up/preview/refresh/destroy), as well as managing configuration.
 Multiple Stacks are commonly used to denote different phases of development
 (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev).</p>
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.create">
-<em class="property">classmethod </em><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.x.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.Stack<a class="headerlink" href="#pulumi.x.automation.Stack.create" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.create">
+<em class="property">classmethod </em><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.Stack.create" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a new stack using the given workspace, and stack name.
 It fails if a stack with that name already exists.</p>
 <dl class="field-list simple">
@@ -1719,11 +1741,10 @@ It fails if a stack with that name already exists.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.select">
-<em class="property">classmethod </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.x.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.Stack<a class="headerlink" href="#pulumi.x.automation.Stack.select" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.select">
+<em class="property">classmethod </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.Stack.select" title="Permalink to this definition"></a></dt>
 <dd><p>Selects stack using the given workspace, and stack name.
-It returns an error if the given Stack does not exist. All LocalWorkspace operations will call <code class="docutils literal notranslate"><span class="pre">select</span></code> before
-running.</p>
+It returns an error if the given Stack does not exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1738,8 +1759,8 @@ running.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.create_or_select">
-<em class="property">classmethod </em><code class="sig-name descname">create_or_select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.x.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.Stack<a class="headerlink" href="#pulumi.x.automation.Stack.create_or_select" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.create_or_select">
+<em class="property">classmethod </em><code class="sig-name descname">create_or_select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">workspace</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Workspace</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.Stack.create_or_select" title="Permalink to this definition"></a></dt>
 <dd><p>Tries to create a new stack using the given workspace and stack name if the stack does not already exist,
 or falls back to selecting the existing stack. If the stack does not exist,
 it will be created and selected.</p>
@@ -1757,8 +1778,8 @@ it will be created and selected.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.up">
-<code class="sig-name descname">up</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.x.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.UpResult<a class="headerlink" href="#pulumi.x.automation.Stack.up" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.up">
+<code class="sig-name descname">up</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.UpResult<a class="headerlink" href="#pulumi.automation.Stack.up" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or updates the resources in a stack by executing the program in the Workspace.
 <a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a></p>
 <dl class="field-list simple">
@@ -1784,8 +1805,8 @@ it will be created and selected.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.preview">
-<code class="sig-name descname">preview</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.x.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.PreviewResult<a class="headerlink" href="#pulumi.x.automation.Stack.preview" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.preview">
+<code class="sig-name descname">preview</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.PreviewResult<a class="headerlink" href="#pulumi.automation.Stack.preview" title="Permalink to this definition"></a></dt>
 <dd><p>Performs a dry-run update to a stack, returning pending changes.
 <a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_preview/">https://www.pulumi.com/docs/reference/cli/pulumi_preview/</a></p>
 <dl class="field-list simple">
@@ -1811,8 +1832,8 @@ it will be created and selected.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.refresh">
-<code class="sig-name descname">refresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.x.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.RefreshResult<a class="headerlink" href="#pulumi.x.automation.Stack.refresh" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.refresh">
+<code class="sig-name descname">refresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.RefreshResult<a class="headerlink" href="#pulumi.automation.Stack.refresh" title="Permalink to this definition"></a></dt>
 <dd><p>Compares the current stack’s resource state with the state known to exist in the actual
 cloud provider. Any such changes are adopted into the current stack.</p>
 <dl class="field-list simple">
@@ -1834,8 +1855,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.destroy">
-<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.x.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._stack.DestroyResult<a class="headerlink" href="#pulumi.x.automation.Stack.destroy" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.destroy">
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.DestroyResult<a class="headerlink" href="#pulumi.automation.Stack.destroy" title="Permalink to this definition"></a></dt>
 <dd><p>Destroy deletes all resources in a stack, leaving all history and configuration intact.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1856,8 +1877,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.get_config">
-<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._config.ConfigValue<a class="headerlink" href="#pulumi.x.automation.Stack.get_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.get_config">
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._config.ConfigValue<a class="headerlink" href="#pulumi.automation.Stack.get_config" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the config value associated with the specified key.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1870,8 +1891,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.get_all_config">
-<code class="sig-name descname">get_all_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._config.ConfigValue<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.Stack.get_all_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.get_all_config">
+<code class="sig-name descname">get_all_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._config.ConfigValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.Stack.get_all_config" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the full config map associated with the stack in the Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1881,8 +1902,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.set_config">
-<code class="sig-name descname">set_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">pulumi.x.automation._config.ConfigValue</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.set_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.set_config">
+<code class="sig-name descname">set_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">pulumi.automation._config.ConfigValue</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.set_config" title="Permalink to this definition"></a></dt>
 <dd><p>Sets a config key-value pair on the Stack in the associated Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1895,8 +1916,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.set_all_config">
-<code class="sig-name descname">set_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._config.ConfigValue<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.set_all_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.set_all_config">
+<code class="sig-name descname">set_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._config.ConfigValue<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.set_all_config" title="Permalink to this definition"></a></dt>
 <dd><p>Sets all specified config values on the stack in the associated Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1906,8 +1927,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.remove_config">
-<code class="sig-name descname">remove_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.remove_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.remove_config">
+<code class="sig-name descname">remove_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.remove_config" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the specified config key from the Stack in the associated Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1917,8 +1938,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.remove_all_config">
-<code class="sig-name descname">remove_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keys</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.remove_all_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.remove_all_config">
+<code class="sig-name descname">remove_all_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keys</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.remove_all_config" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the specified config keys from the Stack in the associated Workspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1928,14 +1949,14 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.refresh_config">
-<code class="sig-name descname">refresh_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.refresh_config" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.refresh_config">
+<code class="sig-name descname">refresh_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.refresh_config" title="Permalink to this definition"></a></dt>
 <dd><p>Gets and sets the config map used with the last update.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.outputs">
-<code class="sig-name descname">outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._stack.OutputValue<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.Stack.outputs" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.outputs">
+<code class="sig-name descname">outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; MutableMapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._output.OutputValue<span class="p">]</span><a class="headerlink" href="#pulumi.automation.Stack.outputs" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the current set of Stack outputs from the last Stack.up().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1945,8 +1966,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.history">
-<code class="sig-name descname">history</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">page_size</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pulumi.x.automation._stack.UpdateSummary<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.Stack.history" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.history">
+<code class="sig-name descname">history</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">page_size</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">page</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pulumi.automation._stack.UpdateSummary<span class="p">]</span><a class="headerlink" href="#pulumi.automation.Stack.history" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list summarizing all previous and current results from Stack lifecycle operations
 (up/preview/refresh/destroy).</p>
 <dl class="field-list simple">
@@ -1963,8 +1984,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.info">
-<code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.x.automation._stack.UpdateSummary<span class="p">]</span><a class="headerlink" href="#pulumi.x.automation.Stack.info" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.info">
+<code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.automation._stack.UpdateSummary<span class="p">]</span><a class="headerlink" href="#pulumi.automation.Stack.info" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the current results from Stack lifecycle operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1974,8 +1995,8 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.cancel">
-<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.cancel" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.cancel">
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.cancel" title="Permalink to this definition"></a></dt>
 <dd><p>Cancel stops a stack’s currently running update. It returns an error if no update is currently running.
 Note that this operation is <em>very dangerous</em>, and may leave the stack in an inconsistent state
 if a resource operation was pending when the update was canceled.
@@ -1983,8 +2004,8 @@ This command is not supported for local backends.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.export_stack">
-<code class="sig-name descname">export_stack</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pulumi.x.automation._workspace.Deployment<a class="headerlink" href="#pulumi.x.automation.Stack.export_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.export_stack">
+<code class="sig-name descname">export_stack</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pulumi.automation._workspace.Deployment<a class="headerlink" href="#pulumi.automation.Stack.export_stack" title="Permalink to this definition"></a></dt>
 <dd><p>export_stack exports the deployment state of the stack.
 This can be combined with Stack.import_state to edit a stack’s state (such as recovery from failed deployments).</p>
 <dl class="field-list simple">
@@ -1995,8 +2016,8 @@ This can be combined with Stack.import_state to edit a stack’s state (such as 
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi.x.automation.Stack.import_stack">
-<code class="sig-name descname">import_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">pulumi.x.automation._workspace.Deployment</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.x.automation.Stack.import_stack" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.Stack.import_stack">
+<code class="sig-name descname">import_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">pulumi.automation._workspace.Deployment</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.Stack.import_stack" title="Permalink to this definition"></a></dt>
 <dd><p>import_stack imports the specified deployment state into a pre-existing stack.
 This can be combined with Stack.export_state to edit a stack’s state (such as recovery from failed deployments).</p>
 <dl class="field-list simple">
@@ -2009,25 +2030,25 @@ This can be combined with Stack.export_state to edit a stack’s state (such as 
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi.x.automation.LocalWorkspaceOptions">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">LocalWorkspaceOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pulumi_home</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_vars</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets_provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._project_settings.ProjectSettings<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._stack_settings.StackSettings<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.LocalWorkspaceOptions" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.LocalWorkspaceOptions">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">LocalWorkspaceOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pulumi_home</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">env_vars</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secrets_provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._project_settings.ProjectSettings<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stack_settings</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>pulumi.automation._stack_settings.StackSettings<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.LocalWorkspaceOptions" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
-<dt id="pulumi.x.automation.ProjectSettings">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">ProjectSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">runtime</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>pulumi.x.automation._project_settings.ProjectRuntimeInfo<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">main</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">author</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._project_settings.ProjectTemplate<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.x.automation._project_settings.ProjectBackend<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.ProjectSettings" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.ProjectSettings">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">ProjectSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">runtime</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>pulumi.automation._project_settings.ProjectRuntimeInfo<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">main</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">author</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._project_settings.ProjectTemplate<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._project_settings.ProjectBackend<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.ProjectSettings" title="Permalink to this definition"></a></dt>
 <dd><p>A Pulumi project manifest. It describes metadata applying to all sub-stacks created from the project.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi.x.automation.StackSettings">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">StackSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">secrets_provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted_key</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_salt</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.StackSettings" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.StackSettings">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">StackSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">secrets_provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted_key</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_salt</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.StackSettings" title="Permalink to this definition"></a></dt>
 <dd><p>A description of the Stack’s configuration and encryption metadata.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi.x.automation.ConfigValue">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.x.automation.</code><code class="sig-name descname">ConfigValue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">secret</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.x.automation.ConfigValue" title="Permalink to this definition"></a></dt>
+<dt id="pulumi.automation.ConfigValue">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">ConfigValue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">secret</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.ConfigValue" title="Permalink to this definition"></a></dt>
 <dd><p>ConfigValue is the input/output of a <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">config</span></code> command.
 It has a plaintext value, and an option boolean indicating secretness.</p>
 </dd></dl>

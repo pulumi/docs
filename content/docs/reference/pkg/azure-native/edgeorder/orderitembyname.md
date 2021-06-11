@@ -112,7 +112,7 @@ package main
 
 import (
 	edgeorder "github.com/pulumi/pulumi-azure-native/sdk/go/azure/edgeorder"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -317,19 +317,32 @@ const orderItemByName = new azure_native.edgeorder.OrderItemByName("orderItemByN
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_details</span><span class="p">:</span> <span class="nx">Optional[AddressDetailsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_item_details</span><span class="p">:</span> <span class="nx">Optional[OrderItemDetailsArgs]</span> = None<span class="p">, </span><span class="nx">order_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">address_details</span><span class="p">:</span> <span class="nx">Optional[AddressDetailsArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">order_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">order_item_details</span><span class="p">:</span> <span class="nx">Optional[OrderItemDetailsArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">order_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrderItemByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrderItemByName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrderItemByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrderItemByName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrderItemByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrderItemByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -340,46 +353,44 @@ const orderItemByName = new azure_native.edgeorder.OrderItemByName("orderItemByN
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderItemByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrderItemByNameArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -390,33 +401,25 @@ const orderItemByName = new azure_native.edgeorder.OrderItemByName("orderItemByN
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderItemByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -428,25 +431,19 @@ const orderItemByName = new azure_native.edgeorder.OrderItemByName("orderItemByN
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrderItemByNameArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -587,7 +584,7 @@ The OrderItemByName resource accepts the following [input]({{< relref "/docs/int
 <a href="#addressdetails_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressdetails">Address<wbr>Details</a></span>
+        <span class="property-type"><a href="#addressdetails">Address<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents shipping and return address for order{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +600,7 @@ The OrderItemByName resource accepts the following [input]({{< relref "/docs/int
 <a href="#orderitemdetails_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Item<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderitemdetails">Order<wbr>Item<wbr>Details</a></span>
+        <span class="property-type"><a href="#orderitemdetails">Order<wbr>Item<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents order item details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -926,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardaddress_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressproperties">Address<wbr>Properties</a></span>
+        <span class="property-type"><a href="#addressproperties">Address<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer address and contact details. It should be address resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -992,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardaddress_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addresspropertiesresponse">Address<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#addresspropertiesresponse">Address<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer address and contact details. It should be address resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1000,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addresspropertiesresponse">Address<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#addresspropertiesresponse">Address<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Return shipping address{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1074,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1156,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
+        <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1962,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1978,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2746,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productdetails_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productdetails">Product<wbr>Details</a></span>
+        <span class="property-type"><a href="#productdetails">Product<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2754,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementresourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementresourcedetails">Management<wbr>Resource<wbr>Details</a></span>
+        <span class="property-type"><a href="#managementresourcedetails">Management<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Management resource details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2770,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferences">Preferences</a></span>
+        <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer notification Preferences{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3108,7 +3105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstage_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagedetailsresponse">Stage<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#stagedetailsresponse">Stage<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current Order item Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3124,7 +3121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3132,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardshippingdetails_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Forward Package Shipping details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3148,7 +3145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orderitemstagehistory_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Item<wbr>Stage<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagedetailsresponse">Stage<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#stagedetailsresponse">Stage<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Order item status history{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3164,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productdetails_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#productdetailsresponse">Product<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#productdetailsresponse">Product<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3188,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reverseshippingdetails_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipping<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3196,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementresourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementresourcedetailsresponse">Management<wbr>Resource<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementresourcedetailsresponse">Management<wbr>Resource<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Management resource details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3212,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
+        <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer notification Preferences{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3440,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3448,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationpreferences_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreference">Notification<wbr>Preference[]</a></span>
+        <span class="property-type"><a href="#notificationpreference">Notification<wbr>Preference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Notification preferences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3456,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportpreferences_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3554,7 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3562,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationpreferences_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationpreferenceresponse">Notification<wbr>Preference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#notificationpreferenceresponse">Notification<wbr>Preference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Notification preferences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3570,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transportpreferences_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response</a></span>
+        <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the shipment logistics of the order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3652,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hierarchyinformation_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformation">Hierarchy<wbr>Information</a></span>
+        <span class="property-type"><a href="#hierarchyinformation">Hierarchy<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3750,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devicedetails_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedetailsresponse">Device<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#devicedetailsresponse">Device<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}list of device details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3758,7 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hierarchyinformation_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -18,19 +18,43 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardChartArgs]]</span> = None<span class="p">, </span><span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardColumnArgs]]</span> = None<span class="p">, </span><span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardFilterArgs]]</span> = None<span class="p">, </span><span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGridArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSelectedEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardChartArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardColumnArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardEventOverlayArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardFilterArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGridArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSelectedEventOverlayArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardVariableArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,46 +65,44 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,35 +111,27 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -129,25 +143,19 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -523,7 +531,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart[]</a></span>
+        <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -541,7 +549,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +592,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#eventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +601,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +610,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grids_nodejs" style="color: inherit; text-decoration: inherit;">grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid[]</a></span>
+        <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +628,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selectedeventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +655,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -916,20 +924,41 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardChartArgs]]</span> = None<span class="p">, </span><span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardColumnArgs]]</span> = None<span class="p">, </span><span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardFilterArgs]]</span> = None<span class="p">, </span><span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGridArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSelectedEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardVariableArgs]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardChartArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardColumnArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardEventOverlayArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardFilterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGridArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSelectedEventOverlayArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardVariableArgs]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1402,7 +1431,7 @@ The following state arguments are supported:
 <a href="#state_charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart[]</a></span>
+        <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1449,7 @@ The following state arguments are supported:
 <a href="#state_columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1501,7 @@ The following state arguments are supported:
 <a href="#state_eventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1510,7 @@ The following state arguments are supported:
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1519,7 @@ The following state arguments are supported:
 <a href="#state_grids_nodejs" style="color: inherit; text-decoration: inherit;">grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid[]</a></span>
+        <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_selectedeventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -2253,7 +2282,7 @@ The following state arguments are supported:
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2849,7 @@ The following state arguments are supported:
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"

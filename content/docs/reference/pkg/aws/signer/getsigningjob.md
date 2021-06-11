@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/signer"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -95,7 +95,7 @@ import * as aws from "@pulumi/aws";
 
 const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
     jobId: "9ed7e5c3-b8d4-4da0-8459-44e0b068f7ee",
-}, { async: true }));
+}));
 ```
 
 
@@ -116,17 +116,18 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSigningJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSigningJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSigningJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSigningJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSigningJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSigningJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_signing_job(</span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSigningJobResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_signing_job(</span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSigningJobResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSigningJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSigningJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSigningJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSigningJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSigningJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSigningJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSigningJob` in the Go SDK.
 
@@ -135,7 +136,7 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSigningJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSigningJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSigningJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSigningJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSigningJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -962,7 +963,7 @@ The following output properties are available:
 <a href="#s3s_csharp" style="color: inherit; text-decoration: inherit;">S3s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsigningjobsignedobjects3">List&lt;Get<wbr>Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args&gt;</a></span>
+        <span class="property-type"><a href="#getsigningjobsignedobjects3">List&lt;Get<wbr>Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +999,7 @@ The following output properties are available:
 <a href="#s3s_python" style="color: inherit; text-decoration: inherit;">s3s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsigningjobsignedobjects3">Sequence[Get<wbr>Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args]</a></span>
+        <span class="property-type"><a href="#getsigningjobsignedobjects3">Sequence[Get<wbr>Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1098,7 +1099,7 @@ The following output properties are available:
 <a href="#s3s_csharp" style="color: inherit; text-decoration: inherit;">S3s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsigningjobsources3">List&lt;Get<wbr>Signing<wbr>Job<wbr>Source<wbr>S3Args&gt;</a></span>
+        <span class="property-type"><a href="#getsigningjobsources3">List&lt;Get<wbr>Signing<wbr>Job<wbr>Source<wbr>S3&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1135,7 @@ The following output properties are available:
 <a href="#s3s_python" style="color: inherit; text-decoration: inherit;">s3s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsigningjobsources3">Sequence[Get<wbr>Signing<wbr>Job<wbr>Source<wbr>S3Args]</a></span>
+        <span class="property-type"><a href="#getsigningjobsources3">Sequence[Get<wbr>Signing<wbr>Job<wbr>Source<wbr>S3]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

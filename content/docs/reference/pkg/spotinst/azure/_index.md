@@ -25,6 +25,6 @@ Explore the resources and functions of the spotinst.azure module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.20.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

@@ -51,14 +51,18 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="resourceauthorization" title="ResourceAuthorization"><span class="symbol resource"></span>ResourceAuthorization</a></li>
     <li><a href="serviceendpointartifactory" title="ServiceEndpointArtifactory"><span class="symbol resource"></span>ServiceEndpointArtifactory</a></li>
     <li><a href="serviceendpointaws" title="ServiceEndpointAws"><span class="symbol resource"></span>ServiceEndpointAws</a></li>
+    <li><a href="serviceendpointazuredevops" title="ServiceEndpointAzureDevOps"><span class="symbol resource"></span>ServiceEndpointAzureDevOps</a></li>
     <li><a href="serviceendpointazureecr" title="ServiceEndpointAzureEcr"><span class="symbol resource"></span>ServiceEndpointAzureEcr</a></li>
     <li><a href="serviceendpointazurerm" title="ServiceEndpointAzureRM"><span class="symbol resource"></span>ServiceEndpointAzureRM</a></li>
     <li><a href="serviceendpointbitbucket" title="ServiceEndpointBitBucket"><span class="symbol resource"></span>ServiceEndpointBitBucket</a></li>
     <li><a href="serviceendpointdockerregistry" title="ServiceEndpointDockerRegistry"><span class="symbol resource"></span>ServiceEndpointDockerRegistry</a></li>
     <li><a href="serviceendpointgithub" title="ServiceEndpointGitHub"><span class="symbol resource"></span>ServiceEndpointGitHub</a></li>
+    <li><a href="serviceendpointgithubenterprise" title="ServiceEndpointGitHubEnterprise"><span class="symbol resource"></span>ServiceEndpointGitHubEnterprise</a></li>
     <li><a href="serviceendpointkubernetes" title="ServiceEndpointKubernetes"><span class="symbol resource"></span>ServiceEndpointKubernetes</a></li>
+    <li><a href="serviceendpointnpm" title="ServiceEndpointNpm"><span class="symbol resource"></span>ServiceEndpointNpm</a></li>
     <li><a href="serviceendpointpipeline" title="ServiceEndpointPipeline"><span class="symbol resource"></span>ServiceEndpointPipeline</a></li>
     <li><a href="serviceendpointsonarqube" title="ServiceEndpointSonarQube"><span class="symbol resource"></span>ServiceEndpointSonarQube</a></li>
+    <li><a href="serviceendpointssh" title="ServiceEndpointSsh"><span class="symbol resource"></span>ServiceEndpointSsh</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="variablegroup" title="VariableGroup"><span class="symbol resource"></span>VariableGroup</a></li>
     <li><a href="workitemquerypermissions" title="WorkItemQueryPermissions"><span class="symbol resource"></span>WorkItemQueryPermissions</a></li>
@@ -89,6 +93,6 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.4.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

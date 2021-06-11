@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -116,17 +116,45 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPodSecurityPolicyTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPodSecurityPolicyTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPodSecurityPolicyTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPodSecurityPolicyTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pod_security_policy_template(</span><span class="nx">allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_csi_drivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateAllowedCsiDriverArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_flex_volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateAllowedFlexVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_host_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateAllowedHostPathArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_proc_mount_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_unsafe_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_add_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forbidden_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fs_group</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateFsGroupArgs]</span> = None<span class="p">, </span><span class="nx">host_ipc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_network</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_pid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateHostPortArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only_root_filesystem</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_drop_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">run_as_group</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateRunAsGroupArgs]</span> = None<span class="p">, </span><span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateRunAsUserArgs]</span> = None<span class="p">, </span><span class="nx">runtime_class</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateRuntimeClassArgs]</span> = None<span class="p">, </span><span class="nx">se_linux</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateSeLinuxArgs]</span> = None<span class="p">, </span><span class="nx">supplemental_group</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateSupplementalGroupArgs]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPodSecurityPolicyTemplateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pod_security_policy_template(</span><span class="nx">allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">allowed_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">allowed_csi_drivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateAllowedCsiDriver]]</span> = None<span class="p">,</span>
+                                     <span class="nx">allowed_flex_volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateAllowedFlexVolume]]</span> = None<span class="p">,</span>
+                                     <span class="nx">allowed_host_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateAllowedHostPath]]</span> = None<span class="p">,</span>
+                                     <span class="nx">allowed_proc_mount_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">allowed_unsafe_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                                     <span class="nx">default_add_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">default_allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">forbidden_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">fs_group</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateFsGroup]</span> = None<span class="p">,</span>
+                                     <span class="nx">host_ipc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">host_network</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">host_pid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">host_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPodSecurityPolicyTemplateHostPort]]</span> = None<span class="p">,</span>
+                                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">read_only_root_filesystem</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                     <span class="nx">required_drop_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">run_as_group</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateRunAsGroup]</span> = None<span class="p">,</span>
+                                     <span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateRunAsUser]</span> = None<span class="p">,</span>
+                                     <span class="nx">runtime_class</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateRuntimeClass]</span> = None<span class="p">,</span>
+                                     <span class="nx">se_linux</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateSeLinux]</span> = None<span class="p">,</span>
+                                     <span class="nx">supplemental_group</span><span class="p">:</span> <span class="nx">Optional[GetPodSecurityPolicyTemplateSupplementalGroup]</span> = None<span class="p">,</span>
+                                     <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPodSecurityPolicyTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPodSecurityPolicyTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPodSecurityPolicyTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPodSecurityPolicyTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPodSecurityPolicyTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPodSecurityPolicyTemplate` in the Go SDK.
 
@@ -135,7 +163,7 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPodSecurityPolicyTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPodSecurityPolicyTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPodSecurityPolicyTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPodSecurityPolicyTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPodSecurityPolicyTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -178,7 +206,7 @@ The following arguments are supported:
 <a href="#allowedcsidrivers_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Csi<wbr>Drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -187,7 +215,7 @@ The following arguments are supported:
 <a href="#allowedflexvolumes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Flex<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -196,7 +224,7 @@ The following arguments are supported:
 <a href="#allowedhostpaths_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Host<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -268,7 +296,7 @@ The following arguments are supported:
 <a href="#fsgroup_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -303,7 +331,7 @@ The following arguments are supported:
 <a href="#hostports_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -348,7 +376,7 @@ The following arguments are supported:
 <a href="#runasgroup_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -357,7 +385,7 @@ The following arguments are supported:
 <a href="#runasuser_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -366,7 +394,7 @@ The following arguments are supported:
 <a href="#runtimeclass_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -375,7 +403,7 @@ The following arguments are supported:
 <a href="#selinux_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -384,7 +412,7 @@ The following arguments are supported:
 <a href="#supplementalgroup_csharp" style="color: inherit; text-decoration: inherit;">Supplemental<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +971,7 @@ The following arguments are supported:
 <a href="#allowed_csi_drivers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>csi_<wbr>drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedcsidriver">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +980,7 @@ The following arguments are supported:
 <a href="#allowed_flex_volumes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>flex_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedflexvolume">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +989,7 @@ The following arguments are supported:
 <a href="#allowed_host_paths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>host_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateallowedhostpath">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1061,7 @@ The following arguments are supported:
 <a href="#fs_group_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1096,7 @@ The following arguments are supported:
 <a href="#host_ports_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatehostport">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1141,7 @@ The following arguments are supported:
 <a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1150,7 @@ The following arguments are supported:
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1159,7 @@ The following arguments are supported:
 <a href="#runtime_class_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +1168,7 @@ The following arguments are supported:
 <a href="#se_linux_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1177,7 @@ The following arguments are supported:
 <a href="#supplemental_group_python" style="color: inherit; text-decoration: inherit;">supplemental_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2358,7 @@ The following output properties are available:
 <a href="#ranges_csharp" style="color: inherit; text-decoration: inherit;">Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2418,7 @@ The following output properties are available:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgrouprange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatefsgrouprange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2590,7 +2618,7 @@ The following output properties are available:
 <a href="#ranges_csharp" style="color: inherit; text-decoration: inherit;">Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2650,7 +2678,7 @@ The following output properties are available:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasgrouprange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2758,7 +2786,7 @@ The following output properties are available:
 <a href="#ranges_csharp" style="color: inherit; text-decoration: inherit;">Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2818,7 +2846,7 @@ The following output properties are available:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplaterunasuserrange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3010,7 +3038,7 @@ The following output properties are available:
 <a href="#selinuxoption_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3070,7 +3098,7 @@ The following output properties are available:
 <a href="#se_linux_option_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3234,7 +3262,7 @@ The following output properties are available:
 <a href="#ranges_csharp" style="color: inherit; text-decoration: inherit;">Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgrouprange">List&lt;Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3294,7 +3322,7 @@ The following output properties are available:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgrouprange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpodsecuritypolicytemplatesupplementalgrouprange">Sequence[Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

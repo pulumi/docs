@@ -22,17 +22,20 @@ API Version: 2018-07-10.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationRecoveryPlan<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationRecoveryPlanArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationRecoveryPlanResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationRecoveryPlan<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationRecoveryPlanArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationRecoveryPlanResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_recovery_plan(</span><span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationRecoveryPlanResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_recovery_plan(</span><span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationRecoveryPlanResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationRecoveryPlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationRecoveryPlanArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationRecoveryPlanResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationRecoveryPlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationRecoveryPlanArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationRecoveryPlanResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationRecoveryPlan` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2018-07-10.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationRecoveryPlan </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationRecoveryPlanResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationRecoveryPlanArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationRecoveryPlanResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationRecoveryPlanArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -572,7 +575,7 @@ The following output properties are available:
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -680,7 +683,7 @@ The following output properties are available:
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -836,7 +839,7 @@ The following output properties are available:
 <a href="#endgroupactions_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +847,7 @@ The following output properties are available:
 <a href="#replicationprotecteditems_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +855,7 @@ The following output properties are available:
 <a href="#startgroupactions_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -944,7 +947,7 @@ The following output properties are available:
 <a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +955,7 @@ The following output properties are available:
 <a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +963,7 @@ The following output properties are available:
 <a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1028,7 +1031,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1047,7 @@ The following output properties are available:
 <a href="#currentscenario_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1087,7 @@ The following output properties are available:
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1427,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1443,7 @@ The following output properties are available:
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1483,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

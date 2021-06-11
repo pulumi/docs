@@ -78,7 +78,7 @@ package main
 
 import (
 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -208,19 +208,53 @@ const virtualMachine = new azure_native.devtestlab.VirtualMachine("virtualMachin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_claim</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArtifactInstallPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">disallow_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_reference</span><span class="p">:</span> <span class="nx">Optional[GalleryImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">is_authentication_with_ssh_key</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[NetworkInterfacePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleCreationParameterArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">allow_claim</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArtifactInstallPropertiesArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">custom_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">data_disk_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskPropertiesArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">disallow_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">gallery_image_reference</span><span class="p">:</span> <span class="nx">Optional[GalleryImageReferenceArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">is_authentication_with_ssh_key</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">lab_subnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">lab_virtual_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[NetworkInterfacePropertiesArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">owner_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">owner_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">schedule_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleCreationParameterArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">ssh_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                   <span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -231,46 +265,44 @@ const virtualMachine = new azure_native.devtestlab.VirtualMachine("virtualMachin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -281,33 +313,25 @@ const virtualMachine = new azure_native.devtestlab.VirtualMachine("virtualMachin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -319,25 +343,19 @@ const virtualMachine = new azure_native.devtestlab.VirtualMachine("virtualMachin
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -838,7 +856,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallproperties">Artifact<wbr>Install<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#artifactinstallproperties">Artifact<wbr>Install<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +880,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#datadiskparameters_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskproperties">Data<wbr>Disk<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#datadiskproperties">Data<wbr>Disk<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +912,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +960,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</a></span>
+        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1008,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scheduleparameters_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameter">Schedule<wbr>Creation<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameter">Schedule<wbr>Creation<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labvmsshutdown_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Vms<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labvmsstartup_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Vms<wbr>Startup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterproperties">Artifact<wbr>Parameter<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#artifactparameterproperties">Artifact<wbr>Parameter<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Artifact<wbr>Parameter<wbr>Properties<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computedatadiskresponse">Compute<wbr>Data<wbr>Disk<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#computedatadiskresponse">Compute<wbr>Data<wbr>Disk<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets all data disks attached to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computevminstanceviewstatusresponse">Compute<wbr>Vm<wbr>Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#computevminstanceviewstatusresponse">Compute<wbr>Vm<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets the statuses of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3543,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachnewdatadiskoptions_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,7 +3675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachnewdatadiskoptions_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4747,7 +4765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5053,7 +5071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5535,14 +5553,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -5627,14 +5637,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -5707,7 +5709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetails">Day<wbr>Details</a></span>
+        <span class="property-type"><a href="#daydetails">Day<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5715,17 +5717,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details</a></span>
+        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5739,7 +5733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5787,7 +5781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetails">Week<wbr>Details</a></span>
+        <span class="property-type"><a href="#weekdetails">Week<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5810,14 +5804,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#hourdetails">Hour<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5887,7 +5873,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="schedulecreationparameterresponse">Schedule<wbr>Creation<wbr>Parameter<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyrecurrence_csharp">
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
@@ -5904,14 +5898,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5979,7 +5965,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailyrecurrence_go">
 <a href="#dailyrecurrence_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
@@ -5996,14 +5990,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6071,24 +6057,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="dailyrecurrence_nodejs">
-<a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hourlyrecurrence_nodejs">
-<a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -6096,6 +6066,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dailyrecurrence_nodejs">
+<a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hourlyrecurrence_nodejs">
+<a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6109,7 +6095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6157,13 +6143,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daily_recurrence_python">
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
@@ -6180,14 +6174,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6575,7 +6561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6583,7 +6569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6599,7 +6585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6647,7 +6633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6817,7 +6803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatrule">Inbound<wbr>Nat<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#inboundnatrule">Inbound<wbr>Nat<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6867,7 +6853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}

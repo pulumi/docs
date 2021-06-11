@@ -63,7 +63,7 @@ package main
 
 import (
 	management "github.com/pulumi/pulumi-azure-native/sdk/go/azure/management"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -148,19 +148,29 @@ const managementGroup = new azure_native.management.ManagementGroup("managementG
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[CreateManagementGroupDetailsArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[CreateManagementGroupDetailsArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ManagementGroupArgs]</a></span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -171,46 +181,44 @@ const managementGroup = new azure_native.management.ManagementGroup("managementG
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagementGroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -221,33 +229,25 @@ const managementGroup = new azure_native.management.ManagementGroup("managementG
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -259,25 +259,19 @@ const managementGroup = new azure_native.management.ManagementGroup("managementG
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagementGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -370,7 +364,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details</a></span>
+        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group used during creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -469,14 +463,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Outputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span>
@@ -512,14 +498,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementgroupchildinforesponse">[]Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">[]Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -557,14 +535,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
@@ -600,14 +570,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -661,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_nodejs" style="color: inherit; text-decoration: inherit;">children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -919,6 +881,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
@@ -955,6 +925,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">[]Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
@@ -987,9 +965,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -1026,6 +1012,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>

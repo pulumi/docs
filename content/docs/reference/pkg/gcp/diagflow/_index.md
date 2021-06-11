@@ -13,6 +13,7 @@ Explore the resources and functions of the gcp.diagflow module.
 <ul class="api">
     <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
     <li><a href="entitytype" title="EntityType"><span class="symbol resource"></span>EntityType</a></li>
+    <li><a href="fulfillment" title="Fulfillment"><span class="symbol resource"></span>Fulfillment</a></li>
     <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
 </ul>
 
@@ -25,6 +26,6 @@ Explore the resources and functions of the gcp.diagflow module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.21.0</dd>
+	<dd>5.8.0</dd>
 </dl>
 

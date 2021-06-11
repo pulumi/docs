@@ -120,7 +120,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -324,19 +324,33 @@ const sqlResourceSqlContainer = new azure_native.documentdb.SqlResourceSqlContai
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[CreateUpdateOptionsArgs]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[SqlContainerResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[CreateUpdateOptionsArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[SqlContainerResourceArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlContainer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SqlResourceSqlContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -347,46 +361,44 @@ const sqlResourceSqlContainer = new azure_native.documentdb.SqlResourceSqlContai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,33 +409,25 @@ const sqlResourceSqlContainer = new azure_native.documentdb.SqlResourceSqlContai
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -435,25 +439,19 @@ const sqlResourceSqlContainer = new azure_native.documentdb.SqlResourceSqlContai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SqlResourceSqlContainerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -626,7 +624,7 @@ The SqlResourceSqlContainer resource accepts the following [input]({{< relref "/
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerresource">Sql<wbr>Container<wbr>Resource</a></span>
+        <span class="property-type"><a href="#sqlcontainerresource">Sql<wbr>Container<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a container{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -658,7 +656,7 @@ The SqlResourceSqlContainer resource accepts the following [input]({{< relref "/
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">Indexes[]</a></span>
+        <span class="property-type"><a href="#indexes">Indexes<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2027,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">Indexes<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#indexesresponse">Indexes<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">Composite<wbr>Path[][]</a></span>
+        <span class="property-type"><a href="#compositepath">Composite<wbr>Path<wbr>Args[][]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">Excluded<wbr>Path[]</a></span>
+        <span class="property-type"><a href="#excludedpath">Excluded<wbr>Path<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">Included<wbr>Path[]</a></span>
+        <span class="property-type"><a href="#includedpath">Included<wbr>Path<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">Spatial<wbr>Spec[]</a></span>
+        <span class="property-type"><a href="#spatialspec">Spatial<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2679,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">Composite<wbr>Path<wbr>Response[][]</a></span>
+        <span class="property-type"><a href="#compositepathresponse">Composite<wbr>Path<wbr>Response<wbr>Args[][]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2687,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">Excluded<wbr>Path<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Excluded<wbr>Path<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">Included<wbr>Path<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#includedpathresponse">Included<wbr>Path<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">Spatial<wbr>Spec<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Spatial<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3045,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3295,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3311,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3319,7 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3327,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3577,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key</a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy</a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3741,7 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">Unique<wbr>Key[]</a></span>
+        <span class="property-type"><a href="#uniquekey">Unique<wbr>Key<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3791,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">Unique<wbr>Key<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Unique<wbr>Key<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}

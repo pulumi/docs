@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -155,8 +155,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -255,8 +255,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -330,19 +330,36 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseClusterMaintenanceWindowArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">private_network_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">maintenance_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseClusterMaintenanceWindowArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">private_network_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[Union[str, Region]]</span> = None<span class="p">,</span>
+                    <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseSlug]]</span> = None<span class="p">,</span>
+                    <span class="nx">sql_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -353,46 +370,44 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabaseClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -401,35 +416,27 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -441,25 +448,19 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -498,7 +499,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-required"
@@ -507,7 +508,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#databaseslug">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +602,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-required"
@@ -610,7 +611,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#databaseslug">Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +705,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-required"
@@ -713,7 +714,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Database<wbr>Slug</span>
+        <span class="property-type">string | <a href="#databaseslug">Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -731,7 +732,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#maintenancewindows_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseclustermaintenancewindow">Database<wbr>Cluster<wbr>Maintenance<wbr>Window[]</a></span>
+        <span class="property-type"><a href="#databaseclustermaintenancewindow">Database<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Defines when the automatic maintenance should be performed for the database cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +808,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-required"
@@ -816,7 +817,7 @@ The DatabaseCluster resource accepts the following [input]({{< relref "/docs/int
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#databaseslug">Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,20 +1273,42 @@ Get an existing DatabaseCluster resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DatabaseCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DatabaseCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseClusterMaintenanceWindowArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">private_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_network_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DatabaseCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cluster_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_windows</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseClusterMaintenanceWindowArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">private_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_network_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[Union[str, Region]]</span> = None<span class="p">,</span>
+        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseSlug]]</span> = None<span class="p">,</span>
+        <span class="nx">sql_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DatabaseCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabaseCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabaseCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DatabaseCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DatabaseClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DatabaseCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DatabaseClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1511,7 +1534,7 @@ The following state arguments are supported:
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1543,7 @@ The following state arguments are supported:
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#databaseslug">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1718,7 @@ The following state arguments are supported:
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#databaseslug">Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1807,7 +1830,7 @@ The following state arguments are supported:
 <a href="#state_maintenancewindows_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseclustermaintenancewindow">Database<wbr>Cluster<wbr>Maintenance<wbr>Window[]</a></span>
+        <span class="property-type"><a href="#databaseclustermaintenancewindow">Database<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Defines when the automatic maintenance should be performed for the database cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1902,7 @@ The following state arguments are supported:
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1911,7 @@ The following state arguments are supported:
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Database<wbr>Slug</span>
+        <span class="property-type">string | <a href="#databaseslug">Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2063,7 +2086,7 @@ The following state arguments are supported:
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean region where the cluster will reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2095,7 @@ The following state arguments are supported:
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#databaseslug">Database<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}Database Droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`). See here for a [list of valid size slugs](https://developers.digitalocean.com/documentation/v2/#databases).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,6 +2243,122 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The hour in UTC at which maintenance updates will be applied in 24 hour format.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="databaseslug">Database<wbr>Slug</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>DB_1VPCU1GB</dt>
+    <dd>db-s-1vcpu-1gb</dd><dt>DB_1VPCU2GB</dt>
+    <dd>db-s-1vcpu-2gb</dd><dt>DB_2VPCU4GB</dt>
+    <dd>db-s-2vcpu-4gb</dd><dt>DB_4VPCU8GB</dt>
+    <dd>db-s-4vcpu-8gb</dd><dt>DB_6VPCU16GB</dt>
+    <dd>db-s-6vcpu-16gb</dd><dt>DB_8VPCU32GB</dt>
+    <dd>db-s-8vcpu-32gb</dd><dt>DB_16VPCU64GB</dt>
+    <dd>db-s-16vcpu-64gb</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Database<wbr>Slug_DB_1VPCU1GB</dt>
+    <dd>db-s-1vcpu-1gb</dd><dt>Database<wbr>Slug_DB_1VPCU2GB</dt>
+    <dd>db-s-1vcpu-2gb</dd><dt>Database<wbr>Slug_DB_2VPCU4GB</dt>
+    <dd>db-s-2vcpu-4gb</dd><dt>Database<wbr>Slug_DB_4VPCU8GB</dt>
+    <dd>db-s-4vcpu-8gb</dd><dt>Database<wbr>Slug_DB_6VPCU16GB</dt>
+    <dd>db-s-6vcpu-16gb</dd><dt>Database<wbr>Slug_DB_8VPCU32GB</dt>
+    <dd>db-s-8vcpu-32gb</dd><dt>Database<wbr>Slug_DB_16VPCU64GB</dt>
+    <dd>db-s-16vcpu-64gb</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>DB_1VPCU1GB</dt>
+    <dd>db-s-1vcpu-1gb</dd><dt>DB_1VPCU2GB</dt>
+    <dd>db-s-1vcpu-2gb</dd><dt>DB_2VPCU4GB</dt>
+    <dd>db-s-2vcpu-4gb</dd><dt>DB_4VPCU8GB</dt>
+    <dd>db-s-4vcpu-8gb</dd><dt>DB_6VPCU16GB</dt>
+    <dd>db-s-6vcpu-16gb</dd><dt>DB_8VPCU32GB</dt>
+    <dd>db-s-8vcpu-32gb</dd><dt>DB_16VPCU64GB</dt>
+    <dd>db-s-16vcpu-64gb</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>D_B_1_VPCU1_GB</dt>
+    <dd>db-s-1vcpu-1gb</dd><dt>D_B_1_VPCU2_GB</dt>
+    <dd>db-s-1vcpu-2gb</dd><dt>D_B_2_VPCU4_GB</dt>
+    <dd>db-s-2vcpu-4gb</dd><dt>D_B_4_VPCU8_GB</dt>
+    <dd>db-s-4vcpu-8gb</dd><dt>D_B_6_VPCU16_GB</dt>
+    <dd>db-s-6vcpu-16gb</dd><dt>D_B_8_VPCU32_GB</dt>
+    <dd>db-s-8vcpu-32gb</dd><dt>D_B_16_VPCU64_GB</dt>
+    <dd>db-s-16vcpu-64gb</dd></dl>
+{{% /choosable %}}
+
+<h4 id="region">Region</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>NYC1</dt>
+    <dd>nyc1</dd><dt>Region<wbr>NYC2</dt>
+    <dd>nyc2</dd><dt>Region<wbr>NYC3</dt>
+    <dd>nyc3</dd><dt>Region<wbr>SGP1</dt>
+    <dd>sgp1</dd><dt>Region<wbr>LON1</dt>
+    <dd>lon1</dd><dt>Region<wbr>AMS2</dt>
+    <dd>ams2</dd><dt>Region<wbr>AMS3</dt>
+    <dd>ams3</dd><dt>Region<wbr>FRA1</dt>
+    <dd>fra1</dd><dt>Region<wbr>TOR1</dt>
+    <dd>tor1</dd><dt>Region<wbr>SFO1</dt>
+    <dd>sfo1</dd><dt>Region<wbr>SFO2</dt>
+    <dd>sfo2</dd><dt>Region<wbr>SFO3</dt>
+    <dd>sfo3</dd><dt>Region<wbr>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
 {{% /choosable %}}
 ## Import
 

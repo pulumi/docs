@@ -22,17 +22,20 @@ API Version: 2020-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetworkPeering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualNetworkPeeringResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetworkPeering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkPeeringArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualNetworkPeeringResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_network_peering(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualNetworkPeeringResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_network_peering(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">virtual_network_peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualNetworkPeeringResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetworkPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualNetworkPeeringResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetworkPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkPeeringArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualNetworkPeeringResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualNetworkPeering` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualNetworkPeering </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualNetworkPeeringResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualNetworkPeeringResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -190,6 +193,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowforwardedtraffic_csharp">
 <a href="#allowforwardedtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
 </span>
@@ -213,6 +224,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="donotverifyremotegateways_csharp">
+<a href="#donotverifyremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,6 +281,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="useremotegateways_csharp">
 <a href="#useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
 </span>
@@ -290,6 +317,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowforwardedtraffic_go">
 <a href="#allowforwardedtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
 </span>
@@ -313,6 +348,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="donotverifyremotegateways_go">
+<a href="#donotverifyremotegateways_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -362,6 +405,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="useremotegateways_go">
 <a href="#useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
 </span>
@@ -390,6 +441,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowforwardedtraffic_nodejs">
 <a href="#allowforwardedtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forwarded<wbr>Traffic</a>
 </span>
@@ -413,6 +472,14 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="donotverifyremotegateways_nodejs">
+<a href="#donotverifyremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -462,6 +529,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="useremotegateways_nodejs">
 <a href="#useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
 </span>
@@ -490,6 +565,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allow_forwarded_traffic_python">
 <a href="#allow_forwarded_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forwarded_<wbr>traffic</a>
 </span>
@@ -513,6 +596,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="do_not_verify_remote_gateways_python">
+<a href="#do_not_verify_remote_gateways_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>verify_<wbr>remote_<wbr>gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,6 +652,14 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_remote_gateways_python">
 <a href="#use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>

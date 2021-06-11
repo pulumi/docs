@@ -51,8 +51,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -114,19 +114,31 @@ const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws_glue_catalog_da
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CatalogDatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CatalogDatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">location_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                    <span class="nx">target_database</span><span class="p">:</span> <span class="nx">Optional[CatalogDatabaseTargetDatabaseArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[CatalogDatabaseArgs]</a></span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CatalogDatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogDatabase</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CatalogDatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogDatabase</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CatalogDatabaseArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogDatabase</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CatalogDatabaseArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,46 +149,44 @@ const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws_glue_catalog_da
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogDatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CatalogDatabaseArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -185,35 +195,27 @@ const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws_glue_catalog_da
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogDatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -225,25 +227,19 @@ const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws_glue_catalog_da
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CatalogDatabaseArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -266,7 +262,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -284,7 +280,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -293,7 +289,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
@@ -302,7 +298,16 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetdatabase_csharp">
+<a href="#targetdatabase_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -315,7 +320,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -333,7 +338,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -342,7 +347,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
@@ -351,7 +356,16 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetdatabase_go">
+<a href="#targetdatabase_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -364,7 +378,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -382,7 +396,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -391,7 +405,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
@@ -400,7 +414,16 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetdatabase_nodejs">
+<a href="#targetdatabase_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -413,7 +436,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -431,7 +454,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -440,7 +463,7 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
@@ -449,7 +472,16 @@ The CatalogDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_database_python">
+<a href="#target_database_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -469,7 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -490,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -511,7 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -532,7 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -552,20 +584,29 @@ Get an existing CatalogDatabase resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CatalogDatabaseState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CatalogDatabase</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CatalogDatabaseState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CatalogDatabase</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> CatalogDatabase</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">target_database</span><span class="p">:</span> <span class="nx">Optional[CatalogDatabaseTargetDatabaseArgs]</span> = None<span class="p">) -&gt;</span> CatalogDatabase</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCatalogDatabase<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CatalogDatabaseState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogDatabase</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCatalogDatabase<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CatalogDatabaseState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogDatabase</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CatalogDatabase</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CatalogDatabaseState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CatalogDatabase</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CatalogDatabaseState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -676,7 +717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_csharp">
@@ -685,7 +726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -703,7 +744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -712,7 +753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
@@ -721,7 +762,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_targetdatabase_csharp">
+<a href="#state_targetdatabase_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -734,7 +784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_go">
@@ -743,7 +793,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -761,7 +811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -770,7 +820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
@@ -779,7 +829,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_targetdatabase_go">
+<a href="#state_targetdatabase_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -792,7 +851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_nodejs">
@@ -801,7 +860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -819,7 +878,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -828,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
@@ -837,7 +896,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_targetdatabase_nodejs">
+<a href="#state_targetdatabase_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -850,7 +918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the Glue Catalog Database.
+    <dd>{{% md %}}ARN of the Glue Catalog Database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalog_id_python">
@@ -859,7 +927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -877,7 +945,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the database (for example, an HDFS path).
+    <dd>{{% md %}}Location of the database (for example, an HDFS path).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -886,7 +954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.
+    <dd>{{% md %}}Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
@@ -895,7 +963,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A list of key-value pairs that define parameters and properties of the database.
+    <dd>{{% md %}}List of key-value pairs that define parameters and properties of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_target_database_python">
+<a href="#state_target_database_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for a target database for resource linking. See `target_database` below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -903,6 +980,100 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="catalogdatabasetargetdatabase">Catalog<wbr>Database<wbr>Target<wbr>Database</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalogid_csharp">
+<a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the catalog database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalogid_go">
+<a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the catalog database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalogid_nodejs">
+<a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the catalog database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="catalog_id_python">
+<a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the Data Catalog in which the database resides.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the catalog database.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

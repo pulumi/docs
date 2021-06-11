@@ -22,17 +22,20 @@ API Version: 2017-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listDeviceFailoverSets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListDeviceFailoverSetsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListDeviceFailoverSetsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listDeviceFailoverSets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListDeviceFailoverSetsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListDeviceFailoverSetsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_device_failover_sets(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListDeviceFailoverSetsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_device_failover_sets(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListDeviceFailoverSetsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListDeviceFailoverSets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListDeviceFailoverSetsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListDeviceFailoverSetsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListDeviceFailoverSets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListDeviceFailoverSetsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListDeviceFailoverSetsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListDeviceFailoverSets` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2017-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListDeviceFailoverSets </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListDeviceFailoverSetsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListDeviceFailoverSetsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListDeviceFailoverSetsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListDeviceFailoverSetsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -320,7 +323,7 @@ The following output properties are available:
 <a href="#eligibilityresult_csharp" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -328,7 +331,7 @@ The following output properties are available:
 <a href="#volumecontainers_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -380,7 +383,7 @@ The following output properties are available:
 <a href="#eligibility_result_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#failoverseteligibilityresultresponse">Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -388,7 +391,7 @@ The following output properties are available:
 <a href="#volume_containers_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">Sequence[Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">Sequence[Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -412,7 +415,7 @@ The following output properties are available:
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumefailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumefailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Failover<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -472,7 +475,7 @@ The following output properties are available:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumefailovermetadataresponse">Sequence[Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumefailovermetadataresponse">Sequence[Volume<wbr>Failover<wbr>Metadata<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd></dl>
 {{% /choosable %}}

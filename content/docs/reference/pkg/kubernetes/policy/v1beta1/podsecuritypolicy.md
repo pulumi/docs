@@ -20,19 +20,27 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PodSecurityPolicy</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PodSecurityPolicy</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_policy_v1beta1.PodSecurityPolicySpecArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_policy_v1beta1.PodSecurityPolicySpecArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodSecurityPolicyArgs]</a></span> = None<span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPodSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PodSecurityPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPodSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PodSecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PodSecurityPolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PodSecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PodSecurityPolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -43,46 +51,44 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PodSecurityPolicy</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PodSecurityPolicyArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -91,35 +97,27 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PodSecurityPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -131,25 +129,19 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PodSecurityPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -210,7 +202,7 @@ The PodSecurityPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -218,7 +210,7 @@ The PodSecurityPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec</a></span>
+        <span class="property-type"><a href="#podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}spec defines the policy enforced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -547,7 +539,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1331,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1357,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2159,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#fsgroup_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options</a></span>
+        <span class="property-type"><a href="#fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2167,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options</a></span>
+        <span class="property-type"><a href="#runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2175,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#selinux_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options</a></span>
+        <span class="property-type"><a href="#selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}seLinux is the strategy that will dictate the allowable labels that may be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2191,7 +2183,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#supplementalgroups_nodejs" style="color: inherit; text-decoration: inherit;">supplemental<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options</a></span>
+        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2199,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedcsidrivers_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>CSIDrivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedcsidriver">Allowed<wbr>CSIDriver[]</a></span>
+        <span class="property-type"><a href="#allowedcsidriver">Allowed<wbr>CSIDriver<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2215,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedflexvolumes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Flex<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedflexvolume">Allowed<wbr>Flex<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#allowedflexvolume">Allowed<wbr>Flex<wbr>Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2223,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedhostpaths_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Host<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedhostpath">Allowed<wbr>Host<wbr>Path[]</a></span>
+        <span class="property-type"><a href="#allowedhostpath">Allowed<wbr>Host<wbr>Path<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2299,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#hostports_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportrange">Host<wbr>Port<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#hostportrange">Host<wbr>Port<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}hostPorts determines which host port ranges are allowed to be exposed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2339,7 +2331,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options</a></span>
+        <span class="property-type"><a href="#runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2347,7 +2339,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runtimeclass_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options</a></span>
+        <span class="property-type"><a href="#runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2609,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2699,7 +2691,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3009,7 +3001,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options</a></span>
+        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3075,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

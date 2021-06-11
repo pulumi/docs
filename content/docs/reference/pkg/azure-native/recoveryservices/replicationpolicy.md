@@ -38,9 +38,9 @@ class MyStack : Stack
             PolicyName = "protectionprofile1",
             Properties = new AzureNative.RecoveryServices.Inputs.CreatePolicyInputPropertiesArgs
             {
-                ProviderSpecificInput = 
+                ProviderSpecificInput = new AzureNative.RecoveryServices.Inputs.HyperVReplicaAzurePolicyInputArgs
                 {
-                    { "instanceType", "HyperVReplicaAzure" },
+                    InstanceType = "HyperVReplicaAzure",
                 },
             },
             ResourceGroupName = "resourceGroupPS1",
@@ -58,7 +58,36 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationPolicy(ctx, "replicationPolicy", &recoveryservices.ReplicationPolicyArgs{
+			PolicyName: pulumi.String("protectionprofile1"),
+			Properties: &recoveryservices.CreatePolicyInputPropertiesArgs{
+				ProviderSpecificInput: recoveryservices.HyperVReplicaAzurePolicyInput{
+					InstanceType: "HyperVReplicaAzure",
+				},
+			},
+			ResourceGroupName: pulumi.String("resourceGroupPS1"),
+			ResourceName:      pulumi.String("vault1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -73,9 +102,9 @@ import pulumi_azure_native as azure_native
 replication_policy = azure_native.recoveryservices.ReplicationPolicy("replicationPolicy",
     policy_name="protectionprofile1",
     properties=azure_native.recoveryservices.CreatePolicyInputPropertiesArgs(
-        provider_specific_input={
-            "instanceType": "HyperVReplicaAzure",
-        },
+        provider_specific_input=azure_native.recoveryservices.HyperVReplicaAzurePolicyInputArgs(
+            instance_type="HyperVReplicaAzure",
+        ),
     ),
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
@@ -123,19 +152,29 @@ const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreatePolicyInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreatePolicyInputPropertiesArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,46 +185,44 @@ const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("r
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicationPolicyArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,33 +233,25 @@ const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -234,25 +263,19 @@ const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("r
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -369,7 +392,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createpolicyinputproperties">Create<wbr>Policy<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createpolicyinputproperties">Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy creation properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -928,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input</a> | <a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input</a> | <a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input</a> | <a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input</a> | <a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input</a> | <a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input</a> | <a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input</a> | <a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input</a></span>
+        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args</a> | <a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4230,7 +4253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}

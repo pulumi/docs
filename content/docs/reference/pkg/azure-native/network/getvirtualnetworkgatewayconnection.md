@@ -22,17 +22,19 @@ API Version: 2020-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualNetworkGatewayConnectionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualNetworkGatewayConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_network_gateway_connection(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualNetworkGatewayConnectionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_network_gateway_connection(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">virtual_network_gateway_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualNetworkGatewayConnectionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkGatewayConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualNetworkGatewayConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualNetworkGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualNetworkGatewayConnectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualNetworkGatewayConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualNetworkGatewayConnection` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualNetworkGatewayConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualNetworkGatewayConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualNetworkGatewayConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualNetworkGatewayConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1168,7 +1170,7 @@ The following output properties are available:
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1278,7 @@ The following output properties are available:
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1850,7 @@ The following output properties are available:
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,7 +1882,7 @@ The following output properties are available:
 <a href="#localnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2148,7 +2150,7 @@ The following output properties are available:
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2180,7 +2182,7 @@ The following output properties are available:
 <a href="#local_network_address_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2692,7 +2694,7 @@ The following output properties are available:
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2700,7 +2702,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2896,7 +2898,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2904,7 +2906,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2976,7 +2978,7 @@ The following output properties are available:
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2984,7 +2986,7 @@ The following output properties are available:
 <a href="#customroutes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3012,11 +3014,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_csharp">
 <a href="#gatewaydefaultsite_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3040,7 +3050,7 @@ The following output properties are available:
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3056,7 +3066,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3074,21 +3084,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkextendedlocation_csharp">
-<a href="#virtualnetworkextendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_csharp">
 <a href="#vpnclientconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3208,6 +3210,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_go">
 <a href="#gatewaydefaultsite_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span>
@@ -3270,15 +3280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkextendedlocation_go">
-<a href="#virtualnetworkextendedlocation_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_go">
 <a href="#vpnclientconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
@@ -3404,6 +3406,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gatewaydefaultsite_nodejs">
 <a href="#gatewaydefaultsite_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Default<wbr>Site</a>
 </span>
@@ -3466,15 +3476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkextendedlocation_nodejs">
-<a href="#virtualnetworkextendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Extended<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_nodejs">
 <a href="#vpnclientconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configuration</a>
@@ -3564,7 +3566,7 @@ The following output properties are available:
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3572,7 +3574,7 @@ The following output properties are available:
 <a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3600,11 +3602,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gateway_default_site_python">
 <a href="#gateway_default_site_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>default_<wbr>site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3628,7 +3638,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3654,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3662,21 +3672,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtual_network_extended_location_python">
-<a href="#virtual_network_extended_location_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>extended_<wbr>location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_configuration_python">
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3864,7 +3866,7 @@ The following output properties are available:
 <a href="#radiusservers_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#radiusserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3882,7 @@ The following output properties are available:
 <a href="#vpnclientaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3888,7 +3890,7 @@ The following output properties are available:
 <a href="#vpnclientipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3904,7 +3906,7 @@ The following output properties are available:
 <a href="#vpnclientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3912,7 +3914,7 @@ The following output properties are available:
 <a href="#vpnclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4164,7 +4166,7 @@ The following output properties are available:
 <a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserverresponse">Sequence[Radius<wbr>Server<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#radiusserverresponse">Sequence[Radius<wbr>Server<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4180,7 +4182,7 @@ The following output properties are available:
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4188,7 +4190,7 @@ The following output properties are available:
 <a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4204,7 +4206,7 @@ The following output properties are available:
 <a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4212,7 +4214,7 @@ The following output properties are available:
 <a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}

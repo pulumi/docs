@@ -19,17 +19,20 @@ meta_desc: "Documentation for the civo.getInstances function with examples, inpu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstances<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstancesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstances<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstancesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstancesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesFilter]]</span> = None<span class="p">,</span>
+                  <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstancesSort]]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstancesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstancesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetInstances` in the Go SDK.
 
@@ -38,7 +41,7 @@ meta_desc: "Documentation for the civo.getInstances function with examples, inpu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstances </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstancesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstancesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -54,20 +57,27 @@ The following arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesfilter">List&lt;Get<wbr>Instances<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancesfilter">List&lt;Get<wbr>Instances<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessort">List&lt;Get<wbr>Instances<wbr>Sort<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancessort">List&lt;Get<wbr>Instances<wbr>Sort&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -80,8 +90,16 @@ The `sort` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesfilter">[]Get<wbr>Instances<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
@@ -90,8 +108,7 @@ The `filter` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancessort">[]Get<wbr>Instances<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -104,8 +121,16 @@ The `sort` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesfilter">Get<wbr>Instances<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
@@ -114,8 +139,7 @@ The `filter` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancessort">Get<wbr>Instances<wbr>Sort[]</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -126,20 +150,27 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesfilter">Sequence[Get<wbr>Instances<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancesfilter">Sequence[Get<wbr>Instances<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}Filter the results.
-The `filter` block is documented below.
+    <dd>{{% md %}}Filter the results. The `filter` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancessort">Sequence[Get<wbr>Instances<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancessort">Sequence[Get<wbr>Instances<wbr>Sort]</a></span>
     </dt>
-    <dd>{{% md %}}Sort the results.
-The `sort` block is documented below.
+    <dd>{{% md %}}Sort the results. The `sort` block is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -181,6 +212,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
 </span>
@@ -216,6 +255,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesfilter">[]Get<wbr>Instances<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -257,6 +304,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span>
@@ -292,6 +347,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancesfilter">Sequence[Get<wbr>Instances<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -335,7 +398,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Instances
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_csharp">
+<a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_csharp">
+<a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -359,7 +438,23 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Instances
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_go">
+<a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_go">
+<a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -383,7 +478,23 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Instances
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_nodejs">
+<a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchby_nodejs">
+<a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -407,7 +518,23 @@ where the `key` field takes on one or more of the values provided here.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Instances
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_python">
+<a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="match_by_python">
+<a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancesinstance">Get<wbr>Instances<wbr>Instance</h4>
@@ -541,6 +668,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reversedns_csharp">
@@ -736,6 +872,15 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="reversedns_go">
 <a href="#reversedns_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dns</a>
 </span>
@@ -929,6 +1074,15 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="reversedns_nodejs">
 <a href="#reversedns_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Dns</a>
 </span>
@@ -1120,6 +1274,15 @@ where the `key` field takes on one or more of the values provided here.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If is used, them all instances will be from that region.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverse_dns_python">

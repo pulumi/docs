@@ -20,19 +20,27 @@ NodeList is the whole list of all Nodes which have been registered with master.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeList</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeList</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_core_v1.NodeArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_core_v1.NodeArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeListArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeList</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeListArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeList</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -43,46 +51,44 @@ NodeList is the whole list of all Nodes which have been registered with master.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeList</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodeListArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -91,35 +97,27 @@ NodeList is the whole list of all Nodes which have been registered with master.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeListArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -131,25 +129,19 @@ NodeList is the whole list of all Nodes which have been registered with master.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NodeListArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -210,7 +202,7 @@ The NodeList resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#node">Node[]</a></span>
+        <span class="property-type"><a href="#node">Node<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -218,7 +210,7 @@ The NodeList resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">meta.v1.<wbr>List<wbr>Meta</a></span>
+        <span class="property-type"><a href="#listmeta">meta.v1.<wbr>List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1129,7 +1121,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1129,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodespec">Node<wbr>Spec</a></span>
+        <span class="property-type"><a href="#nodespec">Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a node. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1137,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatus">Node<wbr>Status</a></span>
+        <span class="property-type"><a href="#nodestatus">Node<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1495,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#configmap_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source</a></span>
+        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap is a reference to a Node's ConfigMap{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1593,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1601,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#assigned_nodejs" style="color: inherit; text-decoration: inherit;">assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Assigned reports the checkpointed config the node will try to use. When Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to local disk, along with a record indicating intended config. The node refers to this record to choose its config checkpoint, and reports this record in Assigned. Assigned only updates in the status after the record has been checkpointed to disk. When the Kubelet is restarted, it tries to make the Assigned config the Active config by loading and validating the checkpointed payload identified by Assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1617,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#lastknowngood_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Good</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LastKnownGood reports the checkpointed config the node will fall back to when it encounters an error attempting to use the Assigned config. The Assigned config becomes the LastKnownGood config when the node determines that the Assigned config is stable and correct. This is currently implemented as a 10-minute soak period starting when the local record of Assigned config is updated. If the Assigned config is Active at the end of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use local defaults), the LastKnownGood is also immediately reset to nil, because the local default config is always assumed good. You should not make assumptions about the node's method of determining config stability and correctness, as this may change or become configurable in the future.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1691,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#kubeletendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which Kubelet is listening.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1845,7 +1837,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#configsource_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, the source to get node configuration from The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1877,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taint">Taint[]</a></span>
+        <span class="property-type"><a href="#taint">Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the node's taints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2143,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2167,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2175,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status</a></span>
+        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the config assigned to the node via the dynamic Kubelet config feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2183,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#daemonendpoints_nodejs" style="color: inherit; text-decoration: inherit;">daemon<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints</a></span>
+        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoints of daemons running on the Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2191,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">Container<wbr>Image[]</a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of container images on this node{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2199,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#nodeinfo_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info</a></span>
+        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2215,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#volumesattached_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Attached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that are attached to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3043,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3069,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

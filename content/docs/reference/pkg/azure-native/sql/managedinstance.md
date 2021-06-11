@@ -89,7 +89,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -286,7 +286,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -389,19 +389,53 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceExternalAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_zone_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityWithUserAssignedIdentitiesArgs]</span> = None<span class="p">, </span><span class="nx">instance_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedServerCreateMode]]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_override</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceProxyOverride]]</span> = None<span class="p">, </span><span class="nx">public_data_endpoint_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_managed_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">, </span><span class="nx">storage_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceExternalAdministratorArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">dns_zone_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">instance_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceLicenseType]]</span> = None<span class="p">,</span>
+                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">managed_instance_create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedServerCreateMode]]</span> = None<span class="p">,</span>
+                    <span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">proxy_override</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceProxyOverride]]</span> = None<span class="p">,</span>
+                    <span class="nx">public_data_endpoint_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">source_managed_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">,</span>
+                    <span class="nx">storage_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                    <span class="nx">timezone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -412,46 +446,44 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -462,33 +494,25 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -500,25 +524,19 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -587,7 +605,7 @@ The ManagedInstance resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +842,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1055,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administrators_nodejs" style="color: inherit; text-decoration: inherit;">administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator</a></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1079,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1187,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1316,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2422,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2713,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Application</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</h4>
+<h4 id="resourceidentity">Resource<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -2795,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="resourceidentitywithuserassignedidentitiesresponse">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
+<h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -2900,7 +2918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}

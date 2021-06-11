@@ -78,7 +78,7 @@ package main
 
 import (
 	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -202,19 +202,27 @@ const providerRegistration = new azure_native.providerhub.ProviderRegistration("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderRegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ProviderRegistrationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ProviderRegistrationPropertiesArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderRegistrationArgs]</a></span> = None<span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProviderRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProviderRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProviderRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderRegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProviderRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderRegistrationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProviderRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProviderRegistrationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -225,46 +233,44 @@ const providerRegistration = new azure_native.providerhub.ProviderRegistration("
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderRegistrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProviderRegistrationArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -275,33 +281,25 @@ const providerRegistration = new azure_native.providerhub.ProviderRegistration("
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderRegistrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -313,25 +311,19 @@ const providerRegistration = new azure_native.providerhub.ProviderRegistration("
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderRegistrationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -392,7 +384,7 @@ The ProviderRegistration resource accepts the following [input]({{< relref "/doc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerregistrationproperties">Provider<wbr>Registration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#providerregistrationproperties">Provider<wbr>Registration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lighthouseauthorizationresponse">Light<wbr>House<wbr>Authorization<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#lighthouseauthorizationresponse">Light<wbr>House<wbr>Authorization<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lighthouseauthorization">Light<wbr>House<wbr>Authorization[]</a></span>
+        <span class="property-type"><a href="#lighthouseauthorization">Light<wbr>House<wbr>Authorization<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidercapabilities">Resource<wbr>Provider<wbr>Capabilities[]</a></span>
+        <span class="property-type"><a href="#resourceprovidercapabilities">Resource<wbr>Provider<wbr>Capabilities<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#featuresrule_nodejs" style="color: inherit; text-decoration: inherit;">features<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesfeaturesrule">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Features<wbr>Rule</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesfeaturesrule">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Features<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesmanagement">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Management</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesmanagement">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthentication_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesproviderauthentication">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Provider<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesproviderauthentication">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Provider<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthorizations_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceproviderauthorization">Resource<wbr>Provider<wbr>Authorization[]</a></span>
+        <span class="property-type"><a href="#resourceproviderauthorization">Resource<wbr>Provider<wbr>Authorization<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerhubmetadata_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Hub<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerregistrationpropertiesproviderhubmetadata">Provider<wbr>Registration<wbr>Properties<wbr>Provider<wbr>Hub<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#providerregistrationpropertiesproviderhubmetadata">Provider<wbr>Registration<wbr>Properties<wbr>Provider<wbr>Hub<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderoptions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesrequestheaderoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Request<wbr>Header<wbr>Options</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesrequestheaderoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Request<wbr>Header<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionlifecyclenotificationspecifications_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerregistrationpropertiessubscriptionlifecyclenotificationspecifications">Provider<wbr>Registration<wbr>Properties<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#providerregistrationpropertiessubscriptionlifecyclenotificationspecifications">Provider<wbr>Registration<wbr>Properties<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatedeploymentoptions_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiestemplatedeploymentoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Template<wbr>Deployment<wbr>Options</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiestemplatedeploymentoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Template<wbr>Deployment<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1639,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthentication_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerhubmetadataproviderauthentication">Provider<wbr>Hub<wbr>Metadata<wbr>Provider<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#providerhubmetadataproviderauthentication">Provider<wbr>Hub<wbr>Metadata<wbr>Provider<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthorizations_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceproviderauthorization">Resource<wbr>Provider<wbr>Authorization[]</a></span>
+        <span class="property-type"><a href="#resourceproviderauthorization">Resource<wbr>Provider<wbr>Authorization<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thirdpartyproviderauthorization_nodejs" style="color: inherit; text-decoration: inherit;">third<wbr>Party<wbr>Provider<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerhubmetadatathirdpartyproviderauthorization">Provider<wbr>Hub<wbr>Metadata<wbr>Third<wbr>Party<wbr>Provider<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#providerhubmetadatathirdpartyproviderauthorization">Provider<wbr>Hub<wbr>Metadata<wbr>Third<wbr>Party<wbr>Provider<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1753,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthentication_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerhubmetadataresponseproviderauthentication">Provider<wbr>Hub<wbr>Metadata<wbr>Response<wbr>Provider<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#providerhubmetadataresponseproviderauthentication">Provider<wbr>Hub<wbr>Metadata<wbr>Response<wbr>Provider<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthorizations_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceproviderauthorizationresponse">Resource<wbr>Provider<wbr>Authorization<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourceproviderauthorizationresponse">Resource<wbr>Provider<wbr>Authorization<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thirdpartyproviderauthorization_nodejs" style="color: inherit; text-decoration: inherit;">third<wbr>Party<wbr>Provider<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerhubmetadataresponsethirdpartyproviderauthorization">Provider<wbr>Hub<wbr>Metadata<wbr>Response<wbr>Third<wbr>Party<wbr>Provider<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#providerhubmetadataresponsethirdpartyproviderauthorization">Provider<wbr>Hub<wbr>Metadata<wbr>Response<wbr>Third<wbr>Party<wbr>Provider<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1859,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionstateoverrideactions_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>State<wbr>Override<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstateoverrideactionresponse">Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subscriptionstateoverrideactionresponse">Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionstateoverrideactions_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>State<wbr>Override<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstateoverrideaction">Subscription<wbr>State<wbr>Override<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#subscriptionstateoverrideaction">Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidercapabilitiesresponse">Resource<wbr>Provider<wbr>Capabilities<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourceprovidercapabilitiesresponse">Resource<wbr>Provider<wbr>Capabilities<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#featuresrule_nodejs" style="color: inherit; text-decoration: inherit;">features<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponsefeaturesrule">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Features<wbr>Rule</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponsefeaturesrule">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Features<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponsemanagement">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Management</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponsemanagement">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthentication_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponseproviderauthentication">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Provider<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponseproviderauthentication">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Provider<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerauthorizations_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceproviderauthorizationresponse">Resource<wbr>Provider<wbr>Authorization<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourceproviderauthorizationresponse">Resource<wbr>Provider<wbr>Authorization<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2279,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerhubmetadata_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Hub<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerregistrationpropertiesresponseproviderhubmetadata">Provider<wbr>Registration<wbr>Properties<wbr>Response<wbr>Provider<wbr>Hub<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#providerregistrationpropertiesresponseproviderhubmetadata">Provider<wbr>Registration<wbr>Properties<wbr>Response<wbr>Provider<wbr>Hub<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2311,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderoptions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponserequestheaderoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Request<wbr>Header<wbr>Options</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponserequestheaderoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Request<wbr>Header<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionlifecyclenotificationspecifications_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerregistrationpropertiesresponsesubscriptionlifecyclenotificationspecifications">Provider<wbr>Registration<wbr>Properties<wbr>Response<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#providerregistrationpropertiesresponsesubscriptionlifecyclenotificationspecifications">Provider<wbr>Registration<wbr>Properties<wbr>Response<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatedeploymentoptions_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponsetemplatedeploymentoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options</a></span>
+        <span class="property-type"><a href="#resourceprovidermanifestpropertiesresponsetemplatedeploymentoptions">Resource<wbr>Provider<wbr>Manifest<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3271,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetreeinfos_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tree<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetreeinfo">Service<wbr>Tree<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#servicetreeinfo">Service<wbr>Tree<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3695,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetreeinfos_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tree<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetreeinforesponse">Service<wbr>Tree<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#servicetreeinforesponse">Service<wbr>Tree<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -23,6 +23,7 @@ Explore the resources and functions of the aws.kms module.
     <li><a href="getalias" title="GetAlias"><span class="symbol function"></span>GetAlias</a></li>
     <li><a href="getciphertext" title="GetCipherText"><span class="symbol function"></span>GetCipherText</a></li>
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
+    <li><a href="getpublickey" title="GetPublicKey"><span class="symbol function"></span>GetPublicKey</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
     <li><a href="getsecrets" title="GetSecrets"><span class="symbol function"></span>GetSecrets</a></li>
 </ul>
@@ -36,6 +37,6 @@ Explore the resources and functions of the aws.kms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.38.1</dd>
+	<dd>4.7.0</dd>
 </dl>
 

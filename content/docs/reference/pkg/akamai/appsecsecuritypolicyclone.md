@@ -13,139 +13,6 @@ meta_desc: "Documentation for the akamai.AppSecSecurityPolicyClone resource with
 The `akamai.AppSecSecurityPolicyClone` resource allows you to create a new security policy by cloning an existing policy.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Akamai = Pulumi.Akamai;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var configuration = Output.Create(Akamai.GetAppSecConfiguration.InvokeAsync(new Akamai.GetAppSecConfigurationArgs
-        {
-            Name = "Akamai Tools",
-        }));
-        var securityPolicyCloneAppSecSecurityPolicyClone = new Akamai.AppSecSecurityPolicyClone("securityPolicyCloneAppSecSecurityPolicyClone", new Akamai.AppSecSecurityPolicyCloneArgs
-        {
-            ConfigId = configuration.Apply(configuration => configuration.ConfigId),
-            Version = configuration.Apply(configuration => configuration.LatestVersion),
-            CreateFromSecurityPolicy = "crAP_75829",
-            PolicyName = "Test Policy 1",
-            PolicyPrefix = "TP1",
-        });
-        this.SecurityPolicyClone = securityPolicyCloneAppSecSecurityPolicyClone.PolicyId;
-    }
-
-    [Output("securityPolicyClone")]
-    public Output<string> SecurityPolicyClone { get; set; }
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-akamai/sdk/go/akamai"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "Akamai Tools"
-		configuration, err := akamai.GetAppSecConfiguration(ctx, &akamai.GetAppSecConfigurationArgs{
-			Name: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		securityPolicyCloneAppSecSecurityPolicyClone, err := akamai.NewAppSecSecurityPolicyClone(ctx, "securityPolicyCloneAppSecSecurityPolicyClone", &akamai.AppSecSecurityPolicyCloneArgs{
-			ConfigId:                 pulumi.Int(configuration.ConfigId),
-			Version:                  pulumi.Int(configuration.LatestVersion),
-			CreateFromSecurityPolicy: pulumi.String("crAP_75829"),
-			PolicyName:               pulumi.String("Test Policy 1"),
-			PolicyPrefix:             pulumi.String("TP1"),
-		})
-		if err != nil {
-			return err
-		}
-		ctx.Export("securityPolicyClone", securityPolicyCloneAppSecSecurityPolicyClone.PolicyId)
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_akamai as akamai
-
-configuration = akamai.get_app_sec_configuration(name="Akamai Tools")
-security_policy_clone_app_sec_security_policy_clone = akamai.AppSecSecurityPolicyClone("securityPolicyCloneAppSecSecurityPolicyClone",
-    config_id=configuration.config_id,
-    version=configuration.latest_version,
-    create_from_security_policy="crAP_75829",
-    policy_name="Test Policy 1",
-    policy_prefix="TP1")
-pulumi.export("securityPolicyClone", security_policy_clone_app_sec_security_policy_clone.policy_id)
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as akamai from "@pulumi/akamai";
-
-const configuration = akamai.getAppSecConfiguration({
-    name: "Akamai Tools",
-});
-const securityPolicyCloneAppSecSecurityPolicyClone = new akamai.AppSecSecurityPolicyClone("securityPolicyCloneAppSecSecurityPolicyClone", {
-    configId: configuration.then(configuration => configuration.configId),
-    version: configuration.then(configuration => configuration.latestVersion),
-    createFromSecurityPolicy: "crAP_75829",
-    policyName: "Test Policy 1",
-    policyPrefix: "TP1",
-});
-export const securityPolicyClone = securityPolicyCloneAppSecSecurityPolicyClone.policyId;
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a AppSecSecurityPolicyClone Resource {#create}
@@ -153,19 +20,30 @@ export const securityPolicyClone = securityPolicyCloneAppSecSecurityPolicyClone.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">create_from_security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                              <span class="nx">create_from_security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">security_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">security_policy_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppSecSecurityPolicyClone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppSecSecurityPolicyClone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppSecSecurityPolicyClone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -176,46 +54,44 @@ export const securityPolicyClone = securityPolicyCloneAppSecSecurityPolicyClone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,35 +100,27 @@ export const securityPolicyClone = securityPolicyCloneAppSecSecurityPolicyClone.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -264,25 +132,19 @@ export const securityPolicyClone = securityPolicyCloneAppSecSecurityPolicyClone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AppSecSecurityPolicyCloneArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -308,8 +170,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="createfromsecuritypolicy_csharp">
-<a href="#createfromsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy</a>
+        <span id="createfromsecuritypolicyid_csharp">
+<a href="#createfromsecuritypolicyid_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -325,8 +187,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policyname_csharp">
-<a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+        <span id="securitypolicyname_csharp">
+<a href="#securitypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -334,8 +196,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policyprefix_csharp">
-<a href="#policyprefix_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Prefix</a>
+        <span id="securitypolicyprefix_csharp">
+<a href="#securitypolicyprefix_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -356,8 +218,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="createfromsecuritypolicy_go">
-<a href="#createfromsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy</a>
+        <span id="createfromsecuritypolicyid_go">
+<a href="#createfromsecuritypolicyid_go" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -373,8 +235,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policyname_go">
-<a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+        <span id="securitypolicyname_go">
+<a href="#securitypolicyname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -382,8 +244,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policyprefix_go">
-<a href="#policyprefix_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Prefix</a>
+        <span id="securitypolicyprefix_go">
+<a href="#securitypolicyprefix_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -404,8 +266,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="createfromsecuritypolicy_nodejs">
-<a href="#createfromsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Security<wbr>Policy</a>
+        <span id="createfromsecuritypolicyid_nodejs">
+<a href="#createfromsecuritypolicyid_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -421,8 +283,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policyname_nodejs">
-<a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="securitypolicyname_nodejs">
+<a href="#securitypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -430,8 +292,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policyprefix_nodejs">
-<a href="#policyprefix_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Prefix</a>
+        <span id="securitypolicyprefix_nodejs">
+<a href="#securitypolicyprefix_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -452,8 +314,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="create_from_security_policy_python">
-<a href="#create_from_security_policy_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>security_<wbr>policy</a>
+        <span id="create_from_security_policy_id_python">
+<a href="#create_from_security_policy_id_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>security_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -469,8 +331,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policy_name_python">
-<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+        <span id="security_policy_name_python">
+<a href="#security_policy_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -478,8 +340,8 @@ The AppSecSecurityPolicyClone resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="policy_prefix_python">
-<a href="#policy_prefix_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>prefix</a>
+        <span id="security_policy_prefix_python">
+<a href="#security_policy_prefix_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -506,8 +368,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="policyid_csharp">
-<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+        <span id="securitypolicyid_csharp">
+<a href="#securitypolicyid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -527,8 +389,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="policyid_go">
-<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+        <span id="securitypolicyid_go">
+<a href="#securitypolicyid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -548,8 +410,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="policyid_nodejs">
-<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+        <span id="securitypolicyid_nodejs">
+<a href="#securitypolicyid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -569,8 +431,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="policy_id_python">
-<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+        <span id="security_policy_id_python">
+<a href="#security_policy_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -587,20 +449,28 @@ Get an existing AppSecSecurityPolicyClone resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AppSecSecurityPolicyCloneState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AppSecSecurityPolicyClone</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AppSecSecurityPolicyCloneState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AppSecSecurityPolicyClone</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">create_from_security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AppSecSecurityPolicyClone</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">create_from_security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_policy_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AppSecSecurityPolicyClone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppSecSecurityPolicyClone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AppSecSecurityPolicyCloneState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppSecSecurityPolicyClone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppSecSecurityPolicyClone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AppSecSecurityPolicyCloneState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppSecSecurityPolicyClone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AppSecSecurityPolicyClone</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AppSecSecurityPolicyCloneState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AppSecSecurityPolicyClone</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AppSecSecurityPolicyCloneState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -714,8 +584,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_createfromsecuritypolicy_csharp">
-<a href="#state_createfromsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy</a>
+        <span id="state_createfromsecuritypolicyid_csharp">
+<a href="#state_createfromsecuritypolicyid_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -723,8 +593,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security policy to clone.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyid_csharp">
-<a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+        <span id="state_securitypolicyid_csharp">
+<a href="#state_securitypolicyid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -732,8 +602,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the new security policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyname_csharp">
-<a href="#state_policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+        <span id="state_securitypolicyname_csharp">
+<a href="#state_securitypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -741,8 +611,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyprefix_csharp">
-<a href="#state_policyprefix_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Prefix</a>
+        <span id="state_securitypolicyprefix_csharp">
+<a href="#state_securitypolicyprefix_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -771,8 +641,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_createfromsecuritypolicy_go">
-<a href="#state_createfromsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy</a>
+        <span id="state_createfromsecuritypolicyid_go">
+<a href="#state_createfromsecuritypolicyid_go" style="color: inherit; text-decoration: inherit;">Create<wbr>From<wbr>Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -780,8 +650,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security policy to clone.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyid_go">
-<a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+        <span id="state_securitypolicyid_go">
+<a href="#state_securitypolicyid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -789,8 +659,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the new security policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyname_go">
-<a href="#state_policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
+        <span id="state_securitypolicyname_go">
+<a href="#state_securitypolicyname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -798,8 +668,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyprefix_go">
-<a href="#state_policyprefix_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Prefix</a>
+        <span id="state_securitypolicyprefix_go">
+<a href="#state_securitypolicyprefix_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -828,8 +698,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_createfromsecuritypolicy_nodejs">
-<a href="#state_createfromsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Security<wbr>Policy</a>
+        <span id="state_createfromsecuritypolicyid_nodejs">
+<a href="#state_createfromsecuritypolicyid_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>From<wbr>Security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -837,8 +707,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security policy to clone.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyid_nodejs">
-<a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+        <span id="state_securitypolicyid_nodejs">
+<a href="#state_securitypolicyid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -846,8 +716,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the new security policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyname_nodejs">
-<a href="#state_policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
+        <span id="state_securitypolicyname_nodejs">
+<a href="#state_securitypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -855,8 +725,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policyprefix_nodejs">
-<a href="#state_policyprefix_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Prefix</a>
+        <span id="state_securitypolicyprefix_nodejs">
+<a href="#state_securitypolicyprefix_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -885,8 +755,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security configuration to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_create_from_security_policy_python">
-<a href="#state_create_from_security_policy_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>security_<wbr>policy</a>
+        <span id="state_create_from_security_policy_id_python">
+<a href="#state_create_from_security_policy_id_python" style="color: inherit; text-decoration: inherit;">create_<wbr>from_<wbr>security_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -894,8 +764,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the security policy to clone.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policy_id_python">
-<a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+        <span id="state_security_policy_id_python">
+<a href="#state_security_policy_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -903,8 +773,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the new security policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policy_name_python">
-<a href="#state_policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+        <span id="state_security_policy_name_python">
+<a href="#state_security_policy_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -912,8 +782,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The name to be used for the new security policy. If not specified, the name will be autogenerated with the pattern 'clone from '.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_policy_prefix_python">
-<a href="#state_policy_prefix_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>prefix</a>
+        <span id="state_security_policy_prefix_python">
+<a href="#state_security_policy_prefix_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

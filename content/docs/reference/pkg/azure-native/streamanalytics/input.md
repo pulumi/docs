@@ -37,31 +37,31 @@ class MyStack : Stack
         {
             InputName = "input7225",
             JobName = "sj9597",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.ReferenceInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = new AzureNative.StreamAnalytics.Inputs.BlobReferenceInputDataSourceArgs
                 {
-                    { "container", "state" },
-                    { "dateFormat", "yyyy/MM/dd" },
-                    { "pathPattern", "{date}/{time}" },
-                    { "storageAccounts", 
+                    Container = "state",
+                    DateFormat = "yyyy/MM/dd",
+                    PathPattern = "{date}/{time}",
+                    StorageAccounts = 
                     {
                         new AzureNative.StreamAnalytics.Inputs.StorageAccountArgs
                         {
                             AccountKey = "someAccountKey==",
                             AccountName = "someAccountName",
                         },
-                    } },
-                    { "timeFormat", "HH" },
-                    { "type", "Microsoft.Storage/Blob" },
-                } },
-                { "serialization", 
+                    },
+                    TimeFormat = "HH",
+                    Type = "Microsoft.Storage/Blob",
+                },
+                Serialization = 
                 {
                     { "encoding", "UTF8" },
                     { "fieldDelimiter", "," },
                     { "type", "Csv" },
-                } },
-                { "type", "Reference" },
+                },
+                Type = "Reference",
             },
             ResourceGroupName = "sjrg8440",
         });
@@ -92,25 +92,25 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input7225",
     job_name="sj9597",
-    properties={
-        "datasource": {
-            "container": "state",
-            "dateFormat": "yyyy/MM/dd",
-            "pathPattern": "{date}/{time}",
-            "storageAccounts": [azure_native.streamanalytics.StorageAccountArgs(
+    properties=azure_native.streamanalytics.ReferenceInputPropertiesArgs(
+        datasource=azure_native.streamanalytics.BlobReferenceInputDataSourceArgs(
+            container="state",
+            date_format="yyyy/MM/dd",
+            path_pattern="{date}/{time}",
+            storage_accounts=[azure_native.streamanalytics.StorageAccountArgs(
                 account_key="someAccountKey==",
                 account_name="someAccountName",
             )],
-            "timeFormat": "HH",
-            "type": "Microsoft.Storage/Blob",
-        },
-        "serialization": {
+            time_format="HH",
+            type="Microsoft.Storage/Blob",
+        ),
+        serialization={
             "encoding": "UTF8",
             "fieldDelimiter": ",",
             "type": "Csv",
         },
-        "type": "Reference",
-    },
+        type="Reference",
+    ),
     resource_group_name="sjrg8440")
 
 ```
@@ -176,9 +176,9 @@ class MyStack : Stack
         {
             InputName = "input7425",
             JobName = "sj197",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = 
                 {
                     { "consumerGroupName", "sdkconsumergroup" },
                     { "eventHubName", "sdkeventhub" },
@@ -186,13 +186,13 @@ class MyStack : Stack
                     { "sharedAccessPolicyKey", "someSharedAccessPolicyKey==" },
                     { "sharedAccessPolicyName", "RootManageSharedAccessKey" },
                     { "type", "Microsoft.ServiceBus/EventHub" },
-                } },
-                { "serialization", 
+                },
+                Serialization = 
                 {
                     { "encoding", "UTF8" },
                     { "type", "Json" },
-                } },
-                { "type", "Stream" },
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg3139",
         });
@@ -223,8 +223,8 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input7425",
     job_name="sj197",
-    properties={
-        "datasource": {
+    properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+        datasource={
             "consumerGroupName": "sdkconsumergroup",
             "eventHubName": "sdkeventhub",
             "serviceBusNamespace": "sdktest",
@@ -232,12 +232,12 @@ input = azure_native.streamanalytics.Input("input",
             "sharedAccessPolicyName": "RootManageSharedAccessKey",
             "type": "Microsoft.ServiceBus/EventHub",
         },
-        "serialization": {
+        serialization={
             "encoding": "UTF8",
             "type": "Json",
         },
-        "type": "Stream",
-    },
+        type="Stream",
+    ),
     resource_group_name="sjrg3139")
 
 ```
@@ -299,9 +299,9 @@ class MyStack : Stack
         {
             InputName = "input7970",
             JobName = "sj9742",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = 
                 {
                     { "consumerGroupName", "sdkconsumergroup" },
                     { "endpoint", "messages/events" },
@@ -309,12 +309,12 @@ class MyStack : Stack
                     { "sharedAccessPolicyKey", "sharedAccessPolicyKey=" },
                     { "sharedAccessPolicyName", "owner" },
                     { "type", "Microsoft.Devices/IotHubs" },
-                } },
-                { "serialization", 
+                },
+                Serialization = 
                 {
                     { "type", "Avro" },
-                } },
-                { "type", "Stream" },
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg3467",
         });
@@ -345,8 +345,8 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input7970",
     job_name="sj9742",
-    properties={
-        "datasource": {
+    properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+        datasource={
             "consumerGroupName": "sdkconsumergroup",
             "endpoint": "messages/events",
             "iotHubNamespace": "iothub",
@@ -354,11 +354,11 @@ input = azure_native.streamanalytics.Input("input",
             "sharedAccessPolicyName": "owner",
             "type": "Microsoft.Devices/IotHubs",
         },
-        "serialization": {
+        serialization={
             "type": "Avro",
         },
-        "type": "Stream",
-    },
+        type="Stream",
+    ),
     resource_group_name="sjrg3467")
 
 ```
@@ -419,9 +419,9 @@ class MyStack : Stack
         {
             InputName = "input8899",
             JobName = "sj6695",
-            Properties = 
+            Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
             {
-                { "datasource", 
+                Datasource = 
                 {
                     { "container", "state" },
                     { "dateFormat", "yyyy/MM/dd" },
@@ -437,14 +437,14 @@ class MyStack : Stack
                     } },
                     { "timeFormat", "HH" },
                     { "type", "Microsoft.Storage/Blob" },
-                } },
-                { "serialization", 
+                },
+                Serialization = 
                 {
                     { "encoding", "UTF8" },
                     { "fieldDelimiter", "," },
                     { "type", "Csv" },
-                } },
-                { "type", "Stream" },
+                },
+                Type = "Stream",
             },
             ResourceGroupName = "sjrg8161",
         });
@@ -475,8 +475,8 @@ import pulumi_azure_native as azure_native
 input = azure_native.streamanalytics.Input("input",
     input_name="input8899",
     job_name="sj6695",
-    properties={
-        "datasource": {
+    properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+        datasource={
             "container": "state",
             "dateFormat": "yyyy/MM/dd",
             "pathPattern": "{date}/{time}",
@@ -488,13 +488,13 @@ input = azure_native.streamanalytics.Input("input",
             "timeFormat": "HH",
             "type": "Microsoft.Storage/Blob",
         },
-        "serialization": {
+        serialization={
             "encoding": "UTF8",
             "fieldDelimiter": ",",
             "type": "Csv",
         },
-        "type": "Stream",
-    },
+        type="Stream",
+    ),
     resource_group_name="sjrg8161")
 
 ```
@@ -555,19 +555,30 @@ const input = new azure_native.streamanalytics.Input("input", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Input</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Input</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Input</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">input_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ReferenceInputPropertiesArgs, StreamInputPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Input</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">input_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ReferenceInputPropertiesArgs, StreamInputPropertiesArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Input</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Input</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InputArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Input</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Input</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InputArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Input</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InputArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -578,46 +589,44 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InputArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -628,33 +637,25 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -666,25 +667,19 @@ const input = new azure_native.streamanalytics.Input("input", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InputArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -825,7 +820,7 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1128,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1718,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2094,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3084,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3092,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3198,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3214,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3222,7 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3476,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3484,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3590,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3606,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}

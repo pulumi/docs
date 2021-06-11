@@ -13,7 +13,11 @@ Explore the resources and functions of the azure-native.timeseriesinsights modul
 <ul class="api">
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="eventhubeventsource" title="EventHubEventSource"><span class="symbol resource"></span>EventHubEventSource</a></li>
     <li><a href="eventsource" title="EventSource"><span class="symbol resource"></span>EventSource</a></li>
+    <li><a href="gen1environment" title="Gen1Environment"><span class="symbol resource"></span>Gen1Environment</a></li>
+    <li><a href="gen2environment" title="Gen2Environment"><span class="symbol resource"></span>Gen2Environment</a></li>
+    <li><a href="iothubeventsource" title="IoTHubEventSource"><span class="symbol resource"></span>IoTHubEventSource</a></li>
     <li><a href="referencedataset" title="ReferenceDataSet"><span class="symbol resource"></span>ReferenceDataSet</a></li>
 </ul>
 
@@ -21,7 +25,11 @@ Explore the resources and functions of the azure-native.timeseriesinsights modul
 <ul class="api">
     <li><a href="getaccesspolicy" title="GetAccessPolicy"><span class="symbol function"></span>GetAccessPolicy</a></li>
     <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
+    <li><a href="geteventhubeventsource" title="GetEventHubEventSource"><span class="symbol function"></span>GetEventHubEventSource</a></li>
     <li><a href="geteventsource" title="GetEventSource"><span class="symbol function"></span>GetEventSource</a></li>
+    <li><a href="getgen1environment" title="GetGen1Environment"><span class="symbol function"></span>GetGen1Environment</a></li>
+    <li><a href="getgen2environment" title="GetGen2Environment"><span class="symbol function"></span>GetGen2Environment</a></li>
+    <li><a href="getiothubeventsource" title="GetIoTHubEventSource"><span class="symbol function"></span>GetIoTHubEventSource</a></li>
     <li><a href="getreferencedataset" title="GetReferenceDataSet"><span class="symbol function"></span>GetReferenceDataSet</a></li>
 </ul>
 
@@ -32,6 +40,6 @@ Explore the resources and functions of the azure-native.timeseriesinsights modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

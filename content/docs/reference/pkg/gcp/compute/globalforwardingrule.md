@@ -114,8 +114,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -463,8 +463,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -809,19 +809,37 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                         <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -832,46 +850,44 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -880,35 +896,27 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -920,25 +928,19 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -985,26 +987,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
@@ -1170,26 +1165,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
@@ -1355,26 +1343,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
@@ -1430,7 +1411,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing
 configuration to a limited set xDS compliant clients. In their xDS
@@ -1540,26 +1521,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
@@ -1827,20 +1801,36 @@ Get an existing GlobalForwardingRule resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalForwardingRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalForwardingRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalForwardingRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalForwardingRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalForwardingRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalForwardingRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GlobalForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1961,26 +1951,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_csharp">
@@ -2164,26 +2147,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_go">
@@ -2367,26 +2343,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_nodejs">
@@ -2451,7 +2420,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#state_metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilter">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing
 configuration to a limited set xDS compliant clients. In their xDS
@@ -2570,26 +2539,19 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
-Addresses are restricted based on the forwarding rule's load balancing
-scheme (EXTERNAL or INTERNAL) and scope (global or regional).
-When the load balancing scheme is EXTERNAL, for global forwarding
-rules, the address must be a global IP, and for regional forwarding
-rules, the address must live in the same region as the forwarding
-rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding
-rule supports IPv4 only. A global forwarding rule supports either IPv4
-or IPv6.
-When the load balancing scheme is INTERNAL, this can only be an RFC
-1918 IP address belonging to the network/subnet configured for the
-forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range
-of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
-the API allows you to specify various resource paths for an address resource
-instead, this provider requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh
-or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule serves. When a client sends
+traffic to this IP address, the forwarding rule directs the traffic to
+the target that you specify in the forwarding rule. The
+loadBalancingScheme and the forwarding rule's target determine the
+type of IP address that you can use. For detailed information, refer
+to [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+An address can be specified either by a literal IP address or a
+reference to an existing Address resource. If you don't specify a
+reserved IP address, an ephemeral IP address is assigned.
+The value must be set to 0.0.0.0 when the target is a targetGrpcProxy
+that has validateForProxyless field set to true.
+For Private Service Connect forwarding rules that forward traffic to
+Google APIs, IP address must be provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_protocol_python">
@@ -2834,7 +2796,7 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#globalforwardingrulemetadatafilterfilterlabel">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the
 provided metadata based on filterMatchCriteria

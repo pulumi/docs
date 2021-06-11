@@ -86,7 +86,7 @@ package main
 
 import (
 	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -257,7 +257,7 @@ package main
 
 import (
 	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -354,19 +354,33 @@ const account = new azure_native.cognitiveservices.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CognitiveServicesAccountPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CognitiveServicesAccountPropertiesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -377,46 +391,44 @@ const account = new azure_native.cognitiveservices.Account("account", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -427,33 +439,25 @@ const account = new azure_native.cognitiveservices.Account("account", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -465,25 +469,19 @@ const account = new azure_native.cognitiveservices.Account("account", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -656,7 +654,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +678,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountproperties">Cognitive<wbr>Services<wbr>Account<wbr>Properties</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountproperties">Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +686,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1735,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproperties_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountapiproperties">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountapiproperties">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1751,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1759,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userownedstorage_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Owned<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedstorage">User<wbr>Owned<wbr>Storage[]</a></span>
+        <span class="property-type"><a href="#userownedstorage">User<wbr>Owned<wbr>Storage<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2089,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2137,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skuchangeinfo_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Change<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproperties_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userownedstorage_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Owned<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedstorageresponse">User<wbr>Owned<wbr>Storage<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#userownedstorageresponse">User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2485,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2567,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2649,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2779,7 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3303,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">Ip<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#iprule">Ip<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3311,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3417,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Ip<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Ip<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3425,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3515,7 +3513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3589,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3687,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3703,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3889,7 +3887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}

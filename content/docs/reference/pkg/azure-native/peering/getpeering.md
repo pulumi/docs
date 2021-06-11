@@ -22,17 +22,19 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPeering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPeeringResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPeering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPeeringArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPeeringResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_peering(</span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPeeringResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_peering(</span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPeeringResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPeeringResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPeeringArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPeeringResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPeering` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPeering </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPeeringResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPeeringResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -936,7 +938,7 @@ The following output properties are available:
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1190,7 @@ The following output properties are available:
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1252,7 +1254,7 @@ The following output properties are available:
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1386,7 @@ The following output properties are available:
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1426,7 @@ The following output properties are available:
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1442,7 @@ The following output properties are available:
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1532,7 +1534,7 @@ The following output properties are available:
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1550,7 @@ The following output properties are available:
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1564,7 +1566,7 @@ The following output properties are available:
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1574,7 @@ The following output properties are available:
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1624,7 +1626,7 @@ The following output properties are available:
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1632,7 +1634,7 @@ The following output properties are available:
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}

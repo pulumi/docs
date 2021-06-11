@@ -80,9 +80,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/container"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -253,6 +253,118 @@ const primary = new gcp.container.Cluster("primary", {
 
 
 
+### Autopilot
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service-account-id",
+            DisplayName = "Service Account",
+        });
+        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
+        {
+            EnableAutopilot = true,
+            Location = "us-central1-a",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/container"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := serviceAccount.NewAccount(ctx, "_default", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service-account-id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = container.NewCluster(ctx, "primary", &container.ClusterArgs{
+			EnableAutopilot: pulumi.Bool(true),
+			Location:        pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.service_account.Account("default",
+    account_id="service-account-id",
+    display_name="Service Account")
+primary = gcp.container.Cluster("primary",
+    enable_autopilot=True,
+    location="us-central1-a")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultAccount = new gcp.serviceAccount.Account("default", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
+const primary = new gcp.container.Cluster("primary", {
+    enableAutopilot: true,
+    location: "us-central1-a",
+}, { timeouts: {
+    create: "30m",
+    update: "40m",
+} });
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -264,19 +376,73 @@ const primary = new gcp.container.Cluster("primary", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">,</span>
+            <span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">,</span>
+            <span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">,</span>
+            <span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">,</span>
+            <span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">,</span>
+            <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterArgs]</a></span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -287,46 +453,44 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,35 +499,27 @@ const primary = new gcp.container.Cluster("primary", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -375,25 +531,19 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -830,7 +980,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsecuritypolicyconfig_csharp">
@@ -1377,7 +1527,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsecuritypolicyconfig_go">
@@ -1508,7 +1658,7 @@ Structure is documented below.
 <a href="#addonsconfig_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -1518,7 +1668,7 @@ Structure is documented below.
 <a href="#authenticatorgroupsconfig_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Groups<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -1529,7 +1679,7 @@ Structure is documented below.
 <a href="#clusterautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -1554,7 +1704,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#clustertelemetry_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -1565,7 +1715,7 @@ Structure is documented below.
 <a href="#confidentialnodes_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes</a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -1575,7 +1725,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#databaseencryption_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1755,7 @@ for more information.
 <a href="#defaultsnatstatus_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Snat<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1870,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -1757,7 +1907,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -1767,7 +1917,7 @@ documented below.
 <a href="#masterauth_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth</a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -1781,7 +1931,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -1845,7 +1995,7 @@ shared network.
 <a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -1867,7 +2017,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -1892,7 +2042,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">Cluster<wbr>Node<wbr>Pool[]</a></span>
+        <span class="property-type"><a href="#clusternodepool">Cluster<wbr>Node<wbr>Pool<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -1922,16 +2072,16 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsecuritypolicyconfig_nodejs">
 <a href="#podsecuritypolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -1942,7 +2092,7 @@ Structure is documented below.
 <a href="#privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -1971,7 +2121,7 @@ is not provided, the provider project is used.
 <a href="#releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -2009,7 +2159,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#resourceusageexportconfig_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Usage<wbr>Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -2030,7 +2180,7 @@ subnetwork in which the cluster's instances are launched.
 <a href="#verticalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -2040,7 +2190,7 @@ Structure is documented below.
 <a href="#workloadidentityconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -2471,7 +2621,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_security_policy_config_python">
@@ -2974,20 +3124,78 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">,</span>
+        <span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">,</span>
+        <span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">,</span>
+        <span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">,</span>
+        <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3551,7 +3759,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_csharp">
@@ -4177,7 +4385,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_go">
@@ -4348,7 +4556,7 @@ Structure is documented below.
 <a href="#state_addonsconfig_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -4358,7 +4566,7 @@ Structure is documented below.
 <a href="#state_authenticatorgroupsconfig_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Groups<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -4369,7 +4577,7 @@ Structure is documented below.
 <a href="#state_clusterautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -4394,7 +4602,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#state_clustertelemetry_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -4405,7 +4613,7 @@ Structure is documented below.
 <a href="#state_confidentialnodes_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes</a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -4415,7 +4623,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_databaseencryption_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4445,7 +4653,7 @@ for more information.
 <a href="#state_defaultsnatstatus_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Snat<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4579,7 +4787,7 @@ to the cluster.
 <a href="#state_ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -4625,7 +4833,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#state_maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -4635,7 +4843,7 @@ documented below.
 <a href="#state_masterauth_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth</a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -4649,7 +4857,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#state_masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -4724,7 +4932,7 @@ shared network.
 <a href="#state_networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -4746,7 +4954,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#state_nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -4771,7 +4979,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#state_nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">Cluster<wbr>Node<wbr>Pool[]</a></span>
+        <span class="property-type"><a href="#clusternodepool">Cluster<wbr>Node<wbr>Pool<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -4801,9 +5009,9 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_nodejs">
@@ -4818,7 +5026,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_podsecuritypolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -4829,7 +5037,7 @@ Structure is documented below.
 <a href="#state_privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -4858,7 +5066,7 @@ is not provided, the provider project is used.
 <a href="#state_releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -4896,7 +5104,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#state_resourceusageexportconfig_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Usage<wbr>Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -4949,7 +5157,7 @@ notation (e.g. `1.2.3.4/29`).
 <a href="#state_verticalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -4959,7 +5167,7 @@ Structure is documented below.
 <a href="#state_workloadidentityconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -5429,7 +5637,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The notification config for sending cluster upgrade notifications
+    <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_python">
@@ -5656,7 +5864,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5759,7 +5966,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5817,7 +6023,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#cloudrunconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloudrun<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5826,7 +6032,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#configconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Connector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
@@ -5836,7 +6042,7 @@ The status of the ConfigConnector addon. It is disabled by default; Set `enabled
 <a href="#dnscacheconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Cache<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the NodeLocal DNSCache addon. It is disabled by default.
@@ -5847,7 +6053,7 @@ Set `enabled = true` to enable.
 <a href="#gcepersistentdiskcsidriverconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
@@ -5857,12 +6063,11 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
 <a href="#horizontalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5871,7 +6076,7 @@ set `disabled = true` to disable.
 <a href="#httploadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the HTTP (L7) load balancing
 controller addon, which makes it easy to set up HTTP load balancers for services in a
@@ -5882,7 +6087,7 @@ cluster. It is enabled by default; set `disabled = true` to disable.
 <a href="#istioconfig_nodejs" style="color: inherit; text-decoration: inherit;">istio<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 Structure is documented below.
@@ -5892,7 +6097,7 @@ Structure is documented below.
 <a href="#kalmconfig_nodejs" style="color: inherit; text-decoration: inherit;">kalm<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
@@ -5902,7 +6107,7 @@ Configuration for the KALM addon, which manages the lifecycle of k8s. It is disa
 <a href="#networkpolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
@@ -5965,7 +6170,6 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
-It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
 It is enabled by default;
 set `disabled = true` to disable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6783,7 +6987,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#autoprovisioningdefaults_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains defaults for a node pool created by NAP.
 Structure is documented below.
@@ -6805,7 +7009,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit[]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -7699,7 +7903,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#dailymaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time window specified for daily maintenance operations.
 Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
@@ -7710,7 +7914,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#maintenanceexclusions_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion[]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7719,7 +7923,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurringwindow_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd></dl>
@@ -8199,7 +8403,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#clientcertificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether client certificate authorization is enabled for this cluster.  For example:
 {{% /md %}}</dd><dt class="property-optional"
@@ -8385,7 +8589,7 @@ Kubernetes cluster master through HTTPS.
 <a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block[]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -9084,7 +9288,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9093,7 +9297,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -9113,7 +9317,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -9133,7 +9337,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -9212,7 +9416,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -9232,7 +9436,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9251,7 +9455,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">Cluster<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -9267,7 +9471,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -10451,7 +10655,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autoscaling_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10483,7 +10687,7 @@ to the cluster.
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10517,7 +10721,7 @@ location.
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -10550,7 +10754,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11336,7 +11540,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11345,7 +11549,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -11365,7 +11569,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -11385,7 +11589,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -11464,7 +11668,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -11484,7 +11688,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11503,7 +11707,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -11519,7 +11723,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -12549,7 +12753,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12561,7 +12766,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12571,9 +12777,10 @@ Accepted values are:
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12585,7 +12792,8 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</h4>
@@ -12609,7 +12817,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12631,7 +12840,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12653,7 +12863,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12675,7 +12886,8 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The pubsub topic to push upgrade notifications to. Must be in the same project as the cluster. Must be in the format: `projects/{project}/topics/{topic}`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>
@@ -12931,7 +13143,7 @@ endpoint via private networking.
 <a href="#masterglobalaccessconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls cluster master global
 access settings. If unset, the provider will no longer manage this field and will
@@ -13275,7 +13487,7 @@ billing export. Defaults to `true`.
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for using BigQuery as the destination of resource usage export.
 {{% /md %}}</dd><dt class="property-optional"

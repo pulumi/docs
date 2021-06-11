@@ -98,7 +98,7 @@ package main
 
 import (
 	datalakestore "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakestore"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -262,19 +262,40 @@ const account = new azure_native.datalakestore.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[EncryptionConfigArgs]</span> = None<span class="p">, </span><span class="nx">encryption_state</span><span class="p">:</span> <span class="nx">Optional[EncryptionState]</span> = None<span class="p">, </span><span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[FirewallAllowAzureIpsState]</span> = None<span class="p">, </span><span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateFirewallRuleWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[FirewallState]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[TierType]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_id_provider_state</span><span class="p">:</span> <span class="nx">Optional[TrustedIdProviderState]</span> = None<span class="p">, </span><span class="nx">trusted_id_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateTrustedIdProviderWithAccountParametersArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateVirtualNetworkRuleWithAccountParametersArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">default_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[EncryptionConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">encryption_state</span><span class="p">:</span> <span class="nx">Optional[EncryptionState]</span> = None<span class="p">,</span>
+            <span class="nx">firewall_allow_azure_ips</span><span class="p">:</span> <span class="nx">Optional[FirewallAllowAzureIpsState]</span> = None<span class="p">,</span>
+            <span class="nx">firewall_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateFirewallRuleWithAccountParametersArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">firewall_state</span><span class="p">:</span> <span class="nx">Optional[FirewallState]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionIdentityArgs]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">new_tier</span><span class="p">:</span> <span class="nx">Optional[TierType]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">trusted_id_provider_state</span><span class="p">:</span> <span class="nx">Optional[TrustedIdProviderState]</span> = None<span class="p">,</span>
+            <span class="nx">trusted_id_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateTrustedIdProviderWithAccountParametersArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CreateVirtualNetworkRuleWithAccountParametersArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -285,46 +306,44 @@ const account = new azure_native.datalakestore.Account("account", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,33 +354,25 @@ const account = new azure_native.datalakestore.Account("account", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -373,25 +384,19 @@ const account = new azure_native.datalakestore.Account("account", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -684,7 +689,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +713,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters[]</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +729,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption identity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +769,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviders_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Id<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters[]</a></span>
+        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of trusted identity providers associated with this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +777,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters[]</a></span>
+        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules associated with this Data Lake Store account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info</a></span>
+        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1703,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}

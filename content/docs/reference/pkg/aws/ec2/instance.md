@@ -94,8 +94,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -255,19 +255,63 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[InstanceEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCapacityReservationSpecificationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[InstanceEnclaveOptionsArgs]</span> = None<span class="p">,</span>
+             <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
+             <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
+             <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">,</span>
+             <span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">,</span>
+             <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -278,46 +322,44 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,35 +368,27 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -366,25 +400,19 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -435,6 +463,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_csharp">
+<a href="#capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_csharp">
@@ -677,7 +714,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_csharp">
@@ -763,6 +809,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationspecification_go">
+<a href="#capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucorecount_go">
@@ -1005,7 +1060,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_go">
@@ -1093,6 +1157,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="capacityreservationspecification_nodejs">
+<a href="#capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cpucorecount_nodejs">
 <a href="#cpucorecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Core<wbr>Count</a>
 </span>
@@ -1115,7 +1188,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1206,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1224,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1233,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1314,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1332,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1359,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1406,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_nodejs">
@@ -1419,6 +1501,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_specification_python">
+<a href="#capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_core_count_python">
@@ -1661,7 +1752,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_python">
@@ -2061,20 +2161,68 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[InstanceEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCapacityReservationSpecificationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[InstanceEnclaveOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2213,6 +2361,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_csharp">
+<a href="#state_capacityreservationspecification_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_csharp">
@@ -2527,7 +2684,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_csharp">
@@ -2613,6 +2779,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacityreservationspecification_go">
+<a href="#state_capacityreservationspecification_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucorecount_go">
@@ -2927,7 +3102,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_go">
@@ -3015,6 +3199,15 @@ The following state arguments are supported:
     <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_capacityreservationspecification_nodejs">
+<a href="#state_capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cpucorecount_nodejs">
 <a href="#state_cpucorecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Core<wbr>Count</a>
 </span>
@@ -3037,7 +3230,7 @@ The following state arguments are supported:
 <a href="#state_creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#instancecreditspecification">Instance<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3055,7 +3248,7 @@ The following state arguments are supported:
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3073,7 +3266,7 @@ The following state arguments are supported:
 <a href="#state_enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3082,7 +3275,7 @@ The following state arguments are supported:
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3181,7 +3374,7 @@ The following state arguments are supported:
 <a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#instancemetadataoptions">Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3199,7 +3392,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#instancenetworkinterface">Instance<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3280,7 +3473,7 @@ The following state arguments are supported:
 <a href="#state_rootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3327,7 +3520,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_nodejs">
@@ -3413,6 +3615,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AZ to start the instance in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_capacity_reservation_specification_python">
+<a href="#state_capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_core_count_python">
@@ -3727,7 +3938,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenancy_python">
@@ -3784,6 +4004,150 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="instancecapacityreservationspecification">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_csharp">
+<a href="#capacityreservationpreference_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_csharp">
+<a href="#capacityreservationtarget_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_go">
+<a href="#capacityreservationpreference_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_go">
+<a href="#capacityreservationtarget_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationpreference_nodejs">
+<a href="#capacityreservationpreference_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationtarget_nodejs">
+<a href="#capacityreservationtarget_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_preference_python">
+<a href="#capacity_reservation_preference_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_target_python">
+<a href="#capacity_reservation_target_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancecapacityreservationspecificationcapacityreservationtarget">Instance<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_csharp">
+<a href="#capacityreservationid_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_go">
+<a href="#capacityreservationid_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityreservationid_nodejs">
+<a href="#capacityreservationid_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_reservation_id_python">
+<a href="#capacity_reservation_id_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Capacity Reservation in which to run the instance.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="instancecreditspecification">Instance<wbr>Credit<wbr>Specification</h4>
 

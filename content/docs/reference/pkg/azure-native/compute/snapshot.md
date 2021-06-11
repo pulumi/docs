@@ -63,7 +63,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -182,7 +182,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -298,7 +298,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -383,19 +383,42 @@ const snapshot = new azure_native.compute.Snapshot("snapshot", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SnapshotSkuArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">supports_hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">,</span>
+             <span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">,</span>
+             <span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">,</span>
+             <span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">,</span>
+             <span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">,</span>
+             <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">,</span>
+             <span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SnapshotSkuArgs]</span> = None<span class="p">,</span>
+             <span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">supports_hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSnapshot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Snapshot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSnapshot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Snapshot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SnapshotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -406,46 +429,44 @@ const snapshot = new azure_native.compute.Snapshot("snapshot", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SnapshotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SnapshotArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,33 +477,25 @@ const snapshot = new azure_native.compute.Snapshot("snapshot", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SnapshotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -494,25 +507,19 @@ const snapshot = new azure_native.compute.Snapshot("snapshot", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SnapshotArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -813,7 +820,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creationdata_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Creation<wbr>Data</a></span>
+        <span class="property-type"><a href="#creationdata">Creation<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -845,7 +852,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +860,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryptionsettingscollection_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +868,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +916,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +924,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku</a></span>
+        <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1568,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2270,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">Encryption<wbr>Settings<wbr>Element[]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">Encryption<wbr>Settings<wbr>Element<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2474,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2556,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3052,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3134,7 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3216,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3298,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}

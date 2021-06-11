@@ -11,6 +11,8 @@ Explore the resources and functions of the azure-native.resources module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="azurecliscript" title="AzureCliScript"><span class="symbol resource"></span>AzureCliScript</a></li>
+    <li><a href="azurepowershellscript" title="AzurePowerShellScript"><span class="symbol resource"></span>AzurePowerShellScript</a></li>
     <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
     <li><a href="deploymentatmanagementgroupscope" title="DeploymentAtManagementGroupScope"><span class="symbol resource"></span>DeploymentAtManagementGroupScope</a></li>
     <li><a href="deploymentatscope" title="DeploymentAtScope"><span class="symbol resource"></span>DeploymentAtScope</a></li>
@@ -26,6 +28,8 @@ Explore the resources and functions of the azure-native.resources module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getazurecliscript" title="GetAzureCliScript"><span class="symbol function"></span>GetAzureCliScript</a></li>
+    <li><a href="getazurepowershellscript" title="GetAzurePowerShellScript"><span class="symbol function"></span>GetAzurePowerShellScript</a></li>
     <li><a href="getdeployment" title="GetDeployment"><span class="symbol function"></span>GetDeployment</a></li>
     <li><a href="getdeploymentatmanagementgroupscope" title="GetDeploymentAtManagementGroupScope"><span class="symbol function"></span>GetDeploymentAtManagementGroupScope</a></li>
     <li><a href="getdeploymentatscope" title="GetDeploymentAtScope"><span class="symbol function"></span>GetDeploymentAtScope</a></li>
@@ -46,6 +50,6 @@ Explore the resources and functions of the azure-native.resources module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

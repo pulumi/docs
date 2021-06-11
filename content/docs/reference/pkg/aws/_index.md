@@ -19,11 +19,13 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="acmpca/" title="acmpca"><span class="symbol module"></span>acmpca</a></li>
     <li><a href="alb/" title="alb"><span class="symbol module"></span>alb</a></li>
     <li><a href="amp/" title="amp"><span class="symbol module"></span>amp</a></li>
+    <li><a href="amplify/" title="amplify"><span class="symbol module"></span>amplify</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="apigatewayv2/" title="apigatewayv2"><span class="symbol module"></span>apigatewayv2</a></li>
     <li><a href="appautoscaling/" title="appautoscaling"><span class="symbol module"></span>appautoscaling</a></li>
     <li><a href="applicationloadbalancing/" title="applicationloadbalancing"><span class="symbol module"></span>applicationloadbalancing</a></li>
     <li><a href="appmesh/" title="appmesh"><span class="symbol module"></span>appmesh</a></li>
+    <li><a href="apprunner/" title="apprunner"><span class="symbol module"></span>apprunner</a></li>
     <li><a href="appsync/" title="appsync"><span class="symbol module"></span>appsync</a></li>
     <li><a href="athena/" title="athena"><span class="symbol module"></span>athena</a></li>
     <li><a href="autoscaling/" title="autoscaling"><span class="symbol module"></span>autoscaling</a></li>
@@ -96,6 +98,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="licensemanager/" title="licensemanager"><span class="symbol module"></span>licensemanager</a></li>
     <li><a href="lightsail/" title="lightsail"><span class="symbol module"></span>lightsail</a></li>
     <li><a href="macie/" title="macie"><span class="symbol module"></span>macie</a></li>
+    <li><a href="macie2/" title="macie2"><span class="symbol module"></span>macie2</a></li>
     <li><a href="mediaconvert/" title="mediaconvert"><span class="symbol module"></span>mediaconvert</a></li>
     <li><a href="mediapackage/" title="mediapackage"><span class="symbol module"></span>mediapackage</a></li>
     <li><a href="mediastore/" title="mediastore"><span class="symbol module"></span>mediastore</a></li>
@@ -115,11 +118,13 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
     <li><a href="redshift/" title="redshift"><span class="symbol module"></span>redshift</a></li>
     <li><a href="resourcegroups/" title="resourcegroups"><span class="symbol module"></span>resourcegroups</a></li>
+    <li><a href="resourcegroupstaggingapi/" title="resourcegroupstaggingapi"><span class="symbol module"></span>resourcegroupstaggingapi</a></li>
     <li><a href="route53/" title="route53"><span class="symbol module"></span>route53</a></li>
     <li><a href="s3/" title="s3"><span class="symbol module"></span>s3</a></li>
     <li><a href="s3control/" title="s3control"><span class="symbol module"></span>s3control</a></li>
     <li><a href="s3outposts/" title="s3outposts"><span class="symbol module"></span>s3outposts</a></li>
     <li><a href="sagemaker/" title="sagemaker"><span class="symbol module"></span>sagemaker</a></li>
+    <li><a href="schemas/" title="schemas"><span class="symbol module"></span>schemas</a></li>
     <li><a href="secretsmanager/" title="secretsmanager"><span class="symbol module"></span>secretsmanager</a></li>
     <li><a href="securityhub/" title="securityhub"><span class="symbol module"></span>securityhub</a></li>
     <li><a href="serverlessrepository/" title="serverlessrepository"><span class="symbol module"></span>serverlessrepository</a></li>
@@ -138,6 +143,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="storagegateway/" title="storagegateway"><span class="symbol module"></span>storagegateway</a></li>
     <li><a href="swf/" title="swf"><span class="symbol module"></span>swf</a></li>
     <li><a href="synthetics/" title="synthetics"><span class="symbol module"></span>synthetics</a></li>
+    <li><a href="timestreamwrite/" title="timestreamwrite"><span class="symbol module"></span>timestreamwrite</a></li>
     <li><a href="transfer/" title="transfer"><span class="symbol module"></span>transfer</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
     <li><a href="wafregional/" title="wafregional"><span class="symbol module"></span>wafregional</a></li>
@@ -163,6 +169,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="getbillingserviceaccount" title="GetBillingServiceAccount"><span class="symbol function"></span>GetBillingServiceAccount</a></li>
     <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
     <li><a href="getcanonicaluserid" title="GetCanonicalUserId"><span class="symbol function"></span>GetCanonicalUserId</a></li>
+    <li><a href="getdefaulttags" title="GetDefaultTags"><span class="symbol function"></span>GetDefaultTags</a></li>
     <li><a href="getelasticip" title="GetElasticIp"><span class="symbol function"></span>GetElasticIp</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getpartition" title="GetPartition"><span class="symbol function"></span>GetPartition</a></li>
@@ -180,6 +187,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.38.1</dd>
+	<dd>4.7.0</dd>
 </dl>
 

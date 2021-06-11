@@ -104,8 +104,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -234,11 +234,11 @@ const example = new spotinst.aws.Ocean("example", {
     desiredCapacity: 2,
     drainingTimeout: 120,
     ebsOptimized: true,
-    // --- STRATEGY --------------------
+    // region STRATEGY
     fallbackToOndemand: true,
     gracePeriod: 600,
     iamInstanceProfile: "iam-profile",
-    // --- LAUNCH CONFIGURATION --------------
+    // region LAUNCH CONFIGURATION
     imageId: "ami-123456",
     keyName: "fake key",
     loadBalancers: [
@@ -290,19 +290,55 @@ const example = new spotinst.aws.Ocean("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">autoscaler</span><span class="p">:</span> <span class="nx">Optional[OceanAutoscalerArgs]</span> = None<span class="p">, </span><span class="nx">blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanTagArgs]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">use_as_template_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">autoscaler</span><span class="p">:</span> <span class="nx">Optional[OceanAutoscalerArgs]</span> = None<span class="p">,</span>
+          <span class="nx">blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLoadBalancerArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanScheduledTaskArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanTagArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanUpdatePolicyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">use_as_template_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOcean</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ocean</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOcean</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ocean</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ocean</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OceanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -313,46 +349,44 @@ const example = new spotinst.aws.Ocean("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OceanArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -361,35 +395,27 @@ const example = new spotinst.aws.Ocean("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -401,25 +427,19 @@ const example = new spotinst.aws.Ocean("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -451,7 +471,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
@@ -469,7 +489,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_csharp">
@@ -487,7 +507,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
@@ -595,7 +615,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -604,7 +624,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -723,7 +743,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
@@ -741,7 +761,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_go">
@@ -759,7 +779,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
@@ -867,7 +887,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -876,7 +896,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -995,7 +1015,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
@@ -1011,9 +1031,9 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
+        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_nodejs">
@@ -1031,7 +1051,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
@@ -1110,7 +1130,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer[]</a></span>
+        <span class="property-type"><a href="#oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -1139,7 +1159,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -1148,7 +1168,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -1173,7 +1193,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1211,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1220,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1287,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
@@ -1285,7 +1305,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_python">
@@ -1303,7 +1323,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
@@ -1411,7 +1431,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1420,7 +1440,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1584,20 +1604,52 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OceanState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Ocean</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OceanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Ocean</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">autoscaler</span><span class="p">:</span> <span class="nx">Optional[OceanAutoscalerArgs]</span> = None<span class="p">, </span><span class="nx">blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanTagArgs]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">use_as_template_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Ocean</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">autoscaler</span><span class="p">:</span> <span class="nx">Optional[OceanAutoscalerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">blacklists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLoadBalancerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanScheduledTaskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanTagArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanUpdatePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">use_as_template_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Ocean</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOcean<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OceanState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ocean</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOcean<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OceanState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ocean</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Ocean</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OceanState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Ocean</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OceanState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1717,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_csharp">
@@ -1735,7 +1787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_csharp">
@@ -1843,7 +1895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1852,7 +1904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
@@ -1906,7 +1958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1989,7 +2041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_go">
@@ -2007,7 +2059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
@@ -2115,7 +2167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -2124,7 +2176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
@@ -2178,7 +2230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2259,9 +2311,9 @@ The following state arguments are supported:
 <a href="#state_autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
+        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_nodejs">
@@ -2279,7 +2331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_nodejs">
@@ -2358,7 +2410,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer[]</a></span>
+        <span class="property-type"><a href="#oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,7 +2439,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2396,7 +2448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
@@ -2421,7 +2473,7 @@ The following state arguments are supported:
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,14 +2502,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2518,7 @@ The following state arguments are supported:
 <a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Describes the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_python">
@@ -2551,7 +2603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
+    <dd>{{% md %}}The Ocean cluster identifier. Example: `ocean.k8s`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
@@ -2659,7 +2711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2668,7 +2720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
@@ -2722,7 +2774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public IP.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -2852,7 +2904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_csharp">
@@ -2919,7 +2971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_go">
@@ -2957,7 +3009,7 @@ The following state arguments are supported:
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down</a></span>
+        <span class="property-type"><a href="#oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2966,7 +3018,7 @@ The following state arguments are supported:
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2986,14 +3038,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_nodejs">
 <a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
+        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
 {{% /md %}}</dd></dl>
@@ -3053,7 +3105,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
+    <dd>{{% md %}}Enable the Ocean Kubernetes Auto Scaler.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_limits_python">
@@ -3172,7 +3224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
@@ -3212,7 +3264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
@@ -3252,7 +3304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
@@ -3292,7 +3344,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
+    <dd>{{% md %}}Optionally configure the number of GPUs to allocate the headroom.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
@@ -3415,7 +3467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -3424,7 +3476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -3433,7 +3485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3446,7 +3498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -3455,7 +3507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -3464,7 +3516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3477,7 +3529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -3486,7 +3538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -3495,7 +3547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3508,7 +3560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to TARGET_GROUP
+    <dd>{{% md %}}Required if type is set to `TARGET_GROUP`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -3517,7 +3569,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if type is set to CLASSIC
+    <dd>{{% md %}}Required if type is set to `CLASSIC`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -3526,7 +3578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
+    <dd>{{% md %}}Can be set to `CLASSIC` or `TARGET_GROUP`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3583,7 +3635,7 @@ The following state arguments are supported:
 <a href="#shutdownhours_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set shutdown hours for cluster object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3592,7 +3644,7 @@ The following state arguments are supported:
 <a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling tasks for the cluster.
 {{% /md %}}</dd></dl>
@@ -3631,8 +3683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -3641,7 +3692,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3654,8 +3705,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -3664,7 +3714,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3677,8 +3727,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -3687,7 +3736,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3700,8 +3749,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-Example: Fri:15:30-Wed:14:30
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of: `ddd:hh:mm-ddd:hh:mm` where `ddd` = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat, `hh` = hour 24 = 0 -23, `mm` = minute = 0 - 59. Time windows should not overlap. Required if `cluster.scheduling.isEnabled` is `true`. (Example: `Fri:15:30-Wed:14:30`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -3710,7 +3758,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3725,8 +3773,7 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
@@ -3735,7 +3782,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
@@ -3744,8 +3791,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3758,8 +3804,7 @@ Example: clusterRoll
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
@@ -3768,7 +3813,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_go">
@@ -3777,8 +3822,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3791,8 +3835,7 @@ Example: clusterRoll
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
@@ -3801,7 +3844,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
@@ -3810,8 +3853,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3824,8 +3866,7 @@ Example: clusterRoll
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-Example: 0 1 * * *
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. (Example: `0 1 * * *`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
@@ -3834,7 +3875,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="task_type_python">
@@ -3843,8 +3884,7 @@ Example: 0 1 * * *
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-Example: clusterRoll
+    <dd>{{% md %}}Valid values: `clusterRoll`. Required for `cluster.scheduling.tasks` object. (Example: `clusterRoll`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4000,7 +4040,7 @@ Example: clusterRoll
 <a href="#rollconfig_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
 {{% /md %}}</dd></dl>

@@ -37,7 +37,18 @@ class MyStack : Stack
     {
         var user = new Mongodbatlas.DatabaseUser("user", new Mongodbatlas.DatabaseUserArgs
         {
+            ProjectId = "<PROJECT-ID>",
+            Username = "myUsername",
+            X509Type = "MANAGED",
             DatabaseName = "$external",
+            Roles = 
+            {
+                new Mongodbatlas.Inputs.DatabaseUserRoleArgs
+                {
+                    RoleName = "atlasAdmin",
+                    DatabaseName = "admin",
+                },
+            },
             Labels = 
             {
                 new Mongodbatlas.Inputs.DatabaseUserLabelArgs
@@ -46,23 +57,12 @@ class MyStack : Stack
                     Value = "My Value",
                 },
             },
-            ProjectId = "<PROJECT-ID>",
-            Roles = 
-            {
-                new Mongodbatlas.Inputs.DatabaseUserRoleArgs
-                {
-                    DatabaseName = "admin",
-                    RoleName = "atlasAdmin",
-                },
-            },
-            Username = "myUsername",
-            X509Type = "MANAGED",
         });
         var testX509AuthenticationDatabaseUser = new Mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser", new Mongodbatlas.X509AuthenticationDatabaseUserArgs
         {
-            MonthsUntilExpiration = 2,
             ProjectId = user.ProjectId,
             Username = user.Username,
+            MonthsUntilExpiration = 2,
         });
         var test509AuthenticationDatabaseUser = Output.Tuple(testX509AuthenticationDatabaseUser.ProjectId, testX509AuthenticationDatabaseUser.Username).Apply(values =>
         {
@@ -91,37 +91,37 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		user, err := mongodbatlas.NewDatabaseUser(ctx, "user", &mongodbatlas.DatabaseUserArgs{
+			ProjectId:    pulumi.String("<PROJECT-ID>"),
+			Username:     pulumi.String("myUsername"),
+			X509Type:     pulumi.String("MANAGED"),
 			DatabaseName: pulumi.String(fmt.Sprintf("%v%v", "$", "external")),
+			Roles: mongodbatlas.DatabaseUserRoleArray{
+				&mongodbatlas.DatabaseUserRoleArgs{
+					RoleName:     pulumi.String("atlasAdmin"),
+					DatabaseName: pulumi.String("admin"),
+				},
+			},
 			Labels: mongodbatlas.DatabaseUserLabelArray{
 				&mongodbatlas.DatabaseUserLabelArgs{
 					Key:   pulumi.String("My Key"),
 					Value: pulumi.String("My Value"),
 				},
 			},
-			ProjectId: pulumi.String("<PROJECT-ID>"),
-			Roles: mongodbatlas.DatabaseUserRoleArray{
-				&mongodbatlas.DatabaseUserRoleArgs{
-					DatabaseName: pulumi.String("admin"),
-					RoleName:     pulumi.String("atlasAdmin"),
-				},
-			},
-			Username: pulumi.String("myUsername"),
-			X509Type: pulumi.String("MANAGED"),
 		})
 		if err != nil {
 			return err
 		}
 		testX509AuthenticationDatabaseUser, err := mongodbatlas.NewX509AuthenticationDatabaseUser(ctx, "testX509AuthenticationDatabaseUser", &mongodbatlas.X509AuthenticationDatabaseUserArgs{
-			MonthsUntilExpiration: pulumi.Int(2),
 			ProjectId:             user.ProjectId,
 			Username:              user.Username,
+			MonthsUntilExpiration: pulumi.Int(2),
 		})
 		if err != nil {
 			return err
@@ -142,22 +142,22 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 user = mongodbatlas.DatabaseUser("user",
+    project_id="<PROJECT-ID>",
+    username="myUsername",
+    x509_type="MANAGED",
     database_name="$external",
+    roles=[mongodbatlas.DatabaseUserRoleArgs(
+        role_name="atlasAdmin",
+        database_name="admin",
+    )],
     labels=[mongodbatlas.DatabaseUserLabelArgs(
         key="My Key",
         value="My Value",
-    )],
-    project_id="<PROJECT-ID>",
-    roles=[mongodbatlas.DatabaseUserRoleArgs(
-        database_name="admin",
-        role_name="atlasAdmin",
-    )],
-    username="myUsername",
-    x509_type="MANAGED")
+    )])
 test_x509_authentication_database_user = mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser",
-    months_until_expiration=2,
     project_id=user.project_id,
-    username=user.username)
+    username=user.username,
+    months_until_expiration=2)
 test509_authentication_database_user = pulumi.Output.all(test_x509_authentication_database_user.project_id, test_x509_authentication_database_user.username).apply(lambda project_id, username: mongodbatlas.get509_authentication_database_user(project_id=project_id,
     username=username))
 ```
@@ -173,28 +173,28 @@ import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const user = new mongodbatlas.DatabaseUser("user", {
-    databaseName: "$external",
+    projectId: "<PROJECT-ID>",
+    username: "myUsername",
+    x509Type: "MANAGED",
+    databaseName: `$external`,
+    roles: [{
+        roleName: "atlasAdmin",
+        databaseName: "admin",
+    }],
     labels: [{
         key: "My Key",
         value: "My Value",
     }],
-    projectId: "<PROJECT-ID>",
-    roles: [{
-        databaseName: "admin",
-        roleName: "atlasAdmin",
-    }],
-    username: "myUsername",
-    x509Type: "MANAGED",
 });
-const testX509AuthenticationDatabaseUser = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
-    monthsUntilExpiration: 2,
+const testX509AuthenticationDatabaseUser = new mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser", {
     projectId: user.projectId,
     username: user.username,
+    monthsUntilExpiration: 2,
 });
 const test509AuthenticationDatabaseUser = pulumi.all([testX509AuthenticationDatabaseUser.projectId, testX509AuthenticationDatabaseUser.username]).apply(([projectId, username]) => mongodbatlas.get509AuthenticationDatabaseUser({
     projectId: projectId,
     username: username,
-}, { async: true }));
+}));
 ```
 
 
@@ -218,25 +218,24 @@ class MyStack : Stack
     {
         var testX509AuthenticationDatabaseUser = new Mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser", new Mongodbatlas.X509AuthenticationDatabaseUserArgs
         {
-            CustomerX509Cas = @"  -----BEGIN CERTIFICATE-----
-  MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
-  VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
-  c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
-  SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
-  MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
-  VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
-  BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
-  c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
-  iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
-  cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
-  Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
-  SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
-  7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
-  iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
-  -----END CERTIFICATE-----""
-
-",
             ProjectId = "<PROJECT-ID>",
+            CustomerX509Cas = @"-----BEGIN CERTIFICATE-----
+MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
+VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
+c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
+SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
+MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
+VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
+BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
+c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
+iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
+cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
+Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
+SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
+7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
+iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
+-----END CERTIFICATE-----""
+",
         });
         var test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.ProjectId.Apply(projectId => Mongodbatlas.Get509AuthenticationDatabaseUser.InvokeAsync(new Mongodbatlas.Get509AuthenticationDatabaseUserArgs
         {
@@ -259,15 +258,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testX509AuthenticationDatabaseUser, err := mongodbatlas.NewX509AuthenticationDatabaseUser(ctx, "testX509AuthenticationDatabaseUser", &mongodbatlas.X509AuthenticationDatabaseUserArgs{
-			CustomerX509Cas: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  -----BEGIN CERTIFICATE-----\n", "  MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC\n", "  VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl\n", "  c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG\n", "  SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy\n", "  MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF\n", "  VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV\n", "  BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp\n", "  c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n", "  iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr\n", "  cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O\n", "  Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG\n", "  SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA\n", "  7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A\n", "  iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz\n", "  -----END CERTIFICATE-----\"\n", "\n")),
 			ProjectId:       pulumi.String("<PROJECT-ID>"),
+			CustomerX509Cas: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "-----BEGIN CERTIFICATE-----\n", "MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC\n", "VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl\n", "c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG\n", "SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy\n", "MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF\n", "VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV\n", "BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp\n", "c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB\n", "iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr\n", "cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O\n", "Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG\n", "SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA\n", "7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A\n", "iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz\n", "-----END CERTIFICATE-----\"\n")),
 		})
 		if err != nil {
 			return err
@@ -288,25 +287,24 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 test_x509_authentication_database_user = mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser",
-    customer_x509_cas="""  -----BEGIN CERTIFICATE-----
-  MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
-  VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
-  c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
-  SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
-  MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
-  VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
-  BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
-  c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
-  iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
-  cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
-  Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
-  SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
-  7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
-  iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
-  -----END CERTIFICATE-----"
-
-""",
-    project_id="<PROJECT-ID>")
+    project_id="<PROJECT-ID>",
+    customer_x509_cas="""-----BEGIN CERTIFICATE-----
+MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
+VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
+c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
+SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
+MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
+VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
+BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
+c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
+iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
+cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
+Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
+SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
+7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
+iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
+-----END CERTIFICATE-----"
+""")
 test509_authentication_database_user = test_x509_authentication_database_user.project_id.apply(lambda project_id: mongodbatlas.get509_authentication_database_user(project_id=project_id))
 ```
 
@@ -320,29 +318,29 @@ test509_authentication_database_user = test_x509_authentication_database_user.pr
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const testX509AuthenticationDatabaseUser = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
-    customerX509Cas: `  -----BEGIN CERTIFICATE-----
-  MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
-  VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
-  c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
-  SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
-  MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
-  VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
-  BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
-  c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
-  iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
-  cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
-  Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
-  SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
-  7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
-  iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
-  -----END CERTIFICATE-----"
-`,
+const testX509AuthenticationDatabaseUser = new mongodbatlas.X509AuthenticationDatabaseUser("testX509AuthenticationDatabaseUser", {
     projectId: "<PROJECT-ID>",
+    customerX509Cas: `-----BEGIN CERTIFICATE-----
+MIICmTCCAgICCQDZnHzklxsT9TANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
+VVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xETAPBgNVBAoMCHRl
+c3QuY29tMQ0wCwYDVQQLDARUZXN0MREwDwYDVQQDDAh0ZXN0LmNvbTErMCkGCSqG
+SIb3DQEJARYcbWVsaXNzYS5wbHVua2V0dEBtb25nb2RiLmNvbTAeFw0yMDAyMDQy
+MDQ2MDFaFw0yMTAyMDMyMDQ2MDFaMIGQMQswCQYDVQQGEwJVUzEOMAwGA1UECAwF
+VGV4YXMxDzANBgNVBAcMBkF1c3RpbjERMA8GA1UECgwIdGVzdC5jb20xDTALBgNV
+BAsMBFRlc3QxETAPBgNVBAMMCHRlc3QuY29tMSswKQYJKoZIhvcNAQkBFhxtZWxp
+c3NhLnBsdW5rZXR0QG1vbmdvZGIuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCB
+iQKBgQCf1LRqr1zftzdYx2Aj9G76tb0noMPtj6faGLlPji1+m6Rn7RWD9L0ntWAr
+cURxvypa9jZ9MXFzDtLevvd3tHEmfrUT3ukNDX6+Jtc4kWm+Dh2A70Pd+deKZ2/O
+Fh8audEKAESGXnTbeJCeQa1XKlIkjqQHBNwES5h1b9vJtFoLJwIDAQABMA0GCSqG
+SIb3DQEBCwUAA4GBADMUncjEPV/MiZUcVNGmktP6BPmEqMXQWUDpdGW2+Tg2JtUA
+7MMILtepBkFzLO+GlpZxeAlXO0wxiNgEmCRONgh4+t2w3e7a8GFijYQ99FHrAC5A
+iul59bdl18gVqXia1Yeq/iK7Ohfy/Jwd7Hsm530elwkM/ZEkYDjBlZSXYdyz
+-----END CERTIFICATE-----"
+`,
 });
 const test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.projectId.apply(projectId => mongodbatlas.get509AuthenticationDatabaseUser({
     projectId: projectId,
-}, { async: true }));
+}));
 ```
 
 
@@ -363,17 +361,19 @@ const test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.pro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>get509AuthenticationDatabaseUser<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>get509AuthenticationDatabaseUser<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get509_authentication_database_user(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> Get509AuthenticationDatabaseUserResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get509_authentication_database_user(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> Get509AuthenticationDatabaseUserResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>Get509AuthenticationDatabaseUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>Get509AuthenticationDatabaseUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `Get509AuthenticationDatabaseUser` in the Go SDK.
 
@@ -382,7 +382,7 @@ const test509AuthenticationDatabaseUser = testX509AuthenticationDatabaseUser.pro
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">Get509AuthenticationDatabaseUser </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">Get509AuthenticationDatabaseUserResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">Get509AuthenticationDatabaseUserArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

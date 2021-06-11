@@ -109,7 +109,7 @@ package main
 
 import (
 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -304,19 +304,43 @@ const workspace = new azure_native.synapse.Workspace("workspace", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_storage</span><span class="p">:</span> <span class="nx">Optional[DataLakeStorageAccountDetailsArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedVirtualNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, WorkspacePublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">purview_configuration</span><span class="p">:</span> <span class="nx">Optional[PurviewConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_repository_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkspaceRepositoryConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">default_data_lake_storage</span><span class="p">:</span> <span class="nx">Optional[DataLakeStorageAccountDetailsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionDetailsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">managed_virtual_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">managed_virtual_network_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedVirtualNetworkSettingsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, WorkspacePublicNetworkAccess]]</span> = None<span class="p">,</span>
+              <span class="nx">purview_configuration</span><span class="p">:</span> <span class="nx">Optional[PurviewConfigurationArgs]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">virtual_network_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">,</span>
+              <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">workspace_repository_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkspaceRepositoryConfigurationArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -327,46 +351,44 @@ const workspace = new azure_native.synapse.Workspace("workspace", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -377,33 +399,25 @@ const workspace = new azure_native.synapse.Workspace("workspace", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -415,25 +429,19 @@ const workspace = new azure_native.synapse.Workspace("workspace", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -536,7 +544,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_csharp">
 <a href="#purviewconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -684,7 +692,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_go">
 <a href="#purviewconfiguration_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
@@ -766,7 +774,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#defaultdatalakestorage_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Data<wbr>Lake<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakestorageaccountdetails">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details</a></span>
+        <span class="property-type"><a href="#datalakestorageaccountdetails">Data<wbr>Lake<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workspace default data lake storage account details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +782,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetails">Encryption<wbr>Details</a></span>
+        <span class="property-type"><a href="#encryptiondetails">Encryption<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption details of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +790,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +822,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managedvirtualnetworksettings_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworksettings">Managed<wbr>Virtual<wbr>Network<wbr>Settings</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworksettings">Managed<wbr>Virtual<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +830,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,13 +840,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purviewconfiguration_nodejs">
 <a href="#purviewconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purviewconfiguration">Purview<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#purviewconfiguration">Purview<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Purview Configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +878,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +894,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacerepositoryconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Repository<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Git integration settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -980,7 +988,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#workspacepublicnetworkaccess">Workspace<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Enable or Disable pubic network access to workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or Disable public network access to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purview_configuration_python">
 <a href="#purview_configuration_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>configuration</a>
@@ -1329,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacekeydetails">Workspace<wbr>Key<wbr>Details</a></span>
+        <span class="property-type"><a href="#workspacekeydetails">Workspace<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1403,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#workspacekeydetailsresponse">Workspace<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key object of the workspace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1625,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmk_nodejs" style="color: inherit; text-decoration: inherit;">cmk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customermanagedkeydetails">Customer<wbr>Managed<wbr>Key<wbr>Details</a></span>
+        <span class="property-type"><a href="#customermanagedkeydetails">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmk_nodejs" style="color: inherit; text-decoration: inherit;">cmk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#customermanagedkeydetailsresponse">Customer<wbr>Managed<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key Details{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2149,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2319,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

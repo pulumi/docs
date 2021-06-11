@@ -121,7 +121,7 @@ package main
 
 import (
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -342,19 +342,36 @@ const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManag
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">, </span><span class="nx">auth_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterAuthProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pool_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterMasterPoolProfileArgs]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">open_shift_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftRouterProfileArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">auth_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterAuthProfileArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">master_pool_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterMasterPoolProfileArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">open_shift_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">router_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftRouterProfileArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftManagedCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftManagedCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -365,46 +382,44 @@ const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManag
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -415,33 +430,25 @@ const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManag
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -453,25 +460,19 @@ const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManag
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -692,7 +693,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +701,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#authprofile_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +717,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#masterpoolprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pool<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +725,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +733,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +749,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#routerprofiles_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofile">Open<wbr>Shift<wbr>Router<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofile">Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2409,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2491,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}

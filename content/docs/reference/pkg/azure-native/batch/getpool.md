@@ -22,17 +22,20 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPoolArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPoolArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPool` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1264,7 +1267,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1348,7 +1351,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Sequence[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Sequence[Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1372,7 +1375,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1459,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalerunerrorresponse">Auto<wbr>Scale<wbr>Run<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2048,7 +2051,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2108,7 +2111,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2636,7 +2639,7 @@ The following output properties are available:
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2720,7 +2723,7 @@ The following output properties are available:
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Sequence[Container<wbr>Registry<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Sequence[Container<wbr>Registry<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3036,7 +3039,7 @@ The following output properties are available:
 <a href="#cloudserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3044,7 +3047,7 @@ The following output properties are available:
 <a href="#virtualmachineconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3096,7 +3099,7 @@ The following output properties are available:
 <a href="#cloud_service_configuration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>service_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Cloud<wbr>Service<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceconfigurationresponse">Cloud<wbr>Service<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3104,7 +3107,7 @@ The following output properties are available:
 <a href="#virtual_machine_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigurationresponse">Virtual<wbr>Machine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3624,7 +3627,7 @@ The following output properties are available:
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3780,7 +3783,7 @@ The following output properties are available:
 <a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupruleresponse">Sequence[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networksecuritygroupruleresponse">Sequence[Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3996,7 +3999,7 @@ The following output properties are available:
 <a href="#azureblobfilesystemconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4004,7 +4007,7 @@ The following output properties are available:
 <a href="#azurefileshareconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Share<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4012,7 +4015,7 @@ The following output properties are available:
 <a href="#cifsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cifs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>CIFSMount<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4020,7 +4023,7 @@ The following output properties are available:
 <a href="#nfsmountconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Mount<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>NFSMount<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4104,7 +4107,7 @@ The following output properties are available:
 <a href="#azure_blob_file_system_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>system_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemconfigurationresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4112,7 +4115,7 @@ The following output properties are available:
 <a href="#azure_file_share_configuration_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>share_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareconfigurationresponse">Azure<wbr>File<wbr>Share<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4120,7 +4123,7 @@ The following output properties are available:
 <a href="#cifs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">cifs_<wbr>mount_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cifsmountconfigurationresponse">CIFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cifsmountconfigurationresponse">CIFSMount<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4128,7 +4131,7 @@ The following output properties are available:
 <a href="#nfs_mount_configuration_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>mount_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsmountconfigurationresponse">NFSMount<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsmountconfigurationresponse">NFSMount<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is mutually exclusive with all other properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4260,7 +4263,7 @@ The following output properties are available:
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Pool<wbr>Endpoint<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4268,7 +4271,7 @@ The following output properties are available:
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4344,7 +4347,7 @@ The following output properties are available:
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pool<wbr>Endpoint<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolendpointconfigurationresponse">Pool<wbr>Endpoint<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4352,7 +4355,7 @@ The following output properties are available:
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressconfigurationresponse">Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is only supported on Pools with the virtualMachineConfiguration property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4576,7 +4579,7 @@ The following output properties are available:
 <a href="#inboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4612,7 +4615,7 @@ The following output properties are available:
 <a href="#inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatpoolresponse">Sequence[Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundnatpoolresponse">Sequence[Inbound<wbr>Nat<wbr>Pool<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4728,7 +4731,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4812,7 +4815,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4828,7 +4831,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Resize<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4984,7 +4987,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resizeerrorresponse">Sequence[Resize<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5252,7 +5255,7 @@ The following output properties are available:
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5260,7 +5263,7 @@ The following output properties are available:
 <a href="#fixedscale_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Fixed<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5312,7 +5315,7 @@ The following output properties are available:
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and fixedScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5320,7 +5323,7 @@ The following output properties are available:
 <a href="#fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedscalesettingsresponse">Fixed<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fixedscalesettingsresponse">Fixed<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property and autoScale are mutually exclusive and one of the properties must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5344,7 +5347,7 @@ The following output properties are available:
 <a href="#containersettings_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5352,7 +5355,7 @@ The following output properties are available:
 <a href="#environmentsettings_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Environment<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5368,7 +5371,7 @@ The following output properties are available:
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Resource<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5376,7 +5379,7 @@ The following output properties are available:
 <a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useridentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5524,7 +5527,7 @@ The following output properties are available:
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskcontainersettingsresponse">Task<wbr>Container<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#taskcontainersettingsresponse">Task<wbr>Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5532,7 +5535,7 @@ The following output properties are available:
 <a href="#environment_settings_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsettingresponse">Sequence[Environment<wbr>Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentsettingresponse">Sequence[Environment<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5548,7 +5551,7 @@ The following output properties are available:
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefileresponse">Sequence[Resource<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcefileresponse">Sequence[Resource<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5556,7 +5559,7 @@ The following output properties are available:
 <a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useridentityresponse">User<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If omitted, the task runs as a non-administrative user unique to the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5596,7 +5599,7 @@ The following output properties are available:
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Registry<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5704,7 +5707,7 @@ The following output properties are available:
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerregistryresponse">Container<wbr>Registry<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This setting can be omitted if was already provided at pool creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5804,7 +5807,7 @@ The following output properties are available:
 <a href="#linuxuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Linux<wbr>User<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5812,7 +5815,7 @@ The following output properties are available:
 <a href="#windowsuserconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>User<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>User<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5936,7 +5939,7 @@ The following output properties are available:
 <a href="#linux_user_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>user_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxuserconfigurationresponse">Linux<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxuserconfigurationresponse">Linux<wbr>User<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5944,7 +5947,7 @@ The following output properties are available:
 <a href="#windows_user_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>user_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsuserconfigurationresponse">Windows<wbr>User<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsuserconfigurationresponse">Windows<wbr>User<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5960,7 +5963,7 @@ The following output properties are available:
 <a href="#autouser_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Auto<wbr>User<wbr>Specification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6020,7 +6023,7 @@ The following output properties are available:
 <a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autouserspecificationresponse">Auto<wbr>User<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autouserspecificationresponse">Auto<wbr>User<wbr>Specification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The userName and autoUser properties are mutually exclusive; you must specify one but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6320,7 +6323,7 @@ The following output properties are available:
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6336,7 +6339,7 @@ The following output properties are available:
 <a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Container<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6344,7 +6347,7 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6352,7 +6355,7 @@ The following output properties are available:
 <a href="#diskencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6360,7 +6363,7 @@ The following output properties are available:
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6380,7 +6383,7 @@ The following output properties are available:
 <a href="#nodeplacementconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6388,7 +6391,7 @@ The following output properties are available:
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6560,7 +6563,7 @@ The following output properties are available:
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6576,7 +6579,7 @@ The following output properties are available:
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfigurationresponse">Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerconfigurationresponse">Container<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6584,7 +6587,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6592,7 +6595,7 @@ The following output properties are available:
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionconfigurationresponse">Disk<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6600,7 +6603,7 @@ The following output properties are available:
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmextensionresponse">Sequence[VMExtension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmextensionresponse">Sequence[VMExtension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6620,7 +6623,7 @@ The following output properties are available:
 <a href="#node_placement_configuration_python" style="color: inherit; text-decoration: inherit;">node_<wbr>placement_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6628,7 +6631,7 @@ The following output properties are available:
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This property must not be specified if the imageReference specifies a Linux OS image.{{% /md %}}</dd></dl>
 {{% /choosable %}}

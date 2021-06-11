@@ -36,11 +36,11 @@ class MyStack : Stack
         var server = new AzureNative.DBforMySQL.Server("server", new AzureNative.DBforMySQL.ServerArgs
         {
             Location = "brazilsouth",
-            Properties = 
+            Properties = new AzureNative.DBforMySQL.Inputs.ServerPropertiesForRestoreArgs
             {
-                { "createMode", "PointInTimeRestore" },
-                { "restorePointInTime", "2017-12-14T00:00:37.467Z" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver" },
+                CreateMode = "PointInTimeRestore",
+                RestorePointInTime = "2017-12-14T00:00:37.467Z",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -68,7 +68,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformysql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformysql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
+			Location: pulumi.String("brazilsouth"),
+			Properties: dbformysql.ServerPropertiesForRestore{
+				CreateMode:         "PointInTimeRestore",
+				RestorePointInTime: "2017-12-14T00:00:37.467Z",
+				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbformysql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -82,11 +120,11 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformysql.Server("server",
     location="brazilsouth",
-    properties={
-        "createMode": "PointInTimeRestore",
-        "restorePointInTime": "2017-12-14T00:00:37.467Z",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
-    },
+    properties=azure_native.dbformysql.ServerPropertiesForRestoreArgs(
+        create_mode="PointInTimeRestore",
+        restore_point_in_time="2017-12-14T00:00:37.467Z",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbformysql.SkuArgs(
@@ -156,18 +194,18 @@ class MyStack : Stack
         var server = new AzureNative.DBforMySQL.Server("server", new AzureNative.DBforMySQL.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMySQL.Inputs.ServerPropertiesForDefaultCreateArgs
             {
-                { "administratorLogin", "cloudsa" },
-                { "administratorLoginPassword", "<administratorLoginPassword>" },
-                { "createMode", "Default" },
-                { "sslEnforcement", "Enabled" },
-                { "storageProfile", new AzureNative.DBforMySQL.Inputs.StorageProfileArgs
+                AdministratorLogin = "cloudsa",
+                AdministratorLoginPassword = "<administratorLoginPassword>",
+                CreateMode = "Default",
+                SslEnforcement = "Enabled",
+                StorageProfile = new AzureNative.DBforMySQL.Inputs.StorageProfileArgs
                 {
                     BackupRetentionDays = 7,
                     GeoRedundantBackup = "Enabled",
                     StorageMB = 128000,
-                } },
+                },
             },
             ResourceGroupName = "testrg",
             ServerName = "mysqltestsvc4",
@@ -195,7 +233,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformysql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformysql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformysql.ServerPropertiesForDefaultCreate{
+				AdministratorLogin:         "cloudsa",
+				AdministratorLoginPassword: "<administratorLoginPassword>",
+				CreateMode:                 "Default",
+				SslEnforcement:             "Enabled",
+				StorageProfile: dbformysql.StorageProfile{
+					BackupRetentionDays: 7,
+					GeoRedundantBackup:  "Enabled",
+					StorageMB:           128000,
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg"),
+			ServerName:        pulumi.String("mysqltestsvc4"),
+			Sku: &dbformysql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -209,17 +291,17 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformysql.Server("server",
     location="westus",
-    properties={
-        "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "<administratorLoginPassword>",
-        "createMode": "Default",
-        "sslEnforcement": "Enabled",
-        "storageProfile": azure_native.dbformysql.StorageProfileArgs(
+    properties=azure_native.dbformysql.ServerPropertiesForDefaultCreateArgs(
+        administrator_login="cloudsa",
+        administrator_login_password="<administratorLoginPassword>",
+        create_mode="Default",
+        ssl_enforcement="Enabled",
+        storage_profile=azure_native.dbformysql.StorageProfileArgs(
             backup_retention_days=7,
             geo_redundant_backup="Enabled",
             storage_mb=128000,
         ),
-    },
+    ),
     resource_group_name="testrg",
     server_name="mysqltestsvc4",
     sku=azure_native.dbformysql.SkuArgs(
@@ -295,10 +377,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforMySQL.Server("server", new AzureNative.DBforMySQL.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMySQL.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -315,7 +397,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformysql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformysql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformysql.ServerPropertiesForReplica{
+				CreateMode:     "Replica",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -329,10 +439,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformysql.Server("server",
     location="westus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
-    },
+    properties=azure_native.dbformysql.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMySQL/servers/masterserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
 
@@ -383,10 +493,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforMySQL.Server("server", new AzureNative.DBforMySQL.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMySQL.Inputs.ServerPropertiesForGeoRestoreArgs
             {
-                { "createMode", "GeoRestore" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver" },
+                CreateMode = "GeoRestore",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -414,7 +524,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformysql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformysql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformysql.ServerPropertiesForGeoRestore{
+				CreateMode:     "GeoRestore",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbformysql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -428,10 +575,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformysql.Server("server",
     location="westus",
-    properties={
-        "createMode": "GeoRestore",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
-    },
+    properties=azure_native.dbformysql.ServerPropertiesForGeoRestoreArgs(
+        create_mode="GeoRestore",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbformysql.SkuArgs(
@@ -495,19 +642,32 @@ const server = new azure_native.dbformysql.Server("server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -518,46 +678,44 @@ const server = new azure_native.dbformysql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServerArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,33 +726,25 @@ const server = new azure_native.dbformysql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -606,25 +756,19 @@ const server = new azure_native.dbformysql.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -765,7 +909,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</a></span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -781,7 +925,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +949,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2006,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2338,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2830,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3096,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

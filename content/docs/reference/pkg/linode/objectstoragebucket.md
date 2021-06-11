@@ -58,8 +58,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,19 +135,34 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[ObjectStorageBucketCertArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[ObjectStorageBucketCertArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">cors_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectStorageBucketLifecycleRuleArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectStorageBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectStorageBucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectStorageBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectStorageBucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectStorageBucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ObjectStorageBucketArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,46 +173,44 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,35 +219,27 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -246,25 +251,19 @@ const foobar = new linode.ObjectStorageBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ObjectStorageBucketArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -299,13 +298,68 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acl_csharp">
+<a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="corsenabled_csharp">
+<a href="#corsenabled_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecyclerules_csharp">
+<a href="#lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">List&lt;Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretkey_csharp">
+<a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioning_csharp">
+<a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -329,13 +383,68 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acl_go">
+<a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="corsenabled_go">
+<a href="#corsenabled_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecyclerules_go">
+<a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">[]Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretkey_go">
+<a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioning_go">
+<a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -359,13 +468,68 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acl_nodejs">
+<a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
+        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="corsenabled_nodejs">
+<a href="#corsenabled_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecyclerules_nodejs">
+<a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretkey_nodejs">
+<a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioning_nodejs">
+<a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -389,13 +553,68 @@ The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acl_python">
+<a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cors_enabled_python">
+<a href="#cors_enabled_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lifecycle_rules_python">
+<a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">Sequence[Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versioning_python">
+<a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -461,20 +680,31 @@ Get an existing ObjectStorageBucket resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ObjectStorageBucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ObjectStorageBucket</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ObjectStorageBucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ObjectStorageBucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[ObjectStorageBucketCertArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ObjectStorageBucket</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[ObjectStorageBucketCertArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cors_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectStorageBucketLifecycleRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ObjectStorageBucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectStorageBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ObjectStorageBucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectStorageBucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectStorageBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ObjectStorageBucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectStorageBucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ObjectStorageBucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ObjectStorageBucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ObjectStorageBucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ObjectStorageBucketState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -579,13 +809,32 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesskey_csharp">
+<a href="#state_accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_acl_csharp">
+<a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cert_csharp">
 <a href="#state_cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_csharp">
 <a href="#state_cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -596,6 +845,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cluster of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_corsenabled_csharp">
+<a href="#state_corsenabled_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -603,11 +861,56 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lifecyclerules_csharp">
+<a href="#state_lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">List&lt;Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secretkey_csharp">
+<a href="#state_secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versioning_csharp">
+<a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_accesskey_go">
+<a href="#state_accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_acl_go">
+<a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cert_go">
 <a href="#state_cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -615,7 +918,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_go">
 <a href="#state_cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -626,6 +930,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cluster of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_corsenabled_go">
+<a href="#state_corsenabled_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -633,19 +946,65 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lifecyclerules_go">
+<a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">[]Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secretkey_go">
+<a href="#state_secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versioning_go">
+<a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_accesskey_nodejs">
+<a href="#state_accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_acl_nodejs">
+<a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cert_nodejs">
 <a href="#state_cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert</a></span>
+        <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_nodejs">
 <a href="#state_cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -656,6 +1015,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cluster of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_corsenabled_nodejs">
+<a href="#state_corsenabled_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
@@ -663,11 +1031,56 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lifecyclerules_nodejs">
+<a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secretkey_nodejs">
+<a href="#state_secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versioning_nodejs">
+<a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_access_key_python">
+<a href="#state_access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 access key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_acl_python">
+<a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Access Control Level of the bucket using a canned ACL string. See all ACL strings in the Linode API v4 documentation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cert_python">
 <a href="#state_cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -675,7 +1088,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectstoragebucketcert">Object<wbr>Storage<wbr>Bucket<wbr>Cert<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The cert used by this Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_python">
 <a href="#state_cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -686,6 +1100,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cluster of the Linode Object Storage Bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cors_enabled_python">
+<a href="#state_cors_enabled_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the bucket will have CORS enabled for all origins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
@@ -693,6 +1116,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label of the Linode Object Storage Bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lifecycle_rules_python">
+<a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerule">Sequence[Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Lifecycle rules to be applied to the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secret_key_python">
+<a href="#state_secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 secret key to use for this resource. (Required for lifecycle_rule and versioning)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versioning_python">
+<a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -792,6 +1242,412 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key associated with the TLS/SSL certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectstoragebucketlifecyclerule">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the lifecycle rule is active.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="abortincompletemultipartuploaddays_csharp">
+<a href="#abortincompletemultipartuploaddays_csharp" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_csharp">
+<a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrentversionexpiration_csharp">
+<a href="#noncurrentversionexpiration_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the lifecycle rule is active.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="abortincompletemultipartuploaddays_go">
+<a href="#abortincompletemultipartuploaddays_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_go">
+<a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrentversionexpiration_go">
+<a href="#noncurrentversionexpiration_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the lifecycle rule is active.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="abortincompletemultipartuploaddays_nodejs">
+<a href="#abortincompletemultipartuploaddays_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_nodejs">
+<a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrentversionexpiration_nodejs">
+<a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the lifecycle rule is active.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="abort_incomplete_multipart_upload_days_python">
+<a href="#abort_incomplete_multipart_upload_days_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_python">
+<a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrent_version_expiration_python">
+<a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectstoragebucketlifecycleruleexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="date_csharp">
+<a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiredobjectdeletemarker_csharp">
+<a href="#expiredobjectdeletemarker_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Linode Object Storage to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="date_go">
+<a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiredobjectdeletemarker_go">
+<a href="#expiredobjectdeletemarker_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Linode Object Storage to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="date_nodejs">
+<a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiredobjectdeletemarker_nodejs">
+<a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Linode Object Storage to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="date_python">
+<a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expired_object_delete_marker_python">
+<a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Linode Object Storage to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="objectstoragebucketlifecyclerulenoncurrentversionexpiration">Object<wbr>Storage<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days non-current object versions expire.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -125,17 +125,24 @@ export const azureAdObjectId = example.then(example => example.id);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetApplicationOauth2Permission]]</span> = None<span class="p">,</span>
+                    <span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaims]</span> = None<span class="p">,</span>
+                    <span class="nx">web</span><span class="p">:</span> <span class="nx">Optional[GetApplicationWeb]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApplicationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApplicationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApplication` in the Go SDK.
 
@@ -144,7 +151,7 @@ export const azureAdObjectId = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -162,7 +169,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+    <dd>{{% md %}}Specifies the Application ID (also called Client ID).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
@@ -171,7 +178,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the display name of the application.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_csharp">
@@ -181,16 +188,16 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="oauth2permissions_csharp">
 <a href="#oauth2permissions_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -198,16 +205,25 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optionalclaims_csharp">
 <a href="#optionalclaims_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaims">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_csharp">
+<a href="#web_csharp" style="color: inherit; text-decoration: inherit;">Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -220,7 +236,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+    <dd>{{% md %}}Specifies the Application ID (also called Client ID).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
@@ -229,7 +245,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the display name of the application.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_go">
@@ -239,16 +255,16 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="oauth2permissions_go">
 <a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationoauth2permission">[]Get<wbr>Application<wbr>Oauth2Permission</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -256,7 +272,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optionalclaims_go">
@@ -266,6 +282,15 @@ The following arguments are supported:
         <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_go">
+<a href="#web_go" style="color: inherit; text-decoration: inherit;">Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -278,7 +303,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+    <dd>{{% md %}}Specifies the Application ID (also called Client ID).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
@@ -287,7 +312,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the display name of the application.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_nodejs">
@@ -297,16 +322,16 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="oauth2permissions_nodejs">
 <a href="#oauth2permissions_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -314,7 +339,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optionalclaims_nodejs">
@@ -324,6 +349,15 @@ The following arguments are supported:
         <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_nodejs">
+<a href="#web_nodejs" style="color: inherit; text-decoration: inherit;">web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -336,7 +370,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Application ID of the Azure Active Directory Application.
+    <dd>{{% md %}}Specifies the Application ID (also called Client ID).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
@@ -345,7 +379,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the display name of the application.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_python">
@@ -355,16 +389,16 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="oauth2_permissions_python">
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoauth2permission">Sequence[Get<wbr>Application<wbr>Oauth2Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationoauth2permission">Sequence[Get<wbr>Application<wbr>Oauth2Permission]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -372,16 +406,25 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the application.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_claims_python">
 <a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaims">Get<wbr>Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="web_python">
+<a href="#web_python" style="color: inherit; text-decoration: inherit;">web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -397,13 +440,22 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="apis_csharp">
+<a href="#apis_csharp" style="color: inherit; text-decoration: inherit;">Apis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationapi">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Api&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `api` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="approles_csharp">
 <a href="#approles_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationapprole">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>App<wbr>Role&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
+    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationid_csharp">
@@ -412,17 +464,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the Application ID of the Azure Active Directory Application.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}the Application ID (also called Client ID).
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="availabletoothertenants_csharp">
 <a href="#availabletoothertenants_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>To<wbr>Other<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Azure AD Application available to other tenants?
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) Is this Azure AD Application available to other tenants?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new property `sign_in_audience` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -430,7 +482,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fallbackpublicclientenabled_csharp">
+<a href="#fallbackpublicclientenabled_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Public<wbr>Client<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupmembershipclaims_csharp">
@@ -440,15 +501,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="homepage_csharp">
 <a href="#homepage_csharp" style="color: inherit; text-decoration: inherit;">Homepage</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) The URL to the application's home page. This property is deprecated and has been replaced by the `homepage_url` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -466,16 +528,16 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="logouturl_csharp">
 <a href="#logouturl_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the logout page.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -484,25 +546,25 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2allowimplicitflow_csharp">
 <a href="#oauth2allowimplicitflow_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Allow<wbr>Implicit<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}(**Deprecated**) Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved to the `implicit_grant` block and renamed to `access_token_issuance_enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2permissions_csharp">
 <a href="#oauth2permissions_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Oauth2Permission&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -510,7 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the Object ID of the Azure Active Directory Application.
+    <dd>{{% md %}}The application's Object ID.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_csharp">
@@ -519,17 +581,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of User Object IDs that are assigned ownership of the application registration.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}A list of Object IDs for principals that are assigned ownership of the application.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="replyurls_csharp">
 <a href="#replyurls_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to. This property is deprecated and has been replaced by the `redirect_uris` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new attribute `redirect_uris` in the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="requiredresourceaccesses_csharp">
 <a href="#requiredresourceaccesses_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
@@ -540,13 +602,31 @@ The following output properties are available:
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signinaudience_csharp">
+<a href="#signinaudience_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>In<wbr>Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This legacy property is deprecated and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="web_csharp">
+<a href="#web_csharp" style="color: inherit; text-decoration: inherit;">Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="optionalclaims_csharp">
@@ -562,13 +642,22 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="apis_go">
+<a href="#apis_go" style="color: inherit; text-decoration: inherit;">Apis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationapi">[]Get<wbr>Application<wbr>Api</a></span>
+    </dt>
+    <dd>{{% md %}}An `api` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="approles_go">
 <a href="#approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationapprole">[]Get<wbr>Application<wbr>App<wbr>Role<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
+    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationid_go">
@@ -577,17 +666,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the Application ID of the Azure Active Directory Application.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}the Application ID (also called Client ID).
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="availabletoothertenants_go">
 <a href="#availabletoothertenants_go" style="color: inherit; text-decoration: inherit;">Available<wbr>To<wbr>Other<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Azure AD Application available to other tenants?
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) Is this Azure AD Application available to other tenants?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new property `sign_in_audience` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -595,7 +684,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fallbackpublicclientenabled_go">
+<a href="#fallbackpublicclientenabled_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Public<wbr>Client<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupmembershipclaims_go">
@@ -605,15 +703,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="homepage_go">
 <a href="#homepage_go" style="color: inherit; text-decoration: inherit;">Homepage</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) The URL to the application's home page. This property is deprecated and has been replaced by the `homepage_url` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -631,16 +730,16 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="logouturl_go">
 <a href="#logouturl_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the logout page.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -649,25 +748,25 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2allowimplicitflow_go">
 <a href="#oauth2allowimplicitflow_go" style="color: inherit; text-decoration: inherit;">Oauth2Allow<wbr>Implicit<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}(**Deprecated**) Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved to the `implicit_grant` block and renamed to `access_token_issuance_enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2permissions_go">
 <a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationoauth2permission">[]Get<wbr>Application<wbr>Oauth2Permission</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -675,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the Object ID of the Azure Active Directory Application.
+    <dd>{{% md %}}The application's Object ID.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_go">
@@ -684,17 +783,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of User Object IDs that are assigned ownership of the application registration.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}A list of Object IDs for principals that are assigned ownership of the application.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="replyurls_go">
 <a href="#replyurls_go" style="color: inherit; text-decoration: inherit;">Reply<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to. This property is deprecated and has been replaced by the `redirect_uris` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new attribute `redirect_uris` in the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="requiredresourceaccesses_go">
 <a href="#requiredresourceaccesses_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
@@ -705,13 +804,31 @@ The following output properties are available:
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signinaudience_go">
+<a href="#signinaudience_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>In<wbr>Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This legacy property is deprecated and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="web_go">
+<a href="#web_go" style="color: inherit; text-decoration: inherit;">Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="optionalclaims_go">
@@ -727,13 +844,22 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="apis_nodejs">
+<a href="#apis_nodejs" style="color: inherit; text-decoration: inherit;">apis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationapi">Get<wbr>Application<wbr>Api[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `api` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="approles_nodejs">
 <a href="#approles_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationapprole">Get<wbr>Application<wbr>App<wbr>Role[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
+    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationid_nodejs">
@@ -742,17 +868,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the Application ID of the Azure Active Directory Application.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}the Application ID (also called Client ID).
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="availabletoothertenants_nodejs">
 <a href="#availabletoothertenants_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>To<wbr>Other<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is this Azure AD Application available to other tenants?
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) Is this Azure AD Application available to other tenants?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new property `sign_in_audience` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -760,7 +886,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fallbackpublicclientenabled_nodejs">
+<a href="#fallbackpublicclientenabled_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Public<wbr>Client<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupmembershipclaims_nodejs">
@@ -770,15 +905,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="homepage_nodejs">
 <a href="#homepage_nodejs" style="color: inherit; text-decoration: inherit;">homepage</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) The URL to the application's home page. This property is deprecated and has been replaced by the `homepage_url` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -796,16 +932,16 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="logouturl_nodejs">
 <a href="#logouturl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the logout page.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -814,25 +950,25 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2allowimplicitflow_nodejs">
 <a href="#oauth2allowimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Allow<wbr>Implicit<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}(**Deprecated**) Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved to the `implicit_grant` block and renamed to `access_token_issuance_enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2permissions_nodejs">
 <a href="#oauth2permissions_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permissions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -840,7 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the Object ID of the Azure Active Directory Application.
+    <dd>{{% md %}}The application's Object ID.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_nodejs">
@@ -849,17 +985,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of User Object IDs that are assigned ownership of the application registration.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}A list of Object IDs for principals that are assigned ownership of the application.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="replyurls_nodejs">
 <a href="#replyurls_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to. This property is deprecated and has been replaced by the `redirect_uris` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new attribute `redirect_uris` in the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="requiredresourceaccesses_nodejs">
 <a href="#requiredresourceaccesses_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Resource<wbr>Accesses</a>
@@ -870,13 +1006,31 @@ The following output properties are available:
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="signinaudience_nodejs">
+<a href="#signinaudience_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In<wbr>Audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This legacy property is deprecated and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="web_nodejs">
+<a href="#web_nodejs" style="color: inherit; text-decoration: inherit;">web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="optionalclaims_nodejs">
@@ -892,13 +1046,22 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="apis_python">
+<a href="#apis_python" style="color: inherit; text-decoration: inherit;">apis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationapi">Sequence[Get<wbr>Application<wbr>Api]</a></span>
+    </dt>
+    <dd>{{% md %}}An `api` block as documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="app_roles_python">
 <a href="#app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationapprole">Sequence[Get<wbr>Application<wbr>App<wbr>Role]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
+    <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="application_id_python">
@@ -907,17 +1070,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the Application ID of the Azure Active Directory Application.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}the Application ID (also called Client ID).
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="available_to_other_tenants_python">
 <a href="#available_to_other_tenants_python" style="color: inherit; text-decoration: inherit;">available_<wbr>to_<wbr>other_<wbr>tenants</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is this Azure AD Application available to other tenants?
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) Is this Azure AD Application available to other tenants?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new property `sign_in_audience` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -925,7 +1088,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Display name for the app role that appears during app role assignment and in consent experiences.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fallback_public_client_enabled_python">
+<a href="#fallback_public_client_enabled_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>public_<wbr>client_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The fallback application type as public client, such as an installed application running on a mobile device.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="group_membership_claims_python">
@@ -935,15 +1107,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="homepage_python">
 <a href="#homepage_python" style="color: inherit; text-decoration: inherit;">homepage</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) The URL to the application's home page. This property is deprecated and has been replaced by the `homepage_url` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -961,16 +1134,16 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="logout_url_python">
 <a href="#logout_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the logout page.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved into the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -979,25 +1152,25 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
-            title="">
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2_allow_implicit_flow_python">
 <a href="#oauth2_allow_implicit_flow_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>allow_<wbr>implicit_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}(**Deprecated**) Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be moved to the `implicit_grant` block and renamed to `access_token_issuance_enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="oauth2_permissions_python">
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationoauth2permission">Sequence[Get<wbr>Application<wbr>Oauth2Permission]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2_permission` block as documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] The `oauth2_permissions` block has been renamed to `oauth2_permission_scopes` and moved to the `api` block. `oauth2_permissions` will be removed in version 2.0 of the AzureAD provider.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1005,7 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the Object ID of the Azure Active Directory Application.
+    <dd>{{% md %}}The application's Object ID.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_python">
@@ -1014,17 +1187,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of User Object IDs that are assigned ownership of the application registration.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}A list of Object IDs for principals that are assigned ownership of the application.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="reply_urls_python">
 <a href="#reply_urls_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}(**Deprecated**) A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to. This property is deprecated and has been replaced by the `redirect_uris` property in the `web` block.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be replaced by a new attribute `redirect_uris` in the `web` block in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="required_resource_accesses_python">
 <a href="#required_resource_accesses_python" style="color: inherit; text-decoration: inherit;">required_<wbr>resource_<wbr>accesses</a>
@@ -1035,13 +1208,31 @@ The following output properties are available:
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="sign_in_audience_python">
+<a href="#sign_in_audience_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in_<wbr>audience</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This legacy property is deprecated and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="web_python">
+<a href="#web_python" style="color: inherit; text-decoration: inherit;">web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationweb">Get<wbr>Application<wbr>Web</a></span>
+    </dt>
+    <dd>{{% md %}}A `web` block as documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="optional_claims_python">
@@ -1060,243 +1251,59 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="getapplicationapprole">Get<wbr>Application<wbr>App<wbr>Role</h4>
+<h4 id="getapplicationapi">Get<wbr>Application<wbr>Api</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allowedmembertypes_csharp">
-<a href="#allowedmembertypes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
+        <span id="oauth2permissionscopes_csharp">
+<a href="#oauth2permissionscopes_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#getapplicationapioauth2permissionscope">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="displayname_csharp">
-<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isenabled_csharp">
-<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of this permission
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allowedmembertypes_go">
-<a href="#allowedmembertypes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
+        <span id="oauth2permissionscopes_go">
+<a href="#oauth2permissionscopes_go" style="color: inherit; text-decoration: inherit;">Oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#getapplicationapioauth2permissionscope">[]Get<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="displayname_go">
-<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isenabled_go">
-<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of this permission
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allowedmembertypes_nodejs">
-<a href="#allowedmembertypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
+        <span id="oauth2permissionscopes_nodejs">
+<a href="#oauth2permissionscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permission<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#getapplicationapioauth2permissionscope">Get<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="displayname_nodejs">
-<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="isenabled_nodejs">
-<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of this permission
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allowed_member_types_python">
-<a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
+        <span id="oauth2_permission_scopes_python">
+<a href="#oauth2_permission_scopes_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permission_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#getapplicationapioauth2permissionscope">Sequence[Get<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="display_name_python">
-<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="is_enabled_python">
-<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of this permission
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission</h4>
+<h4 id="getapplicationapioauth2permissionscope">Get<wbr>Application<wbr>Api<wbr>Oauth2Permission<wbr>Scope</h4>
 
 
 
@@ -1321,6 +1328,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the admin consent
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1328,8 +1344,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
 </span>
@@ -1337,7 +1353,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1345,7 +1361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userconsentdescription_csharp">
@@ -1397,6 +1413,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the admin consent
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1404,8 +1429,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
 </span>
@@ -1413,7 +1438,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1421,7 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userconsentdescription_go">
@@ -1473,6 +1498,15 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the admin consent
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1480,8 +1514,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
@@ -1489,7 +1523,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this permission enabled?
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1497,7 +1531,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userconsentdescription_nodejs">
@@ -1549,6 +1583,631 @@ The following output properties are available:
     <dd>{{% md %}}The display name of the admin consent
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute has been renamed to `enabled` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_consent_description_python">
+<a href="#user_consent_description_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_consent_display_name_python">
+<a href="#user_consent_display_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getapplicationapprole">Get<wbr>Application<wbr>App<wbr>Role</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedmembertypes_csharp">
+<a href="#allowedmembertypes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be renamed to `enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedmembertypes_go">
+<a href="#allowedmembertypes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be renamed to `enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedmembertypes_nodejs">
+<a href="#allowedmembertypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be renamed to `enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_member_types_python">
+<a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}[NOTE] This attribute will be renamed to `enabled` in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminconsentdescription_csharp">
+<a href="#adminconsentdescription_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="adminconsentdisplayname_csharp">
+<a href="#adminconsentdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userconsentdescription_csharp">
+<a href="#userconsentdescription_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userconsentdisplayname_csharp">
+<a href="#userconsentdisplayname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminconsentdescription_go">
+<a href="#adminconsentdescription_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="adminconsentdisplayname_go">
+<a href="#adminconsentdisplayname_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userconsentdescription_go">
+<a href="#userconsentdescription_go" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userconsentdisplayname_go">
+<a href="#userconsentdisplayname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adminconsentdescription_nodejs">
+<a href="#adminconsentdescription_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="adminconsentdisplayname_nodejs">
+<a href="#adminconsentdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is this permission enabled?
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userconsentdescription_nodejs">
+<a href="#userconsentdescription_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userconsentdisplayname_nodejs">
+<a href="#userconsentdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the user consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of this permission
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="admin_consent_description_python">
+<a href="#admin_consent_description_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="admin_consent_display_name_python">
+<a href="#admin_consent_display_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the admin consent
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Determines if the permission scope is enabled.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1573,7 +2232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_consent_description_python">
@@ -1615,7 +2274,7 @@ The following output properties are available:
 <a href="#accesstokens_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +2282,7 @@ The following output properties are available:
 <a href="#idtokens_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1675,7 +2334,7 @@ The following output properties are available:
 <a href="#access_tokens_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">Sequence[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsaccesstoken">Sequence[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +2342,7 @@ The following output properties are available:
 <a href="#id_tokens_python" style="color: inherit; text-decoration: inherit;">id_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">Sequence[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationoptionalclaimsidtoken">Sequence[Get<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2027,9 +2686,9 @@ The following output properties are available:
 <a href="#resourceaccesses_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `resource_access` blocks as documented below
+    <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceappid_csharp">
@@ -2038,7 +2697,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for the resource that the application requires access to.
+    <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This is the Application ID of the target application.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2051,7 +2710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">[]Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `resource_access` blocks as documented below
+    <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceappid_go">
@@ -2060,7 +2719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for the resource that the application requires access to.
+    <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This is the Application ID of the target application.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2073,7 +2732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `resource_access` blocks as documented below
+    <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceappid_nodejs">
@@ -2082,7 +2741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for the resource that the application requires access to.
+    <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This is the Application ID of the target application.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2093,9 +2752,9 @@ The following output properties are available:
 <a href="#resource_accesses_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">Sequence[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getapplicationrequiredresourceaccessresourceaccess">Sequence[Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of `resource_access` blocks as documented below
+    <dd>{{% md %}}A collection of `resource_access` blocks as documented below, describing OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_app_id_python">
@@ -2104,7 +2763,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for the resource that the application requires access to.
+    <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This is the Application ID of the target application.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2130,7 +2789,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2152,7 +2811,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2174,7 +2833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2196,7 +2855,227 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`.
+    <dd>{{% md %}}Specifies whether the `id` property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getapplicationweb">Get<wbr>Application<wbr>Web</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="homepageurl_csharp">
+<a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Home page or landing page of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="implicitgrants_csharp">
+<a href="#implicitgrants_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Grants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationwebimplicitgrant">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Get<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `implicit_grant` block as documented above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logouturl_csharp">
+<a href="#logouturl_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="redirecturis_csharp">
+<a href="#redirecturis_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uris</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="homepageurl_go">
+<a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Home page or landing page of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="implicitgrants_go">
+<a href="#implicitgrants_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Grants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationwebimplicitgrant">[]Get<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant</a></span>
+    </dt>
+    <dd>{{% md %}}An `implicit_grant` block as documented above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logouturl_go">
+<a href="#logouturl_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="redirecturis_go">
+<a href="#redirecturis_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uris</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="homepageurl_nodejs">
+<a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Home page or landing page of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="implicitgrants_nodejs">
+<a href="#implicitgrants_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Grants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationwebimplicitgrant">Get<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `implicit_grant` block as documented above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logouturl_nodejs">
+<a href="#logouturl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="redirecturis_nodejs">
+<a href="#redirecturis_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uris</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="homepage_url_python">
+<a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Home page or landing page of the application.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="implicit_grants_python">
+<a href="#implicit_grants_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>grants</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getapplicationwebimplicitgrant">Sequence[Get<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant]</a></span>
+    </dt>
+    <dd>{{% md %}}An `implicit_grant` block as documented above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logout_url_python">
+<a href="#logout_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="redirect_uris_python">
+<a href="#redirect_uris_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uris</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getapplicationwebimplicitgrant">Get<wbr>Application<wbr>Web<wbr>Implicit<wbr>Grant</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accesstokenissuanceenabled_csharp">
+<a href="#accesstokenissuanceenabled_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Issuance<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this web application can request an access token using OAuth 2.0 implicit flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accesstokenissuanceenabled_go">
+<a href="#accesstokenissuanceenabled_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Issuance<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this web application can request an access token using OAuth 2.0 implicit flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="accesstokenissuanceenabled_nodejs">
+<a href="#accesstokenissuanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Issuance<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this web application can request an access token using OAuth 2.0 implicit flow.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="access_token_issuance_enabled_python">
+<a href="#access_token_issuance_enabled_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>issuance_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this web application can request an access token using OAuth 2.0 implicit flow.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2211,6 +3090,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

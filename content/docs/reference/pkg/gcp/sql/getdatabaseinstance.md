@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -95,7 +95,7 @@ import * as gcp from "@pulumi/gcp";
 
 const qa = pulumi.output(gcp.sql.getDatabaseInstance({
     name: "test-sql-instance",
-}, { async: true }));
+}));
 ```
 
 
@@ -116,17 +116,19 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatabaseInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatabaseInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatabaseInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatabaseInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatabaseInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatabaseInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_instance(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseInstanceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_database_instance(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatabaseInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatabaseInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatabaseInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatabaseInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatabaseInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDatabaseInstance` in the Go SDK.
 
@@ -135,7 +137,7 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatabaseInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatabaseInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatabaseInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatabaseInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatabaseInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1937,7 +1939,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_csharp">
@@ -1966,7 +1968,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
 <a href="#backupconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1984,7 +1986,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#databaseflags_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1995,6 +1997,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskautoresizelimit_csharp">
+<a href="#diskautoresizelimit_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_csharp">
@@ -2019,7 +2030,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#insightsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2027,7 +2038,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2035,7 +2046,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#locationpreferences_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2054,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#maintenancewindows_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2114,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_go">
@@ -2161,6 +2172,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskautoresizelimit_go">
+<a href="#diskautoresizelimit_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_go">
@@ -2269,7 +2289,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizedgaeapplications_nodejs">
@@ -2327,6 +2347,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="diskautoresizelimit_nodejs">
+<a href="#diskautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksize_nodejs">
@@ -2435,7 +2464,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
-active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
+active. Can be either `ALWAYS` or `NEVER`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorized_gae_applications_python">
@@ -2464,7 +2493,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
 <a href="#backup_configurations_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2482,7 +2511,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2493,6 +2522,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="disk_autoresize_limit_python">
+<a href="#disk_autoresize_limit_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size, in GB, to which storage capacity can be automatically increased.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_size_python">
@@ -2517,7 +2555,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#insights_configs_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2525,7 +2563,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2533,7 +2571,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#location_preferences_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2541,7 +2579,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#maintenance_windows_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2602,7 +2640,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#backupretentionsettings_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2791,7 +2829,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#backup_retention_settings_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfigurationbackupretentionsetting">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3198,7 +3236,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3315,7 +3353,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -95,7 +95,7 @@ import * as azure from "@pulumi/azure";
 
 const example = pulumi.output(azure.compute.getImages({
     resourceGroupName: "example-resources",
-}, { async: true }));
+}));
 ```
 
 
@@ -116,17 +116,19 @@ const example = pulumi.output(azure.compute.getImages({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImages<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImagesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImagesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImages<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImagesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImagesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_images(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags_filter</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImagesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_images(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">tags_filter</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImagesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImagesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImagesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImages<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetImagesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImagesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetImages` in the Go SDK.
 
@@ -135,7 +137,7 @@ const example = pulumi.output(azure.compute.getImages({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetImages </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetImagesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImagesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetImagesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImagesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -410,7 +412,7 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesimagedatadisk">List&lt;Get<wbr>Images<wbr>Image<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getimagesimagedatadisk">List&lt;Get<wbr>Images<wbr>Image<wbr>Data<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -437,7 +439,7 @@ The following output properties are available:
 <a href="#osdisks_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesimageosdisk">List&lt;Get<wbr>Images<wbr>Image<wbr>Os<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getimagesimageosdisk">List&lt;Get<wbr>Images<wbr>Image<wbr>Os<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -584,7 +586,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesimagedatadisk">Sequence[Get<wbr>Images<wbr>Image<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getimagesimagedatadisk">Sequence[Get<wbr>Images<wbr>Image<wbr>Data<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -611,7 +613,7 @@ The following output properties are available:
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagesimageosdisk">Sequence[Get<wbr>Images<wbr>Image<wbr>Os<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getimagesimageosdisk">Sequence[Get<wbr>Images<wbr>Image<wbr>Os<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}An `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-required"

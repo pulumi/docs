@@ -49,8 +49,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -88,7 +88,7 @@ test = datadog.get_ip_ranges()
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
-const test = pulumi.output(datadog.getIpRanges({ async: true }));
+const test = pulumi.output(datadog.getIpRanges());
 ```
 
 
@@ -119,7 +119,7 @@ const test = pulumi.output(datadog.getIpRanges({ async: true }));
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpRangesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetIpRanges` in the Go SDK.
 
@@ -150,7 +150,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentsipv6s_csharp">
 <a href="#agentsipv6s_csharp" style="color: inherit; text-decoration: inherit;">Agents<wbr>Ipv6s</a>
@@ -158,7 +159,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiipv4s_csharp">
 <a href="#apiipv4s_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Ipv4s</a>
@@ -166,7 +168,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiipv6s_csharp">
 <a href="#apiipv6s_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Ipv6s</a>
@@ -174,7 +177,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apmipv4s_csharp">
 <a href="#apmipv4s_csharp" style="color: inherit; text-decoration: inherit;">Apm<wbr>Ipv4s</a>
@@ -182,7 +186,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apmipv6s_csharp">
 <a href="#apmipv6s_csharp" style="color: inherit; text-decoration: inherit;">Apm<wbr>Ipv6s</a>
@@ -190,7 +195,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -207,7 +213,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logsipv6s_csharp">
 <a href="#logsipv6s_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Ipv6s</a>
@@ -215,7 +222,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processipv4s_csharp">
 <a href="#processipv4s_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Ipv4s</a>
@@ -223,7 +231,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processipv6s_csharp">
 <a href="#processipv6s_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Ipv6s</a>
@@ -231,7 +240,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syntheticsipv4bylocation_csharp">
+<a href="#syntheticsipv4bylocation_csharp" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv4By<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv4 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticsipv4s_csharp">
 <a href="#syntheticsipv4s_csharp" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv4s</a>
@@ -239,7 +258,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syntheticsipv6bylocation_csharp">
+<a href="#syntheticsipv6bylocation_csharp" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv6By<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv6 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticsipv6s_csharp">
 <a href="#syntheticsipv6s_csharp" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv6s</a>
@@ -247,7 +276,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooksipv4s_csharp">
 <a href="#webhooksipv4s_csharp" style="color: inherit; text-decoration: inherit;">Webhooks<wbr>Ipv4s</a>
@@ -255,7 +285,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooksipv6s_csharp">
 <a href="#webhooksipv6s_csharp" style="color: inherit; text-decoration: inherit;">Webhooks<wbr>Ipv6s</a>
@@ -263,7 +294,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -275,7 +307,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentsipv6s_go">
 <a href="#agentsipv6s_go" style="color: inherit; text-decoration: inherit;">Agents<wbr>Ipv6s</a>
@@ -283,7 +316,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiipv4s_go">
 <a href="#apiipv4s_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Ipv4s</a>
@@ -291,7 +325,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiipv6s_go">
 <a href="#apiipv6s_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Ipv6s</a>
@@ -299,7 +334,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apmipv4s_go">
 <a href="#apmipv4s_go" style="color: inherit; text-decoration: inherit;">Apm<wbr>Ipv4s</a>
@@ -307,7 +343,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apmipv6s_go">
 <a href="#apmipv6s_go" style="color: inherit; text-decoration: inherit;">Apm<wbr>Ipv6s</a>
@@ -315,7 +352,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -332,7 +370,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logsipv6s_go">
 <a href="#logsipv6s_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Ipv6s</a>
@@ -340,7 +379,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processipv4s_go">
 <a href="#processipv4s_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Ipv4s</a>
@@ -348,7 +388,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processipv6s_go">
 <a href="#processipv6s_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Ipv6s</a>
@@ -356,7 +397,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syntheticsipv4bylocation_go">
+<a href="#syntheticsipv4bylocation_go" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv4By<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv4 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticsipv4s_go">
 <a href="#syntheticsipv4s_go" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv4s</a>
@@ -364,7 +415,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syntheticsipv6bylocation_go">
+<a href="#syntheticsipv6bylocation_go" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv6By<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv6 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticsipv6s_go">
 <a href="#syntheticsipv6s_go" style="color: inherit; text-decoration: inherit;">Synthetics<wbr>Ipv6s</a>
@@ -372,7 +433,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooksipv4s_go">
 <a href="#webhooksipv4s_go" style="color: inherit; text-decoration: inherit;">Webhooks<wbr>Ipv4s</a>
@@ -380,7 +442,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooksipv6s_go">
 <a href="#webhooksipv6s_go" style="color: inherit; text-decoration: inherit;">Webhooks<wbr>Ipv6s</a>
@@ -388,7 +451,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -400,7 +464,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentsipv6s_nodejs">
 <a href="#agentsipv6s_nodejs" style="color: inherit; text-decoration: inherit;">agents<wbr>Ipv6s</a>
@@ -408,7 +473,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiipv4s_nodejs">
 <a href="#apiipv4s_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Ipv4s</a>
@@ -416,7 +482,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiipv6s_nodejs">
 <a href="#apiipv6s_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Ipv6s</a>
@@ -424,7 +491,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apmipv4s_nodejs">
 <a href="#apmipv4s_nodejs" style="color: inherit; text-decoration: inherit;">apm<wbr>Ipv4s</a>
@@ -432,7 +500,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apmipv6s_nodejs">
 <a href="#apmipv6s_nodejs" style="color: inherit; text-decoration: inherit;">apm<wbr>Ipv6s</a>
@@ -440,7 +509,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -457,7 +527,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logsipv6s_nodejs">
 <a href="#logsipv6s_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Ipv6s</a>
@@ -465,7 +536,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processipv4s_nodejs">
 <a href="#processipv4s_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Ipv4s</a>
@@ -473,7 +545,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processipv6s_nodejs">
 <a href="#processipv6s_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Ipv6s</a>
@@ -481,7 +554,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syntheticsipv4bylocation_nodejs">
+<a href="#syntheticsipv4bylocation_nodejs" style="color: inherit; text-decoration: inherit;">synthetics<wbr>Ipv4By<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv4 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticsipv4s_nodejs">
 <a href="#syntheticsipv4s_nodejs" style="color: inherit; text-decoration: inherit;">synthetics<wbr>Ipv4s</a>
@@ -489,7 +572,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="syntheticsipv6bylocation_nodejs">
+<a href="#syntheticsipv6bylocation_nodejs" style="color: inherit; text-decoration: inherit;">synthetics<wbr>Ipv6By<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv6 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticsipv6s_nodejs">
 <a href="#syntheticsipv6s_nodejs" style="color: inherit; text-decoration: inherit;">synthetics<wbr>Ipv6s</a>
@@ -497,7 +590,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooksipv4s_nodejs">
 <a href="#webhooksipv4s_nodejs" style="color: inherit; text-decoration: inherit;">webhooks<wbr>Ipv4s</a>
@@ -505,7 +599,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooksipv6s_nodejs">
 <a href="#webhooksipv6s_nodejs" style="color: inherit; text-decoration: inherit;">webhooks<wbr>Ipv6s</a>
@@ -513,7 +608,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -525,7 +621,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agents_ipv6s_python">
 <a href="#agents_ipv6s_python" style="color: inherit; text-decoration: inherit;">agents_<wbr>ipv6s</a>
@@ -533,7 +630,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Agent endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_ipv4s_python">
 <a href="#api_ipv4s_python" style="color: inherit; text-decoration: inherit;">api_<wbr>ipv4s</a>
@@ -541,7 +639,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_ipv6s_python">
 <a href="#api_ipv6s_python" style="color: inherit; text-decoration: inherit;">api_<wbr>ipv6s</a>
@@ -549,7 +648,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the API endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apm_ipv4s_python">
 <a href="#apm_ipv4s_python" style="color: inherit; text-decoration: inherit;">apm_<wbr>ipv4s</a>
@@ -557,7 +657,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apm_ipv6s_python">
 <a href="#apm_ipv6s_python" style="color: inherit; text-decoration: inherit;">apm_<wbr>ipv6s</a>
@@ -565,7 +666,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the APM endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -582,7 +684,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logs_ipv6s_python">
 <a href="#logs_ipv6s_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>ipv6s</a>
@@ -590,7 +693,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Logs endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="process_ipv4s_python">
 <a href="#process_ipv4s_python" style="color: inherit; text-decoration: inherit;">process_<wbr>ipv4s</a>
@@ -598,7 +702,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="process_ipv6s_python">
 <a href="#process_ipv6s_python" style="color: inherit; text-decoration: inherit;">process_<wbr>ipv6s</a>
@@ -606,7 +711,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Process endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="synthetics_ipv4_by_location_python">
+<a href="#synthetics_ipv4_by_location_python" style="color: inherit; text-decoration: inherit;">synthetics_<wbr>ipv4_<wbr>by_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv4 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="synthetics_ipv4s_python">
 <a href="#synthetics_ipv4s_python" style="color: inherit; text-decoration: inherit;">synthetics_<wbr>ipv4s</a>
@@ -614,7 +729,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="synthetics_ipv6_by_location_python">
+<a href="#synthetics_ipv6_by_location_python" style="color: inherit; text-decoration: inherit;">synthetics_<wbr>ipv6_<wbr>by_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of IPv6 prefixes (string of concatenated IPs, delimited by ',') by location.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="synthetics_ipv6s_python">
 <a href="#synthetics_ipv6s_python" style="color: inherit; text-decoration: inherit;">synthetics_<wbr>ipv6s</a>
@@ -622,7 +747,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Synthetics endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooks_ipv4s_python">
 <a href="#webhooks_ipv4s_python" style="color: inherit; text-decoration: inherit;">webhooks_<wbr>ipv4s</a>
@@ -630,7 +756,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}An Array of IPv4 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webhooks_ipv6s_python">
 <a href="#webhooks_ipv6s_python" style="color: inherit; text-decoration: inherit;">webhooks_<wbr>ipv6s</a>
@@ -638,7 +765,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An Array of IPv6 addresses in CIDR format specifying the A records for the Webhooks endpoint.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -11,211 +11,6 @@ meta_desc: "Documentation for the datadog.SyntheticsTest resource with examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Datadog synthetics test resource. This can be used to create and manage Datadog synthetics test.
-## Synthetics Browser test
-
-Support for Synthetics Browser test is limited when creating steps. Some steps types (like steps involving elements) cannot be created, but they can be imported.
-
-## Assertion format
-
-The resource was changed to have assertions be a list of `assertion` blocks instead of single `assertions` array, to support the JSON path operations. We'll remove `assertions` support in the future: to migrate, rename your attribute to `assertion` and turn array elements into independent blocks. For example:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-const testApi = new datadog.SyntheticsTest("test_api", {
-    assertions: [
-        {
-            operator: "is",
-            target: "200",
-            type: "statusCode",
-        },
-        {
-            operator: "lessThan",
-            target: "1000",
-            type: "responseTime",
-        },
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-test_api = datadog.SyntheticsTest("testApi", assertions=[
-    {
-        "operator": "is",
-        "target": "200",
-        "type": "statusCode",
-    },
-    {
-        "operator": "lessThan",
-        "target": "1000",
-        "type": "responseTime",
-    },
-])
-```
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testApi = new Datadog.SyntheticsTest("testApi", new Datadog.SyntheticsTestArgs
-        {
-            Assertions = 
-            {
-                
-                {
-                    { "operator", "is" },
-                    { "target", "200" },
-                    { "type", "statusCode" },
-                },
-                
-                {
-                    { "operator", "lessThan" },
-                    { "target", "1000" },
-                    { "type", "responseTime" },
-                },
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testApi", &datadog.SyntheticsTestArgs{
-			Assertions: pulumi.StringMapArray{
-				pulumi.StringMap{
-					"operator": pulumi.String("is"),
-					"target":   pulumi.String("200"),
-					"type":     pulumi.String("statusCode"),
-				},
-				pulumi.StringMap{
-					"operator": pulumi.String("lessThan"),
-					"target":   pulumi.String("1000"),
-					"type":     pulumi.String("responseTime"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-turns into:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-const testApi = new datadog.SyntheticsTest("test_api", {
-    assertions: [
-        {
-            operator: "is",
-            target: "200",
-            type: "statusCode",
-        },
-        {
-            operator: "lessThan",
-            target: "1000",
-            type: "responseTime",
-        },
-    ],
-});
-```
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-test_api = datadog.SyntheticsTest("testApi", assertions=[
-    {
-        "operator": "is",
-        "target": "200",
-        "type": "statusCode",
-    },
-    {
-        "operator": "lessThan",
-        "target": "1000",
-        "type": "responseTime",
-    },
-])
-```
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testApi = new Datadog.SyntheticsTest("testApi", new Datadog.SyntheticsTestArgs
-        {
-            Assertions = 
-            {
-                
-                {
-                    { "operator", "is" },
-                    { "target", "200" },
-                    { "type", "statusCode" },
-                },
-                
-                {
-                    { "operator", "lessThan" },
-                    { "target", "1000" },
-                    { "type", "responseTime" },
-                },
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testApi", &datadog.SyntheticsTestArgs{
-			Assertions: pulumi.StringMapArray{
-				pulumi.StringMap{
-					"operator": pulumi.String("is"),
-					"target":   pulumi.String("200"),
-					"type":     pulumi.String("statusCode"),
-				},
-				pulumi.StringMap{
-					"operator": pulumi.String("lessThan"),
-					"target":   pulumi.String("1000"),
-					"type":     pulumi.String("responseTime"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
 
 {{% examples %}}
 
@@ -224,806 +19,7 @@ func main() {
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Synthetics API Test)
 
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testApi = new Datadog.SyntheticsTest("testApi", new Datadog.SyntheticsTestArgs
-        {
-            Assertions = 
-            {
-                
-                {
-                    { "operator", "is" },
-                    { "target", "200" },
-                    { "type", "statusCode" },
-                },
-            },
-            Locations = 
-            {
-                "aws:eu-central-1",
-            },
-            Message = "Notify @pagerduty",
-            Name = "An API test on example.org",
-            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
-            {
-                MonitorOptions = new Datadog.Inputs.SyntheticsTestOptionsListMonitorOptionsArgs
-                {
-                    RenotifyInterval = 100,
-                },
-                Retry = new Datadog.Inputs.SyntheticsTestOptionsListRetryArgs
-                {
-                    Count = 2,
-                    Interval = 300,
-                },
-                TickEvery = 900,
-            },
-            Request = new Datadog.Inputs.SyntheticsTestRequestArgs
-            {
-                Method = "GET",
-                Url = "https://www.example.org",
-            },
-            RequestHeaders = 
-            {
-                { "Authentication", "Token: 1234566789" },
-                { "Content-Type", "application/json" },
-            },
-            Status = "live",
-            Subtype = "http",
-            Tags = 
-            {
-                "foo:bar",
-                "foo",
-                "env:test",
-            },
-            Type = "api",
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testApi", &datadog.SyntheticsTestArgs{
-			Assertions: pulumi.StringMapArray{
-				pulumi.StringMap{
-					"operator": pulumi.String("is"),
-					"target":   pulumi.String("200"),
-					"type":     pulumi.String("statusCode"),
-				},
-			},
-			Locations: pulumi.StringArray{
-				pulumi.String("aws:eu-central-1"),
-			},
-			Message: pulumi.String("Notify @pagerduty"),
-			Name:    pulumi.String("An API test on example.org"),
-			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
-				MonitorOptions: &datadog.SyntheticsTestOptionsListMonitorOptionsArgs{
-					RenotifyInterval: pulumi.Int(100),
-				},
-				Retry: &datadog.SyntheticsTestOptionsListRetryArgs{
-					Count:    pulumi.Int(2),
-					Interval: pulumi.Int(300),
-				},
-				TickEvery: pulumi.Int(900),
-			},
-			Request: &datadog.SyntheticsTestRequestArgs{
-				Method: pulumi.String("GET"),
-				Url:    pulumi.String("https://www.example.org"),
-			},
-			RequestHeaders: pulumi.StringMap{
-				"Authentication": pulumi.String("Token: 1234566789"),
-				"Content-Type":   pulumi.String("application/json"),
-			},
-			Status:  pulumi.String("live"),
-			Subtype: pulumi.String("http"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo:bar"),
-				pulumi.String("foo"),
-				pulumi.String("env:test"),
-			},
-			Type: pulumi.String("api"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-test_api = datadog.SyntheticsTest("testApi",
-    assertions=[{
-        "operator": "is",
-        "target": "200",
-        "type": "statusCode",
-    }],
-    locations=["aws:eu-central-1"],
-    message="Notify @pagerduty",
-    name="An API test on example.org",
-    options_list=datadog.SyntheticsTestOptionsListArgs(
-        monitor_options=datadog.SyntheticsTestOptionsListMonitorOptionsArgs(
-            renotify_interval=100,
-        ),
-        retry=datadog.SyntheticsTestOptionsListRetryArgs(
-            count=2,
-            interval=300,
-        ),
-        tick_every=900,
-    ),
-    request=datadog.SyntheticsTestRequestArgs(
-        method="GET",
-        url="https://www.example.org",
-    ),
-    request_headers={
-        "Authentication": "Token: 1234566789",
-        "Content-Type": "application/json",
-    },
-    status="live",
-    subtype="http",
-    tags=[
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type="api")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-const testApi = new datadog.SyntheticsTest("test_api", {
-    assertions: [{
-        operator: "is",
-        target: "200",
-        type: "statusCode",
-    }],
-    locations: ["aws:eu-central-1"],
-    message: "Notify @pagerduty",
-    name: "An API test on example.org",
-    optionsList: {
-        monitorOptions: {
-            renotifyInterval: 100,
-        },
-        retry: {
-            count: 2,
-            interval: 300,
-        },
-        tickEvery: 900,
-    },
-    request: {
-        method: "GET",
-        url: "https://www.example.org",
-    },
-    requestHeaders: {
-        Authentication: "Token: 1234566789",
-        "Content-Type": "application/json",
-    },
-    status: "live",
-    subtype: "http",
-    tags: [
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type: "api",
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Synthetics SSL Test)
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testSsl = new Datadog.SyntheticsTest("testSsl", new Datadog.SyntheticsTestArgs
-        {
-            Assertions = 
-            {
-                
-                {
-                    { "operator", "isInMoreThan" },
-                    { "target", 30 },
-                    { "type", "certificate" },
-                },
-            },
-            Locations = 
-            {
-                "aws:eu-central-1",
-            },
-            Message = "Notify @pagerduty",
-            Name = "An API test on example.org",
-            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
-            {
-                AcceptSelfSigned = true,
-                TickEvery = 900,
-            },
-            Request = new Datadog.Inputs.SyntheticsTestRequestArgs
-            {
-                Host = "example.org",
-                Port = 443,
-            },
-            Status = "live",
-            Subtype = "ssl",
-            Tags = 
-            {
-                "foo:bar",
-                "foo",
-                "env:test",
-            },
-            Type = "api",
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testSsl", &datadog.SyntheticsTestArgs{
-			Assertions: pulumi.MapArray{
-				pulumi.Map{
-					"operator": pulumi.String("isInMoreThan"),
-					"target":   pulumi.Float64(30),
-					"type":     pulumi.String("certificate"),
-				},
-			},
-			Locations: pulumi.StringArray{
-				pulumi.String("aws:eu-central-1"),
-			},
-			Message: pulumi.String("Notify @pagerduty"),
-			Name:    pulumi.String("An API test on example.org"),
-			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
-				AcceptSelfSigned: pulumi.Bool(true),
-				TickEvery:        pulumi.Int(900),
-			},
-			Request: &datadog.SyntheticsTestRequestArgs{
-				Host: pulumi.String("example.org"),
-				Port: pulumi.Int(443),
-			},
-			Status:  pulumi.String("live"),
-			Subtype: pulumi.String("ssl"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo:bar"),
-				pulumi.String("foo"),
-				pulumi.String("env:test"),
-			},
-			Type: pulumi.String("api"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-test_ssl = datadog.SyntheticsTest("testSsl",
-    assertions=[{
-        "operator": "isInMoreThan",
-        "target": 30,
-        "type": "certificate",
-    }],
-    locations=["aws:eu-central-1"],
-    message="Notify @pagerduty",
-    name="An API test on example.org",
-    options_list=datadog.SyntheticsTestOptionsListArgs(
-        accept_self_signed=True,
-        tick_every=900,
-    ),
-    request=datadog.SyntheticsTestRequestArgs(
-        host="example.org",
-        port=443,
-    ),
-    status="live",
-    subtype="ssl",
-    tags=[
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type="api")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-const testSsl = new datadog.SyntheticsTest("test_ssl", {
-    assertions: [{
-        operator: "isInMoreThan",
-        target: "30",
-        type: "certificate",
-    }],
-    locations: ["aws:eu-central-1"],
-    message: "Notify @pagerduty",
-    name: "An API test on example.org",
-    optionsList: {
-        acceptSelfSigned: true,
-        tickEvery: 900,
-    },
-    request: {
-        host: "example.org",
-        port: 443,
-    },
-    status: "live",
-    subtype: "ssl",
-    tags: [
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type: "api",
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Synthetics TCP Test)
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testTcp = new Datadog.SyntheticsTest("testTcp", new Datadog.SyntheticsTestArgs
-        {
-            Assertions = 
-            {
-                
-                {
-                    { "operator", "lessThan" },
-                    { "target", 2000 },
-                    { "type", "responseTime" },
-                },
-            },
-            Locations = 
-            {
-                "aws:eu-central-1",
-            },
-            Message = "Notify @pagerduty",
-            Name = "An API test on example.org",
-            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
-            {
-                TickEvery = 900,
-            },
-            Request = new Datadog.Inputs.SyntheticsTestRequestArgs
-            {
-                Host = "example.org",
-                Port = 443,
-            },
-            Status = "live",
-            Subtype = "tcp",
-            Tags = 
-            {
-                "foo:bar",
-                "foo",
-                "env:test",
-            },
-            Type = "api",
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testTcp", &datadog.SyntheticsTestArgs{
-			Assertions: pulumi.MapArray{
-				pulumi.Map{
-					"operator": pulumi.String("lessThan"),
-					"target":   pulumi.Float64(2000),
-					"type":     pulumi.String("responseTime"),
-				},
-			},
-			Locations: pulumi.StringArray{
-				pulumi.String("aws:eu-central-1"),
-			},
-			Message: pulumi.String("Notify @pagerduty"),
-			Name:    pulumi.String("An API test on example.org"),
-			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
-				TickEvery: pulumi.Int(900),
-			},
-			Request: &datadog.SyntheticsTestRequestArgs{
-				Host: pulumi.String("example.org"),
-				Port: pulumi.Int(443),
-			},
-			Status:  pulumi.String("live"),
-			Subtype: pulumi.String("tcp"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo:bar"),
-				pulumi.String("foo"),
-				pulumi.String("env:test"),
-			},
-			Type: pulumi.String("api"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-test_tcp = datadog.SyntheticsTest("testTcp",
-    assertions=[{
-        "operator": "lessThan",
-        "target": 2000,
-        "type": "responseTime",
-    }],
-    locations=["aws:eu-central-1"],
-    message="Notify @pagerduty",
-    name="An API test on example.org",
-    options_list=datadog.SyntheticsTestOptionsListArgs(
-        tick_every=900,
-    ),
-    request=datadog.SyntheticsTestRequestArgs(
-        host="example.org",
-        port=443,
-    ),
-    status="live",
-    subtype="tcp",
-    tags=[
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type="api")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-const testTcp = new datadog.SyntheticsTest("test_tcp", {
-    assertions: [{
-        operator: "lessThan",
-        target: "2000",
-        type: "responseTime",
-    }],
-    locations: ["aws:eu-central-1"],
-    message: "Notify @pagerduty",
-    name: "An API test on example.org",
-    optionsList: {
-        tickEvery: 900,
-    },
-    request: {
-        host: "example.org",
-        port: 443,
-    },
-    status: "live",
-    subtype: "tcp",
-    tags: [
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type: "api",
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Synthetics DNS Test)
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Datadog = Pulumi.Datadog;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testDns = new Datadog.SyntheticsTest("testDns", new Datadog.SyntheticsTestArgs
-        {
-            Assertions = 
-            {
-                
-                {
-                    { "operator", "is" },
-                    { "property", "A" },
-                    { "target", "0.0.0.0" },
-                    { "type", "recordSome" },
-                },
-            },
-            Locations = 
-            {
-                "aws:eu-central-1",
-            },
-            Message = "Notify @pagerduty",
-            Name = "An API test on example.org",
-            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
-            {
-                TickEvery = 900,
-            },
-            Request = new Datadog.Inputs.SyntheticsTestRequestArgs
-            {
-                Host = "example.org",
-            },
-            Status = "live",
-            Subtype = "dns",
-            Tags = 
-            {
-                "foo:bar",
-                "foo",
-                "env:test",
-            },
-            Type = "api",
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datadog.NewSyntheticsTest(ctx, "testDns", &datadog.SyntheticsTestArgs{
-			Assertions: pulumi.StringMapArray{
-				pulumi.StringMap{
-					"operator": pulumi.String("is"),
-					"property": pulumi.String("A"),
-					"target":   pulumi.String("0.0.0.0"),
-					"type":     pulumi.String("recordSome"),
-				},
-			},
-			Locations: pulumi.StringArray{
-				pulumi.String("aws:eu-central-1"),
-			},
-			Message: pulumi.String("Notify @pagerduty"),
-			Name:    pulumi.String("An API test on example.org"),
-			OptionsList: &datadog.SyntheticsTestOptionsListArgs{
-				TickEvery: pulumi.Int(900),
-			},
-			Request: &datadog.SyntheticsTestRequestArgs{
-				Host: pulumi.String("example.org"),
-			},
-			Status:  pulumi.String("live"),
-			Subtype: pulumi.String("dns"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo:bar"),
-				pulumi.String("foo"),
-				pulumi.String("env:test"),
-			},
-			Type: pulumi.String("api"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_datadog as datadog
-
-test_dns = datadog.SyntheticsTest("testDns",
-    assertions=[{
-        "operator": "is",
-        "property": "A",
-        "target": "0.0.0.0",
-        "type": "recordSome",
-    }],
-    locations=["aws:eu-central-1"],
-    message="Notify @pagerduty",
-    name="An API test on example.org",
-    options_list=datadog.SyntheticsTestOptionsListArgs(
-        tick_every=900,
-    ),
-    request=datadog.SyntheticsTestRequestArgs(
-        host="example.org",
-    ),
-    status="live",
-    subtype="dns",
-    tags=[
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type="api")
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as datadog from "@pulumi/datadog";
-
-const testDns = new datadog.SyntheticsTest("test_dns", {
-    assertions: [{
-        operator: "is",
-        property: "A",
-        target: "0.0.0.0",
-        type: "recordSome",
-    }],
-    locations: ["aws:eu-central-1"],
-    message: "Notify @pagerduty",
-    name: "An API test on example.org",
-    optionsList: {
-        tickEvery: 900,
-    },
-    request: {
-        host: "example.org",
-    },
-    status: "live",
-    subtype: "dns",
-    tags: [
-        "foo:bar",
-        "foo",
-        "env:test",
-    ],
-    type: "api",
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-### Synthetics Browser Test)
 
 
 {{< example csharp >}}
@@ -1038,11 +34,180 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Example Usage (Synthetics API test)
+        // Create a new Datadog Synthetics API/HTTP test on https://www.example.org
+        var testApi = new Datadog.SyntheticsTest("testApi", new Datadog.SyntheticsTestArgs
+        {
+            Type = "api",
+            Subtype = "http",
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Method = "GET",
+                Url = "https://www.example.org",
+            },
+            RequestHeaders = 
+            {
+                { "Content-Type", "application/json" },
+                { "Authentication", "Token: 1234566789" },
+            },
+            Assertions = 
+            {
+                
+                {
+                    { "type", "statusCode" },
+                    { "operator", "is" },
+                    { "target", "200" },
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 900,
+                Retry = new Datadog.Inputs.SyntheticsTestOptionsListRetryArgs
+                {
+                    Count = 2,
+                    Interval = 300,
+                },
+                MonitorOptions = new Datadog.Inputs.SyntheticsTestOptionsListMonitorOptionsArgs
+                {
+                    RenotifyInterval = 100,
+                },
+            },
+            Name = "An API test on example.org",
+            Message = "Notify @pagerduty",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Status = "live",
+        });
+        // Example Usage (Synthetics SSL test)
+        // Create a new Datadog Synthetics API/SSL test on example.org
+        var testSsl = new Datadog.SyntheticsTest("testSsl", new Datadog.SyntheticsTestArgs
+        {
+            Type = "api",
+            Subtype = "ssl",
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Host = "example.org",
+                Port = 443,
+            },
+            Assertions = 
+            {
+                
+                {
+                    { "type", "certificate" },
+                    { "operator", "isInMoreThan" },
+                    { "target", 30 },
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 900,
+                AcceptSelfSigned = true,
+            },
+            Name = "An API test on example.org",
+            Message = "Notify @pagerduty",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Status = "live",
+        });
+        // Example Usage (Synthetics TCP test)
+        // Create a new Datadog Synthetics API/TCP test on example.org
+        var testTcp = new Datadog.SyntheticsTest("testTcp", new Datadog.SyntheticsTestArgs
+        {
+            Type = "api",
+            Subtype = "tcp",
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Host = "example.org",
+                Port = 443,
+            },
+            Assertions = 
+            {
+                
+                {
+                    { "type", "responseTime" },
+                    { "operator", "lessThan" },
+                    { "target", 2000 },
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 900,
+            },
+            Name = "An API test on example.org",
+            Message = "Notify @pagerduty",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Status = "live",
+        });
+        // Example Usage (Synthetics DNS test)
+        // Create a new Datadog Synthetics API/DNS test on example.org
+        var testDns = new Datadog.SyntheticsTest("testDns", new Datadog.SyntheticsTestArgs
+        {
+            Type = "api",
+            Subtype = "dns",
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
+            {
+                Host = "example.org",
+            },
+            Assertions = 
+            {
+                
+                {
+                    { "type", "recordSome" },
+                    { "operator", "is" },
+                    { "property", "A" },
+                    { "target", "0.0.0.0" },
+                },
+            },
+            Locations = 
+            {
+                "aws:eu-central-1",
+            },
+            OptionsList = new Datadog.Inputs.SyntheticsTestOptionsListArgs
+            {
+                TickEvery = 900,
+            },
+            Name = "An API test on example.org",
+            Message = "Notify @pagerduty",
+            Tags = 
+            {
+                "foo:bar",
+                "foo",
+                "env:test",
+            },
+            Status = "live",
+        });
+        // Example Usage (Synthetics Browser test)
+        // Support for Synthetics Browser test steps is limited (see below)
         // Create a new Datadog Synthetics Browser test starting on https://www.example.org
         var testBrowser = new Datadog.SyntheticsTest("testBrowser", new Datadog.SyntheticsTestArgs
         {
             Type = "browser",
-            Request = new Datadog.Inputs.SyntheticsTestRequestArgs
+            RequestDefinition = new Datadog.Inputs.SyntheticsTestRequestDefinitionArgs
             {
                 Method = "GET",
                 Url = "https://app.datadoghq.com",
@@ -1076,23 +241,23 @@ class MyStack : Stack
                     }),
                 },
             },
-            BrowserVariables = 
+            Variables = 
             {
-                new Datadog.Inputs.SyntheticsTestBrowserVariableArgs
+                new Datadog.Inputs.SyntheticsTestVariableArgs
                 {
                     Type = "text",
                     Name = "MY_PATTERN_VAR",
                     Pattern = "{{numeric(3)}}",
                     Example = "597",
                 },
-                new Datadog.Inputs.SyntheticsTestBrowserVariableArgs
+                new Datadog.Inputs.SyntheticsTestVariableArgs
                 {
                     Type = "email",
                     Name = "MY_EMAIL_VAR",
                     Pattern = "jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co",
                     Example = "jd8-afe-ydv.4546132139@synthetics.dtdg.co",
                 },
-                new Datadog.Inputs.SyntheticsTestBrowserVariableArgs
+                new Datadog.Inputs.SyntheticsTestVariableArgs
                 {
                     Type = "global",
                     Name = "MY_GLOBAL_VAR",
@@ -1123,10 +288,128 @@ import pulumi
 import json
 import pulumi_datadog as datadog
 
+# Example Usage (Synthetics API test)
+# Create a new Datadog Synthetics API/HTTP test on https://www.example.org
+test_api = datadog.SyntheticsTest("testApi",
+    type="api",
+    subtype="http",
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        method="GET",
+        url="https://www.example.org",
+    ),
+    request_headers={
+        "Content-Type": "application/json",
+        "Authentication": "Token: 1234566789",
+    },
+    assertions=[{
+        "type": "statusCode",
+        "operator": "is",
+        "target": "200",
+    }],
+    locations=["aws:eu-central-1"],
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=900,
+        retry=datadog.SyntheticsTestOptionsListRetryArgs(
+            count=2,
+            interval=300,
+        ),
+        monitor_options=datadog.SyntheticsTestOptionsListMonitorOptionsArgs(
+            renotify_interval=100,
+        ),
+    ),
+    name="An API test on example.org",
+    message="Notify @pagerduty",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status="live")
+# Example Usage (Synthetics SSL test)
+# Create a new Datadog Synthetics API/SSL test on example.org
+test_ssl = datadog.SyntheticsTest("testSsl",
+    type="api",
+    subtype="ssl",
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        host="example.org",
+        port=443,
+    ),
+    assertions=[{
+        "type": "certificate",
+        "operator": "isInMoreThan",
+        "target": 30,
+    }],
+    locations=["aws:eu-central-1"],
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=900,
+        accept_self_signed=True,
+    ),
+    name="An API test on example.org",
+    message="Notify @pagerduty",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status="live")
+# Example Usage (Synthetics TCP test)
+# Create a new Datadog Synthetics API/TCP test on example.org
+test_tcp = datadog.SyntheticsTest("testTcp",
+    type="api",
+    subtype="tcp",
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        host="example.org",
+        port=443,
+    ),
+    assertions=[{
+        "type": "responseTime",
+        "operator": "lessThan",
+        "target": 2000,
+    }],
+    locations=["aws:eu-central-1"],
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=900,
+    ),
+    name="An API test on example.org",
+    message="Notify @pagerduty",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status="live")
+# Example Usage (Synthetics DNS test)
+# Create a new Datadog Synthetics API/DNS test on example.org
+test_dns = datadog.SyntheticsTest("testDns",
+    type="api",
+    subtype="dns",
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
+        host="example.org",
+    ),
+    assertions=[{
+        "type": "recordSome",
+        "operator": "is",
+        "property": "A",
+        "target": "0.0.0.0",
+    }],
+    locations=["aws:eu-central-1"],
+    options_list=datadog.SyntheticsTestOptionsListArgs(
+        tick_every=900,
+    ),
+    name="An API test on example.org",
+    message="Notify @pagerduty",
+    tags=[
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status="live")
+# Example Usage (Synthetics Browser test)
+# Support for Synthetics Browser test steps is limited (see below)
 # Create a new Datadog Synthetics Browser test starting on https://www.example.org
 test_browser = datadog.SyntheticsTest("testBrowser",
     type="browser",
-    request=datadog.SyntheticsTestRequestArgs(
+    request_definition=datadog.SyntheticsTestRequestDefinitionArgs(
         method="GET",
         url="https://app.datadoghq.com",
     ),
@@ -1147,20 +430,20 @@ test_browser = datadog.SyntheticsTest("testBrowser",
             "value": "datadoghq",
         }),
     )],
-    browser_variables=[
-        datadog.SyntheticsTestBrowserVariableArgs(
+    variables=[
+        datadog.SyntheticsTestVariableArgs(
             type="text",
             name="MY_PATTERN_VAR",
             pattern="{{numeric(3)}}",
             example="597",
         ),
-        datadog.SyntheticsTestBrowserVariableArgs(
+        datadog.SyntheticsTestVariableArgs(
             type="email",
             name="MY_EMAIL_VAR",
             pattern="jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co",
             example="jd8-afe-ydv.4546132139@synthetics.dtdg.co",
         ),
-        datadog.SyntheticsTestBrowserVariableArgs(
+        datadog.SyntheticsTestVariableArgs(
             type="global",
             name="MY_GLOBAL_VAR",
             id="76636cd1-82e2-4aeb-9cfe-51366a8198a2",
@@ -1179,10 +462,132 @@ test_browser = datadog.SyntheticsTest("testBrowser",
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
 
+// Example Usage (Synthetics API test)
+// Create a new Datadog Synthetics API/HTTP test on https://www.example.org
+const testApi = new datadog.SyntheticsTest("testApi", {
+    type: "api",
+    subtype: "http",
+    requestDefinition: {
+        method: "GET",
+        url: "https://www.example.org",
+    },
+    requestHeaders: {
+        "Content-Type": "application/json",
+        Authentication: "Token: 1234566789",
+    },
+    assertions: [{
+        type: "statusCode",
+        operator: "is",
+        target: "200",
+    }],
+    locations: ["aws:eu-central-1"],
+    optionsList: {
+        tickEvery: 900,
+        retry: {
+            count: 2,
+            interval: 300,
+        },
+        monitorOptions: {
+            renotifyInterval: 100,
+        },
+    },
+    name: "An API test on example.org",
+    message: "Notify @pagerduty",
+    tags: [
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status: "live",
+});
+// Example Usage (Synthetics SSL test)
+// Create a new Datadog Synthetics API/SSL test on example.org
+const testSsl = new datadog.SyntheticsTest("testSsl", {
+    type: "api",
+    subtype: "ssl",
+    requestDefinition: {
+        host: "example.org",
+        port: 443,
+    },
+    assertions: [{
+        type: "certificate",
+        operator: "isInMoreThan",
+        target: 30,
+    }],
+    locations: ["aws:eu-central-1"],
+    optionsList: {
+        tickEvery: 900,
+        acceptSelfSigned: true,
+    },
+    name: "An API test on example.org",
+    message: "Notify @pagerduty",
+    tags: [
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status: "live",
+});
+// Example Usage (Synthetics TCP test)
+// Create a new Datadog Synthetics API/TCP test on example.org
+const testTcp = new datadog.SyntheticsTest("testTcp", {
+    type: "api",
+    subtype: "tcp",
+    requestDefinition: {
+        host: "example.org",
+        port: 443,
+    },
+    assertions: [{
+        type: "responseTime",
+        operator: "lessThan",
+        target: 2000,
+    }],
+    locations: ["aws:eu-central-1"],
+    optionsList: {
+        tickEvery: 900,
+    },
+    name: "An API test on example.org",
+    message: "Notify @pagerduty",
+    tags: [
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status: "live",
+});
+// Example Usage (Synthetics DNS test)
+// Create a new Datadog Synthetics API/DNS test on example.org
+const testDns = new datadog.SyntheticsTest("testDns", {
+    type: "api",
+    subtype: "dns",
+    requestDefinition: {
+        host: "example.org",
+    },
+    assertions: [{
+        type: "recordSome",
+        operator: "is",
+        property: "A",
+        target: "0.0.0.0",
+    }],
+    locations: ["aws:eu-central-1"],
+    optionsList: {
+        tickEvery: 900,
+    },
+    name: "An API test on example.org",
+    message: "Notify @pagerduty",
+    tags: [
+        "foo:bar",
+        "foo",
+        "env:test",
+    ],
+    status: "live",
+});
+// Example Usage (Synthetics Browser test)
+// Support for Synthetics Browser test steps is limited (see below)
 // Create a new Datadog Synthetics Browser test starting on https://www.example.org
 const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     type: "browser",
-    request: {
+    requestDefinition: {
         method: "GET",
         url: "https://app.datadoghq.com",
     },
@@ -1203,7 +608,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
             value: "datadoghq",
         }),
     }],
-    browserVariables: [
+    variables: [
         {
             type: "text",
             name: "MY_PATTERN_VAR",
@@ -1242,19 +647,49 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserVariableArgs]]</span> = None<span class="p">, </span><span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestConfigVariableArgs]]</span> = None<span class="p">, </span><span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">, </span><span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsListArgs]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">, </span><span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">, </span><span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestClientCertificateArgs]</span> = None<span class="p">, </span><span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">, </span><span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">api_steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestApiStepArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">browser_steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserStepArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserVariableArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestConfigVariableArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsListArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestClientCertificateArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">request_definition</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestDefinitionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                   <span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                   <span class="nx">set_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestVariableArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyntheticsTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyntheticsTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SyntheticsTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1265,46 +700,44 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsTestArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SyntheticsTestArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1313,35 +746,27 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsTestArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1353,25 +778,19 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SyntheticsTestArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1394,9 +813,7 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -1406,15 +823,6 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="request_csharp">
-<a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
@@ -1433,6 +841,15 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="apisteps_csharp">
+<a href="#apisteps_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">List&lt;Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="assertions_csharp">
@@ -1441,8 +858,17 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="browsersteps_csharp">
+<a href="#browsersteps_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">List&lt;Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browservariables_csharp">
 <a href="#browservariables_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Variables</a>
@@ -1468,8 +894,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
@@ -1478,8 +903,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="options_csharp">
@@ -1488,7 +912,8 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="optionslist_csharp">
 <a href="#optionslist_csharp" style="color: inherit; text-decoration: inherit;">Options<wbr>List</a>
@@ -1496,7 +921,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="request_csharp">
+<a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasicauth_csharp">
 <a href="#requestbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Basicauth</a>
@@ -1513,8 +947,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestdefinition_csharp">
+<a href="#requestdefinition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_csharp">
@@ -1535,14 +977,23 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="setcookie_csharp">
+<a href="#setcookie_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="steps_csharp">
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsteststep">List&lt;Synthetics<wbr>Test<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="subtype_csharp">
 <a href="#subtype_csharp" style="color: inherit; text-decoration: inherit;">Subtype</a>
@@ -1550,7 +1001,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1559,8 +1010,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="variables_csharp">
@@ -1569,8 +1019,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestvariable">List&lt;Synthetics<wbr>Test<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1582,9 +1032,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -1594,15 +1042,6 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="request_go">
-<a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
-    </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
@@ -1621,6 +1060,15 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="apisteps_go">
+<a href="#apisteps_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">[]Synthetics<wbr>Test<wbr>Api<wbr>Step</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="assertions_go">
@@ -1629,8 +1077,17 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="browsersteps_go">
+<a href="#browsersteps_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">[]Synthetics<wbr>Test<wbr>Browser<wbr>Step</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browservariables_go">
 <a href="#browservariables_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Variables</a>
@@ -1656,8 +1113,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
@@ -1666,8 +1122,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="options_go">
@@ -1676,7 +1131,8 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="optionslist_go">
 <a href="#optionslist_go" style="color: inherit; text-decoration: inherit;">Options<wbr>List</a>
@@ -1684,7 +1140,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="request_go">
+<a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasicauth_go">
 <a href="#requestbasicauth_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Basicauth</a>
@@ -1701,8 +1166,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestdefinition_go">
+<a href="#requestdefinition_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_go">
@@ -1723,14 +1196,23 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="setcookie_go">
+<a href="#setcookie_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="steps_go">
 <a href="#steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsteststep">[]Synthetics<wbr>Test<wbr>Step</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="subtype_go">
 <a href="#subtype_go" style="color: inherit; text-decoration: inherit;">Subtype</a>
@@ -1738,7 +1220,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1747,8 +1229,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="variables_go">
@@ -1757,8 +1238,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestvariable">[]Synthetics<wbr>Test<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1770,9 +1251,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1782,15 +1261,6 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="request_nodejs">
-<a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
-    </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
@@ -1809,6 +1279,15 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="apisteps_nodejs">
+<a href="#apisteps_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="assertions_nodejs">
@@ -1817,14 +1296,23 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="browsersteps_nodejs">
+<a href="#browsersteps_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browservariables_nodejs">
 <a href="#browservariables_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1321,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
 <a href="#configvariables_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,8 +1332,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
@@ -1854,31 +1341,40 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="optionslist_nodejs">
 <a href="#optionslist_nodejs" style="color: inherit; text-decoration: inherit;">options<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="request_nodejs">
+<a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasicauth_nodejs">
 <a href="#requestbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Basicauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,10 +1383,18 @@ using the same `@username` notation as events.
 <a href="#requestclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestdefinition_nodejs">
+<a href="#requestdefinition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_nodejs">
@@ -1911,14 +1415,23 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="setcookie_nodejs">
+<a href="#setcookie_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="steps_nodejs">
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticsteststep">Synthetics<wbr>Test<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#syntheticsteststep">Synthetics<wbr>Test<wbr>Step<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="subtype_nodejs">
 <a href="#subtype_nodejs" style="color: inherit; text-decoration: inherit;">subtype</a>
@@ -1926,7 +1439,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1935,18 +1448,17 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="variables_nodejs">
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1958,9 +1470,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1970,15 +1480,6 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Datadog synthetics test.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="request_python">
-<a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
@@ -1997,6 +1498,15 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="api_steps_python">
+<a href="#api_steps_python" style="color: inherit; text-decoration: inherit;">api_<wbr>steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">Sequence[Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="assertions_python">
@@ -2005,8 +1515,17 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="browser_steps_python">
+<a href="#browser_steps_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">Sequence[Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browser_variables_python">
 <a href="#browser_variables_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>variables</a>
@@ -2032,8 +1551,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
@@ -2042,8 +1560,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="options_python">
@@ -2052,7 +1569,8 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="options_list_python">
 <a href="#options_list_python" style="color: inherit; text-decoration: inherit;">options_<wbr>list</a>
@@ -2060,7 +1578,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="request_python">
+<a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="request_basicauth_python">
 <a href="#request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
@@ -2077,8 +1604,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_definition_python">
+<a href="#request_definition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_python">
@@ -2099,14 +1634,23 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="set_cookie_python">
+<a href="#set_cookie_python" style="color: inherit; text-decoration: inherit;">set_<wbr>cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="steps_python">
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsteststep">Sequence[Synthetics<wbr>Test<wbr>Step<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="subtype_python">
 <a href="#subtype_python" style="color: inherit; text-decoration: inherit;">subtype</a>
@@ -2114,7 +1658,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -2123,8 +1667,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="variables_python">
@@ -2133,8 +1676,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestvariable">Sequence[Synthetics<wbr>Test<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -2236,20 +1779,47 @@ Get an existing SyntheticsTest resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SyntheticsTestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SyntheticsTest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SyntheticsTestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SyntheticsTest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, Any]]]</span> = None<span class="p">, </span><span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserVariableArgs]]</span> = None<span class="p">, </span><span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestConfigVariableArgs]]</span> = None<span class="p">, </span><span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">, </span><span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsListArgs]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">, </span><span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">, </span><span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestClientCertificateArgs]</span> = None<span class="p">, </span><span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">, </span><span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestVariableArgs]]</span> = None<span class="p">) -&gt;</span> SyntheticsTest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">api_steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestApiStepArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">assertions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">browser_steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserStepArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">browser_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestBrowserVariableArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">config_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestConfigVariableArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">options_list</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestOptionsListArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request_basicauth</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestBasicauthArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request_client_certificate</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestClientCertificateArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request_definition</span><span class="p">:</span> <span class="nx">Optional[SyntheticsTestRequestDefinitionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">request_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">request_query</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">set_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestStepArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">subtype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[SyntheticsTestVariableArgs]]</span> = None<span class="p">) -&gt;</span> SyntheticsTest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsTestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSyntheticsTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SyntheticsTestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyntheticsTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SyntheticsTest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SyntheticsTestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SyntheticsTest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SyntheticsTestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2352,7 +1922,16 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_apisteps_csharp">
+<a href="#state_apisteps_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">List&lt;Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_csharp">
 <a href="#state_assertions_csharp" style="color: inherit; text-decoration: inherit;">Assertions</a>
@@ -2360,8 +1939,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_browsersteps_csharp">
+<a href="#state_browsersteps_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">List&lt;Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browservariables_csharp">
 <a href="#state_browservariables_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Variables</a>
@@ -2387,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_csharp">
@@ -2397,9 +1984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_csharp">
@@ -2408,8 +1993,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorid_csharp">
@@ -2436,7 +2020,8 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_optionslist_csharp">
 <a href="#state_optionslist_csharp" style="color: inherit; text-decoration: inherit;">Options<wbr>List</a>
@@ -2444,16 +2029,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_request_csharp">
 <a href="#state_request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestbasicauth_csharp">
 <a href="#state_requestbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Basicauth</a>
@@ -2470,8 +2055,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requestdefinition_csharp">
+<a href="#state_requestdefinition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestheaders_csharp">
@@ -2492,6 +2085,15 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_setcookie_csharp">
+<a href="#state_setcookie_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -2499,16 +2101,16 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_steps_csharp">
 <a href="#state_steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsteststep">List&lt;Synthetics<wbr>Test<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subtype_csharp">
 <a href="#state_subtype_csharp" style="color: inherit; text-decoration: inherit;">Subtype</a>
@@ -2516,7 +2118,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -2525,8 +2127,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -2544,12 +2145,21 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestvariable">List&lt;Synthetics<wbr>Test<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_apisteps_go">
+<a href="#state_apisteps_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">[]Synthetics<wbr>Test<wbr>Api<wbr>Step</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_go">
 <a href="#state_assertions_go" style="color: inherit; text-decoration: inherit;">Assertions</a>
@@ -2557,8 +2167,17 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_browsersteps_go">
+<a href="#state_browsersteps_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">[]Synthetics<wbr>Test<wbr>Browser<wbr>Step</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browservariables_go">
 <a href="#state_browservariables_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Variables</a>
@@ -2584,8 +2203,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_go">
@@ -2594,9 +2212,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_go">
@@ -2605,8 +2221,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorid_go">
@@ -2633,7 +2248,8 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_optionslist_go">
 <a href="#state_optionslist_go" style="color: inherit; text-decoration: inherit;">Options<wbr>List</a>
@@ -2641,16 +2257,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_request_go">
 <a href="#state_request_go" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestbasicauth_go">
 <a href="#state_requestbasicauth_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Basicauth</a>
@@ -2667,8 +2283,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requestdefinition_go">
+<a href="#state_requestdefinition_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestheaders_go">
@@ -2689,6 +2313,15 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_setcookie_go">
+<a href="#state_setcookie_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -2696,16 +2329,16 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_steps_go">
 <a href="#state_steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsteststep">[]Synthetics<wbr>Test<wbr>Step</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subtype_go">
 <a href="#state_subtype_go" style="color: inherit; text-decoration: inherit;">Subtype</a>
@@ -2713,7 +2346,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2722,8 +2355,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -2741,12 +2373,21 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestvariable">[]Synthetics<wbr>Test<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_apisteps_nodejs">
+<a href="#state_apisteps_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_nodejs">
 <a href="#state_assertions_nodejs" style="color: inherit; text-decoration: inherit;">assertions</a>
@@ -2754,14 +2395,23 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_browsersteps_nodejs">
+<a href="#state_browsersteps_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browservariables_nodejs">
 <a href="#state_browservariables_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for a browser test steps. Multiple `variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2770,7 +2420,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_configvariables_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Variables used for the test configuration. Multiple `config_variable` blocks are allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2781,8 +2431,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_nodejs">
@@ -2791,9 +2440,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_nodejs">
@@ -2802,8 +2449,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorid_nodejs">
@@ -2828,32 +2474,33 @@ using the same `@username` notation as events.
 <a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</a></span>
+        <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_optionslist_nodejs">
 <a href="#state_optionslist_nodejs" style="color: inherit; text-decoration: inherit;">options<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_request_nodejs">
 <a href="#state_request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request</a></span>
+        <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestbasicauth_nodejs">
 <a href="#state_requestbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Basicauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestbasicauth">Synthetics<wbr>Test<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2862,10 +2509,18 @@ using the same `@username` notation as events.
 <a href="#state_requestclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_requestdefinition_nodejs">
+<a href="#state_requestdefinition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestheaders_nodejs">
@@ -2886,6 +2541,15 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_setcookie_nodejs">
+<a href="#state_setcookie_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -2893,16 +2557,16 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_steps_nodejs">
 <a href="#state_steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticsteststep">Synthetics<wbr>Test<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#syntheticsteststep">Synthetics<wbr>Test<wbr>Step<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subtype_nodejs">
 <a href="#state_subtype_nodejs" style="color: inherit; text-decoration: inherit;">subtype</a>
@@ -2910,7 +2574,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -2919,8 +2583,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -2936,14 +2599,23 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_api_steps_python">
+<a href="#state_api_steps_python" style="color: inherit; text-decoration: inherit;">api_<wbr>steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistep">Sequence[Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for multistep api tests
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_python">
 <a href="#state_assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
@@ -2951,8 +2623,17 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
-    <dd>{{% md %}}List of assertions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use assertion instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of assertions. **Deprecated.** Define `assertion` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `assertion` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_browser_steps_python">
+<a href="#state_browser_steps_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>steps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstep">Sequence[Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Steps for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_browser_variables_python">
 <a href="#state_browser_variables_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>variables</a>
@@ -2978,8 +2659,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small`
-(only available for `browser` tests).
+    <dd>{{% md %}}Array with the different device IDs used to run the test. Allowed enum values: `laptop_large`, `tablet`, `mobile_small` (only available for `browser` tests).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_python">
@@ -2988,9 +2668,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog
-documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g.
-`aws:eu-central-1`).
+    <dd>{{% md %}}Array of locations used to run the test. Refer to [Datadog documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for available locations (e.g. `aws:eu-central-1`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_python">
@@ -2999,8 +2677,7 @@ documentation](https://docs.datadoghq.com/synthetics/api_test/#request) for avai
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
-using the same `@username` notation as events.
+    <dd>{{% md %}}A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by using the same `@username` notation as events.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitor_id_python">
@@ -3027,7 +2704,8 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptions">Synthetics<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `options_list`{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}**Deprecated.** Define `options_list` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `options_list` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_list_python">
 <a href="#state_options_list_python" style="color: inherit; text-decoration: inherit;">options_<wbr>list</a>
@@ -3035,16 +2713,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_request_python">
 <a href="#state_request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequest">Synthetics<wbr>Test<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The synthetics test request. Required if `type = "api"` and `subtype = "http"`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `request_definition` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_basicauth_python">
 <a href="#state_request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
@@ -3061,8 +2739,16 @@ using the same `@username` notation as events.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
-below.
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_request_definition_python">
+<a href="#state_request_definition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_headers_python">
@@ -3083,6 +2769,15 @@ below.
     <dd>{{% md %}}Query arguments name and value map.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_set_cookie_python">
+<a href="#state_set_cookie_python" style="color: inherit; text-decoration: inherit;">set_<wbr>cookie</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cookies to be used for a browser test request, using the [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) syntax.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -3090,16 +2785,16 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define whether you want to start (`live`) or pause (`paused`) a Synthetic test. Allowed enum values: `live`, `paused`
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_steps_python">
 <a href="#state_steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsteststep">Sequence[Synthetics<wbr>Test<wbr>Step<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Steps for browser tests.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Steps for browser tests. **Deprecated.** Define `browser_step` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_step` blocks instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subtype_python">
 <a href="#state_subtype_python" style="color: inherit; text-decoration: inherit;">subtype</a>
@@ -3107,7 +2802,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp` or `dns`. Defaults to `http`.
+    <dd>{{% md %}}When `type` is `api`, choose from `http`, `ssl`, `tcp`, `dns`, `icmp` or `multi`. Defaults to `http`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -3116,8 +2811,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
-synthetics page of the UI. Default is an empty list (`[]`).
+    <dd>{{% md %}}A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage synthetics page of the UI. Default is an empty list (`[]`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -3135,8 +2829,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestvariable">Sequence[Synthetics<wbr>Test<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated, please use `browser_variable`{{% /md %}}</p></dd></dl>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `browser_variable` blocks instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -3148,7 +2842,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 
 
-<h4 id="syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable</h4>
+<h4 id="syntheticstestapistep">Synthetics<wbr>Test<wbr>Api<wbr>Step</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -3159,6 +2853,741 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}The name of the step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowfailure_csharp">
+<a href="#allowfailure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assertions_csharp">
+<a href="#assertions_csharp" style="color: inherit; text-decoration: inherit;">Assertions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertion">List&lt;Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Assertions used for the test. Multiple `assertion` blocks are allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extractedvalues_csharp">
+<a href="#extractedvalues_csharp" style="color: inherit; text-decoration: inherit;">Extracted<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalue">List&lt;Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscritical_csharp">
+<a href="#iscritical_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbasicauth_csharp">
+<a href="#requestbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Basicauth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestbasicauth">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestclientcertificate_csharp">
+<a href="#requestclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Client<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificate">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestdefinition_csharp">
+<a href="#requestdefinition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestdefinition">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The request for the api step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestheaders_csharp">
+<a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Header name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestquery_csharp">
+<a href="#requestquery_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtype_csharp">
+<a href="#subtype_csharp" style="color: inherit; text-decoration: inherit;">Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtype of the Synthetic multistep API test step, currently only supporting `http`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowfailure_go">
+<a href="#allowfailure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assertions_go">
+<a href="#assertions_go" style="color: inherit; text-decoration: inherit;">Assertions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertion">[]Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion</a></span>
+    </dt>
+    <dd>{{% md %}}Assertions used for the test. Multiple `assertion` blocks are allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extractedvalues_go">
+<a href="#extractedvalues_go" style="color: inherit; text-decoration: inherit;">Extracted<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalue">[]Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value</a></span>
+    </dt>
+    <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscritical_go">
+<a href="#iscritical_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbasicauth_go">
+<a href="#requestbasicauth_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Basicauth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestbasicauth">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Basicauth</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestclientcertificate_go">
+<a href="#requestclientcertificate_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Client<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificate">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestdefinition_go">
+<a href="#requestdefinition_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestdefinition">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Definition</a></span>
+    </dt>
+    <dd>{{% md %}}The request for the api step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestheaders_go">
+<a href="#requestheaders_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Header name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestquery_go">
+<a href="#requestquery_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtype_go">
+<a href="#subtype_go" style="color: inherit; text-decoration: inherit;">Subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtype of the Synthetic multistep API test step, currently only supporting `http`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowfailure_nodejs">
+<a href="#allowfailure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assertions_nodejs">
+<a href="#assertions_nodejs" style="color: inherit; text-decoration: inherit;">assertions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertion">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Assertions used for the test. Multiple `assertion` blocks are allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extractedvalues_nodejs">
+<a href="#extractedvalues_nodejs" style="color: inherit; text-decoration: inherit;">extracted<wbr>Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalue">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iscritical_nodejs">
+<a href="#iscritical_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestbasicauth_nodejs">
+<a href="#requestbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Basicauth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestbasicauth">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestclientcertificate_nodejs">
+<a href="#requestclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Client<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificate">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestdefinition_nodejs">
+<a href="#requestdefinition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestdefinition">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The request for the api step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestheaders_nodejs">
+<a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Header name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestquery_nodejs">
+<a href="#requestquery_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtype_nodejs">
+<a href="#subtype_nodejs" style="color: inherit; text-decoration: inherit;">subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subtype of the Synthetic multistep API test step, currently only supporting `http`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_failure_python">
+<a href="#allow_failure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to continue with test if this step fails.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assertions_python">
+<a href="#assertions_python" style="color: inherit; text-decoration: inherit;">assertions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertion">Sequence[Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Assertions used for the test. Multiple `assertion` blocks are allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extracted_values_python">
+<a href="#extracted_values_python" style="color: inherit; text-decoration: inherit;">extracted_<wbr>values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalue">Sequence[Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Values to parse and save as variables from the response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_critical_python">
+<a href="#is_critical_python" style="color: inherit; text-decoration: inherit;">is_<wbr>critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to consider the entire test as failed if this step fails. Can be used only if `allow_failure` is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_basicauth_python">
+<a href="#request_basicauth_python" style="color: inherit; text-decoration: inherit;">request_<wbr>basicauth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestbasicauth">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Basicauth<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_client_certificate_python">
+<a href="#request_client_certificate_python" style="color: inherit; text-decoration: inherit;">request_<wbr>client_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificate">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_definition_python">
+<a href="#request_definition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>definition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestdefinition">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Definition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The request for the api step.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_headers_python">
+<a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Header name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_query_python">
+<a href="#request_query_python" style="color: inherit; text-decoration: inherit;">request_<wbr>query</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Query arguments name and value map.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtype_python">
+<a href="#subtype_python" style="color: inherit; text-decoration: inherit;">subtype</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subtype of the Synthetic multistep API test step, currently only supporting `http`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapistepassertion">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assertion operator. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of assertion. Choose from `body`, `header`, `responseTime`, `statusCode`. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="property_csharp">
+<a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If assertion type is `header`, this is the header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expected value. Depends on the assertion type, refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test) for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetjsonpath_csharp">
+<a href="#targetjsonpath_csharp" style="color: inherit; text-decoration: inherit;">Targetjsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertiontargetjsonpath">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Targetjsonpath<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Expected structure if `operator` is `validatesJSONPath`. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assertion operator. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of assertion. Choose from `body`, `header`, `responseTime`, `statusCode`. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="property_go">
+<a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If assertion type is `header`, this is the header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expected value. Depends on the assertion type, refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test) for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetjsonpath_go">
+<a href="#targetjsonpath_go" style="color: inherit; text-decoration: inherit;">Targetjsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertiontargetjsonpath">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Targetjsonpath</a></span>
+    </dt>
+    <dd>{{% md %}}Expected structure if `operator` is `validatesJSONPath`. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assertion operator. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of assertion. Choose from `body`, `header`, `responseTime`, `statusCode`. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="property_nodejs">
+<a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If assertion type is `header`, this is the header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expected value. Depends on the assertion type, refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test) for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetjsonpath_nodejs">
+<a href="#targetjsonpath_nodejs" style="color: inherit; text-decoration: inherit;">targetjsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertiontargetjsonpath">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Targetjsonpath<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Expected structure if `operator` is `validatesJSONPath`. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Assertion operator. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of assertion. Choose from `body`, `header`, `responseTime`, `statusCode`. **Note** Only some combinations of `type` and `operator` are valid (please refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test)).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="property_python">
+<a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If assertion type is `header`, this is the header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Expected value. Depends on the assertion type, refer to [Datadog documentation](https://docs.datadoghq.com/api/latest/synthetics/#create-a-test) for details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetjsonpath_python">
+<a href="#targetjsonpath_python" style="color: inherit; text-decoration: inherit;">targetjsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepassertiontargetjsonpath">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Targetjsonpath<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Expected structure if `operator` is `validatesJSONPath`. Exactly one nested block is allowed with the structure below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapistepassertiontargetjsonpath">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Assertion<wbr>Targetjsonpath</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="jsonpath_csharp">
+<a href="#jsonpath_csharp" style="color: inherit; text-decoration: inherit;">Jsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_csharp">
+<a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Targetvalue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="jsonpath_go">
+<a href="#jsonpath_go" style="color: inherit; text-decoration: inherit;">Jsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_go">
+<a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Targetvalue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="jsonpath_nodejs">
+<a href="#jsonpath_nodejs" style="color: inherit; text-decoration: inherit;">jsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_nodejs">
+<a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">targetvalue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="jsonpath_python">
+<a href="#jsonpath_python" style="color: inherit; text-decoration: inherit;">jsonpath</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetvalue_python">
+<a href="#targetvalue_python" style="color: inherit; text-decoration: inherit;">targetvalue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapistepextractedvalue">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Datadog synthetics test.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parser_csharp">
+<a href="#parser_csharp" style="color: inherit; text-decoration: inherit;">Parser</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalueparser">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Parser<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -3167,26 +3596,11 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="example_csharp">
-<a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="pattern_csharp">
-<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3203,6 +3617,15 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}Name of Datadog synthetics test.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parser_go">
+<a href="#parser_go" style="color: inherit; text-decoration: inherit;">Parser</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalueparser">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Parser</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -3211,26 +3634,11 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="example_go">
-<a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="pattern_go">
-<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3247,6 +3655,15 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}Name of Datadog synthetics test.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parser_nodejs">
+<a href="#parser_nodejs" style="color: inherit; text-decoration: inherit;">parser</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalueparser">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Parser<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -3255,26 +3672,11 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="example_nodejs">
-<a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="pattern_nodejs">
-<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3291,6 +3693,15 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}Name of Datadog synthetics test.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="parser_python">
+<a href="#parser_python" style="color: inherit; text-decoration: inherit;">parser</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapistepextractedvalueparser">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Parser<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -3299,7 +3710,1760 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapistepextractedvalueparser">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Extracted<wbr>Value<wbr>Parser</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Synthetics test type (`api` or `browser`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapisteprequestbasicauth">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Basicauth</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapisteprequestclientcertificate">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cert_csharp">
+<a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatecert">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatekey">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cert_go">
+<a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatecert">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatekey">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cert_nodejs">
+<a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatecert">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatekey">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cert_python">
+<a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatecert">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestapisteprequestclientcertificatekey">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapisteprequestclientcertificatecert">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_python">
+<a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapisteprequestclientcertificatekey">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_csharp">
+<a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_go">
+<a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_nodejs">
+<a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="content_python">
+<a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_python">
+<a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestapisteprequestdefinition">Synthetics<wbr>Test<wbr>Api<wbr>Step<wbr>Request<wbr>Definition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_csharp">
+<a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserver_csharp">
+<a href="#dnsserver_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserverport_csharp">
+<a href="#dnsserverport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nosavingresponsebody_csharp">
+<a href="#nosavingresponsebody_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_csharp">
+<a href="#numberofpackets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_csharp">
+<a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_go">
+<a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserver_go">
+<a href="#dnsserver_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserverport_go">
+<a href="#dnsserverport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nosavingresponsebody_go">
+<a href="#nosavingresponsebody_go" style="color: inherit; text-decoration: inherit;">No<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_go">
+<a href="#numberofpackets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_go">
+<a href="#shouldtrackhops_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_nodejs">
+<a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserver_nodejs">
+<a href="#dnsserver_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserverport_nodejs">
+<a href="#dnsserverport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nosavingresponsebody_nodejs">
+<a href="#nosavingresponsebody_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_nodejs">
+<a href="#numberofpackets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_nodejs">
+<a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_python">
+<a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_server_python">
+<a href="#dns_server_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_server_port_python">
+<a href="#dns_server_port_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_saving_response_body_python">
+<a href="#no_saving_response_body_python" style="color: inherit; text-decoration: inherit;">no_<wbr>saving_<wbr>response_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_of_packets_python">
+<a href="#number_of_packets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_track_hops_python">
+<a href="#should_track_hops_python" style="color: inherit; text-decoration: inherit;">should_<wbr>track_<wbr>hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestbrowserstep">Synthetics<wbr>Test<wbr>Browser<wbr>Step</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="params_csharp">
+<a href="#params_csharp" style="color: inherit; text-decoration: inherit;">Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparams">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowfailure_csharp">
+<a href="#allowfailure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceelementupdate_csharp">
+<a href="#forceelementupdate_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Element<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="params_go">
+<a href="#params_go" style="color: inherit; text-decoration: inherit;">Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparams">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowfailure_go">
+<a href="#allowfailure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceelementupdate_go">
+<a href="#forceelementupdate_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Element<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="params_nodejs">
+<a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparams">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowfailure_nodejs">
+<a href="#allowfailure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceelementupdate_nodejs">
+<a href="#forceelementupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Element<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="params_python">
+<a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparams">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters for the step.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_failure_python">
+<a href="#allow_failure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>failure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_element_update_python">
+<a href="#force_element_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>element_<wbr>update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestbrowserstepparams">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="attribute_csharp">
+<a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="check_csharp">
+<a href="#check_csharp" style="color: inherit; text-decoration: inherit;">Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clicktype_csharp">
+<a href="#clicktype_csharp" style="color: inherit; text-decoration: inherit;">Click<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delay_csharp">
+<a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="element_csharp">
+<a href="#element_csharp" style="color: inherit; text-decoration: inherit;">Element</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="files_csharp">
+<a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifiers_csharp">
+<a href="#modifiers_csharp" style="color: inherit; text-decoration: inherit;">Modifiers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="playingtabid_csharp">
+<a href="#playingtabid_csharp" style="color: inherit; text-decoration: inherit;">Playing<wbr>Tab<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_csharp">
+<a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtestpublicid_csharp">
+<a href="#subtestpublicid_csharp" style="color: inherit; text-decoration: inherit;">Subtest<wbr>Public<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="variable_csharp">
+<a href="#variable_csharp" style="color: inherit; text-decoration: inherit;">Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparamsvariable">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Variable<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withclick_csharp">
+<a href="#withclick_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Click</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_csharp">
+<a href="#x_csharp" style="color: inherit; text-decoration: inherit;">X</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="y_csharp">
+<a href="#y_csharp" style="color: inherit; text-decoration: inherit;">Y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="attribute_go">
+<a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="check_go">
+<a href="#check_go" style="color: inherit; text-decoration: inherit;">Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clicktype_go">
+<a href="#clicktype_go" style="color: inherit; text-decoration: inherit;">Click<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delay_go">
+<a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="element_go">
+<a href="#element_go" style="color: inherit; text-decoration: inherit;">Element</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="files_go">
+<a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifiers_go">
+<a href="#modifiers_go" style="color: inherit; text-decoration: inherit;">Modifiers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="playingtabid_go">
+<a href="#playingtabid_go" style="color: inherit; text-decoration: inherit;">Playing<wbr>Tab<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_go">
+<a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtestpublicid_go">
+<a href="#subtestpublicid_go" style="color: inherit; text-decoration: inherit;">Subtest<wbr>Public<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="variable_go">
+<a href="#variable_go" style="color: inherit; text-decoration: inherit;">Variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparamsvariable">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Variable</a></span>
+    </dt>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withclick_go">
+<a href="#withclick_go" style="color: inherit; text-decoration: inherit;">With<wbr>Click</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_go">
+<a href="#x_go" style="color: inherit; text-decoration: inherit;">X</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="y_go">
+<a href="#y_go" style="color: inherit; text-decoration: inherit;">Y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="attribute_nodejs">
+<a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="check_nodejs">
+<a href="#check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clicktype_nodejs">
+<a href="#clicktype_nodejs" style="color: inherit; text-decoration: inherit;">click<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delay_nodejs">
+<a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="element_nodejs">
+<a href="#element_nodejs" style="color: inherit; text-decoration: inherit;">element</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="files_nodejs">
+<a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifiers_nodejs">
+<a href="#modifiers_nodejs" style="color: inherit; text-decoration: inherit;">modifiers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="playingtabid_nodejs">
+<a href="#playingtabid_nodejs" style="color: inherit; text-decoration: inherit;">playing<wbr>Tab<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_nodejs">
+<a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtestpublicid_nodejs">
+<a href="#subtestpublicid_nodejs" style="color: inherit; text-decoration: inherit;">subtest<wbr>Public<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="variable_nodejs">
+<a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparamsvariable">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Variable<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withclick_nodejs">
+<a href="#withclick_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Click</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_nodejs">
+<a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="y_nodejs">
+<a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="attribute_python">
+<a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="check_python">
+<a href="#check_python" style="color: inherit; text-decoration: inherit;">check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="click_type_python">
+<a href="#click_type_python" style="color: inherit; text-decoration: inherit;">click_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delay_python">
+<a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="element_python">
+<a href="#element_python" style="color: inherit; text-decoration: inherit;">element</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="files_python">
+<a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifiers_python">
+<a href="#modifiers_python" style="color: inherit; text-decoration: inherit;">modifiers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="playing_tab_id_python">
+<a href="#playing_tab_id_python" style="color: inherit; text-decoration: inherit;">playing_<wbr>tab_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_python">
+<a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The synthetics test request. Required if `type = "api"`. **Deprecated.** Define `request_definition` list with one element instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subtest_public_id_python">
+<a href="#subtest_public_id_python" style="color: inherit; text-decoration: inherit;">subtest_<wbr>public_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="variable_python">
+<a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syntheticstestbrowserstepparamsvariable">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Variable<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Variables used for a browser test steps. Multiple `browser_variable` blocks are allowed with the structure below. **Deprecated.** Define `browser_variable` blocks instead.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="with_click_python">
+<a href="#with_click_python" style="color: inherit; text-decoration: inherit;">with_<wbr>click</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="x_python">
+<a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="y_python">
+<a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestbrowserstepparamsvariable">Synthetics<wbr>Test<wbr>Browser<wbr>Step<wbr>Params<wbr>Variable</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="example_csharp">
+<a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="example_go">
+<a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="example_nodejs">
+<a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="example_python">
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
@@ -3307,7 +5471,197 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="syntheticstestbrowservariable">Synthetics<wbr>Test<wbr>Browser<wbr>Variable</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="example_csharp">
+<a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="example_go">
+<a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="example_nodejs">
+<a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="example_python">
+<a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3315,7 +5669,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -3323,7 +5678,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syntheticstestconfigvariable">Synthetics<wbr>Test<wbr>Config<wbr>Variable</h4>
@@ -3337,7 +5693,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3345,7 +5702,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of test configuration variable. Allowed enum values: `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_csharp">
 <a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
@@ -3353,7 +5711,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -3361,7 +5720,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3373,7 +5733,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3381,7 +5742,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of test configuration variable. Allowed enum values: `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_go">
 <a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
@@ -3389,7 +5751,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -3397,7 +5760,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3409,7 +5773,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3417,7 +5782,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of test configuration variable. Allowed enum values: `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_nodejs">
 <a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
@@ -3425,7 +5791,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -3433,7 +5800,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3445,7 +5813,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3453,7 +5822,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of test configuration variable. Allowed enum values: `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_python">
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
@@ -3461,7 +5831,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -3469,7 +5840,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syntheticstestoptions">Synthetics<wbr>Test<wbr>Options</h4>
@@ -3749,7 +6121,16 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <h4 id="syntheticstestoptionslist">Synthetics<wbr>Test<wbr>Options<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tickevery_csharp">
+<a href="#tickevery_csharp" style="color: inherit; text-decoration: inherit;">Tick<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800` plus `60` for API tests or `300` for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_csharp">
 <a href="#acceptselfsigned_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Self<wbr>Signed</a>
@@ -3757,7 +6138,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For SSL test, whether or not the test should allow self signed certificates.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowinsecure_csharp">
 <a href="#allowinsecure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Insecure</a>
@@ -3765,7 +6147,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Allows loading insecure content for an HTTP test.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="followredirects_csharp">
 <a href="#followredirects_csharp" style="color: inherit; text-decoration: inherit;">Follow<wbr>Redirects</a>
@@ -3773,7 +6156,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minfailureduration_csharp">
 <a href="#minfailureduration_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Failure<wbr>Duration</a>
@@ -3781,7 +6165,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum amount of time in failure required to trigger an alert. Default is `0`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlocationfailed_csharp">
 <a href="#minlocationfailed_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Location<wbr>Failed</a>
@@ -3789,7 +6174,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of locations in failure required to trigger an alert. Default is `1`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoroptions_csharp">
 <a href="#monitoroptions_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Options</a>
@@ -3799,25 +6185,35 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="noscreenshot_csharp">
+<a href="#noscreenshot_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Screenshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prevents saving screenshots of the steps.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retry_csharp">
 <a href="#retry_csharp" style="color: inherit; text-decoration: inherit;">Retry</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tickevery_csharp">
-<a href="#tickevery_csharp" style="color: inherit; text-decoration: inherit;">Tick<wbr>Every</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tickevery_go">
+<a href="#tickevery_go" style="color: inherit; text-decoration: inherit;">Tick<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800` plus `60` for API tests or `300` for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_go">
 <a href="#acceptselfsigned_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Self<wbr>Signed</a>
@@ -3825,7 +6221,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For SSL test, whether or not the test should allow self signed certificates.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowinsecure_go">
 <a href="#allowinsecure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Insecure</a>
@@ -3833,7 +6230,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Allows loading insecure content for an HTTP test.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="followredirects_go">
 <a href="#followredirects_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Redirects</a>
@@ -3841,7 +6239,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minfailureduration_go">
 <a href="#minfailureduration_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Failure<wbr>Duration</a>
@@ -3849,7 +6248,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum amount of time in failure required to trigger an alert. Default is `0`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlocationfailed_go">
 <a href="#minlocationfailed_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Location<wbr>Failed</a>
@@ -3857,7 +6257,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of locations in failure required to trigger an alert. Default is `1`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoroptions_go">
 <a href="#monitoroptions_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Options</a>
@@ -3867,25 +6268,35 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="noscreenshot_go">
+<a href="#noscreenshot_go" style="color: inherit; text-decoration: inherit;">No<wbr>Screenshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prevents saving screenshots of the steps.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retry_go">
 <a href="#retry_go" style="color: inherit; text-decoration: inherit;">Retry</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tickevery_go">
-<a href="#tickevery_go" style="color: inherit; text-decoration: inherit;">Tick<wbr>Every</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tickevery_nodejs">
+<a href="#tickevery_nodejs" style="color: inherit; text-decoration: inherit;">tick<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800` plus `60` for API tests or `300` for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_nodejs">
 <a href="#acceptselfsigned_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Self<wbr>Signed</a>
@@ -3893,7 +6304,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For SSL test, whether or not the test should allow self signed certificates.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowinsecure_nodejs">
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
@@ -3901,7 +6313,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Allows loading insecure content for an HTTP test.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="followredirects_nodejs">
 <a href="#followredirects_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Redirects</a>
@@ -3909,7 +6322,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minfailureduration_nodejs">
 <a href="#minfailureduration_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Failure<wbr>Duration</a>
@@ -3917,7 +6331,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum amount of time in failure required to trigger an alert. Default is `0`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlocationfailed_nodejs">
 <a href="#minlocationfailed_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Location<wbr>Failed</a>
@@ -3925,35 +6340,46 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of locations in failure required to trigger an alert. Default is `1`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoroptions_nodejs">
 <a href="#monitoroptions_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslistmonitoroptions">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Monitor<wbr>Options</a></span>
+        <span class="property-type"><a href="#syntheticstestoptionslistmonitoroptions">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Monitor<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noscreenshot_nodejs">
+<a href="#noscreenshot_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Screenshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Prevents saving screenshots of the steps.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_nodejs">
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tickevery_nodejs">
-<a href="#tickevery_nodejs" style="color: inherit; text-decoration: inherit;">tick<wbr>Every</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="tick_every_python">
+<a href="#tick_every_python" style="color: inherit; text-decoration: inherit;">tick_<wbr>every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How often the test should run (in seconds). Current possible values are `900`, `1800`, `3600`, `21600`, `43200`, `86400`, `604800` plus `60` for API tests or `300` for browser tests.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_self_signed_python">
 <a href="#accept_self_signed_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>self_<wbr>signed</a>
@@ -3961,7 +6387,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For SSL test, whether or not the test should allow self signed certificates.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_insecure_python">
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
@@ -3969,7 +6396,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Allows loading insecure content for an HTTP test.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="follow_redirects_python">
 <a href="#follow_redirects_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>redirects</a>
@@ -3977,7 +6405,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}For API HTTP test, whether or not the test should follow redirects.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_failure_duration_python">
 <a href="#min_failure_duration_python" style="color: inherit; text-decoration: inherit;">min_<wbr>failure_<wbr>duration</a>
@@ -3985,7 +6414,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum amount of time in failure required to trigger an alert. Default is `0`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_location_failed_python">
 <a href="#min_location_failed_python" style="color: inherit; text-decoration: inherit;">min_<wbr>location_<wbr>failed</a>
@@ -3993,7 +6423,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of locations in failure required to trigger an alert. Default is `1`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_options_python">
 <a href="#monitor_options_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>options</a>
@@ -4003,19 +6434,20 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="no_screenshot_python">
+<a href="#no_screenshot_python" style="color: inherit; text-decoration: inherit;">no_<wbr>screenshot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prevents saving screenshots of the steps.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retry_python">
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticstestoptionslistretry">Synthetics<wbr>Test<wbr>Options<wbr>List<wbr>Retry<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tick_every_python">
-<a href="#tick_every_python" style="color: inherit; text-decoration: inherit;">tick_<wbr>every</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4173,6 +6605,14 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_csharp">
+<a href="#dnsserverport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -4189,11 +6629,35 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nosavingresponsebody_csharp">
+<a href="#nosavingresponsebody_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_csharp">
+<a href="#numberofpackets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_csharp">
+<a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4233,6 +6697,14 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_go">
+<a href="#dnsserverport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -4249,11 +6721,35 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nosavingresponsebody_go">
+<a href="#nosavingresponsebody_go" style="color: inherit; text-decoration: inherit;">No<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_go">
+<a href="#numberofpackets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_go">
+<a href="#shouldtrackhops_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4293,6 +6789,14 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsserverport_nodejs">
+<a href="#dnsserverport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -4309,11 +6813,35 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nosavingresponsebody_nodejs">
+<a href="#nosavingresponsebody_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_nodejs">
+<a href="#numberofpackets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_nodejs">
+<a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4353,6 +6881,14 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dns_server_port_python">
+<a href="#dns_server_port_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -4369,11 +6905,35 @@ synthetics page of the UI. Default is an empty list (`[]`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="no_saving_response_body_python">
+<a href="#no_saving_response_body_python" style="color: inherit; text-decoration: inherit;">no_<wbr>saving_<wbr>response_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_of_packets_python">
+<a href="#number_of_packets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_track_hops_python">
+<a href="#should_track_hops_python" style="color: inherit; text-decoration: inherit;">should_<wbr>track_<wbr>hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4405,7 +6965,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -4413,7 +6974,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4425,7 +6987,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -4433,7 +6996,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4445,7 +7009,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4453,7 +7018,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4465,7 +7031,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Password for authentication.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4473,7 +7040,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Username for authentication.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syntheticstestrequestclientcertificate">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate</h4>
@@ -4525,7 +7093,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificatecert">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificatecert">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4533,7 +7101,7 @@ synthetics page of the UI. Default is an empty list (`[]`).
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syntheticstestrequestclientcertificatekey">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key</a></span>
+        <span class="property-type"><a href="#syntheticstestrequestclientcertificatekey">Synthetics<wbr>Test<wbr>Request<wbr>Client<wbr>Certificate<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4722,6 +7290,420 @@ synthetics page of the UI. Default is an empty list (`[]`).
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="syntheticstestrequestdefinition">Synthetics<wbr>Test<wbr>Request<wbr>Definition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_csharp">
+<a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserver_csharp">
+<a href="#dnsserver_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserverport_csharp">
+<a href="#dnsserverport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nosavingresponsebody_csharp">
+<a href="#nosavingresponsebody_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_csharp">
+<a href="#numberofpackets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_csharp">
+<a href="#shouldtrackhops_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_go">
+<a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserver_go">
+<a href="#dnsserver_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserverport_go">
+<a href="#dnsserverport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nosavingresponsebody_go">
+<a href="#nosavingresponsebody_go" style="color: inherit; text-decoration: inherit;">No<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_go">
+<a href="#numberofpackets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_go">
+<a href="#shouldtrackhops_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_nodejs">
+<a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserver_nodejs">
+<a href="#dnsserver_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsserverport_nodejs">
+<a href="#dnsserverport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nosavingresponsebody_nodejs">
+<a href="#nosavingresponsebody_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Saving<wbr>Response<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberofpackets_nodejs">
+<a href="#numberofpackets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtrackhops_nodejs">
+<a href="#shouldtrackhops_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Track<wbr>Hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="body_python">
+<a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The request body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_server_python">
+<a href="#dns_server_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS server to use for DNS tests (`subtype = "dns"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_server_port_python">
+<a href="#dns_server_port_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}DNS server port to use for DNS tests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Host name to perform the test with.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The HTTP method. One of `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_saving_response_body_python">
+<a href="#no_saving_response_body_python" style="color: inherit; text-decoration: inherit;">no_<wbr>saving_<wbr>response_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether or not to save the response body.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_of_packets_python">
+<a href="#number_of_packets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>packets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of pings to use per test for ICMP tests (`subtype = "icmp"`) between 0 and 10.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port to use when performing the test.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_track_hops_python">
+<a href="#should_track_hops_python" style="color: inherit; text-decoration: inherit;">should_<wbr>track_<wbr>hops</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This will turn on a traceroute probe to discover all gateways along the path to the host destination. For ICMP tests (`subtype = "icmp"`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout in seconds for the test. Defaults to `60`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL to send the request to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="syntheticsteststep">Synthetics<wbr>Test<wbr>Step</h4>
 
 {{% choosable language csharp %}}
@@ -4733,7 +7715,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_csharp">
 <a href="#params_csharp" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -4741,7 +7724,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parameters for the step as JSON string.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4749,7 +7733,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowfailure_csharp">
 <a href="#allowfailure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
@@ -4757,7 +7742,17 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceelementupdate_csharp">
+<a href="#forceelementupdate_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Element<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -4765,7 +7760,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4777,7 +7773,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_go">
 <a href="#params_go" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -4785,7 +7782,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parameters for the step as JSON string.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4793,7 +7791,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowfailure_go">
 <a href="#allowfailure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Failure</a>
@@ -4801,7 +7800,17 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceelementupdate_go">
+<a href="#forceelementupdate_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Element<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -4809,7 +7818,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4821,7 +7831,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_nodejs">
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
@@ -4829,7 +7840,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parameters for the step as JSON string.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4837,7 +7849,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowfailure_nodejs">
 <a href="#allowfailure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Failure</a>
@@ -4845,7 +7858,17 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceelementupdate_nodejs">
+<a href="#forceelementupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Element<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -4853,7 +7876,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4865,7 +7889,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the step.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_python">
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
@@ -4873,7 +7898,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Parameters for the step as JSON string.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4881,7 +7907,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of the step. Refer to [Datadog documentation](https://docs.datadoghq.com/api/v1/synthetics/#create-a-test) for the complete list of available types.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_failure_python">
 <a href="#allow_failure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>failure</a>
@@ -4889,7 +7916,17 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Determines if the step should be allowed to fail.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_element_update_python">
+<a href="#force_element_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>element_<wbr>update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force update of the "element" parameter for the step
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -4897,7 +7934,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Used to override the default timeout of a step.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syntheticstestvariable">Synthetics<wbr>Test<wbr>Variable</h4>
@@ -4911,7 +7949,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4919,7 +7958,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_csharp">
 <a href="#example_csharp" style="color: inherit; text-decoration: inherit;">Example</a>
@@ -4927,7 +7967,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4935,7 +7976,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4943,7 +7985,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4955,7 +7998,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4963,7 +8007,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_go">
 <a href="#example_go" style="color: inherit; text-decoration: inherit;">Example</a>
@@ -4971,7 +8016,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4979,7 +8025,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4987,7 +8034,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4999,7 +8047,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5007,7 +8056,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_nodejs">
 <a href="#example_nodejs" style="color: inherit; text-decoration: inherit;">example</a>
@@ -5015,7 +8065,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5023,7 +8074,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -5031,7 +8083,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5043,7 +8096,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Name of the variable.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5051,7 +8105,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of browser test variable. Allowed enum values: `element`, `email`, `global`, `javascript`, `text`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="example_python">
 <a href="#example_python" style="color: inherit; text-decoration: inherit;">example</a>
@@ -5059,7 +8114,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Example for the variable.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5067,7 +8123,8 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the global variable to use. This is actually only used (and required) in the case of using a variable of type `global`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -5075,12 +8132,13 @@ synthetics page of the UI. Default is an empty list (`[]`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Pattern of the variable.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
 
-Synthetics tests can be imported using their public string ID, e.g.
+# Synthetics tests can be imported using their public string ID, e.g.
 
 ```sh
  $ pulumi import datadog:index/syntheticsTest:SyntheticsTest fizz abc-123-xyz

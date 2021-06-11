@@ -63,9 +63,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -146,6 +146,194 @@ const acr = new azure.containerservice.Registry("acr", {
 
 
 
+### Encryption)
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleUserAssignedIdentity = new Azure.Authorization.UserAssignedIdentity("exampleUserAssignedIdentity", new Azure.Authorization.UserAssignedIdentityArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+        });
+        var exampleKey = Output.Create(Azure.KeyVault.GetKey.InvokeAsync(new Azure.KeyVault.GetKeyArgs
+        {
+            Name = "super-secret",
+            KeyVaultId = data.Azurerm_key_vault.Existing.Id,
+        }));
+        var acr = new Azure.ContainerService.Registry("acr", new Azure.ContainerService.RegistryArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            Sku = "Premium",
+            Identity = new Azure.ContainerService.Inputs.RegistryIdentityArgs
+            {
+                Type = "UserAssigned",
+                IdentityIds = 
+                {
+                    exampleUserAssignedIdentity.Id,
+                },
+            },
+            Encryption = new Azure.ContainerService.Inputs.RegistryEncryptionArgs
+            {
+                Enabled = true,
+                KeyVaultKeyId = exampleKey.Apply(exampleKey => exampleKey.Id),
+                IdentityClientId = exampleUserAssignedIdentity.ClientId,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleUserAssignedIdentity, err := authorization.NewUserAssignedIdentity(ctx, "exampleUserAssignedIdentity", &authorization.UserAssignedIdentityArgs{
+			ResourceGroupName: pulumi.Any(azurerm_resource_group.Example.Name),
+			Location:          pulumi.Any(azurerm_resource_group.Example.Location),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKey, err := keyvault.LookupKey(ctx, &keyvault.LookupKeyArgs{
+			Name:       "super-secret",
+			KeyVaultId: data.Azurerm_key_vault.Existing.Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = containerservice.NewRegistry(ctx, "acr", &containerservice.RegistryArgs{
+			ResourceGroupName: rg.Name,
+			Location:          rg.Location,
+			Sku:               pulumi.String("Premium"),
+			Identity: &containerservice.RegistryIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				IdentityIds: pulumi.StringArray{
+					exampleUserAssignedIdentity.ID(),
+				},
+			},
+			Encryption: &containerservice.RegistryEncryptionArgs{
+				Enabled:          pulumi.Bool(true),
+				KeyVaultKeyId:    pulumi.String(exampleKey.Id),
+				IdentityClientId: exampleUserAssignedIdentity.ClientId,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West Europe")
+example_user_assigned_identity = azure.authorization.UserAssignedIdentity("exampleUserAssignedIdentity",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"])
+example_key = azure.keyvault.get_key(name="super-secret",
+    key_vault_id=data["azurerm_key_vault"]["existing"]["id"])
+acr = azure.containerservice.Registry("acr",
+    resource_group_name=rg.name,
+    location=rg.location,
+    sku="Premium",
+    identity=azure.containerservice.RegistryIdentityArgs(
+        type="UserAssigned",
+        identity_ids=[example_user_assigned_identity.id],
+    ),
+    encryption=azure.containerservice.RegistryEncryptionArgs(
+        enabled=True,
+        key_vault_key_id=example_key.id,
+        identity_client_id=example_user_assigned_identity.client_id,
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
+const exampleUserAssignedIdentity = new azure.authorization.UserAssignedIdentity("exampleUserAssignedIdentity", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+});
+const exampleKey = azure.keyvault.getKey({
+    name: "super-secret",
+    keyVaultId: data.azurerm_key_vault.existing.id,
+});
+const acr = new azure.containerservice.Registry("acr", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    sku: "Premium",
+    identity: {
+        type: "UserAssigned",
+        identityIds: [exampleUserAssignedIdentity.id],
+    },
+    encryption: {
+        enabled: true,
+        keyVaultKeyId: exampleKey.then(exampleKey => exampleKey.id),
+        identityClientId: exampleUserAssignedIdentity.clientId,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -157,19 +345,41 @@ const acr = new azure.containerservice.Registry("acr", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">quarantine_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[RegistryEncryptionArgs]</span> = None<span class="p">,</span>
+             <span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">georeplications</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryGeoreplicationArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[RegistryIdentityArgs]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">,</span>
+             <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">quarantine_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -180,46 +390,44 @@ const acr = new azure.containerservice.Registry("acr", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegistryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegistryArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,35 +436,27 @@ const acr = new azure.containerservice.Registry("acr", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegistryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -268,25 +468,19 @@ const acr = new azure.containerservice.Registry("acr", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RegistryArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -321,6 +515,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplicationlocations_csharp">
 <a href="#georeplicationlocations_csharp" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -328,6 +531,24 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_csharp">
+<a href="#georeplications_csharp" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">List&lt;Registry<wbr>Georeplication<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -442,6 +663,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplicationlocations_go">
 <a href="#georeplicationlocations_go" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -449,6 +679,24 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_go">
+<a href="#georeplications_go" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -563,6 +811,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplicationlocations_nodejs">
 <a href="#georeplicationlocations_nodejs" style="color: inherit; text-decoration: inherit;">georeplication<wbr>Locations</a>
 </span>
@@ -570,6 +827,24 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_nodejs">
+<a href="#georeplications_nodejs" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Registry<wbr>Georeplication<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -594,7 +869,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkruleset_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +896,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +932,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#trustpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
 {{% /md %}}</dd></dl>
@@ -684,6 +959,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="georeplication_locations_python">
 <a href="#georeplication_locations_python" style="color: inherit; text-decoration: inherit;">georeplication_<wbr>locations</a>
 </span>
@@ -691,6 +975,24 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="georeplications_python">
+<a href="#georeplications_python" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Sequence[Registry<wbr>Georeplication<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -955,20 +1257,41 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RegistryState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Registry</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RegistryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Registry</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">quarantine_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[RegistryEncryptionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">georeplication_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">georeplications</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryGeoreplicationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[RegistryIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">login_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[RegistryNetworkRuleSetArgs]</span> = None<span class="p">,</span>
+        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">quarantine_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryRetentionPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RegistryState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RegistryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Registry</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RegistryState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Registry</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RegistryState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1100,6 +1423,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_csharp">
+<a href="#state_encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplicationlocations_csharp">
 <a href="#state_georeplicationlocations_csharp" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -1107,6 +1439,24 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_csharp">
+<a href="#state_georeplications_csharp" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">List&lt;Registry<wbr>Georeplication<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -1248,6 +1598,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_go">
+<a href="#state_encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplicationlocations_go">
 <a href="#state_georeplicationlocations_go" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
 </span>
@@ -1255,6 +1614,24 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_go">
+<a href="#state_georeplications_go" style="color: inherit; text-decoration: inherit;">Georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1396,6 +1773,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_nodejs">
+<a href="#state_encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplicationlocations_nodejs">
 <a href="#state_georeplicationlocations_nodejs" style="color: inherit; text-decoration: inherit;">georeplication<wbr>Locations</a>
 </span>
@@ -1403,6 +1789,24 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_nodejs">
+<a href="#state_georeplications_nodejs" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Registry<wbr>Georeplication<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1436,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_networkruleset_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1876,7 @@ The following state arguments are supported:
 <a href="#state_retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1912,7 @@ The following state arguments are supported:
 <a href="#state_trustpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
 {{% /md %}}</dd></dl>
@@ -1544,6 +1948,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_python">
+<a href="#state_encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `encryption` block as documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_georeplication_locations_python">
 <a href="#state_georeplication_locations_python" style="color: inherit; text-decoration: inherit;">georeplication_<wbr>locations</a>
 </span>
@@ -1551,6 +1964,24 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `georeplications`{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_georeplications_python">
+<a href="#state_georeplications_python" style="color: inherit; text-decoration: inherit;">georeplications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registrygeoreplication">Sequence[Registry<wbr>Georeplication<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `georeplications` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1671,6 +2102,344 @@ The following state arguments are supported:
 
 
 
+<h4 id="registryencryption">Registry<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityclientid_csharp">
+<a href="#identityclientid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the encryption key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="keyvaultkeyid_csharp">
+<a href="#keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether encryption is enabled.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityclientid_go">
+<a href="#identityclientid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the encryption key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="keyvaultkeyid_go">
+<a href="#keyvaultkeyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether encryption is enabled.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityclientid_nodejs">
+<a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the encryption key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="keyvaultkeyid_nodejs">
+<a href="#keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether encryption is enabled.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identity_client_id_python">
+<a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the encryption key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_vault_key_id_python">
+<a href="#key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean value that indicates whether encryption is enabled.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="registrygeoreplication">Registry<wbr>Georeplication</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A location where the container registry should be geo-replicated.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="registryidentity">Registry<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Managed Identity which should be assigned to the Container Registry. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Container Registry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Managed Identity which should be assigned to the Container Registry. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Container Registry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Managed Identity which should be assigned to the Container Registry. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Container Registry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Managed Identity which should be assigned to the Container Registry. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Container Registry.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</h4>
 
 {{% choosable language csharp %}}
@@ -1751,7 +2520,7 @@ The following state arguments are supported:
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetiprule">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetiprule">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1760,7 +2529,7 @@ The following state arguments are supported:
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network[]</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
 {{% /md %}}</dd></dl>

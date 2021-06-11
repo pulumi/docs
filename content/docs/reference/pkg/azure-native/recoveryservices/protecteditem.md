@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.ProtectedItem re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup items.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 
@@ -37,11 +37,11 @@ class MyStack : Stack
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSComputeVMProtectedItemArgs
             {
-                { "policyId", "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy" },
-                { "protectedItemType", "Microsoft.Compute/virtualMachines" },
-                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1" },
+                PolicyId = "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+                ProtectedItemType = "Microsoft.Compute/virtualMachines",
+                SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
             },
             ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             ResourceGroupName = "SwaggerTestRg",
@@ -59,7 +59,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
+			ContainerName: pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			FabricName:    pulumi.String("Azure"),
+			Properties: recoveryservices.AzureIaaSComputeVMProtectedItem{
+				PolicyId:          "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+				ProtectedItemType: "Microsoft.Compute/virtualMachines",
+				SourceResourceId:  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+			},
+			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -74,11 +105,11 @@ import pulumi_azure_native as azure_native
 protected_item = azure_native.recoveryservices.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
-    properties={
-        "policyId": "/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
-        "protectedItemType": "Microsoft.Compute/virtualMachines",
-        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
-    },
+    properties=azure_native.recoveryservices.AzureIaaSComputeVMProtectedItemArgs(
+        policy_id="/Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/DefaultPolicy",
+        protected_item_type="Microsoft.Compute/virtualMachines",
+        source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    ),
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
@@ -134,11 +165,11 @@ class MyStack : Stack
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
-            Properties = 
+            Properties = new AzureNative.RecoveryServices.Inputs.AzureIaaSComputeVMProtectedItemArgs
             {
-                { "protectedItemType", "Microsoft.Compute/virtualMachines" },
-                { "protectionState", "ProtectionStopped" },
-                { "sourceResourceId", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1" },
+                ProtectedItemType = "Microsoft.Compute/virtualMachines",
+                ProtectionState = "ProtectionStopped",
+                SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
             },
             ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             ResourceGroupName = "SwaggerTestRg",
@@ -156,7 +187,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewProtectedItem(ctx, "protectedItem", &recoveryservices.ProtectedItemArgs{
+			ContainerName: pulumi.String("IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			FabricName:    pulumi.String("Azure"),
+			Properties: recoveryservices.AzureIaaSComputeVMProtectedItem{
+				ProtectedItemType: "Microsoft.Compute/virtualMachines",
+				ProtectionState:   "ProtectionStopped",
+				SourceResourceId:  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+			},
+			ProtectedItemName: pulumi.String("VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1"),
+			ResourceGroupName: pulumi.String("SwaggerTestRg"),
+			VaultName:         pulumi.String("NetSDKTestRsVault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -171,11 +233,11 @@ import pulumi_azure_native as azure_native
 protected_item = azure_native.recoveryservices.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
-    properties={
-        "protectedItemType": "Microsoft.Compute/virtualMachines",
-        "protectionState": "ProtectionStopped",
-        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
-    },
+    properties=azure_native.recoveryservices.AzureIaaSComputeVMProtectedItemArgs(
+        protected_item_type="Microsoft.Compute/virtualMachines",
+        protection_state="ProtectionStopped",
+        source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/netsdktestrg/providers/Microsoft.Compute/virtualMachines/netvmtestv2vm1",
+    ),
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     resource_group_name="SwaggerTestRg",
     vault_name="NetSDKTestRsVault")
@@ -225,19 +287,34 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFileshareProtectedItemArgs, AzureIaaSClassicComputeVMProtectedItemArgs, AzureIaaSComputeVMProtectedItemArgs, AzureIaaSVMProtectedItemArgs, AzureSqlProtectedItemArgs, AzureVmWorkloadProtectedItemArgs, AzureVmWorkloadSAPAseDatabaseProtectedItemArgs, AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs, AzureVmWorkloadSQLDatabaseProtectedItemArgs, DPMProtectedItemArgs, GenericProtectedItemArgs, MabFileFolderProtectedItemArgs]]</span> = None<span class="p">, </span><span class="nx">protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFileshareProtectedItemArgs, AzureIaaSClassicComputeVMProtectedItemArgs, AzureIaaSComputeVMProtectedItemArgs, AzureIaaSVMProtectedItemArgs, AzureSqlProtectedItemArgs, AzureVmWorkloadProtectedItemArgs, AzureVmWorkloadSAPAseDatabaseProtectedItemArgs, AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs, AzureVmWorkloadSQLDatabaseProtectedItemArgs, DPMProtectedItemArgs, GenericProtectedItemArgs, MabFileFolderProtectedItemArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                  <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectedItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectedItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -248,46 +325,44 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -298,33 +373,25 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -336,25 +403,19 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -575,7 +636,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item</a> | <a href="#azureiaascomputevmprotecteditem">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaascomputevmprotecteditem">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item<wbr>Args</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2858,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2866,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
+        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2914,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3660,7 +3721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3668,7 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3684,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4462,7 +4523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4470,7 +4531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
+        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4518,7 +4579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5264,7 +5325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5272,7 +5333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5288,7 +5349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5328,7 +5389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6212,7 +6273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6220,7 +6281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
+        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6268,7 +6329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7242,7 +7303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7250,7 +7311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7266,7 +7327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7306,7 +7367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7916,7 +7977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8674,7 +8735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9348,7 +9409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9388,7 +9449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10410,7 +10471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10450,7 +10511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10458,7 +10519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11244,7 +11305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11284,7 +11345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12078,7 +12139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12118,7 +12179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12126,7 +12187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12912,7 +12973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12952,7 +13013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13746,7 +13807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13786,7 +13847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13794,7 +13855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14580,7 +14641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14620,7 +14681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15414,7 +15475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15454,7 +15515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15462,7 +15523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16212,7 +16273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17706,7 +17767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18312,7 +18373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusionproperties_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties</a></span>
+        <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18362,7 +18423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusionproperties_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19764,7 +19825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcehealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">Resource<wbr>Health<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20232,7 +20293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21118,7 +21179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -19,17 +19,54 @@ meta_desc: "Documentation for the aiven.getService function with examples, input
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[GetServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServiceComponentArgs]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[GetServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GetServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[GetServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[GetServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[GetServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[GetServiceCassandra]</span> = None<span class="p">,</span>
+                <span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceCassandraUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServiceComponent]]</span> = None<span class="p">,</span>
+                <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[GetServiceElasticsearch]</span> = None<span class="p">,</span>
+                <span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceElasticsearchUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GetServiceGrafana]</span> = None<span class="p">,</span>
+                <span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceGrafanaUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[GetServiceInfluxdb]</span> = None<span class="p">,</span>
+                <span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceInfluxdbUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafka]</span> = None<span class="p">,</span>
+                <span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaConnect]</span> = None<span class="p">,</span>
+                <span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaConnectUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaMirrormaker]</span> = None<span class="p">,</span>
+                <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaMirrormakerUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceKafkaUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysql]</span> = None<span class="p">,</span>
+                <span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceMysqlUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[GetServicePg]</span> = None<span class="p">,</span>
+                <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServicePgUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[GetServiceRedis]</span> = None<span class="p">,</span>
+                <span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceRedisUserConfig]</span> = None<span class="p">,</span>
+                <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServiceServiceIntegration]]</span> = None<span class="p">,</span>
+                <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupService` in the Go SDK.
 
@@ -38,7 +75,7 @@ meta_desc: "Documentation for the aiven.getService function with examples, input
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -70,7 +107,7 @@ The following arguments are supported:
 <a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandra">Get<wbr>Service<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandra">Get<wbr>Service<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -78,7 +115,7 @@ The following arguments are supported:
 <a href="#cassandrauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfig">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfig">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -94,7 +131,7 @@ The following arguments are supported:
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">List&lt;Get<wbr>Service<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicecomponent">List&lt;Get<wbr>Service<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -102,7 +139,7 @@ The following arguments are supported:
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearch">Get<wbr>Service<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -110,7 +147,7 @@ The following arguments are supported:
 <a href="#elasticsearchuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -118,7 +155,7 @@ The following arguments are supported:
 <a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafana">Get<wbr>Service<wbr>Grafana<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafana">Get<wbr>Service<wbr>Grafana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -126,7 +163,7 @@ The following arguments are supported:
 <a href="#grafanauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfig">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfig">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -134,7 +171,7 @@ The following arguments are supported:
 <a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdb">Get<wbr>Service<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -142,7 +179,7 @@ The following arguments are supported:
 <a href="#influxdbuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Influxdb<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -150,7 +187,7 @@ The following arguments are supported:
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafka">Get<wbr>Service<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafka">Get<wbr>Service<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -158,7 +195,7 @@ The following arguments are supported:
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -166,7 +203,7 @@ The following arguments are supported:
 <a href="#kafkaconnectuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -174,7 +211,7 @@ The following arguments are supported:
 <a href="#kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -182,7 +219,7 @@ The following arguments are supported:
 <a href="#kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +227,7 @@ The following arguments are supported:
 <a href="#kafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -214,7 +251,7 @@ The following arguments are supported:
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +259,7 @@ The following arguments are supported:
 <a href="#mysqluserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -230,7 +267,7 @@ The following arguments are supported:
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepg">Get<wbr>Service<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepg">Get<wbr>Service<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -238,7 +275,7 @@ The following arguments are supported:
 <a href="#pguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfig">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfig">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -262,7 +299,7 @@ The following arguments are supported:
 <a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredis">Get<wbr>Service<wbr>Redis<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredis">Get<wbr>Service<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -270,7 +307,7 @@ The following arguments are supported:
 <a href="#redisuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfig">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfig">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -286,7 +323,7 @@ The following arguments are supported:
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceserviceintegration">List&lt;Get<wbr>Service<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getserviceserviceintegration">List&lt;Get<wbr>Service<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +1007,7 @@ The following arguments are supported:
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandra">Get<wbr>Service<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandra">Get<wbr>Service<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +1015,7 @@ The following arguments are supported:
 <a href="#cassandra_user_config_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfig">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfig">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1031,7 @@ The following arguments are supported:
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecomponent">Sequence[Get<wbr>Service<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicecomponent">Sequence[Get<wbr>Service<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1039,7 @@ The following arguments are supported:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearch">Get<wbr>Service<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1047,7 @@ The following arguments are supported:
 <a href="#elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfig">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +1055,7 @@ The following arguments are supported:
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafana">Get<wbr>Service<wbr>Grafana<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafana">Get<wbr>Service<wbr>Grafana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1063,7 @@ The following arguments are supported:
 <a href="#grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfig">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfig">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +1071,7 @@ The following arguments are supported:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdb">Get<wbr>Service<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1079,7 @@ The following arguments are supported:
 <a href="#influxdb_user_config_python" style="color: inherit; text-decoration: inherit;">influxdb_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfig">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1087,7 @@ The following arguments are supported:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafka">Get<wbr>Service<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafka">Get<wbr>Service<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1095,7 @@ The following arguments are supported:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1103,7 @@ The following arguments are supported:
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfig">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1111,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1119,7 @@ The following arguments are supported:
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfig">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1127,7 @@ The following arguments are supported:
 <a href="#kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1151,7 @@ The following arguments are supported:
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysql">Get<wbr>Service<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1122,7 +1159,7 @@ The following arguments are supported:
 <a href="#mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfig">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1167,7 @@ The following arguments are supported:
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepg">Get<wbr>Service<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepg">Get<wbr>Service<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1175,7 @@ The following arguments are supported:
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfig">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfig">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1199,7 @@ The following arguments are supported:
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredis">Get<wbr>Service<wbr>Redis<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredis">Get<wbr>Service<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1207,7 @@ The following arguments are supported:
 <a href="#redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfig">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfig">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1223,7 @@ The following arguments are supported:
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceserviceintegration">Sequence[Get<wbr>Service<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getserviceserviceintegration">Sequence[Get<wbr>Service<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2546,7 @@ The following output properties are available:
 <a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2570,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigprivateaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigprivateaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2549,7 +2586,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigpublicaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigpublicaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2726,7 @@ The following output properties are available:
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigcassandra">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2750,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigprivateaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigprivateaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2766,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecassandrauserconfigpublicaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicecassandrauserconfigpublicaccess">Get<wbr>Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3253,7 +3290,7 @@ The following output properties are available:
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3306,7 @@ The following output properties are available:
 <a href="#indexpatterns_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindexpattern">List&lt;Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindexpattern">List&lt;Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3314,7 @@ The following output properties are available:
 <a href="#indextemplate_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindextemplate">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindextemplate">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3330,7 @@ The following output properties are available:
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigkibana">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigkibana">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3346,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivateaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivateaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3317,7 +3354,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3370,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigpublicaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigpublicaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3662,7 @@ The following output properties are available:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigelasticsearch">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3678,7 @@ The following output properties are available:
 <a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindexpattern">Sequence[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindexpattern">Sequence[Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3686,7 @@ The following output properties are available:
 <a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindextemplate">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigindextemplate">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3702,7 @@ The following output properties are available:
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigkibana">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigkibana">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3718,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivateaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivateaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3689,7 +3726,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3705,7 +3742,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceelasticsearchuserconfigpublicaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceelasticsearchuserconfigpublicaccess">Get<wbr>Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5261,7 +5298,7 @@ The following output properties are available:
 <a href="#authgenericoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgenericoauth">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgenericoauth">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5269,7 +5306,7 @@ The following output properties are available:
 <a href="#authgithub_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgithub">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgithub">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5277,7 +5314,7 @@ The following output properties are available:
 <a href="#authgitlab_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgitlab">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgitlab">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5285,7 +5322,7 @@ The following output properties are available:
 <a href="#authgoogle_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgoogle">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgoogle">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5357,7 +5394,7 @@ The following output properties are available:
 <a href="#externalimagestorage_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigexternalimagestorage">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigexternalimagestorage">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5389,7 +5426,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigprivateaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigprivateaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5397,7 +5434,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5413,7 +5450,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigpublicaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigpublicaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5437,7 +5474,7 @@ The following output properties are available:
 <a href="#smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigsmtpserver">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigsmtpserver">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6017,7 +6054,7 @@ The following output properties are available:
 <a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgenericoauth">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgenericoauth">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6025,7 +6062,7 @@ The following output properties are available:
 <a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgithub">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgithub">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6033,7 +6070,7 @@ The following output properties are available:
 <a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgitlab">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgitlab">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6041,7 +6078,7 @@ The following output properties are available:
 <a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigauthgoogle">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigauthgoogle">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6113,7 +6150,7 @@ The following output properties are available:
 <a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigexternalimagestorage">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigexternalimagestorage">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6145,7 +6182,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigprivateaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigprivateaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6153,7 +6190,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6169,7 +6206,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigpublicaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigpublicaccess">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6193,7 +6230,7 @@ The following output properties are available:
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicegrafanauserconfigsmtpserver">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicegrafanauserconfigsmtpserver">Get<wbr>Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7785,7 +7822,7 @@ The following output properties are available:
 <a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7801,7 +7838,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivateaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivateaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7809,7 +7846,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7825,7 +7862,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigpublicaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigpublicaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8013,7 +8050,7 @@ The following output properties are available:
 <a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfiginfluxdb">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Influxdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8029,7 +8066,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivateaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivateaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8037,7 +8074,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8053,7 +8090,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceinfluxdbuserconfigpublicaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceinfluxdbuserconfigpublicaccess">Get<wbr>Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8609,7 +8646,7 @@ The following output properties are available:
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8617,7 +8654,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8625,7 +8662,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8633,7 +8670,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8741,7 +8778,7 @@ The following output properties are available:
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8749,7 +8786,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8757,7 +8794,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8765,7 +8802,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkaconnectuserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9381,7 +9418,7 @@ The following output properties are available:
 <a href="#kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9441,7 +9478,7 @@ The following output properties are available:
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkamirrormakeruserconfigkafkamirrormaker">Get<wbr>Service<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9749,7 +9786,7 @@ The following output properties are available:
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafka">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafka">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9757,7 +9794,7 @@ The following output properties are available:
 <a href="#kafkaauthenticationmethods_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkaauthenticationmethods">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkaauthenticationmethods">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9773,7 +9810,7 @@ The following output properties are available:
 <a href="#kafkaconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkaconnectconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkaconnectconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9789,7 +9826,7 @@ The following output properties are available:
 <a href="#kafkarestconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkarestconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkarestconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9805,7 +9842,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9813,7 +9850,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9821,7 +9858,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9837,7 +9874,7 @@ The following output properties are available:
 <a href="#schemaregistryconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10097,7 +10134,7 @@ The following output properties are available:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafka">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafka">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10105,7 +10142,7 @@ The following output properties are available:
 <a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkaauthenticationmethods">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkaauthenticationmethods">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10121,7 +10158,7 @@ The following output properties are available:
 <a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkaconnectconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkaconnectconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10137,7 +10174,7 @@ The following output properties are available:
 <a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigkafkarestconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigkafkarestconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10153,7 +10190,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigprivateaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10161,7 +10198,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigprivatelinkaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10169,7 +10206,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigpublicaccess">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10185,7 +10222,7 @@ The following output properties are available:
 <a href="#schema_registry_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicekafkauserconfigschemaregistryconfig">Get<wbr>Service<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12629,6 +12666,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_csharp">
+<a href="#binlogretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -12641,7 +12686,7 @@ The following output properties are available:
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigmigration">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigmigration">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12649,7 +12694,7 @@ The following output properties are available:
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigmysql">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigmysql">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12665,7 +12710,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigprivateaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigprivateaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12673,7 +12718,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigprivatelinkaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigprivatelinkaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12689,7 +12734,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigpublicaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigpublicaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12739,6 +12784,14 @@ The following output properties are available:
             title="Optional">
         <span id="backupminute_go">
 <a href="#backupminute_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binlogretentionperiod_go">
+<a href="#binlogretentionperiod_go" style="color: inherit; text-decoration: inherit;">Binlog<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -12861,6 +12914,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlogretentionperiod_nodejs">
+<a href="#binlogretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">binlog<wbr>Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -12977,6 +13038,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="binlog_retention_period_python">
+<a href="#binlog_retention_period_python" style="color: inherit; text-decoration: inherit;">binlog_<wbr>retention_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
@@ -12989,7 +13058,7 @@ The following output properties are available:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigmigration">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigmigration">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12997,7 +13066,7 @@ The following output properties are available:
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigmysql">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigmysql">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13013,7 +13082,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigprivateaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigprivateaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13021,7 +13090,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigprivatelinkaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigprivatelinkaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13037,7 +13106,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicemysqluserconfigpublicaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicemysqluserconfigpublicaccess">Get<wbr>Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14073,6 +14142,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -14087,6 +14164,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14113,6 +14198,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -14127,6 +14220,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14155,6 +14256,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14163,6 +14272,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14179,6 +14296,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14187,6 +14312,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14203,6 +14336,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_csharp">
+<a href="#mysqlx_csharp" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14229,6 +14370,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_go">
+<a href="#mysqlx_go" style="color: inherit; text-decoration: inherit;">Mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
@@ -14249,6 +14398,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mysqlx_nodejs">
+<a href="#mysqlx_nodejs" style="color: inherit; text-decoration: inherit;">mysqlx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
@@ -14263,6 +14420,14 @@ The following output properties are available:
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mysqlx_python">
+<a href="#mysqlx_python" style="color: inherit; text-decoration: inherit;">mysqlx</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14605,7 +14770,7 @@ The following output properties are available:
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigmigration">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigmigration">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14613,7 +14778,7 @@ The following output properties are available:
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpg">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpg">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14645,7 +14810,7 @@ The following output properties are available:
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpgbouncer">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpgbouncer">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14653,7 +14818,7 @@ The following output properties are available:
 <a href="#pglookout_csharp" style="color: inherit; text-decoration: inherit;">Pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpglookout">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpglookout">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14661,7 +14826,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigprivateaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigprivateaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14669,7 +14834,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigprivatelinkaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigprivatelinkaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14685,7 +14850,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpublicaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpublicaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14725,7 +14890,7 @@ The following output properties are available:
 <a href="#timescaledb_csharp" style="color: inherit; text-decoration: inherit;">Timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigtimescaledb">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigtimescaledb">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15169,7 +15334,7 @@ The following output properties are available:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigmigration">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigmigration">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15177,7 +15342,7 @@ The following output properties are available:
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpg">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpg">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15209,7 +15374,7 @@ The following output properties are available:
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpgbouncer">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpgbouncer">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15217,7 +15382,7 @@ The following output properties are available:
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpglookout">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpglookout">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15225,7 +15390,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigprivateaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigprivateaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15233,7 +15398,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigprivatelinkaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigprivatelinkaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15249,7 +15414,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigpublicaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigpublicaccess">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15289,7 +15454,7 @@ The following output properties are available:
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicepguserconfigtimescaledb">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicepguserconfigtimescaledb">Get<wbr>Service<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15857,6 +16022,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_csharp">
+<a href="#trackiotiming_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -16167,6 +16340,14 @@ The following output properties are available:
             title="Optional">
         <span id="trackfunctions_go">
 <a href="#trackfunctions_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackiotiming_go">
+<a href="#trackiotiming_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16489,6 +16670,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_nodejs">
+<a href="#trackiotiming_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -16799,6 +16988,14 @@ The following output properties are available:
             title="Optional">
         <span id="track_functions_python">
 <a href="#track_functions_python" style="color: inherit; text-decoration: inherit;">track_<wbr>functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="track_io_timing_python">
+<a href="#track_io_timing_python" style="color: inherit; text-decoration: inherit;">track_<wbr>io_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -17569,7 +17766,7 @@ The following output properties are available:
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigmigration">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigmigration">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17577,7 +17774,7 @@ The following output properties are available:
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigprivateaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigprivateaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17585,7 +17782,7 @@ The following output properties are available:
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17601,7 +17798,7 @@ The following output properties are available:
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigpublicaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigpublicaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17941,7 +18138,7 @@ The following output properties are available:
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigmigration">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigmigration">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17949,7 +18146,7 @@ The following output properties are available:
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigprivateaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigprivateaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17957,7 +18154,7 @@ The following output properties are available:
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigprivatelinkaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17973,7 +18170,7 @@ The following output properties are available:
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceredisuserconfigpublicaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceredisuserconfigpublicaccess">Get<wbr>Service<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

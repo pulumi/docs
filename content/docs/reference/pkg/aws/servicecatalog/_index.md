@@ -11,7 +11,23 @@ Explore the resources and functions of the aws.servicecatalog module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="budgetresourceassociation" title="BudgetResourceAssociation"><span class="symbol resource"></span>BudgetResourceAssociation</a></li>
+    <li><a href="constraint" title="Constraint"><span class="symbol resource"></span>Constraint</a></li>
+    <li><a href="organizationsaccess" title="OrganizationsAccess"><span class="symbol resource"></span>OrganizationsAccess</a></li>
     <li><a href="portfolio" title="Portfolio"><span class="symbol resource"></span>Portfolio</a></li>
+    <li><a href="portfolioshare" title="PortfolioShare"><span class="symbol resource"></span>PortfolioShare</a></li>
+    <li><a href="principalportfolioassociation" title="PrincipalPortfolioAssociation"><span class="symbol resource"></span>PrincipalPortfolioAssociation</a></li>
+    <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
+    <li><a href="productportfolioassociation" title="ProductPortfolioAssociation"><span class="symbol resource"></span>ProductPortfolioAssociation</a></li>
+    <li><a href="provisioningartifact" title="ProvisioningArtifact"><span class="symbol resource"></span>ProvisioningArtifact</a></li>
+    <li><a href="serviceaction" title="ServiceAction"><span class="symbol resource"></span>ServiceAction</a></li>
+    <li><a href="tagoption" title="TagOption"><span class="symbol resource"></span>TagOption</a></li>
+    <li><a href="tagoptionresourceassociation" title="TagOptionResourceAssociation"><span class="symbol resource"></span>TagOptionResourceAssociation</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getconstraint" title="GetConstraint"><span class="symbol function"></span>GetConstraint</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +39,6 @@ Explore the resources and functions of the aws.servicecatalog module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.38.1</dd>
+	<dd>4.7.0</dd>
 </dl>
 

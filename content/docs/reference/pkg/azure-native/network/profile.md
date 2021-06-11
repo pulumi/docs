@@ -72,7 +72,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -223,7 +223,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -386,7 +386,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -617,7 +617,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -885,7 +885,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1092,7 +1092,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1279,19 +1279,40 @@ const profile = new azure_native.network.Profile("profile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_endpoint_record_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AllowedEndpointRecordType]]]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">allowed_endpoint_record_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, AllowedEndpointRecordType]]]</span> = None<span class="p">,</span>
+            <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+            <span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">,</span>
+            <span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">,</span>
+            <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1302,46 +1323,44 @@ const profile = new azure_native.network.Profile("profile", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1352,33 +1371,25 @@ const profile = new azure_native.network.Profile("profile", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1390,25 +1401,19 @@ const profile = new azure_native.network.Profile("profile", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1693,7 +1698,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1706,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Endpoint[]</a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1738,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitorconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config</a></span>
+        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2486,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2574,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3450,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3538,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3894,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers[]</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3902,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4364,7 +4369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4372,7 +4377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

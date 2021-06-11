@@ -38,8 +38,8 @@ class MyStack : Stack
     {
         var myendpoint = Output.Create(Aiven.GetServiceIntegrationEndpoint.InvokeAsync(new Aiven.GetServiceIntegrationEndpointArgs
         {
-            EndpointName = "<ENDPOINT_NAME>",
             Project = aiven_project.Myproject.Project,
+            EndpointName = "<ENDPOINT_NAME>",
         }));
     }
 
@@ -56,15 +56,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupServiceIntegrationEndpoint(ctx, &aiven.LookupServiceIntegrationEndpointArgs{
-			EndpointName: "<ENDPOINT_NAME>",
 			Project:      aiven_project.Myproject.Project,
+			EndpointName: "<ENDPOINT_NAME>",
 		}, nil)
 		if err != nil {
 			return err
@@ -84,8 +84,8 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-myendpoint = aiven.get_service_integration_endpoint(endpoint_name="<ENDPOINT_NAME>",
-    project=aiven_project["myproject"]["project"])
+myendpoint = aiven.get_service_integration_endpoint(project=aiven_project["myproject"]["project"],
+    endpoint_name="<ENDPOINT_NAME>")
 ```
 
 
@@ -99,10 +99,10 @@ myendpoint = aiven.get_service_integration_endpoint(endpoint_name="<ENDPOINT_NAM
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const myendpoint = aiven_project_myproject.project.apply(project => aiven.getServiceIntegrationEndpoint({
+const myendpoint = aiven.getServiceIntegrationEndpoint({
+    project: aiven_project.myproject.project,
     endpointName: "<ENDPOINT_NAME>",
-    project: project,
-}, { async: true }));
+});
 ```
 
 
@@ -123,17 +123,32 @@ const myendpoint = aiven_project_myproject.project.apply(project => aiven.getSer
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegrationEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceIntegrationEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceIntegrationEndpointResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegrationEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceIntegrationEndpointArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceIntegrationEndpointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration_endpoint(</span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalAwsCloudwatchMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalSchemaRegistryUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationEndpointResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration_endpoint(</span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointDatadogUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalAwsCloudwatchMetricsUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalKafkaUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalSchemaRegistryUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointJolokiaUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointPrometheusUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointRsyslogUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointSignalfxUserConfig]</span> = None<span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationEndpointResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceIntegrationEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceIntegrationEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceIntegrationEndpointArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceIntegrationEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceIntegrationEndpoint` in the Go SDK.
 
@@ -142,7 +157,7 @@ const myendpoint = aiven_project_myproject.project.apply(project => aiven.getSer
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceIntegrationEndpoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceIntegrationEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceIntegrationEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceIntegrationEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceIntegrationEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -177,7 +192,7 @@ to identify different integration endpoints.
 <a href="#datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -203,7 +218,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -211,7 +226,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalawscloudwatchmetricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -219,7 +234,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -227,7 +242,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -235,7 +250,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalkafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -243,7 +258,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalschemaregistryuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -251,7 +266,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#jolokiauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointjolokiauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointjolokiauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -259,7 +274,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -267,7 +282,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -275,7 +290,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -564,7 +579,7 @@ to identify different integration endpoints.
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +605,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +613,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +621,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +629,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +637,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +645,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +653,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointjolokiauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointjolokiauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +661,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +669,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +677,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1256,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadogtags_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfigdatadogtag">List&lt;Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfigdatadogtag">List&lt;Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1388,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadog_tags_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfigdatadogtag">Sequence[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfigdatadogtag">Sequence[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -22,17 +22,19 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDevice<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDevice<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDeviceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeviceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDeviceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDevice` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDevice </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1004,7 +1006,7 @@ The following output properties are available:
 <a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1040,7 +1042,7 @@ The following output properties are available:
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1080,7 +1082,7 @@ The following output properties are available:
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1334,7 @@ The following output properties are available:
 <a href="#registered_features_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Sequence[Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Sequence[Subscription<wbr>Registered<wbr>Features<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

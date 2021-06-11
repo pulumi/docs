@@ -37,7 +37,7 @@ class MyStack : Stack
     {
         var groups = Output.Create(AzureAD.GetGroups.InvokeAsync(new AzureAD.GetGroupsArgs
         {
-            Names = 
+            DisplayNames = 
             {
                 "group-a",
                 "group-b",
@@ -58,14 +58,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := azuread.GetGroups(ctx, &azuread.GetGroupsArgs{
-			Names: []string{
+			DisplayNames: []string{
 				"group-a",
 				"group-b",
 			},
@@ -88,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azuread as azuread
 
-groups = azuread.get_groups(names=[
+groups = azuread.get_groups(display_names=[
     "group-a",
     "group-b",
 ])
@@ -106,11 +106,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const groups = pulumi.output(azuread.getGroups({
-    names: [
+    displayNames: [
         "group-a",
         "group-b",
     ],
-}, { async: true }));
+}));
 ```
 
 
@@ -131,17 +131,20 @@ const groups = pulumi.output(azuread.getGroups({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">display_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">display_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetGroups` in the Go SDK.
 
@@ -150,7 +153,7 @@ const groups = pulumi.output(azuread.getGroups({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -168,7 +171,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -176,8 +180,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -198,7 +201,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -206,8 +210,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -228,7 +231,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -236,8 +240,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
@@ -258,7 +261,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -266,8 +270,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
@@ -297,7 +300,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -314,8 +318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -336,7 +339,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -353,8 +357,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -375,7 +378,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -392,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
@@ -414,7 +417,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The Display Names of the Azure AD Groups.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -431,8 +435,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
@@ -455,6 +458,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

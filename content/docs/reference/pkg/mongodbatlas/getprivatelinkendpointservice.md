@@ -15,80 +15,6 @@ meta_desc: "Documentation for the mongodbatlas.getPrivateLinkEndpointService fun
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as mongodbatlas from "@pulumi/mongodbatlas";
-
-const testPrivateLinkEndpoint = new mongodbatlas.PrivateLinkEndpoint("test", {
-    projectId: "<PROJECT_ID>",
-    providerName: "AWS",
-    region: "us-east-1",
-});
-const ptfeService = new aws.ec2.VpcEndpoint("ptfe_service", {
-    securityGroupIds: ["sg-3f238186"],
-    serviceName: testPrivateLinkEndpoint.endpointServiceName,
-    subnetIds: ["subnet-de0406d2"],
-    vpcEndpointType: "Interface",
-    vpcId: "vpc-7fc0a543",
-});
-const testMongodbatlasPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointService("test", {
-    endpointServiceId: ptfeService.id,
-    privateLinkId: testPrivateLinkEndpoint.privateLinkId,
-    projectId: testPrivateLinkEndpoint.projectId,
-    providerName: "AWS",
-});
-const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEndpointService.interfaceEndpointId, testMongodbatlasPrivateLinkEndpointService.privateLinkId, testMongodbatlasPrivateLinkEndpointService.projectId]).apply(([interfaceEndpointId, privateLinkId, projectId]) => mongodbatlas.getPrivateLinkEndpointService({
-    interfaceEndpointId: interfaceEndpointId,
-    privateLinkId: privateLinkId,
-    projectId: projectId,
-}, { async: true }));
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getPrivateLinkEndpointService {#using}
@@ -97,17 +23,21 @@ const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEn
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateLinkEndpointService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateLinkEndpointServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPrivateLinkEndpointServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateLinkEndpointService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateLinkEndpointServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPrivateLinkEndpointServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_private_link_endpoint_service(</span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPrivateLinkEndpointServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_private_link_endpoint_service(</span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPrivateLinkEndpointServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateLinkEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateLinkEndpointServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPrivateLinkEndpointServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateLinkEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateLinkEndpointServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPrivateLinkEndpointServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPrivateLinkEndpointService` in the Go SDK.
 
@@ -116,7 +46,7 @@ const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEn
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPrivateLinkEndpointService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPrivateLinkEndpointServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateLinkEndpointServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPrivateLinkEndpointServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateLinkEndpointServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

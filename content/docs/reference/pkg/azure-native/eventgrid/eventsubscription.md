@@ -41,10 +41,10 @@ class MyStack : Stack
                 EndpointType = "StorageBlob",
                 ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.EventHubEventSubscriptionDestinationArgs
             {
-                { "endpointType", "EventHub" },
-                { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
+                EndpointType = "EventHub",
+                ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -67,7 +67,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			DeadLetterDestination: &eventgrid.StorageBlobDeadLetterDestinationArgs{
+				BlobContainerName: pulumi.String("contosocontainer"),
+				EndpointType:      pulumi.String("StorageBlob"),
+				ResourceId:        pulumi.String("/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg"),
+			},
+			Destination: eventgrid.EventHubEventSubscriptionDestination{
+				EndpointType: "EventHub",
+				ResourceId:   "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription1"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -85,10 +122,10 @@ event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription
         endpoint_type="StorageBlob",
         resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     ),
-    destination={
-        "endpointType": "EventHub",
-        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
-    },
+    destination=azure_native.eventgrid.EventHubEventSubscriptionDestinationArgs(
+        endpoint_type="EventHub",
+        resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
+    ),
     event_subscription_name="examplesubscription1",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -158,10 +195,10 @@ class MyStack : Stack
                 EndpointType = "StorageBlob",
                 ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.HybridConnectionEventSubscriptionDestinationArgs
             {
-                { "endpointType", "HybridConnection" },
-                { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1" },
+                EndpointType = "HybridConnection",
+                ResourceId = "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -184,7 +221,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			DeadLetterDestination: &eventgrid.StorageBlobDeadLetterDestinationArgs{
+				BlobContainerName: pulumi.String("contosocontainer"),
+				EndpointType:      pulumi.String("StorageBlob"),
+				ResourceId:        pulumi.String("/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg"),
+			},
+			Destination: eventgrid.HybridConnectionEventSubscriptionDestination{
+				EndpointType: "HybridConnection",
+				ResourceId:   "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription1"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -202,10 +276,10 @@ event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription
         endpoint_type="StorageBlob",
         resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     ),
-    destination={
-        "endpointType": "HybridConnection",
-        "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
-    },
+    destination=azure_native.eventgrid.HybridConnectionEventSubscriptionDestinationArgs(
+        endpoint_type="HybridConnection",
+        resource_id="/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1",
+    ),
     event_subscription_name="examplesubscription1",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -275,11 +349,11 @@ class MyStack : Stack
                 EndpointType = "StorageBlob",
                 ResourceId = "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.StorageQueueEventSubscriptionDestinationArgs
             {
-                { "endpointType", "StorageQueue" },
-                { "queueName", "queue1" },
-                { "resourceId", "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg" },
+                EndpointType = "StorageQueue",
+                QueueName = "queue1",
+                ResourceId = "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -302,7 +376,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			DeadLetterDestination: &eventgrid.StorageBlobDeadLetterDestinationArgs{
+				BlobContainerName: pulumi.String("contosocontainer"),
+				EndpointType:      pulumi.String("StorageBlob"),
+				ResourceId:        pulumi.String("/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg"),
+			},
+			Destination: eventgrid.StorageQueueEventSubscriptionDestination{
+				EndpointType: "StorageQueue",
+				QueueName:    "queue1",
+				ResourceId:   "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription1"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -320,11 +432,11 @@ event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription
         endpoint_type="StorageBlob",
         resource_id="/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
     ),
-    destination={
-        "endpointType": "StorageQueue",
-        "queueName": "queue1",
-        "resourceId": "/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
-    },
+    destination=azure_native.eventgrid.StorageQueueEventSubscriptionDestinationArgs(
+        endpoint_type="StorageQueue",
+        queue_name="queue1",
+        resource_id="/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg",
+    ),
     event_subscription_name="examplesubscription1",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -389,10 +501,10 @@ class MyStack : Stack
     {
         var eventSubscription = new AzureNative.EventGrid.EventSubscription("eventSubscription", new AzureNative.EventGrid.EventSubscriptionArgs
         {
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.WebHookEventSubscriptionDestinationArgs
             {
-                { "endpointType", "WebHook" },
-                { "endpointUrl", "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE" },
+                EndpointType = "WebHook",
+                EndpointUrl = "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE",
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -415,7 +527,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			Destination: eventgrid.WebHookEventSubscriptionDestination{
+				EndpointType: "WebHook",
+				EndpointUrl:  "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription1"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -428,10 +572,10 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "endpointUrl": "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE",
-    },
+    destination=azure_native.eventgrid.WebHookEventSubscriptionDestinationArgs(
+        endpoint_type="WebHook",
+        endpoint_url="https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE",
+    ),
     event_subscription_name="examplesubscription1",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -490,10 +634,10 @@ class MyStack : Stack
     {
         var eventSubscription = new AzureNative.EventGrid.EventSubscription("eventSubscription", new AzureNative.EventGrid.EventSubscriptionArgs
         {
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.WebHookEventSubscriptionDestinationArgs
             {
-                { "endpointType", "WebHook" },
-                { "endpointUrl", "https://requestb.in/15ksip71" },
+                EndpointType = "WebHook",
+                EndpointUrl = "https://requestb.in/15ksip71",
             },
             EventSubscriptionName = "examplesubscription10",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -516,7 +660,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			Destination: eventgrid.WebHookEventSubscriptionDestination{
+				EndpointType: "WebHook",
+				EndpointUrl:  "https://requestb.in/15ksip71",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription10"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -529,10 +705,10 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "endpointUrl": "https://requestb.in/15ksip71",
-    },
+    destination=azure_native.eventgrid.WebHookEventSubscriptionDestinationArgs(
+        endpoint_type="WebHook",
+        endpoint_url="https://requestb.in/15ksip71",
+    ),
     event_subscription_name="examplesubscription10",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -591,10 +767,10 @@ class MyStack : Stack
     {
         var eventSubscription = new AzureNative.EventGrid.EventSubscription("eventSubscription", new AzureNative.EventGrid.EventSubscriptionArgs
         {
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.WebHookEventSubscriptionDestinationArgs
             {
-                { "endpointType", "WebHook" },
-                { "endpointUrl", "https://requestb.in/15ksip71" },
+                EndpointType = "WebHook",
+                EndpointUrl = "https://requestb.in/15ksip71",
             },
             EventSubscriptionName = "examplesubscription2",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -617,7 +793,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			Destination: eventgrid.WebHookEventSubscriptionDestination{
+				EndpointType: "WebHook",
+				EndpointUrl:  "https://requestb.in/15ksip71",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription2"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -630,10 +838,10 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "endpointUrl": "https://requestb.in/15ksip71",
-    },
+    destination=azure_native.eventgrid.WebHookEventSubscriptionDestinationArgs(
+        endpoint_type="WebHook",
+        endpoint_url="https://requestb.in/15ksip71",
+    ),
     event_subscription_name="examplesubscription2",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -692,10 +900,10 @@ class MyStack : Stack
     {
         var eventSubscription = new AzureNative.EventGrid.EventSubscription("eventSubscription", new AzureNative.EventGrid.EventSubscriptionArgs
         {
-            Destination = 
+            Destination = new AzureNative.EventGrid.Inputs.WebHookEventSubscriptionDestinationArgs
             {
-                { "endpointType", "WebHook" },
-                { "endpointUrl", "https://requestb.in/15ksip71" },
+                EndpointType = "WebHook",
+                EndpointUrl = "https://requestb.in/15ksip71",
             },
             EventSubscriptionName = "examplesubscription3",
             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
@@ -716,7 +924,37 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewEventSubscription(ctx, "eventSubscription", &eventgrid.EventSubscriptionArgs{
+			Destination: eventgrid.WebHookEventSubscriptionDestination{
+				EndpointType: "WebHook",
+				EndpointUrl:  "https://requestb.in/15ksip71",
+			},
+			EventSubscriptionName: pulumi.String("examplesubscription3"),
+			Filter: &eventgrid.EventSubscriptionFilterArgs{
+				IsSubjectCaseSensitive: pulumi.Bool(false),
+			},
+			Scope: pulumi.String("subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -729,10 +967,10 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 event_subscription = azure_native.eventgrid.EventSubscription("eventSubscription",
-    destination={
-        "endpointType": "WebHook",
-        "endpointUrl": "https://requestb.in/15ksip71",
-    },
+    destination=azure_native.eventgrid.WebHookEventSubscriptionDestinationArgs(
+        endpoint_type="WebHook",
+        endpoint_url="https://requestb.in/15ksip71",
+    ),
     event_subscription_name="examplesubscription3",
     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
         is_subject_case_sensitive=False,
@@ -783,19 +1021,34 @@ const eventSubscription = new azure_native.eventgrid.EventSubscription("eventSub
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[StorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, EventDeliverySchema]]</span> = None<span class="p">, </span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionFilterArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[RetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[StorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, EventDeliverySchema]]</span> = None<span class="p">,</span>
+                      <span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionFilterArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[RetryPolicyArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -806,46 +1059,44 @@ const eventSubscription = new azure_native.eventgrid.EventSubscription("eventSub
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -856,33 +1107,25 @@ const eventSubscription = new azure_native.eventgrid.EventSubscription("eventSub
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -894,25 +1137,19 @@ const eventSubscription = new azure_native.eventgrid.EventSubscription("eventSub
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1093,7 +1330,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#deadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DeadLetter destination of the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1338,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1370,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1386,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2082,7 +2319,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2276,7 +2513,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

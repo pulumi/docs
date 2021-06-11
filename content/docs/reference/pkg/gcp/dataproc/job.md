@@ -111,8 +111,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -293,19 +293,38 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">, </span><span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">,</span>
+        <span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -316,46 +335,44 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -364,35 +381,27 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -404,25 +413,19 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -693,7 +696,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
+        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +716,7 @@ job is first cancelled before issuing the delete.
 <a href="#hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -722,7 +725,7 @@ job is first cancelled before issuing the delete.
 <a href="#hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +743,7 @@ job is first cancelled before issuing the delete.
 <a href="#pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +762,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +771,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
+        <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +790,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +799,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +808,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd></dl>
@@ -1107,20 +1110,38 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">driver_controls_files_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_output_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">, </span><span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">, </span><span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobStatusArgs]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">driver_controls_files_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">driver_output_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">hadoop_config</span><span class="p">:</span> <span class="nx">Optional[JobHadoopConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">hive_config</span><span class="p">:</span> <span class="nx">Optional[JobHiveConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">pig_config</span><span class="p">:</span> <span class="nx">Optional[JobPigConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[JobPlacementArgs]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pyspark_config</span><span class="p">:</span> <span class="nx">Optional[JobPysparkConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">reference</span><span class="p">:</span> <span class="nx">Optional[JobReferenceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[JobSchedulingArgs]</span> = None<span class="p">,</span>
+        <span class="nx">spark_config</span><span class="p">:</span> <span class="nx">Optional[JobSparkConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sparksql_config</span><span class="p">:</span> <span class="nx">Optional[JobSparksqlConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobStatusArgs]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1562,7 +1583,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1592,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1610,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1619,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
+        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1638,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1647,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
+        <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1645,7 +1666,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1675,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1684,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1693,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
+        <span class="property-type"><a href="#jobstatus">Job<wbr>Status<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd></dl>
@@ -2034,7 +2055,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2617,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3043,7 +3064,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3518,7 +3539,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3832,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

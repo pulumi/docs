@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gitlab/sdk/v4/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -172,8 +172,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gitlab/sdk/v4/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -220,7 +220,7 @@ import * as gitlab from "@pulumi/gitlab";
 const projects = pulumi.output(gitlab.getProjects({
     search: "postgresql",
     visibility: "private",
-}, { async: true }));
+}));
 ```
 
 
@@ -241,17 +241,38 @@ const projects = pulumi.output(gitlab.getProjects({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProjects<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProjectsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProjects<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProjectsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProjectsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_projects(</span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">include_subgroups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_queryable_pages</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">membership</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">min_access_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">order_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">search</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">simple</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sort</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starred</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_custom_attributes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">with_issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">with_merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">with_programming_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_projects(</span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">include_subgroups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">max_queryable_pages</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">membership</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">min_access_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">order_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">search</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">simple</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">sort</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">starred</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">with_custom_attributes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">with_issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">with_merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">with_programming_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">with_shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProjectsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetProjectsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProjectsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetProjects` in the Go SDK.
 
@@ -260,7 +281,7 @@ const projects = pulumi.output(gitlab.getProjects({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProjects </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetProjectsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProjectsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProjectsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProjectsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1905,7 +1926,7 @@ The following output properties are available:
 <a href="#forkedfromproject_csharp" style="color: inherit; text-decoration: inherit;">Forked<wbr>From<wbr>Project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2054,7 +2075,7 @@ The following output properties are available:
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectnamespace">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectnamespace">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2094,7 +2115,7 @@ The following output properties are available:
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectowner">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Owner<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectowner">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Owner</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2148,7 @@ The following output properties are available:
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectpermissions">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectpermissions">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2192,7 +2213,7 @@ The following output properties are available:
 <a href="#sharedwithgroups_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3284,7 +3305,7 @@ The following output properties are available:
 <a href="#forked_from_project_python" style="color: inherit; text-decoration: inherit;">forked_<wbr>from_<wbr>project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3433,7 +3454,7 @@ The following output properties are available:
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3473,7 +3494,7 @@ The following output properties are available:
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3506,7 +3527,7 @@ The following output properties are available:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions<wbr>Args</a></span>
+        <span class="property-type"><a href="#getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3571,7 +3592,7 @@ The following output properties are available:
 <a href="#shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">Sequence[Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">Sequence[Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -61,7 +61,7 @@ import * as vault from "@pulumi/vault";
 const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
     passing: true,
     service: "vault",
-}, { async: true }));
+}));
 ```
 
 
@@ -82,17 +82,25 @@ const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceHealth<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceHealthResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceHealth<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceHealthArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceHealthResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_health(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceHealthResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_health(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                       <span class="nx">passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                       <span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">wait_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceHealthResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceHealth<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceHealthArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceHealthResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceHealth<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceHealthArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceHealthResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetServiceHealth` in the Go SDK.
 
@@ -101,7 +109,7 @@ const vaultServiceHealth = pulumi.output(consul.getServiceHealth({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceHealth </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceHealthResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceHealthArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceHealthResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceHealthArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -844,7 +852,7 @@ passing state.
 <a href="#checks_csharp" style="color: inherit; text-decoration: inherit;">Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultcheck">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehealthresultcheck">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -852,7 +860,7 @@ passing state.
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultnode">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehealthresultnode">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
 {{% /md %}}</dd><dt class="property-required"
@@ -861,7 +869,7 @@ passing state.
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultservice">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehealthresultservice">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -931,7 +939,7 @@ passing state.
 <a href="#checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultcheck">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultcheck">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -939,7 +947,7 @@ passing state.
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultnode">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultnode">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
 {{% /md %}}</dd><dt class="property-required"
@@ -948,7 +956,7 @@ passing state.
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultservice">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultservice">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

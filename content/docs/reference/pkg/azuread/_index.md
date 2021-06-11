@@ -18,6 +18,7 @@ A Pulumi package for creating and managing azuread cloud resources.
     <li><a href="applicationapprole" title="ApplicationAppRole"><span class="symbol resource"></span>ApplicationAppRole</a></li>
     <li><a href="applicationcertificate" title="ApplicationCertificate"><span class="symbol resource"></span>ApplicationCertificate</a></li>
     <li><a href="applicationoauth2permission" title="ApplicationOAuth2Permission"><span class="symbol resource"></span>ApplicationOAuth2Permission</a></li>
+    <li><a href="applicationoauth2permissionscope" title="ApplicationOauth2PermissionScope"><span class="symbol resource"></span>ApplicationOauth2PermissionScope</a></li>
     <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
@@ -47,8 +48,8 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
+	<dd>4.2.0</dd>
 </dl>
 

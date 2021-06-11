@@ -71,7 +71,7 @@ package main
 
 import (
 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -180,19 +180,39 @@ const staticSite = new azure_native.web.StaticSite("staticSite", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_properties</span><span class="p">:</span> <span class="nx">Optional[StaticSiteBuildPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_properties</span><span class="p">:</span> <span class="nx">Optional[StaticSiteTemplateOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">allow_config_file_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">build_properties</span><span class="p">:</span> <span class="nx">Optional[StaticSiteBuildPropertiesArgs]</span> = None<span class="p">,</span>
+               <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">,</span>
+               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">repository_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuDescriptionArgs]</span> = None<span class="p">,</span>
+               <span class="nx">staging_environment_policy</span><span class="p">:</span> <span class="nx">Optional[StagingEnvironmentPolicy]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">template_properties</span><span class="p">:</span> <span class="nx">Optional[StaticSiteTemplateOptionsArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStaticSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StaticSite</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStaticSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StaticSite</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StaticSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StaticSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -203,46 +223,44 @@ const staticSite = new azure_native.web.StaticSite("staticSite", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StaticSiteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StaticSiteArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -253,33 +271,25 @@ const staticSite = new azure_native.web.StaticSite("staticSite", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StaticSiteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -291,25 +301,19 @@ const staticSite = new azure_native.web.StaticSite("staticSite", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StaticSiteArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -333,6 +337,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowconfigfileupdates_csharp">
+<a href="#allowconfigfileupdates_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Config<wbr>File<wbr>Updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}<code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -406,6 +418,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stagingenvironmentpolicy_csharp">
+<a href="#stagingenvironmentpolicy_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Environment<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stagingenvironmentpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Staging<wbr>Environment<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}State indicating whether staging environments are allowed or not allowed for a static web app.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -433,6 +453,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowconfigfileupdates_go">
+<a href="#allowconfigfileupdates_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Config<wbr>File<wbr>Updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}<code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -506,6 +534,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stagingenvironmentpolicy_go">
+<a href="#stagingenvironmentpolicy_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Environment<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stagingenvironmentpolicy">Staging<wbr>Environment<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}State indicating whether staging environments are allowed or not allowed for a static web app.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -534,6 +570,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowconfigfileupdates_nodejs">
+<a href="#allowconfigfileupdates_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Config<wbr>File<wbr>Updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}<code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
@@ -546,7 +590,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#buildproperties_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsitebuildproperties">Static<wbr>Site<wbr>Build<wbr>Properties</a></span>
+        <span class="property-type"><a href="#staticsitebuildproperties">Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +598,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,9 +646,17 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Sku<wbr>Description</a></span>
+        <span class="property-type"><a href="#skudescription">Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stagingenvironmentpolicy_nodejs">
+<a href="#stagingenvironmentpolicy_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Environment<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stagingenvironmentpolicy">Staging<wbr>Environment<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}State indicating whether staging environments are allowed or not allowed for a static web app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -618,7 +670,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#templateproperties_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsitetemplateoptions">Static<wbr>Site<wbr>Template<wbr>Options</a></span>
+        <span class="property-type"><a href="#staticsitetemplateoptions">Static<wbr>Site<wbr>Template<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template options for generating a new repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -633,6 +685,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_config_file_updates_python">
+<a href="#allow_config_file_updates_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>config_<wbr>file_<wbr>updates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}<code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -706,6 +766,14 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="staging_environment_policy_python">
+<a href="#staging_environment_policy_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>environment_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#stagingenvironmentpolicy">Staging<wbr>Environment<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}State indicating whether staging environments are allowed or not allowed for a static web app.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -772,6 +840,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsemessageenveloperemoteprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Response<wbr>Message<wbr>Envelope<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint connections{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -841,6 +917,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsemessageenveloperemoteprivateendpointconnectionresponse">[]Response<wbr>Message<wbr>Envelope<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint connections{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
@@ -908,6 +992,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsemessageenveloperemoteprivateendpointconnectionresponse">Response<wbr>Message<wbr>Envelope<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint connections{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -977,6 +1069,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsemessageenveloperemoteprivateendpointconnectionresponse">Sequence[Response<wbr>Message<wbr>Envelope<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Private endpoint connections{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
@@ -1011,6 +1111,234 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="armplanresponse">Arm<wbr>Plan<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The product.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_csharp">
+<a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version of product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The product.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_go">
+<a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version of product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The product.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_nodejs">
+<a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Version of product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The product.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Version of product.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="capability">Capability</h4>
 
@@ -1240,6 +1568,216 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="errorentityresponse">Error<wbr>Entity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Basic error code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedcode_csharp">
+<a href="#extendedcode_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="innererrors_csharp">
+<a href="#innererrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Error<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Any details of the error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messagetemplate_csharp">
+<a href="#messagetemplate_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message template.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Parameters for the template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Basic error code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedcode_go">
+<a href="#extendedcode_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="innererrors_go">
+<a href="#innererrors_go" style="color: inherit; text-decoration: inherit;">Inner<wbr>Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">[]Error<wbr>Entity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Any details of the error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messagetemplate_go">
+<a href="#messagetemplate_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message template.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Parameters for the template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Basic error code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedcode_nodejs">
+<a href="#extendedcode_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="innererrors_nodejs">
+<a href="#innererrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Any details of the error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="messagetemplate_nodejs">
+<a href="#messagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message template.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Parameters for the template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Basic error code.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extended_code_python">
+<a href="#extended_code_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inner_errors_python">
+<a href="#inner_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">Sequence[Error<wbr>Entity<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Any details of the error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_template_python">
+<a href="#message_template_python" style="color: inherit; text-decoration: inherit;">message_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Message template.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Parameters for the template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="managedserviceidentity">Managed<wbr>Service<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
@@ -1427,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1582,6 +2120,804 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>UserAssigned</dd><dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
     <dd>SystemAssigned, UserAssigned</dd><dt>NONE</dt>
     <dd>None</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_csharp">
+<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_go">
+<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_nodejs">
+<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actions_required_python">
+<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Private IPAddresses mapped to the remote private endpoint{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Arm<wbr>Id<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_csharp">
+<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Private IPAddresses mapped to the remote private endpoint{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_go">
+<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Private IPAddresses mapped to the remote private endpoint{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_nodejs">
+<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Private IPAddresses mapped to the remote private endpoint{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_connection_state_python">
+<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="responsemessageenveloperemoteprivateendpointconnectionresponse">Response<wbr>Message<wbr>Envelope<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Error<wbr>Entity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+value for GET requests only.
+For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Arm<wbr>Plan<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Status info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Tags associated with resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of resource e.g "Microsoft.Web/sites".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Logical Availability Zones the service is hosted in{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+value for GET requests only.
+For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Status info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Tags associated with resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of resource e.g "Microsoft.Web/sites".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Logical Availability Zones the service is hosted in{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+value for GET requests only.
+For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Status info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Tags associated with resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of resource e.g "Microsoft.Web/sites".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Logical Availability Zones the service is hosted in{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+value for GET requests only.
+For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure-AsyncOperation Status info.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Tags associated with resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of resource e.g "Microsoft.Web/sites".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Logical Availability Zones the service is hosted in{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skucapacity">Sku<wbr>Capacity</h4>
@@ -2085,7 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Capability[]</a></span>
+        <span class="property-type"><a href="#capability">Capability<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
+        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +3743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2486,6 +3822,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="stagingenvironmentpolicy">Staging<wbr>Environment<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Staging<wbr>Environment<wbr>Policy<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Staging<wbr>Environment<wbr>Policy<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="staticsitebuildproperties">Static<wbr>Site<wbr>Build<wbr>Properties</h4>

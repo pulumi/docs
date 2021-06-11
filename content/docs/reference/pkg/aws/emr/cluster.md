@@ -350,8 +350,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -541,8 +541,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -655,9 +655,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1483,10 +1483,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1802,8 +1802,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2115,19 +2115,52 @@ const cluster = new aws.emr.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">,</span>
+            <span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">,</span>
+            <span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">,</span>
+            <span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2138,46 +2171,44 @@ const cluster = new aws.emr.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2186,35 +2217,27 @@ const cluster = new aws.emr.Cluster("cluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2226,25 +2249,19 @@ const cluster = new aws.emr.Cluster("cluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2474,8 +2491,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -2712,8 +2736,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -2786,7 +2817,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2844,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#coreinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2853,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#coreinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2880,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ec2attributes_nodejs" style="color: inherit; text-decoration: inherit;">ec2Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2867,7 +2898,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kerberosattributes_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2885,7 +2916,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2894,7 +2925,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2939,7 +2970,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2950,8 +2981,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -3188,8 +3226,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -3377,20 +3422,52 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">,</span>
+        <span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">,</span>
+        <span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">,</span>
+        <span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">,</span>
+        <span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3734,8 +3811,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -3998,8 +4082,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -4062,7 +4153,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4097,7 +4188,7 @@ The following state arguments are supported:
 <a href="#state_coreinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4106,7 +4197,7 @@ The following state arguments are supported:
 <a href="#state_coreinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4133,7 +4224,7 @@ The following state arguments are supported:
 <a href="#state_ec2attributes_nodejs" style="color: inherit; text-decoration: inherit;">ec2Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4242,7 @@ The following state arguments are supported:
 <a href="#state_kerberosattributes_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4169,7 +4260,7 @@ The following state arguments are supported:
 <a href="#state_masterinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4178,7 +4269,7 @@ The following state arguments are supported:
 <a href="#state_masterinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4251,7 +4342,7 @@ The following state arguments are supported:
 <a href="#state_steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
+        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4262,8 +4353,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -4526,8 +4624,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -4849,7 +4954,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -4858,7 +4963,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -5133,7 +5238,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5142,7 +5247,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5520,7 +5625,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5529,7 +5634,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -5943,7 +6048,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6280,6 +6385,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in a Amazon VPC
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetids_csharp">
+<a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6356,6 +6470,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in a Amazon VPC
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetids_go">
+<a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6432,6 +6555,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in a Amazon VPC
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetids_nodejs">
+<a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6508,6 +6640,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in a Amazon VPC
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_ids_python">
+<a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6875,7 +7016,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -6884,7 +7025,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -7159,7 +7300,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7168,7 +7309,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7546,7 +7687,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -7555,7 +7696,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -7942,7 +8083,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8275,7 +8416,7 @@ The following state arguments are supported:
 <a href="#hadoopjarstep_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Jar<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd><dt class="property-required"

@@ -42,22 +42,22 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyClearKeyConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
                     },
                     Name = "ClearKeyOption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = 
                         {
                             { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
                             { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Swt" },
+                        },
+                        RestrictionTokenType = "Swt",
                     },
                 },
             },
@@ -92,20 +92,20 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     content_key_policy_name="PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description="ArmPolicyDescription",
     options=[azure_native.media.ContentKeyPolicyOptionArgs(
-        configuration={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
-        },
+        configuration=azure_native.media.ContentKeyPolicyClearKeyConfigurationArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+        ),
         name="ClearKeyOption",
-        restriction={
-            "audience": "urn:audience",
-            "issuer": "urn:issuer",
-            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            "primaryVerificationKey": {
+        restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
+            audience="urn:audience",
+            issuer="urn:issuer",
+            odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+            primary_verification_key={
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
                 "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             },
-            "restrictionTokenType": "Swt",
-        },
+            restriction_token_type="Swt",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -175,9 +175,9 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyPlayReadyConfigurationArgs
                     {
-                        { "licenses", 
+                        Licenses = 
                         {
                             new AzureNative.Media.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
                             {
@@ -198,13 +198,13 @@ class MyStack : Stack
                                     ScmsRestriction = 2,
                                 },
                             },
-                        } },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration" },
+                        },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
                     },
                     Name = "ArmPolicyOptionName",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyOpenRestrictionArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
                     },
                 },
             },
@@ -239,8 +239,8 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     description="ArmPolicyDescription",
     options=[azure_native.media.ContentKeyPolicyOptionArgs(
-        configuration={
-            "licenses": [azure_native.media.ContentKeyPolicyPlayReadyLicenseArgs(
+        configuration=azure_native.media.ContentKeyPolicyPlayReadyConfigurationArgs(
+            licenses=[azure_native.media.ContentKeyPolicyPlayReadyLicenseArgs(
                 allow_test_devices=True,
                 begin_date="2017-10-16T18:22:53.46Z",
                 content_key_location={
@@ -256,12 +256,12 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
                     scms_restriction=2,
                 ),
             )],
-            "odataType": "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
-        },
+            odata_type="#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration",
+        ),
         name="ArmPolicyOptionName",
-        restriction={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
-        },
+        restriction=azure_native.media.ContentKeyPolicyOpenRestrictionArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -340,32 +340,32 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyWidevineConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
-                        { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                        WidevineTemplate = "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
                     },
                     Name = "widevineoption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "alternateVerificationKeys", 
+                        AlternateVerificationKeys = 
                         {
                             
                             {
                                 { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
                                 { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
                             },
-                        } },
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        },
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = 
                         {
                             { "exponent", "AQAB" },
                             { "modulus", "AQAD" },
                             { "odataType", "#Microsoft.Media.ContentKeyPolicyRsaTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Jwt" },
+                        },
+                        RestrictionTokenType = "Jwt",
                     },
                 },
             },
@@ -400,26 +400,26 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     content_key_policy_name="PolicyWithWidevineOptionAndJwtTokenRestriction",
     description="ArmPolicyDescription",
     options=[azure_native.media.ContentKeyPolicyOptionArgs(
-        configuration={
-            "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
-            "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
-        },
+        configuration=azure_native.media.ContentKeyPolicyWidevineConfigurationArgs(
+            odata_type="#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+            widevine_template="{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+        ),
         name="widevineoption",
-        restriction={
-            "alternateVerificationKeys": [{
+        restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
+            alternate_verification_keys=[{
                 "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
                 "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
             }],
-            "audience": "urn:audience",
-            "issuer": "urn:issuer",
-            "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-            "primaryVerificationKey": {
+            audience="urn:audience",
+            issuer="urn:issuer",
+            odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+            primary_verification_key={
                 "exponent": "AQAB",
                 "modulus": "AQAD",
                 "odataType": "#Microsoft.Media.ContentKeyPolicyRsaTokenKey",
             },
-            "restrictionTokenType": "Jwt",
-        },
+            restriction_token_type="Jwt",
+        ),
     )],
     resource_group_name="contoso")
 
@@ -495,35 +495,35 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyClearKeyConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
                     },
                     Name = "ClearKeyOption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyTokenRestrictionArgs
                     {
-                        { "audience", "urn:audience" },
-                        { "issuer", "urn:issuer" },
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyTokenRestriction" },
-                        { "primaryVerificationKey", 
+                        Audience = "urn:audience",
+                        Issuer = "urn:issuer",
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                        PrimaryVerificationKey = 
                         {
                             { "keyValue", "AAAAAAAAAAAAAAAAAAAAAA==" },
                             { "odataType", "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey" },
-                        } },
-                        { "restrictionTokenType", "Swt" },
+                        },
+                        RestrictionTokenType = "Swt",
                     },
                 },
                 new AzureNative.Media.Inputs.ContentKeyPolicyOptionArgs
                 {
-                    Configuration = 
+                    Configuration = new AzureNative.Media.Inputs.ContentKeyPolicyWidevineConfigurationArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration" },
-                        { "widevineTemplate", "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                        WidevineTemplate = "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
                     },
                     Name = "widevineoption",
-                    Restriction = 
+                    Restriction = new AzureNative.Media.Inputs.ContentKeyPolicyOpenRestrictionArgs
                     {
-                        { "odataType", "#Microsoft.Media.ContentKeyPolicyOpenRestriction" },
+                        OdataType = "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
                     },
                 },
             },
@@ -559,30 +559,30 @@ content_key_policy = azure_native.media.ContentKeyPolicy("contentKeyPolicy",
     description="ArmPolicyDescription",
     options=[
         azure_native.media.ContentKeyPolicyOptionArgs(
-            configuration={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
-            },
+            configuration=azure_native.media.ContentKeyPolicyClearKeyConfigurationArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration",
+            ),
             name="ClearKeyOption",
-            restriction={
-                "audience": "urn:audience",
-                "issuer": "urn:issuer",
-                "odataType": "#Microsoft.Media.ContentKeyPolicyTokenRestriction",
-                "primaryVerificationKey": {
+            restriction=azure_native.media.ContentKeyPolicyTokenRestrictionArgs(
+                audience="urn:audience",
+                issuer="urn:issuer",
+                odata_type="#Microsoft.Media.ContentKeyPolicyTokenRestriction",
+                primary_verification_key={
                     "keyValue": "AAAAAAAAAAAAAAAAAAAAAA==",
                     "odataType": "#Microsoft.Media.ContentKeyPolicySymmetricTokenKey",
                 },
-                "restrictionTokenType": "Swt",
-            },
+                restriction_token_type="Swt",
+            ),
         ),
         azure_native.media.ContentKeyPolicyOptionArgs(
-            configuration={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
-                "widevineTemplate": "{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
-            },
+            configuration=azure_native.media.ContentKeyPolicyWidevineConfigurationArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyWidevineConfiguration",
+                widevine_template="{\"allowed_track_types\":\"SD_HD\",\"content_key_specs\":[{\"track_type\":\"SD\",\"security_level\":1,\"required_output_protection\":{\"hdcp\":\"HDCP_V2\"}}],\"policy_overrides\":{\"can_play\":true,\"can_persist\":true,\"can_renew\":false}}",
+            ),
             name="widevineoption",
-            restriction={
-                "odataType": "#Microsoft.Media.ContentKeyPolicyOpenRestriction",
-            },
+            restriction=azure_native.media.ContentKeyPolicyOpenRestrictionArgs(
+                odata_type="#Microsoft.Media.ContentKeyPolicyOpenRestriction",
+            ),
         ),
     ],
     resource_group_name="contoso")
@@ -654,19 +654,30 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContentKeyPolicyOptionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContentKeyPolicyOptionArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -677,46 +688,44 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -727,33 +736,25 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -765,25 +766,19 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -900,7 +895,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Policy options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1419,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration</a> | <a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a> | <a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a> | <a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration</a> | <a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1997,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction</a> | <a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction</a> | <a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2315,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2915,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3205,7 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3253,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3677,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicitanalogtelevisionoutputrestriction_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicitanalogtelevisionoutputrestriction_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4893,7 +4888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key</a> | <a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key</a> | <a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4909,7 +4904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key[]</span>
+        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4925,7 +4920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaim">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaim">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5135,7 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5151,7 +5146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response[]</span>
+        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5167,7 +5162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}

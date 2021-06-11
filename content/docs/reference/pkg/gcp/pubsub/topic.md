@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -161,9 +161,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -266,8 +266,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -326,6 +326,173 @@ const example = new gcp.pubsub.Topic("example", {
 
 
 
+### Pubsub Topic Schema Settings
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleSchema = new Gcp.PubSub.Schema("exampleSchema", new Gcp.PubSub.SchemaArgs
+        {
+            Type = "AVRO",
+            Definition = @"{
+  ""type"" : ""record"",
+  ""name"" : ""Avro"",
+  ""fields"" : [
+    {
+      ""name"" : ""StringField"",
+      ""type"" : ""string""
+    },
+    {
+      ""name"" : ""IntField"",
+      ""type"" : ""int""
+    }
+  ]
+}
+",
+        });
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+            SchemaSettings = new Gcp.PubSub.Inputs.TopicSchemaSettingsArgs
+            {
+                Schema = "projects/my-project-name/schemas/example",
+                Encoding = "JSON",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleSchema,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleSchema, err := pubsub.NewSchema(ctx, "exampleSchema", &pubsub.SchemaArgs{
+			Type:       pulumi.String("AVRO"),
+			Definition: pulumi.String("{\n  \"type\" : \"record\",\n  \"name\" : \"Avro\",\n  \"fields\" : [\n    {\n      \"name\" : \"StringField\",\n      \"type\" : \"string\"\n    },\n    {\n      \"name\" : \"IntField\",\n      \"type\" : \"int\"\n    }\n  ]\n}\n"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewTopic(ctx, "exampleTopic", &pubsub.TopicArgs{
+			SchemaSettings: &pubsub.TopicSchemaSettingsArgs{
+				Schema:   pulumi.String("projects/my-project-name/schemas/example"),
+				Encoding: pulumi.String("JSON"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleSchema,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_schema = gcp.pubsub.Schema("exampleSchema",
+    type="AVRO",
+    definition="""{
+  "type" : "record",
+  "name" : "Avro",
+  "fields" : [
+    {
+      "name" : "StringField",
+      "type" : "string"
+    },
+    {
+      "name" : "IntField",
+      "type" : "int"
+    }
+  ]
+}
+""")
+example_topic = gcp.pubsub.Topic("exampleTopic", schema_settings=gcp.pubsub.TopicSchemaSettingsArgs(
+    schema="projects/my-project-name/schemas/example",
+    encoding="JSON",
+),
+opts=pulumi.ResourceOptions(depends_on=[example_schema]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleSchema = new gcp.pubsub.Schema("exampleSchema", {
+    type: "AVRO",
+    definition: `{
+  "type" : "record",
+  "name" : "Avro",
+  "fields" : [
+    {
+      "name" : "StringField",
+      "type" : "string"
+    },
+    {
+      "name" : "IntField",
+      "type" : "int"
+    }
+  ]
+}
+`,
+});
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {schemaSettings: {
+    schema: "projects/my-project-name/schemas/example",
+    encoding: "JSON",
+}}, {
+    dependsOn: [exampleSchema],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -337,19 +504,31 @@ const example = new gcp.pubsub.Topic("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[TopicMessageStoragePolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[TopicMessageStoragePolicyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">schema_settings</span><span class="p">:</span> <span class="nx">Optional[TopicSchemaSettingsArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[TopicArgs]</a></span> = None<span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Topic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Topic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -360,46 +539,44 @@ const example = new gcp.pubsub.Topic("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TopicArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TopicArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -408,35 +585,27 @@ const example = new gcp.pubsub.Topic("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TopicArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -448,25 +617,19 @@ const example = new gcp.pubsub.Topic("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">TopicArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -534,6 +697,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemasettings_csharp">
+<a href="#schemasettings_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -591,6 +764,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemasettings_go">
+<a href="#schemasettings_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -623,7 +806,7 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#messagestoragepolicy_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Storage<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
+        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
@@ -648,6 +831,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemasettings_nodejs">
+<a href="#schemasettings_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -705,6 +898,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_settings_python">
+<a href="#schema_settings_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -771,20 +974,28 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TopicState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Topic</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TopicState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Topic</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[TopicMessageStoragePolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Topic</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">message_storage_policy</span><span class="p">:</span> <span class="nx">Optional[TopicMessageStoragePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">schema_settings</span><span class="p">:</span> <span class="nx">Optional[TopicSchemaSettingsArgs]</span> = None<span class="p">) -&gt;</span> Topic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TopicState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Topic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TopicState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Topic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Topic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TopicState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Topic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TopicState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -940,6 +1151,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schemasettings_csharp">
+<a href="#state_schemasettings_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -997,6 +1218,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schemasettings_go">
+<a href="#state_schemasettings_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1029,7 +1260,7 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#state_messagestoragepolicy_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Storage<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
+        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
@@ -1054,6 +1285,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schemasettings_nodejs">
+<a href="#state_schemasettings_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1111,6 +1352,16 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_schema_settings_python">
+<a href="#state_schema_settings_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for validating messages published against a schema.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1194,6 +1445,116 @@ publishers running in non-allowed GCP regions (or running outside
 of GCP altogether) will be routed for storage in one of the
 allowed regions. An empty list means that no regions are allowed,
 and is not a valid configuration.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="topicschemasettings">Topic<wbr>Schema<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema that messages published should be
+validated against. Format is projects/{project}/schemas/{schema}.
+The value of this field will be _deleted-schema_
+if the schema has been deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_csharp">
+<a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding of messages validated against schema.
+Default value is `ENCODING_UNSPECIFIED`.
+Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema that messages published should be
+validated against. Format is projects/{project}/schemas/{schema}.
+The value of this field will be _deleted-schema_
+if the schema has been deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_go">
+<a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding of messages validated against schema.
+Default value is `ENCODING_UNSPECIFIED`.
+Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema that messages published should be
+validated against. Format is projects/{project}/schemas/{schema}.
+The value of this field will be _deleted-schema_
+if the schema has been deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_nodejs">
+<a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding of messages validated against schema.
+Default value is `ENCODING_UNSPECIFIED`.
+Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the schema that messages published should be
+validated against. Format is projects/{project}/schemas/{schema}.
+The value of this field will be _deleted-schema_
+if the schema has been deleted.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encoding_python">
+<a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The encoding of messages validated against schema.
+Default value is `ENCODING_UNSPECIFIED`.
+Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

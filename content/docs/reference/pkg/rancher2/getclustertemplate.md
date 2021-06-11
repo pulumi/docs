@@ -54,8 +54,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -118,17 +118,21 @@ const foo = pulumi.output(rancher2.getClusterTemplate({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster_template(</span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterTemplateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster_template(</span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupClusterTemplate` in the Go SDK.
 
@@ -137,7 +141,7 @@ const foo = pulumi.output(rancher2.getClusterTemplate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetClusterTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -749,7 +753,7 @@ The following output properties are available:
 <a href="#clusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -808,7 +812,7 @@ The following output properties are available:
 <a href="#questions_csharp" style="color: inherit; text-decoration: inherit;">Questions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionquestion">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionquestion">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +993,7 @@ The following output properties are available:
 <a href="#cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1048,7 +1052,7 @@ The following output properties are available:
 <a href="#questions_python" style="color: inherit; text-decoration: inherit;">questions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionquestion">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionquestion">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1064,7 +1068,7 @@ The following output properties are available:
 <a href="#clusterauthendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Auth<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1112,7 +1116,7 @@ The following output properties are available:
 <a href="#rkeconfig_csharp" style="color: inherit; text-decoration: inherit;">Rke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1148,7 @@ The following output properties are available:
 <a href="#scheduledclusterscan_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Cluster<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1368,7 @@ The following output properties are available:
 <a href="#cluster_auth_endpoint_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>auth_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1412,7 +1416,7 @@ The following output properties are available:
 <a href="#rke_config_python" style="color: inherit; text-decoration: inherit;">rke_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1444,7 +1448,7 @@ The following output properties are available:
 <a href="#scheduled_cluster_scan_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>cluster_<wbr>scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1592,7 +1596,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1600,7 +1604,7 @@ The following output properties are available:
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1608,7 +1612,7 @@ The following output properties are available:
 <a href="#bastionhost_csharp" style="color: inherit; text-decoration: inherit;">Bastion<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1616,7 +1620,7 @@ The following output properties are available:
 <a href="#cloudprovider_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1624,7 +1628,7 @@ The following output properties are available:
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdns">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdns">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1632,7 +1636,7 @@ The following output properties are available:
 <a href="#ingress_csharp" style="color: inherit; text-decoration: inherit;">Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingress">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingress">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1648,7 +1652,7 @@ The following output properties are available:
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1656,7 +1660,7 @@ The following output properties are available:
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1672,7 +1676,7 @@ The following output properties are available:
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservices">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservices">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1696,7 +1700,7 @@ The following output properties are available:
 <a href="#upgradestrategy_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1736,7 +1740,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignode">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignode">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1748,7 @@ The following output properties are available:
 <a href="#privateregistries_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2136,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2140,7 +2144,7 @@ The following output properties are available:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2148,7 +2152,7 @@ The following output properties are available:
 <a href="#bastion_host_python" style="color: inherit; text-decoration: inherit;">bastion_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2156,7 +2160,7 @@ The following output properties are available:
 <a href="#cloud_provider_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2164,7 +2168,7 @@ The following output properties are available:
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdns">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdns">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2172,7 +2176,7 @@ The following output properties are available:
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingress">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingress">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2188,7 +2192,7 @@ The following output properties are available:
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2196,7 +2200,7 @@ The following output properties are available:
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2212,7 +2216,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservices">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservices">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2236,7 +2240,7 @@ The following output properties are available:
 <a href="#upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2276,7 +2280,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignode">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignode">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2288,7 @@ The following output properties are available:
 <a href="#private_registries_python" style="color: inherit; text-decoration: inherit;">private_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2709,7 @@ The following output properties are available:
 <a href="#awscloudprovider_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2717,7 @@ The following output properties are available:
 <a href="#azurecloudprovider_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2725,7 @@ The following output properties are available:
 <a href="#openstackcloudprovider_csharp" style="color: inherit; text-decoration: inherit;">Openstack<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2733,7 @@ The following output properties are available:
 <a href="#vspherecloudprovider_csharp" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2864,7 +2868,7 @@ The following output properties are available:
 <a href="#aws_cloud_provider_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2872,7 +2876,7 @@ The following output properties are available:
 <a href="#azure_cloud_provider_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2880,7 +2884,7 @@ The following output properties are available:
 <a href="#openstack_cloud_provider_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2888,7 +2892,7 @@ The following output properties are available:
 <a href="#vsphere_cloud_provider_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2904,7 +2908,7 @@ The following output properties are available:
 <a href="#global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2912,7 +2916,7 @@ The following output properties are available:
 <a href="#serviceoverrides_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2964,7 +2968,7 @@ The following output properties are available:
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2972,7 +2976,7 @@ The following output properties are available:
 <a href="#service_overrides_python" style="color: inherit; text-decoration: inherit;">service_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4488,7 +4492,7 @@ The following output properties are available:
 <a href="#blockstorage_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4496,7 +4500,7 @@ The following output properties are available:
 <a href="#global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4504,7 +4508,7 @@ The following output properties are available:
 <a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4512,7 +4516,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4520,7 +4524,7 @@ The following output properties are available:
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4620,7 +4624,7 @@ The following output properties are available:
 <a href="#block_storage_python" style="color: inherit; text-decoration: inherit;">block_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4628,7 +4632,7 @@ The following output properties are available:
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4636,7 +4640,7 @@ The following output properties are available:
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4644,7 +4648,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4652,7 +4656,7 @@ The following output properties are available:
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5632,7 +5636,7 @@ The following output properties are available:
 <a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5640,7 +5644,7 @@ The following output properties are available:
 <a href="#global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5648,7 +5652,7 @@ The following output properties are available:
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5656,7 +5660,7 @@ The following output properties are available:
 <a href="#virtualcenters_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Centers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">List&lt;Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5664,7 +5668,7 @@ The following output properties are available:
 <a href="#workspace_csharp" style="color: inherit; text-decoration: inherit;">Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5764,7 +5768,7 @@ The following output properties are available:
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5772,7 +5776,7 @@ The following output properties are available:
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5780,7 +5784,7 @@ The following output properties are available:
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5788,7 +5792,7 @@ The following output properties are available:
 <a href="#virtual_centers_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>centers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Sequence[Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5796,7 +5800,7 @@ The following output properties are available:
 <a href="#workspace_python" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6548,7 +6552,7 @@ The following output properties are available:
 <a href="#linearautoscalerparams_csharp" style="color: inherit; text-decoration: inherit;">Linear<wbr>Autoscaler<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6556,7 +6560,7 @@ The following output properties are available:
 <a href="#nodelocal_csharp" style="color: inherit; text-decoration: inherit;">Nodelocal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6572,7 +6576,7 @@ The following output properties are available:
 <a href="#updatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6728,7 +6732,7 @@ The following output properties are available:
 <a href="#linear_autoscaler_params_python" style="color: inherit; text-decoration: inherit;">linear_<wbr>autoscaler_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6736,7 +6740,7 @@ The following output properties are available:
 <a href="#nodelocal_python" style="color: inherit; text-decoration: inherit;">nodelocal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6752,7 +6756,7 @@ The following output properties are available:
 <a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7032,7 +7036,7 @@ The following output properties are available:
 <a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7092,7 +7096,7 @@ The following output properties are available:
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7212,6 +7216,30 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="httpport_csharp">
+<a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpsport_csharp">
+<a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkmode_csharp">
+<a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nodeselector_csharp">
 <a href="#nodeselector_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Selector</a>
 </span>
@@ -7234,6 +7262,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultbackend_csharp">
+<a href="#defaultbackend_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_csharp">
+<a href="#updatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7253,6 +7297,30 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpport_go">
+<a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpsport_go">
+<a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkmode_go">
+<a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7278,6 +7346,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultbackend_go">
+<a href="#defaultbackend_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_go">
+<a href="#updatestrategy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7297,6 +7381,30 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpport_nodejs">
+<a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="httpsport_nodejs">
+<a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkmode_nodejs">
+<a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7322,6 +7430,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultbackend_nodejs">
+<a href="#defaultbackend_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updatestrategy_nodejs">
+<a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7341,6 +7465,30 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="http_port_python">
+<a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="https_port_python">
+<a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_mode_python">
+<a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7365,6 +7513,158 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_backend_python">
+<a href="#default_backend_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_strategy_python">
+<a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_csharp">
+<a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_csharp">
+<a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_go">
+<a href="#rollingupdate_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_go">
+<a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rollingupdate_nodejs">
+<a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_nodejs">
+<a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rolling_update_python">
+<a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="strategy_python">
+<a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getclustertemplatetemplaterevisionclusterconfigrkeconfigingressupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_csharp">
+<a href="#maxunavailable_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_go">
+<a href="#maxunavailable_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_nodejs">
+<a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_unavailable_python">
+<a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7412,7 +7712,7 @@ The following output properties are available:
 <a href="#updatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7544,7 +7844,7 @@ The following output properties are available:
 <a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7560,7 +7860,7 @@ The following output properties are available:
 <a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7620,7 +7920,7 @@ The following output properties are available:
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7744,7 +8044,7 @@ The following output properties are available:
 <a href="#caliconetworkprovider_csharp" style="color: inherit; text-decoration: inherit;">Calico<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7752,7 +8052,7 @@ The following output properties are available:
 <a href="#canalnetworkprovider_csharp" style="color: inherit; text-decoration: inherit;">Canal<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7760,7 +8060,7 @@ The following output properties are available:
 <a href="#flannelnetworkprovider_csharp" style="color: inherit; text-decoration: inherit;">Flannel<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7776,7 +8076,7 @@ The following output properties are available:
 <a href="#weavenetworkprovider_csharp" style="color: inherit; text-decoration: inherit;">Weave<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7924,7 +8224,7 @@ The following output properties are available:
 <a href="#calico_network_provider_python" style="color: inherit; text-decoration: inherit;">calico_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7932,7 +8232,7 @@ The following output properties are available:
 <a href="#canal_network_provider_python" style="color: inherit; text-decoration: inherit;">canal_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7940,7 +8240,7 @@ The following output properties are available:
 <a href="#flannel_network_provider_python" style="color: inherit; text-decoration: inherit;">flannel_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7956,7 +8256,7 @@ The following output properties are available:
 <a href="#weave_network_provider_python" style="color: inherit; text-decoration: inherit;">weave_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8736,7 +9036,7 @@ The following output properties are available:
 <a href="#etcd_csharp" style="color: inherit; text-decoration: inherit;">Etcd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8744,7 +9044,7 @@ The following output properties are available:
 <a href="#kubeapi_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8752,7 +9052,7 @@ The following output properties are available:
 <a href="#kubecontroller_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8760,7 +9060,7 @@ The following output properties are available:
 <a href="#kubelet_csharp" style="color: inherit; text-decoration: inherit;">Kubelet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8768,7 +9068,7 @@ The following output properties are available:
 <a href="#kubeproxy_csharp" style="color: inherit; text-decoration: inherit;">Kubeproxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8776,7 +9076,7 @@ The following output properties are available:
 <a href="#scheduler_csharp" style="color: inherit; text-decoration: inherit;">Scheduler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8892,7 +9192,7 @@ The following output properties are available:
 <a href="#etcd_python" style="color: inherit; text-decoration: inherit;">etcd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8900,7 +9200,7 @@ The following output properties are available:
 <a href="#kube_api_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8908,7 +9208,7 @@ The following output properties are available:
 <a href="#kube_controller_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8916,7 +9216,7 @@ The following output properties are available:
 <a href="#kubelet_python" style="color: inherit; text-decoration: inherit;">kubelet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8924,7 +9224,7 @@ The following output properties are available:
 <a href="#kubeproxy_python" style="color: inherit; text-decoration: inherit;">kubeproxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8932,7 +9232,7 @@ The following output properties are available:
 <a href="#scheduler_python" style="color: inherit; text-decoration: inherit;">scheduler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8948,7 +9248,7 @@ The following output properties are available:
 <a href="#backupconfig_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9320,7 +9620,7 @@ The following output properties are available:
 <a href="#backup_config_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9480,7 +9780,7 @@ The following output properties are available:
 <a href="#s3backupconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Backup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9636,7 +9936,7 @@ The following output properties are available:
 <a href="#s3_backup_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9952,7 +10252,7 @@ The following output properties are available:
 <a href="#auditlog_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9960,7 +10260,7 @@ The following output properties are available:
 <a href="#eventratelimit_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Rate<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9992,7 +10292,7 @@ The following output properties are available:
 <a href="#secretsencryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Secrets<wbr>Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10252,7 +10552,7 @@ The following output properties are available:
 <a href="#audit_log_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10260,7 +10560,7 @@ The following output properties are available:
 <a href="#event_rate_limit_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rate_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10292,7 +10592,7 @@ The following output properties are available:
 <a href="#secrets_encryption_config_python" style="color: inherit; text-decoration: inherit;">secrets_<wbr>encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10308,7 +10608,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10368,7 +10668,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11588,7 +11888,7 @@ The following output properties are available:
 <a href="#draininput_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11696,7 +11996,7 @@ The following output properties are available:
 <a href="#drain_input_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11916,7 +12216,7 @@ The following output properties are available:
 <a href="#scanconfig_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11924,7 +12224,7 @@ The following output properties are available:
 <a href="#scheduleconfig_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12000,7 +12300,7 @@ The following output properties are available:
 <a href="#scan_config_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12008,7 +12308,7 @@ The following output properties are available:
 <a href="#schedule_config_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12032,7 +12332,7 @@ The following output properties are available:
 <a href="#cisscanconfig_csharp" style="color: inherit; text-decoration: inherit;">Cis<wbr>Scan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12068,7 +12368,7 @@ The following output properties are available:
 <a href="#cis_scan_config_python" style="color: inherit; text-decoration: inherit;">cis_<wbr>scan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

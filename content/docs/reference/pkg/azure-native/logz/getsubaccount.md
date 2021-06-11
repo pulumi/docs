@@ -21,17 +21,20 @@ API Version: 2020-10-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSubAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSubAccountResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSubAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSubAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sub_account(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sub_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSubAccountResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sub_account(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">sub_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSubAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSubAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSubAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSubAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSubAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSubAccount` in the Go SDK.
 
@@ -40,7 +43,7 @@ API Version: 2020-10-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSubAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSubAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSubAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSubAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSubAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -593,7 +596,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="singlesignonurl_csharp">
+<a href="#singlesignonurl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -621,7 +632,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="singlesignonurl_go">
+<a href="#singlesignonurl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -649,7 +668,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="singlesignonurl_nodejs">
+<a href="#singlesignonurl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -677,7 +704,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="single_sign_on_url_python">
+<a href="#single_sign_on_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The login URL specific to this Logz Organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorpropertiesresponse">Monitor<wbr>Properties<wbr>Response</h4>
@@ -709,13 +744,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logzorganizationproperties_csharp">
 <a href="#logzorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Logz<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Logz<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Logz<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +774,7 @@ The following output properties are available:
 <a href="#plandata_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Plan<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Plan<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +782,7 @@ The following output properties are available:
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logzorganizationproperties_go">
 <a href="#logzorganizationproperties_go" style="color: inherit; text-decoration: inherit;">Logz<wbr>Organization<wbr>Properties</a>
@@ -845,7 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logzorganizationproperties_nodejs">
 <a href="#logzorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">logz<wbr>Organization<wbr>Properties</a>
@@ -913,13 +948,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource provisioning state as tracked by ARM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logz_organization_properties_python">
 <a href="#logz_organization_properties_python" style="color: inherit; text-decoration: inherit;">logz_<wbr>organization_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Logz<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Logz<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +978,7 @@ The following output properties are available:
 <a href="#plan_data_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandataresponse">Plan<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandataresponse">Plan<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +986,7 @@ The following output properties are available:
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

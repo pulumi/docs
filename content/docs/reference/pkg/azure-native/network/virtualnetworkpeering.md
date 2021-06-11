@@ -65,7 +65,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -159,19 +159,40 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_forwarded_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_gateway_transit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_virtual_network_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkPeeringState]]</span> = None<span class="p">, </span><span class="nx">remote_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">remote_bgp_communities</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkBgpCommunitiesArgs]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">allow_forwarded_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">allow_gateway_transit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">allow_virtual_network_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">do_not_verify_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">peering_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkPeeringState]]</span> = None<span class="p">,</span>
+                          <span class="nx">remote_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">remote_bgp_communities</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkBgpCommunitiesArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">remote_virtual_network</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">use_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">virtual_network_peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkPeering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNetworkPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNetworkPeering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualNetworkPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,46 +203,44 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkPeeringArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualNetworkPeeringArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,33 +251,25 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkPeeringArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -270,25 +281,19 @@ const virtualNetworkPeering = new azure_native.network.VirtualNetworkPeering("vi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VirtualNetworkPeeringArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -345,6 +350,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="donotverifyremotegateways_csharp">
+<a href="#donotverifyremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -392,6 +405,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_csharp">
 <a href="#useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -453,6 +474,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="donotverifyremotegateways_go">
+<a href="#donotverifyremotegateways_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -500,6 +529,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_go">
 <a href="#useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -561,6 +598,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="donotverifyremotegateways_nodejs">
+<a href="#donotverifyremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Verify<wbr>Remote<wbr>Gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -589,7 +634,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +642,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remotebgpcommunities_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Bgp<wbr>Communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities</a></span>
+        <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,9 +650,17 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remotevirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useremotegateways_nodejs">
 <a href="#useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
@@ -669,6 +722,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="do_not_verify_remote_gateways_python">
+<a href="#do_not_verify_remote_gateways_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>verify_<wbr>remote_<wbr>gateways</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If we need to verify the provisioning state of the remote gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -716,6 +777,14 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_remote_gateways_python">
 <a href="#use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>
@@ -766,7 +835,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -794,7 +871,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -822,7 +907,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -850,7 +943,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resourceGuid property of the Virtual Network peering resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

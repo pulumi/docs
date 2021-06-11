@@ -30,6 +30,10 @@ To get more information about Service, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/)
 
+> **Warning:** `google_cloudrun_service` creates a Managed Google Cloud Run Service. If you need to create
+a Cloud Run Service on Anthos(GKE/VMWare) then you will need to create it using the kubernetes alpha provider.
+Have a look at the Cloud Run Anthos example below.
+
 {{% examples %}}
 
 ## Example Usage
@@ -90,8 +94,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -244,9 +248,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -442,8 +446,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -642,8 +646,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -758,6 +762,713 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 
 
+### Cloud Run Service Secret Environment Variables
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+        var secret = new Gcp.SecretManager.Secret("secret", new Gcp.SecretManager.SecretArgs
+        {
+            SecretId = "secret",
+            Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+            {
+                Automatic = true,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var secret_version_data = new Gcp.SecretManager.SecretVersion("secret-version-data", new Gcp.SecretManager.SecretVersionArgs
+        {
+            Secret = secret.Name,
+            SecretData = "secret-data",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var secret_access = new Gcp.SecretManager.SecretIamMember("secret-access", new Gcp.SecretManager.SecretIamMemberArgs
+        {
+            SecretId = secret.Id,
+            Role = "roles/secretmanager.secretAccessor",
+            Member = project.Apply(project => $"serviceAccount:{project.Number}-compute@developer.gserviceaccount.com"),
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                secret,
+            },
+        });
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                            Envs = 
+                            {
+                                new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
+                                {
+                                    Name = "SECRET_ENV_VAR",
+                                    ValueFrom = new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvValueFromArgs
+                                    {
+                                        SecretKeyRef = new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs
+                                        {
+                                            Name = secret.SecretId,
+                                            Key = "1",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Annotations = 
+                {
+                    { "generated-by", "magic-modules" },
+                    { "run.googleapis.com/launch-stage", "ALPHA" },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 100,
+                    LatestRevision = true,
+                },
+            },
+            AutogenerateRevisionName = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                secret_version_data,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/secretmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := organizations.LookupProject(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		secret, err := secretmanager.NewSecret(ctx, "secret", &secretmanager.SecretArgs{
+			SecretId: pulumi.String("secret"),
+			Replication: &secretmanager.SecretReplicationArgs{
+				Automatic: pulumi.Bool(true),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = secretmanager.NewSecretVersion(ctx, "secret_version_data", &secretmanager.SecretVersionArgs{
+			Secret:     secret.Name,
+			SecretData: pulumi.String("secret-data"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = secretmanager.NewSecretIamMember(ctx, "secret_access", &secretmanager.SecretIamMemberArgs{
+			SecretId: secret.ID(),
+			Role:     pulumi.String("roles/secretmanager.secretAccessor"),
+			Member:   pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:", project.Number, "-compute@developer.gserviceaccount.com")),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			secret,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Envs: cloudrun.ServiceTemplateSpecContainerEnvArray{
+								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+									Name: pulumi.String("SECRET_ENV_VAR"),
+									ValueFrom: &cloudrun.ServiceTemplateSpecContainerEnvValueFromArgs{
+										SecretKeyRef: &cloudrun.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs{
+											Name: secret.SecretId,
+											Key:  pulumi.String("1"),
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Metadata: &cloudrun.ServiceMetadataArgs{
+				Annotations: pulumi.StringMap{
+					"generated-by":                    pulumi.String("magic-modules"),
+					"run.googleapis.com/launch-stage": pulumi.String("ALPHA"),
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					Percent:        pulumi.Int(100),
+					LatestRevision: pulumi.Bool(true),
+				},
+			},
+			AutogenerateRevisionName: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			secret_version_data,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.organizations.get_project()
+secret = gcp.secretmanager.Secret("secret",
+    secret_id="secret",
+    replication=gcp.secretmanager.SecretReplicationArgs(
+        automatic=True,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+secret_version_data = gcp.secretmanager.SecretVersion("secret-version-data",
+    secret=secret.name,
+    secret_data="secret-data",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+secret_access = gcp.secretmanager.SecretIamMember("secret-access",
+    secret_id=secret.id,
+    role="roles/secretmanager.secretAccessor",
+    member=f"serviceAccount:{project.number}-compute@developer.gserviceaccount.com",
+    opts=pulumi.ResourceOptions(provider=google_beta,
+        depends_on=[secret]))
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="gcr.io/cloudrun/hello",
+                envs=[gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+                    name="SECRET_ENV_VAR",
+                    value_from=gcp.cloudrun.ServiceTemplateSpecContainerEnvValueFromArgs(
+                        secret_key_ref=gcp.cloudrun.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs(
+                            name=secret.secret_id,
+                            key="1",
+                        ),
+                    ),
+                )],
+            )],
+        ),
+    ),
+    metadata=gcp.cloudrun.ServiceMetadataArgs(
+        annotations={
+            "generated-by": "magic-modules",
+            "run.googleapis.com/launch-stage": "ALPHA",
+        },
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        percent=100,
+        latest_revision=True,
+    )],
+    autogenerate_revision_name=True,
+    opts=pulumi.ResourceOptions(provider=google_beta,
+        depends_on=[secret_version_data]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = gcp.organizations.getProject({});
+const secret = new gcp.secretmanager.Secret("secret", {
+    secretId: "secret",
+    replication: {
+        automatic: true,
+    },
+}, {
+    provider: google_beta,
+});
+const secret_version_data = new gcp.secretmanager.SecretVersion("secret-version-data", {
+    secret: secret.name,
+    secretData: "secret-data",
+}, {
+    provider: google_beta,
+});
+const secret_access = new gcp.secretmanager.SecretIamMember("secret-access", {
+    secretId: secret.id,
+    role: "roles/secretmanager.secretAccessor",
+    member: project.then(project => `serviceAccount:${project.number}-compute@developer.gserviceaccount.com`),
+}, {
+    provider: google_beta,
+    dependsOn: [secret],
+});
+const _default = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+                envs: [{
+                    name: "SECRET_ENV_VAR",
+                    valueFrom: {
+                        secretKeyRef: {
+                            name: secret.secretId,
+                            key: "1",
+                        },
+                    },
+                }],
+            }],
+        },
+    },
+    metadata: {
+        annotations: {
+            "generated-by": "magic-modules",
+            "run.googleapis.com/launch-stage": "ALPHA",
+        },
+    },
+    traffics: [{
+        percent: 100,
+        latestRevision: true,
+    }],
+    autogenerateRevisionName: true,
+}, {
+    provider: google_beta,
+    dependsOn: [secret_version_data],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Cloud Run Service Secret Volumes
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+        var secret = new Gcp.SecretManager.Secret("secret", new Gcp.SecretManager.SecretArgs
+        {
+            SecretId = "secret",
+            Replication = new Gcp.SecretManager.Inputs.SecretReplicationArgs
+            {
+                Automatic = true,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var secret_version_data = new Gcp.SecretManager.SecretVersion("secret-version-data", new Gcp.SecretManager.SecretVersionArgs
+        {
+            Secret = secret.Name,
+            SecretData = "secret-data",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var secret_access = new Gcp.SecretManager.SecretIamMember("secret-access", new Gcp.SecretManager.SecretIamMemberArgs
+        {
+            SecretId = secret.Id,
+            Role = "roles/secretmanager.secretAccessor",
+            Member = project.Apply(project => $"serviceAccount:{project.Number}-compute@developer.gserviceaccount.com"),
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                secret,
+            },
+        });
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                            VolumeMounts = 
+                            {
+                                new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerVolumeMountArgs
+                                {
+                                    Name = "a-volume",
+                                    MountPath = "/secrets",
+                                },
+                            },
+                        },
+                    },
+                    Volumes = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecVolumeArgs
+                        {
+                            Name = "a-volume",
+                            Secret = new Gcp.CloudRun.Inputs.ServiceTemplateSpecVolumeSecretArgs
+                            {
+                                SecretName = secret.SecretId,
+                                Items = 
+                                {
+                                    new Gcp.CloudRun.Inputs.ServiceTemplateSpecVolumeSecretItemArgs
+                                    {
+                                        Key = "1",
+                                        Path = "my-secret",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Annotations = 
+                {
+                    { "generated-by", "magic-modules" },
+                    { "run.googleapis.com/launch-stage", "ALPHA" },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 100,
+                    LatestRevision = true,
+                },
+            },
+            AutogenerateRevisionName = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                secret_version_data,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/secretmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := organizations.LookupProject(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		secret, err := secretmanager.NewSecret(ctx, "secret", &secretmanager.SecretArgs{
+			SecretId: pulumi.String("secret"),
+			Replication: &secretmanager.SecretReplicationArgs{
+				Automatic: pulumi.Bool(true),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = secretmanager.NewSecretVersion(ctx, "secret_version_data", &secretmanager.SecretVersionArgs{
+			Secret:     secret.Name,
+			SecretData: pulumi.String("secret-data"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = secretmanager.NewSecretIamMember(ctx, "secret_access", &secretmanager.SecretIamMemberArgs{
+			SecretId: secret.ID(),
+			Role:     pulumi.String("roles/secretmanager.secretAccessor"),
+			Member:   pulumi.String(fmt.Sprintf("%v%v%v", "serviceAccount:", project.Number, "-compute@developer.gserviceaccount.com")),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			secret,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							VolumeMounts: cloudrun.ServiceTemplateSpecContainerVolumeMountArray{
+								&cloudrun.ServiceTemplateSpecContainerVolumeMountArgs{
+									Name:      pulumi.String("a-volume"),
+									MountPath: pulumi.String("/secrets"),
+								},
+							},
+						},
+					},
+					Volumes: cloudrun.ServiceTemplateSpecVolumeArray{
+						&cloudrun.ServiceTemplateSpecVolumeArgs{
+							Name: pulumi.String("a-volume"),
+							Secret: &cloudrun.ServiceTemplateSpecVolumeSecretArgs{
+								SecretName: secret.SecretId,
+								Items: cloudrun.ServiceTemplateSpecVolumeSecretItemArray{
+									&cloudrun.ServiceTemplateSpecVolumeSecretItemArgs{
+										Key:  pulumi.String("1"),
+										Path: pulumi.String("my-secret"),
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+			Metadata: &cloudrun.ServiceMetadataArgs{
+				Annotations: pulumi.StringMap{
+					"generated-by":                    pulumi.String("magic-modules"),
+					"run.googleapis.com/launch-stage": pulumi.String("ALPHA"),
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					Percent:        pulumi.Int(100),
+					LatestRevision: pulumi.Bool(true),
+				},
+			},
+			AutogenerateRevisionName: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			secret_version_data,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.organizations.get_project()
+secret = gcp.secretmanager.Secret("secret",
+    secret_id="secret",
+    replication=gcp.secretmanager.SecretReplicationArgs(
+        automatic=True,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+secret_version_data = gcp.secretmanager.SecretVersion("secret-version-data",
+    secret=secret.name,
+    secret_data="secret-data",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+secret_access = gcp.secretmanager.SecretIamMember("secret-access",
+    secret_id=secret.id,
+    role="roles/secretmanager.secretAccessor",
+    member=f"serviceAccount:{project.number}-compute@developer.gserviceaccount.com",
+    opts=pulumi.ResourceOptions(provider=google_beta,
+        depends_on=[secret]))
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="gcr.io/cloudrun/hello",
+                volume_mounts=[gcp.cloudrun.ServiceTemplateSpecContainerVolumeMountArgs(
+                    name="a-volume",
+                    mount_path="/secrets",
+                )],
+            )],
+            volumes=[gcp.cloudrun.ServiceTemplateSpecVolumeArgs(
+                name="a-volume",
+                secret=gcp.cloudrun.ServiceTemplateSpecVolumeSecretArgs(
+                    secret_name=secret.secret_id,
+                    items=[gcp.cloudrun.ServiceTemplateSpecVolumeSecretItemArgs(
+                        key="1",
+                        path="my-secret",
+                    )],
+                ),
+            )],
+        ),
+    ),
+    metadata=gcp.cloudrun.ServiceMetadataArgs(
+        annotations={
+            "generated-by": "magic-modules",
+            "run.googleapis.com/launch-stage": "ALPHA",
+        },
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        percent=100,
+        latest_revision=True,
+    )],
+    autogenerate_revision_name=True,
+    opts=pulumi.ResourceOptions(provider=google_beta,
+        depends_on=[secret_version_data]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = gcp.organizations.getProject({});
+const secret = new gcp.secretmanager.Secret("secret", {
+    secretId: "secret",
+    replication: {
+        automatic: true,
+    },
+}, {
+    provider: google_beta,
+});
+const secret_version_data = new gcp.secretmanager.SecretVersion("secret-version-data", {
+    secret: secret.name,
+    secretData: "secret-data",
+}, {
+    provider: google_beta,
+});
+const secret_access = new gcp.secretmanager.SecretIamMember("secret-access", {
+    secretId: secret.id,
+    role: "roles/secretmanager.secretAccessor",
+    member: project.then(project => `serviceAccount:${project.number}-compute@developer.gserviceaccount.com`),
+}, {
+    provider: google_beta,
+    dependsOn: [secret],
+});
+const _default = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+                volumeMounts: [{
+                    name: "a-volume",
+                    mountPath: "/secrets",
+                }],
+            }],
+            volumes: [{
+                name: "a-volume",
+                secret: {
+                    secretName: secret.secretId,
+                    items: [{
+                        key: "1",
+                        path: "my-secret",
+                    }],
+                },
+            }],
+        },
+    },
+    metadata: {
+        annotations: {
+            "generated-by": "magic-modules",
+            "run.googleapis.com/launch-stage": "ALPHA",
+        },
+    },
+    traffics: [{
+        percent: 100,
+        latestRevision: true,
+    }],
+    autogenerateRevisionName: true,
+}, {
+    provider: google_beta,
+    dependsOn: [secret_version_data],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -769,19 +1480,32 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">,</span>
+            <span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -792,46 +1516,44 @@ const defaultService = new gcp.cloudrun.Service("default", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -840,35 +1562,27 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -880,25 +1594,19 @@ const defaultService = new gcp.cloudrun.Service("default", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -954,7 +1662,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -1039,7 +1747,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -1111,7 +1819,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1124,7 +1832,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
@@ -1141,7 +1849,7 @@ If it is not provided, the provider project is used.
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1159,7 +1867,7 @@ Structure is documented below.
 <a href="#traffics_nodejs" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -1209,7 +1917,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -1351,20 +2059,30 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceStatusArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceStatusArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">,</span>
+        <span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1508,7 +2226,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1602,7 +2320,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1683,7 +2401,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1696,7 +2414,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1713,7 +2431,7 @@ If it is not provided, the provider project is used.
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status[]</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +2440,7 @@ If it is not provided, the provider project is used.
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1740,7 +2458,7 @@ Structure is documented below.
 <a href="#state_traffics_nodejs" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -1790,7 +2508,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -1868,6 +2586,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
@@ -1956,6 +2677,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_go">
@@ -2044,6 +2768,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
@@ -2132,6 +2859,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_python">
@@ -2302,7 +3032,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +3318,7 @@ Structure is documented below.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -2599,7 +3329,7 @@ Structure is documented below.
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
 Structure is documented below.
@@ -2648,6 +3378,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
@@ -2678,7 +3411,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
@@ -2745,6 +3478,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_go">
@@ -2775,7 +3511,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
@@ -2842,6 +3578,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
@@ -2872,7 +3611,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
@@ -2939,6 +3678,9 @@ info: http://kubernetes.io/docs/user-guide/annotations
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+- `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
+for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_python">
@@ -2969,7 +3711,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
@@ -3082,7 +3824,15 @@ that the system will manipulate this based on routability and load.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumes_csharp">
+<a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3144,7 +3894,15 @@ that the system will manipulate this based on routability and load.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumes_go">
+<a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">[]Service<wbr>Template<wbr>Spec<wbr>Volume</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3164,7 +3922,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -3206,7 +3964,15 @@ that the system will manipulate this based on routability and load.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumes_nodejs">
+<a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3268,7 +4034,15 @@ that the system will manipulate this based on routability and load.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumes_python">
+<a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container</h4>
@@ -3369,7 +4143,15 @@ Structure is documented below.
 More info:
 https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumemounts_csharp">
+<a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -3481,7 +4263,15 @@ Structure is documented below.
 More info:
 https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumemounts_go">
+<a href="#volumemounts_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -3549,7 +4339,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#envfroms_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3565,7 +4355,7 @@ Structure is documented below.
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -3575,7 +4365,7 @@ Structure is documented below.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -3587,13 +4377,21 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
 https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volumemounts_nodejs">
+<a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -3705,7 +4503,15 @@ Structure is documented below.
 More info:
 https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
 Structure is documented below.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="volume_mounts_python">
+<a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -3732,7 +4538,7 @@ might be configured in the container image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
@@ -3749,7 +4555,15 @@ syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
 references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuefrom_csharp">
+<a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3761,7 +4575,7 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
@@ -3778,7 +4592,15 @@ syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
 references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuefrom_go">
+<a href="#valuefrom_go" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3790,7 +4612,7 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
@@ -3807,7 +4629,15 @@ syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
 references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuefrom_nodejs">
+<a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3819,7 +4649,7 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
@@ -3836,7 +4666,15 @@ syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
 references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_from_python">
+<a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From</h4>
@@ -3914,7 +4752,7 @@ Structure is documented below.
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from.
 Structure is documented below.
@@ -3933,7 +4771,7 @@ Structure is documented below.
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4028,7 +4866,7 @@ Structure is documented below.
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4078,7 +4916,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4091,7 +4929,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4104,7 +4942,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4117,7 +4955,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4176,7 +5014,7 @@ Structure is documented below.
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4226,7 +5064,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4239,7 +5077,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4252,7 +5090,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4265,7 +5103,159 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretkeyref_csharp">
+<a href="#secretkeyref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretkeyref_go">
+<a href="#secretkeyref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</a></span>
+    </dt>
+    <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretkeyref_nodejs">
+<a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_key_ref_python">
+<a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4289,7 +5279,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -4320,7 +5310,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -4351,7 +5341,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -4382,7 +5372,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the port.
+    <dd>{{% md %}}Volume's name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -4506,6 +5496,450 @@ If Requests is omitted for a container, it defaults to Limits if that is
 explicitly specified, otherwise to an implementation-defined value.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetemplatespeccontainervolumemount">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mountpath_csharp">
+<a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path within the container at which the volume should be mounted.  Must
+not contain ':'.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mountpath_go">
+<a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path within the container at which the volume should be mounted.  Must
+not contain ':'.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mountpath_nodejs">
+<a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path within the container at which the volume should be mounted.  Must
+not contain ':'.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mount_path_python">
+<a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path within the container at which the volume should be mounted.  Must
+not contain ':'.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetemplatespecvolume">Service<wbr>Template<wbr>Spec<wbr>Volume</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret's value will be presented as the content of a file whose
+name is defined in the item path. If no items are defined, the name of
+the file is the secret_name.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}The secret's value will be presented as the content of a file whose
+name is defined in the item path. If no items are defined, the name of
+the file is the secret_name.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret's value will be presented as the content of a file whose
+name is defined in the item path. If no items are defined, the name of
+the file is the secret_name.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Volume's name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The secret's value will be presented as the content of a file whose
+name is defined in the item path. If no items are defined, the name of
+the file is the secret_name.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret
+is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+An alias definition has the form:
+<alias>:projects/<project-id|project-number>/secrets/<secret-name>.
+If multiple alias definitions are needed, they must be separated by
+commas.
+The alias definitions must be set on the run.googleapis.com/secrets
+annotation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
+secret_name.
+If specified, the key will be used as the version to fetch from Cloud
+Secret Manager and the path will be the name of the file exposed in the
+volume. When items are defined, they must specify a key and a path.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret
+is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+An alias definition has the form:
+<alias>:projects/<project-id|project-number>/secrets/<secret-name>.
+If multiple alias definitions are needed, they must be separated by
+commas.
+The alias definitions must be set on the run.googleapis.com/secrets
+annotation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">[]Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
+secret_name.
+If specified, the key will be used as the version to fetch from Cloud
+Secret Manager and the path will be the name of the file exposed in the
+volume. When items are defined, they must specify a key and a path.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret
+is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+An alias definition has the form:
+<alias>:projects/<project-id|project-number>/secrets/<secret-name>.
+If multiple alias definitions are needed, they must be separated by
+commas.
+The alias definitions must be set on the run.googleapis.com/secrets
+annotation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
+secret_name.
+If specified, the key will be used as the version to fetch from Cloud
+Secret Manager and the path will be the name of the file exposed in the
+volume. When items are defined, they must specify a key and a path.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret
+is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+An alias definition has the form:
+<alias>:projects/<project-id|project-number>/secrets/<secret-name>.
+If multiple alias definitions are needed, they must be separated by
+commas.
+The alias definitions must be set on the run.googleapis.com/secrets
+annotation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
+secret_name.
+If specified, the key will be used as the version to fetch from Cloud
+Secret Manager and the path will be the name of the file exposed in the
+volume. When items are defined, they must specify a key and a path.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="servicetemplatespecvolumesecretitem">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative path of the file to map the key to.
+May not be an absolute path.
+May not contain the path element '..'.
+May not start with the string '..'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative path of the file to map the key to.
+May not be an absolute path.
+May not contain the path element '..'.
+May not start with the string '..'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The relative path of the file to map the key to.
+May not be an absolute path.
+May not contain the path element '..'.
+May not start with the string '..'.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The relative path of the file to map the key to.
+May not be an absolute path.
+May not contain the path element '..'.
+May not start with the string '..'.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

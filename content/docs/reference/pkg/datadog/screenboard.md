@@ -1365,19 +1365,32 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScreenBoard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScreenBoard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScreenBoard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScreenBoardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1388,46 +1401,44 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScreenBoardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ScreenBoardArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1436,35 +1447,27 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScreenBoardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1476,25 +1479,19 @@ const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScreenBoardArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1658,7 +1655,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget[]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1691,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#templatevariables_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,20 +1836,29 @@ Get an existing ScreenBoard resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ScreenBoardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScreenBoard</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ScreenBoardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScreenBoard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ScreenBoard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ScreenBoard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScreenBoard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ScreenBoardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScreenBoard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ScreenBoardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScreenBoard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScreenBoard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ScreenBoardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScreenBoard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ScreenBoardState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2122,7 +2128,7 @@ The following state arguments are supported:
 <a href="#state_templatevariables_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2146,7 @@ The following state arguments are supported:
 <a href="#state_widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget[]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3682,7 +3688,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgetrule">Screen<wbr>Board<wbr>Widget<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgetrule">Screen<wbr>Board<wbr>Widget<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3794,7 +3800,7 @@ The following state arguments are supported:
 <a href="#tiledeves_nodejs" style="color: inherit; text-decoration: inherit;">tile<wbr>Deves</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledef">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledef">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4734,7 +4740,7 @@ The following state arguments are supported:
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequest">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequest">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4766,7 +4772,7 @@ The following state arguments are supported:
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefevent">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefevent">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4782,7 +4788,7 @@ The following state arguments are supported:
 <a href="#markers_nodejs" style="color: inherit; text-decoration: inherit;">markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefmarker">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefmarker">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5468,7 +5474,7 @@ The following state arguments are supported:
 <a href="#apmquery_nodejs" style="color: inherit; text-decoration: inherit;">apm<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5492,7 +5498,7 @@ The following state arguments are supported:
 <a href="#conditionalformats_nodejs" style="color: inherit; text-decoration: inherit;">conditional<wbr>Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5524,7 +5530,7 @@ The following state arguments are supported:
 <a href="#logquery_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5564,7 +5570,7 @@ The following state arguments are supported:
 <a href="#processquery_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5862,7 +5868,7 @@ The following state arguments are supported:
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5878,7 +5884,7 @@ The following state arguments are supported:
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5886,7 +5892,7 @@ The following state arguments are supported:
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6122,7 +6128,7 @@ The following state arguments are supported:
 <a href="#sort_nodejs" style="color: inherit; text-decoration: inherit;">sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6610,7 +6616,7 @@ The following state arguments are supported:
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6626,7 +6632,7 @@ The following state arguments are supported:
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By[]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6634,7 +6640,7 @@ The following state arguments are supported:
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6870,7 +6876,7 @@ The following state arguments are supported:
 <a href="#sort_nodejs" style="color: inherit; text-decoration: inherit;">sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

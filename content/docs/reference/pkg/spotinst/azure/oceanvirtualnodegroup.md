@@ -108,8 +108,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst/azure"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -274,19 +274,32 @@ const example = new spotinst.azure.OceanVirtualNodeGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscales</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupAutoscaleArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupResourceLimitArgs]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupTaintArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">autoscales</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupAutoscaleArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLabelArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLaunchSpecificationArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupResourceLimitArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupTaintArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OceanVirtualNodeGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OceanVirtualNodeGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OceanVirtualNodeGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -297,46 +310,44 @@ const example = new spotinst.azure.OceanVirtualNodeGroup("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,35 +356,27 @@ const example = new spotinst.azure.OceanVirtualNodeGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -385,25 +388,19 @@ const example = new spotinst.azure.OceanVirtualNodeGroup("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OceanVirtualNodeGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -567,7 +564,7 @@ The OceanVirtualNodeGroup resource accepts the following [input]({{< relref "/do
 <a href="#autoscales_nodejs" style="color: inherit; text-decoration: inherit;">autoscales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegroupautoscale">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Autoscale[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegroupautoscale">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Autoscale<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +573,7 @@ The OceanVirtualNodeGroup resource accepts the following [input]({{< relref "/do
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouplabel">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouplabel">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional labels for the virtual node group. Only custom user labels are allowed. Kubernetes built-in labels and Spot internal labels are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +582,7 @@ The OceanVirtualNodeGroup resource accepts the following [input]({{< relref "/do
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecification">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecification">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +600,7 @@ The OceanVirtualNodeGroup resource accepts the following [input]({{< relref "/do
 <a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegroupresourcelimit">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Resource<wbr>Limit[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegroupresourcelimit">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Resource<wbr>Limit<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +609,7 @@ The OceanVirtualNodeGroup resource accepts the following [input]({{< relref "/do
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouptaint">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouptaint">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional taints for the virtual node group. Only custom user labels are allowed. Kubernetes built-in labels and Spot internal labels are not allowed.
 {{% /md %}}</dd></dl>
@@ -748,20 +745,29 @@ Get an existing OceanVirtualNodeGroup resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OceanVirtualNodeGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OceanVirtualNodeGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OceanVirtualNodeGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OceanVirtualNodeGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscales</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupAutoscaleArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupResourceLimitArgs]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupTaintArgs]]</span> = None<span class="p">) -&gt;</span> OceanVirtualNodeGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">autoscales</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupAutoscaleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLabelArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupLaunchSpecificationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupResourceLimitArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanVirtualNodeGroupTaintArgs]]</span> = None<span class="p">) -&gt;</span> OceanVirtualNodeGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOceanVirtualNodeGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OceanVirtualNodeGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OceanVirtualNodeGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOceanVirtualNodeGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OceanVirtualNodeGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OceanVirtualNodeGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OceanVirtualNodeGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OceanVirtualNodeGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OceanVirtualNodeGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OceanVirtualNodeGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1004,7 +1010,7 @@ The following state arguments are supported:
 <a href="#state_autoscales_nodejs" style="color: inherit; text-decoration: inherit;">autoscales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegroupautoscale">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Autoscale[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegroupautoscale">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Autoscale<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1019,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouplabel">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouplabel">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional labels for the virtual node group. Only custom user labels are allowed. Kubernetes built-in labels and Spot internal labels are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +1028,7 @@ The following state arguments are supported:
 <a href="#state_launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecification">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecification">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegroupresourcelimit">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Resource<wbr>Limit[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegroupresourcelimit">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Resource<wbr>Limit<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouptaint">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouptaint">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional taints for the virtual node group. Only custom user labels are allowed. Kubernetes built-in labels and Spot internal labels are not allowed.
 {{% /md %}}</dd></dl>
@@ -1173,7 +1179,7 @@ The following state arguments are supported:
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegroupautoscaleautoscaleheadroom">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Autoscale<wbr>Autoscale<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegroupautoscaleautoscaleheadroom">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Autoscale<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1501,7 @@ The following state arguments are supported:
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecificationosdisk">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecificationosdisk">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify OS disk specification other than default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1510,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecificationtag">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#oceanvirtualnodegrouplaunchspecificationtag">Ocean<wbr>Virtual<wbr>Node<wbr>Group<wbr>Launch<wbr>Specification<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional key-value pairs to be used to tag the VMs in the virtual node group.
 {{% /md %}}</dd></dl>

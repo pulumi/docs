@@ -49,7 +49,7 @@ class MyStack : Stack
         {
             VpcId = defaultNetwork.Id,
             CidrBlock = "172.16.0.0/16",
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            ZoneId = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
             VswitchName = name,
         });
         var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
@@ -82,11 +82,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/slb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -113,10 +113,10 @@ func main() {
 			return err
 		}
 		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
-			VpcId:            defaultNetwork.ID(),
-			CidrBlock:        pulumi.String("172.16.0.0/16"),
-			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
-			VswitchName:      pulumi.String(name),
+			VpcId:       defaultNetwork.ID(),
+			CidrBlock:   pulumi.String("172.16.0.0/16"),
+			ZoneId:      pulumi.String(defaultZones.Zones[0].Id),
+			VswitchName: pulumi.String(name),
 		})
 		if err != nil {
 			return err
@@ -163,7 +163,7 @@ default_network = alicloud.vpc.Network("defaultNetwork",
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=default_network.id,
     cidr_block="172.16.0.0/16",
-    availability_zone=default_zones.zones[0].id,
+    zone_id=default_zones.zones[0].id,
     vswitch_name=name)
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
 default_server_group = alicloud.slb.ServerGroup("defaultServerGroup", load_balancer_id=default_load_balancer.id)
@@ -195,7 +195,7 @@ const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {
 const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/16",
-    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    zoneId: defaultZones.then(defaultZones => defaultZones.zones[0].id),
     vswitchName: name,
 });
 const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {vswitchId: defaultSwitch.id});
@@ -224,17 +224,21 @@ export const firstSlbServerGroupId = sampleDs.slbServerGroups[0].id;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServerGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetServerGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServerGroupsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetServerGroups` in the Go SDK.
 
@@ -243,7 +247,7 @@ export const firstSlbServerGroupId = sampleDs.slbServerGroups[0].id;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServerGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -708,7 +712,7 @@ The following output properties are available:
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservergroupsslbservergroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservergroupsslbservergroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd></dl>
@@ -801,7 +805,7 @@ The following output properties are available:
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservergroupsslbservergroupserver">Sequence[Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservergroupsslbservergroupserver">Sequence[Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd></dl>

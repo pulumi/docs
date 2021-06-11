@@ -37,11 +37,11 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
                 {
-                    { "actionType", "LogicApp" },
-                    { "logicAppResourceId", "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1" },
-                    { "uri", "https://exampleTriggerUri1.com" },
+                    ActionType = "LogicApp",
+                    LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+                    Uri = "https://exampleTriggerUri1.com",
                 },
             },
             AutomationName = "exampleAutomation",
@@ -92,11 +92,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 automation = azure_native.security.Automation("automation",
-    actions=[{
-        "actionType": "LogicApp",
-        "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
-        "uri": "https://exampleTriggerUri1.com",
-    }],
+    actions=[azure_native.security.AutomationActionLogicAppArgs(
+        action_type="LogicApp",
+        logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+        uri="https://exampleTriggerUri1.com",
+    )],
     automation_name="exampleAutomation",
     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment",
     etag="etag value (must be supplied for update)",
@@ -172,11 +172,11 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
                 {
-                    { "actionType", "LogicApp" },
-                    { "logicAppResourceId", "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1" },
-                    { "uri", "https://exampleTriggerUri1.com" },
+                    ActionType = "LogicApp",
+                    LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+                    Uri = "https://exampleTriggerUri1.com",
                 },
             },
             AutomationName = "exampleAutomation",
@@ -243,11 +243,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 automation = azure_native.security.Automation("automation",
-    actions=[{
-        "actionType": "LogicApp",
-        "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
-        "uri": "https://exampleTriggerUri1.com",
-    }],
+    actions=[azure_native.security.AutomationActionLogicAppArgs(
+        action_type="LogicApp",
+        logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+        uri="https://exampleTriggerUri1.com",
+    )],
     automation_name="exampleAutomation",
     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment",
     etag="etag value (must be supplied for update)",
@@ -339,11 +339,11 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
                 {
-                    { "actionType", "LogicApp" },
-                    { "logicAppResourceId", "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1" },
-                    { "uri", "https://exampleTriggerUri1.com" },
+                    ActionType = "LogicApp",
+                    LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+                    Uri = "https://exampleTriggerUri1.com",
                 },
             },
             AutomationName = "exampleAutomation",
@@ -410,11 +410,11 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 automation = azure_native.security.Automation("automation",
-    actions=[{
-        "actionType": "LogicApp",
-        "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
-        "uri": "https://exampleTriggerUri1.com",
-    }],
+    actions=[azure_native.security.AutomationActionLogicAppArgs(
+        action_type="LogicApp",
+        logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+        uri="https://exampleTriggerUri1.com",
+    )],
     automation_name="exampleAutomation",
     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment",
     etag="etag value (must be supplied for update)",
@@ -500,19 +500,36 @@ const automation = new azure_native.security.Automation("automation", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[AutomationActionEventHubArgs, AutomationActionLogicAppArgs, AutomationActionWorkspaceArgs]]]</span> = None<span class="p">, </span><span class="nx">automation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationScopeArgs]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[AutomationActionEventHubArgs, AutomationActionLogicAppArgs, AutomationActionWorkspaceArgs]]]</span> = None<span class="p">,</span>
+               <span class="nx">automation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationScopeArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationSourceArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Automation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Automation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Automation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutomationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -523,46 +540,44 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -573,33 +588,25 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -611,25 +618,19 @@ const automation = new azure_native.security.Automation("automation", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -842,7 +843,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Automation<wbr>Action<wbr>Event<wbr>Hub | Automation<wbr>Action<wbr>Logic<wbr>App | Automation<wbr>Action<wbr>Workspace[]</span>
+        <span class="property-type">Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Args | Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Args | Automation<wbr>Action<wbr>Workspace<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +899,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationscope">Automation<wbr>Scope[]</a></span>
+        <span class="property-type"><a href="#automationscope">Automation<wbr>Scope<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +907,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsource">Automation<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#automationsource">Automation<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringrule">Automation<wbr>Triggering<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#automationtriggeringrule">Automation<wbr>Triggering<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1683,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringruleresponse">Automation<wbr>Triggering<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#automationtriggeringruleresponse">Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1921,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruleset">Automation<wbr>Rule<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#automationruleset">Automation<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulesetresponse">Automation<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#automationrulesetresponse">Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}

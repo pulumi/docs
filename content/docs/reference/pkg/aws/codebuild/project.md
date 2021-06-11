@@ -355,15 +355,15 @@ example_project = aws.codebuild.Project("exampleProject",
         type="LINUX_CONTAINER",
         image_pull_credentials_type="CODEBUILD",
         environment_variables=[
-            aws.codebuild.ProjectEnvironmentEnvironmentVariableArgs(
-                name="SOME_KEY1",
-                value="SOME_VALUE1",
-            ),
-            aws.codebuild.ProjectEnvironmentEnvironmentVariableArgs(
-                name="SOME_KEY2",
-                value="SOME_VALUE2",
-                type="PARAMETER_STORE",
-            ),
+            {
+                "name": "SOME_KEY1",
+                "value": "SOME_VALUE1",
+            },
+            {
+                "name": "SOME_KEY2",
+                "value": "SOME_VALUE2",
+                "type": "PARAMETER_STORE",
+            },
         ],
     ),
     logs_config=aws.codebuild.ProjectLogsConfigArgs(
@@ -419,10 +419,10 @@ project_with_cache = aws.codebuild.Project("project-with-cache",
         image="aws/codebuild/standard:1.0",
         type="LINUX_CONTAINER",
         image_pull_credentials_type="CODEBUILD",
-        environment_variables=[aws.codebuild.ProjectEnvironmentEnvironmentVariableArgs(
-            name="SOME_KEY1",
-            value="SOME_VALUE1",
-        )],
+        environment_variables=[{
+            "name": "SOME_KEY1",
+            "value": "SOME_VALUE1",
+        }],
     ),
     source=aws.codebuild.ProjectSourceArgs(
         type="GITHUB",
@@ -635,19 +635,46 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondarySourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">, </span><span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">build_batch_config</span><span class="p">:</span> <span class="nx">Optional[ProjectBuildBatchConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">,</span>
+            <span class="nx">concurrent_build_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">,</span>
+            <span class="nx">file_system_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectFileSystemLocationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondarySourceArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">,</span>
+            <span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -658,46 +685,44 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -706,35 +731,27 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -746,25 +763,19 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -805,7 +816,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
@@ -826,6 +837,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildbatchconfig_csharp">
+<a href="#buildbatchconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildtimeout_csharp">
 <a href="#buildtimeout_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -844,6 +864,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrentbuildlimit_csharp">
+<a href="#concurrentbuildlimit_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -860,6 +889,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filesystemlocations_csharp">
+<a href="#filesystemlocations_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">List&lt;Project<wbr>File<wbr>System<wbr>Location<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsconfig_csharp">
@@ -922,7 +960,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_csharp">
@@ -962,7 +1009,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
@@ -983,6 +1030,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildbatchconfig_go">
+<a href="#buildbatchconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="buildtimeout_go">
 <a href="#buildtimeout_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -1001,6 +1057,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrentbuildlimit_go">
+<a href="#concurrentbuildlimit_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1017,6 +1082,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filesystemlocations_go">
+<a href="#filesystemlocations_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsconfig_go">
@@ -1079,7 +1153,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_go">
@@ -1099,7 +1182,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1108,7 +1191,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1119,14 +1202,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,6 +1221,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildbatchconfig_nodejs">
+<a href="#buildbatchconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtimeout_nodejs">
@@ -1153,9 +1245,18 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="concurrentbuildlimit_nodejs">
+<a href="#concurrentbuildlimit_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1176,11 +1277,20 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="filesystemlocations_nodejs">
+<a href="#filesystemlocations_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Project<wbr>File<wbr>System<wbr>Location<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logsconfig_nodejs">
 <a href="#logsconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1317,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondaryartifacts_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact[]</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1326,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondarysources_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,14 +1346,23 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_nodejs">
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1276,7 +1395,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
@@ -1297,6 +1416,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="build_batch_config_python">
+<a href="#build_batch_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>batch_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="build_timeout_python">
 <a href="#build_timeout_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout</a>
 </span>
@@ -1315,6 +1443,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrent_build_limit_python">
+<a href="#concurrent_build_limit_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>build_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1331,6 +1468,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_system_locations_python">
+<a href="#file_system_locations_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Sequence[Project<wbr>File<wbr>System<wbr>Location<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_config_python">
@@ -1393,7 +1539,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_config_python">
@@ -1541,20 +1696,45 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">badge_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondarySourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">, </span><span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">badge_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">build_batch_config</span><span class="p">:</span> <span class="nx">Optional[ProjectBuildBatchConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">,</span>
+        <span class="nx">concurrent_build_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">,</span>
+        <span class="nx">file_system_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectFileSystemLocationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondarySourceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1695,6 +1875,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildbatchconfig_csharp">
+<a href="#state_buildbatchconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_buildtimeout_csharp">
 <a href="#state_buildtimeout_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -1711,6 +1900,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrentbuildlimit_csharp">
+<a href="#state_concurrentbuildlimit_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1738,6 +1936,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemlocations_csharp">
+<a href="#state_filesystemlocations_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">List&lt;Project<wbr>File<wbr>System<wbr>Location<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logsconfig_csharp">
@@ -1791,7 +1998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
@@ -1818,7 +2025,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_csharp">
@@ -1870,6 +2086,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildbatchconfig_go">
+<a href="#state_buildbatchconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_buildtimeout_go">
 <a href="#state_buildtimeout_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout</a>
 </span>
@@ -1886,6 +2111,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrentbuildlimit_go">
+<a href="#state_concurrentbuildlimit_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1913,6 +2147,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemlocations_go">
+<a href="#state_filesystemlocations_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">[]Project<wbr>File<wbr>System<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logsconfig_go">
@@ -1966,7 +2209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
@@ -1993,7 +2236,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_go">
@@ -2022,7 +2274,7 @@ The following state arguments are supported:
 <a href="#state_artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,6 +2297,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildbatchconfig_nodejs">
+<a href="#state_buildbatchconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Batch<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_buildtimeout_nodejs">
 <a href="#state_buildtimeout_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Timeout</a>
 </span>
@@ -2058,9 +2319,18 @@ The following state arguments are supported:
 <a href="#state_cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrentbuildlimit_nodejs">
+<a href="#state_concurrentbuildlimit_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Build<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -2085,16 +2355,25 @@ The following state arguments are supported:
 <a href="#state_environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_filesystemlocations_nodejs">
+<a href="#state_filesystemlocations_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Project<wbr>File<wbr>System<wbr>Location<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logsconfig_nodejs">
 <a href="#state_logsconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2400,7 @@ The following state arguments are supported:
 <a href="#state_secondaryartifacts_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact[]</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2409,7 @@ The following state arguments are supported:
 <a href="#state_secondarysources_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,14 +2420,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,14 +2447,23 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconfig_nodejs">
 <a href="#state_vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2220,6 +2508,15 @@ The following state arguments are supported:
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_build_batch_config_python">
+<a href="#state_build_batch_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>batch_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the batch build options for the project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_build_timeout_python">
 <a href="#state_build_timeout_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout</a>
 </span>
@@ -2236,6 +2533,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_concurrent_build_limit_python">
+<a href="#state_concurrent_build_limit_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>build_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -2263,6 +2569,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_file_system_locations_python">
+<a href="#state_file_system_locations_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectfilesystemlocation">Sequence[Project<wbr>File<wbr>System<wbr>Location<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A set of file system locations to to mount inside the build. File system locations are documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_config_python">
@@ -2316,7 +2631,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
@@ -2343,7 +2658,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_config_python">
@@ -2376,7 +2700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactidentifier_csharp">
@@ -2461,7 +2785,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactidentifier_go">
@@ -2546,7 +2870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactidentifier_nodejs">
@@ -2631,7 +2955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_identifier_python">
@@ -2707,6 +3031,258 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="projectbuildbatchconfig">Project<wbr>Build<wbr>Batch<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicerole_csharp">
+<a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combineartifacts_csharp">
+<a href="#combineartifacts_csharp" style="color: inherit; text-decoration: inherit;">Combine<wbr>Artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_csharp">
+<a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinmins_csharp">
+<a href="#timeoutinmins_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicerole_go">
+<a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combineartifacts_go">
+<a href="#combineartifacts_go" style="color: inherit; text-decoration: inherit;">Combine<wbr>Artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_go">
+<a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinmins_go">
+<a href="#timeoutinmins_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="servicerole_nodejs">
+<a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combineartifacts_nodejs">
+<a href="#combineartifacts_nodejs" style="color: inherit; text-decoration: inherit;">combine<wbr>Artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_nodejs">
+<a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinmins_nodejs">
+<a href="#timeoutinmins_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="service_role_python">
+<a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the service role ARN for the batch build project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="combine_artifacts_python">
+<a href="#combine_artifacts_python" style="color: inherit; text-decoration: inherit;">combine_<wbr>artifacts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restrictions_python">
+<a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the restrictions for the batch build.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeout_in_mins_python">
+<a href="#timeout_in_mins_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>mins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectbuildbatchconfigrestrictions">Project<wbr>Build<wbr>Batch<wbr>Config<wbr>Restrictions</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="computetypesalloweds_csharp">
+<a href="#computetypesalloweds_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Types<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximumbuildsallowed_csharp">
+<a href="#maximumbuildsallowed_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Builds<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="computetypesalloweds_go">
+<a href="#computetypesalloweds_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Types<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximumbuildsallowed_go">
+<a href="#maximumbuildsallowed_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Builds<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="computetypesalloweds_nodejs">
+<a href="#computetypesalloweds_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Types<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximumbuildsallowed_nodejs">
+<a href="#maximumbuildsallowed_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Builds<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="compute_types_alloweds_python">
+<a href="#compute_types_alloweds_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>types_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maximum_builds_allowed_python">
+<a href="#maximum_builds_allowed_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>builds_<wbr>allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of builds allowed.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="projectcache">Project<wbr>Cache</h4>
 
 {{% choosable language csharp %}}
@@ -2736,7 +3312,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2767,7 +3343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2798,7 +3374,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2829,7 +3405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2862,7 +3438,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
@@ -2938,7 +3514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
@@ -3014,7 +3590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
@@ -3030,7 +3606,7 @@ The following state arguments are supported:
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3057,7 +3633,7 @@ The following state arguments are supported:
 <a href="#registrycredential_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3090,7 +3666,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
@@ -3168,7 +3744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3199,7 +3775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3230,7 +3806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3261,7 +3837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3355,6 +3931,204 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="projectfilesystemlocation">Project<wbr>File<wbr>System<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_csharp">
+<a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_csharp">
+<a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountpoint_csharp">
+<a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_go">
+<a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_go">
+<a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountpoint_go">
+<a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_nodejs">
+<a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountoptions_nodejs">
+<a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mountpoint_nodejs">
+<a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identifier_python">
+<a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mount_options_python">
+<a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mount options for a file system created by AWS EFS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mount_point_python">
+<a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location in the container where you mount the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="projectlogsconfig">Project<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -3408,7 +4182,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3417,7 +4191,7 @@ The following state arguments are supported:
 <a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3717,7 +4491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiondisabled_csharp">
@@ -3802,7 +4576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiondisabled_go">
@@ -3887,7 +4661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiondisabled_nodejs">
@@ -3972,7 +4746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_disabled_python">
@@ -4059,17 +4833,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_csharp">
-<a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
+        <span id="auth_csharp">
+<a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">List&lt;Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildstatusconfig_csharp">
+<a href="#buildstatusconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_csharp">
 <a href="#buildspec_csharp" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4144,17 +4927,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_go">
-<a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
+        <span id="auth_go">
+<a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">[]Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildstatusconfig_go">
+<a href="#buildstatusconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_go">
 <a href="#buildspec_go" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4229,17 +5021,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_nodejs">
-<a href="#auths_nodejs" style="color: inherit; text-decoration: inherit;">auths</a>
+        <span id="auth_nodejs">
+<a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth[]</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildstatusconfig_nodejs">
+<a href="#buildstatusconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_nodejs">
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4263,7 +5064,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4314,17 +5115,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_python">
-<a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
+        <span id="auth_python">
+<a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="build_status_config_python">
+<a href="#build_status_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>status_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_python">
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4392,7 +5202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_csharp">
@@ -4414,7 +5224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_go">
@@ -4436,7 +5246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_nodejs">
@@ -4458,7 +5268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_python">
@@ -4469,6 +5279,96 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectsecondarysourcebuildstatusconfig">Project<wbr>Secondary<wbr>Source<wbr>Build<wbr>Status<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_csharp">
+<a href="#targeturl_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_go">
+<a href="#targeturl_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_nodejs">
+<a href="#targeturl_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_url_python">
+<a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
@@ -4536,17 +5436,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_csharp">
-<a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
+        <span id="auth_csharp">
+<a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">List&lt;Project<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildstatusconfig_csharp">
+<a href="#buildstatusconfig_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_csharp">
 <a href="#buildspec_csharp" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4612,17 +5521,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_go">
-<a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
+        <span id="auth_go">
+<a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">[]Project<wbr>Source<wbr>Auth</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildstatusconfig_go">
+<a href="#buildstatusconfig_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_go">
 <a href="#buildspec_go" style="color: inherit; text-decoration: inherit;">Buildspec</a>
@@ -4688,17 +5606,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_nodejs">
-<a href="#auths_nodejs" style="color: inherit; text-decoration: inherit;">auths</a>
+        <span id="auth_nodejs">
+<a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth[]</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildstatusconfig_nodejs">
+<a href="#buildstatusconfig_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Status<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_nodejs">
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4722,7 +5649,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4764,17 +5691,26 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auths_python">
-<a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
+        <span id="auth_python">
+<a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Sequence[Project<wbr>Source<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="build_status_config_python">
+<a href="#build_status_config_python" style="color: inherit; text-decoration: inherit;">build_<wbr>status_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildspec_python">
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
@@ -4842,7 +5778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_csharp">
@@ -4864,7 +5800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_go">
@@ -4886,7 +5822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_nodejs">
@@ -4908,7 +5844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+    <dd>{{% md %}}Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_python">
@@ -4919,6 +5855,96 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
+{{% /choosable %}}
+
+<h4 id="projectsourcebuildstatusconfig">Project<wbr>Source<wbr>Build<wbr>Status<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_csharp">
+<a href="#targeturl_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_go">
+<a href="#targeturl_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targeturl_nodejs">
+<a href="#targeturl_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_url_python">
+<a href="#target_url_python" style="color: inherit; text-decoration: inherit;">target_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>

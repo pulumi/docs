@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -129,19 +129,48 @@ const example = new azuread.User("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_password_change</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mail_nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">physical_delivery_office_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">surname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">account_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">force_password_change</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">job_title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">mail_nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">office_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">onpremises_immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">physical_delivery_office_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">surname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">usage_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,46 +181,44 @@ const example = new azuread.User("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,35 +227,27 @@ const example = new azuread.User("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -240,25 +259,19 @@ const example = new azuread.User("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -363,16 +376,16 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="immutableid_csharp">
 <a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="jobtitle_csharp">
 <a href="#jobtitle_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -390,10 +403,19 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mobile_csharp">
 <a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="mobilephone_csharp">
+<a href="#mobilephone_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -401,14 +423,32 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The primary cellular telephone number for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="physicaldeliveryofficename_csharp">
-<a href="#physicaldeliveryofficename_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+        <span id="officelocation_csharp">
+<a href="#officelocation_csharp" style="color: inherit; text-decoration: inherit;">Office<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onpremisesimmutableid_csharp">
+<a href="#onpremisesimmutableid_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="physicaldeliveryofficename_csharp">
+<a href="#physicaldeliveryofficename_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -547,16 +587,16 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="immutableid_go">
 <a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="jobtitle_go">
 <a href="#jobtitle_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -574,10 +614,19 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mobile_go">
 <a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="mobilephone_go">
+<a href="#mobilephone_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -585,14 +634,32 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The primary cellular telephone number for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="physicaldeliveryofficename_go">
-<a href="#physicaldeliveryofficename_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+        <span id="officelocation_go">
+<a href="#officelocation_go" style="color: inherit; text-decoration: inherit;">Office<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onpremisesimmutableid_go">
+<a href="#onpremisesimmutableid_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="physicaldeliveryofficename_go">
+<a href="#physicaldeliveryofficename_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -731,16 +798,16 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="immutableid_nodejs">
 <a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="jobtitle_nodejs">
 <a href="#jobtitle_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Title</a>
@@ -758,10 +825,19 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mobile_nodejs">
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="mobilephone_nodejs">
+<a href="#mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -769,14 +845,32 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The primary cellular telephone number for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="physicaldeliveryofficename_nodejs">
-<a href="#physicaldeliveryofficename_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+        <span id="officelocation_nodejs">
+<a href="#officelocation_nodejs" style="color: inherit; text-decoration: inherit;">office<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onpremisesimmutableid_nodejs">
+<a href="#onpremisesimmutableid_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="physicaldeliveryofficename_nodejs">
+<a href="#physicaldeliveryofficename_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -915,16 +1009,16 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="immutable_id_python">
 <a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="job_title_python">
 <a href="#job_title_python" style="color: inherit; text-decoration: inherit;">job_<wbr>title</a>
@@ -942,10 +1036,19 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="mobile_python">
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="mobile_phone_python">
+<a href="#mobile_phone_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -953,14 +1056,32 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The primary cellular telephone number for the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="physical_delivery_office_name_python">
-<a href="#physical_delivery_office_name_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>delivery_<wbr>office_<wbr>name</a>
+        <span id="office_location_python">
+<a href="#office_location_python" style="color: inherit; text-decoration: inherit;">office_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The office location in the user's place of business.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onpremises_immutable_id_python">
+<a href="#onpremises_immutable_id_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>immutable_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="physical_delivery_office_name_python">
+<a href="#physical_delivery_office_name_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>delivery_<wbr>office_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1060,6 +1181,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the User.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usertype_csharp">
+<a href="#usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1108,6 +1238,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the User.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usertype_go">
+<a href="#usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1156,6 +1295,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the User.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usertype_nodejs">
+<a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1204,6 +1352,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the User.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="user_type_python">
+<a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1215,20 +1372,50 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_password_change</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mail_nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">onpremises_sam_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">onpremises_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">physical_delivery_office_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">surname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">usage_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">city</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">force_password_change</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">given_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mail_nickname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">office_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">onpremises_immutable_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">onpremises_sam_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">onpremises_user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">physical_delivery_office_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">surname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">usage_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_principal_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1403,16 +1590,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_immutableid_csharp">
 <a href="#state_immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobtitle_csharp">
 <a href="#state_jobtitle_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -1439,10 +1626,19 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mobile_csharp">
 <a href="#state_mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mobilephone_csharp">
+<a href="#state_mobilephone_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1457,6 +1653,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_officelocation_csharp">
+<a href="#state_officelocation_csharp" style="color: inherit; text-decoration: inherit;">Office<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_onpremisesimmutableid_csharp">
+<a href="#state_onpremisesimmutableid_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremisessamaccountname_csharp">
@@ -1484,16 +1698,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_physicaldeliveryofficename_csharp">
 <a href="#state_physicaldeliveryofficename_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The office location in the user's place of business.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_postalcode_csharp">
 <a href="#state_postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1547,6 +1761,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usertype_csharp">
+<a href="#state_usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1623,16 +1846,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_immutableid_go">
 <a href="#state_immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobtitle_go">
 <a href="#state_jobtitle_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -1659,10 +1882,19 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mobile_go">
 <a href="#state_mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mobilephone_go">
+<a href="#state_mobilephone_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1677,6 +1909,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_officelocation_go">
+<a href="#state_officelocation_go" style="color: inherit; text-decoration: inherit;">Office<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_onpremisesimmutableid_go">
+<a href="#state_onpremisesimmutableid_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremisessamaccountname_go">
@@ -1704,16 +1954,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_physicaldeliveryofficename_go">
 <a href="#state_physicaldeliveryofficename_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The office location in the user's place of business.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_postalcode_go">
 <a href="#state_postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1767,6 +2017,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usertype_go">
+<a href="#state_usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1843,16 +2102,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_immutableid_nodejs">
 <a href="#state_immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobtitle_nodejs">
 <a href="#state_jobtitle_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Title</a>
@@ -1879,10 +2138,19 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mobile_nodejs">
 <a href="#state_mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mobilephone_nodejs">
+<a href="#state_mobilephone_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1897,6 +2165,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_officelocation_nodejs">
+<a href="#state_officelocation_nodejs" style="color: inherit; text-decoration: inherit;">office<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_onpremisesimmutableid_nodejs">
+<a href="#state_onpremisesimmutableid_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremisessamaccountname_nodejs">
@@ -1924,16 +2210,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_physicaldeliveryofficename_nodejs">
 <a href="#state_physicaldeliveryofficename_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Delivery<wbr>Office<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The office location in the user's place of business.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_postalcode_nodejs">
 <a href="#state_postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1987,6 +2273,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usertype_nodejs">
+<a href="#state_usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2063,16 +2358,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The given name (first name) of the user.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_immutable_id_python">
 <a href="#state_immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_title_python">
 <a href="#state_job_title_python" style="color: inherit; text-decoration: inherit;">job_<wbr>title</a>
@@ -2099,10 +2394,19 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_mobile_python">
 <a href="#state_mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `mobile_phone` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mobile_phone_python">
+<a href="#state_mobile_phone_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>phone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2117,6 +2421,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_office_location_python">
+<a href="#state_office_location_python" style="color: inherit; text-decoration: inherit;">office_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_onpremises_immutable_id_python">
+<a href="#state_onpremises_immutable_id_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>immutable_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onpremises_sam_account_name_python">
@@ -2144,16 +2466,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_physical_delivery_office_name_python">
 <a href="#state_physical_delivery_office_name_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>delivery_<wbr>office_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The office location in the user's place of business.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The office location in the user's place of business. Deprecated in favour of `office_location`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `office_location` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_postal_code_python">
 <a href="#state_postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -2207,6 +2529,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the User.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_type_python">
+<a href="#state_user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user type in the directory. One of `Guest` or `Member`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2233,6 +2564,6 @@ Azure Active Directory Users can be imported using the `object id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

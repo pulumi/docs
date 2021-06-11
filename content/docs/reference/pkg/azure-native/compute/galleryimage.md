@@ -67,7 +67,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -167,19 +167,43 @@ const galleryImage = new azure_native.compute.GalleryImage("galleryImage", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[DisallowedArgs]</span> = None<span class="p">, </span><span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[GalleryImageFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[GalleryImageIdentifierArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemStateTypes]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[ImagePurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[RecommendedMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[DisallowedArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[GalleryImageFeatureArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">,</span>
+                 <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[GalleryImageIdentifierArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemStateTypes]</span> = None<span class="p">,</span>
+                 <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">,</span>
+                 <span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[ImagePurchasePlanArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[RecommendedMachineConfigurationArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -190,46 +214,44 @@ const galleryImage = new azure_native.compute.GalleryImage("galleryImage", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GalleryImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GalleryImageArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,33 +262,25 @@ const galleryImage = new azure_native.compute.GalleryImage("galleryImage", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GalleryImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -278,25 +292,19 @@ const galleryImage = new azure_native.compute.GalleryImage("galleryImage", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GalleryImageArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -621,7 +629,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier</a></span>
+        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -661,7 +669,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#disallowed_nodejs" style="color: inherit; text-decoration: inherit;">disallowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowed">Disallowed</a></span>
+        <span class="property-type"><a href="#disallowed">Disallowed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +693,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeature">Gallery<wbr>Image<wbr>Feature[]</a></span>
+        <span class="property-type"><a href="#galleryimagefeature">Gallery<wbr>Image<wbr>Feature<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +733,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +741,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recommended_nodejs" style="color: inherit; text-decoration: inherit;">recommended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>CPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1992,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>CPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}

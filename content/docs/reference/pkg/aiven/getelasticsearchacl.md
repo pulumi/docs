@@ -39,7 +39,7 @@ class MyStack : Stack
         var es_acls = Output.Create(Aiven.GetElasticSearchAcl.InvokeAsync(new Aiven.GetElasticSearchAclArgs
         {
             Project = aiven_project.Es_project.Project,
-            ServiceName = aiven_service.Es.Service_name,
+            ServiceName = aiven_elasticsearch.Es.Service_name,
         }));
     }
 
@@ -56,15 +56,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.LookupElasticSearchAcl(ctx, &aiven.LookupElasticSearchAclArgs{
 			Project:     aiven_project.Es - project.Project,
-			ServiceName: aiven_service.Es.Service_name,
+			ServiceName: aiven_elasticsearch.Es.Service_name,
 		}, nil)
 		if err != nil {
 			return err
@@ -85,7 +85,7 @@ import pulumi
 import pulumi_aiven as aiven
 
 es_acls = aiven.get_elastic_search_acl(project=aiven_project["es-project"]["project"],
-    service_name=aiven_service["es"]["service_name"])
+    service_name=aiven_elasticsearch["es"]["service_name"])
 ```
 
 
@@ -101,7 +101,7 @@ import * as aiven from "@pulumi/aiven";
 
 const es-acls = aiven.getElasticSearchAcl({
     project: aiven_project["es-project"].project,
-    serviceName: aiven_service.es.service_name,
+    serviceName: aiven_elasticsearch.es.service_name,
 });
 ```
 
@@ -123,17 +123,22 @@ const es-acls = aiven.getElasticSearchAcl({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getElasticSearchAcl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetElasticSearchAclArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetElasticSearchAclResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getElasticSearchAcl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetElasticSearchAclArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetElasticSearchAclResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_elastic_search_acl(</span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetElasticSearchAclAclArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">extended_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetElasticSearchAclResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_elastic_search_acl(</span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetElasticSearchAclAcl]]</span> = None<span class="p">,</span>
+                           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">extended_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetElasticSearchAclResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupElasticSearchAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupElasticSearchAclArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupElasticSearchAclResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupElasticSearchAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupElasticSearchAclArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupElasticSearchAclResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupElasticSearchAcl` in the Go SDK.
 
@@ -142,7 +147,7 @@ const es-acls = aiven.getElasticSearchAcl({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetElasticSearchAcl </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetElasticSearchAclResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetElasticSearchAclArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetElasticSearchAclResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetElasticSearchAclArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -176,7 +181,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticsearchaclacl">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getelasticsearchaclacl">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -326,7 +331,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticsearchaclacl">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getelasticsearchaclacl">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +610,7 @@ these APIs as long as all operations only target indexes they have been granted 
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticsearchaclaclrule">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getelasticsearchaclaclrule">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -665,7 +670,7 @@ these APIs as long as all operations only target indexes they have been granted 
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticsearchaclaclrule">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getelasticsearchaclaclrule">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

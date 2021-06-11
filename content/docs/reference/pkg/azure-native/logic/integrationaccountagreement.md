@@ -236,7 +236,7 @@ package main
 
 import (
 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -765,19 +765,37 @@ const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">agreement_type</span><span class="p">:</span> <span class="nx">Optional[AgreementType]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[AgreementContentArgs]</span> = None<span class="p">, </span><span class="nx">guest_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">guest_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">host_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                <span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">agreement_type</span><span class="p">:</span> <span class="nx">Optional[AgreementType]</span> = None<span class="p">,</span>
+                                <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[AgreementContentArgs]</span> = None<span class="p">,</span>
+                                <span class="nx">guest_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">,</span>
+                                <span class="nx">guest_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">host_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">,</span>
+                                <span class="nx">host_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAgreement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAgreement</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAgreement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAgreement</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -788,46 +806,44 @@ const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -838,33 +854,25 @@ const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -876,25 +884,19 @@ const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1123,7 +1125,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementcontent">Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#agreementcontent">Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1133,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#guestidentity_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1149,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#hostidentity_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1842,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1850,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1924,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1932,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3446,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettings">AS2Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2protocolsettings">AS2Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3454,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3462,7 +3464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3560,7 +3562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3568,7 +3570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3576,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3738,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">AS2Acknowledgement<wbr>Connection<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3746,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettings">AS2Envelope<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2envelopesettings">AS2Envelope<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3754,7 +3756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsettings_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettings">AS2Error<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2errorsettings">AS2Error<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3762,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdnsettings_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettings">AS2Mdn<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2mdnsettings">AS2Mdn<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3770,7 +3772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettings">AS2Message<wbr>Connection<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettings">AS2Message<wbr>Connection<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3778,7 +3780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettings">AS2Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2securitysettings">AS2Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3786,7 +3788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettings">AS2Validation<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2validationsettings">AS2Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3980,7 +3982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3988,7 +3990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3996,7 +3998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsettings_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4004,7 +4006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdnsettings_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4012,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4020,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4028,7 +4030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5510,7 +5512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#as2_nodejs" style="color: inherit; text-decoration: inherit;">a<wbr>S2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontent">AS2Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#as2agreementcontent">AS2Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5518,7 +5520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_nodejs" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontent">Edifact<wbr>Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#edifactagreementcontent">Edifact<wbr>Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5526,7 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_nodejs" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontent">X12Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#x12agreementcontent">X12Agreement<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5624,7 +5626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#as2_nodejs" style="color: inherit; text-decoration: inherit;">a<wbr>S2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5632,7 +5634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_nodejs" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5640,7 +5642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_nodejs" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6660,7 +6662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6668,7 +6670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6742,7 +6744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6750,7 +6752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12348,7 +12350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettings">Edifact<wbr>Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettings">Edifact<wbr>Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12356,7 +12358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12364,7 +12366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12462,7 +12464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12470,7 +12472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12478,7 +12480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13060,7 +13062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettings">Edifact<wbr>Acknowledgement<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettings">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13068,7 +13070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettings">Edifact<wbr>Envelope<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettings">Edifact<wbr>Envelope<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13076,7 +13078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettings">Edifact<wbr>Framing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactframingsettings">Edifact<wbr>Framing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13084,7 +13086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilter">Edifact<wbr>Message<wbr>Filter</a></span>
+        <span class="property-type"><a href="#edifactmessagefilter">Edifact<wbr>Message<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13092,7 +13094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettings">Edifact<wbr>Processing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettings">Edifact<wbr>Processing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13100,7 +13102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareference">Edifact<wbr>Schema<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#edifactschemareference">Edifact<wbr>Schema<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13108,7 +13110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettings">Edifact<wbr>Validation<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettings">Edifact<wbr>Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13116,7 +13118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifactdelimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverride">Edifact<wbr>Delimiter<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverride">Edifact<wbr>Delimiter<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13124,7 +13126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverride">Edifact<wbr>Envelope<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverride">Edifact<wbr>Envelope<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13132,7 +13134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifier">Edifact<wbr>Message<wbr>Identifier[]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifier">Edifact<wbr>Message<wbr>Identifier<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13140,7 +13142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverride">Edifact<wbr>Validation<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverride">Edifact<wbr>Validation<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13430,7 +13432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13438,7 +13440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13446,7 +13448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13454,7 +13456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13462,7 +13464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13470,7 +13472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">Edifact<wbr>Schema<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13478,7 +13480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13486,7 +13488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifactdelimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Edifact<wbr>Delimiter<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13494,7 +13496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Edifact<wbr>Envelope<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13502,7 +13504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">Edifact<wbr>Message<wbr>Identifier<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13510,7 +13512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Edifact<wbr>Validation<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16566,7 +16568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16574,7 +16576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16648,7 +16650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16656,7 +16658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20354,7 +20356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettings">X12Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12protocolsettings">X12Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20362,7 +20364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20370,7 +20372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20468,7 +20470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20476,7 +20478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20484,7 +20486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21146,7 +21148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettings">X12Acknowledgement<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettings">X12Acknowledgement<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21154,7 +21156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettings">X12Envelope<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12envelopesettings">X12Envelope<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21162,7 +21164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettings">X12Framing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12framingsettings">X12Framing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21170,7 +21172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilter">X12Message<wbr>Filter</a></span>
+        <span class="property-type"><a href="#x12messagefilter">X12Message<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21178,7 +21180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettings">X12Processing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12processingsettings">X12Processing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21186,7 +21188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareference">X12Schema<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#x12schemareference">X12Schema<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21194,7 +21196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettings">X12Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12securitysettings">X12Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21202,7 +21204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettings">X12Validation<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12validationsettings">X12Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21210,7 +21212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverride">X12Envelope<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverride">X12Envelope<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21218,7 +21220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifier">X12Message<wbr>Identifier[]</a></span>
+        <span class="property-type"><a href="#x12messageidentifier">X12Message<wbr>Identifier<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21226,7 +21228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverride">X12Validation<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#x12validationoverride">X12Validation<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21234,7 +21236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12delimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">x12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverrides">X12Delimiter<wbr>Overrides[]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverrides">X12Delimiter<wbr>Overrides<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21548,7 +21550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21556,7 +21558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21564,7 +21566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21572,7 +21574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21580,7 +21582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21588,7 +21590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">X12Schema<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">X12Schema<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21596,7 +21598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21604,7 +21606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21612,7 +21614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">X12Envelope<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">X12Envelope<wbr>Override<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21620,7 +21622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">X12Message<wbr>Identifier<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">X12Message<wbr>Identifier<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21628,7 +21630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">X12Validation<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">X12Validation<wbr>Override<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21636,7 +21638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12delimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">x12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">X12Delimiter<wbr>Overrides<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}

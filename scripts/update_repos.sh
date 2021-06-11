@@ -64,6 +64,7 @@ TOOLS_REPOS=(
     "pulumi-venafi"
     "pulumi-vsphere"
     "pulumi-wavefront"
+    "pulumi-yandex"
 )
 
 update_repo() {

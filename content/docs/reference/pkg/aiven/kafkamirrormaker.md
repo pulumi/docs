@@ -70,8 +70,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -169,19 +169,36 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafkaMirrorMaker</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaMirrorMaker</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafkaMirrorMaker</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaMirrorMaker</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KafkaMirrorMaker</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KafkaMirrorMakerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,46 +209,44 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,35 +255,27 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -280,25 +287,19 @@ const mm1 = new aiven.KafkaMirrorMaker("mm1", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KafkaMirrorMakerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -367,7 +368,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -377,7 +378,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -387,7 +388,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +500,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +510,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +520,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -620,7 +621,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,9 +630,9 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +642,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +652,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +690,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -763,7 +764,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +774,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +784,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,20 +1192,41 @@ Get an existing KafkaMirrorMaker resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaMirrorMakerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KafkaMirrorMaker</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaMirrorMakerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KafkaMirrorMaker</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerComponentArgs]]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> KafkaMirrorMaker</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerComponentArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> KafkaMirrorMaker</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaMirrorMaker<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaMirrorMakerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaMirrorMaker</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaMirrorMaker<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaMirrorMakerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaMirrorMaker</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KafkaMirrorMaker</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KafkaMirrorMakerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KafkaMirrorMaker</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KafkaMirrorMakerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1348,7 +1370,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1380,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1390,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1574,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1562,7 +1584,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1594,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1758,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakercomponent">Kafka<wbr>Mirror<wbr>Maker<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakercomponent">Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1767,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,9 +1776,9 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1766,7 +1788,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1798,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1856,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +1982,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options.
 The following configuration options available:
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +1992,7 @@ The following configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}day of week when maintenance operations should be performed. 
+    <dd>{{% md %}}day of week when maintenance operations should be performed.
 On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +2002,7 @@ On monday, tuesday, wednesday, etc.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}time of day when maintenance operations should be performed. 
+    <dd>{{% md %}}time of day when maintenance operations should be performed.
 UTC time in HH:mm:ss format.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +2457,7 @@ deletion is done.
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
 {{% /md %}}</dd></dl>
@@ -2474,7 +2496,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2515,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,8 +2525,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_csharp">
@@ -2513,7 +2535,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_csharp">
 <a href="#refreshtopicsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2521,7 +2545,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2531,7 +2555,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_csharp">
 <a href="#syncgroupoffsetsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
@@ -2539,7 +2564,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2553,7 +2578,7 @@ are synced (default: 60, every minute).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2572,7 +2597,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2582,8 +2607,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_go">
@@ -2592,7 +2617,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_go">
 <a href="#refreshtopicsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2600,7 +2627,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2637,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_go">
 <a href="#syncgroupoffsetsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
@@ -2618,7 +2646,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2632,7 +2660,7 @@ are synced (default: 60, every minute).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2679,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,8 +2689,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_nodejs">
@@ -2671,7 +2699,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_nodejs">
 <a href="#refreshtopicsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2679,7 +2709,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2719,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncgroupoffsetsintervalseconds_nodejs">
 <a href="#syncgroupoffsetsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Offsets<wbr>Interval<wbr>Seconds</a>
@@ -2697,7 +2728,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2711,7 +2742,7 @@ are synced (default: 60, every minute).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically write the translated offsets 
+    <dd>{{% md %}}Whether to periodically write the translated offsets
 of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster,
 as long as no active consumers in that group are connected to the target cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2730,7 +2761,7 @@ as long as no active consumers in that group are connected to the target cluster
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new consumer groups. 
+    <dd>{{% md %}}Whether to periodically check for new consumer groups.
 Defaults to 'true'.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2740,8 +2771,8 @@ Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether to periodically check for new topics and 
-partitions. Defaults to 'true'.
+    <dd>{{% md %}}Frequency of consumer group refresh in seconds.
+Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_topics_enabled_python">
@@ -2750,7 +2781,9 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically check for new topics and
+partitions. Defaults to 'true'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_topics_interval_seconds_python">
 <a href="#refresh_topics_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>interval_<wbr>seconds</a>
@@ -2758,7 +2791,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Frequency of topic and partitions refresh in 
+    <dd>{{% md %}}Frequency of topic and partitions refresh in
 seconds. Defaults to 600 seconds (10 minutes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2768,7 +2801,8 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Whether to periodically write the translated offsets of replicated consumer groups (in the source cluster) to __consumer_offsets topic in target cluster, as long as no active consumers in that group are connected to the target cluster. Defaults to 'false'.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_group_offsets_interval_seconds_python">
 <a href="#sync_group_offsets_interval_seconds_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>offsets_<wbr>interval_<wbr>seconds</a>
@@ -2776,7 +2810,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Frequency at which consumer group offsets 
+    <dd>{{% md %}}Frequency at which consumer group offsets
 are synced (default: 60, every minute).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}

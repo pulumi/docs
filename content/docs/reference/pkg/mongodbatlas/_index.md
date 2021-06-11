@@ -17,14 +17,19 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="alertconfiguration" title="AlertConfiguration"><span class="symbol resource"></span>AlertConfiguration</a></li>
     <li><a href="auditing" title="Auditing"><span class="symbol resource"></span>Auditing</a></li>
     <li><a href="cloudprovideraccess" title="CloudProviderAccess"><span class="symbol resource"></span>CloudProviderAccess</a></li>
+    <li><a href="cloudprovideraccessauthorization" title="CloudProviderAccessAuthorization"><span class="symbol resource"></span>CloudProviderAccessAuthorization</a></li>
+    <li><a href="cloudprovideraccesssetup" title="CloudProviderAccessSetup"><span class="symbol resource"></span>CloudProviderAccessSetup</a></li>
     <li><a href="cloudprovidersnapshot" title="CloudProviderSnapshot"><span class="symbol resource"></span>CloudProviderSnapshot</a></li>
     <li><a href="cloudprovidersnapshotbackuppolicy" title="CloudProviderSnapshotBackupPolicy"><span class="symbol resource"></span>CloudProviderSnapshotBackupPolicy</a></li>
     <li><a href="cloudprovidersnapshotrestorejob" title="CloudProviderSnapshotRestoreJob"><span class="symbol resource"></span>CloudProviderSnapshotRestoreJob</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="customdbrole" title="CustomDbRole"><span class="symbol resource"></span>CustomDbRole</a></li>
+    <li><a href="customdnsconfigurationclusteraws" title="CustomDnsConfigurationClusterAws"><span class="symbol resource"></span>CustomDnsConfigurationClusterAws</a></li>
     <li><a href="databaseuser" title="DatabaseUser"><span class="symbol resource"></span>DatabaseUser</a></li>
     <li><a href="encryptionatrest" title="EncryptionAtRest"><span class="symbol resource"></span>EncryptionAtRest</a></li>
     <li><a href="globalclusterconfig" title="GlobalClusterConfig"><span class="symbol resource"></span>GlobalClusterConfig</a></li>
+    <li><a href="ldapconfiguration" title="LdapConfiguration"><span class="symbol resource"></span>LdapConfiguration</a></li>
+    <li><a href="ldapverify" title="LdapVerify"><span class="symbol resource"></span>LdapVerify</a></li>
     <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="networkcontainer" title="NetworkContainer"><span class="symbol resource"></span>NetworkContainer</a></li>
     <li><a href="networkpeering" title="NetworkPeering"><span class="symbol resource"></span>NetworkPeering</a></li>
@@ -49,6 +54,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="getalertconfiguration" title="GetAlertConfiguration"><span class="symbol function"></span>GetAlertConfiguration</a></li>
     <li><a href="getauditing" title="GetAuditing"><span class="symbol function"></span>GetAuditing</a></li>
     <li><a href="getcloudprovideraccess" title="GetCloudProviderAccess"><span class="symbol function"></span>GetCloudProviderAccess</a></li>
+    <li><a href="getcloudprovideraccesssetup" title="GetCloudProviderAccessSetup"><span class="symbol function"></span>GetCloudProviderAccessSetup</a></li>
     <li><a href="getcloudprovidersnapshot" title="GetCloudProviderSnapshot"><span class="symbol function"></span>GetCloudProviderSnapshot</a></li>
     <li><a href="getcloudprovidersnapshotbackuppolicy" title="GetCloudProviderSnapshotBackupPolicy"><span class="symbol function"></span>GetCloudProviderSnapshotBackupPolicy</a></li>
     <li><a href="getcloudprovidersnapshotrestorejob" title="GetCloudProviderSnapshotRestoreJob"><span class="symbol function"></span>GetCloudProviderSnapshotRestoreJob</a></li>
@@ -58,9 +64,12 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
     <li><a href="getcustomdbrole" title="GetCustomDbRole"><span class="symbol function"></span>GetCustomDbRole</a></li>
     <li><a href="getcustomdbroles" title="GetCustomDbRoles"><span class="symbol function"></span>GetCustomDbRoles</a></li>
+    <li><a href="getcustomdnsconfigurationclusteraws" title="GetCustomDnsConfigurationClusterAws"><span class="symbol function"></span>GetCustomDnsConfigurationClusterAws</a></li>
     <li><a href="getdatabaseuser" title="GetDatabaseUser"><span class="symbol function"></span>GetDatabaseUser</a></li>
     <li><a href="getdatabaseusers" title="GetDatabaseUsers"><span class="symbol function"></span>GetDatabaseUsers</a></li>
     <li><a href="getglobalclusterconfig" title="GetGlobalClusterConfig"><span class="symbol function"></span>GetGlobalClusterConfig</a></li>
+    <li><a href="getldapconfiguration" title="GetLdapConfiguration"><span class="symbol function"></span>GetLdapConfiguration</a></li>
+    <li><a href="getldapverify" title="GetLdapVerify"><span class="symbol function"></span>GetLdapVerify</a></li>
     <li><a href="getmaintenancewindow" title="GetMaintenanceWindow"><span class="symbol function"></span>GetMaintenanceWindow</a></li>
     <li><a href="getnetworkcontainer" title="GetNetworkContainer"><span class="symbol function"></span>GetNetworkContainer</a></li>
     <li><a href="getnetworkcontainers" title="GetNetworkContainers"><span class="symbol function"></span>GetNetworkContainers</a></li>
@@ -89,6 +98,6 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.7.0</dd>
+	<dd>2.1.1</dd>
 </dl>
 

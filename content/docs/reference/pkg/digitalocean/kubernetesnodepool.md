@@ -82,8 +82,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -240,8 +240,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -316,19 +316,35 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">max_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesNodePoolTaintArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                       <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                       <span class="nx">max_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">min_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[Union[str, DropletSlug]]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesNodePoolTaintArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKubernetesNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesNodePool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKubernetesNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesNodePool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KubernetesNodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -339,46 +355,44 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodePoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KubernetesNodePoolArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -387,35 +401,27 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodePoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -427,25 +433,19 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesNodePoolArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -475,7 +475,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#dropletslug">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -569,7 +569,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#dropletslug">Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -663,7 +663,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Droplet<wbr>Slug</span>
+        <span class="property-type">string | <a href="#dropletslug">Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +735,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesnodepooltaint">Kubernetes<wbr>Node<wbr>Pool<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#kubernetesnodepooltaint">Kubernetes<wbr>Node<wbr>Pool<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of taints applied to all nodes in the pool.
 {{% /md %}}</dd></dl>
@@ -757,7 +757,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#dropletslug">Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,20 +970,34 @@ Get an existing KubernetesNodePool resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KubernetesNodePoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KubernetesNodePool</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KubernetesNodePoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KubernetesNodePool</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actual_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">max_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesNodePoolNodeArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesNodePoolTaintArgs]]</span> = None<span class="p">) -&gt;</span> KubernetesNodePool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">actual_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">min_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesNodePoolNodeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[Union[str, DropletSlug]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesNodePoolTaintArgs]]</span> = None<span class="p">) -&gt;</span> KubernetesNodePool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesNodePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KubernetesNodePoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesNodePool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesNodePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KubernetesNodePoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesNodePool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KubernetesNodePool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KubernetesNodePoolState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KubernetesNodePool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KubernetesNodePoolState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1173,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#dropletslug">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#dropletslug">Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1402,7 @@ The following state arguments are supported:
 <a href="#state_nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Droplet<wbr>Slug</span>
+        <span class="property-type">string | <a href="#dropletslug">Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1429,7 @@ The following state arguments are supported:
 <a href="#state_taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesnodepooltaint">Kubernetes<wbr>Node<wbr>Pool<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#kubernetesnodepooltaint">Kubernetes<wbr>Node<wbr>Pool<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of taints applied to all nodes in the pool.
 {{% /md %}}</dd></dl>
@@ -1509,7 +1523,7 @@ The following state arguments are supported:
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#dropletslug">Droplet<wbr>Slug</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1541,6 +1555,376 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="dropletslug">Droplet<wbr>Slug</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Droplet<wbr>S1VCPU1GB</dt>
+    <dd>s-1vcpu-1gb</dd><dt>Droplet<wbr>S1VCPU1GB_AMD</dt>
+    <dd>s-1vcpu-1gb-amd</dd><dt>Droplet<wbr>S1VCPU1GB_INTEL</dt>
+    <dd>s-1vcpu-1gb-intel</dd><dt>Droplet<wbr>S1VCPU2GB</dt>
+    <dd>s-1vcpu-2gb</dd><dt>Droplet<wbr>S1VCPU2GB_AMD</dt>
+    <dd>s-1vcpu-2gb-amd</dd><dt>Droplet<wbr>S1VCPU2GB_INTEL</dt>
+    <dd>s-1vcpu-2gb-intel</dd><dt>Droplet<wbr>S2VCPU2GB</dt>
+    <dd>s-2vcpu-2gb</dd><dt>Droplet<wbr>S2VCPU2GB_AMD</dt>
+    <dd>s-2vcpu-2gb-amd</dd><dt>Droplet<wbr>S2VCPU2GB_INTEL</dt>
+    <dd>s-2vcpu-2gb-intel</dd><dt>Droplet<wbr>S2VCPU4GB</dt>
+    <dd>s-2vcpu-4gb</dd><dt>Droplet<wbr>S2VCPU4GB_AMD</dt>
+    <dd>s-2vcpu-4gb-amd</dd><dt>Droplet<wbr>S2VCPU4GB_INTEL</dt>
+    <dd>s-2vcpu-4gb-intel</dd><dt>Droplet<wbr>S4VCPU8GB</dt>
+    <dd>s-4vcpu-8gb</dd><dt>Droplet<wbr>S4VCPU8GB_AMD</dt>
+    <dd>s-4vcpu-8gb-amd</dd><dt>Droplet<wbr>S4VCPU8GB_INTEL</dt>
+    <dd>s-4vcpu-8gb-intel</dd><dt>Droplet<wbr>S8VCPU16GB_AMD</dt>
+    <dd>s-8vcpu-16gb-amd</dd><dt>Droplet<wbr>S8VCPU16GB_INTEL</dt>
+    <dd>s-8vcpu-16gb-intel</dd><dt>Droplet<wbr>C2</dt>
+    <dd>c-2</dd><dt>Droplet<wbr>C22VCPU4GB</dt>
+    <dd>c2-2vcpu-4gb</dd><dt>Droplet<wbr>C22VCPU8GB</dt>
+    <dd>c2-4vcpu-8gb</dd><dt>Droplet<wbr>C28VCPU16GB</dt>
+    <dd>c2-8vcpu-16gb</dd><dt>Droplet<wbr>C216VCPU32GB</dt>
+    <dd>c2-16vcpu-32gb</dd><dt>Droplet<wbr>C232VCPU64GB</dt>
+    <dd>c2-32vcpu-64gb</dd><dt>Droplet<wbr>C4</dt>
+    <dd>c-4</dd><dt>Droplet<wbr>C8</dt>
+    <dd>c-8</dd><dt>Droplet<wbr>C16</dt>
+    <dd>c-16</dd><dt>Droplet<wbr>C32</dt>
+    <dd>c-32</dd><dt>Droplet<wbr>G2VCPU8GB</dt>
+    <dd>g-2vcpu-8gb</dd><dt>Droplet<wbr>G4VCPU16GB</dt>
+    <dd>g-4vcpu-16gb</dd><dt>Droplet<wbr>G8VCPU32GB</dt>
+    <dd>g-8vcpu-32gb</dd><dt>Droplet<wbr>G16VCPU64GB</dt>
+    <dd>g-16vcpu-64gb</dd><dt>Droplet<wbr>G32VCPU128GB</dt>
+    <dd>g-32vcpu-128gb</dd><dt>Droplet<wbr>G40VCPU160GB</dt>
+    <dd>g-40vcpu-160gb</dd><dt>Droplet<wbr>GD2VCPU8GB</dt>
+    <dd>gd-2vcpu-8gb</dd><dt>Droplet<wbr>GD4VCPU16GB</dt>
+    <dd>gd-4vcpu-16gb</dd><dt>Droplet<wbr>GD8VCPU32GB</dt>
+    <dd>gd-8vcpu-32gb</dd><dt>Droplet<wbr>GD16VCPU64GB</dt>
+    <dd>gd-16vcpu-64gb</dd><dt>Droplet<wbr>GD32VCPU128GB</dt>
+    <dd>gd-32vcpu-128gb</dd><dt>Droplet<wbr>GD40VCPU160GB</dt>
+    <dd>gd-40vcpu-160gb</dd><dt>Droplet<wbr>S8VCPU16GB</dt>
+    <dd>s-8vcpu-16gb</dd><dt>Droplet<wbr>M2VCPU16GB</dt>
+    <dd>m-2vcpu-16gb</dd><dt>Droplet<wbr>M4VCPU32GB</dt>
+    <dd>m-4vcpu-32gb</dd><dt>Droplet<wbr>M8VCPU64GB</dt>
+    <dd>m-8vcpu-64gb</dd><dt>Droplet<wbr>M16VCPU128GB</dt>
+    <dd>m-16vcpu-128gb</dd><dt>Droplet<wbr>M24VCPU192GB</dt>
+    <dd>m-24vcpu-192gb</dd><dt>Droplet<wbr>M32VCPU256GB</dt>
+    <dd>m-32vcpu-256gb</dd><dt>Droplet<wbr>M32VCPU16GB</dt>
+    <dd>m3-2vcpu-16gb</dd><dt>Droplet<wbr>M34VCPU32GB</dt>
+    <dd>m3-4vcpu-32gb</dd><dt>Droplet<wbr>M38VCPU64GB</dt>
+    <dd>m3-8vcpu-64gb</dd><dt>Droplet<wbr>M316VCPU128GB</dt>
+    <dd>m3-16vcpu-128gb</dd><dt>Droplet<wbr>M324VCPU192GB</dt>
+    <dd>m3-24vcpu-192gb</dd><dt>Droplet<wbr>M332VCPU256GB</dt>
+    <dd>m3-32vcpu-256gb</dd><dt>Droplet<wbr>M62VCPU16GB</dt>
+    <dd>m6-2vcpu-16gb</dd><dt>Droplet<wbr>M64VCPU32GB</dt>
+    <dd>m6-4vcpu-32gb</dd><dt>Droplet<wbr>M68VCPU64GB</dt>
+    <dd>m6-8vcpu-64gb</dd><dt>Droplet<wbr>M616VCPU128GB</dt>
+    <dd>m6-16vcpu-128gb</dd><dt>Droplet<wbr>M624VCPU192GB</dt>
+    <dd>m6-24vcpu-192gb</dd><dt>Droplet<wbr>M632VCPU256GB</dt>
+    <dd>m6-32vcpu-256gb</dd><dt>Droplet<wbr>SO2VCPU16GB</dt>
+    <dd>so-2vcpu-16gb</dd><dt>Droplet<wbr>SO4VCPU32GB</dt>
+    <dd>so-4vcpu-32gb</dd><dt>Droplet<wbr>SO8VCPU64GB</dt>
+    <dd>so-8vcpu-64gb</dd><dt>Droplet<wbr>SO16VCPU128GB</dt>
+    <dd>so-16vcpu-128gb</dd><dt>Droplet<wbr>SO24VCPU192GB</dt>
+    <dd>so-24vcpu-192gb</dd><dt>Droplet<wbr>SO32VCPU256GB</dt>
+    <dd>so-32vcpu-256gb</dd><dt>Droplet<wbr>SO152VCPU16GB</dt>
+    <dd>so1_5-2vcpu-16gb</dd><dt>Droplet<wbr>SO154VCPU32GB</dt>
+    <dd>so1_5-4vcpu-32gb</dd><dt>Droplet<wbr>SO158VCPU64GB</dt>
+    <dd>so1_5-8vcpu-64gb</dd><dt>Droplet<wbr>SO1516VCPU128GB</dt>
+    <dd>so1_5-16vcpu-128gb</dd><dt>Droplet<wbr>SO1524VCPU192GB</dt>
+    <dd>so1_5-24vcpu-192gb</dd><dt>Droplet<wbr>SO1532VCPU256GB</dt>
+    <dd>so1_5-32vcpu-256gb</dd><dt>Droplet512mb</dt>
+    <dd>512mb</dd><dt>Droplet1GB</dt>
+    <dd>1gb</dd><dt>Droplet2GB</dt>
+    <dd>2gb</dd><dt>Droplet4GB</dt>
+    <dd>4gb</dd><dt>Droplet8GB</dt>
+    <dd>8gb</dd><dt>Droplet16GB</dt>
+    <dd>16gb</dd><dt>Droplet32GB</dt>
+    <dd>32gb</dd><dt>Droplet48GB</dt>
+    <dd>48gb</dd><dt>Droplet64GB</dt>
+    <dd>64gb</dd><dt>Droplet<wbr>S1VCPU3GB</dt>
+    <dd>s-1vcpu-3gb</dd><dt>Droplet<wbr>S3VCPU1GB</dt>
+    <dd>s-3vcpu-1gb</dd><dt>Droplet<wbr>S6VCPU16GB</dt>
+    <dd>s-6vcpu-16gb</dd><dt>Droplet<wbr>S8VCPU32GB</dt>
+    <dd>s-8vcpu-32gb</dd><dt>Droplet<wbr>S12VCPU48GB</dt>
+    <dd>s-12vcpu-48gb</dd><dt>Droplet<wbr>S16VCPU64GB</dt>
+    <dd>s-16vcpu-64gb</dd><dt>Droplet<wbr>S20VCPU96GB</dt>
+    <dd>s-20vcpu-96gb</dd><dt>Droplet<wbr>S24VCPU128GB</dt>
+    <dd>s-24vcpu-128gb</dd><dt>Droplet<wbr>S32VCPU192GB</dt>
+    <dd>s-32vcpu-192gb</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S1VCPU1GB</dt>
+    <dd>s-1vcpu-1gb</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S1VCPU1GB_AMD</dt>
+    <dd>s-1vcpu-1gb-amd</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S1VCPU1GB_INTEL</dt>
+    <dd>s-1vcpu-1gb-intel</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S1VCPU2GB</dt>
+    <dd>s-1vcpu-2gb</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S1VCPU2GB_AMD</dt>
+    <dd>s-1vcpu-2gb-amd</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S1VCPU2GB_INTEL</dt>
+    <dd>s-1vcpu-2gb-intel</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S2VCPU2GB</dt>
+    <dd>s-2vcpu-2gb</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S2VCPU2GB_AMD</dt>
+    <dd>s-2vcpu-2gb-amd</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S2VCPU2GB_INTEL</dt>
+    <dd>s-2vcpu-2gb-intel</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S2VCPU4GB</dt>
+    <dd>s-2vcpu-4gb</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S2VCPU4GB_AMD</dt>
+    <dd>s-2vcpu-4gb-amd</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S2VCPU4GB_INTEL</dt>
+    <dd>s-2vcpu-4gb-intel</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S4VCPU8GB</dt>
+    <dd>s-4vcpu-8gb</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S4VCPU8GB_AMD</dt>
+    <dd>s-4vcpu-8gb-amd</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S4VCPU8GB_INTEL</dt>
+    <dd>s-4vcpu-8gb-intel</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S8VCPU16GB_AMD</dt>
+    <dd>s-8vcpu-16gb-amd</dd><dt>Droplet<wbr>Slug_Droplet<wbr>S8VCPU16GB_INTEL</dt>
+    <dd>s-8vcpu-16gb-intel</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C2</dt>
+    <dd>c-2</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C22VCPU4GB</dt>
+    <dd>c2-2vcpu-4gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C22VCPU8GB</dt>
+    <dd>c2-4vcpu-8gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C28VCPU16GB</dt>
+    <dd>c2-8vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C216VCPU32GB</dt>
+    <dd>c2-16vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C232VCPU64GB</dt>
+    <dd>c2-32vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C4</dt>
+    <dd>c-4</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C8</dt>
+    <dd>c-8</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C16</dt>
+    <dd>c-16</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>C32</dt>
+    <dd>c-32</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>G2VCPU8GB</dt>
+    <dd>g-2vcpu-8gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>G4VCPU16GB</dt>
+    <dd>g-4vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>G8VCPU32GB</dt>
+    <dd>g-8vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>G16VCPU64GB</dt>
+    <dd>g-16vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>G32VCPU128GB</dt>
+    <dd>g-32vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>G40VCPU160GB</dt>
+    <dd>g-40vcpu-160gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>GD2VCPU8GB</dt>
+    <dd>gd-2vcpu-8gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>GD4VCPU16GB</dt>
+    <dd>gd-4vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>GD8VCPU32GB</dt>
+    <dd>gd-8vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>GD16VCPU64GB</dt>
+    <dd>gd-16vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>GD32VCPU128GB</dt>
+    <dd>gd-32vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>GD40VCPU160GB</dt>
+    <dd>gd-40vcpu-160gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S8VCPU16GB</dt>
+    <dd>s-8vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M2VCPU16GB</dt>
+    <dd>m-2vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M4VCPU32GB</dt>
+    <dd>m-4vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M8VCPU64GB</dt>
+    <dd>m-8vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M16VCPU128GB</dt>
+    <dd>m-16vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M24VCPU192GB</dt>
+    <dd>m-24vcpu-192gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M32VCPU256GB</dt>
+    <dd>m-32vcpu-256gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M32VCPU16GB</dt>
+    <dd>m3-2vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M34VCPU32GB</dt>
+    <dd>m3-4vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M38VCPU64GB</dt>
+    <dd>m3-8vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M316VCPU128GB</dt>
+    <dd>m3-16vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M324VCPU192GB</dt>
+    <dd>m3-24vcpu-192gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M332VCPU256GB</dt>
+    <dd>m3-32vcpu-256gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M62VCPU16GB</dt>
+    <dd>m6-2vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M64VCPU32GB</dt>
+    <dd>m6-4vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M68VCPU64GB</dt>
+    <dd>m6-8vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M616VCPU128GB</dt>
+    <dd>m6-16vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M624VCPU192GB</dt>
+    <dd>m6-24vcpu-192gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>M632VCPU256GB</dt>
+    <dd>m6-32vcpu-256gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO2VCPU16GB</dt>
+    <dd>so-2vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO4VCPU32GB</dt>
+    <dd>so-4vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO8VCPU64GB</dt>
+    <dd>so-8vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO16VCPU128GB</dt>
+    <dd>so-16vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO24VCPU192GB</dt>
+    <dd>so-24vcpu-192gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO32VCPU256GB</dt>
+    <dd>so-32vcpu-256gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO152VCPU16GB</dt>
+    <dd>so1_5-2vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO154VCPU32GB</dt>
+    <dd>so1_5-4vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO158VCPU64GB</dt>
+    <dd>so1_5-8vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO1516VCPU128GB</dt>
+    <dd>so1_5-16vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO1524VCPU192GB</dt>
+    <dd>so1_5-24vcpu-192gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>SO1532VCPU256GB</dt>
+    <dd>so1_5-32vcpu-256gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet512mb</dt>
+    <dd>512mb</dd><dt>Droplet<wbr>Slug<wbr>Droplet1GB</dt>
+    <dd>1gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet2GB</dt>
+    <dd>2gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet4GB</dt>
+    <dd>4gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet8GB</dt>
+    <dd>8gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet16GB</dt>
+    <dd>16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet32GB</dt>
+    <dd>32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet48GB</dt>
+    <dd>48gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet64GB</dt>
+    <dd>64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S1VCPU3GB</dt>
+    <dd>s-1vcpu-3gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S3VCPU1GB</dt>
+    <dd>s-3vcpu-1gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S6VCPU16GB</dt>
+    <dd>s-6vcpu-16gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S8VCPU32GB</dt>
+    <dd>s-8vcpu-32gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S12VCPU48GB</dt>
+    <dd>s-12vcpu-48gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S16VCPU64GB</dt>
+    <dd>s-16vcpu-64gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S20VCPU96GB</dt>
+    <dd>s-20vcpu-96gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S24VCPU128GB</dt>
+    <dd>s-24vcpu-128gb</dd><dt>Droplet<wbr>Slug<wbr>Droplet<wbr>S32VCPU192GB</dt>
+    <dd>s-32vcpu-192gb</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Droplet<wbr>S1VCPU1GB</dt>
+    <dd>s-1vcpu-1gb</dd><dt>Droplet<wbr>S1VCPU1GB_AMD</dt>
+    <dd>s-1vcpu-1gb-amd</dd><dt>Droplet<wbr>S1VCPU1GB_INTEL</dt>
+    <dd>s-1vcpu-1gb-intel</dd><dt>Droplet<wbr>S1VCPU2GB</dt>
+    <dd>s-1vcpu-2gb</dd><dt>Droplet<wbr>S1VCPU2GB_AMD</dt>
+    <dd>s-1vcpu-2gb-amd</dd><dt>Droplet<wbr>S1VCPU2GB_INTEL</dt>
+    <dd>s-1vcpu-2gb-intel</dd><dt>Droplet<wbr>S2VCPU2GB</dt>
+    <dd>s-2vcpu-2gb</dd><dt>Droplet<wbr>S2VCPU2GB_AMD</dt>
+    <dd>s-2vcpu-2gb-amd</dd><dt>Droplet<wbr>S2VCPU2GB_INTEL</dt>
+    <dd>s-2vcpu-2gb-intel</dd><dt>Droplet<wbr>S2VCPU4GB</dt>
+    <dd>s-2vcpu-4gb</dd><dt>Droplet<wbr>S2VCPU4GB_AMD</dt>
+    <dd>s-2vcpu-4gb-amd</dd><dt>Droplet<wbr>S2VCPU4GB_INTEL</dt>
+    <dd>s-2vcpu-4gb-intel</dd><dt>Droplet<wbr>S4VCPU8GB</dt>
+    <dd>s-4vcpu-8gb</dd><dt>Droplet<wbr>S4VCPU8GB_AMD</dt>
+    <dd>s-4vcpu-8gb-amd</dd><dt>Droplet<wbr>S4VCPU8GB_INTEL</dt>
+    <dd>s-4vcpu-8gb-intel</dd><dt>Droplet<wbr>S8VCPU16GB_AMD</dt>
+    <dd>s-8vcpu-16gb-amd</dd><dt>Droplet<wbr>S8VCPU16GB_INTEL</dt>
+    <dd>s-8vcpu-16gb-intel</dd><dt>Droplet<wbr>C2</dt>
+    <dd>c-2</dd><dt>Droplet<wbr>C22VCPU4GB</dt>
+    <dd>c2-2vcpu-4gb</dd><dt>Droplet<wbr>C22VCPU8GB</dt>
+    <dd>c2-4vcpu-8gb</dd><dt>Droplet<wbr>C28VCPU16GB</dt>
+    <dd>c2-8vcpu-16gb</dd><dt>Droplet<wbr>C216VCPU32GB</dt>
+    <dd>c2-16vcpu-32gb</dd><dt>Droplet<wbr>C232VCPU64GB</dt>
+    <dd>c2-32vcpu-64gb</dd><dt>Droplet<wbr>C4</dt>
+    <dd>c-4</dd><dt>Droplet<wbr>C8</dt>
+    <dd>c-8</dd><dt>Droplet<wbr>C16</dt>
+    <dd>c-16</dd><dt>Droplet<wbr>C32</dt>
+    <dd>c-32</dd><dt>Droplet<wbr>G2VCPU8GB</dt>
+    <dd>g-2vcpu-8gb</dd><dt>Droplet<wbr>G4VCPU16GB</dt>
+    <dd>g-4vcpu-16gb</dd><dt>Droplet<wbr>G8VCPU32GB</dt>
+    <dd>g-8vcpu-32gb</dd><dt>Droplet<wbr>G16VCPU64GB</dt>
+    <dd>g-16vcpu-64gb</dd><dt>Droplet<wbr>G32VCPU128GB</dt>
+    <dd>g-32vcpu-128gb</dd><dt>Droplet<wbr>G40VCPU160GB</dt>
+    <dd>g-40vcpu-160gb</dd><dt>Droplet<wbr>GD2VCPU8GB</dt>
+    <dd>gd-2vcpu-8gb</dd><dt>Droplet<wbr>GD4VCPU16GB</dt>
+    <dd>gd-4vcpu-16gb</dd><dt>Droplet<wbr>GD8VCPU32GB</dt>
+    <dd>gd-8vcpu-32gb</dd><dt>Droplet<wbr>GD16VCPU64GB</dt>
+    <dd>gd-16vcpu-64gb</dd><dt>Droplet<wbr>GD32VCPU128GB</dt>
+    <dd>gd-32vcpu-128gb</dd><dt>Droplet<wbr>GD40VCPU160GB</dt>
+    <dd>gd-40vcpu-160gb</dd><dt>Droplet<wbr>S8VCPU16GB</dt>
+    <dd>s-8vcpu-16gb</dd><dt>Droplet<wbr>M2VCPU16GB</dt>
+    <dd>m-2vcpu-16gb</dd><dt>Droplet<wbr>M4VCPU32GB</dt>
+    <dd>m-4vcpu-32gb</dd><dt>Droplet<wbr>M8VCPU64GB</dt>
+    <dd>m-8vcpu-64gb</dd><dt>Droplet<wbr>M16VCPU128GB</dt>
+    <dd>m-16vcpu-128gb</dd><dt>Droplet<wbr>M24VCPU192GB</dt>
+    <dd>m-24vcpu-192gb</dd><dt>Droplet<wbr>M32VCPU256GB</dt>
+    <dd>m-32vcpu-256gb</dd><dt>Droplet<wbr>M32VCPU16GB</dt>
+    <dd>m3-2vcpu-16gb</dd><dt>Droplet<wbr>M34VCPU32GB</dt>
+    <dd>m3-4vcpu-32gb</dd><dt>Droplet<wbr>M38VCPU64GB</dt>
+    <dd>m3-8vcpu-64gb</dd><dt>Droplet<wbr>M316VCPU128GB</dt>
+    <dd>m3-16vcpu-128gb</dd><dt>Droplet<wbr>M324VCPU192GB</dt>
+    <dd>m3-24vcpu-192gb</dd><dt>Droplet<wbr>M332VCPU256GB</dt>
+    <dd>m3-32vcpu-256gb</dd><dt>Droplet<wbr>M62VCPU16GB</dt>
+    <dd>m6-2vcpu-16gb</dd><dt>Droplet<wbr>M64VCPU32GB</dt>
+    <dd>m6-4vcpu-32gb</dd><dt>Droplet<wbr>M68VCPU64GB</dt>
+    <dd>m6-8vcpu-64gb</dd><dt>Droplet<wbr>M616VCPU128GB</dt>
+    <dd>m6-16vcpu-128gb</dd><dt>Droplet<wbr>M624VCPU192GB</dt>
+    <dd>m6-24vcpu-192gb</dd><dt>Droplet<wbr>M632VCPU256GB</dt>
+    <dd>m6-32vcpu-256gb</dd><dt>Droplet<wbr>SO2VCPU16GB</dt>
+    <dd>so-2vcpu-16gb</dd><dt>Droplet<wbr>SO4VCPU32GB</dt>
+    <dd>so-4vcpu-32gb</dd><dt>Droplet<wbr>SO8VCPU64GB</dt>
+    <dd>so-8vcpu-64gb</dd><dt>Droplet<wbr>SO16VCPU128GB</dt>
+    <dd>so-16vcpu-128gb</dd><dt>Droplet<wbr>SO24VCPU192GB</dt>
+    <dd>so-24vcpu-192gb</dd><dt>Droplet<wbr>SO32VCPU256GB</dt>
+    <dd>so-32vcpu-256gb</dd><dt>Droplet<wbr>SO152VCPU16GB</dt>
+    <dd>so1_5-2vcpu-16gb</dd><dt>Droplet<wbr>SO154VCPU32GB</dt>
+    <dd>so1_5-4vcpu-32gb</dd><dt>Droplet<wbr>SO158VCPU64GB</dt>
+    <dd>so1_5-8vcpu-64gb</dd><dt>Droplet<wbr>SO1516VCPU128GB</dt>
+    <dd>so1_5-16vcpu-128gb</dd><dt>Droplet<wbr>SO1524VCPU192GB</dt>
+    <dd>so1_5-24vcpu-192gb</dd><dt>Droplet<wbr>SO1532VCPU256GB</dt>
+    <dd>so1_5-32vcpu-256gb</dd><dt>Droplet512mb</dt>
+    <dd>512mb</dd><dt>Droplet1GB</dt>
+    <dd>1gb</dd><dt>Droplet2GB</dt>
+    <dd>2gb</dd><dt>Droplet4GB</dt>
+    <dd>4gb</dd><dt>Droplet8GB</dt>
+    <dd>8gb</dd><dt>Droplet16GB</dt>
+    <dd>16gb</dd><dt>Droplet32GB</dt>
+    <dd>32gb</dd><dt>Droplet48GB</dt>
+    <dd>48gb</dd><dt>Droplet64GB</dt>
+    <dd>64gb</dd><dt>Droplet<wbr>S1VCPU3GB</dt>
+    <dd>s-1vcpu-3gb</dd><dt>Droplet<wbr>S3VCPU1GB</dt>
+    <dd>s-3vcpu-1gb</dd><dt>Droplet<wbr>S6VCPU16GB</dt>
+    <dd>s-6vcpu-16gb</dd><dt>Droplet<wbr>S8VCPU32GB</dt>
+    <dd>s-8vcpu-32gb</dd><dt>Droplet<wbr>S12VCPU48GB</dt>
+    <dd>s-12vcpu-48gb</dd><dt>Droplet<wbr>S16VCPU64GB</dt>
+    <dd>s-16vcpu-64gb</dd><dt>Droplet<wbr>S20VCPU96GB</dt>
+    <dd>s-20vcpu-96gb</dd><dt>Droplet<wbr>S24VCPU128GB</dt>
+    <dd>s-24vcpu-128gb</dd><dt>Droplet<wbr>S32VCPU192GB</dt>
+    <dd>s-32vcpu-192gb</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DROPLET_S1_VCPU1_GB</dt>
+    <dd>s-1vcpu-1gb</dd><dt>DROPLET_S1_VCPU1_G_B_AMD</dt>
+    <dd>s-1vcpu-1gb-amd</dd><dt>DROPLET_S1_VCPU1_G_B_INTEL</dt>
+    <dd>s-1vcpu-1gb-intel</dd><dt>DROPLET_S1_VCPU2_GB</dt>
+    <dd>s-1vcpu-2gb</dd><dt>DROPLET_S1_VCPU2_G_B_AMD</dt>
+    <dd>s-1vcpu-2gb-amd</dd><dt>DROPLET_S1_VCPU2_G_B_INTEL</dt>
+    <dd>s-1vcpu-2gb-intel</dd><dt>DROPLET_S2_VCPU2_GB</dt>
+    <dd>s-2vcpu-2gb</dd><dt>DROPLET_S2_VCPU2_G_B_AMD</dt>
+    <dd>s-2vcpu-2gb-amd</dd><dt>DROPLET_S2_VCPU2_G_B_INTEL</dt>
+    <dd>s-2vcpu-2gb-intel</dd><dt>DROPLET_S2_VCPU4_GB</dt>
+    <dd>s-2vcpu-4gb</dd><dt>DROPLET_S2_VCPU4_G_B_AMD</dt>
+    <dd>s-2vcpu-4gb-amd</dd><dt>DROPLET_S2_VCPU4_G_B_INTEL</dt>
+    <dd>s-2vcpu-4gb-intel</dd><dt>DROPLET_S4_VCPU8_GB</dt>
+    <dd>s-4vcpu-8gb</dd><dt>DROPLET_S4_VCPU8_G_B_AMD</dt>
+    <dd>s-4vcpu-8gb-amd</dd><dt>DROPLET_S4_VCPU8_G_B_INTEL</dt>
+    <dd>s-4vcpu-8gb-intel</dd><dt>DROPLET_S8_VCPU16_G_B_AMD</dt>
+    <dd>s-8vcpu-16gb-amd</dd><dt>DROPLET_S8_VCPU16_G_B_INTEL</dt>
+    <dd>s-8vcpu-16gb-intel</dd><dt>DROPLET_C2</dt>
+    <dd>c-2</dd><dt>DROPLET_C22_VCPU4_GB</dt>
+    <dd>c2-2vcpu-4gb</dd><dt>DROPLET_C22_VCPU8_GB</dt>
+    <dd>c2-4vcpu-8gb</dd><dt>DROPLET_C28_VCPU16_GB</dt>
+    <dd>c2-8vcpu-16gb</dd><dt>DROPLET_C216_VCPU32_GB</dt>
+    <dd>c2-16vcpu-32gb</dd><dt>DROPLET_C232_VCPU64_GB</dt>
+    <dd>c2-32vcpu-64gb</dd><dt>DROPLET_C4</dt>
+    <dd>c-4</dd><dt>DROPLET_C8</dt>
+    <dd>c-8</dd><dt>DROPLET_C16</dt>
+    <dd>c-16</dd><dt>DROPLET_C32</dt>
+    <dd>c-32</dd><dt>DROPLET_G2_VCPU8_GB</dt>
+    <dd>g-2vcpu-8gb</dd><dt>DROPLET_G4_VCPU16_GB</dt>
+    <dd>g-4vcpu-16gb</dd><dt>DROPLET_G8_VCPU32_GB</dt>
+    <dd>g-8vcpu-32gb</dd><dt>DROPLET_G16_VCPU64_GB</dt>
+    <dd>g-16vcpu-64gb</dd><dt>DROPLET_G32_VCPU128_GB</dt>
+    <dd>g-32vcpu-128gb</dd><dt>DROPLET_G40_VCPU160_GB</dt>
+    <dd>g-40vcpu-160gb</dd><dt>DROPLET_GD2_VCPU8_GB</dt>
+    <dd>gd-2vcpu-8gb</dd><dt>DROPLET_GD4_VCPU16_GB</dt>
+    <dd>gd-4vcpu-16gb</dd><dt>DROPLET_GD8_VCPU32_GB</dt>
+    <dd>gd-8vcpu-32gb</dd><dt>DROPLET_GD16_VCPU64_GB</dt>
+    <dd>gd-16vcpu-64gb</dd><dt>DROPLET_GD32_VCPU128_GB</dt>
+    <dd>gd-32vcpu-128gb</dd><dt>DROPLET_GD40_VCPU160_GB</dt>
+    <dd>gd-40vcpu-160gb</dd><dt>DROPLET_S8_VCPU16_GB</dt>
+    <dd>s-8vcpu-16gb</dd><dt>DROPLET_M2_VCPU16_GB</dt>
+    <dd>m-2vcpu-16gb</dd><dt>DROPLET_M4_VCPU32_GB</dt>
+    <dd>m-4vcpu-32gb</dd><dt>DROPLET_M8_VCPU64_GB</dt>
+    <dd>m-8vcpu-64gb</dd><dt>DROPLET_M16_VCPU128_GB</dt>
+    <dd>m-16vcpu-128gb</dd><dt>DROPLET_M24_VCPU192_GB</dt>
+    <dd>m-24vcpu-192gb</dd><dt>DROPLET_M32_VCPU256_GB</dt>
+    <dd>m-32vcpu-256gb</dd><dt>DROPLET_M32_VCPU16_GB</dt>
+    <dd>m3-2vcpu-16gb</dd><dt>DROPLET_M34_VCPU32_GB</dt>
+    <dd>m3-4vcpu-32gb</dd><dt>DROPLET_M38_VCPU64_GB</dt>
+    <dd>m3-8vcpu-64gb</dd><dt>DROPLET_M316_VCPU128_GB</dt>
+    <dd>m3-16vcpu-128gb</dd><dt>DROPLET_M324_VCPU192_GB</dt>
+    <dd>m3-24vcpu-192gb</dd><dt>DROPLET_M332_VCPU256_GB</dt>
+    <dd>m3-32vcpu-256gb</dd><dt>DROPLET_M62_VCPU16_GB</dt>
+    <dd>m6-2vcpu-16gb</dd><dt>DROPLET_M64_VCPU32_GB</dt>
+    <dd>m6-4vcpu-32gb</dd><dt>DROPLET_M68_VCPU64_GB</dt>
+    <dd>m6-8vcpu-64gb</dd><dt>DROPLET_M616_VCPU128_GB</dt>
+    <dd>m6-16vcpu-128gb</dd><dt>DROPLET_M624_VCPU192_GB</dt>
+    <dd>m6-24vcpu-192gb</dd><dt>DROPLET_M632_VCPU256_GB</dt>
+    <dd>m6-32vcpu-256gb</dd><dt>DROPLET_SO2_VCPU16_GB</dt>
+    <dd>so-2vcpu-16gb</dd><dt>DROPLET_SO4_VCPU32_GB</dt>
+    <dd>so-4vcpu-32gb</dd><dt>DROPLET_SO8_VCPU64_GB</dt>
+    <dd>so-8vcpu-64gb</dd><dt>DROPLET_SO16_VCPU128_GB</dt>
+    <dd>so-16vcpu-128gb</dd><dt>DROPLET_SO24_VCPU192_GB</dt>
+    <dd>so-24vcpu-192gb</dd><dt>DROPLET_SO32_VCPU256_GB</dt>
+    <dd>so-32vcpu-256gb</dd><dt>DROPLET_SO152_VCPU16_GB</dt>
+    <dd>so1_5-2vcpu-16gb</dd><dt>DROPLET_SO154_VCPU32_GB</dt>
+    <dd>so1_5-4vcpu-32gb</dd><dt>DROPLET_SO158_VCPU64_GB</dt>
+    <dd>so1_5-8vcpu-64gb</dd><dt>DROPLET_SO1516_VCPU128_GB</dt>
+    <dd>so1_5-16vcpu-128gb</dd><dt>DROPLET_SO1524_VCPU192_GB</dt>
+    <dd>so1_5-24vcpu-192gb</dd><dt>DROPLET_SO1532_VCPU256_GB</dt>
+    <dd>so1_5-32vcpu-256gb</dd><dt>DROPLET512MB</dt>
+    <dd>512mb</dd><dt>DROPLET1_GB</dt>
+    <dd>1gb</dd><dt>DROPLET2_GB</dt>
+    <dd>2gb</dd><dt>DROPLET4_GB</dt>
+    <dd>4gb</dd><dt>DROPLET8_GB</dt>
+    <dd>8gb</dd><dt>DROPLET16_GB</dt>
+    <dd>16gb</dd><dt>DROPLET32_GB</dt>
+    <dd>32gb</dd><dt>DROPLET48_GB</dt>
+    <dd>48gb</dd><dt>DROPLET64_GB</dt>
+    <dd>64gb</dd><dt>DROPLET_S1_VCPU3_GB</dt>
+    <dd>s-1vcpu-3gb</dd><dt>DROPLET_S3_VCPU1_GB</dt>
+    <dd>s-3vcpu-1gb</dd><dt>DROPLET_S6_VCPU16_GB</dt>
+    <dd>s-6vcpu-16gb</dd><dt>DROPLET_S8_VCPU32_GB</dt>
+    <dd>s-8vcpu-32gb</dd><dt>DROPLET_S12_VCPU48_GB</dt>
+    <dd>s-12vcpu-48gb</dd><dt>DROPLET_S16_VCPU64_GB</dt>
+    <dd>s-16vcpu-64gb</dd><dt>DROPLET_S20_VCPU96_GB</dt>
+    <dd>s-20vcpu-96gb</dd><dt>DROPLET_S24_VCPU128_GB</dt>
+    <dd>s-24vcpu-128gb</dd><dt>DROPLET_S32_VCPU192_GB</dt>
+    <dd>s-32vcpu-192gb</dd></dl>
+{{% /choosable %}}
 
 <h4 id="kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node</h4>
 

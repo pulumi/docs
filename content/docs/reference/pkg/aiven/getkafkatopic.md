@@ -37,17 +37,17 @@ class MyStack : Stack
     {
         var mytesttopic = Output.Create(Aiven.GetKafkaTopic.InvokeAsync(new Aiven.GetKafkaTopicArgs
         {
-            Config = new Aiven.Inputs.GetKafkaTopicConfigArgs
-            {
-                CleanupPolicy = "compact",
-                FlushMs = "10",
-                UncleanLeaderElectionEnable = "true",
-            },
-            Partitions = 3,
             Project = aiven_project.Myproject.Project,
-            Replication = 1,
             ServiceName = aiven_service.Myservice.Service_name,
             TopicName = "<TOPIC_NAME>",
+            Partitions = 3,
+            Replication = 1,
+            Config = new Aiven.Inputs.GetKafkaTopicConfigArgs
+            {
+                FlushMs = "10",
+                UncleanLeaderElectionEnable = "true",
+                CleanupPolicy = "compact",
+            },
         }));
     }
 
@@ -64,8 +64,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -73,16 +73,16 @@ func main() {
 		opt0 := 3
 		opt1 := 1
 		_, err := aiven.LookupKafkaTopic(ctx, &aiven.LookupKafkaTopicArgs{
-			Config: aiven.GetKafkaTopicConfig{
-				CleanupPolicy:               "compact",
-				FlushMs:                     "10",
-				UncleanLeaderElectionEnable: "true",
-			},
-			Partitions:  &opt0,
 			Project:     aiven_project.Myproject.Project,
-			Replication: &opt1,
 			ServiceName: aiven_service.Myservice.Service_name,
 			TopicName:   "<TOPIC_NAME>",
+			Partitions:  &opt0,
+			Replication: &opt1,
+			Config: aiven.GetKafkaTopicConfig{
+				FlushMs:                     "10",
+				UncleanLeaderElectionEnable: "true",
+				CleanupPolicy:               "compact",
+			},
 		}, nil)
 		if err != nil {
 			return err
@@ -102,16 +102,16 @@ func main() {
 import pulumi
 import pulumi_aiven as aiven
 
-mytesttopic = aiven.get_kafka_topic(config=aiven.GetKafkaTopicConfigArgs(
-        cleanup_policy="compact",
+mytesttopic = aiven.get_kafka_topic(project=aiven_project["myproject"]["project"],
+    service_name=aiven_service["myservice"]["service_name"],
+    topic_name="<TOPIC_NAME>",
+    partitions=3,
+    replication=1,
+    config=aiven.GetKafkaTopicConfigArgs(
         flush_ms="10",
         unclean_leader_election_enable="true",
-    ),
-    partitions=3,
-    project=aiven_project["myproject"]["project"],
-    replication=1,
-    service_name=aiven_service["myservice"]["service_name"],
-    topic_name="<TOPIC_NAME>")
+        cleanup_policy="compact",
+    ))
 ```
 
 
@@ -125,18 +125,18 @@ mytesttopic = aiven.get_kafka_topic(config=aiven.GetKafkaTopicConfigArgs(
 import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
-const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_myservice.serviceName]).apply(([project, serviceName]) => aiven.getKafkaTopic({
-    config: {
-        cleanupPolicy: "compact",
-        flushMs: "10",
-        uncleanLeaderElectionEnable: "true",
-    },
-    partitions: 3,
-    project: project,
-    replication: 1,
-    serviceName: serviceName,
+const mytesttopic = aiven.getKafkaTopic({
+    project: aiven_project.myproject.project,
+    serviceName: aiven_service.myservice.service_name,
     topicName: "<TOPIC_NAME>",
-}, { async: true }));
+    partitions: 3,
+    replication: 1,
+    config: {
+        flushMs: 10,
+        uncleanLeaderElectionEnable: true,
+        cleanupPolicy: "compact",
+    },
+});
 ```
 
 
@@ -157,17 +157,29 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafkaTopic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKafkaTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKafkaTopicResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafkaTopic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKafkaTopicArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKafkaTopicResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_topic(</span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[GetKafkaTopicConfigArgs]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKafkaTopicTagArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaTopicResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_topic(</span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[GetKafkaTopicConfig]</span> = None<span class="p">,</span>
+                    <span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKafkaTopicTag]]</span> = None<span class="p">,</span>
+                    <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaTopicResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKafkaTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKafkaTopicResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKafkaTopicArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKafkaTopicResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKafkaTopic` in the Go SDK.
 
@@ -176,7 +188,7 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKafkaTopic </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetKafkaTopicResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKafkaTopicArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKafkaTopicResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKafkaTopicArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -232,7 +244,7 @@ created instead.
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -286,7 +298,7 @@ created instead.
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopictag">List&lt;Get<wbr>Kafka<wbr>Topic<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkafkatopictag">List&lt;Get<wbr>Kafka<wbr>Topic<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +586,7 @@ created instead.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -628,7 +640,7 @@ created instead.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopictag">Sequence[Get<wbr>Kafka<wbr>Topic<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkafkatopictag">Sequence[Get<wbr>Kafka<wbr>Topic<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

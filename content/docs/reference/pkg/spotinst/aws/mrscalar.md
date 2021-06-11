@@ -207,8 +207,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -736,8 +736,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1076,8 +1076,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst/aws"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1194,19 +1194,84 @@ const example_scaler_2 = new spotinst.aws.MrScalar("example-scaler-2", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarApplicationArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarBootstrapActionsFileArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarConfigurationsFileArgs]]</span> = None<span class="p">, </span><span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarInstanceWeightArgs]]</span> = None<span class="p">, </span><span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarMasterEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[MrScalarProvisioningTimeoutArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarStepsFileArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTagArgs]]</span> = None<span class="p">, </span><span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTerminationPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarApplicationArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarBootstrapActionsFileArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarConfigurationsFileArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarInstanceWeightArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarMasterEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[MrScalarProvisioningTimeoutArgs]</span> = None<span class="p">,</span>
+             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarScheduledTaskArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarStepsFileArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTagArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTerminationPolicyArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMrScalar</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MrScalar</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMrScalar</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MrScalar</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MrScalar</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MrScalarArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1217,46 +1282,44 @@ const example_scaler_2 = new spotinst.aws.MrScalar("example-scaler-2", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MrScalarArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MrScalarArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1265,35 +1328,27 @@ const example_scaler_2 = new spotinst.aws.MrScalar("example-scaler-2", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MrScalarArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1305,25 +1360,19 @@ const example_scaler_2 = new spotinst.aws.MrScalar("example-scaler-2", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MrScalarArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -2422,7 +2471,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2489,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootstrapactionsfiles_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2507,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configurationsfiles_nodejs" style="color: inherit; text-decoration: inherit;">configurations<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2524,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#coreebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2527,7 +2576,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#corescalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Scaling<wbr>Down<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2584,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#corescalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Scaling<wbr>Up<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2645,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instanceweights_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Weights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2650,7 +2699,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#masterebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2695,7 +2744,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#provisioningtimeout_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2738,7 +2787,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of scheduled tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2774,7 +2823,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stepsfiles_nodejs" style="color: inherit; text-decoration: inherit;">steps<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Steps from S3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2832,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2849,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#taskebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2852,7 +2901,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#taskscalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Scaling<wbr>Down<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2909,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#taskscalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Scaling<wbr>Up<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2877,7 +2926,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#terminationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3516,20 +3565,82 @@ Get an existing MrScalar resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MrScalarState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MrScalar</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MrScalarState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MrScalar</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarApplicationArgs]]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarBootstrapActionsFileArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarConfigurationsFileArgs]]</span> = None<span class="p">, </span><span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarInstanceWeightArgs]]</span> = None<span class="p">, </span><span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarMasterEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[MrScalarProvisioningTimeoutArgs]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarStepsFileArgs]]</span> = None<span class="p">, </span><span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTagArgs]]</span> = None<span class="p">, </span><span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTerminationPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MrScalar</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">additional_primary_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">additional_replica_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarApplicationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_actions_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarBootstrapActionsFileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">configurations_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarConfigurationsFileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">core_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">core_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">core_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">core_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">core_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">core_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">core_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">core_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">core_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarCoreScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">core_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ec2_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">expose_cluster_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">instance_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarInstanceWeightArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">job_flow_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">keep_job_flow_alive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">managed_primary_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">managed_replica_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">master_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarMasterEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">master_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">master_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">master_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">output_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">provisioning_timeout</span><span class="p">:</span> <span class="nx">Optional[MrScalarProvisioningTimeoutArgs]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">repo_upgrade_on_boot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarScheduledTaskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">security_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_access_security_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">steps_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarStepsFileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTagArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">task_desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">task_ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskEbsBlockDeviceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">task_ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">task_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">task_lifecycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">task_max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">task_min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">task_scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">task_scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTaskScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">task_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[MrScalarTerminationPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MrScalar</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMrScalar<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MrScalarState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MrScalar</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMrScalar<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MrScalarState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MrScalar</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MrScalar</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MrScalarState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MrScalar</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MrScalarState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4723,7 +4834,7 @@ The following state arguments are supported:
 <a href="#state_applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]</a></span>
+        <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -4741,7 +4852,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapactionsfiles_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]</a></span>
+        <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4759,7 +4870,7 @@ The following state arguments are supported:
 <a href="#state_configurationsfiles_nodejs" style="color: inherit; text-decoration: inherit;">configurations<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]</a></span>
+        <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4776,7 +4887,7 @@ The following state arguments are supported:
 <a href="#state_coreebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4828,7 +4939,7 @@ The following state arguments are supported:
 <a href="#state_corescalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Scaling<wbr>Down<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4836,7 +4947,7 @@ The following state arguments are supported:
 <a href="#state_corescalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Scaling<wbr>Up<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4897,7 +5008,7 @@ The following state arguments are supported:
 <a href="#state_instanceweights_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Weights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]</a></span>
+        <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4951,7 +5062,7 @@ The following state arguments are supported:
 <a href="#state_masterebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5004,7 +5115,7 @@ The following state arguments are supported:
 <a href="#state_provisioningtimeout_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5047,7 +5158,7 @@ The following state arguments are supported:
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]</a></span>
+        <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of scheduled tasks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5083,7 +5194,7 @@ The following state arguments are supported:
 <a href="#state_stepsfiles_nodejs" style="color: inherit; text-decoration: inherit;">steps<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]</a></span>
+        <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Steps from S3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5101,7 +5212,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5118,7 +5229,7 @@ The following state arguments are supported:
 <a href="#state_taskebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+        <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5170,7 +5281,7 @@ The following state arguments are supported:
 <a href="#state_taskscalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Scaling<wbr>Down<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5178,7 +5289,7 @@ The following state arguments are supported:
 <a href="#state_taskscalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Scaling<wbr>Up<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5195,7 +5306,7 @@ The following state arguments are supported:
 <a href="#state_terminationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicy">Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Allows defining termination policies for EMR clusters based on CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9875,7 +9986,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mrscalarterminationpolicystatement">Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#mrscalarterminationpolicystatement">Mr<wbr>Scalar<wbr>Termination<wbr>Policy<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

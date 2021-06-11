@@ -36,11 +36,11 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "brazilsouth",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForRestoreArgs
             {
-                { "createMode", "PointInTimeRestore" },
-                { "restorePointInTime", "2017-12-14T00:00:37.467Z" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver" },
+                CreateMode = "PointInTimeRestore",
+                RestorePointInTime = "2017-12-14T00:00:37.467Z",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -68,7 +68,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("brazilsouth"),
+			Properties: dbformariadb.ServerPropertiesForRestore{
+				CreateMode:         "PointInTimeRestore",
+				RestorePointInTime: "2017-12-14T00:00:37.467Z",
+				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbformariadb.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -82,11 +120,11 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="brazilsouth",
-    properties={
-        "createMode": "PointInTimeRestore",
-        "restorePointInTime": "2017-12-14T00:00:37.467Z",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
-    },
+    properties=azure_native.dbformariadb.ServerPropertiesForRestoreArgs(
+        create_mode="PointInTimeRestore",
+        restore_point_in_time="2017-12-14T00:00:37.467Z",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbformariadb.SkuArgs(
@@ -156,18 +194,19 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForDefaultCreateArgs
             {
-                { "administratorLogin", "cloudsa" },
-                { "administratorLoginPassword", "<administratorLoginPassword>" },
-                { "createMode", "Default" },
-                { "sslEnforcement", "Enabled" },
-                { "storageProfile", new AzureNative.DBforMariaDB.Inputs.StorageProfileArgs
+                AdministratorLogin = "cloudsa",
+                AdministratorLoginPassword = "<administratorLoginPassword>",
+                CreateMode = "Default",
+                MinimalTlsVersion = "TLS1_2",
+                SslEnforcement = "Enabled",
+                StorageProfile = new AzureNative.DBforMariaDB.Inputs.StorageProfileArgs
                 {
                     BackupRetentionDays = 7,
                     GeoRedundantBackup = "Enabled",
                     StorageMB = 128000,
-                } },
+                },
             },
             ResourceGroupName = "testrg",
             ServerName = "mariadbtestsvc4",
@@ -195,7 +234,52 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformariadb.ServerPropertiesForDefaultCreate{
+				AdministratorLogin:         "cloudsa",
+				AdministratorLoginPassword: "<administratorLoginPassword>",
+				CreateMode:                 "Default",
+				MinimalTlsVersion:          "TLS1_2",
+				SslEnforcement:             "Enabled",
+				StorageProfile: dbformariadb.StorageProfile{
+					BackupRetentionDays: 7,
+					GeoRedundantBackup:  "Enabled",
+					StorageMB:           128000,
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg"),
+			ServerName:        pulumi.String("mariadbtestsvc4"),
+			Sku: &dbformariadb.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -209,17 +293,18 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "<administratorLoginPassword>",
-        "createMode": "Default",
-        "sslEnforcement": "Enabled",
-        "storageProfile": azure_native.dbformariadb.StorageProfileArgs(
+    properties=azure_native.dbformariadb.ServerPropertiesForDefaultCreateArgs(
+        administrator_login="cloudsa",
+        administrator_login_password="<administratorLoginPassword>",
+        create_mode="Default",
+        minimal_tls_version="TLS1_2",
+        ssl_enforcement="Enabled",
+        storage_profile=azure_native.dbformariadb.StorageProfileArgs(
             backup_retention_days=7,
             geo_redundant_backup="Enabled",
             storage_mb=128000,
         ),
-    },
+    ),
     resource_group_name="testrg",
     server_name="mariadbtestsvc4",
     sku=azure_native.dbformariadb.SkuArgs(
@@ -251,6 +336,7 @@ const server = new azure_native.dbformariadb.Server("server", {
         administratorLogin: "cloudsa",
         administratorLoginPassword: "<administratorLoginPassword>",
         createMode: "Default",
+        minimalTlsVersion: "TLS1_2",
         sslEnforcement: "Enabled",
         storageProfile: {
             backupRetentionDays: 7,
@@ -295,10 +381,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForReplicaArgs
             {
-                { "createMode", "Replica" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver" },
+                CreateMode = "Replica",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -315,7 +401,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformariadb.ServerPropertiesForReplica{
+				CreateMode:     "Replica",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -329,10 +443,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "createMode": "Replica",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
-    },
+    properties=azure_native.dbformariadb.ServerPropertiesForReplicaArgs(
+        create_mode="Replica",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
 
@@ -383,10 +497,10 @@ class MyStack : Stack
         var server = new AzureNative.DBforMariaDB.Server("server", new AzureNative.DBforMariaDB.ServerArgs
         {
             Location = "westus",
-            Properties = 
+            Properties = new AzureNative.DBforMariaDB.Inputs.ServerPropertiesForGeoRestoreArgs
             {
-                { "createMode", "GeoRestore" },
-                { "sourceServerId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver" },
+                CreateMode = "GeoRestore",
+                SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
             },
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
@@ -414,7 +528,44 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
+			Location: pulumi.String("westus"),
+			Properties: dbformariadb.ServerPropertiesForGeoRestore{
+				CreateMode:     "GeoRestore",
+				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+			},
+			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+			ServerName:        pulumi.String("targetserver"),
+			Sku: &dbformariadb.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen5"),
+				Name:     pulumi.String("GP_Gen5_2"),
+				Tier:     pulumi.String("GeneralPurpose"),
+			},
+			Tags: pulumi.StringMap{
+				"ElasticServer": pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -428,10 +579,10 @@ import pulumi_azure_native as azure_native
 
 server = azure_native.dbformariadb.Server("server",
     location="westus",
-    properties={
-        "createMode": "GeoRestore",
-        "sourceServerId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
-    },
+    properties=azure_native.dbformariadb.ServerPropertiesForGeoRestoreArgs(
+        create_mode="GeoRestore",
+        source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
+    ),
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku=azure_native.dbformariadb.SkuArgs(
@@ -495,19 +646,31 @@ const server = new azure_native.dbformariadb.Server("server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -518,46 +681,44 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServerArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,33 +729,25 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -606,25 +759,19 @@ const server = new azure_native.dbformariadb.Server("server", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ServerArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -749,7 +896,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</a></span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -781,7 +928,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,6 +1067,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -1043,6 +1198,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -1168,6 +1331,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
@@ -1292,6 +1463,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
@@ -1383,6 +1562,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ENABLED</dt>
     <dd>Enabled</dd><dt>DISABLED</dt>
     <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+<h4 id="minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>TLSEnforcement<wbr>Disabled</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum_TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum_TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum_TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum<wbr>TLSEnforcement<wbr>Disabled</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>TLSEnforcement<wbr>Disabled</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>TLS_ENFORCEMENT_DISABLED</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</h4>
@@ -1534,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1632,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1792,6 +2005,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -1843,6 +2064,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -1896,6 +2125,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
@@ -1916,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,6 +2184,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -1994,6 +2239,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2037,6 +2290,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -2082,6 +2343,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
@@ -2102,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,6 +2394,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -2172,6 +2449,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2215,6 +2500,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -2260,6 +2553,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
@@ -2280,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,6 +2604,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -2358,6 +2667,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2409,6 +2726,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -2462,6 +2787,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
@@ -2482,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,6 +2846,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>

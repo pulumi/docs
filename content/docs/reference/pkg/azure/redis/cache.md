@@ -89,9 +89,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/redis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -185,19 +185,42 @@ const exampleCache = new azure.redis.Cache("exampleCache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">patch_schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CachePatchScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">patch_schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CachePatchScheduleArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -208,46 +231,44 @@ const exampleCache = new azure.redis.Cache("exampleCache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,35 +277,27 @@ const exampleCache = new azure.redis.Cache("exampleCache", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -296,25 +309,19 @@ const exampleCache = new azure.redis.Cache("exampleCache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -441,6 +448,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicaspermaster_csharp">
+<a href="#replicaspermaster_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shardcount_csharp">
 <a href="#shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
 </span>
@@ -472,7 +488,7 @@ new resource to be created.
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -591,6 +607,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicaspermaster_go">
+<a href="#replicaspermaster_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shardcount_go">
 <a href="#shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
 </span>
@@ -622,7 +647,7 @@ new resource to be created.
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -709,7 +734,7 @@ new resource to be created.
 <a href="#patchschedules_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule[]</a></span>
+        <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,9 +761,18 @@ new resource to be created.
 <a href="#redisconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicaspermaster_nodejs">
+<a href="#replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_nodejs">
@@ -772,7 +806,7 @@ new resource to be created.
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -891,6 +925,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replicas_per_master_python">
+<a href="#replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shard_count_python">
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span>
@@ -922,7 +965,7 @@ new resource to be created.
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -1243,20 +1286,46 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CacheState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cache</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CacheState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cache</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">patch_schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CachePatchScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">patch_schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[CachePatchScheduleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CacheState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CacheState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cache</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CacheState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cache</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CacheState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1488,6 +1557,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicaspermaster_csharp">
+<a href="#state_replicaspermaster_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1565,7 +1643,7 @@ create the Redis instance.
 <a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -1701,6 +1779,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicaspermaster_go">
+<a href="#state_replicaspermaster_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1778,7 +1865,7 @@ create the Redis instance.
 <a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -1855,7 +1942,7 @@ new resource to be created.
 <a href="#state_patchschedules_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule[]</a></span>
+        <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,9 +1996,18 @@ new resource to be created.
 <a href="#state_redisconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicaspermaster_nodejs">
+<a href="#state_replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1991,7 +2087,7 @@ create the Redis instance.
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -2127,6 +2223,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_replicas_per_master_python">
+<a href="#state_replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -2204,7 +2309,7 @@ create the Redis instance.
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
 {{% /md %}}</dd></dl>
@@ -2312,7 +2417,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_csharp">
 <a href="#aofstorageconnectionstring0_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2320,7 +2426,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_csharp">
 <a href="#aofstorageconnectionstring1_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2328,7 +2435,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_csharp">
 <a href="#enableauthentication_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Authentication</a>
@@ -2439,7 +2547,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_go">
 <a href="#aofstorageconnectionstring0_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2447,7 +2556,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_go">
 <a href="#aofstorageconnectionstring1_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2455,7 +2565,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_go">
 <a href="#enableauthentication_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Authentication</a>
@@ -2566,7 +2677,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_nodejs">
 <a href="#aofstorageconnectionstring0_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2574,7 +2686,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_nodejs">
 <a href="#aofstorageconnectionstring1_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2582,7 +2695,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_nodejs">
 <a href="#enableauthentication_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Authentication</a>
@@ -2693,7 +2807,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Enable or disable AOF persistence for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_storage_connection_string0_python">
 <a href="#aof_storage_connection_string0_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string0</a>
@@ -2701,7 +2816,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}First Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_storage_connection_string1_python">
 <a href="#aof_storage_connection_string1_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string1</a>
@@ -2709,7 +2825,8 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Second Storage Account connection string for AOF persistence.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_authentication_python">
 <a href="#enable_authentication_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>authentication</a>

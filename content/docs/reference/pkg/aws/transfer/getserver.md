@@ -53,8 +53,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/transfer"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -96,7 +96,7 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.transfer.getServer({
     serverId: "s-1234567",
-}, { async: true }));
+}));
 ```
 
 
@@ -117,17 +117,18 @@ const example = pulumi.output(aws.transfer.getServer({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server(</span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server(</span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServer` in the Go SDK.
 
@@ -136,7 +137,7 @@ const example = pulumi.output(aws.transfer.getServer({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -215,7 +216,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
@@ -224,7 +234,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -263,6 +282,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="protocols_csharp">
+<a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitypolicyname_csharp">
+<a href="#securitypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
@@ -290,7 +327,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_go">
+<a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
@@ -299,7 +345,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -338,6 +393,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="protocols_go">
+<a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitypolicyname_go">
+<a href="#securitypolicyname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
 </span>
@@ -365,7 +438,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_nodejs">
+<a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
@@ -374,7 +456,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -413,6 +504,24 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="protocols_nodejs">
+<a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitypolicyname_nodejs">
+<a href="#securitypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
 </span>
@@ -440,7 +549,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="certificate_python">
+<a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
@@ -449,7 +567,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+    <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`).
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint that the server is connected to.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -486,6 +613,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protocols_python">
+<a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="security_policy_name_python">
+<a href="#security_policy_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the security policy that is attached to the server.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_id_python">

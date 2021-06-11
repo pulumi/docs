@@ -56,16 +56,16 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.MediaGraphRtspSourceArgs
                 {
-                    Endpoint = 
+                    Endpoint = new AzureNative.Media.Inputs.MediaGraphClearEndpointArgs
                     {
-                        { "credentials", new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        Credentials = new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                             Password = "examplepassword",
                             Username = "exampleusername",
-                        } },
-                        { "odataType", "#Microsoft.Media.MediaGraphClearEndpoint" },
-                        { "url", "rtsp://contoso.com:554/stream1" },
+                        },
+                        OdataType = "#Microsoft.Media.MediaGraphClearEndpoint",
+                        Url = "rtsp://contoso.com:554/stream1",
                     },
                     Name = "rtspSource",
                     OdataType = "#Microsoft.Media.MediaGraphRtspSource",
@@ -85,7 +85,58 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewMediaGraph(ctx, "mediaGraph", &media.MediaGraphArgs{
+			AccountName:       pulumi.String("contosomedia"),
+			Description:       pulumi.String("updated description"),
+			MediaGraphName:    pulumi.String("SampleMediaGraph"),
+			ResourceGroupName: pulumi.String("contoso"),
+			Sinks: media.MediaGraphAssetSinkArray{
+				&media.MediaGraphAssetSinkArgs{
+					AssetName: pulumi.String("SampleAsset"),
+					Inputs: pulumi.StringArray{
+						pulumi.String("rtspSource"),
+					},
+					Name:      pulumi.String("AssetSink"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphAssetSink"),
+				},
+			},
+			Sources: media.MediaGraphRtspSourceArray{
+				&media.MediaGraphRtspSourceArgs{
+					Endpoint: media.MediaGraphClearEndpoint{
+						Credentials: media.MediaGraphUsernamePasswordCredentials{
+							OdataType: "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+							Password:  "examplepassword",
+							Username:  "exampleusername",
+						},
+						OdataType: "#Microsoft.Media.MediaGraphClearEndpoint",
+						Url:       "rtsp://contoso.com:554/stream1",
+					},
+					Name:      pulumi.String("rtspSource"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphRtspSource"),
+					Transport: pulumi.String("Http"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -109,15 +160,15 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
     sources=[azure_native.media.MediaGraphRtspSourceArgs(
-        endpoint={
-            "credentials": azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
+        endpoint=azure_native.media.MediaGraphClearEndpointArgs(
+            credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
                 username="exampleusername",
             ),
-            "odataType": "#Microsoft.Media.MediaGraphClearEndpoint",
-            "url": "rtsp://contoso.com:554/stream1",
-        },
+            odata_type="#Microsoft.Media.MediaGraphClearEndpoint",
+            url="rtsp://contoso.com:554/stream1",
+        ),
         name="rtspSource",
         odata_type="#Microsoft.Media.MediaGraphRtspSource",
         transport="Http",
@@ -207,16 +258,16 @@ class MyStack : Stack
             {
                 new AzureNative.Media.Inputs.MediaGraphRtspSourceArgs
                 {
-                    Endpoint = 
+                    Endpoint = new AzureNative.Media.Inputs.MediaGraphTlsEndpointArgs
                     {
-                        { "credentials", new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        Credentials = new AzureNative.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             OdataType = "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                             Password = "examplepassword",
                             Username = "exampleusername",
-                        } },
-                        { "odataType", "#Microsoft.Media.MediaGraphTlsEndpoint" },
-                        { "trustedCertificates", new AzureNative.Media.Inputs.MediaGraphPemCertificateListArgs
+                        },
+                        OdataType = "#Microsoft.Media.MediaGraphTlsEndpoint",
+                        TrustedCertificates = new AzureNative.Media.Inputs.MediaGraphPemCertificateListArgs
                         {
                             Certificates = 
                             {
@@ -243,13 +294,13 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----",
                             },
                             OdataType = "#Microsoft.Media.MediaGraphPemCertificateList",
-                        } },
-                        { "url", "rtsps://contoso.com:443/stream1" },
-                        { "validationOptions", new AzureNative.Media.Inputs.MediaGraphTlsValidationOptionsArgs
+                        },
+                        Url = "rtsps://contoso.com:443/stream1",
+                        ValidationOptions = new AzureNative.Media.Inputs.MediaGraphTlsValidationOptionsArgs
                         {
                             IgnoreHostname = true,
                             IgnoreSignature = false,
-                        } },
+                        },
                     },
                     Name = "rtspSource",
                     OdataType = "#Microsoft.Media.MediaGraphRtspSource",
@@ -293,14 +344,14 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
         odata_type="#Microsoft.Media.MediaGraphAssetSink",
     )],
     sources=[azure_native.media.MediaGraphRtspSourceArgs(
-        endpoint={
-            "credentials": azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
+        endpoint=azure_native.media.MediaGraphTlsEndpointArgs(
+            credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
                 username="exampleusername",
             ),
-            "odataType": "#Microsoft.Media.MediaGraphTlsEndpoint",
-            "trustedCertificates": azure_native.media.MediaGraphPemCertificateListArgs(
+            odata_type="#Microsoft.Media.MediaGraphTlsEndpoint",
+            trusted_certificates=azure_native.media.MediaGraphPemCertificateListArgs(
                 certificates=["""-----BEGIN CERTIFICATE-----
 MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
 BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
@@ -324,12 +375,12 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 -----END CERTIFICATE-----"""],
                 odata_type="#Microsoft.Media.MediaGraphPemCertificateList",
             ),
-            "url": "rtsps://contoso.com:443/stream1",
-            "validationOptions": azure_native.media.MediaGraphTlsValidationOptionsArgs(
+            url="rtsps://contoso.com:443/stream1",
+            validation_options=azure_native.media.MediaGraphTlsValidationOptionsArgs(
                 ignore_hostname=True,
                 ignore_signature=False,
             ),
-        },
+        ),
         name="rtspSource",
         odata_type="#Microsoft.Media.MediaGraphRtspSource",
         transport="Http",
@@ -422,19 +473,31 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_graph_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphAssetSinkArgs]]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphRtspSourceArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">media_graph_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">sinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphAssetSinkArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[MediaGraphRtspSourceArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMediaGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MediaGraph</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMediaGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MediaGraph</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MediaGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MediaGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -445,46 +508,44 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -495,33 +556,25 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -533,25 +586,19 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MediaGraphArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -692,7 +739,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsink">Media<wbr>Graph<wbr>Asset<wbr>Sink[]</a></span>
+        <span class="property-type"><a href="#mediagraphassetsink">Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -700,7 +747,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsource">Media<wbr>Graph<wbr>Rtsp<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#mediagraphrtspsource">Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1283,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1365,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1669,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1833,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1995,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}

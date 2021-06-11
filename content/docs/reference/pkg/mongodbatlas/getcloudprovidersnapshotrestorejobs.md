@@ -37,33 +37,33 @@ class MyStack : Stack
     {
         var testCloudProviderSnapshot = new Mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", new Mongodbatlas.CloudProviderSnapshotArgs
         {
+            ProjectId = "5cf5a45a9ccf6400e60981b6",
             ClusterName = "MyCluster",
             Description = "MyDescription",
-            ProjectId = "5cf5a45a9ccf6400e60981b6",
             RetentionInDays = 1,
         });
         var testCloudProviderSnapshotRestoreJob = new Mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob", new Mongodbatlas.CloudProviderSnapshotRestoreJobArgs
         {
+            ProjectId = "5cf5a45a9ccf6400e60981b6",
             ClusterName = "MyCluster",
+            SnapshotId = testCloudProviderSnapshot.Id,
             DeliveryType = new Mongodbatlas.Inputs.CloudProviderSnapshotRestoreJobDeliveryTypeArgs
             {
                 Automated = true,
                 Target_cluster_name = "MyCluster",
                 Target_project_id = "5cf5a45a9ccf6400e60981b6",
             },
-            ProjectId = "5cf5a45a9ccf6400e60981b6",
-            SnapshotId = testCloudProviderSnapshot.Id,
         });
-        var testCloudProviderSnapshotRestoreJobs = Output.Tuple(testCloudProviderSnapshotRestoreJob.ClusterName, testCloudProviderSnapshotRestoreJob.ProjectId).Apply(values =>
+        var testCloudProviderSnapshotRestoreJobs = Output.Tuple(testCloudProviderSnapshotRestoreJob.ProjectId, testCloudProviderSnapshotRestoreJob.ClusterName).Apply(values =>
         {
-            var clusterName = values.Item1;
-            var projectId = values.Item2;
+            var projectId = values.Item1;
+            var clusterName = values.Item2;
             return Mongodbatlas.GetCloudProviderSnapshotRestoreJobs.InvokeAsync(new Mongodbatlas.GetCloudProviderSnapshotRestoreJobsArgs
             {
-                ClusterName = clusterName,
-                ItemsPerPage = 5,
-                PageNum = 1,
                 ProjectId = projectId,
+                ClusterName = clusterName,
+                PageNum = 1,
+                ItemsPerPage = 5,
             });
         });
     }
@@ -81,30 +81,30 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testCloudProviderSnapshot, err := mongodbatlas.NewCloudProviderSnapshot(ctx, "testCloudProviderSnapshot", &mongodbatlas.CloudProviderSnapshotArgs{
+			ProjectId:       pulumi.String("5cf5a45a9ccf6400e60981b6"),
 			ClusterName:     pulumi.String("MyCluster"),
 			Description:     pulumi.String("MyDescription"),
-			ProjectId:       pulumi.String("5cf5a45a9ccf6400e60981b6"),
 			RetentionInDays: pulumi.Int(1),
 		})
 		if err != nil {
 			return err
 		}
 		testCloudProviderSnapshotRestoreJob, err := mongodbatlas.NewCloudProviderSnapshotRestoreJob(ctx, "testCloudProviderSnapshotRestoreJob", &mongodbatlas.CloudProviderSnapshotRestoreJobArgs{
+			ProjectId:   pulumi.String("5cf5a45a9ccf6400e60981b6"),
 			ClusterName: pulumi.String("MyCluster"),
+			SnapshotId:  testCloudProviderSnapshot.ID(),
 			DeliveryType: &mongodbatlas.CloudProviderSnapshotRestoreJobDeliveryTypeArgs{
 				Automated:           pulumi.Bool(true),
 				Target_cluster_name: pulumi.String("MyCluster"),
 				Target_project_id:   pulumi.String("5cf5a45a9ccf6400e60981b6"),
 			},
-			ProjectId:  pulumi.String("5cf5a45a9ccf6400e60981b6"),
-			SnapshotId: testCloudProviderSnapshot.ID(),
 		})
 		if err != nil {
 			return err
@@ -125,23 +125,23 @@ import pulumi
 import pulumi_mongodbatlas as mongodbatlas
 
 test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot",
+    project_id="5cf5a45a9ccf6400e60981b6",
     cluster_name="MyCluster",
     description="MyDescription",
-    project_id="5cf5a45a9ccf6400e60981b6",
     retention_in_days=1)
 test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob",
+    project_id="5cf5a45a9ccf6400e60981b6",
     cluster_name="MyCluster",
+    snapshot_id=test_cloud_provider_snapshot.id,
     delivery_type=mongodbatlas.CloudProviderSnapshotRestoreJobDeliveryTypeArgs(
         automated=True,
         target_cluster_name="MyCluster",
         target_project_id="5cf5a45a9ccf6400e60981b6",
-    ),
-    project_id="5cf5a45a9ccf6400e60981b6",
-    snapshot_id=test_cloud_provider_snapshot.id)
-test_cloud_provider_snapshot_restore_jobs = pulumi.Output.all(test_cloud_provider_snapshot_restore_job.cluster_name, test_cloud_provider_snapshot_restore_job.project_id).apply(lambda cluster_name, project_id: mongodbatlas.get_cloud_provider_snapshot_restore_jobs(cluster_name=cluster_name,
-    items_per_page=5,
+    ))
+test_cloud_provider_snapshot_restore_jobs = pulumi.Output.all(test_cloud_provider_snapshot_restore_job.project_id, test_cloud_provider_snapshot_restore_job.cluster_name).apply(lambda project_id, cluster_name: mongodbatlas.get_cloud_provider_snapshot_restore_jobs(project_id=project_id,
+    cluster_name=cluster_name,
     page_num=1,
-    project_id=project_id))
+    items_per_page=5))
 ```
 
 
@@ -155,28 +155,28 @@ test_cloud_provider_snapshot_restore_jobs = pulumi.Output.all(test_cloud_provide
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const testCloudProviderSnapshot = new mongodbatlas.CloudProviderSnapshot("test", {
+const testCloudProviderSnapshot = new mongodbatlas.CloudProviderSnapshot("testCloudProviderSnapshot", {
+    projectId: "5cf5a45a9ccf6400e60981b6",
     clusterName: "MyCluster",
     description: "MyDescription",
-    projectId: "5cf5a45a9ccf6400e60981b6",
     retentionInDays: 1,
 });
-const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapshotRestoreJob("test", {
+const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob", {
+    projectId: "5cf5a45a9ccf6400e60981b6",
     clusterName: "MyCluster",
+    snapshotId: testCloudProviderSnapshot.id,
     deliveryType: {
         automated: true,
         target_cluster_name: "MyCluster",
         target_project_id: "5cf5a45a9ccf6400e60981b6",
     },
-    projectId: "5cf5a45a9ccf6400e60981b6",
-    snapshotId: testCloudProviderSnapshot.id,
 });
-const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapshotRestoreJob.clusterName, testCloudProviderSnapshotRestoreJob.projectId]).apply(([clusterName, projectId]) => mongodbatlas.getCloudProviderSnapshotRestoreJobs({
-    clusterName: clusterName,
-    itemsPerPage: 5,
-    pageNum: 1,
+const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapshotRestoreJob.projectId, testCloudProviderSnapshotRestoreJob.clusterName]).apply(([projectId, clusterName]) => mongodbatlas.getCloudProviderSnapshotRestoreJobs({
     projectId: projectId,
-}, { async: true }));
+    clusterName: clusterName,
+    pageNum: 1,
+    itemsPerPage: 5,
+}));
 ```
 
 
@@ -197,17 +197,21 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudProviderSnapshotRestoreJobs<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudProviderSnapshotRestoreJobs<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_restore_jobs(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotRestoreJobsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_restore_jobs(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                             <span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                             <span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                             <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotRestoreJobsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCloudProviderSnapshotRestoreJobs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCloudProviderSnapshotRestoreJobs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetCloudProviderSnapshotRestoreJobs` in the Go SDK.
 
@@ -216,7 +220,7 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCloudProviderSnapshotRestoreJobs </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotRestoreJobsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudProviderSnapshotRestoreJobsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

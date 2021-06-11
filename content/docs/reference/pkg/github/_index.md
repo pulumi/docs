@@ -35,6 +35,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="repositoryfile" title="RepositoryFile"><span class="symbol resource"></span>RepositoryFile</a></li>
     <li><a href="repositorymilestone" title="RepositoryMilestone"><span class="symbol resource"></span>RepositoryMilestone</a></li>
     <li><a href="repositoryproject" title="RepositoryProject"><span class="symbol resource"></span>RepositoryProject</a></li>
+    <li><a href="repositorypullrequest" title="RepositoryPullRequest"><span class="symbol resource"></span>RepositoryPullRequest</a></li>
     <li><a href="repositorywebhook" title="RepositoryWebhook"><span class="symbol resource"></span>RepositoryWebhook</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="teammembership" title="TeamMembership"><span class="symbol resource"></span>TeamMembership</a></li>
@@ -59,6 +60,8 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
     <li><a href="getrepository" title="GetRepository"><span class="symbol function"></span>GetRepository</a></li>
     <li><a href="getrepositorymilestone" title="GetRepositoryMilestone"><span class="symbol function"></span>GetRepositoryMilestone</a></li>
+    <li><a href="getrepositorypullrequest" title="GetRepositoryPullRequest"><span class="symbol function"></span>GetRepositoryPullRequest</a></li>
+    <li><a href="getrepositorypullrequests" title="GetRepositoryPullRequests"><span class="symbol function"></span>GetRepositoryPullRequests</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
@@ -72,6 +75,6 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
+	<dd>4.1.0</dd>
 </dl>
 

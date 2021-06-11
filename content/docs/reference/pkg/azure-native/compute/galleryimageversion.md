@@ -20,7 +20,7 @@ API Version: 2020-09-30.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Create or update a simple Gallery Image Version (Managed Image as source).
+### Create or update a simple Gallery Image Version using VM as source.
 
 
 {{< example csharp >}}
@@ -51,18 +51,18 @@ class MyStack : Stack
                             {
                                 new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
                                     Lun = 0,
                                 },
                                 new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
                             OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                             },
                         },
                         Name = "West US",
@@ -70,6 +70,341 @@ class MyStack : Stack
                     },
                     new AzureNative.Compute.Inputs.TargetRegionArgs
                     {
+                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                                    Lun = 0,
+                                },
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            },
+                        },
+                        Name = "East US",
+                        RegionalReplicaCount = 2,
+                        StorageAccountType = "Standard_ZRS",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNative.Compute.Inputs.GalleryImageVersionStorageProfileArgs
+            {
+                Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
+                {
+                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGalleryImageVersion(ctx, "galleryImageVersion", &compute.GalleryImageVersionArgs{
+			GalleryImageName:        pulumi.String("myGalleryImageName"),
+			GalleryImageVersionName: pulumi.String("1.0.0"),
+			GalleryName:             pulumi.String("myGalleryName"),
+			Location:                pulumi.String("West US"),
+			PublishingProfile: &compute.GalleryImageVersionPublishingProfileArgs{
+				TargetRegions: compute.TargetRegionArray{
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(0),
+								},
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("West US"),
+						RegionalReplicaCount: pulumi.Int(1),
+					},
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(0),
+								},
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("East US"),
+						RegionalReplicaCount: pulumi.Int(2),
+						StorageAccountType:   pulumi.String("Standard_ZRS"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
+				Source: &compute.GalleryArtifactVersionSourceArgs{
+					Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVersion",
+    gallery_image_name="myGalleryImageName",
+    gallery_image_version_name="1.0.0",
+    gallery_name="myGalleryName",
+    location="West US",
+    publishing_profile=azure_native.compute.GalleryImageVersionPublishingProfileArgs(
+        target_regions=[
+            azure_native.compute.TargetRegionArgs(
+                encryption=azure_native.compute.EncryptionImagesArgs(
+                    data_disk_images=[
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                            lun=0,
+                        ),
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            lun=1,
+                        ),
+                    ],
+                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                    ),
+                ),
+                name="West US",
+                regional_replica_count=1,
+            ),
+            azure_native.compute.TargetRegionArgs(
+                encryption=azure_native.compute.EncryptionImagesArgs(
+                    data_disk_images=[
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                            lun=0,
+                        ),
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            lun=1,
+                        ),
+                    ],
+                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    ),
+                ),
+                name="East US",
+                regional_replica_count=2,
+                storage_account_type="Standard_ZRS",
+            ),
+        ],
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_native.compute.GalleryImageVersionStorageProfileArgs(
+        source=azure_native.compute.GalleryArtifactVersionSourceArgs(
+            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+        ),
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galleryImageVersion", {
+    galleryImageName: "myGalleryImageName",
+    galleryImageVersionName: "1.0.0",
+    galleryName: "myGalleryName",
+    location: "West US",
+    publishingProfile: {
+        targetRegions: [
+            {
+                encryption: {
+                    dataDiskImages: [
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                            lun: 0,
+                        },
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            lun: 1,
+                        },
+                    ],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                    },
+                },
+                name: "West US",
+                regionalReplicaCount: 1,
+            },
+            {
+                encryption: {
+                    dataDiskImages: [
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                            lun: 0,
+                        },
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            lun: 1,
+                        },
+                    ],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    },
+                },
+                name: "East US",
+                regionalReplicaCount: 2,
+                storageAccountType: "Standard_ZRS",
+            },
+        ],
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        source: {
+            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}",
+        },
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create or update a simple Gallery Image Version using managed image as source.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryImageVersion = new AzureNative.Compute.GalleryImageVersion("galleryImageVersion", new AzureNative.Compute.GalleryImageVersionArgs
+        {
+            GalleryImageName = "myGalleryImageName",
+            GalleryImageVersionName = "1.0.0",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PublishingProfile = new AzureNative.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
+            {
+                TargetRegions = 
+                {
+                    new AzureNative.Compute.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                                    Lun = 0,
+                                },
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            },
+                        },
+                        Name = "West US",
+                        RegionalReplicaCount = 1,
+                    },
+                    new AzureNative.Compute.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                                    Lun = 0,
+                                },
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            },
+                        },
                         Name = "East US",
                         RegionalReplicaCount = 2,
                         StorageAccountType = "Standard_ZRS",
@@ -103,7 +438,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -119,22 +454,37 @@ func main() {
 						Encryption: &compute.EncryptionImagesArgs{
 							DataDiskImages: compute.DataDiskImageEncryptionArray{
 								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet"),
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet"),
 									Lun:                 pulumi.Int(0),
 								},
 								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
 									Lun:                 pulumi.Int(1),
 								},
 							},
 							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
 							},
 						},
 						Name:                 pulumi.String("West US"),
 						RegionalReplicaCount: pulumi.Int(1),
 					},
 					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(0),
+								},
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+							},
+						},
 						Name:                 pulumi.String("East US"),
 						RegionalReplicaCount: pulumi.Int(2),
 						StorageAccountType:   pulumi.String("Standard_ZRS"),
@@ -179,22 +529,37 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
                 encryption=azure_native.compute.EncryptionImagesArgs(
                     data_disk_images=[
                         azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
                             lun=0,
                         ),
                         azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                             lun=1,
                         ),
                     ],
                     os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
             azure_native.compute.TargetRegionArgs(
+                encryption=azure_native.compute.EncryptionImagesArgs(
+                    data_disk_images=[
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                            lun=0,
+                        ),
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            lun=1,
+                        ),
+                    ],
+                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    ),
+                ),
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -232,22 +597,37 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
                 encryption: {
                     dataDiskImages: [
                         {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
                             lun: 0,
                         },
                         {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                             lun: 1,
                         },
                     ],
                     osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                     },
                 },
                 name: "West US",
                 regionalReplicaCount: 1,
             },
             {
+                encryption: {
+                    dataDiskImages: [
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                            lun: 0,
+                        },
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            lun: 1,
+                        },
+                    ],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    },
+                },
                 name: "East US",
                 regionalReplicaCount: 2,
                 storageAccountType: "Standard_ZRS",
@@ -270,7 +650,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 
 
-### Create or update a simple Gallery Image Version using snapshots as a source.
+### Create or update a simple Gallery Image Version using mix of disks and snapshots as a source.
 
 
 {{< example csharp >}}
@@ -301,13 +681,13 @@ class MyStack : Stack
                             {
                                 new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
                             OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                             },
                         },
                         Name = "West US",
@@ -315,6 +695,21 @@ class MyStack : Stack
                     },
                     new AzureNative.Compute.Inputs.TargetRegionArgs
                     {
+                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            },
+                        },
                         Name = "East US",
                         RegionalReplicaCount = 2,
                         StorageAccountType = "Standard_ZRS",
@@ -332,7 +727,7 @@ class MyStack : Stack
                         Lun = 1,
                         Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
                         {
-                            Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+                            Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}",
                         },
                     },
                 },
@@ -341,7 +736,7 @@ class MyStack : Stack
                     HostCaching = "ReadOnly",
                     Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
                     {
-                        Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+                        Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}",
                     },
                 },
             },
@@ -364,7 +759,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -380,18 +775,29 @@ func main() {
 						Encryption: &compute.EncryptionImagesArgs{
 							DataDiskImages: compute.DataDiskImageEncryptionArray{
 								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet"),
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
 									Lun:                 pulumi.Int(1),
 								},
 							},
 							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
 							},
 						},
 						Name:                 pulumi.String("West US"),
 						RegionalReplicaCount: pulumi.Int(1),
 					},
 					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+							},
+						},
 						Name:                 pulumi.String("East US"),
 						RegionalReplicaCount: pulumi.Int(2),
 						StorageAccountType:   pulumi.String("Standard_ZRS"),
@@ -405,14 +811,14 @@ func main() {
 						HostCaching: "None",
 						Lun:         pulumi.Int(1),
 						Source: &compute.GalleryArtifactVersionSourceArgs{
-							Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}"),
+							Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}"),
 						},
 					},
 				},
 				OsDiskImage: &compute.GalleryOSDiskImageArgs{
 					HostCaching: "ReadOnly",
 					Source: &compute.GalleryArtifactVersionSourceArgs{
-						Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}"),
+						Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}"),
 					},
 				},
 			},
@@ -447,17 +853,26 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
             azure_native.compute.TargetRegionArgs(
                 encryption=azure_native.compute.EncryptionImagesArgs(
                     data_disk_images=[azure_native.compute.DataDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                         lun=1,
                     )],
                     os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
             azure_native.compute.TargetRegionArgs(
+                encryption=azure_native.compute.EncryptionImagesArgs(
+                    data_disk_images=[azure_native.compute.DataDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                        lun=1,
+                    )],
+                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    ),
+                ),
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -470,13 +885,13 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
             host_caching="None",
             lun=1,
             source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}",
             ),
         )],
         os_disk_image=azure_native.compute.GalleryOSDiskImageArgs(
             host_caching="ReadOnly",
             source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}",
             ),
         ),
     ))
@@ -504,17 +919,26 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
             {
                 encryption: {
                     dataDiskImages: [{
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                         lun: 1,
                     }],
                     osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
                     },
                 },
                 name: "West US",
                 regionalReplicaCount: 1,
             },
             {
+                encryption: {
+                    dataDiskImages: [{
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                        lun: 1,
+                    }],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    },
+                },
                 name: "East US",
                 regionalReplicaCount: 2,
                 storageAccountType: "Standard_ZRS",
@@ -527,14 +951,329 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
             hostCaching: "None",
             lun: 1,
             source: {
-                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}",
             },
         }],
         osDiskImage: {
             hostCaching: "ReadOnly",
             source: {
-                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}",
             },
+        },
+    },
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+### Create or update a simple Gallery Image Version using shared image as source.
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryImageVersion = new AzureNative.Compute.GalleryImageVersion("galleryImageVersion", new AzureNative.Compute.GalleryImageVersionArgs
+        {
+            GalleryImageName = "myGalleryImageName",
+            GalleryImageVersionName = "1.0.0",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PublishingProfile = new AzureNative.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
+            {
+                TargetRegions = 
+                {
+                    new AzureNative.Compute.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                                    Lun = 0,
+                                },
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            },
+                        },
+                        Name = "West US",
+                        RegionalReplicaCount = 1,
+                    },
+                    new AzureNative.Compute.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                                    Lun = 0,
+                                },
+                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            },
+                        },
+                        Name = "East US",
+                        RegionalReplicaCount = 2,
+                        StorageAccountType = "Standard_ZRS",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNative.Compute.Inputs.GalleryImageVersionStorageProfileArgs
+            {
+                Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
+                {
+                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewGalleryImageVersion(ctx, "galleryImageVersion", &compute.GalleryImageVersionArgs{
+			GalleryImageName:        pulumi.String("myGalleryImageName"),
+			GalleryImageVersionName: pulumi.String("1.0.0"),
+			GalleryName:             pulumi.String("myGalleryName"),
+			Location:                pulumi.String("West US"),
+			PublishingProfile: &compute.GalleryImageVersionPublishingProfileArgs{
+				TargetRegions: compute.TargetRegionArray{
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(0),
+								},
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("West US"),
+						RegionalReplicaCount: pulumi.Int(1),
+					},
+					&compute.TargetRegionArgs{
+						Encryption: &compute.EncryptionImagesArgs{
+							DataDiskImages: compute.DataDiskImageEncryptionArray{
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(0),
+								},
+								&compute.DataDiskImageEncryptionArgs{
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+									Lun:                 pulumi.Int(1),
+								},
+							},
+							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
+							},
+						},
+						Name:                 pulumi.String("East US"),
+						RegionalReplicaCount: pulumi.Int(2),
+						StorageAccountType:   pulumi.String("Standard_ZRS"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
+				Source: &compute.GalleryArtifactVersionSourceArgs{
+					Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVersion",
+    gallery_image_name="myGalleryImageName",
+    gallery_image_version_name="1.0.0",
+    gallery_name="myGalleryName",
+    location="West US",
+    publishing_profile=azure_native.compute.GalleryImageVersionPublishingProfileArgs(
+        target_regions=[
+            azure_native.compute.TargetRegionArgs(
+                encryption=azure_native.compute.EncryptionImagesArgs(
+                    data_disk_images=[
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                            lun=0,
+                        ),
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            lun=1,
+                        ),
+                    ],
+                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                    ),
+                ),
+                name="West US",
+                regional_replica_count=1,
+            ),
+            azure_native.compute.TargetRegionArgs(
+                encryption=azure_native.compute.EncryptionImagesArgs(
+                    data_disk_images=[
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                            lun=0,
+                        ),
+                        azure_native.compute.DataDiskImageEncryptionArgs(
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            lun=1,
+                        ),
+                    ],
+                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    ),
+                ),
+                name="East US",
+                regional_replica_count=2,
+                storage_account_type="Standard_ZRS",
+            ),
+        ],
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_native.compute.GalleryImageVersionStorageProfileArgs(
+        source=azure_native.compute.GalleryArtifactVersionSourceArgs(
+            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}",
+        ),
+    ))
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galleryImageVersion", {
+    galleryImageName: "myGalleryImageName",
+    galleryImageVersionName: "1.0.0",
+    galleryName: "myGalleryName",
+    location: "West US",
+    publishingProfile: {
+        targetRegions: [
+            {
+                encryption: {
+                    dataDiskImages: [
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                            lun: 0,
+                        },
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            lun: 1,
+                        },
+                    ],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                    },
+                },
+                name: "West US",
+                regionalReplicaCount: 1,
+            },
+            {
+                encryption: {
+                    dataDiskImages: [
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
+                            lun: 0,
+                        },
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                            lun: 1,
+                        },
+                    ],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
+                    },
+                },
+                name: "East US",
+                regionalReplicaCount: 2,
+                storageAccountType: "Standard_ZRS",
+            },
+        ],
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        source: {
+            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}",
         },
     },
 });
@@ -601,10 +1340,27 @@ class MyStack : Stack
             ResourceGroupName = "myResourceGroup",
             StorageProfile = new AzureNative.Compute.Inputs.GalleryImageVersionStorageProfileArgs
             {
-                Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
+                DataDiskImages = 
                 {
-                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                    Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+                    new AzureNative.Compute.Inputs.GalleryDataDiskImageArgs
+                    {
+                        HostCaching = "None",
+                        Lun = 1,
+                        Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
+                        {
+                            Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                            Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+                        },
+                    },
+                },
+                OsDiskImage = new AzureNative.Compute.Inputs.GalleryOSDiskImageArgs
+                {
+                    HostCaching = "ReadOnly",
+                    Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
+                    {
+                        Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                        Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+                    },
                 },
             },
         });
@@ -626,7 +1382,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -662,9 +1418,22 @@ func main() {
 			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
-				Source: &compute.GalleryArtifactVersionSourceArgs{
-					Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
-					Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
+				DataDiskImages: compute.GalleryDataDiskImageArray{
+					&compute.GalleryDataDiskImageArgs{
+						HostCaching: "None",
+						Lun:         pulumi.Int(1),
+						Source: &compute.GalleryArtifactVersionSourceArgs{
+							Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
+							Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
+						},
+					},
+				},
+				OsDiskImage: &compute.GalleryOSDiskImageArgs{
+					HostCaching: "ReadOnly",
+					Source: &compute.GalleryArtifactVersionSourceArgs{
+						Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
+						Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
+					},
 				},
 			},
 		})
@@ -717,9 +1486,20 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
     ),
     resource_group_name="myResourceGroup",
     storage_profile=azure_native.compute.GalleryImageVersionStorageProfileArgs(
-        source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-            uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+        data_disk_images=[azure_native.compute.GalleryDataDiskImageArgs(
+            host_caching="None",
+            lun=1,
+            source=azure_native.compute.GalleryArtifactVersionSourceArgs(
+                id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+            ),
+        )],
+        os_disk_image=azure_native.compute.GalleryOSDiskImageArgs(
+            host_caching="ReadOnly",
+            source=azure_native.compute.GalleryArtifactVersionSourceArgs(
+                id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+            ),
         ),
     ))
 
@@ -765,9 +1545,20 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     },
     resourceGroupName: "myResourceGroup",
     storageProfile: {
-        source: {
-            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-            uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+        dataDiskImages: [{
+            hostCaching: "None",
+            lun: 1,
+            source: {
+                id: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+            },
+        }],
+        osDiskImage: {
+            hostCaching: "ReadOnly",
+            source: {
+                id: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+            },
         },
     },
 });
@@ -791,19 +1582,33 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionPublishingProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">gallery_image_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionPublishingProfileArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionStorageProfileArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImageVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImageVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImageVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImageVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -814,46 +1619,44 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -864,33 +1667,25 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -902,25 +1697,19 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1101,7 +1890,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1914,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#publishingprofile_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile</a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption[]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1694,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1972,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2110,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2280,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">Target<wbr>Region[]</a></span>
+        <span class="property-type"><a href="#targetregion">Target<wbr>Region<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2482,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2604,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image[]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2612,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2620,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2718,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +3523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2824,7 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2930,7 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3296,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3440,7 +4229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images</a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3586,7 +4375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

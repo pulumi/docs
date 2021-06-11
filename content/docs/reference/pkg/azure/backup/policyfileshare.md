@@ -12,8 +12,6 @@ meta_desc: "Documentation for the azure.backup.PolicyFileShare resource with exa
 
 Manages an Azure File Share Backup Policy within a Recovery Services vault.
 
-> **NOTE:** Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. [Read More](https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview)
-
 {{% examples %}}
 
 ## Example Usage
@@ -34,20 +32,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
             Location = "West Europe",
         });
-        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        var exampleVault = new Azure.RecoveryServices.Vault("exampleVault", new Azure.RecoveryServices.VaultArgs
         {
-            Location = rg.Location,
-            ResourceGroupName = rg.Name,
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
             Sku = "Standard",
         });
         var policy = new Azure.Backup.PolicyFileShare("policy", new Azure.Backup.PolicyFileShareArgs
         {
-            ResourceGroupName = rg.Name,
-            RecoveryVaultName = vault.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            RecoveryVaultName = azurerm_recovery_services_vault.Vault.Name,
             Timezone = "UTC",
             Backup = new Azure.Backup.Inputs.PolicyFileShareBackupArgs
             {
@@ -57,6 +55,47 @@ class MyStack : Stack
             RetentionDaily = new Azure.Backup.Inputs.PolicyFileShareRetentionDailyArgs
             {
                 Count = 10,
+            },
+            RetentionWeekly = new Azure.Backup.Inputs.PolicyFileShareRetentionWeeklyArgs
+            {
+                Count = 7,
+                Weekdays = 
+                {
+                    "Sunday",
+                    "Wednesday",
+                    "Friday",
+                    "Saturday",
+                },
+            },
+            RetentionMonthly = new Azure.Backup.Inputs.PolicyFileShareRetentionMonthlyArgs
+            {
+                Count = 7,
+                Weekdays = 
+                {
+                    "Sunday",
+                    "Wednesday",
+                },
+                Weeks = 
+                {
+                    "First",
+                    "Last",
+                },
+            },
+            RetentionYearly = new Azure.Backup.Inputs.PolicyFileShareRetentionYearlyArgs
+            {
+                Count = 7,
+                Weekdays = 
+                {
+                    "Sunday",
+                },
+                Weeks = 
+                {
+                    "Last",
+                },
+                Months = 
+                {
+                    "January",
+                },
             },
         });
     }
@@ -74,31 +113,31 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/backup"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
 			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
 		}
-		vault, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
-			Location:          rg.Location,
-			ResourceGroupName: rg.Name,
+		_, err = recoveryservices.NewVault(ctx, "exampleVault", &recoveryservices.VaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Standard"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = backup.NewPolicyFileShare(ctx, "policy", &backup.PolicyFileShareArgs{
-			ResourceGroupName: rg.Name,
-			RecoveryVaultName: vault.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			RecoveryVaultName: pulumi.Any(azurerm_recovery_services_vault.Vault.Name),
 			Timezone:          pulumi.String("UTC"),
 			Backup: &backup.PolicyFileShareBackupArgs{
 				Frequency: pulumi.String("Daily"),
@@ -106,6 +145,38 @@ func main() {
 			},
 			RetentionDaily: &backup.PolicyFileShareRetentionDailyArgs{
 				Count: pulumi.Int(10),
+			},
+			RetentionWeekly: &backup.PolicyFileShareRetentionWeeklyArgs{
+				Count: pulumi.Int(7),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Sunday"),
+					pulumi.String("Wednesday"),
+					pulumi.String("Friday"),
+					pulumi.String("Saturday"),
+				},
+			},
+			RetentionMonthly: &backup.PolicyFileShareRetentionMonthlyArgs{
+				Count: pulumi.Int(7),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Sunday"),
+					pulumi.String("Wednesday"),
+				},
+				Weeks: pulumi.StringArray{
+					pulumi.String("First"),
+					pulumi.String("Last"),
+				},
+			},
+			RetentionYearly: &backup.PolicyFileShareRetentionYearlyArgs{
+				Count: pulumi.Int(7),
+				Weekdays: pulumi.StringArray{
+					pulumi.String("Sunday"),
+				},
+				Weeks: pulumi.StringArray{
+					pulumi.String("Last"),
+				},
+				Months: pulumi.StringArray{
+					pulumi.String("January"),
+				},
 			},
 		})
 		if err != nil {
@@ -126,14 +197,14 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="West Europe")
-vault = azure.recoveryservices.Vault("vault",
-    location=rg.location,
-    resource_group_name=rg.name,
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_vault = azure.recoveryservices.Vault("exampleVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
     sku="Standard")
 policy = azure.backup.PolicyFileShare("policy",
-    resource_group_name=rg.name,
-    recovery_vault_name=vault.name,
+    resource_group_name=example_resource_group.name,
+    recovery_vault_name=azurerm_recovery_services_vault["vault"]["name"],
     timezone="UTC",
     backup=azure.backup.PolicyFileShareBackupArgs(
         frequency="Daily",
@@ -141,6 +212,32 @@ policy = azure.backup.PolicyFileShare("policy",
     ),
     retention_daily=azure.backup.PolicyFileShareRetentionDailyArgs(
         count=10,
+    ),
+    retention_weekly=azure.backup.PolicyFileShareRetentionWeeklyArgs(
+        count=7,
+        weekdays=[
+            "Sunday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+        ],
+    ),
+    retention_monthly=azure.backup.PolicyFileShareRetentionMonthlyArgs(
+        count=7,
+        weekdays=[
+            "Sunday",
+            "Wednesday",
+        ],
+        weeks=[
+            "First",
+            "Last",
+        ],
+    ),
+    retention_yearly=azure.backup.PolicyFileShareRetentionYearlyArgs(
+        count=7,
+        weekdays=["Sunday"],
+        weeks=["Last"],
+        months=["January"],
     ))
 ```
 
@@ -155,15 +252,15 @@ policy = azure.backup.PolicyFileShare("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
-const vault = new azure.recoveryservices.Vault("vault", {
-    location: rg.location,
-    resourceGroupName: rg.name,
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVault = new azure.recoveryservices.Vault("exampleVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
     sku: "Standard",
 });
 const policy = new azure.backup.PolicyFileShare("policy", {
-    resourceGroupName: rg.name,
-    recoveryVaultName: vault.name,
+    resourceGroupName: exampleResourceGroup.name,
+    recoveryVaultName: azurerm_recovery_services_vault.vault.name,
     timezone: "UTC",
     backup: {
         frequency: "Daily",
@@ -171,6 +268,32 @@ const policy = new azure.backup.PolicyFileShare("policy", {
     },
     retentionDaily: {
         count: 10,
+    },
+    retentionWeekly: {
+        count: 7,
+        weekdays: [
+            "Sunday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+        ],
+    },
+    retentionMonthly: {
+        count: 7,
+        weekdays: [
+            "Sunday",
+            "Wednesday",
+        ],
+        weeks: [
+            "First",
+            "Last",
+        ],
+    },
+    retentionYearly: {
+        count: 7,
+        weekdays: ["Sunday"],
+        weeks: ["Last"],
+        months: ["January"],
     },
 });
 ```
@@ -192,19 +315,35 @@ const policy = new azure.backup.PolicyFileShare("policy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareBackupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareBackupArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionDailyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionMonthlyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionWeeklyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionYearlyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                    <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyFileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyFileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyFileShare</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PolicyFileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -215,46 +354,44 @@ const policy = new azure.backup.PolicyFileShare("policy", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PolicyFileShareArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PolicyFileShareArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -263,35 +400,27 @@ const policy = new azure.backup.PolicyFileShare("policy", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PolicyFileShareArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -303,25 +432,19 @@ const policy = new azure.backup.PolicyFileShare("policy", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PolicyFileShareArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -383,6 +506,41 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Specifies the name of the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="retentionmonthly_csharp">
+<a href="#retentionmonthly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionweekly_csharp">
+<a href="#retentionweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionyearly_csharp">
+<a href="#retentionyearly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
 </span>
@@ -441,6 +599,41 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Specifies the name of the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="retentionmonthly_go">
+<a href="#retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionweekly_go">
+<a href="#retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionyearly_go">
+<a href="#retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
 </span>
@@ -458,7 +651,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
+        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency and times as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-required"
@@ -485,7 +678,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -498,6 +691,41 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Specifies the name of the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionmonthly_nodejs">
+<a href="#retentionmonthly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionweekly_nodejs">
+<a href="#retentionweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionyearly_nodejs">
+<a href="#retentionyearly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -556,6 +784,41 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Specifies the name of the policy. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_monthly_python">
+<a href="#retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_weekly_python">
+<a href="#retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_yearly_python">
+<a href="#retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -630,20 +893,32 @@ Get an existing PolicyFileShare resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyFileShareState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyFileShare</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyFileShareState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyFileShare</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareBackupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyFileShare</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareBackupArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionDailyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionMonthlyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionWeeklyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyFileShareRetentionYearlyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyFileShare</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyFileShareState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyFileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyFileShareState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyFileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyFileShare</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyFileShareState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyFileShare</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PolicyFileShareState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -793,6 +1068,41 @@ The following state arguments are supported:
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_retentionmonthly_csharp">
+<a href="#state_retentionmonthly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionweekly_csharp">
+<a href="#state_retentionweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionyearly_csharp">
+<a href="#state_retentionyearly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_timezone_csharp">
 <a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
 </span>
@@ -851,6 +1161,41 @@ The following state arguments are supported:
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_retentionmonthly_go">
+<a href="#state_retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionweekly_go">
+<a href="#state_retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionyearly_go">
+<a href="#state_retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_timezone_go">
 <a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
 </span>
@@ -868,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
+        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency and times as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,10 +1249,45 @@ The following state arguments are supported:
 <a href="#state_retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionmonthly_nodejs">
+<a href="#state_retentionmonthly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionweekly_nodejs">
+<a href="#state_retentionweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionyearly_nodejs">
+<a href="#state_retentionyearly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_nodejs">
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -967,6 +1347,41 @@ The following state arguments are supported:
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_retention_monthly_python">
+<a href="#state_retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retention_weekly_python">
+<a href="#state_retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retention_yearly_python">
+<a href="#state_retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_timezone_python">
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
@@ -1006,7 +1421,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time of day to perform the backup in 24-hour format. Times must be either on the hour or half hour (e.g. 12:00, 12:30, 13:00, etc.)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1027,7 +1443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time of day to perform the backup in 24-hour format. Times must be either on the hour or half hour (e.g. 12:00, 12:30, 13:00, etc.)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1048,7 +1465,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time of day to perform the backup in 24-hour format. Times must be either on the hour or half hour (e.g. 12:00, 12:30, 13:00, etc.)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1069,7 +1487,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The time of day to perform the backup in 24-hour format. Times must be either on the hour or half hour (e.g. 12:00, 12:30, 13:00, etc.)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</h4>
@@ -1083,7 +1502,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of daily backups to keep. Must be between `1` and `180` (inclusive)
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1096,7 +1515,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of daily backups to keep. Must be between `1` and `180` (inclusive)
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1109,7 +1528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of daily backups to keep. Must be between `1` and `180` (inclusive)
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1122,7 +1541,385 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of daily backups to keep. Must be between `1` and `180` (inclusive)
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_csharp">
+<a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_csharp">
+<a href="#weeks_csharp" style="color: inherit; text-decoration: inherit;">Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_go">
+<a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_go">
+<a href="#weeks_go" style="color: inherit; text-decoration: inherit;">Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_nodejs">
+<a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_nodejs">
+<a href="#weeks_nodejs" style="color: inherit; text-decoration: inherit;">weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_python">
+<a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_python">
+<a href="#weeks_python" style="color: inherit; text-decoration: inherit;">weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_csharp">
+<a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_go">
+<a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_nodejs">
+<a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_python">
+<a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="months_csharp">
+<a href="#months_csharp" style="color: inherit; text-decoration: inherit;">Months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_csharp">
+<a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_csharp">
+<a href="#weeks_csharp" style="color: inherit; text-decoration: inherit;">Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="months_go">
+<a href="#months_go" style="color: inherit; text-decoration: inherit;">Months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_go">
+<a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_go">
+<a href="#weeks_go" style="color: inherit; text-decoration: inherit;">Weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="months_nodejs">
+<a href="#months_nodejs" style="color: inherit; text-decoration: inherit;">months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_nodejs">
+<a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_nodejs">
+<a href="#weeks_nodejs" style="color: inherit; text-decoration: inherit;">weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `10`
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="months_python">
+<a href="#months_python" style="color: inherit; text-decoration: inherit;">months</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weekdays_python">
+<a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="weeks_python">
+<a href="#weeks_python" style="color: inherit; text-decoration: inherit;">weeks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

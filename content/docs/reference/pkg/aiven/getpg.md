@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -122,17 +122,36 @@ const pg = aiven.getPg({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPg<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPgArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPgResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPg<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPgArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPgResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pg(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPgComponentArgs]]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[GetPgPgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[GetPgPgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPgServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPgResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pg(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPgComponent]]</span> = None<span class="p">,</span>
+           <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[GetPgPg]</span> = None<span class="p">,</span>
+           <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[GetPgPgUserConfig]</span> = None<span class="p">,</span>
+           <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPgServiceIntegration]]</span> = None<span class="p">,</span>
+           <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPgResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPg<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPgArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPgResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPg<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPgArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPgResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPg` in the Go SDK.
 
@@ -141,7 +160,7 @@ const pg = aiven.getPg({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPg </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPgResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPgArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPgResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPgArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +213,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgcomponent">List&lt;Get<wbr>Pg<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpgcomponent">List&lt;Get<wbr>Pg<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -222,7 +241,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpg">Get<wbr>Pg<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpg">Get<wbr>Pg<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -231,7 +250,7 @@ UTC time in HH:mm:ss format.
 <a href="#pguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfig">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfig">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -280,7 +299,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgserviceintegration">List&lt;Get<wbr>Pg<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpgserviceintegration">List&lt;Get<wbr>Pg<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +816,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgcomponent">Sequence[Get<wbr>Pg<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpgcomponent">Sequence[Get<wbr>Pg<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +844,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpg">Get<wbr>Pg<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpg">Get<wbr>Pg<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +853,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfig">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfig">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -883,7 +902,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgserviceintegration">Sequence[Get<wbr>Pg<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpgserviceintegration">Sequence[Get<wbr>Pg<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2428,7 @@ is only started if previous backup has already completed.
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigmigration">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigmigration">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2437,7 @@ is only started if previous backup has already completed.
 <a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpg">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpg">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2474,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2464,7 +2483,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_csharp" style="color: inherit; text-decoration: inherit;">Pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpglookout">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpglookout">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2492,7 @@ This has effect only when a new service is being created.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigprivateaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivateaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2501,7 @@ This has effect only when a new service is being created.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2501,7 +2520,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpublicaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpublicaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2551,7 +2570,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_csharp" style="color: inherit; text-decoration: inherit;">Timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigtimescaledb">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigtimescaledb">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3084,7 +3103,7 @@ is only started if previous backup has already completed.
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigmigration">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigmigration">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3093,7 +3112,7 @@ is only started if previous backup has already completed.
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpg">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpg">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
     </dt>
     <dd>{{% md %}}PostgreSQL specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3130,7 +3149,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3139,7 +3158,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpglookout">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpglookout">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3148,7 +3167,7 @@ This has effect only when a new service is being created.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigprivateaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivateaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3157,7 +3176,7 @@ This has effect only when a new service is being created.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3195,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigpublicaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigpublicaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3226,7 +3245,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpgpguserconfigtimescaledb">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpgpguserconfigtimescaledb">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3900,6 +3919,17 @@ executing command for each active session.
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_csharp">
+<a href="#trackiotiming_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_csharp">
 <a href="#walsendertimeout_csharp" style="color: inherit; text-decoration: inherit;">Wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -4286,6 +4316,17 @@ executing command for each active session.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackiotiming_go">
+<a href="#trackiotiming_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="walsendertimeout_go">
@@ -4676,6 +4717,17 @@ executing command for each active session.
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trackiotiming_nodejs">
+<a href="#trackiotiming_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Io<wbr>Timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="walsendertimeout_nodejs">
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
@@ -5062,6 +5114,17 @@ executing command for each active session.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="track_io_timing_python">
+<a href="#track_io_timing_python" style="color: inherit; text-decoration: inherit;">track_<wbr>io_<wbr>timing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enables timing of database I/O calls. This parameter is off by default,
+because it will repeatedly query the operating system for the current time, which may cause
+significant overhead on some platforms.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wal_sender_timeout_python">

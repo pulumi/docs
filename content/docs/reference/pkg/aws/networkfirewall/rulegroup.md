@@ -75,8 +75,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -256,8 +256,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -481,8 +481,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -828,8 +828,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/networkfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1077,19 +1077,33 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">,</span>
+              <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1100,46 +1114,44 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1148,35 +1160,27 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1188,25 +1192,19 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1283,7 +1281,16 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1350,7 +1357,16 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1397,7 +1413,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1433,16 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1484,7 +1509,16 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1623,20 +1657,32 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">,</span>
+        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1801,7 +1847,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1886,7 +1941,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1951,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_rulegroup_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</a></span>
+        <span class="property-type"><a href="#rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1971,7 +2035,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -2056,7 +2129,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of key:value pairs to associate with the resource.
+    <dd>{{% md %}}A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -2140,7 +2222,7 @@ The following state arguments are supported:
 <a href="#rulessource_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2231,7 @@ The following state arguments are supported:
 <a href="#rulevariables_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd></dl>
@@ -2230,7 +2312,7 @@ The following state arguments are supported:
 <a href="#ipsets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define IP address information. See IP Sets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2321,7 @@ The following state arguments are supported:
 <a href="#portsets_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks that define port range information. See Port Sets below for details.
 {{% /md %}}</dd></dl>
@@ -2320,7 +2402,7 @@ The following state arguments are supported:
 <a href="#ipset_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of IP addresses. See IP Set below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2473,7 +2555,7 @@ The following state arguments are supported:
 <a href="#portset_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that defines a set of port ranges. See Port Set below for details.
 {{% /md %}}</dd></dl>
@@ -2644,7 +2726,7 @@ The following state arguments are supported:
 <a href="#rulessourcelist_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Source<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2662,7 +2744,7 @@ The following state arguments are supported:
 <a href="#statefulrules_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2753,7 @@ The following state arguments are supported:
 <a href="#statelessrulesandcustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
 {{% /md %}}</dd></dl>
@@ -2923,7 +3005,7 @@ The following state arguments are supported:
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2932,7 +3014,7 @@ The following state arguments are supported:
 <a href="#ruleoptions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
 {{% /md %}}</dd></dl>
@@ -3350,7 +3432,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#statelessrules_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3359,7 +3441,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#customactions_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
 {{% /md %}}</dd></dl>
@@ -3440,7 +3522,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#actiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3512,7 +3594,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#publishmetricaction_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Metric<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -3566,7 +3648,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
 {{% /md %}}</dd></dl>
@@ -3701,7 +3783,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#ruledefinition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block defining the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. See Rule Definition below for details.
 {{% /md %}}</dd></dl>
@@ -3791,7 +3873,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#matchattributes_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
 {{% /md %}}</dd></dl>
@@ -3944,7 +4026,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3953,7 +4035,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3971,7 +4053,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sourceports_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3980,7 +4062,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3989,7 +4071,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 <a href="#tcpflags_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
 {{% /md %}}</dd></dl>

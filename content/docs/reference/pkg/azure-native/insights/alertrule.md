@@ -36,19 +36,19 @@ class MyStack : Stack
         var alertRule = new AzureNative.Insights.AlertRule("alertRule", new AzureNative.Insights.AlertRuleArgs
         {
             Actions = {},
-            Condition = 
+            Condition = new AzureNative.Insights.Inputs.ThresholdRuleConditionArgs
             {
-                { "dataSource", 
+                DataSource = 
                 {
                     { "metricName", "Requests" },
                     { "odataType", "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource" },
                     { "resourceUri", "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest" },
-                } },
-                { "odataType", "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition" },
-                { "operator", "GreaterThan" },
-                { "threshold", 3 },
-                { "timeAggregation", "Total" },
-                { "windowSize", "PT5M" },
+                },
+                OdataType = "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+                Operator = "GreaterThan",
+                Threshold = 3,
+                TimeAggregation = "Total",
+                WindowSize = "PT5M",
             },
             Description = "Pura Vida",
             IsEnabled = true,
@@ -84,18 +84,18 @@ import pulumi_azure_native as azure_native
 
 alert_rule = azure_native.insights.AlertRule("alertRule",
     actions=[],
-    condition={
-        "dataSource": {
+    condition=azure_native.insights.ThresholdRuleConditionArgs(
+        data_source={
             "metricName": "Requests",
             "odataType": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
             "resourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
         },
-        "odataType": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-        "operator": "GreaterThan",
-        "threshold": 3,
-        "timeAggregation": "Total",
-        "windowSize": "PT5M",
-    },
+        odata_type="Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        operator="GreaterThan",
+        threshold=3,
+        time_aggregation="Total",
+        window_size="PT5M",
+    ),
     description="Pura Vida",
     is_enabled=True,
     location="West US",
@@ -159,19 +159,36 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[RuleEmailActionArgs, RuleWebhookActionArgs]]</span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[RuleEmailActionArgs, RuleWebhookActionArgs]]]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Union[LocationThresholdRuleConditionArgs, ManagementEventRuleConditionArgs, ThresholdRuleConditionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[RuleEmailActionArgs, RuleWebhookActionArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[RuleEmailActionArgs, RuleWebhookActionArgs]]]</span> = None<span class="p">,</span>
+              <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Union[LocationThresholdRuleConditionArgs, ManagementEventRuleConditionArgs, ThresholdRuleConditionArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,46 +199,44 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,33 +247,25 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -270,25 +277,19 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AlertRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -493,7 +494,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition</a></span>
+        <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -525,7 +526,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action</a></span>
+        <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action<wbr>Args</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +534,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Rule<wbr>Email<wbr>Action | Rule<wbr>Webhook<wbr>Action[]</span>
+        <span class="property-type">Rule<wbr>Email<wbr>Action<wbr>Args | Rule<wbr>Webhook<wbr>Action<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</a></span>
+        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1420,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2376,7 +2377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3218,7 +3219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3396,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -157,6 +157,211 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 
 
 
+### Compute Interconnect Attachment Ipsec Encryption
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var address = new Gcp.Compute.Address("address", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "IPSEC_INTERCONNECT",
+            Address = "192.168.1.0",
+            PrefixLength = 29,
+            Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
+        {
+            Network = network.Name,
+            EncryptedInterconnectRouter = true,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 16550,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var ipsec_encrypted_interconnect_attachment = new Gcp.Compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", new Gcp.Compute.InterconnectAttachmentArgs
+        {
+            EdgeAvailabilityDomain = "AVAILABILITY_DOMAIN_1",
+            Type = "PARTNER",
+            Router = router.Id,
+            Encryption = "IPSEC",
+            IpsecInternalAddresses = 
+            {
+                address.SelfLink,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		address, err := compute.NewAddress(ctx, "address", &compute.AddressArgs{
+			AddressType:  pulumi.String("INTERNAL"),
+			Purpose:      pulumi.String("IPSEC_INTERCONNECT"),
+			Address:      pulumi.String("192.168.1.0"),
+			PrefixLength: pulumi.Int(29),
+			Network:      network.SelfLink,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		router, err := compute.NewRouter(ctx, "router", &compute.RouterArgs{
+			Network:                     network.Name,
+			EncryptedInterconnectRouter: pulumi.Bool(true),
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(16550),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInterconnectAttachment(ctx, "ipsec_encrypted_interconnect_attachment", &compute.InterconnectAttachmentArgs{
+			EdgeAvailabilityDomain: pulumi.String("AVAILABILITY_DOMAIN_1"),
+			Type:                   pulumi.String("PARTNER"),
+			Router:                 router.ID(),
+			Encryption:             pulumi.String("IPSEC"),
+			IpsecInternalAddresses: pulumi.StringArray{
+				address.SelfLink,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+address = gcp.compute.Address("address",
+    address_type="INTERNAL",
+    purpose="IPSEC_INTERCONNECT",
+    address="192.168.1.0",
+    prefix_length=29,
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+router = gcp.compute.Router("router",
+    network=network.name,
+    encrypted_interconnect_router=True,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=16550,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+ipsec_encrypted_interconnect_attachment = gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment",
+    edge_availability_domain="AVAILABILITY_DOMAIN_1",
+    type="PARTNER",
+    router=router.id,
+    encryption="IPSEC",
+    ipsec_internal_addresses=[address.self_link],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const address = new gcp.compute.Address("address", {
+    addressType: "INTERNAL",
+    purpose: "IPSEC_INTERCONNECT",
+    address: "192.168.1.0",
+    prefixLength: 29,
+    network: network.selfLink,
+}, {
+    provider: google_beta,
+});
+const router = new gcp.compute.Router("router", {
+    network: network.name,
+    encryptedInterconnectRouter: true,
+    bgp: {
+        asn: 16550,
+    },
+}, {
+    provider: google_beta,
+});
+const ipsec_encrypted_interconnect_attachment = new gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", {
+    edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
+    type: "PARTNER",
+    router: router.id,
+    encryption: "IPSEC",
+    ipsecInternalAddresses: [address.selfLink],
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -168,19 +373,40 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">ipsec_internal_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -191,46 +417,44 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -239,35 +463,27 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -279,25 +495,19 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -388,6 +598,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="interconnect_csharp">
 <a href="#interconnect_csharp" style="color: inherit; text-decoration: inherit;">Interconnect</a>
 </span>
@@ -397,6 +621,22 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipsecinternaladdresses_csharp">
+<a href="#ipsecinternaladdresses_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Internal<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_csharp">
@@ -541,6 +781,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="interconnect_go">
 <a href="#interconnect_go" style="color: inherit; text-decoration: inherit;">Interconnect</a>
 </span>
@@ -550,6 +804,22 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipsecinternaladdresses_go">
+<a href="#ipsecinternaladdresses_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Internal<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_go">
@@ -694,6 +964,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="interconnect_nodejs">
 <a href="#interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
@@ -703,6 +987,22 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipsecinternaladdresses_nodejs">
+<a href="#ipsecinternaladdresses_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Internal<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_nodejs">
@@ -847,6 +1147,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="interconnect_python">
 <a href="#interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
@@ -856,6 +1170,22 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipsec_internal_addresses_python">
+<a href="#ipsec_internal_addresses_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>internal_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_python">
@@ -1326,20 +1656,46 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InterconnectAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InterconnectAttachment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InterconnectAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InterconnectAttachment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ipsec_internal_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InterconnectAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InterconnectAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InterconnectAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InterconnectAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InterconnectAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InterconnectAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1533,6 +1889,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_csharp">
+<a href="#state_encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_googlereferenceid_csharp">
 <a href="#state_googlereferenceid_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Reference<wbr>Id</a>
 </span>
@@ -1552,6 +1922,22 @@ issues.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipsecinternaladdresses_csharp">
+<a href="#state_ipsecinternaladdresses_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Internal<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_csharp">
@@ -1771,6 +2157,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_go">
+<a href="#state_encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_googlereferenceid_go">
 <a href="#state_googlereferenceid_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Reference<wbr>Id</a>
 </span>
@@ -1790,6 +2190,22 @@ issues.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipsecinternaladdresses_go">
+<a href="#state_ipsecinternaladdresses_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Internal<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_go">
@@ -2009,6 +2425,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_nodejs">
+<a href="#state_encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_googlereferenceid_nodejs">
 <a href="#state_googlereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Reference<wbr>Id</a>
 </span>
@@ -2028,6 +2458,22 @@ issues.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipsecinternaladdresses_nodejs">
+<a href="#state_ipsecinternaladdresses_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Internal<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_nodejs">
@@ -2078,7 +2524,7 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 <a href="#state_privateinterconnectinfos_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2247,6 +2693,20 @@ pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_python">
+<a href="#state_encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: NONE is the default value, which means
+that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of
+attachment. IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN
+gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-encrypted Cloud
+Interconnect create the attachment using this option. Not currently available publicly. Default value: "NONE" Possible
+values: ["NONE", "IPSEC"]
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_google_reference_id_python">
 <a href="#state_google_reference_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>reference_<wbr>id</a>
 </span>
@@ -2266,6 +2726,22 @@ issues.
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipsec_internal_addresses_python">
+<a href="#state_ipsec_internal_addresses_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>internal_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has
+the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the
+interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP
+address will be allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is
+paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated
+from the IP address specified for this interconnect attachment. If this field is not specified for interconnect
+attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment,
+the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_python">

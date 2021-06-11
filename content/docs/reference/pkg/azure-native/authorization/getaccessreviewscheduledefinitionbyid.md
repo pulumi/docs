@@ -22,17 +22,18 @@ API Version: 2021-03-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccessReviewScheduleDefinitionById<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccessReviewScheduleDefinitionByIdArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccessReviewScheduleDefinitionByIdResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccessReviewScheduleDefinitionById<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccessReviewScheduleDefinitionByIdArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccessReviewScheduleDefinitionByIdResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_review_schedule_definition_by_id(</span><span class="nx">schedule_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessReviewScheduleDefinitionByIdResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_review_schedule_definition_by_id(</span><span class="nx">schedule_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessReviewScheduleDefinitionByIdResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccessReviewScheduleDefinitionById<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccessReviewScheduleDefinitionByIdArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccessReviewScheduleDefinitionByIdResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccessReviewScheduleDefinitionById<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccessReviewScheduleDefinitionByIdArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccessReviewScheduleDefinitionByIdResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAccessReviewScheduleDefinitionById` in the Go SDK.
 
@@ -41,7 +42,7 @@ API Version: 2021-03-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccessReviewScheduleDefinitionById </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccessReviewScheduleDefinitionByIdResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccessReviewScheduleDefinitionByIdArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccessReviewScheduleDefinitionByIdResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccessReviewScheduleDefinitionByIdArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -109,6 +110,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="assignmentstate_csharp">
+<a href="#assignmentstate_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,6 +271,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="inactiveduration_csharp">
+<a href="#inactiveduration_csharp" style="color: inherit; text-decoration: inherit;">Inactive<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancedurationindays_csharp">
 <a href="#instancedurationindays_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Duration<wbr>In<wbr>Days</a>
 </span>
@@ -345,6 +362,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="assignmentstate_go">
+<a href="#assignmentstate_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -498,6 +523,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="inactiveduration_go">
+<a href="#inactiveduration_go" style="color: inherit; text-decoration: inherit;">Inactive<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancedurationindays_go">
 <a href="#instancedurationindays_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Duration<wbr>In<wbr>Days</a>
 </span>
@@ -581,6 +614,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="assignmentstate_nodejs">
+<a href="#assignmentstate_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -734,6 +775,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="inactiveduration_nodejs">
+<a href="#inactiveduration_nodejs" style="color: inherit; text-decoration: inherit;">inactive<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="instancedurationindays_nodejs">
 <a href="#instancedurationindays_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Duration<wbr>In<wbr>Days</a>
 </span>
@@ -817,6 +866,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="assignment_state_python">
+<a href="#assignment_state_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The role assignment state eligible/active to review{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -969,6 +1026,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DateTime when the review is scheduled to end. Required if type is endDate{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="inactive_duration_python">
+<a href="#inactive_duration_python" style="color: inherit; text-decoration: inherit;">inactive_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds)){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_duration_in_days_python">
 <a href="#instance_duration_in_days_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>duration_<wbr>in_<wbr>days</a>

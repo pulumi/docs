@@ -22,17 +22,19 @@ API Version: 2020-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebApplicationFirewallPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebApplicationFirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebApplicationFirewallPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebApplicationFirewallPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebApplicationFirewallPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebApplicationFirewallPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_web_application_firewall_policy(</span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWebApplicationFirewallPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_web_application_firewall_policy(</span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWebApplicationFirewallPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebApplicationFirewallPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebApplicationFirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebApplicationFirewallPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebApplicationFirewallPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebApplicationFirewallPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebApplicationFirewallPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWebApplicationFirewallPolicy` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWebApplicationFirewallPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebApplicationFirewallPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebApplicationFirewallPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebApplicationFirewallPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebApplicationFirewallPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -916,7 +918,7 @@ The following output properties are available:
 <a href="#backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of references to IPs defined in network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -948,7 +950,7 @@ The following output properties are available:
 <a href="#backendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1098,7 @@ The following output properties are available:
 <a href="#backend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of references to IPs defined in network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1128,7 +1130,7 @@ The following output properties are available:
 <a href="#backend_addresses_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddressresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddressresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Backend addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1278,7 @@ The following output properties are available:
 <a href="#authenticationcertificates_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway authentication certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1286,7 @@ The following output properties are available:
 <a href="#connectiondraining_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayconnectiondrainingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayconnectiondrainingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection draining of the backend http settings resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,7 +1350,7 @@ The following output properties are available:
 <a href="#probe_csharp" style="color: inherit; text-decoration: inherit;">Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Probe resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1380,7 +1382,7 @@ The following output properties are available:
 <a href="#trustedrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted root certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1720,7 +1722,7 @@ The following output properties are available:
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway authentication certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1730,7 @@ The following output properties are available:
 <a href="#connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayconnectiondrainingresponse">Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayconnectiondrainingresponse">Application<wbr>Gateway<wbr>Connection<wbr>Draining<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection draining of the backend http settings resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1794,7 @@ The following output properties are available:
 <a href="#probe_python" style="color: inherit; text-decoration: inherit;">probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Probe resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1826,7 @@ The following output properties are available:
 <a href="#trusted_root_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted root certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2316,7 +2318,7 @@ The following output properties are available:
 <a href="#privatelinkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the application gateway private link configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2326,7 @@ The following output properties are available:
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2334,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2568,7 +2570,7 @@ The following output properties are available:
 <a href="#private_link_configuration_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the application gateway private link configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2576,7 +2578,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2584,7 +2586,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2920,7 +2922,7 @@ The following output properties are available:
 <a href="#customerrorconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the HTTP listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2928,7 +2930,7 @@ The following output properties are available:
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2938,7 @@ The following output properties are available:
 <a href="#frontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP configuration resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2944,7 +2946,7 @@ The following output properties are available:
 <a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Frontend port resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3000,7 +3002,7 @@ The following output properties are available:
 <a href="#sslcertificate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL certificate resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3008,7 +3010,7 @@ The following output properties are available:
 <a href="#sslprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL profile resource of the application gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3292,7 +3294,7 @@ The following output properties are available:
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">Sequence[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">Sequence[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the HTTP listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3300,7 +3302,7 @@ The following output properties are available:
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3308,7 +3310,7 @@ The following output properties are available:
 <a href="#frontend_ip_configuration_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP configuration resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3318,7 @@ The following output properties are available:
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Frontend port resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3372,7 +3374,7 @@ The following output properties are available:
 <a href="#ssl_certificate_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL certificate resource of an application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3380,7 +3382,7 @@ The following output properties are available:
 <a href="#ssl_profile_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL profile resource of the application gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3436,7 +3438,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3592,7 +3594,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. A subnet from where application gateway gets its private address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3632,7 +3634,7 @@ The following output properties are available:
 <a href="#backendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of URL path map path rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3640,7 +3642,7 @@ The following output properties are available:
 <a href="#backendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of URL path map path rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3648,7 +3650,7 @@ The following output properties are available:
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3680,7 +3682,7 @@ The following output properties are available:
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of URL path map path rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3688,7 +3690,7 @@ The following output properties are available:
 <a href="#rewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rule set resource of URL path map path rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3908,7 +3910,7 @@ The following output properties are available:
 <a href="#backend_address_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of URL path map path rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3916,7 +3918,7 @@ The following output properties are available:
 <a href="#backend_http_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of URL path map path rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3924,7 +3926,7 @@ The following output properties are available:
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3956,7 +3958,7 @@ The following output properties are available:
 <a href="#redirect_configuration_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of URL path map path rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3964,7 +3966,7 @@ The following output properties are available:
 <a href="#rewrite_rule_set_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rule set resource of URL path map path rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3996,7 +3998,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4036,7 +4038,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4200,7 +4202,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4240,7 +4242,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4288,7 +4290,7 @@ The following output properties are available:
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of application gateway private link ip configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4444,7 +4446,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Ip<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of application gateway private link ip configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4532,7 +4534,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4760,7 +4762,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4908,7 +4910,7 @@ The following output properties are available:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematchresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematchresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Criterion for classifying a healthy probe response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5280,7 +5282,7 @@ The following output properties are available:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematchresponse">Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobehealthresponsematchresponse">Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Criterion for classifying a healthy probe response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5408,7 +5410,7 @@ The following output properties are available:
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path rules specifying redirect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5424,7 +5426,7 @@ The following output properties are available:
 <a href="#requestroutingrules_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request routing specifying redirect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5432,7 +5434,7 @@ The following output properties are available:
 <a href="#targetlistener_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to a listener to redirect the request to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5448,7 +5450,7 @@ The following output properties are available:
 <a href="#urlpathmaps_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Url path maps specifying default redirect configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5708,7 +5710,7 @@ The following output properties are available:
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Path rules specifying redirect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5724,7 +5726,7 @@ The following output properties are available:
 <a href="#request_routing_rules_python" style="color: inherit; text-decoration: inherit;">request_<wbr>routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Request routing specifying redirect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5732,7 +5734,7 @@ The following output properties are available:
 <a href="#target_listener_python" style="color: inherit; text-decoration: inherit;">target_<wbr>listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to a listener to redirect the request to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5748,7 +5750,7 @@ The following output properties are available:
 <a href="#url_path_maps_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Url path maps specifying default redirect configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5788,7 +5790,7 @@ The following output properties are available:
 <a href="#backendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5796,7 +5798,7 @@ The following output properties are available:
 <a href="#backendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5804,7 +5806,7 @@ The following output properties are available:
 <a href="#httplistener_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http listener resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5836,7 +5838,7 @@ The following output properties are available:
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5844,7 +5846,7 @@ The following output properties are available:
 <a href="#rewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rewrite Rule Set resource in Basic rule of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5860,7 +5862,7 @@ The following output properties are available:
 <a href="#urlpathmap_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}URL path map resource of the application gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6112,7 +6114,7 @@ The following output properties are available:
 <a href="#backend_address_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6120,7 +6122,7 @@ The following output properties are available:
 <a href="#backend_http_settings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6128,7 +6130,7 @@ The following output properties are available:
 <a href="#http_listener_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http listener resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6160,7 +6162,7 @@ The following output properties are available:
 <a href="#redirect_configuration_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Redirect configuration resource of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6168,7 +6170,7 @@ The following output properties are available:
 <a href="#rewrite_rule_set_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rewrite Rule Set resource in Basic rule of the application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6184,7 +6186,7 @@ The following output properties are available:
 <a href="#url_path_map_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}URL path map resource of the application gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6224,7 +6226,7 @@ The following output properties are available:
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint connections on application gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6256,7 +6258,7 @@ The following output properties are available:
 <a href="#authenticationcertificates_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6264,7 +6266,7 @@ The following output properties are available:
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Autoscale Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6272,7 +6274,7 @@ The following output properties are available:
 <a href="#backendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6280,7 +6282,7 @@ The following output properties are available:
 <a href="#backendhttpsettingscollection_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6288,7 +6290,7 @@ The following output properties are available:
 <a href="#customerrorconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6312,7 +6314,7 @@ The following output properties are available:
 <a href="#firewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6328,7 +6330,7 @@ The following output properties are available:
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6336,7 +6338,7 @@ The following output properties are available:
 <a href="#frontendports_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6344,7 +6346,7 @@ The following output properties are available:
 <a href="#gatewayipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6352,7 +6354,7 @@ The following output properties are available:
 <a href="#httplisteners_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6368,7 +6370,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the application gateway, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6384,7 +6386,7 @@ The following output properties are available:
 <a href="#privatelinkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}PrivateLink configurations on application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6392,7 +6394,7 @@ The following output properties are available:
 <a href="#probes_csharp" style="color: inherit; text-decoration: inherit;">Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayproberesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayproberesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Probe<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Probes of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6400,7 +6402,7 @@ The following output properties are available:
 <a href="#redirectconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6408,7 +6410,7 @@ The following output properties are available:
 <a href="#requestroutingrules_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request routing rules of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6416,7 +6418,7 @@ The following output properties are available:
 <a href="#rewriterulesets_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules for the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6424,7 +6426,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6432,7 +6434,7 @@ The following output properties are available:
 <a href="#sslcertificates_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6440,7 +6442,7 @@ The following output properties are available:
 <a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6448,7 +6450,7 @@ The following output properties are available:
 <a href="#sslprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6464,7 +6466,7 @@ The following output properties are available:
 <a href="#trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6472,7 +6474,7 @@ The following output properties are available:
 <a href="#trustedrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6480,7 +6482,7 @@ The following output properties are available:
 <a href="#urlpathmaps_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6488,7 +6490,7 @@ The following output properties are available:
 <a href="#webapplicationfirewallconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Application<wbr>Firewall<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywebapplicationfirewallconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Web<wbr>Application<wbr>Firewall<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaywebapplicationfirewallconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Web<wbr>Application<wbr>Firewall<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Web application firewall configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7148,7 +7150,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivateendpointconnectionresponse">Sequence[Application<wbr>Gateway<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivateendpointconnectionresponse">Sequence[Application<wbr>Gateway<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint connections on application gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7180,7 +7182,7 @@ The following output properties are available:
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7188,7 +7190,7 @@ The following output properties are available:
 <a href="#autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfigurationresponse">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfigurationresponse">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Autoscale Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7196,7 +7198,7 @@ The following output properties are available:
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7204,7 +7206,7 @@ The following output properties are available:
 <a href="#backend_http_settings_collection_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>http_<wbr>settings_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingsresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingsresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7212,7 +7214,7 @@ The following output properties are available:
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">Sequence[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorresponse">Sequence[Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Custom error configurations of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7236,7 +7238,7 @@ The following output properties are available:
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the FirewallPolicy resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7252,7 +7254,7 @@ The following output properties are available:
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7260,7 +7262,7 @@ The following output properties are available:
 <a href="#frontend_ports_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendportresponse">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendportresponse">Sequence[Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7268,7 +7270,7 @@ The following output properties are available:
 <a href="#gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7276,7 +7278,7 @@ The following output properties are available:
 <a href="#http_listeners_python" style="color: inherit; text-decoration: inherit;">http_<wbr>listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenerresponse">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenerresponse">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7292,7 +7294,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the application gateway, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7308,7 +7310,7 @@ The following output properties are available:
 <a href="#private_link_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprivatelinkconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayprivatelinkconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Private<wbr>Link<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}PrivateLink configurations on application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7316,7 +7318,7 @@ The following output properties are available:
 <a href="#probes_python" style="color: inherit; text-decoration: inherit;">probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayproberesponse">Sequence[Application<wbr>Gateway<wbr>Probe<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayproberesponse">Sequence[Application<wbr>Gateway<wbr>Probe<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Probes of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7324,7 +7326,7 @@ The following output properties are available:
 <a href="#redirect_configurations_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7332,7 +7334,7 @@ The following output properties are available:
 <a href="#request_routing_rules_python" style="color: inherit; text-decoration: inherit;">request_<wbr>routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingruleresponse">Sequence[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingruleresponse">Sequence[Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Request routing rules of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7340,7 +7342,7 @@ The following output properties are available:
 <a href="#rewrite_rule_sets_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetresponse">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetresponse">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules for the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7348,7 +7350,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayskuresponse">Application<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayskuresponse">Application<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7356,7 +7358,7 @@ The following output properties are available:
 <a href="#ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7364,7 +7366,7 @@ The following output properties are available:
 <a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7372,7 +7374,7 @@ The following output properties are available:
 <a href="#ssl_profiles_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslprofileresponse">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslprofileresponse">Sequence[Application<wbr>Gateway<wbr>Ssl<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7388,7 +7390,7 @@ The following output properties are available:
 <a href="#trusted_client_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>client_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedclientcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Client<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7396,7 +7398,7 @@ The following output properties are available:
 <a href="#trusted_root_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificateresponse">Sequence[Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7404,7 +7406,7 @@ The following output properties are available:
 <a href="#url_path_maps_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmapresponse">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmapresponse">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7412,7 +7414,7 @@ The following output properties are available:
 <a href="#web_application_firewall_configuration_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywebapplicationfirewallconfigurationresponse">Application<wbr>Gateway<wbr>Web<wbr>Application<wbr>Firewall<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaywebapplicationfirewallconfigurationresponse">Application<wbr>Gateway<wbr>Web<wbr>Application<wbr>Firewall<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Web application firewall configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7436,7 +7438,7 @@ The following output properties are available:
 <a href="#requestheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Request Header Actions in the Action Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7444,7 +7446,7 @@ The following output properties are available:
 <a href="#responseheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Response Header Actions in the Action Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7452,7 +7454,7 @@ The following output properties are available:
 <a href="#urlconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Url Configuration Action in the Action Set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7520,7 +7522,7 @@ The following output properties are available:
 <a href="#request_header_configurations_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Request Header Actions in the Action Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7528,7 +7530,7 @@ The following output properties are available:
 <a href="#response_header_configurations_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayheaderconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>Header<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Response Header Actions in the Action Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7536,7 +7538,7 @@ The following output properties are available:
 <a href="#url_configuration_python" style="color: inherit; text-decoration: inherit;">url_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlconfigurationresponse">Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlconfigurationresponse">Application<wbr>Gateway<wbr>Url<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Url Configuration Action in the Action Set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7700,7 +7702,7 @@ The following output properties are available:
 <a href="#actionset_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleactionsetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleactionsetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to be done as part of the rewrite Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7708,7 +7710,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions based on which the action set execution will be evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7808,7 +7810,7 @@ The following output properties are available:
 <a href="#action_set_python" style="color: inherit; text-decoration: inherit;">action_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleactionsetresponse">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleactionsetresponse">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Action<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of actions to be done as part of the rewrite Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7816,7 +7818,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleconditionresponse">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleconditionresponse">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Conditions based on which the action set execution will be evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7880,7 +7882,7 @@ The following output properties are available:
 <a href="#rewriterules_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules in the rewrite rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8012,7 +8014,7 @@ The following output properties are available:
 <a href="#rewrite_rules_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleresponse">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleresponse">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Rewrite rules in the rewrite rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8656,7 +8658,7 @@ The following output properties are available:
 <a href="#clientauthconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayclientauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayclientauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Client authentication configuration of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8680,7 +8682,7 @@ The following output properties are available:
 <a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8688,7 +8690,7 @@ The following output properties are available:
 <a href="#trustedclientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted client certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8860,7 +8862,7 @@ The following output properties are available:
 <a href="#client_auth_configuration_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayclientauthconfigurationresponse">Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayclientauthconfigurationresponse">Application<wbr>Gateway<wbr>Client<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Client authentication configuration of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8884,7 +8886,7 @@ The following output properties are available:
 <a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicyresponse">Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL policy of the application gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8892,7 +8894,7 @@ The following output properties are available:
 <a href="#trusted_client_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>client_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of references to application gateway trusted client certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9504,7 +9506,7 @@ The following output properties are available:
 <a href="#defaultbackendaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default backend address pool resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9512,7 +9514,7 @@ The following output properties are available:
 <a href="#defaultbackendhttpsettings_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default backend http settings resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9520,7 +9522,7 @@ The following output properties are available:
 <a href="#defaultredirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default redirect configuration resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9528,7 +9530,7 @@ The following output properties are available:
 <a href="#defaultrewriteruleset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Rewrite<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default Rewrite rule set resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9552,7 +9554,7 @@ The following output properties are available:
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaypathruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaypathruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Path rule of URL path map resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9756,7 +9758,7 @@ The following output properties are available:
 <a href="#default_backend_address_pool_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default backend address pool resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9764,7 +9766,7 @@ The following output properties are available:
 <a href="#default_backend_http_settings_python" style="color: inherit; text-decoration: inherit;">default_<wbr>backend_<wbr>http_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default backend http settings resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9772,7 +9774,7 @@ The following output properties are available:
 <a href="#default_redirect_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default redirect configuration resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9780,7 +9782,7 @@ The following output properties are available:
 <a href="#default_rewrite_rule_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rewrite_<wbr>rule_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default Rewrite rule set resource of URL path map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9804,7 +9806,7 @@ The following output properties are available:
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaypathruleresponse">Sequence[Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaypathruleresponse">Sequence[Application<wbr>Gateway<wbr>Path<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Path rule of URL path map resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9852,7 +9854,7 @@ The following output properties are available:
 <a href="#disabledrulegroups_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Rule<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disabled rule groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9860,7 +9862,7 @@ The following output properties are available:
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewallexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewallexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exclusion list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10104,7 +10106,7 @@ The following output properties are available:
 <a href="#disabled_rule_groups_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>rule_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroupresponse">Sequence[Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewalldisabledrulegroupresponse">Sequence[Application<wbr>Gateway<wbr>Firewall<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The disabled rule groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10112,7 +10114,7 @@ The following output properties are available:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfirewallexclusionresponse">Sequence[Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayfirewallexclusionresponse">Sequence[Application<wbr>Gateway<wbr>Firewall<wbr>Exclusion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The exclusion list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10436,7 +10438,7 @@ The following output properties are available:
 <a href="#backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10452,7 +10454,7 @@ The following output properties are available:
 <a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to load balancing rules that use this backend address pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10460,7 +10462,7 @@ The following output properties are available:
 <a href="#outboundrule_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to an outbound rule that uses this backend address pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10468,7 +10470,7 @@ The following output properties are available:
 <a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to outbound rules that use this backend address pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10500,7 +10502,7 @@ The following output properties are available:
 <a href="#loadbalancerbackendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10712,7 +10714,7 @@ The following output properties are available:
 <a href="#backend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10728,7 +10730,7 @@ The following output properties are available:
 <a href="#load_balancing_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to load balancing rules that use this backend address pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10736,7 +10738,7 @@ The following output properties are available:
 <a href="#outbound_rule_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to an outbound rule that uses this backend address pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10744,7 +10746,7 @@ The following output properties are available:
 <a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to outbound rules that use this backend address pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10776,7 +10778,7 @@ The following output properties are available:
 <a href="#load_balancer_backend_addresses_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddressresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddressresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10892,7 +10894,7 @@ The following output properties are available:
 <a href="#ddoscustompolicy_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Custom<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DDoS custom policy associated with the public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10976,7 +10978,7 @@ The following output properties are available:
 <a href="#ddos_custom_policy_python" style="color: inherit; text-decoration: inherit;">ddos_<wbr>custom_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DDoS custom policy associated with the public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11050,7 +11052,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -11102,7 +11112,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -11154,7 +11172,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -11206,7 +11232,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
@@ -11452,7 +11486,7 @@ The following output properties are available:
 <a href="#flowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11460,7 +11494,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogformatparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlogformatparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11484,7 +11518,7 @@ The following output properties are available:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11800,7 +11834,7 @@ The following output properties are available:
 <a href="#flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Traffic<wbr>Analytics<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Traffic<wbr>Analytics<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11808,7 +11842,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogformatparametersresponse">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowlogformatparametersresponse">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11832,7 +11866,7 @@ The following output properties are available:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyparametersresponse">Retention<wbr>Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyparametersresponse">Retention<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11864,7 +11898,7 @@ The following output properties are available:
 <a href="#inboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to inbound pools that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11872,7 +11906,7 @@ The following output properties are available:
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to inbound rules that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11880,7 +11914,7 @@ The following output properties are available:
 <a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to load balancing rules that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11888,7 +11922,7 @@ The following output properties are available:
 <a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to outbound rules that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11952,7 +11986,7 @@ The following output properties are available:
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11960,7 +11994,7 @@ The following output properties are available:
 <a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Public IP Prefix resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11968,7 +12002,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12260,7 +12294,7 @@ The following output properties are available:
 <a href="#inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to inbound pools that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12268,7 +12302,7 @@ The following output properties are available:
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to inbound rules that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12276,7 +12310,7 @@ The following output properties are available:
 <a href="#load_balancing_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to load balancing rules that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12284,7 +12318,7 @@ The following output properties are available:
 <a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to outbound rules that use this frontend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12348,7 +12382,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12356,7 +12390,7 @@ The following output properties are available:
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Public IP Prefix resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12364,7 +12398,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12428,7 +12462,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource to create a container network interface ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12584,7 +12618,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource to create a container network interface ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12648,7 +12682,7 @@ The following output properties are available:
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12656,7 +12690,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12852,7 +12886,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12860,7 +12894,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12876,7 +12910,7 @@ The following output properties are available:
 <a href="#backendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12932,7 +12966,7 @@ The following output properties are available:
 <a href="#frontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to frontend IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13200,7 +13234,7 @@ The following output properties are available:
 <a href="#backend_ip_configuration_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13256,7 +13290,7 @@ The following output properties are available:
 <a href="#frontend_ip_configuration_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to frontend IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13396,7 +13430,7 @@ The following output properties are available:
 <a href="#networkinterfaceipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to IP address defined in network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13412,7 +13446,7 @@ The following output properties are available:
 <a href="#loadbalancerfrontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the frontend ip address configuration defined in regional loadbalancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13428,7 +13462,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to an existing subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13436,7 +13470,7 @@ The following output properties are available:
 <a href="#virtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to an existing virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13552,7 +13586,7 @@ The following output properties are available:
 <a href="#network_interface_ip_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to IP address defined in network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13568,7 +13602,7 @@ The following output properties are available:
 <a href="#load_balancer_frontend_ip_configuration_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the frontend ip address configuration defined in regional loadbalancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13584,7 +13618,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to an existing subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13592,7 +13626,7 @@ The following output properties are available:
 <a href="#virtual_network_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to an existing virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13616,7 +13650,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13676,7 +13710,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13792,7 +13826,7 @@ The following output properties are available:
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13876,7 +13910,7 @@ The following output properties are available:
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13892,7 +13926,7 @@ The following output properties are available:
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed rule sets that are associated with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13900,7 +13934,7 @@ The following output properties are available:
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#owaspcrsexclusionentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Owasp<wbr>Crs<wbr>Exclusion<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#owaspcrsexclusionentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Owasp<wbr>Crs<wbr>Exclusion<wbr>Entry<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Exclusions that are applied on the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13952,7 +13986,7 @@ The following output properties are available:
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The managed rule sets that are associated with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13960,7 +13994,7 @@ The following output properties are available:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#owaspcrsexclusionentryresponse">Sequence[Owasp<wbr>Crs<wbr>Exclusion<wbr>Entry<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#owaspcrsexclusionentryresponse">Sequence[Owasp<wbr>Crs<wbr>Exclusion<wbr>Entry<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Exclusions that are applied on the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14000,7 +14034,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14108,7 +14142,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14216,7 +14250,7 @@ The following output properties are available:
 <a href="#matchvariables_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Variable<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14348,7 +14382,7 @@ The following output properties are available:
 <a href="#match_variables_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchvariableresponse">Sequence[Match<wbr>Variable<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchvariableresponse">Sequence[Match<wbr>Variable<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14459,6 +14493,526 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="natgatewayresponse">Nat<wbr>Gateway<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnets_csharp">
+<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idletimeoutinminutes_csharp">
+<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_csharp">
+<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipprefixes_csharp">
+<a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnets_go">
+<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idletimeoutinminutes_go">
+<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_go">
+<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipprefixes_go">
+<a href="#publicipprefixes_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnets_nodejs">
+<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idletimeoutinminutes_nodejs">
+<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_nodejs">
+<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipprefixes_nodejs">
+<a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the NAT gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subnets_python">
+<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the subnets using this nat gateway resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idle_timeout_in_minutes_python">
+<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the nat gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_addresses_python">
+<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_prefixes_python">
+<a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones denoting the zone in which Nat Gateway should be deployed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="natgatewayskuresponse">Nat<wbr>Gateway<wbr>Sku<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of Nat Gateway SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkinterfacednssettingsresponse">Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response</h4>
@@ -14776,7 +15330,7 @@ The following output properties are available:
 <a href="#privatelinkconnectionproperties_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Connection<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationprivatelinkconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Private<wbr>Link<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationprivatelinkconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Private<wbr>Link<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateLinkConnection properties for the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14792,7 +15346,7 @@ The following output properties are available:
 <a href="#applicationgatewaybackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference to ApplicationGatewayBackendAddressPool resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14800,7 +15354,7 @@ The following output properties are available:
 <a href="#applicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Application security groups in which the IP configuration is included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14816,7 +15370,7 @@ The following output properties are available:
 <a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendaddresspoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference to LoadBalancerBackendAddressPool resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14824,7 +15378,7 @@ The following output properties are available:
 <a href="#loadbalancerinboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references of LoadBalancerInboundNatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14872,7 +15426,7 @@ The following output properties are available:
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Public IP address bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14880,15 +15434,23 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworktaps_csharp">
 <a href="#virtualnetworktaps_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Taps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworktapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworktapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The reference to Virtual Network Taps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15015,6 +15577,14 @@ The following output properties are available:
         <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworktaps_go">
 <a href="#virtualnetworktaps_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Taps</a>
@@ -15148,6 +15718,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworktaps_nodejs">
 <a href="#virtualnetworktaps_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Taps</a>
 </span>
@@ -15172,7 +15750,7 @@ The following output properties are available:
 <a href="#private_link_connection_properties_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>connection_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationprivatelinkconnectionpropertiesresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Private<wbr>Link<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationprivatelinkconnectionpropertiesresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Private<wbr>Link<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateLinkConnection properties for the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15188,7 +15766,7 @@ The following output properties are available:
 <a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspoolresponse">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The reference to ApplicationGatewayBackendAddressPool resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15196,7 +15774,7 @@ The following output properties are available:
 <a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">Sequence[Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">Sequence[Application<wbr>Security<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Application security groups in which the IP configuration is included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15212,7 +15790,7 @@ The following output properties are available:
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendaddresspoolresponse">Sequence[Backend<wbr>Address<wbr>Pool<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendaddresspoolresponse">Sequence[Backend<wbr>Address<wbr>Pool<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The reference to LoadBalancerBackendAddressPool resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15220,7 +15798,7 @@ The following output properties are available:
 <a href="#load_balancer_inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of references of LoadBalancerInboundNatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15268,7 +15846,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Public IP address bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15276,15 +15854,23 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet bound to the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_taps_python">
 <a href="#virtual_network_taps_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>taps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworktapresponse">Sequence[Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworktapresponse">Sequence[Virtual<wbr>Network<wbr>Tap<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The reference to Virtual Network Taps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15300,7 +15886,7 @@ The following output properties are available:
 <a href="#dscpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the dscp configuration to which the network interface is linked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15348,7 +15934,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the private endpoint to which the network interface is linked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15372,7 +15958,7 @@ The following output properties are available:
 <a href="#tapconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Tap<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of TapConfigurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15388,7 +15974,7 @@ The following output properties are available:
 <a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15396,7 +15982,7 @@ The following output properties are available:
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacednssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacednssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings in network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15420,7 +16006,7 @@ The following output properties are available:
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15436,7 +16022,7 @@ The following output properties are available:
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IPConfigurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15448,13 +16034,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="migrationphase_csharp">
+<a href="#migrationphase_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networksecuritygroup_csharp">
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservice_csharp">
+<a href="#privatelinkservice_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -15620,6 +16230,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="migrationphase_go">
+<a href="#migrationphase_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networksecuritygroup_go">
 <a href="#networksecuritygroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
@@ -15627,6 +16245,22 @@ The following output properties are available:
         <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservice_go">
+<a href="#privatelinkservice_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -15792,6 +16426,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="migrationphase_nodejs">
+<a href="#migrationphase_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networksecuritygroup_nodejs">
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
@@ -15799,6 +16441,22 @@ The following output properties are available:
         <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservice_nodejs">
+<a href="#privatelinkservice_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -15816,7 +16474,7 @@ The following output properties are available:
 <a href="#dscp_configuration_python" style="color: inherit; text-decoration: inherit;">dscp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the dscp configuration to which the network interface is linked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15864,7 +16522,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the private endpoint to which the network interface is linked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15888,7 +16546,7 @@ The following output properties are available:
 <a href="#tap_configurations_python" style="color: inherit; text-decoration: inherit;">tap_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">Sequence[Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">Sequence[Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of TapConfigurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15904,7 +16562,7 @@ The following output properties are available:
 <a href="#virtual_machine_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15912,7 +16570,7 @@ The following output properties are available:
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacednssettingsresponse">Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacednssettingsresponse">Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings in network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15936,7 +16594,7 @@ The following output properties are available:
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15952,7 +16610,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of IPConfigurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15964,13 +16622,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="migration_phase_python">
+<a href="#migration_phase_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="network_security_group_python">
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of Network Interface resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_python">
+<a href="#private_link_service_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Privatelinkservice of the network interface resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -16032,7 +16714,7 @@ The following output properties are available:
 <a href="#virtualnetworktap_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Tap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworktapresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworktapresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Tap<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Virtual Network Tap resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16188,7 +16870,7 @@ The following output properties are available:
 <a href="#virtual_network_tap_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>tap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworktapresponse">Virtual<wbr>Network<wbr>Tap<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworktapresponse">Virtual<wbr>Network<wbr>Tap<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Virtual Network Tap resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16204,7 +16886,7 @@ The following output properties are available:
 <a href="#defaultsecurityrules_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The default security rules of network security group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16220,7 +16902,7 @@ The following output properties are available:
 <a href="#flowlogs_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#flowlogresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Flow<wbr>Log<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to flow log resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16236,7 +16918,7 @@ The following output properties are available:
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16260,7 +16942,7 @@ The following output properties are available:
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16292,7 +16974,7 @@ The following output properties are available:
 <a href="#securityrules_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Security<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of security rules of the network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16528,7 +17210,7 @@ The following output properties are available:
 <a href="#default_security_rules_python" style="color: inherit; text-decoration: inherit;">default_<wbr>security_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityruleresponse">Sequence[Security<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securityruleresponse">Sequence[Security<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The default security rules of network security group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16544,7 +17226,7 @@ The following output properties are available:
 <a href="#flow_logs_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogresponse">Sequence[Flow<wbr>Log<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flowlogresponse">Sequence[Flow<wbr>Log<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to flow log resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16560,7 +17242,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16584,7 +17266,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Sequence[Subnet<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetresponse">Sequence[Subnet<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16616,7 +17298,7 @@ The following output properties are available:
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityruleresponse">Sequence[Security<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securityruleresponse">Sequence[Security<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of security rules of the network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16925,6 +17607,282 @@ The following output properties are available:
     <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linkidentifier_csharp">
+<a href="#linkidentifier_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_csharp">
+<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linkidentifier_go">
+<a href="#linkidentifier_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_go">
+<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linkidentifier_nodejs">
+<a href="#linkidentifier_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_nodejs">
+<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="link_identifier_python">
+<a href="#link_identifier_python" style="color: inherit; text-decoration: inherit;">link_<wbr>identifier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The consumer link id.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_connection_state_python">
+<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
 
 
@@ -16952,7 +17910,7 @@ The following output properties are available:
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the network interfaces created for this private endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16976,7 +17934,7 @@ The following output properties are available:
 <a href="#customdnsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Dns<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16984,7 +17942,7 @@ The following output properties are available:
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17008,7 +17966,7 @@ The following output properties are available:
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17016,7 +17974,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A grouping of information about the connection to the remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17024,7 +17982,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet from which the private IP will be allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17276,7 +18234,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the network interfaces created for this private endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17300,7 +18258,7 @@ The following output properties are available:
 <a href="#custom_dns_configs_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">Sequence[Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">Sequence[Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17308,7 +18266,7 @@ The following output properties are available:
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17332,7 +18290,7 @@ The following output properties are available:
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17340,7 +18298,7 @@ The following output properties are available:
 <a href="#private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A grouping of information about the connection to the remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17348,7 +18306,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet from which the private IP will be allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17420,7 +18378,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17648,7 +18606,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17783,6 +18741,1014 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkserviceipconfigurationresponse">Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressversion_csharp">
+<a href="#privateipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_csharp">
+<a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressversion_go">
+<a href="#privateipaddressversion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_go">
+<a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressversion_nodejs">
+<a href="#privateipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_nodejs">
+<a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service IP configuration resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of private link service ip configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the ip configuration is primary or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_version_python">
+<a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_allocation_method_python">
+<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_csharp">
+<a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_go">
+<a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_nodejs">
+<a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_python">
+<a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_csharp">
+<a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_go">
+<a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_nodejs">
+<a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="subscriptions_python">
+<a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of subscriptions.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkserviceresponse">Private<wbr>Link<wbr>Service<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alias_csharp">
+<a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoapproval_csharp">
+<a href="#autoapproval_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</a></span>
+    </dt>
+    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableproxyprotocol_csharp">
+<a href="#enableproxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_csharp">
+<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerfrontendipconfigurations_csharp">
+<a href="#loadbalancerfrontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>IPConfiguration<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</a></span>
+    </dt>
+    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alias_go">
+<a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">[]Network<wbr>Interface<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoapproval_go">
+<a href="#autoapproval_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</a></span>
+    </dt>
+    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableproxyprotocol_go">
+<a href="#enableproxyprotocol_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_go">
+<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">[]Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerfrontendipconfigurations_go">
+<a href="#loadbalancerfrontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">[]Frontend<wbr>IPConfiguration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</a></span>
+    </dt>
+    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alias_nodejs">
+<a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoapproval_nodejs">
+<a href="#autoapproval_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</a></span>
+    </dt>
+    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableproxyprotocol_nodejs">
+<a href="#enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_nodejs">
+<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerfrontendipconfigurations_nodejs">
+<a href="#loadbalancerfrontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">Frontend<wbr>IPConfiguration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</a></span>
+    </dt>
+    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alias_python">
+<a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias of the private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the network interfaces created for this private link service.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of list about connections to the private endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private link service resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auto_approval_python">
+<a href="#auto_approval_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>approval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponseautoapproval">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Auto<wbr>Approval</a></span>
+    </dt>
+    <dd>{{% md %}}The auto-approval list of the private link service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_proxy_protocol_python">
+<a href="#enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the private link service is enabled for proxy protocol or not.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fqdns_python">
+<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of Fqdn.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceipconfigurationresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Ip<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of private link service IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_frontend_ip_configurations_python">
+<a href="#load_balancer_frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">Sequence[Frontend<wbr>IPConfiguration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of references to the load balancer IP configurations.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkservicepropertiesresponsevisibility">Private<wbr>Link<wbr>Service<wbr>Properties<wbr>Response<wbr>Visibility</a></span>
+    </dt>
+    <dd>{{% md %}}The visibility list of the private link service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publicipaddressdnssettingsresponse">Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response</h4>
@@ -17920,7 +19886,7 @@ The following output properties are available:
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP configuration associated with the public IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17960,7 +19926,7 @@ The following output properties are available:
 <a href="#ddossettings_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ddos<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ddossettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ddos<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17968,7 +19934,7 @@ The following output properties are available:
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17976,7 +19942,7 @@ The following output properties are available:
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18008,9 +19974,17 @@ The following output properties are available:
 <a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ip<wbr>Tag<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedpublicipaddress_csharp">
+<a href="#linkedpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The linked public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -18019,6 +19993,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="migrationphase_csharp">
+<a href="#migrationphase_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natgateway_csharp">
+<a href="#natgateway_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_csharp">
 <a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
@@ -18040,15 +20030,23 @@ The following output properties are available:
 <a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicepublicipaddress_csharp">
+<a href="#servicepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18176,6 +20174,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="linkedpublicipaddress_go">
+<a href="#linkedpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Public<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The linked public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -18183,6 +20189,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="migrationphase_go">
+<a href="#migrationphase_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natgateway_go">
+<a href="#natgateway_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayresponse">Nat<wbr>Gateway<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_go">
 <a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
@@ -18207,6 +20229,14 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicepublicipaddress_go">
+<a href="#servicepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Public<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -18340,6 +20370,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="linkedpublicipaddress_nodejs">
+<a href="#linkedpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Public<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The linked public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -18347,6 +20385,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="migrationphase_nodejs">
+<a href="#migrationphase_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="natgateway_nodejs">
+<a href="#natgateway_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayresponse">Nat<wbr>Gateway<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddressversion_nodejs">
 <a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
@@ -18371,6 +20425,14 @@ The following output properties are available:
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="servicepublicipaddress_nodejs">
+<a href="#servicepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Public<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -18412,7 +20474,7 @@ The following output properties are available:
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP configuration associated with the public IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18452,7 +20514,7 @@ The following output properties are available:
 <a href="#ddos_settings_python" style="color: inherit; text-decoration: inherit;">ddos_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ddossettingsresponse">Ddos<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ddossettingsresponse">Ddos<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The DDoS protection custom policy associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18460,7 +20522,7 @@ The following output properties are available:
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressdnssettingsresponse">Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressdnssettingsresponse">Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the DNS record associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18468,7 +20530,7 @@ The following output properties are available:
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the public ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18500,9 +20562,17 @@ The following output properties are available:
 <a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iptagresponse">Sequence[Ip<wbr>Tag<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iptagresponse">Sequence[Ip<wbr>Tag<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linked_public_ip_address_python">
+<a href="#linked_public_ip_address_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>public_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The linked public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -18511,6 +20581,22 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="migration_phase_python">
+<a href="#migration_phase_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>phase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Migration phase of Public IP Address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nat_gateway_python">
+<a href="#nat_gateway_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewayresponse">Nat<wbr>Gateway<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The NatGateway for the Public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_version_python">
 <a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
@@ -18532,15 +20618,23 @@ The following output properties are available:
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Public IP Prefix this Public IP Address should be allocated from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_public_ip_address_python">
+<a href="#service_public_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>public_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The service public IP address of the public IP address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The public IP address SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19324,7 +21418,7 @@ The following output properties are available:
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19364,7 +21458,7 @@ The following output properties are available:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Route<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of routes contained within a route table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19600,7 +21694,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Sequence[Subnet<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetresponse">Sequence[Subnet<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19640,7 +21734,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Sequence[Route<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routeresponse">Sequence[Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of routes contained within a route table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19728,7 +21822,7 @@ The following output properties are available:
 <a href="#destinationapplicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19792,7 +21886,7 @@ The following output properties are available:
 <a href="#sourceapplicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Security<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20220,7 +22314,7 @@ The following output properties are available:
 <a href="#destination_application_security_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>application_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">Sequence[Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">Sequence[Application<wbr>Security<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20284,7 +22378,7 @@ The following output properties are available:
 <a href="#source_application_security_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>application_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroupresponse">Sequence[Application<wbr>Security<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroupresponse">Sequence[Application<wbr>Security<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20916,7 +23010,7 @@ The following output properties are available:
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20948,7 +23042,7 @@ The following output properties are available:
 <a href="#serviceendpointpolicydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policy<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpolicydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointpolicydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of service endpoint policy definitions of the service endpoint policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21192,7 +23286,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Sequence[Subnet<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetresponse">Sequence[Subnet<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of references to subnets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21224,7 +23318,7 @@ The following output properties are available:
 <a href="#service_endpoint_policy_definitions_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>policy_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpolicydefinitionresponse">Sequence[Service<wbr>Endpoint<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceendpointpolicydefinitionresponse">Sequence[Service<wbr>Endpoint<wbr>Policy<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of service endpoint policy definitions of the service endpoint policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21424,7 +23518,7 @@ The following output properties are available:
 <a href="#ipconfigurationprofiles_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of IP configuration profiles which reference this subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21432,7 +23526,7 @@ The following output properties are available:
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the network interface IP configurations using subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21440,7 +23534,7 @@ The following output properties are available:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to private endpoints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21464,7 +23558,7 @@ The following output properties are available:
 <a href="#resourcenavigationlinks_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Navigation<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcenavigationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Navigation<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcenavigationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Navigation<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the external resources using subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21472,7 +23566,7 @@ The following output properties are available:
 <a href="#serviceassociationlinks_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Association<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceassociationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Association<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceassociationlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Association<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to services injecting into this subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21492,11 +23586,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="applicationgatewayipconfigurations_csharp">
+<a href="#applicationgatewayipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delegations_csharp">
 <a href="#delegations_csharp" style="color: inherit; text-decoration: inherit;">Delegations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delegationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Delegation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#delegationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Delegation<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the delegations on the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21512,7 +23614,7 @@ The following output properties are available:
 <a href="#ipallocations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of IpAllocation which reference this subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21528,7 +23630,7 @@ The following output properties are available:
 <a href="#natgateway_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Nat gateway associated with this subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21536,7 +23638,7 @@ The following output properties are available:
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networksecuritygroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21560,7 +23662,7 @@ The following output properties are available:
 <a href="#routetable_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routetableresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routetableresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Route<wbr>Table<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteTable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21568,7 +23670,7 @@ The following output properties are available:
 <a href="#serviceendpointpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of service endpoint policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21576,9 +23678,17 @@ The following output properties are available:
 <a href="#serviceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -21663,6 +23773,14 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationgatewayipconfigurations_go">
+<a href="#applicationgatewayipconfigurations_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">[]Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegations_go">
 <a href="#delegations_go" style="color: inherit; text-decoration: inherit;">Delegations</a>
@@ -21750,7 +23868,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">[]Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -21835,6 +23961,14 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationgatewayipconfigurations_nodejs">
+<a href="#applicationgatewayipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegations_nodejs">
 <a href="#delegations_nodejs" style="color: inherit; text-decoration: inherit;">delegations</a>
@@ -21922,7 +24056,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -21940,7 +24082,7 @@ The following output properties are available:
 <a href="#ip_configuration_profiles_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationprofileresponse">Sequence[IPConfiguration<wbr>Profile<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationprofileresponse">Sequence[IPConfiguration<wbr>Profile<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of IP configuration profiles which reference this subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21948,7 +24090,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">Sequence[IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">Sequence[IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the network interface IP configurations using subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21956,7 +24098,7 @@ The following output properties are available:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Sequence[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Sequence[Private<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to private endpoints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21980,7 +24122,7 @@ The following output properties are available:
 <a href="#resource_navigation_links_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>navigation_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcenavigationlinkresponse">Sequence[Resource<wbr>Navigation<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcenavigationlinkresponse">Sequence[Resource<wbr>Navigation<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the external resources using subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21988,7 +24130,7 @@ The following output properties are available:
 <a href="#service_association_links_python" style="color: inherit; text-decoration: inherit;">service_<wbr>association_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceassociationlinkresponse">Sequence[Service<wbr>Association<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceassociationlinkresponse">Sequence[Service<wbr>Association<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to services injecting into this subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22008,11 +24150,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of address prefixes for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="application_gateway_ip_configurations_python">
+<a href="#application_gateway_ip_configurations_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>ip_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationgatewayipconfigurationresponse">Sequence[Application<wbr>Gateway<wbr>IPConfiguration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Application gateway IP configurations of virtual network resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delegations_python">
 <a href="#delegations_python" style="color: inherit; text-decoration: inherit;">delegations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delegationresponse">Sequence[Delegation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#delegationresponse">Sequence[Delegation<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to the delegations on the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22028,7 +24178,7 @@ The following output properties are available:
 <a href="#ip_allocations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of IpAllocation which reference this subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22044,7 +24194,7 @@ The following output properties are available:
 <a href="#nat_gateway_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Nat gateway associated with this subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22052,7 +24202,7 @@ The following output properties are available:
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the NetworkSecurityGroup resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22076,7 +24226,7 @@ The following output properties are available:
 <a href="#route_table_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routetableresponse">Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routetableresponse">Route<wbr>Table<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteTable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22084,7 +24234,7 @@ The following output properties are available:
 <a href="#service_endpoint_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpolicyresponse">Sequence[Service<wbr>Endpoint<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceendpointpolicyresponse">Sequence[Service<wbr>Endpoint<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of service endpoint policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22092,9 +24242,17 @@ The following output properties are available:
 <a href="#service_endpoints_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">Sequence[Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceendpointpropertiesformatresponse">Sequence[Service<wbr>Endpoint<wbr>Properties<wbr>Format<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of service endpoints.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</h4>
@@ -22288,7 +24446,7 @@ The following output properties are available:
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22324,7 +24482,7 @@ The following output properties are available:
 <a href="#network_watcher_flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>flow_<wbr>analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22356,7 +24514,7 @@ The following output properties are available:
 <a href="#networkinterfacetapconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Tap<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22388,7 +24546,7 @@ The following output properties are available:
 <a href="#destinationloadbalancerfrontendipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Load<wbr>Balancer<wbr>Front<wbr>End<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Frontend<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the private IP address on the internal Load Balancer that will receive the tap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22396,7 +24554,7 @@ The following output properties are available:
 <a href="#destinationnetworkinterfaceipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network<wbr>Interface<wbr>IPConfiguration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the private IP Address of the collector nic that will receive the tap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22656,7 +24814,7 @@ The following output properties are available:
 <a href="#network_interface_tap_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>tap_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">Sequence[Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfacetapconfigurationresponse">Sequence[Network<wbr>Interface<wbr>Tap<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22688,7 +24846,7 @@ The following output properties are available:
 <a href="#destination_load_balancer_front_end_ip_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>load_<wbr>balancer_<wbr>front_<wbr>end_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendipconfigurationresponse">Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendipconfigurationresponse">Frontend<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the private IP address on the internal Load Balancer that will receive the tap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22696,7 +24854,7 @@ The following output properties are available:
 <a href="#destination_network_interface_ip_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>network_<wbr>interface_<wbr>ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the private IP Address of the collector nic that will receive the tap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22760,7 +24918,7 @@ The following output properties are available:
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22916,7 +25074,7 @@ The following output properties are available:
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">

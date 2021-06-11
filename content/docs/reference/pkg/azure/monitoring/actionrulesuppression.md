@@ -83,9 +83,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/monitoring"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -218,19 +218,33 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionScopeArgs]</span> = None<span class="p">, </span><span class="nx">suppression</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionSuppressionArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionConditionArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionScopeArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">suppression</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionSuppressionArgs]</span> = None<span class="p">,</span>
+                          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionRuleSuppression</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleSuppression</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionRuleSuppression</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleSuppression</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionRuleSuppression</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ActionRuleSuppressionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -241,46 +255,44 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleSuppressionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ActionRuleSuppressionArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -289,35 +301,27 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleSuppressionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -329,25 +333,19 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ActionRuleSuppressionArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -529,7 +527,7 @@ The ActionRuleSuppression resource accepts the following [input]({{< relref "/do
 <a href="#suppression_nodejs" style="color: inherit; text-decoration: inherit;">suppression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionsuppression">Action<wbr>Rule<wbr>Suppression<wbr>Suppression</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionsuppression">Action<wbr>Rule<wbr>Suppression<wbr>Suppression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `suppression` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -538,7 +536,7 @@ The ActionRuleSuppression resource accepts the following [input]({{< relref "/do
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressioncondition">Action<wbr>Rule<wbr>Suppression<wbr>Condition</a></span>
+        <span class="property-type"><a href="#actionrulesuppressioncondition">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -574,7 +572,7 @@ The ActionRuleSuppression resource accepts the following [input]({{< relref "/do
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionscope">Action<wbr>Rule<wbr>Suppression<wbr>Scope</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionscope">Action<wbr>Rule<wbr>Suppression<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -728,20 +726,30 @@ Get an existing ActionRuleSuppression resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ActionRuleSuppressionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ActionRuleSuppression</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ActionRuleSuppressionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ActionRuleSuppression</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionScopeArgs]</span> = None<span class="p">, </span><span class="nx">suppression</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionSuppressionArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ActionRuleSuppression</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionConditionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionScopeArgs]</span> = None<span class="p">,</span>
+        <span class="nx">suppression</span><span class="p">:</span> <span class="nx">Optional[ActionRuleSuppressionSuppressionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ActionRuleSuppression</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionRuleSuppression<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ActionRuleSuppressionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleSuppression</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionRuleSuppression<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ActionRuleSuppressionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleSuppression</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ActionRuleSuppression</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ActionRuleSuppressionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ActionRuleSuppression</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ActionRuleSuppressionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1002,7 +1010,7 @@ The following state arguments are supported:
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressioncondition">Action<wbr>Rule<wbr>Suppression<wbr>Condition</a></span>
+        <span class="property-type"><a href="#actionrulesuppressioncondition">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionscope">Action<wbr>Rule<wbr>Suppression<wbr>Scope</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionscope">Action<wbr>Rule<wbr>Suppression<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_suppression_nodejs" style="color: inherit; text-decoration: inherit;">suppression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionsuppression">Action<wbr>Rule<wbr>Suppression<wbr>Suppression</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionsuppression">Action<wbr>Rule<wbr>Suppression<wbr>Suppression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `suppression` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1307,7 @@ The following state arguments are supported:
 <a href="#alertcontext_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditionalertcontext">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Alert<wbr>Context</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditionalertcontext">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Alert<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `alert_context` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1316,7 @@ The following state arguments are supported:
 <a href="#alertruleid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditionalertruleid">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditionalertruleid">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `alert_rule_id` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1325,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditiondescription">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Description</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditiondescription">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `description` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1334,7 @@ The following state arguments are supported:
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditionmonitor">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditionmonitor">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1343,7 @@ The following state arguments are supported:
 <a href="#monitorservice_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditionmonitorservice">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Monitor<wbr>Service</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditionmonitorservice">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Monitor<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor_service` as block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1352,7 @@ The following state arguments are supported:
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditionseverity">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Severity</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditionseverity">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Severity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `severity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1361,7 @@ The following state arguments are supported:
 <a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionconditiontargetresourcetype">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionconditiontargetresourcetype">Action<wbr>Rule<wbr>Suppression<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `target_resource_type` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2208,7 +2216,7 @@ The following state arguments are supported:
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionrulesuppressionsuppressionschedule">Action<wbr>Rule<wbr>Suppression<wbr>Suppression<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#actionrulesuppressionsuppressionschedule">Action<wbr>Rule<wbr>Suppression<wbr>Suppression<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as defined below. Required if `recurrence_type` is `Daily`, `Monthly`, `Once` or `Weekly`.
 {{% /md %}}</dd></dl>

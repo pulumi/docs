@@ -13,13 +13,17 @@ Explore the resources and functions of the alicloud.ddos module.
 <ul class="api">
     <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
     <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
+    <li><a href="domainresource" title="DomainResource"><span class="symbol resource"></span>DomainResource</a></li>
+    <li><a href="port" title="Port"><span class="symbol resource"></span>Port</a></li>
     <li><a href="schedulerrule" title="SchedulerRule"><span class="symbol resource"></span>SchedulerRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getddosbgpinstances" title="GetDdosBgpInstances"><span class="symbol function"></span>GetDdosBgpInstances</a></li>
+    <li><a href="getddoscoodomainresources" title="GetDdosCooDomainResources"><span class="symbol function"></span>GetDdosCooDomainResources</a></li>
     <li><a href="getddoscooinstances" title="GetDdosCooInstances"><span class="symbol function"></span>GetDdosCooInstances</a></li>
+    <li><a href="getddoscooports" title="GetDdosCooPorts"><span class="symbol function"></span>GetDdosCooPorts</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,6 +35,6 @@ Explore the resources and functions of the alicloud.ddos module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.39.1</dd>
+	<dd>3.2.0</dd>
 </dl>
 

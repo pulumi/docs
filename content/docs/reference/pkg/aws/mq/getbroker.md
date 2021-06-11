@@ -59,9 +59,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/mq"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/mq"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -155,17 +155,20 @@ const byName = aws.mq.getBroker({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBroker<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBrokerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBrokerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBroker<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBrokerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBrokerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_broker(</span><span class="nx">broker_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[GetBrokerLogsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBrokerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_broker(</span><span class="nx">broker_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBrokerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBroker<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBrokerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBrokerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBroker<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBrokerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBrokerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBroker` in the Go SDK.
 
@@ -174,7 +177,7 @@ const byName = aws.mq.getBroker({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBroker </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBrokerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBrokerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBrokerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBrokerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -203,14 +206,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The unique name of the mq broker.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="logs_csharp">
-<a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -242,14 +237,6 @@ The following arguments are supported:
     <dd>{{% md %}}The unique name of the mq broker.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="logs_go">
-<a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -280,14 +267,6 @@ The following arguments are supported:
     <dd>{{% md %}}The unique name of the mq broker.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="logs_nodejs">
-<a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -317,14 +296,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The unique name of the mq broker.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="logs_python">
-<a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -460,6 +431,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logs_csharp">
+<a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenancewindowstarttime_csharp">
 <a href="#maintenancewindowstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
@@ -513,14 +492,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbrokeruser">List&lt;Get<wbr>Broker<wbr>User&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logs_csharp">
-<a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,6 +612,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logs_go">
+<a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenancewindowstarttime_go">
 <a href="#maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
@@ -694,14 +673,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbrokeruser">[]Get<wbr>Broker<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logs_go">
-<a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -822,6 +793,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logs_nodejs">
+<a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenancewindowstarttime_nodejs">
 <a href="#maintenancewindowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
@@ -875,14 +854,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbrokeruser">Get<wbr>Broker<wbr>User[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logs_nodejs">
-<a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,6 +974,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="logs_python">
+<a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="maintenance_window_start_time_python">
 <a href="#maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span>
@@ -1056,14 +1035,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbrokeruser">Sequence[Get<wbr>Broker<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logs_python">
-<a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

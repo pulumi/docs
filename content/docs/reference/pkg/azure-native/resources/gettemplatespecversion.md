@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.resources.getTemplateSpecVersion 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Template Spec Version object.
-API Version: 2019-06-01-preview.
+API Version: 2021-05-01.
 
 
 
@@ -22,17 +22,20 @@ API Version: 2019-06-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTemplateSpecVersion<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTemplateSpecVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTemplateSpecVersionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTemplateSpecVersion<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTemplateSpecVersionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTemplateSpecVersionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template_spec_version(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_spec_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_spec_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateSpecVersionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template_spec_version(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">template_spec_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">template_spec_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateSpecVersionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTemplateSpecVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTemplateSpecVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTemplateSpecVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTemplateSpecVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTemplateSpecVersionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTemplateSpecVersionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTemplateSpecVersion` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2019-06-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTemplateSpecVersion </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTemplateSpecVersionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTemplateSpecVersionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTemplateSpecVersionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTemplateSpecVersionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -214,14 +217,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="artifacts_csharp">
-<a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatespectemplateartifactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Outputs.<wbr>Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Template Spec artifacts.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -229,6 +224,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linkedtemplates_csharp">
+<a href="#linkedtemplates_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedtemplateartifactresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Outputs.<wbr>Linked<wbr>Template<wbr>Artifact<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of linked template artifacts.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintemplate_csharp">
+<a href="#maintemplate_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The main Azure Resource Manager template content.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -238,13 +257,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="template_csharp">
-<a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+        <span id="uiformdefinition_csharp">
+<a href="#uiformdefinition_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Form<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager template content.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Azure Resource Manager template UI definition content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,14 +309,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="artifacts_go">
-<a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatespectemplateartifactresponse">[]Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Template Spec artifacts.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -305,6 +316,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linkedtemplates_go">
+<a href="#linkedtemplates_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedtemplateartifactresponse">[]Linked<wbr>Template<wbr>Artifact<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of linked template artifacts.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintemplate_go">
+<a href="#maintemplate_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The main Azure Resource Manager template content.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -314,13 +349,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="template_go">
-<a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+        <span id="uiformdefinition_go">
+<a href="#uiformdefinition_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Form<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager template content.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Azure Resource Manager template UI definition content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -366,14 +401,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="artifacts_nodejs">
-<a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatespectemplateartifactresponse">Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Template Spec artifacts.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -381,6 +408,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linkedtemplates_nodejs">
+<a href="#linkedtemplates_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedtemplateartifactresponse">Linked<wbr>Template<wbr>Artifact<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of linked template artifacts.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintemplate_nodejs">
+<a href="#maintemplate_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The main Azure Resource Manager template content.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -390,13 +441,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="template_nodejs">
-<a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+        <span id="uiformdefinition_nodejs">
+<a href="#uiformdefinition_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Form<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager template content.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Azure Resource Manager template UI definition content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -442,14 +493,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="artifacts_python">
-<a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatespectemplateartifactresponse">Sequence[Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of Template Spec artifacts.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -457,6 +500,30 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template Spec version description.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linked_templates_python">
+<a href="#linked_templates_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedtemplateartifactresponse">Sequence[Linked<wbr>Template<wbr>Artifact<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of linked template artifacts.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="main_template_python">
+<a href="#main_template_python" style="color: inherit; text-decoration: inherit;">main_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The main Azure Resource Manager template content.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -466,13 +533,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="template_python">
-<a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
+        <span id="ui_form_definition_python">
+<a href="#ui_form_definition_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>form_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager template content.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The Azure Resource Manager template UI definition content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -480,6 +547,90 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="linkedtemplateartifactresponse">Linked<wbr>Template<wbr>Artifact<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="template_csharp">
+<a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="template_go">
+<a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="template_nodejs">
+<a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="template_python">
+<a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
@@ -691,90 +842,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="templatespectemplateartifactresponse">Template<wbr>Spec<wbr>Template<wbr>Artifact<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="template_csharp">
-<a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="template_go">
-<a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="template_nodejs">
-<a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A filesystem safe relative path of the artifact.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="template_python">
-<a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The Azure Resource Manager template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

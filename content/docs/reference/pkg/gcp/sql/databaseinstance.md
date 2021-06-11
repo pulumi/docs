@@ -88,8 +88,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -236,11 +236,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/servicenetworking"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/servicenetworking"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -394,19 +394,37 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DatabaseInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DatabaseInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceCloneArgs]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">restore_backup_context</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceRestoreBackupContextArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceCloneArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">restore_backup_context</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceRestoreBackupContextArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[DatabaseInstanceArgs]</a></span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DatabaseInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DatabaseInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseInstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseInstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -417,46 +435,44 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -465,35 +481,27 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -505,25 +513,19 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DatabaseInstanceArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -824,7 +826,7 @@ configuration is detailed below. Required if `clone` is not set.
 <a href="#clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
+        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
@@ -919,7 +921,7 @@ make sure you understand this.
 <a href="#replicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below. Valid only for MySQL instances.
@@ -929,7 +931,7 @@ configuration is detailed below. Valid only for MySQL instances.
 <a href="#restorebackupcontext_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
@@ -950,7 +952,7 @@ block during resource creation/update will trigger the restore action after the 
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings</a></span>
+        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
@@ -1448,20 +1450,42 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseInstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DatabaseInstance</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DatabaseInstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DatabaseInstance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceCloneArgs]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">restore_backup_context</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceRestoreBackupContextArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_ca_certs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceServerCaCertArgs]]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceCloneArgs]</span> = None<span class="p">,</span>
+        <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">restore_backup_context</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceRestoreBackupContextArgs]</span> = None<span class="p">,</span>
+        <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">server_ca_certs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceServerCaCertArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseInstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DatabaseInstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DatabaseInstance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DatabaseInstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DatabaseInstance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DatabaseInstanceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1994,7 +2018,7 @@ configuration is detailed below. Required if `clone` is not set.
 <a href="#state_clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
+        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
 resource creation, the provider will attempt to clone another instance as indicated in the context. The
@@ -2065,7 +2089,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceipaddress">Database<wbr>Instance<wbr>Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#databaseinstanceipaddress">Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2158,7 @@ make sure you understand this.
 <a href="#state_replicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below. Valid only for MySQL instances.
@@ -2144,7 +2168,7 @@ configuration is detailed below. Valid only for MySQL instances.
 <a href="#state_restorebackupcontext_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
@@ -2174,7 +2198,7 @@ block during resource creation/update will trigger the restore action after the 
 <a href="#state_servercacerts_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert[]</a></span>
+        <span class="property-type"><a href="#databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2192,7 +2216,7 @@ instance.
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings</a></span>
+        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
@@ -2425,15 +2449,6 @@ configuration is detailed below. Required if `clone` is not set.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="pointintime_csharp">
-<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="sourceinstancename_csharp">
 <a href="#sourceinstancename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
 </span>
@@ -2441,20 +2456,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="pointintime_go">
-<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_csharp">
+<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_go">
 <a href="#sourceinstancename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -2463,20 +2478,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="pointintime_nodejs">
-<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_go">
+<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_nodejs">
 <a href="#sourceinstancename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Name</a>
@@ -2485,20 +2500,20 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pointintime_nodejs">
+<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the point in time that should be restored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="point_in_time_python">
-<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_name_python">
 <a href="#source_instance_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>name</a>
@@ -2507,6 +2522,15 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="point_in_time_python">
+<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the point in time that should be restored.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3402,7 +3426,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3477,6 +3501,14 @@ when crash-safe replication flags are enabled.
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskautoresizelimit_csharp">
+<a href="#diskautoresizelimit_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -3577,7 +3609,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,6 +3684,14 @@ when crash-safe replication flags are enabled.
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskautoresizelimit_go">
+<a href="#diskautoresizelimit_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_go">
 <a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -3752,7 +3792,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3794,7 +3834,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3815,7 +3855,7 @@ when crash-safe replication flags are enabled.
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag[]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3827,6 +3867,14 @@ when crash-safe replication flags are enabled.
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="diskautoresizelimit_nodejs">
+<a href="#diskautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
@@ -3850,7 +3898,7 @@ when crash-safe replication flags are enabled.
 <a href="#insightsconfig_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3858,7 +3906,7 @@ when crash-safe replication flags are enabled.
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3866,7 +3914,7 @@ when crash-safe replication flags are enabled.
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3874,7 +3922,7 @@ when crash-safe replication flags are enabled.
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3927,7 +3975,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
-for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
+for more details and supported versions. Postgres supports only shared-core machine types,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4002,6 +4050,14 @@ when crash-safe replication flags are enabled.
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_autoresize_limit_python">
+<a href="#disk_autoresize_limit_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_python">
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
@@ -4241,7 +4297,7 @@ configuration starts.
 <a href="#backupretentionsettings_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings. The configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4827,7 +4883,7 @@ This setting can be updated, but it cannot be removed after it is set.
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network[]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -33,11 +33,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ewr1 = Output.Create(EquinixMetal.GetFacility.InvokeAsync(new EquinixMetal.GetFacilityArgs
+        var ny5 = Output.Create(EquinixMetal.GetFacility.InvokeAsync(new EquinixMetal.GetFacilityArgs
         {
-            Code = "ewr1",
+            Code = "ny5",
         }));
-        this.Id = ewr1.Apply(ewr1 => ewr1.Id);
+        this.Id = ny5.Apply(ny5 => ny5.Id);
     }
 
     [Output("id")]
@@ -55,19 +55,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		ewr1, err := equinix - metal.GetFacility(ctx, &equinix-metal.GetFacilityArgs{
-			Code: "ewr1",
+		ny5, err := equinix - metal.GetFacility(ctx, &equinix-metal.GetFacilityArgs{
+			Code: "ny5",
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("id", ewr1.Id)
+		ctx.Export("id", ny5.Id)
 		return nil
 	})
 }
@@ -83,8 +83,8 @@ func main() {
 import pulumi
 import pulumi_equinix_metal as equinix_metal
 
-ewr1 = equinix_metal.get_facility(code="ewr1")
-pulumi.export("id", ewr1.id)
+ny5 = equinix_metal.get_facility(code="ny5")
+pulumi.export("id", ny5.id)
 ```
 
 
@@ -98,10 +98,10 @@ pulumi.export("id", ewr1.id)
 import * as pulumi from "@pulumi/pulumi";
 import * as equinix_metal from "@pulumi/equinix-metal";
 
-const ewr1 = equinix_metal.getFacility({
-    code: "ewr1",
+const ny5 = equinix_metal.getFacility({
+    code: "ny5",
 });
-export const id = ewr1.then(ewr1 => ewr1.id);
+export const id = ny5.then(ny5 => ny5.id);
 ```
 
 
@@ -122,17 +122,18 @@ export const id = ewr1.then(ewr1 => ewr1.id);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFacility<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFacilityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFacilityResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFacility<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFacilityArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFacilityResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_facility(</span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFacilityResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_facility(</span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFacilityResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFacility<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFacilityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFacilityResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFacility<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetFacilityArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFacilityResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetFacility` in the Go SDK.
 
@@ -141,7 +142,7 @@ export const id = ewr1.then(ewr1 => ewr1.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFacility </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFacilityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFacilityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFacilityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFacilityArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -160,24 +161,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility code
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="features_csharp">
-<a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The features of the facility
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -191,24 +174,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility code
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="features_go">
-<a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The features of the facility
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -222,24 +187,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility code
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="features_nodejs">
-<a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The features of the facility
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -253,24 +200,6 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility code
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="features_python">
-<a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The features of the facility
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -312,13 +241,22 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="metro_csharp">
+<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metro code the facility is part of
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
+    <dd>{{% md %}}The name of the facility
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -351,13 +289,22 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="metro_go">
+<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metro code the facility is part of
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
+    <dd>{{% md %}}The name of the facility
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -390,13 +337,22 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="metro_nodejs">
+<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The metro code the facility is part of
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
+    <dd>{{% md %}}The name of the facility
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -429,13 +385,22 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="metro_python">
+<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The metro code the facility is part of
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the facilityg system running on the device
+    <dd>{{% md %}}The name of the facility
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

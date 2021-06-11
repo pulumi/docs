@@ -22,17 +22,19 @@ API Version: 2018-11-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBlueprint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBlueprintArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBlueprintResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBlueprint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBlueprintArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBlueprintResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_blueprint(</span><span class="nx">blueprint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBlueprintResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_blueprint(</span><span class="nx">blueprint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBlueprintResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBlueprint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBlueprintArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBlueprintResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBlueprint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBlueprintArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBlueprintResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBlueprint` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2018-11-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBlueprint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBlueprintResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBlueprintArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBlueprintResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBlueprintArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -150,6 +152,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="layout_csharp">
+<a href="#layout_csharp" style="color: inherit; text-decoration: inherit;">Layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -198,14 +208,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="layout_csharp">
-<a href="#layout_csharp" style="color: inherit; text-decoration: inherit;">Layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -241,6 +243,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_go">
+<a href="#layout_go" style="color: inherit; text-decoration: inherit;">Layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -290,14 +300,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="layout_go">
-<a href="#layout_go" style="color: inherit; text-decoration: inherit;">Layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -333,6 +335,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_nodejs">
+<a href="#layout_nodejs" style="color: inherit; text-decoration: inherit;">layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -382,14 +392,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="layout_nodejs">
-<a href="#layout_nodejs" style="color: inherit; text-decoration: inherit;">layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -425,6 +427,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layout_python">
+<a href="#layout_python" style="color: inherit; text-decoration: inherit;">layout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -473,14 +483,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="layout_python">
-<a href="#layout_python" style="color: inherit; text-decoration: inherit;">layout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Layout view of the blueprint definition for UI reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>

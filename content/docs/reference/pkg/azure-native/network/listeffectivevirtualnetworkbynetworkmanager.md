@@ -22,17 +22,22 @@ API Version: 2021-02-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listEffectiveVirtualNetworkByNetworkManager<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListEffectiveVirtualNetworkByNetworkManagerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListEffectiveVirtualNetworkByNetworkManagerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listEffectiveVirtualNetworkByNetworkManager<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListEffectiveVirtualNetworkByNetworkManagerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListEffectiveVirtualNetworkByNetworkManagerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_effective_virtual_network_by_network_manager(</span><span class="nx">conditional_members</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">top</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListEffectiveVirtualNetworkByNetworkManagerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_effective_virtual_network_by_network_manager(</span><span class="nx">conditional_members</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                      <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                      <span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                      <span class="nx">top</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListEffectiveVirtualNetworkByNetworkManagerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListEffectiveVirtualNetworkByNetworkManager<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListEffectiveVirtualNetworkByNetworkManagerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListEffectiveVirtualNetworkByNetworkManagerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListEffectiveVirtualNetworkByNetworkManager<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListEffectiveVirtualNetworkByNetworkManagerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListEffectiveVirtualNetworkByNetworkManagerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListEffectiveVirtualNetworkByNetworkManager` in the Go SDK.
 
@@ -41,7 +46,7 @@ API Version: 2021-02-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListEffectiveVirtualNetworkByNetworkManager </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListEffectiveVirtualNetworkByNetworkManagerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListEffectiveVirtualNetworkByNetworkManagerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListEffectiveVirtualNetworkByNetworkManagerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListEffectiveVirtualNetworkByNetworkManagerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -83,7 +88,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_csharp">
 <a href="#top_csharp" style="color: inherit; text-decoration: inherit;">Top</a>
@@ -127,7 +132,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_go">
 <a href="#top_go" style="color: inherit; text-decoration: inherit;">Top</a>
@@ -171,7 +176,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_nodejs">
 <a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
@@ -215,7 +220,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_python">
 <a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
@@ -238,37 +243,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="firstindex_csharp">
-<a href="#firstindex_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Index</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="nextlink_csharp">
-<a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+        <span id="skiptoken_csharp">
+<a href="#skiptoken_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="pagesize_csharp">
-<a href="#pagesize_csharp" style="color: inherit; text-decoration: inherit;">Page<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="totalrecords_csharp">
-<a href="#totalrecords_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Records</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -282,37 +263,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="firstindex_go">
-<a href="#firstindex_go" style="color: inherit; text-decoration: inherit;">First<wbr>Index</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="nextlink_go">
-<a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+        <span id="skiptoken_go">
+<a href="#skiptoken_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="pagesize_go">
-<a href="#pagesize_go" style="color: inherit; text-decoration: inherit;">Page<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="totalrecords_go">
-<a href="#totalrecords_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Records</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -326,37 +283,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="firstindex_nodejs">
-<a href="#firstindex_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Index</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="nextlink_nodejs">
-<a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
+        <span id="skiptoken_nodejs">
+<a href="#skiptoken_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="pagesize_nodejs">
-<a href="#pagesize_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="totalrecords_nodejs">
-<a href="#totalrecords_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Records</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -370,37 +303,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="first_index_python">
-<a href="#first_index_python" style="color: inherit; text-decoration: inherit;">first_<wbr>index</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="next_link_python">
-<a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
+        <span id="skip_token_python">
+<a href="#skip_token_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="page_size_python">
-<a href="#page_size_python" style="color: inherit; text-decoration: inherit;">page_<wbr>size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="total_records_python">
-<a href="#total_records_python" style="color: inherit; text-decoration: inherit;">total_<wbr>records</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>

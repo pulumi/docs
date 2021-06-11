@@ -22,17 +22,19 @@ API Version: 2020-10-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_workspace(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWorkspaceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_workspace(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWorkspaceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkspaceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkspaceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWorkspace` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-10-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWorkspace </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +220,7 @@ The following output properties are available:
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -366,7 +368,7 @@ The following output properties are available:
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -514,7 +516,7 @@ The following output properties are available:
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -662,7 +664,7 @@ The following output properties are available:
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type"><a href="#workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -937,6 +939,186 @@ The following output properties are available:
     <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="workspacefeaturesresponse">Workspace<wbr>Features<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterresourceid_csharp">
+<a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_csharp">
+<a href="#disablelocalauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledataexport_csharp">
+<a href="#enabledataexport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablelogaccessusingonlyresourcepermissions_csharp">
+<a href="#enablelogaccessusingonlyresourcepermissions_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Log<wbr>Access<wbr>Using<wbr>Only<wbr>Resource<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediatepurgedataon30days_csharp">
+<a href="#immediatepurgedataon30days_csharp" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterresourceid_go">
+<a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_go">
+<a href="#disablelocalauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledataexport_go">
+<a href="#enabledataexport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablelogaccessusingonlyresourcepermissions_go">
+<a href="#enablelogaccessusingonlyresourcepermissions_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Log<wbr>Access<wbr>Using<wbr>Only<wbr>Resource<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediatepurgedataon30days_go">
+<a href="#immediatepurgedataon30days_go" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clusterresourceid_nodejs">
+<a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_nodejs">
+<a href="#disablelocalauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledataexport_nodejs">
+<a href="#enabledataexport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Data<wbr>Export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablelogaccessusingonlyresourcepermissions_nodejs">
+<a href="#enablelogaccessusingonlyresourcepermissions_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Log<wbr>Access<wbr>Using<wbr>Only<wbr>Resource<wbr>Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediatepurgedataon30days_nodejs">
+<a href="#immediatepurgedataon30days_nodejs" style="color: inherit; text-decoration: inherit;">immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_resource_id_python">
+<a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Dedicated LA cluster resourceId that is linked to the workspaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_local_auth_python">
+<a href="#disable_local_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable Non-AAD based Auth.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_data_export_python">
+<a href="#enable_data_export_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>data_<wbr>export</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate if data should be exported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_log_access_using_only_resource_permissions_python">
+<a href="#enable_log_access_using_only_resource_permissions_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>log_<wbr>access_<wbr>using_<wbr>only_<wbr>resource_<wbr>permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicate which permission to use - resource or workspace or both.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="immediate_purge_data_on30_days_python">
+<a href="#immediate_purge_data_on30_days_python" style="color: inherit; text-decoration: inherit;">immediate_<wbr>purge_<wbr>data_<wbr>on30_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that describes if we want to remove the data after 30 days.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="workspaceskuresponse">Workspace<wbr>Sku<wbr>Response</h4>
 
 
@@ -951,14 +1133,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maxcapacityreservationlevel_csharp">
-<a href="#maxcapacityreservationlevel_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -988,14 +1162,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="maxcapacityreservationlevel_go">
-<a href="#maxcapacityreservationlevel_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1024,14 +1190,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="maxcapacityreservationlevel_nodejs">
-<a href="#maxcapacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1059,14 +1217,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="max_capacity_reservation_level_python">
-<a href="#max_capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>reservation_<wbr>level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

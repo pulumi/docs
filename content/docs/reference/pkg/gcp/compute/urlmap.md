@@ -150,9 +150,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -560,8 +560,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -961,8 +961,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1353,8 +1353,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1875,8 +1875,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2273,8 +2273,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2661,8 +2661,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -2927,19 +2927,35 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[URLMapArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewURLMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewURLMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2950,46 +2966,44 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">URLMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">URLMapArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2998,35 +3012,27 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">URLMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -3038,25 +3044,19 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">URLMapArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -3303,7 +3303,7 @@ Structure is documented below.
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -3326,7 +3326,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -3347,7 +3347,7 @@ Structure is documented below.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -3360,7 +3360,7 @@ Structure is documented below.
 <a href="#hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -3380,7 +3380,7 @@ request, in the absence of which the request match fails.
 <a href="#pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -3400,7 +3400,7 @@ If it is not provided, the provider project is used.
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test[]</a></span>
+        <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -3729,20 +3729,36 @@ Get an existing URLMap resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">URLMapState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">URLMap</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">URLMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">URLMap</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">) -&gt;</span> URLMap</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">) -&gt;</span> URLMap</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetURLMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">URLMapState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetURLMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">URLMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">URLMap</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">URLMapState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">URLMap</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">URLMapState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4158,7 +4174,7 @@ Structure is documented below.
 <a href="#state_defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -4181,7 +4197,7 @@ Structure is documented below.
 <a href="#state_defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -4211,7 +4227,7 @@ Structure is documented below.
 <a href="#state_headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -4224,7 +4240,7 @@ Structure is documented below.
 <a href="#state_hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -4253,7 +4269,7 @@ request, in the absence of which the request match fails.
 <a href="#state_pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -4282,7 +4298,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test[]</a></span>
+        <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -4636,7 +4652,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -4647,7 +4663,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -4661,7 +4677,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -4673,7 +4689,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -4683,7 +4699,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -4695,7 +4711,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -4705,7 +4721,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -5190,7 +5206,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -5200,7 +5216,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -5386,7 +5402,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -5693,7 +5709,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -6173,7 +6189,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -6334,7 +6350,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -6354,7 +6370,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7094,7 +7110,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -7114,7 +7130,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7794,7 +7810,7 @@ request, in the absence of which the request match fails.
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -7817,7 +7833,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -7838,7 +7854,7 @@ Structure is documented below.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -7851,7 +7867,7 @@ Structure is documented below.
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -7866,7 +7882,7 @@ Structure is documented below.
 <a href="#routerules_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -8166,7 +8182,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -8177,7 +8193,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -8191,7 +8207,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -8203,7 +8219,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -8213,7 +8229,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -8225,7 +8241,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -8235,7 +8251,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -8720,7 +8736,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -8730,7 +8746,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -8916,7 +8932,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -9223,7 +9239,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -9703,7 +9719,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -9864,7 +9880,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9884,7 +9900,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10624,7 +10640,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10644,7 +10660,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -11090,7 +11106,7 @@ allowed here.
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -11114,7 +11130,7 @@ Structure is documented below.
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -11362,7 +11378,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -11373,7 +11389,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -11387,7 +11403,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -11399,7 +11415,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -11409,7 +11425,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -11421,7 +11437,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -11431,7 +11447,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11916,7 +11932,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -11926,7 +11942,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -12112,7 +12128,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -12419,7 +12435,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -12913,7 +12929,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -13060,7 +13076,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13080,7 +13096,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13921,7 +13937,7 @@ future without any impact on existing rules.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -13934,7 +13950,7 @@ Structure is documented below.
 <a href="#matchrules_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -13944,7 +13960,7 @@ Structure is documented below.
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -13968,7 +13984,7 @@ Structure is documented below.
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -14158,7 +14174,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14178,7 +14194,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14705,7 +14721,7 @@ be specified.
 <a href="#headermatches_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -14726,7 +14742,7 @@ Defaults to false.
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -14757,7 +14773,7 @@ must be set.
 <a href="#queryparametermatches_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -15121,7 +15137,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#rangematch_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
@@ -15412,7 +15428,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -15946,7 +15962,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -15957,7 +15973,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -15971,7 +15987,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -15983,7 +15999,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -15993,7 +16009,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -16005,7 +16021,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -16015,7 +16031,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -16500,7 +16516,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -16510,7 +16526,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -16696,7 +16712,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -17003,7 +17019,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -17497,7 +17513,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -17644,7 +17660,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -17664,7 +17680,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.

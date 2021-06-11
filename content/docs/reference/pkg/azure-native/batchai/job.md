@@ -95,7 +95,7 @@ import (
 	"fmt"
 
 	batchai "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batchai"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -244,19 +244,50 @@ const job = new azure_native.batchai.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Caffe2SettingsArgs]</span> = None<span class="p">, </span><span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[CaffeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[ChainerSettingsArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[CNTKsettingsArgs]</span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[JobBasePropertiesConstraintsArgs]</span> = None<span class="p">, </span><span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[ContainerSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[CustomMpiSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[CustomToolkitSettingsArgs]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableArgs]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[HorovodSettingsArgs]</span> = None<span class="p">, </span><span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[JobPreparationArgs]</span> = None<span class="p">, </span><span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[MountVolumesArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[OutputDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[PyTorchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, JobPriority]]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableWithSecretValueArgs]]</span> = None<span class="p">, </span><span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[TensorFlowSettingsArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Caffe2SettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[CaffeSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[ChainerSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[CNTKsettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[JobBasePropertiesConstraintsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[ContainerSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[CustomMpiSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[CustomToolkitSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[HorovodSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputDirectoryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[JobPreparationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[MountVolumesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[OutputDirectoryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[PyTorchSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, JobPriority]]</span> = None<span class="p">,</span>
+        <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableWithSecretValueArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[TensorFlowSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -267,46 +298,44 @@ const job = new azure_native.batchai.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,33 +346,25 @@ const job = new azure_native.batchai.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -355,25 +376,19 @@ const job = new azure_native.batchai.Job("job", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -802,7 +817,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster on which this job will run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -850,7 +865,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffe2settings_nodejs" style="color: inherit; text-decoration: inherit;">caffe2Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffe2settings">Caffe2Settings</a></span>
+        <span class="property-type"><a href="#caffe2settings">Caffe2Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe2 job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +873,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffesettings_nodejs" style="color: inherit; text-decoration: inherit;">caffe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffesettings">Caffe<wbr>Settings</a></span>
+        <span class="property-type"><a href="#caffesettings">Caffe<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +881,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#chainersettings_nodejs" style="color: inherit; text-decoration: inherit;">chainer<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainersettings">Chainer<wbr>Settings</a></span>
+        <span class="property-type"><a href="#chainersettings">Chainer<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Chainer job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +889,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cntksettings_nodejs" style="color: inherit; text-decoration: inherit;">cntk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cntksettings">CNTKsettings</a></span>
+        <span class="property-type"><a href="#cntksettings">CNTKsettings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for CNTK (aka Microsoft Cognitive Toolkit) job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +897,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobbasepropertiesconstraints">Job<wbr>Base<wbr>Properties<wbr>Constraints</a></span>
+        <span class="property-type"><a href="#jobbasepropertiesconstraints">Job<wbr>Base<wbr>Properties<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +905,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#containersettings_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containersettings">Container<wbr>Settings</a></span>
+        <span class="property-type"><a href="#containersettings">Container<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Docker container settings for the job. If not provided, the job will run directly on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +913,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custommpisettings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Mpi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custommpisettings">Custom<wbr>Mpi<wbr>Settings</a></span>
+        <span class="property-type"><a href="#custommpisettings">Custom<wbr>Mpi<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom MPI job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +921,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#customtoolkitsettings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Toolkit<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customtoolkitsettings">Custom<wbr>Toolkit<wbr>Settings</a></span>
+        <span class="property-type"><a href="#customtoolkitsettings">Custom<wbr>Toolkit<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom tool kit job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +929,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables which will be setup for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +937,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#horovodsettings_nodejs" style="color: inherit; text-decoration: inherit;">horovod<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horovodsettings">Horovod<wbr>Settings</a></span>
+        <span class="property-type"><a href="#horovodsettings">Horovod<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Horovod job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +945,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#inputdirectories_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputdirectory">Input<wbr>Directory[]</a></span>
+        <span class="property-type"><a href="#inputdirectory">Input<wbr>Directory<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +961,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobpreparation_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Preparation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpreparation">Job<wbr>Preparation</a></span>
+        <span class="property-type"><a href="#jobpreparation">Job<wbr>Preparation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A command line to be executed on each node allocated for the job before tool kit is launched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +969,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mountvolumes_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes</a></span>
+        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on mount volumes to be used by the job. These volumes will be mounted before the job execution and will be unmounted after the job completion. The volumes will be mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +977,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#outputdirectories_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputdirectory">Output<wbr>Directory[]</a></span>
+        <span class="property-type"><a href="#outputdirectory">Output<wbr>Directory<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +985,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#pytorchsettings_nodejs" style="color: inherit; text-decoration: inherit;">py<wbr>Torch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pytorchsettings">Py<wbr>Torch<wbr>Settings</a></span>
+        <span class="property-type"><a href="#pytorchsettings">Py<wbr>Torch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for pyTorch job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +1001,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables with secret values which will be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1009,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tensorflowsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Flow<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tensorflowsettings">Tensor<wbr>Flow<wbr>Settings</a></span>
+        <span class="property-type"><a href="#tensorflowsettings">Tensor<wbr>Flow<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Tensor Flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1879,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2073,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2283,7 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2421,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2503,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2601,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3987,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagesourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistry">Image<wbr>Source<wbr>Registry</a></span>
+        <span class="property-type"><a href="#imagesourceregistry">Image<wbr>Source<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4069,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagesourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4611,7 +4626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4725,7 +4740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4839,7 +4854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4985,7 +5000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5415,7 +5430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentials">Private<wbr>Registry<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#privateregistrycredentials">Private<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5529,7 +5544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6053,7 +6068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">Batch<wbr>AIError<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">Batch<wbr>AIError<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6167,7 +6182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6249,7 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6355,7 +6370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6363,7 +6378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">Azure<wbr>File<wbr>Share<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#azurefilesharereference">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6371,7 +6386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">File<wbr>Server<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#fileserverreference">File<wbr>Server<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6379,7 +6394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">Unmanaged<wbr>File<wbr>System<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6501,7 +6516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6509,7 +6524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6517,7 +6532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6525,7 +6540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6957,7 +6972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordsecretreference_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7071,7 +7086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordsecretreference_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}

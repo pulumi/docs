@@ -12,6 +12,7 @@ Explore the resources and functions of the azure-native.keyvault module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
+    <li><a href="mhsmprivateendpointconnection" title="MHSMPrivateEndpointConnection"><span class="symbol resource"></span>MHSMPrivateEndpointConnection</a></li>
     <li><a href="managedhsm" title="ManagedHsm"><span class="symbol resource"></span>ManagedHsm</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
@@ -21,6 +22,7 @@ Explore the resources and functions of the azure-native.keyvault module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
+    <li><a href="getmhsmprivateendpointconnection" title="GetMHSMPrivateEndpointConnection"><span class="symbol function"></span>GetMHSMPrivateEndpointConnection</a></li>
     <li><a href="getmanagedhsm" title="GetManagedHsm"><span class="symbol function"></span>GetManagedHsm</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
@@ -34,6 +36,6 @@ Explore the resources and functions of the azure-native.keyvault module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

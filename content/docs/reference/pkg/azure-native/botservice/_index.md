@@ -15,6 +15,7 @@ Explore the resources and functions of the azure-native.botservice module.
     <li><a href="botconnection" title="BotConnection"><span class="symbol resource"></span>BotConnection</a></li>
     <li><a href="channel" title="Channel"><span class="symbol resource"></span>Channel</a></li>
     <li><a href="enterprisechannel" title="EnterpriseChannel"><span class="symbol resource"></span>EnterpriseChannel</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -23,6 +24,7 @@ Explore the resources and functions of the azure-native.botservice module.
     <li><a href="getbotconnection" title="GetBotConnection"><span class="symbol function"></span>GetBotConnection</a></li>
     <li><a href="getchannel" title="GetChannel"><span class="symbol function"></span>GetChannel</a></li>
     <li><a href="getenterprisechannel" title="GetEnterpriseChannel"><span class="symbol function"></span>GetEnterpriseChannel</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="listbotconnectionserviceproviders" title="ListBotConnectionServiceProviders"><span class="symbol function"></span>ListBotConnectionServiceProviders</a></li>
     <li><a href="listbotconnectionwithsecrets" title="ListBotConnectionWithSecrets"><span class="symbol function"></span>ListBotConnectionWithSecrets</a></li>
     <li><a href="listchannelwithkeys" title="ListChannelWithKeys"><span class="symbol function"></span>ListChannelWithKeys</a></li>
@@ -35,6 +37,6 @@ Explore the resources and functions of the azure-native.botservice module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

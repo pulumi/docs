@@ -57,12 +57,12 @@ import * as gcp from "@pulumi/gcp";
 // by name
 const generic = pulumi.output(gcp.compute.getInstanceTemplate({
     name: "generic-tpl-20200107",
-}, { async: true }));
+}));
 // using a filter
 const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
-    filter: "name eq generic-tpl-.*",
+    filter: "name != generic-tpl-20200107",
     mostRecent: true,
-}, { async: true }));
+}));
 ```
 
 
@@ -83,17 +83,21 @@ const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_template(</span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTemplateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_template(</span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupInstanceTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupInstanceTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupInstanceTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupInstanceTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupInstanceTemplate` in the Go SDK.
 
@@ -102,7 +106,7 @@ const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -378,8 +382,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_csharp">
@@ -476,6 +480,14 @@ region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservationaffinities_csharp">
+<a href="#reservationaffinities_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">List&lt;Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_csharp">
 <a href="#schedulings_csharp" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -646,8 +658,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_go">
@@ -744,6 +756,14 @@ region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservationaffinities_go">
+<a href="#reservationaffinities_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">[]Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_go">
 <a href="#schedulings_go" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -914,8 +934,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_nodejs">
@@ -1012,6 +1032,14 @@ region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservationaffinities_nodejs">
+<a href="#reservationaffinities_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_nodejs">
 <a href="#schedulings_nodejs" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -1182,8 +1210,8 @@ created from this template.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machine_type_python">
@@ -1280,6 +1308,14 @@ region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservation_affinities_python">
+<a href="#reservation_affinities_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinity">Sequence[Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_python">
 <a href="#schedulings_python" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -1463,7 +1499,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#diskencryptionkeys_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">List&lt;Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">List&lt;Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-required"
@@ -1517,8 +1553,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
@@ -1667,8 +1703,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
@@ -1817,8 +1853,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
@@ -1913,7 +1949,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#disk_encryption_keys_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">Sequence[Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">Sequence[Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-required"
@@ -1967,8 +2003,8 @@ than SCSI. Local SSDs can use either NVME or SCSI.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to instances
-created from this template,
+    <dd>{{% md %}}(Optional) A set of ket/value label pairs to assign to disk created from
+this template
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
@@ -2185,7 +2221,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -2199,7 +2235,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplatenetworkinterfacealiasiprange">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfacealiasiprange">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -2449,7 +2485,7 @@ If it is not provided, the provider project is used.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -2463,7 +2499,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplatenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetemplatenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -2782,6 +2818,182 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getinstancetemplatereservationaffinity">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_csharp">
+<a href="#specificreservations_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">List&lt;Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_go">
+<a href="#specificreservations_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">[]Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specificreservations_nodejs">
+<a href="#specificreservations_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="specific_reservations_python">
+<a href="#specific_reservations_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetemplatereservationaffinityspecificreservation">Sequence[Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getinstancetemplatereservationaffinityspecificreservation">Get<wbr>Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key for the node affinity label.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getinstancetemplatescheduling">Get<wbr>Instance<wbr>Template<wbr>Scheduling</h4>
 
 
@@ -2812,7 +3024,7 @@ terminated by a user). This defaults to true.
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplateschedulingnodeaffinity">List&lt;Get<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetemplateschedulingnodeaffinity">List&lt;Get<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -2983,7 +3195,7 @@ terminated by a user). This defaults to true.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetemplateschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetemplateschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance

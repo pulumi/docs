@@ -123,19 +123,29 @@ const replicationFabric = new azure_native.recoveryservices.ReplicationFabric("r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[FabricCreationInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[FabricCreationInputPropertiesArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationFabric</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationFabric</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationFabric</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationFabric</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationFabric</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationFabricArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,46 +156,44 @@ const replicationFabric = new azure_native.recoveryservices.ReplicationFabric("r
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,33 +204,25 @@ const replicationFabric = new azure_native.recoveryservices.ReplicationFabric("r
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -234,25 +234,19 @@ const replicationFabric = new azure_native.recoveryservices.ReplicationFabric("r
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReplicationFabricArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -369,7 +363,7 @@ The ReplicationFabric resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fabriccreationinputproperties">Fabric<wbr>Creation<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#fabriccreationinputproperties">Fabric<wbr>Creation<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric creation input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -684,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdiskdetailsresponse">Agent<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#agentdiskdetailsresponse">Agent<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The details of agent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1358,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1594,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</a></span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response</a> | <a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response</a> | <a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptiondetails_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption details for the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Fabric health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverencryptiondetails_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Encryption<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollover encryption details for the fabric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2222,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2676,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceagentidentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Agent<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for source agent authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2966,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdetailsresponse">Agent<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#agentdetailsresponse">Agent<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of agent details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2990,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dras_nodejs" style="color: inherit; text-decoration: inherit;">dras</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dradetailsresponse">Dra<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#dradetailsresponse">Dra<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DRAs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3006,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processservers_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverdetailsresponse">Process<wbr>Server<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#processserverdetailsresponse">Process<wbr>Server<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of process servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3014,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pushinstallers_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Installers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushinstallerdetailsresponse">Push<wbr>Installer<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#pushinstallerdetailsresponse">Push<wbr>Installer<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of push installers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3022,7 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rcmproxies_nodejs" style="color: inherit; text-decoration: inherit;">rcm<wbr>Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcmproxydetailsresponse">Rcm<wbr>Proxy<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#rcmproxydetailsresponse">Rcm<wbr>Proxy<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of RCM proxies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3030,7 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationagents_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationagentdetailsresponse">Replication<wbr>Agent<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#replicationagentdetailsresponse">Replication<wbr>Agent<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of replication agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3038,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprotectagents_nodejs" style="color: inherit; text-decoration: inherit;">reprotect<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reprotectagentdetailsresponse">Reprotect<wbr>Agent<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#reprotectagentdetailsresponse">Reprotect<wbr>Agent<wbr>Details<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of reprotect agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3914,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3922,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastores_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">Data<wbr>Store<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#datastoreresponse">Data<wbr>Store<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of data stores in the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3938,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3986,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marsagentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">mars<wbr>Agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mars agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4018,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionvolumes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionvolumeresponse">Retention<wbr>Volume<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#retentionvolumeresponse">Retention<wbr>Volume<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The retention volumes of Master target Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4026,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4638,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5568,7 +5562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5616,7 +5610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5672,7 +5666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobilityserviceupdates_nodejs" style="color: inherit; text-decoration: inherit;">mobility<wbr>Service<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mobilityserviceupdateresponse">Mobility<wbr>Service<wbr>Update<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#mobilityserviceupdateresponse">Mobility<wbr>Service<wbr>Update<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of the mobility service updates available on the Process Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6186,7 +6180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6396,7 +6390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6606,7 +6600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6816,7 +6810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7686,7 +7680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7774,7 +7768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertargetservers_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Target<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastertargetserverresponse">Master<wbr>Target<wbr>Server<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#mastertargetserverresponse">Master<wbr>Target<wbr>Server<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Master Target servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7798,7 +7792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processservers_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverresponse">Process<wbr>Server<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#processserverresponse">Process<wbr>Server<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Process Servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7830,7 +7824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runasaccounts_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasaccountresponse">Run<wbr>As<wbr>Account<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#runasaccountresponse">Run<wbr>As<wbr>Account<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of run as accounts created on the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

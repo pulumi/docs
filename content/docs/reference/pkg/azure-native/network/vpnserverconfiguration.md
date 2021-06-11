@@ -120,7 +120,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -312,19 +312,42 @@ const vpnServerConfiguration = new azure_native.network.VpnServerConfiguration("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_authentication_parameters</span><span class="p">:</span> <span class="nx">Optional[AadAuthenticationParametersArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigRadiusClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">radius_server_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigRadiusServerRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">radius_server_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RadiusServerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, VpnAuthenticationType]]]</span> = None<span class="p">, </span><span class="nx">vpn_client_ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigVpnClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigVpnClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, VpnGatewayTunnelingProtocol]]]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">aad_authentication_parameters</span><span class="p">:</span> <span class="nx">Optional[AadAuthenticationParametersArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">radius_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigRadiusClientRootCertificateArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">radius_server_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">radius_server_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigRadiusServerRootCertificateArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">radius_server_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">radius_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RadiusServerArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                           <span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, VpnAuthenticationType]]]</span> = None<span class="p">,</span>
+                           <span class="nx">vpn_client_ipsec_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpsecPolicyArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">vpn_client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigVpnClientRevokedCertificateArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">vpn_client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigVpnClientRootCertificateArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, VpnGatewayTunnelingProtocol]]]</span> = None<span class="p">,</span>
+                           <span class="nx">vpn_server_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnServerConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnServerConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -335,46 +358,44 @@ const vpnServerConfiguration = new azure_native.network.VpnServerConfiguration("
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -385,33 +406,25 @@ const vpnServerConfiguration = new azure_native.network.VpnServerConfiguration("
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -423,25 +436,19 @@ const vpnServerConfiguration = new azure_native.network.VpnServerConfiguration("
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -750,7 +757,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#aadauthenticationparameters_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Authentication<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadauthenticationparameters">Aad<wbr>Authentication<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#aadauthenticationparameters">Aad<wbr>Authentication<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of aad vpn authentication parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +789,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radiusclientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigradiusclientrootcertificate">Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigradiusclientrootcertificate">Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Radius client root certificate of VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +805,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radiusserverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigradiusserverrootcertificate">Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigradiusserverrootcertificate">Vpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Radius Server root certificate of VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +821,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radiusservers_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserver">Radius<wbr>Server[]</a></span>
+        <span class="property-type"><a href="#radiusserver">Radius<wbr>Server<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Multiple Radius Server configuration for VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +845,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnclientipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +853,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnclientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigvpnclientrevokedcertificate">Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigvpnclientrevokedcertificate">Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}VPN client revoked certificate of VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +861,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnclientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigvpnclientrootcertificate">Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigvpnclientrootcertificate">Vpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}VPN client root certificate of VpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2791,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientconnectionhealth_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Connection<wbr>Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconnectionhealthresponse">Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response</a></span>
+        <span class="property-type"><a href="#vpnclientconnectionhealthresponse">Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}All P2S VPN clients' connection health status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#p2sconnectionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">p2SConnection<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2sconnectionconfigurationresponse">P2SConnection<wbr>Configuration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#p2sconnectionconfigurationresponse">P2SConnection<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all p2s connection configurations of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2839,7 +2846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualhub_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualHub to which the gateway belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2855,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnserverconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Server<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VpnServerConfiguration to which the p2sVpnGateway is attached to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3413,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3421,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3651,7 +3658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -12,6 +12,7 @@ Explore the resources and functions of the aws.dynamodb module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="globaltable" title="GlobalTable"><span class="symbol resource"></span>GlobalTable</a></li>
+    <li><a href="kinesisstreamingdestination" title="KinesisStreamingDestination"><span class="symbol resource"></span>KinesisStreamingDestination</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
     <li><a href="tableitem" title="TableItem"><span class="symbol resource"></span>TableItem</a></li>
 </ul>
@@ -30,6 +31,6 @@ Explore the resources and functions of the aws.dynamodb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.38.1</dd>
+	<dd>4.7.0</dd>
 </dl>
 

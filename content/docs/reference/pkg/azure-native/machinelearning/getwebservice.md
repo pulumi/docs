@@ -22,17 +22,20 @@ API Version: 2017-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_web_service(</span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWebServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_web_service(</span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">web_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWebServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWebService` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2017-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWebService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -396,7 +399,7 @@ The following output properties are available:
 <a href="#locationinfo_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Blob<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bloblocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Blob<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access information for the asset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -428,7 +431,7 @@ The following output properties are available:
 <a href="#inputports_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Input<wbr>Port<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Input<wbr>Port<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Information about the asset's input ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +447,7 @@ The following output properties are available:
 <a href="#outputports_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Output<wbr>Port<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Output<wbr>Port<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Information about the asset's output ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -452,7 +455,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Module<wbr>Asset<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#moduleassetparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Module<wbr>Asset<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}If the asset is a custom module, this holds the module's parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -600,7 +603,7 @@ The following output properties are available:
 <a href="#location_info_python" style="color: inherit; text-decoration: inherit;">location_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocationresponse">Blob<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bloblocationresponse">Blob<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access information for the asset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -632,7 +635,7 @@ The following output properties are available:
 <a href="#input_ports_python" style="color: inherit; text-decoration: inherit;">input_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Input<wbr>Port<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Port<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Information about the asset's input ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +651,7 @@ The following output properties are available:
 <a href="#output_ports_python" style="color: inherit; text-decoration: inherit;">output_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Output<wbr>Port<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Port<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Information about the asset's output ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +659,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameterresponse">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moduleassetparameterresponse">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}If the asset is a custom module, this holds the module's parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1328,7 +1331,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Web<wbr>Service<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Web<wbr>Service<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1436,7 +1439,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1452,7 +1455,7 @@ The following output properties are available:
 <a href="#edges_csharp" style="color: inherit; text-decoration: inherit;">Edges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphedgeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Edge<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#graphedgeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Edge<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of edges making up the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1460,7 +1463,7 @@ The following output properties are available:
 <a href="#graphparameters_csharp" style="color: inherit; text-decoration: inherit;">Graph<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1471,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Node<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Node<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The set of nodes making up the graph, provided as a nodeId to GraphNode map{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1536,7 +1539,7 @@ The following output properties are available:
 <a href="#edges_python" style="color: inherit; text-decoration: inherit;">edges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphedgeresponse">Sequence[Graph<wbr>Edge<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#graphedgeresponse">Sequence[Graph<wbr>Edge<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of edges making up the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1547,7 @@ The following output properties are available:
 <a href="#graph_parameters_python" style="color: inherit; text-decoration: inherit;">graph_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Graph<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Graph<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1555,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Graph<wbr>Node<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Graph<wbr>Node<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The set of nodes making up the graph, provided as a nodeId to GraphNode map{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1655,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphparameterlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Parameter<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#graphparameterlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Parameter<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Association links for this parameter to nodes in the graph.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1736,7 +1739,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphparameterlinkresponse">Sequence[Graph<wbr>Parameter<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#graphparameterlinkresponse">Sequence[Graph<wbr>Parameter<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Association links for this parameter to nodes in the graph.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1880,7 +1883,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Module<wbr>Asset<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#moduleassetparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Module<wbr>Asset<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The definition of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1940,7 +1943,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moduleassetparameterresponse">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moduleassetparameterresponse">Sequence[Module<wbr>Asset<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1956,7 +1959,7 @@ The following output properties are available:
 <a href="#modevaluesinfo_csharp" style="color: inherit; text-decoration: inherit;">Mode<wbr>Values<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Mode<wbr>Value<wbr>Info<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Mode<wbr>Value<wbr>Info<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Definitions for nested interface parameters if this is a complex module parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2040,7 +2043,7 @@ The following output properties are available:
 <a href="#mode_values_info_python" style="color: inherit; text-decoration: inherit;">mode_<wbr>values_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Mode<wbr>Value<wbr>Info<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Mode<wbr>Value<wbr>Info<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Definitions for nested interface parameters if this is a complex module parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2179,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Table<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Table<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2284,7 +2287,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Table<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Table<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2432,7 +2435,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Column<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Column<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The set of columns within the data table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2567,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Column<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Column<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The set of columns within the data table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2788,7 +2791,7 @@ The following output properties are available:
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Asset<wbr>Item<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Asset<wbr>Item<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2796,7 +2799,7 @@ The following output properties are available:
 <a href="#commitmentplan_csharp" style="color: inherit; text-decoration: inherit;">Commitment<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Commitment<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#commitmentplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Commitment<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2812,7 +2815,7 @@ The following output properties are available:
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Diagnostics<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Diagnostics<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the diagnostics traces collection for the web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2820,7 +2823,7 @@ The following output properties are available:
 <a href="#examplerequest_csharp" style="color: inherit; text-decoration: inherit;">Example<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#examplerequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Example<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#examplerequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Example<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines sample input data for one or more of the service's inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2839,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2847,7 @@ The following output properties are available:
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservicekeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Web<wbr>Service<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webservicekeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Web<wbr>Service<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2855,7 @@ The following output properties are available:
 <a href="#machinelearningworkspace_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Learning<wbr>Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningworkspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Workspace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#machinelearningworkspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Workspace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Machine Learning workspace containing the experiment that is source for the web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2863,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2871,7 @@ The following output properties are available:
 <a href="#package_csharp" style="color: inherit; text-decoration: inherit;">Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphpackageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Package<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphpackageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Graph<wbr>Package<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The definition of the graph package making up this web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2876,7 +2879,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Web<wbr>Service<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Web<wbr>Service<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2892,7 +2895,7 @@ The following output properties are available:
 <a href="#payloadslocation_csharp" style="color: inherit; text-decoration: inherit;">Payloads<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Blob<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bloblocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Blob<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2908,7 +2911,7 @@ The following output properties are available:
 <a href="#realtimeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Realtime<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#realtimeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Realtime<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration settings for the web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2916,7 +2919,7 @@ The following output properties are available:
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3328,7 +3331,7 @@ The following output properties are available:
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Asset<wbr>Item<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Asset<wbr>Item<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3336,7 +3339,7 @@ The following output properties are available:
 <a href="#commitment_plan_python" style="color: inherit; text-decoration: inherit;">commitment_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplanresponse">Commitment<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#commitmentplanresponse">Commitment<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3352,7 +3355,7 @@ The following output properties are available:
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsconfigurationresponse">Diagnostics<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsconfigurationresponse">Diagnostics<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the diagnostics traces collection for the web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3360,7 +3363,7 @@ The following output properties are available:
 <a href="#example_request_python" style="color: inherit; text-decoration: inherit;">example_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#examplerequestresponse">Example<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#examplerequestresponse">Example<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines sample input data for one or more of the service's inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3376,7 +3379,7 @@ The following output properties are available:
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3384,7 +3387,7 @@ The following output properties are available:
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservicekeysresponse">Web<wbr>Service<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webservicekeysresponse">Web<wbr>Service<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3392,7 +3395,7 @@ The following output properties are available:
 <a href="#machine_learning_workspace_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>learning_<wbr>workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningworkspaceresponse">Machine<wbr>Learning<wbr>Workspace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#machinelearningworkspaceresponse">Machine<wbr>Learning<wbr>Workspace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Machine Learning workspace containing the experiment that is source for the web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3400,7 +3403,7 @@ The following output properties are available:
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceinputoutputspecificationresponse">Service<wbr>Input<wbr>Output<wbr>Specification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3408,7 +3411,7 @@ The following output properties are available:
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphpackageresponse">Graph<wbr>Package<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphpackageresponse">Graph<wbr>Package<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The definition of the graph package making up this web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3416,7 +3419,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Web<wbr>Service<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3432,7 +3435,7 @@ The following output properties are available:
 <a href="#payloads_location_python" style="color: inherit; text-decoration: inherit;">payloads_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bloblocationresponse">Blob<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bloblocationresponse">Blob<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3448,7 +3451,7 @@ The following output properties are available:
 <a href="#realtime_configuration_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realtimeconfigurationresponse">Realtime<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#realtimeconfigurationresponse">Realtime<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the configuration settings for the web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3456,7 +3459,7 @@ The following output properties are available:
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

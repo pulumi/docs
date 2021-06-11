@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -240,9 +240,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -856,19 +856,34 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -879,46 +894,44 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PatchDeploymentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PatchDeploymentArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -927,35 +940,27 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PatchDeploymentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -967,25 +972,19 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">PatchDeploymentArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1200,7 +1199,7 @@ Structure is documented below.
 <a href="#instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -1243,7 +1242,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -1253,7 +1252,7 @@ Structure is documented below.
 <a href="#patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -1273,7 +1272,7 @@ If it is not provided, the provider project is used.
 <a href="#recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -1283,7 +1282,7 @@ Structure is documented below.
 <a href="#rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -1614,20 +1613,35 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PatchDeploymentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PatchDeployment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PatchDeploymentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PatchDeployment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">last_execute_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PatchDeployment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">,</span>
+        <span class="nx">last_execute_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">,</span>
+        <span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">,</span>
+        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PatchDeployment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PatchDeploymentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PatchDeploymentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PatchDeployment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PatchDeploymentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PatchDeployment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PatchDeploymentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2041,7 +2055,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#state_instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -2072,7 +2086,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
 <a href="#state_onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -2082,7 +2096,7 @@ Structure is documented below.
 <a href="#state_patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -2116,7 +2130,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -2126,7 +2140,7 @@ Structure is documented below.
 <a href="#state_rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -2414,7 +2428,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -2793,7 +2807,7 @@ Structure is documented below.
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
@@ -2803,7 +2817,7 @@ Structure is documented below.
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
@@ -2813,7 +2827,7 @@ Structure is documented below.
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
@@ -2823,7 +2837,7 @@ Structure is documented below.
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
@@ -2843,7 +2857,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
@@ -2853,7 +2867,7 @@ Structure is documented below.
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
@@ -2863,7 +2877,7 @@ Structure is documented below.
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
@@ -3203,7 +3217,7 @@ Structure is documented below.
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3213,7 +3227,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3348,7 +3362,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3648,7 +3662,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3901,7 +3915,7 @@ Structure is documented below.
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3911,7 +3925,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -4046,7 +4060,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4346,7 +4360,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -5267,7 +5281,7 @@ Structure is documented below.
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
@@ -5277,7 +5291,7 @@ Structure is documented below.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
@@ -5309,7 +5323,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
@@ -5340,7 +5354,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
@@ -5504,7 +5518,7 @@ will not run in February, April, June, etc.
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
@@ -6009,7 +6023,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.

@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appplatform"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -126,17 +126,19 @@ export const springCloudServiceId = example.then(example => example.id);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSpringCloudService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSpringCloudServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSpringCloudServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSpringCloudService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSpringCloudServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSpringCloudServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spring_cloud_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpringCloudServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spring_cloud_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpringCloudServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSpringCloudService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSpringCloudServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSpringCloudServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSpringCloudService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSpringCloudServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSpringCloudServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSpringCloudService` in the Go SDK.
 
@@ -145,7 +147,7 @@ export const springCloudServiceId = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSpringCloudService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSpringCloudServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSpringCloudServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSpringCloudServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSpringCloudServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -299,6 +301,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="requirednetworktrafficrules_csharp">
+<a href="#requirednetworktrafficrules_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -363,6 +374,15 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="requirednetworktrafficrules_go">
+<a href="#requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">[]Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
@@ -431,6 +451,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="requirednetworktrafficrules_nodejs">
+<a href="#requirednetworktrafficrules_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Network<wbr>Traffic<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -497,6 +526,15 @@ The following output properties are available:
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="required_network_traffic_rules_python">
+<a href="#required_network_traffic_rules_python" style="color: inherit; text-decoration: inherit;">required_<wbr>network_<wbr>traffic_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getspringcloudservicerequirednetworktrafficrule">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -532,7 +570,7 @@ The following output properties are available:
 <a href="#httpbasicauths_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -550,7 +588,7 @@ The following output properties are available:
 <a href="#repositories_csharp" style="color: inherit; text-decoration: inherit;">Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -568,7 +606,7 @@ The following output properties are available:
 <a href="#sshauths_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -706,7 +744,7 @@ The following output properties are available:
 <a href="#http_basic_auths_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth]</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -724,7 +762,7 @@ The following output properties are available:
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -742,7 +780,7 @@ The following output properties are available:
 <a href="#ssh_auths_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth]</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -860,7 +898,7 @@ The following output properties are available:
 <a href="#httpbasicauths_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -905,7 +943,7 @@ The following output properties are available:
 <a href="#sshauths_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">List&lt;Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1061,7 +1099,7 @@ The following output properties are available:
 <a href="#http_basic_auths_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth]</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1106,7 +1144,7 @@ The following output properties are available:
 <a href="#ssh_auths_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth]</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1538,6 +1576,202 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getspringcloudservicerequirednetworktrafficrule">Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_csharp">
+<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_go">
+<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_nodejs">
+<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The direction of required traffic. Possible values are `Inbound`, `Outbound`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="fqdns_python">
+<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The FQDN list of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of required traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol of required traffic.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

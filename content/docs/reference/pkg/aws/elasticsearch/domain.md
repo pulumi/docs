@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -200,10 +200,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -370,9 +370,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -773,19 +773,41 @@ const esDomain = new aws.elasticsearch.Domain("esDomain", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+           <span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">,</span>
+           <span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogPublishingOptionArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+           <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+           <span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[DomainArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -796,46 +818,44 @@ const esDomain = new aws.elasticsearch.Domain("esDomain", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -844,35 +864,27 @@ const esDomain = new aws.elasticsearch.Domain("esDomain", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -884,25 +896,19 @@ const esDomain = new aws.elasticsearch.Domain("esDomain", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -925,7 +931,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedoptions_csharp">
@@ -934,11 +940,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedsecurityoptions_csharp">
 <a href="#advancedsecurityoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
@@ -946,7 +948,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterconfig_csharp">
@@ -955,7 +957,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cognitooptions_csharp">
@@ -964,7 +966,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainendpointoptions_csharp">
@@ -973,7 +975,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_csharp">
@@ -991,7 +993,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchversion_csharp">
@@ -1000,7 +1002,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptatrest_csharp">
@@ -1009,7 +1011,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logpublishingoptions_csharp">
@@ -1018,7 +1020,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogpublishingoption">List&lt;Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetonodeencryption_csharp">
@@ -1027,7 +1029,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotoptions_csharp">
@@ -1036,7 +1038,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1045,8 +1047,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcoptions_csharp">
 <a href="#vpcoptions_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
@@ -1054,7 +1064,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1067,7 +1077,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedoptions_go">
@@ -1076,11 +1086,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedsecurityoptions_go">
 <a href="#advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
@@ -1088,7 +1094,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterconfig_go">
@@ -1097,7 +1103,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cognitooptions_go">
@@ -1106,7 +1112,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainendpointoptions_go">
@@ -1115,7 +1121,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_go">
@@ -1133,7 +1139,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchversion_go">
@@ -1142,7 +1148,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptatrest_go">
@@ -1151,7 +1157,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logpublishingoptions_go">
@@ -1160,7 +1166,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogpublishingoption">[]Domain<wbr>Log<wbr>Publishing<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetonodeencryption_go">
@@ -1169,7 +1175,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotoptions_go">
@@ -1178,7 +1184,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1187,8 +1193,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcoptions_go">
 <a href="#vpcoptions_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
@@ -1196,7 +1210,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1209,7 +1223,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedoptions_nodejs">
@@ -1218,46 +1232,42 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedsecurityoptions_nodejs">
 <a href="#advancedsecurityoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterconfig_nodejs">
 <a href="#clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cognitooptions_nodejs">
 <a href="#cognitooptions_nodejs" style="color: inherit; text-decoration: inherit;">cognito<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainendpointoptions_nodejs">
 <a href="#domainendpointoptions_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_nodejs">
@@ -1273,9 +1283,9 @@ domain on every apply.
 <a href="#ebsoptions_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchversion_nodejs">
@@ -1284,43 +1294,43 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptatrest_nodejs">
 <a href="#encryptatrest_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>At<wbr>Rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></span>
+        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logpublishingoptions_nodejs">
 <a href="#logpublishingoptions_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Publishing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetonodeencryption_nodejs">
 <a href="#nodetonodeencryption_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>To<wbr>Node<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotoptions_nodejs">
 <a href="#snapshotoptions_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1329,16 +1339,24 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcoptions_nodejs">
 <a href="#vpcoptions_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1351,7 +1369,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advanced_options_python">
@@ -1360,11 +1378,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advanced_security_options_python">
 <a href="#advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
@@ -1372,7 +1386,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_config_python">
@@ -1381,7 +1395,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cognito_options_python">
@@ -1390,7 +1404,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_endpoint_options_python">
@@ -1399,7 +1413,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_name_python">
@@ -1417,7 +1431,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_version_python">
@@ -1426,7 +1440,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_at_rest_python">
@@ -1435,7 +1449,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_publishing_options_python">
@@ -1444,7 +1458,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogpublishingoption">Sequence[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_to_node_encryption_python">
@@ -1453,7 +1467,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_options_python">
@@ -1462,7 +1476,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1471,8 +1485,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_options_python">
 <a href="#vpc_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>options</a>
@@ -1480,7 +1502,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1500,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainid_csharp">
@@ -1536,8 +1558,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1550,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainid_go">
@@ -1586,8 +1606,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1600,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainid_nodejs">
@@ -1636,8 +1654,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1650,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_id_python">
@@ -1686,8 +1702,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1699,20 +1713,42 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kibana_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">kibana_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogPublishingOptionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1823,7 +1859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advancedoptions_csharp">
@@ -1832,11 +1868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advancedsecurityoptions_csharp">
 <a href="#state_advancedsecurityoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
@@ -1844,7 +1876,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -1853,7 +1885,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterconfig_csharp">
@@ -1862,7 +1894,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cognitooptions_csharp">
@@ -1871,7 +1903,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainendpointoptions_csharp">
@@ -1880,7 +1912,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_csharp">
@@ -1907,7 +1939,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearchversion_csharp">
@@ -1916,7 +1948,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptatrest_csharp">
@@ -1925,7 +1957,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
@@ -1944,8 +1976,6 @@ domain on every apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logpublishingoptions_csharp">
@@ -1954,7 +1984,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogpublishingoption">List&lt;Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetonodeencryption_csharp">
@@ -1963,7 +1993,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotoptions_csharp">
@@ -1972,7 +2002,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1981,8 +2011,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcoptions_csharp">
 <a href="#state_vpcoptions_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
@@ -1990,7 +2028,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2003,7 +2041,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advancedoptions_go">
@@ -2012,11 +2050,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advancedsecurityoptions_go">
 <a href="#state_advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
@@ -2024,7 +2058,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -2033,7 +2067,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterconfig_go">
@@ -2042,7 +2076,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cognitooptions_go">
@@ -2051,7 +2085,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainendpointoptions_go">
@@ -2060,7 +2094,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_go">
@@ -2087,7 +2121,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearchversion_go">
@@ -2096,7 +2130,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptatrest_go">
@@ -2105,7 +2139,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
@@ -2124,8 +2158,6 @@ domain on every apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logpublishingoptions_go">
@@ -2134,7 +2166,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogpublishingoption">[]Domain<wbr>Log<wbr>Publishing<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetonodeencryption_go">
@@ -2143,7 +2175,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotoptions_go">
@@ -2152,7 +2184,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2161,8 +2193,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcoptions_go">
 <a href="#state_vpcoptions_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
@@ -2170,7 +2210,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2183,7 +2223,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advancedoptions_nodejs">
@@ -2192,19 +2232,15 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advancedsecurityoptions_nodejs">
 <a href="#state_advancedsecurityoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -2213,34 +2249,34 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterconfig_nodejs">
 <a href="#state_clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cognitooptions_nodejs">
 <a href="#state_cognitooptions_nodejs" style="color: inherit; text-decoration: inherit;">cognito<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainendpointoptions_nodejs">
 <a href="#state_domainendpointoptions_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_nodejs">
@@ -2265,9 +2301,9 @@ domain on every apply.
 <a href="#state_ebsoptions_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearchversion_nodejs">
@@ -2276,16 +2312,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptatrest_nodejs">
 <a href="#state_encryptatrest_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>At<wbr>Rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></span>
+        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
@@ -2304,35 +2340,33 @@ domain on every apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logpublishingoptions_nodejs">
 <a href="#state_logpublishingoptions_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Publishing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetonodeencryption_nodejs">
 <a href="#state_nodetonodeencryption_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>To<wbr>Node<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotoptions_nodejs">
 <a href="#state_snapshotoptions_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -2341,16 +2375,24 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcoptions_nodejs">
 <a href="#state_vpcoptions_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2363,7 +2405,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}IAM policy document specifying the access policies for the domain
+    <dd>{{% md %}}IAM policy document specifying the access policies for the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advanced_options_python">
@@ -2372,11 +2414,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advanced_security_options_python">
 <a href="#state_advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
@@ -2384,7 +2422,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). See below for more details.
+    <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -2393,7 +2431,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the domain.
+    <dd>{{% md %}}ARN of the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_config_python">
@@ -2402,7 +2440,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster configuration of the domain, see below.
+    <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cognito_options_python">
@@ -2411,7 +2449,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+    <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_endpoint_options_python">
@@ -2420,7 +2458,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Domain endpoint HTTP(S) related options. See below.
+    <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_id_python">
@@ -2447,7 +2485,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). See below.
+    <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearch_version_python">
@@ -2456,7 +2494,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of Elasticsearch to deploy. Defaults to `1.5`
+    <dd>{{% md %}}Version of Elasticsearch to deploy. Defaults to `1.5`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypt_at_rest_python">
@@ -2465,7 +2503,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). See below.
+    <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
@@ -2484,8 +2522,6 @@ domain on every apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint for kibana without https scheme.
-* `vpc_options.0.availability_zones` - If the domain was created inside a VPC, the names of the availability zones the configured `subnet_ids` were created inside.
-* `vpc_options.0.vpc_id` - If the domain was created inside a VPC, the ID of the VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_publishing_options_python">
@@ -2494,7 +2530,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainlogpublishingoption">Sequence[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
+    <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_to_node_encryption_python">
@@ -2503,7 +2539,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Node-to-node encryption options. See below.
+    <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_options_python">
@@ -2512,7 +2548,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Snapshot related options, see below.
+    <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -2521,8 +2557,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_options_python">
 <a href="#state_vpc_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>options</a>
@@ -2530,7 +2574,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VPC related options, see below. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)).
+    <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2554,7 +2598,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internaluserdatabaseenabled_csharp">
@@ -2572,7 +2616,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+    <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2585,7 +2629,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internaluserdatabaseenabled_go">
@@ -2603,7 +2647,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+    <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2616,7 +2660,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internaluserdatabaseenabled_nodejs">
@@ -2632,9 +2676,9 @@ domain on every apply.
 <a href="#masteruseroptions_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+    <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2647,7 +2691,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_user_database_enabled_python">
@@ -2665,7 +2709,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the master user: username and password, or ARN
+    <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2680,7 +2724,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+    <dd>{{% md %}}ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterusername_csharp">
@@ -2689,7 +2733,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteruserpassword_csharp">
@@ -2698,7 +2742,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2711,7 +2755,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+    <dd>{{% md %}}ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterusername_go">
@@ -2720,7 +2764,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteruserpassword_go">
@@ -2729,7 +2773,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2742,7 +2786,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+    <dd>{{% md %}}ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterusername_nodejs">
@@ -2751,7 +2795,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteruserpassword_nodejs">
@@ -2760,7 +2804,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2773,7 +2817,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARN for the master user. Only specify if `internal_user_database_enabled` is not set or set to `false`)
+    <dd>{{% md %}}ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_user_name_python">
@@ -2782,7 +2826,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_user_password_python">
@@ -2791,7 +2835,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+    <dd>{{% md %}}Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2806,7 +2850,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of dedicated master nodes in the cluster
+    <dd>{{% md %}}Number of dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicatedmasterenabled_csharp">
@@ -2815,7 +2859,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
+    <dd>{{% md %}}Whether dedicated main nodes are enabled for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicatedmastertype_csharp">
@@ -2824,7 +2868,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
+    <dd>{{% md %}}Instance type of the dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancecount_csharp">
@@ -2851,7 +2895,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenabled_csharp">
@@ -2860,7 +2904,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable warm storage.
+    <dd>{{% md %}}Whether to enable warm storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmtype_csharp">
@@ -2869,7 +2913,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneawarenessconfig_csharp">
@@ -2878,7 +2922,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing zone awareness settings. Documented below.
+    <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneawarenessenabled_csharp">
@@ -2887,7 +2931,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+    <dd>{{% md %}}Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2900,7 +2944,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of dedicated master nodes in the cluster
+    <dd>{{% md %}}Number of dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicatedmasterenabled_go">
@@ -2909,7 +2953,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
+    <dd>{{% md %}}Whether dedicated main nodes are enabled for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicatedmastertype_go">
@@ -2918,7 +2962,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
+    <dd>{{% md %}}Instance type of the dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancecount_go">
@@ -2945,7 +2989,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenabled_go">
@@ -2954,7 +2998,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable warm storage.
+    <dd>{{% md %}}Whether to enable warm storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmtype_go">
@@ -2963,7 +3007,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneawarenessconfig_go">
@@ -2972,7 +3016,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing zone awareness settings. Documented below.
+    <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneawarenessenabled_go">
@@ -2981,7 +3025,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+    <dd>{{% md %}}Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2994,7 +3038,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of dedicated master nodes in the cluster
+    <dd>{{% md %}}Number of dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicatedmasterenabled_nodejs">
@@ -3003,7 +3047,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
+    <dd>{{% md %}}Whether dedicated main nodes are enabled for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicatedmastertype_nodejs">
@@ -3012,7 +3056,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
+    <dd>{{% md %}}Instance type of the dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancecount_nodejs">
@@ -3039,7 +3083,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenabled_nodejs">
@@ -3048,7 +3092,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable warm storage.
+    <dd>{{% md %}}Whether to enable warm storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmtype_nodejs">
@@ -3057,16 +3101,16 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneawarenessconfig_nodejs">
 <a href="#zoneawarenessconfig_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing zone awareness settings. Documented below.
+    <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneawarenessenabled_nodejs">
@@ -3075,7 +3119,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+    <dd>{{% md %}}Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3088,7 +3132,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of dedicated master nodes in the cluster
+    <dd>{{% md %}}Number of dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicated_master_enabled_python">
@@ -3097,7 +3141,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
+    <dd>{{% md %}}Whether dedicated main nodes are enabled for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dedicated_master_type_python">
@@ -3106,7 +3150,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
+    <dd>{{% md %}}Instance type of the dedicated main nodes in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_count_python">
@@ -3133,7 +3177,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_enabled_python">
@@ -3142,7 +3186,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable warm storage.
+    <dd>{{% md %}}Whether to enable warm storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_type_python">
@@ -3151,7 +3195,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+    <dd>{{% md %}}Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_awareness_config_python">
@@ -3160,7 +3204,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block containing zone awareness settings. Documented below.
+    <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_awareness_enabled_python">
@@ -3169,7 +3213,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+    <dd>{{% md %}}Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3238,7 +3282,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito Identity Pool to use
+    <dd>{{% md %}}ID of the Cognito Identity Pool to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
@@ -3247,7 +3291,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached
+    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolid_csharp">
@@ -3256,7 +3300,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito User Pool to use
+    <dd>{{% md %}}ID of the Cognito User Pool to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -3265,7 +3309,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3278,7 +3322,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito Identity Pool to use
+    <dd>{{% md %}}ID of the Cognito Identity Pool to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
@@ -3287,7 +3331,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached
+    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolid_go">
@@ -3296,7 +3340,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito User Pool to use
+    <dd>{{% md %}}ID of the Cognito User Pool to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -3305,7 +3349,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3318,7 +3362,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito Identity Pool to use
+    <dd>{{% md %}}ID of the Cognito Identity Pool to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
@@ -3327,7 +3371,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached
+    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolid_nodejs">
@@ -3336,7 +3380,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito User Pool to use
+    <dd>{{% md %}}ID of the Cognito User Pool to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -3345,7 +3389,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3358,7 +3402,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito Identity Pool to use
+    <dd>{{% md %}}ID of the Cognito Identity Pool to use.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
@@ -3367,7 +3411,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached
+    <dd>{{% md %}}ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_pool_id_python">
@@ -3376,7 +3420,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the Cognito User Pool to use
+    <dd>{{% md %}}ID of the Cognito User Pool to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -3385,7 +3429,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3400,7 +3444,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customendpointcertificatearn_csharp">
@@ -3409,7 +3453,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customendpointenabled_csharp">
@@ -3418,7 +3462,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcehttps_csharp">
@@ -3436,8 +3480,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  `Policy-Min-TLS-1-0-2019-07` and `Policy-Min-TLS-1-2-2019-07`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3449,7 +3492,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customendpointcertificatearn_go">
@@ -3458,7 +3501,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customendpointenabled_go">
@@ -3467,7 +3510,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcehttps_go">
@@ -3485,8 +3528,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  `Policy-Min-TLS-1-0-2019-07` and `Policy-Min-TLS-1-2-2019-07`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3498,7 +3540,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customendpointcertificatearn_nodejs">
@@ -3507,7 +3549,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customendpointenabled_nodejs">
@@ -3516,7 +3558,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcehttps_nodejs">
@@ -3534,8 +3576,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  `Policy-Min-TLS-1-0-2019-07` and `Policy-Min-TLS-1-2-2019-07`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3547,7 +3588,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain for your custom endpoint
+    <dd>{{% md %}}Fully qualified domain for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_endpoint_certificate_arn_python">
@@ -3556,7 +3597,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ACM certificate ARN for your custom endpoint
+    <dd>{{% md %}}ACM certificate ARN for your custom endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_endpoint_enabled_python">
@@ -3565,7 +3606,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain
+    <dd>{{% md %}}Whether to enable custom endpoint for the Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_https_python">
@@ -3583,8 +3624,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  `Policy-Min-TLS-1-0-2019-07` and `Policy-Min-TLS-1-2-2019-07`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainebsoptions">Domain<wbr>Ebs<wbr>Options</h4>
@@ -3607,7 +3647,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+    <dd>{{% md %}}Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
@@ -3616,8 +3656,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
-**Required** if `ebs_enabled` is set to `true`.
+    <dd>{{% md %}}Size of EBS volumes attached to data nodes (in GiB).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
@@ -3626,7 +3665,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+    <dd>{{% md %}}Type of EBS volumes attached to data nodes.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3648,7 +3687,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+    <dd>{{% md %}}Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
@@ -3657,8 +3696,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
-**Required** if `ebs_enabled` is set to `true`.
+    <dd>{{% md %}}Size of EBS volumes attached to data nodes (in GiB).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
@@ -3667,7 +3705,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+    <dd>{{% md %}}Type of EBS volumes attached to data nodes.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3689,7 +3727,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+    <dd>{{% md %}}Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
@@ -3698,8 +3736,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
-**Required** if `ebs_enabled` is set to `true`.
+    <dd>{{% md %}}Size of EBS volumes attached to data nodes (in GiB).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
@@ -3708,7 +3745,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+    <dd>{{% md %}}Type of EBS volumes attached to data nodes.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3730,7 +3767,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+    <dd>{{% md %}}Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
@@ -3739,8 +3776,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GiB).
-**Required** if `ebs_enabled` is set to `true`.
+    <dd>{{% md %}}Size of EBS volumes attached to data nodes (in GiB).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
@@ -3749,7 +3785,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+    <dd>{{% md %}}Type of EBS volumes attached to data nodes.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3764,7 +3800,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
@@ -3773,7 +3809,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
+    <dd>{{% md %}}KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3786,7 +3822,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
@@ -3795,7 +3831,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
+    <dd>{{% md %}}KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3808,7 +3844,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
@@ -3817,7 +3853,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
+    <dd>{{% md %}}KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3830,7 +3866,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
@@ -3839,7 +3875,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
+    <dd>{{% md %}}KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3863,7 +3899,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, AUDIT_LOGS
+    <dd>{{% md %}}Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -3872,7 +3908,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3894,7 +3930,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, AUDIT_LOGS
+    <dd>{{% md %}}Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -3903,7 +3939,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3925,7 +3961,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, AUDIT_LOGS
+    <dd>{{% md %}}Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -3934,7 +3970,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3956,7 +3992,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, AUDIT_LOGS
+    <dd>{{% md %}}Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -3965,7 +4001,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3980,7 +4016,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3993,7 +4029,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4006,7 +4042,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4019,7 +4055,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether Amazon Cognito authentication with Kibana is enabled or not
+    <dd>{{% md %}}Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

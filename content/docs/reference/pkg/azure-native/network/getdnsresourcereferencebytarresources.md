@@ -22,17 +22,18 @@ API Version: 2018-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDnsResourceReferenceByTarResources<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDnsResourceReferenceByTarResourcesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDnsResourceReferenceByTarResourcesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDnsResourceReferenceByTarResources<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDnsResourceReferenceByTarResourcesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDnsResourceReferenceByTarResourcesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_resource_reference_by_tar_resources(</span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubResourceArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDnsResourceReferenceByTarResourcesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dns_resource_reference_by_tar_resources(</span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubResource]]</span> = None<span class="p">,</span>
+                                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDnsResourceReferenceByTarResourcesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDnsResourceReferenceByTarResources<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDnsResourceReferenceByTarResourcesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDnsResourceReferenceByTarResourcesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDnsResourceReferenceByTarResources<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetDnsResourceReferenceByTarResourcesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDnsResourceReferenceByTarResourcesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetDnsResourceReferenceByTarResources` in the Go SDK.
 
@@ -41,7 +42,7 @@ API Version: 2018-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDnsResourceReferenceByTarResources </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDnsResourceReferenceByTarResourcesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDnsResourceReferenceByTarResourcesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDnsResourceReferenceByTarResourcesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDnsResourceReferenceByTarResourcesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -57,7 +58,7 @@ The following arguments are supported:
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of references to azure resources for which referencing dns records need to be queried.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -93,7 +94,7 @@ The following arguments are supported:
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}A list of references to azure resources for which referencing dns records need to be queried.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -172,7 +173,7 @@ The following output properties are available:
 <a href="#dnsresources_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of dns Records {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -180,7 +181,7 @@ The following output properties are available:
 <a href="#targetresource_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to an azure resource from where the dns resource value is taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -232,7 +233,7 @@ The following output properties are available:
 <a href="#dns_resources_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of dns Records {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -240,7 +241,7 @@ The following output properties are available:
 <a href="#target_resource_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to an azure resource from where the dns resource value is taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}

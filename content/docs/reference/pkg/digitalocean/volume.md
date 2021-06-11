@@ -65,8 +65,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -169,19 +169,34 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filesystem_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_filesystem_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_filesystem_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">filesystem_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">initial_filesystem_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">initial_filesystem_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, FileSystemType]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[Union[str, Region]]</span> = None<span class="p">,</span>
+           <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,46 +207,44 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,35 +253,27 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -280,25 +285,19 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -319,7 +318,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-required"
@@ -364,7 +363,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#initialfilesystemtype_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Filesystem<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#filesystemtype">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -404,7 +403,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-required"
@@ -449,7 +448,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#initialfilesystemtype_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Filesystem<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#filesystemtype">File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -489,7 +488,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-required"
@@ -534,7 +533,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#initialfilesystemtype_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Filesystem<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Filesystem<wbr>Type</span>
+        <span class="property-type">string | <a href="#filesystemtype">File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -574,7 +573,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-required"
@@ -619,7 +618,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#initial_filesystem_type_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>filesystem_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#filesystemtype">File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -823,20 +822,34 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">filesystem_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filesystem_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_filesystem_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_filesystem_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">volume_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">,</span>
+        <span class="nx">filesystem_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">filesystem_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">initial_filesystem_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">initial_filesystem_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, FileSystemType]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[Union[str, Region]]</span> = None<span class="p">,</span>
+        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">volume_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -990,7 +1003,7 @@ The following state arguments are supported:
 <a href="#state_initialfilesystemtype_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Filesystem<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#filesystemtype">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1021,7 @@ The following state arguments are supported:
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1115,7 @@ The following state arguments are supported:
 <a href="#state_initialfilesystemtype_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Filesystem<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#filesystemtype">File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1227,7 @@ The following state arguments are supported:
 <a href="#state_initialfilesystemtype_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Filesystem<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Filesystem<wbr>Type</span>
+        <span class="property-type">string | <a href="#filesystemtype">File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1245,7 @@ The following state arguments are supported:
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
+        <span class="property-type">string | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1339,7 @@ The following state arguments are supported:
 <a href="#state_initial_filesystem_type_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>filesystem_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#filesystemtype">File<wbr>System<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1357,7 @@ The following state arguments are supported:
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">str | <a href="#region">Region</a></span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,6 +1403,106 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="filesystemtype">File<wbr>System<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>EXT4</dt>
+    <dd>ext4</dd><dt>XFS</dt>
+    <dd>xfs</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>File<wbr>System<wbr>Type<wbr>EXT4</dt>
+    <dd>ext4</dd><dt>File<wbr>System<wbr>Type<wbr>XFS</dt>
+    <dd>xfs</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>EXT4</dt>
+    <dd>ext4</dd><dt>XFS</dt>
+    <dd>xfs</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>EXT4</dt>
+    <dd>ext4</dd><dt>XFS</dt>
+    <dd>xfs</dd></dl>
+{{% /choosable %}}
+
+<h4 id="region">Region</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Region<wbr>NYC1</dt>
+    <dd>nyc1</dd><dt>Region<wbr>NYC2</dt>
+    <dd>nyc2</dd><dt>Region<wbr>NYC3</dt>
+    <dd>nyc3</dd><dt>Region<wbr>SGP1</dt>
+    <dd>sgp1</dd><dt>Region<wbr>LON1</dt>
+    <dd>lon1</dd><dt>Region<wbr>AMS2</dt>
+    <dd>ams2</dd><dt>Region<wbr>AMS3</dt>
+    <dd>ams3</dd><dt>Region<wbr>FRA1</dt>
+    <dd>fra1</dd><dt>Region<wbr>TOR1</dt>
+    <dd>tor1</dd><dt>Region<wbr>SFO1</dt>
+    <dd>sfo1</dd><dt>Region<wbr>SFO2</dt>
+    <dd>sfo2</dd><dt>Region<wbr>SFO3</dt>
+    <dd>sfo3</dd><dt>Region<wbr>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NYC1</dt>
+    <dd>nyc1</dd><dt>NYC2</dt>
+    <dd>nyc2</dd><dt>NYC3</dt>
+    <dd>nyc3</dd><dt>SGP1</dt>
+    <dd>sgp1</dd><dt>LON1</dt>
+    <dd>lon1</dd><dt>AMS2</dt>
+    <dd>ams2</dd><dt>AMS3</dt>
+    <dd>ams3</dd><dt>FRA1</dt>
+    <dd>fra1</dd><dt>TOR1</dt>
+    <dd>tor1</dd><dt>SFO1</dt>
+    <dd>sfo1</dd><dt>SFO2</dt>
+    <dd>sfo2</dd><dt>SFO3</dt>
+    <dd>sfo3</dd><dt>BLR1</dt>
+    <dd>blr1</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

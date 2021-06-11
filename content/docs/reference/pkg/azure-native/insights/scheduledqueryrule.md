@@ -35,17 +35,17 @@ class MyStack : Stack
     {
         var scheduledQueryRule = new AzureNative.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNative.Insights.ScheduledQueryRuleArgs
         {
-            Action = 
+            Action = new AzureNative.Insights.Inputs.AlertingActionArgs
             {
-                { "aznsAction", new AzureNative.Insights.Inputs.AzNsActionGroupArgs
+                AznsAction = new AzureNative.Insights.Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = {},
                     CustomWebhookPayload = "{}",
                     EmailSubject = "Email Header",
-                } },
-                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
-                { "severity", "1" },
-                { "trigger", new AzureNative.Insights.Inputs.TriggerConditionArgs
+                },
+                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+                Severity = "1",
+                Trigger = new AzureNative.Insights.Inputs.TriggerConditionArgs
                 {
                     MetricTrigger = new AzureNative.Insights.Inputs.LogMetricTriggerArgs
                     {
@@ -56,7 +56,7 @@ class MyStack : Stack
                     },
                     Threshold = 3,
                     ThresholdOperator = "GreaterThan",
-                } },
+                },
             },
             Description = "log alert description",
             Enabled = "true",
@@ -88,7 +88,62 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
+			Action: insights.AlertingAction{
+				AznsAction: insights.AzNsActionGroup{
+					ActionGroup:          []interface{}{},
+					CustomWebhookPayload: "{}",
+					EmailSubject:         "Email Header",
+				},
+				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+				Severity:  "1",
+				Trigger: insights.TriggerCondition{
+					MetricTrigger: insights.LogMetricTrigger{
+						MetricColumn:      "Computer",
+						MetricTriggerType: "Consecutive",
+						Threshold:         5,
+						ThresholdOperator: "GreaterThan",
+					},
+					Threshold:         3,
+					ThresholdOperator: "GreaterThan",
+				},
+			},
+			Description:       pulumi.String("log alert description"),
+			Enabled:           pulumi.String("true"),
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
+			RuleName:          pulumi.String("logalertfoo"),
+			Schedule: &insights.ScheduleArgs{
+				FrequencyInMinutes:  pulumi.Int(15),
+				TimeWindowInMinutes: pulumi.Int(15),
+			},
+			Source: &insights.SourceArgs{
+				DataSourceId: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace"),
+				Query:        pulumi.String("Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)"),
+				QueryType:    pulumi.String("ResultCount"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -101,15 +156,15 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "aznsAction": azure_native.insights.AzNsActionGroupArgs(
+    action=azure_native.insights.AlertingActionArgs(
+        azns_action=azure_native.insights.AzNsActionGroupArgs(
             action_group=[],
             custom_webhook_payload="{}",
             email_subject="Email Header",
         ),
-        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        "severity": "1",
-        "trigger": azure_native.insights.TriggerConditionArgs(
+        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        severity="1",
+        trigger=azure_native.insights.TriggerConditionArgs(
             metric_trigger=azure_native.insights.LogMetricTriggerArgs(
                 metric_column="Computer",
                 metric_trigger_type="Consecutive",
@@ -119,7 +174,7 @@ scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryR
             threshold=3,
             threshold_operator="GreaterThan",
         ),
-    },
+    ),
     description="log alert description",
     enabled="true",
     location="eastus",
@@ -209,23 +264,23 @@ class MyStack : Stack
     {
         var scheduledQueryRule = new AzureNative.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNative.Insights.ScheduledQueryRuleArgs
         {
-            Action = 
+            Action = new AzureNative.Insights.Inputs.AlertingActionArgs
             {
-                { "aznsAction", new AzureNative.Insights.Inputs.AzNsActionGroupArgs
+                AznsAction = new AzureNative.Insights.Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = 
                     {
                         "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
                     },
                     EmailSubject = "Cross Resource Mail!!",
-                } },
-                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
-                { "severity", "3" },
-                { "trigger", new AzureNative.Insights.Inputs.TriggerConditionArgs
+                },
+                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+                Severity = "3",
+                Trigger = new AzureNative.Insights.Inputs.TriggerConditionArgs
                 {
                     Threshold = 5000,
                     ThresholdOperator = "GreaterThan",
-                } },
+                },
             },
             Description = "Sample Cross Resource alert",
             Enabled = "true",
@@ -262,7 +317,61 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
+			Action: insights.AlertingAction{
+				AznsAction: insights.AzNsActionGroup{
+					ActionGroup: []string{
+						"/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
+					},
+					EmailSubject: "Cross Resource Mail!!",
+				},
+				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+				Severity:  "3",
+				Trigger: insights.TriggerCondition{
+					Threshold:         5000,
+					ThresholdOperator: "GreaterThan",
+				},
+			},
+			Description:       pulumi.String("Sample Cross Resource alert"),
+			Enabled:           pulumi.String("true"),
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
+			RuleName:          pulumi.String("SampleCrossResourceAlert"),
+			Schedule: &insights.ScheduleArgs{
+				FrequencyInMinutes:  pulumi.Int(60),
+				TimeWindowInMinutes: pulumi.Int(60),
+			},
+			Source: &insights.SourceArgs{
+				AuthorizedResources: pulumi.StringArray{
+					pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace"),
+					pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI"),
+				},
+				DataSourceId: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI"),
+				Query:        pulumi.String("union requests, workspace(\"sampleWorkspace\").Update"),
+				QueryType:    pulumi.String("ResultCount"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -275,18 +384,18 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "aznsAction": azure_native.insights.AzNsActionGroupArgs(
+    action=azure_native.insights.AlertingActionArgs(
+        azns_action=azure_native.insights.AzNsActionGroupArgs(
             action_group=["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
             email_subject="Cross Resource Mail!!",
         ),
-        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        "severity": "3",
-        "trigger": azure_native.insights.TriggerConditionArgs(
+        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
+        severity="3",
+        trigger=azure_native.insights.TriggerConditionArgs(
             threshold=5000,
             threshold_operator="GreaterThan",
         ),
-    },
+    ),
     description="Sample Cross Resource alert",
     enabled="true",
     location="eastus",
@@ -377,17 +486,17 @@ class MyStack : Stack
     {
         var scheduledQueryRule = new AzureNative.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNative.Insights.ScheduledQueryRuleArgs
         {
-            Action = 
+            Action = new AzureNative.Insights.Inputs.LogToMetricActionArgs
             {
-                { "criteria", 
+                Criteria = 
                 {
                     new AzureNative.Insights.Inputs.CriteriaArgs
                     {
                         Dimensions = {},
                         MetricName = "Average_% Idle Time",
                     },
-                } },
-                { "odataType", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction" },
+                },
+                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
             },
             Description = "log to metric description",
             Enabled = "true",
@@ -412,7 +521,48 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
+			Action: insights.LogToMetricAction{
+				Criteria: []insights.Criteria{
+					insights.Criteria{
+						Dimensions: []insights.Dimension{},
+						MetricName: fmt.Sprintf("%v%v%v", "Average_", "%", " Idle Time"),
+					},
+				},
+				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
+			},
+			Description:       pulumi.String("log to metric description"),
+			Enabled:           pulumi.String("true"),
+			Location:          pulumi.String("West Europe"),
+			ResourceGroupName: pulumi.String("alertsweu"),
+			RuleName:          pulumi.String("logtometricfoo"),
+			Source: &insights.SourceArgs{
+				DataSourceId: pulumi.String("/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu"),
+			},
+			Tags: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -425,13 +575,13 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryRule",
-    action={
-        "criteria": [azure_native.insights.CriteriaArgs(
+    action=azure_native.insights.LogToMetricActionArgs(
+        criteria=[azure_native.insights.CriteriaArgs(
             dimensions=[],
             metric_name="Average_% Idle Time",
         )],
-        "odataType": "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-    },
+        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
+    ),
     description="log to metric description",
     enabled="true",
     location="West Europe",
@@ -493,19 +643,36 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">,</span>
+                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduledQueryRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduledQueryRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduledQueryRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduledQueryRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -516,46 +683,44 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -566,33 +731,25 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -604,25 +761,19 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -662,6 +813,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#source">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automitigate_csharp">
+<a href="#automitigate_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -747,6 +906,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automitigate_go">
+<a href="#automitigate_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -811,7 +978,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
+        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -827,9 +994,17 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Source</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automitigate_nodejs">
+<a href="#automitigate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -875,7 +1050,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Schedule</a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,6 +1089,14 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auto_mitigate_python">
+<a href="#auto_mitigate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The flag that indicates whether the alert should be automatically resolved or not. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1420,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition</a></span>
+        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group</a></span>
+        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1574,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimension">Dimension[]</a></span>
+        <span class="property-type"><a href="#dimension">Dimension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2028,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2632,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteria">Criteria[]</a></span>
+        <span class="property-type"><a href="#criteria">Criteria<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2682,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">Criteria<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#criteriaresponse">Criteria<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3306,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3420,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

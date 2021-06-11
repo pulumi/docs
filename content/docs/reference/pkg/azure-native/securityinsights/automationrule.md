@@ -37,24 +37,24 @@ class MyStack : Stack
         {
             Actions = 
             {
-                
+                new AzureNative.SecurityInsights.Inputs.AutomationRuleModifyPropertiesActionArgs
                 {
-                    { "actionConfiguration", 
+                    ActionConfiguration = new AzureNative.SecurityInsights.Inputs.AutomationRuleModifyPropertiesActionActionConfigurationArgs
                     {
-                        { "severity", "High" },
-                    } },
-                    { "actionType", "ModifyProperties" },
-                    { "order", 1 },
+                        Severity = "High",
+                    },
+                    ActionType = "ModifyProperties",
+                    Order = 1,
                 },
-                
+                new AzureNative.SecurityInsights.Inputs.AutomationRuleRunPlaybookActionArgs
                 {
-                    { "actionConfiguration", 
+                    ActionConfiguration = new AzureNative.SecurityInsights.Inputs.AutomationRuleRunPlaybookActionActionConfigurationArgs
                     {
-                        { "logicAppResourceId", "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook" },
-                        { "tenantId", "ee48efaf-50c6-411b-9345-b2bdc3eb4abc" },
-                    } },
-                    { "actionType", "RunPlaybook" },
-                    { "order", 2 },
+                        LogicAppResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
+                        TenantId = "ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
+                    },
+                    ActionType = "RunPlaybook",
+                    Order = 2,
                 },
             },
             AutomationRuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
@@ -114,21 +114,21 @@ import pulumi_azure_native as azure_native
 
 automation_rule = azure_native.securityinsights.AutomationRule("automationRule",
     actions=[
-        {
-            "actionConfiguration": {
-                "severity": "High",
-            },
-            "actionType": "ModifyProperties",
-            "order": 1,
-        },
-        {
-            "actionConfiguration": {
-                "logicAppResourceId": "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
-                "tenantId": "ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
-            },
-            "actionType": "RunPlaybook",
-            "order": 2,
-        },
+        azure_native.securityinsights.AutomationRuleModifyPropertiesActionArgs(
+            action_configuration=azure_native.securityinsights.AutomationRuleModifyPropertiesActionActionConfigurationArgs(
+                severity="High",
+            ),
+            action_type="ModifyProperties",
+            order=1,
+        ),
+        azure_native.securityinsights.AutomationRuleRunPlaybookActionArgs(
+            action_configuration=azure_native.securityinsights.AutomationRuleRunPlaybookActionActionConfigurationArgs(
+                logic_app_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
+                tenant_id="ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
+            ),
+            action_type="RunPlaybook",
+            order=2,
+        ),
     ],
     automation_rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     display_name="High severity incidents escalation",
@@ -229,19 +229,34 @@ const automationRule = new azure_native.securityinsights.AutomationRule("automat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[AutomationRuleModifyPropertiesActionArgs, AutomationRuleRunPlaybookActionArgs]]]</span> = None<span class="p">, </span><span class="nx">automation_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggering_logic</span><span class="p">:</span> <span class="nx">Optional[AutomationRuleTriggeringLogicArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[AutomationRuleModifyPropertiesActionArgs, AutomationRuleRunPlaybookActionArgs]]]</span> = None<span class="p">,</span>
+                   <span class="nx">automation_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">order</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">triggering_logic</span><span class="p">:</span> <span class="nx">Optional[AutomationRuleTriggeringLogicArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutomationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutomationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -252,46 +267,44 @@ const automationRule = new azure_native.securityinsights.AutomationRule("automat
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AutomationRuleArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,33 +315,25 @@ const automationRule = new azure_native.securityinsights.AutomationRule("automat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -340,25 +345,19 @@ const automationRule = new azure_native.securityinsights.AutomationRule("automat
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AutomationRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -531,7 +530,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action[]</span>
+        <span class="property-type">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Args | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}The actions to execute when the automation rule is triggered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -571,7 +570,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#triggeringlogic_nodejs" style="color: inherit; text-decoration: inherit;">triggering<wbr>Logic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruletriggeringlogic">Automation<wbr>Rule<wbr>Triggering<wbr>Logic</a></span>
+        <span class="property-type"><a href="#automationruletriggeringlogic">Automation<wbr>Rule<wbr>Triggering<wbr>Logic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The triggering logic of the automation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -982,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1168,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1492,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">Incident<wbr>Label<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Incident<wbr>Label<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1500,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2054,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2234,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2398,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2634,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2812,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

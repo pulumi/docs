@@ -54,8 +54,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -103,7 +103,7 @@ const example = pulumi.output(azure.batch.getPool({
     accountName: "testbatchaccount",
     name: "testbatchpool",
     resourceGroupName: "test",
-}, { async: true }));
+}));
 ```
 
 
@@ -124,17 +124,22 @@ const example = pulumi.output(azure.batch.getPool({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPoolArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[GetPoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[GetPoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPoolCertificate]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[GetPoolStartTask]</span> = None<span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPoolArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPool` in the Go SDK.
 
@@ -143,7 +148,7 @@ const example = pulumi.output(azure.batch.getPool({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -185,24 +190,16 @@ The following arguments are supported:
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkconfiguration_csharp">
-<a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttask_csharp">
 <a href="#starttask_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd></dl>
@@ -245,14 +242,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkconfiguration_go">
-<a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttask_go">
 <a href="#starttask_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
@@ -302,14 +291,6 @@ The following arguments are supported:
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="networkconfiguration_nodejs">
-<a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="starttask_nodejs">
 <a href="#starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
 </span>
@@ -353,24 +334,16 @@ The following arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">Sequence[Get<wbr>Pool<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolcertificate">Sequence[Get<wbr>Pool<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_configuration_python">
-<a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_task_python">
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd></dl>
@@ -1243,7 +1216,7 @@ The following output properties are available:
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-required"
@@ -1336,7 +1309,7 @@ The following output properties are available:
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">Sequence[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">Sequence[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-required"
@@ -1618,7 +1591,7 @@ The following output properties are available:
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
 {{% /md %}}</dd><dt class="property-required"
@@ -1684,7 +1657,7 @@ The following output properties are available:
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The inbound NAT pools that are used to address specific ports on the individual compute node externally.
 {{% /md %}}</dd><dt class="property-required"
@@ -1737,7 +1710,7 @@ The following output properties are available:
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List&lt;Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List&lt;Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -1884,7 +1857,7 @@ The following output properties are available:
 <a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -2047,7 +2020,7 @@ The following output properties are available:
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-required"
@@ -2056,7 +2029,7 @@ The following output properties are available:
 <a href="#useridentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2194,7 @@ The following output properties are available:
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskresourcefile">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-required"
@@ -2230,7 +2203,7 @@ The following output properties are available:
 <a href="#user_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentity">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2483,7 @@ The following output properties are available:
 <a href="#autousers_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List&lt;Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-required"
@@ -2576,7 +2549,7 @@ The following output properties are available:
 <a href="#auto_users_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-required"

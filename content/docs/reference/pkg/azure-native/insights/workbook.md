@@ -148,7 +148,7 @@ class MyStack : Stack
             DisplayName = "tttt",
             Etag = "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
             Id = "/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
-            Identity = new AzureNative.Insights.Inputs.ManagedIdentityArgs
+            Identity = new AzureNative.Insights.Inputs.WorkbookManagedIdentityArgs
             {
                 Type = "UserAssigned",
             },
@@ -184,7 +184,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -194,7 +194,7 @@ func main() {
 			DisplayName: pulumi.String("tttt"),
 			Etag:        "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
 			Id:          pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79"),
-			Identity: &insights.ManagedIdentityArgs{
+			Identity: &insights.WorkbookManagedIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
 			},
 			Kind:              pulumi.String("shared"),
@@ -235,7 +235,7 @@ workbook = azure_native.insights.Workbook("workbook",
     display_name="tttt",
     etag="\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
     id="/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
-    identity=azure_native.insights.ManagedIdentityArgs(
+    identity=azure_native.insights.WorkbookManagedIdentityArgs(
         type="UserAssigned",
     ),
     kind="shared",
@@ -305,19 +305,41 @@ const workbook = new azure_native.insights.Workbook("workbook", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialized_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WorkbookManagedIdentityArgs]</span> = None<span class="p">,</span>
+             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">serialized_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workbook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workbook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkbookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -328,46 +350,44 @@ const workbook = new azure_native.insights.Workbook("workbook", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -378,33 +398,25 @@ const workbook = new azure_native.insights.Workbook("workbook", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -416,25 +428,19 @@ const workbook = new azure_native.insights.Workbook("workbook", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WorkbookArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -503,7 +509,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookmanagedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +641,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
+        <span class="property-type"><a href="#workbookmanagedidentity">Workbook<wbr>Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +773,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
+        <span class="property-type"><a href="#workbookmanagedidentity">Workbook<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -899,7 +905,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookmanagedidentity">Workbook<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>shared</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedidentity">Managed<wbr>Identity</h4>
+<h4 id="workbookmanagedidentity">Workbook<wbr>Managed<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1181,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managedidentityresponse">Managed<wbr>Identity<wbr>Response</h4>
+<h4 id="workbookmanagedidentityresponse">Workbook<wbr>Managed<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -1198,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1218,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1238,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1258,12 +1264,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
+<h4 id="workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

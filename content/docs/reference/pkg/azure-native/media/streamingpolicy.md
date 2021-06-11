@@ -67,7 +67,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -216,7 +216,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -420,7 +420,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -632,7 +632,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -864,7 +864,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1130,19 +1130,33 @@ const streamingPolicy = new azure_native.media.StreamingPolicy("streamingPolicy"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">common_encryption_cbcs</span><span class="p">:</span> <span class="nx">Optional[CommonEncryptionCbcsArgs]</span> = None<span class="p">, </span><span class="nx">common_encryption_cenc</span><span class="p">:</span> <span class="nx">Optional[CommonEncryptionCencArgs]</span> = None<span class="p">, </span><span class="nx">default_content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">envelope_encryption</span><span class="p">:</span> <span class="nx">Optional[EnvelopeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">no_encryption</span><span class="p">:</span> <span class="nx">Optional[NoEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">streaming_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">common_encryption_cbcs</span><span class="p">:</span> <span class="nx">Optional[CommonEncryptionCbcsArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">common_encryption_cenc</span><span class="p">:</span> <span class="nx">Optional[CommonEncryptionCencArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">default_content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">envelope_encryption</span><span class="p">:</span> <span class="nx">Optional[EnvelopeEncryptionArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">no_encryption</span><span class="p">:</span> <span class="nx">Optional[NoEncryptionArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">streaming_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StreamingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1153,46 +1167,44 @@ const streamingPolicy = new azure_native.media.StreamingPolicy("streamingPolicy"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StreamingPolicyArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1203,33 +1215,25 @@ const streamingPolicy = new azure_native.media.StreamingPolicy("streamingPolicy"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1241,25 +1245,19 @@ const streamingPolicy = new azure_native.media.StreamingPolicy("streamingPolicy"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StreamingPolicyArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1432,7 +1430,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncbcs_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cbcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs</a></span>
+        <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1438,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncenc_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc</a></span>
+        <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1454,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#envelopeencryption_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1464,7 +1462,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#noencryption_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noencryption">No<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#noencryption">No<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1917,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2015,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2023,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2097,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2365,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2373,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2503,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2519,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2649,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2657,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3251,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3259,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3397,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3421,7 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3495,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3545,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3643,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3757,7 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3839,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkey">Default<wbr>Key</a></span>
+        <span class="property-type"><a href="#defaultkey">Default<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3847,7 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkey">Streaming<wbr>Policy<wbr>Content<wbr>Key[]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkey">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3921,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3929,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4905,7 +4903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertycondition">Track<wbr>Property<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#trackpropertycondition">Track<wbr>Property<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4955,7 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}

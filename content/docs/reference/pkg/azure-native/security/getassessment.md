@@ -22,17 +22,20 @@ API Version: 2020-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAssessment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAssessmentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAssessment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAssessmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAssessmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_assessment(</span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAssessmentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_assessment(</span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAssessmentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAssessment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAssessmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAssessment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAssessmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAssessmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAssessment` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAssessment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAssessmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAssessmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAssessmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAssessmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1248,8 +1251,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_csharp">
-<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_csharp">
+<a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -1276,7 +1279,7 @@ The following output properties are available:
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,8 +1351,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_go">
-<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+        <span id="categories_go">
+<a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1448,8 +1451,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_nodejs">
-<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_nodejs">
+<a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1548,8 +1551,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="category_python">
-<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+        <span id="categories_python">
+<a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
@@ -1576,7 +1579,7 @@ The following output properties are available:
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

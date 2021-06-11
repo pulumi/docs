@@ -21,7 +21,264 @@ More information about Aurora global databases can be found in the [Aurora User 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### New Global Cluster
+### New MySQL Global Cluster
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Rds.GlobalCluster("example", new Aws.Rds.GlobalClusterArgs
+        {
+            GlobalClusterIdentifier = "global-test",
+            Engine = "aurora",
+            EngineVersion = "5.6.mysql_aurora.1.22.2",
+            DatabaseName = "example_db",
+        });
+        var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
+        {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-primary-cluster",
+            MasterUsername = "username",
+            MasterPassword = "somepass123",
+            DatabaseName = "example_db",
+            GlobalClusterIdentifier = example.Id,
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Primary,
+        });
+        var primaryClusterInstance = new Aws.Rds.ClusterInstance("primaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            Identifier = "test-primary-cluster-instance",
+            ClusterIdentifier = primaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Primary,
+        });
+        var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
+        {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-secondary-cluster",
+            GlobalClusterIdentifier = example.Id,
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Secondary,
+        });
+        var secondaryClusterInstance = new Aws.Rds.ClusterInstance("secondaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            Identifier = "test-secondary-cluster-instance",
+            ClusterIdentifier = secondaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
+        }, new CustomResourceOptions
+        {
+            Provider = aws.Secondary,
+            DependsOn = 
+            {
+                primaryClusterInstance,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := rds.NewGlobalCluster(ctx, "example", &rds.GlobalClusterArgs{
+			GlobalClusterIdentifier: pulumi.String("global-test"),
+			Engine:                  pulumi.String("aurora"),
+			EngineVersion:           pulumi.String("5.6.mysql_aurora.1.22.2"),
+			DatabaseName:            pulumi.String("example_db"),
+		})
+		if err != nil {
+			return err
+		}
+		primaryCluster, err := rds.NewCluster(ctx, "primaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-primary-cluster"),
+			MasterUsername:          pulumi.String("username"),
+			MasterPassword:          pulumi.String("somepass123"),
+			DatabaseName:            pulumi.String("example_db"),
+			GlobalClusterIdentifier: example.ID(),
+			DbSubnetGroupName:       pulumi.String("default"),
+		}, pulumi.Provider(aws.Primary))
+		if err != nil {
+			return err
+		}
+		primaryClusterInstance, err := rds.NewClusterInstance(ctx, "primaryClusterInstance", &rds.ClusterInstanceArgs{
+			Identifier:        pulumi.String("test-primary-cluster-instance"),
+			ClusterIdentifier: primaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
+		}, pulumi.Provider(aws.Primary))
+		if err != nil {
+			return err
+		}
+		secondaryCluster, err := rds.NewCluster(ctx, "secondaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-secondary-cluster"),
+			GlobalClusterIdentifier: example.ID(),
+			DbSubnetGroupName:       pulumi.String("default"),
+		}, pulumi.Provider(aws.Secondary))
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewClusterInstance(ctx, "secondaryClusterInstance", &rds.ClusterInstanceArgs{
+			Identifier:        pulumi.String("test-secondary-cluster-instance"),
+			ClusterIdentifier: secondaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
+		}, pulumi.Provider(aws.Secondary), pulumi.DependsOn([]pulumi.Resource{
+			primaryClusterInstance,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.rds.GlobalCluster("example",
+    global_cluster_identifier="global-test",
+    engine="aurora",
+    engine_version="5.6.mysql_aurora.1.22.2",
+    database_name="example_db")
+primary_cluster = aws.rds.Cluster("primaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-primary-cluster",
+    master_username="username",
+    master_password="somepass123",
+    database_name="example_db",
+    global_cluster_identifier=example.id,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance",
+    identifier="test-primary-cluster-instance",
+    cluster_identifier=primary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+secondary_cluster = aws.rds.Cluster("secondaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-secondary-cluster",
+    global_cluster_identifier=example.id,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"]))
+secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance",
+    identifier="test-secondary-cluster-instance",
+    cluster_identifier=secondary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"],
+        depends_on=[primary_cluster_instance]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.rds.GlobalCluster("example", {
+    globalClusterIdentifier: "global-test",
+    engine: "aurora",
+    engineVersion: "5.6.mysql_aurora.1.22.2",
+    databaseName: "example_db",
+});
+const primaryCluster = new aws.rds.Cluster("primaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-primary-cluster",
+    masterUsername: "username",
+    masterPassword: "somepass123",
+    databaseName: "example_db",
+    globalClusterIdentifier: example.id,
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.primary,
+});
+const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {
+    identifier: "test-primary-cluster-instance",
+    clusterIdentifier: primaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.primary,
+});
+const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-secondary-cluster",
+    globalClusterIdentifier: example.id,
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.secondary,
+});
+const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {
+    identifier: "test-secondary-cluster-instance",
+    clusterIdentifier: secondaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
+    provider: aws.secondary,
+    dependsOn: [primaryClusterInstance],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### New PostgreSQL Global Cluster
 
 
 {{< example csharp >}}
@@ -40,32 +297,49 @@ class MyStack : Stack
         });
         var secondary = new Aws.Provider("secondary", new Aws.ProviderArgs
         {
-            Region = "us-west-2",
+            Region = "us-east-1",
         });
         var example = new Aws.Rds.GlobalCluster("example", new Aws.Rds.GlobalClusterArgs
         {
-            GlobalClusterIdentifier = "example",
-        }, new CustomResourceOptions
-        {
-            Provider = aws.Primary,
+            GlobalClusterIdentifier = "global-test",
+            Engine = "aurora-postgresql",
+            EngineVersion = "11.9",
+            DatabaseName = "example_db",
         });
         var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-primary-cluster",
+            MasterUsername = "username",
+            MasterPassword = "somepass123",
+            DatabaseName = "example_db",
             GlobalClusterIdentifier = example.Id,
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Primary,
         });
         var primaryClusterInstance = new Aws.Rds.ClusterInstance("primaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            Identifier = "test-primary-cluster-instance",
             ClusterIdentifier = primaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Primary,
         });
         var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            ClusterIdentifier = "test-secondary-cluster",
             GlobalClusterIdentifier = example.Id,
+            SkipFinalSnapshot = true,
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Secondary,
@@ -76,7 +350,12 @@ class MyStack : Stack
         });
         var secondaryClusterInstance = new Aws.Rds.ClusterInstance("secondaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
         {
+            Engine = example.Engine,
+            EngineVersion = example.EngineVersion,
+            Identifier = "test-secondary-cluster-instance",
             ClusterIdentifier = secondaryCluster.Id,
+            InstanceClass = "db.r4.large",
+            DbSubnetGroupName = "default",
         }, new CustomResourceOptions
         {
             Provider = aws.Secondary,
@@ -96,9 +375,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -110,31 +389,51 @@ func main() {
 			return err
 		}
 		_, err = providers.Newaws(ctx, "secondary", &providers.awsArgs{
-			Region: pulumi.String("us-west-2"),
+			Region: pulumi.String("us-east-1"),
 		})
 		if err != nil {
 			return err
 		}
 		example, err := rds.NewGlobalCluster(ctx, "example", &rds.GlobalClusterArgs{
-			GlobalClusterIdentifier: pulumi.String("example"),
-		}, pulumi.Provider(aws.Primary))
+			GlobalClusterIdentifier: pulumi.String("global-test"),
+			Engine:                  pulumi.String("aurora-postgresql"),
+			EngineVersion:           pulumi.String("11.9"),
+			DatabaseName:            pulumi.String("example_db"),
+		})
 		if err != nil {
 			return err
 		}
 		primaryCluster, err := rds.NewCluster(ctx, "primaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-primary-cluster"),
+			MasterUsername:          pulumi.String("username"),
+			MasterPassword:          pulumi.String("somepass123"),
+			DatabaseName:            pulumi.String("example_db"),
 			GlobalClusterIdentifier: example.ID(),
+			DbSubnetGroupName:       pulumi.String("default"),
 		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
 		primaryClusterInstance, err := rds.NewClusterInstance(ctx, "primaryClusterInstance", &rds.ClusterInstanceArgs{
+			Engine:            example.Engine,
+			EngineVersion:     example.EngineVersion,
+			Identifier:        pulumi.String("test-primary-cluster-instance"),
 			ClusterIdentifier: primaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
 		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
 		secondaryCluster, err := rds.NewCluster(ctx, "secondaryCluster", &rds.ClusterArgs{
+			Engine:                  example.Engine,
+			EngineVersion:           example.EngineVersion,
+			ClusterIdentifier:       pulumi.String("test-secondary-cluster"),
 			GlobalClusterIdentifier: example.ID(),
+			SkipFinalSnapshot:       pulumi.Bool(true),
+			DbSubnetGroupName:       pulumi.String("default"),
 		}, pulumi.Provider(aws.Secondary), pulumi.DependsOn([]pulumi.Resource{
 			primaryClusterInstance,
 		}))
@@ -142,7 +441,12 @@ func main() {
 			return err
 		}
 		_, err = rds.NewClusterInstance(ctx, "secondaryClusterInstance", &rds.ClusterInstanceArgs{
+			Engine:            example.Engine,
+			EngineVersion:     example.EngineVersion,
+			Identifier:        pulumi.String("test-secondary-cluster-instance"),
 			ClusterIdentifier: secondaryCluster.ID(),
+			InstanceClass:     pulumi.String("db.r4.large"),
+			DbSubnetGroupName: pulumi.String("default"),
 		}, pulumi.Provider(aws.Secondary))
 		if err != nil {
 			return err
@@ -164,18 +468,47 @@ import pulumi_aws as aws
 import pulumi_pulumi as pulumi
 
 primary = pulumi.providers.Aws("primary", region="us-east-2")
-secondary = pulumi.providers.Aws("secondary", region="us-west-2")
-example = aws.rds.GlobalCluster("example", global_cluster_identifier="example",
-opts=pulumi.ResourceOptions(provider=aws["primary"]))
-primary_cluster = aws.rds.Cluster("primaryCluster", global_cluster_identifier=example.id,
-opts=pulumi.ResourceOptions(provider=aws["primary"]))
-primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance", cluster_identifier=primary_cluster.id,
-opts=pulumi.ResourceOptions(provider=aws["primary"]))
-secondary_cluster = aws.rds.Cluster("secondaryCluster", global_cluster_identifier=example.id,
-opts=pulumi.ResourceOptions(provider=aws["secondary"],
-    depends_on=[primary_cluster_instance]))
-secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance", cluster_identifier=secondary_cluster.id,
-opts=pulumi.ResourceOptions(provider=aws["secondary"]))
+secondary = pulumi.providers.Aws("secondary", region="us-east-1")
+example = aws.rds.GlobalCluster("example",
+    global_cluster_identifier="global-test",
+    engine="aurora-postgresql",
+    engine_version="11.9",
+    database_name="example_db")
+primary_cluster = aws.rds.Cluster("primaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-primary-cluster",
+    master_username="username",
+    master_password="somepass123",
+    database_name="example_db",
+    global_cluster_identifier=example.id,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    identifier="test-primary-cluster-instance",
+    cluster_identifier=primary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["primary"]))
+secondary_cluster = aws.rds.Cluster("secondaryCluster",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    cluster_identifier="test-secondary-cluster",
+    global_cluster_identifier=example.id,
+    skip_final_snapshot=True,
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"],
+        depends_on=[primary_cluster_instance]))
+secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance",
+    engine=example.engine,
+    engine_version=example.engine_version,
+    identifier="test-secondary-cluster-instance",
+    cluster_identifier=secondary_cluster.id,
+    instance_class="db.r4.large",
+    db_subnet_group_name="default",
+    opts=pulumi.ResourceOptions(provider=aws["secondary"]))
 ```
 
 
@@ -190,21 +523,54 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const primary = new aws.Provider("primary", {region: "us-east-2"});
-const secondary = new aws.Provider("secondary", {region: "us-west-2"});
-const example = new aws.rds.GlobalCluster("example", {globalClusterIdentifier: "example"}, {
+const secondary = new aws.Provider("secondary", {region: "us-east-1"});
+const example = new aws.rds.GlobalCluster("example", {
+    globalClusterIdentifier: "global-test",
+    engine: "aurora-postgresql",
+    engineVersion: "11.9",
+    databaseName: "example_db",
+});
+const primaryCluster = new aws.rds.Cluster("primaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-primary-cluster",
+    masterUsername: "username",
+    masterPassword: "somepass123",
+    databaseName: "example_db",
+    globalClusterIdentifier: example.id,
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.primary,
 });
-const primaryCluster = new aws.rds.Cluster("primaryCluster", {globalClusterIdentifier: example.id}, {
+const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    identifier: "test-primary-cluster-instance",
+    clusterIdentifier: primaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.primary,
 });
-const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {clusterIdentifier: primaryCluster.id}, {
-    provider: aws.primary,
-});
-const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {globalClusterIdentifier: example.id}, {
+const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    clusterIdentifier: "test-secondary-cluster",
+    globalClusterIdentifier: example.id,
+    skipFinalSnapshot: true,
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.secondary,
     dependsOn: [primaryClusterInstance],
 });
-const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {clusterIdentifier: secondaryCluster.id}, {
+const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {
+    engine: example.engine,
+    engineVersion: example.engineVersion,
+    identifier: "test-secondary-cluster-instance",
+    clusterIdentifier: secondaryCluster.id,
+    instanceClass: "db.r4.large",
+    dbSubnetGroupName: "default",
+}, {
     provider: aws.secondary,
 });
 ```
@@ -253,8 +619,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -331,19 +697,33 @@ const exampleGlobalCluster = new aws.rds.GlobalCluster("exampleGlobalCluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">global_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_db_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">global_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">source_db_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">storage_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -354,46 +734,44 @@ const exampleGlobalCluster = new aws.rds.GlobalCluster("exampleGlobalCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlobalClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,35 +780,27 @@ const exampleGlobalCluster = new aws.rds.GlobalCluster("exampleGlobalCluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -442,25 +812,19 @@ const exampleGlobalCluster = new aws.rds.GlobalCluster("exampleGlobalCluster", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -953,20 +1317,33 @@ Get an existing GlobalCluster resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">global_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_cluster_members</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterGlobalClusterMemberArgs]]</span> = None<span class="p">, </span><span class="nx">global_cluster_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_db_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> GlobalCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">global_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">global_cluster_members</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterGlobalClusterMemberArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">global_cluster_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">source_db_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> GlobalCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GlobalClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1347,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_globalclustermembers_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Cluster<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterglobalclustermember">Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member[]</a></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd><dt class="property-optional"

@@ -22,12 +22,18 @@ async function waitForInProgressRuns() {
     });
 
     // Given the current workflow name, fetch its ID.
-    const workflows = await octokit.actions.listRepoWorkflows({ owner, repo });
+    const workflows = await octokit.rest.actions.listRepoWorkflows({ owner, repo });
     const workflow_id = workflows.data.workflows.find(workflow => workflow.name === workflowName).id;
 
     // Fetch a paginated list of in-progress runs of the current workflow.
     const runs = await octokit.paginate(
-        octokit.actions.listWorkflowRuns.endpoint.merge({ owner, repo, branch, workflow_id, status }),
+      octokit.rest.actions.listWorkflowRuns.endpoint.merge({
+        owner,
+        repo,
+        branch,
+        workflow_id,
+        status,
+      })
     );
 
     // Sort in-progress runs descendingly, excluding the current one.

@@ -41,6 +41,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="requiredaction" title="RequiredAction"><span class="symbol resource"></span>RequiredAction</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usergroups" title="UserGroups"><span class="symbol resource"></span>UserGroups</a></li>
     <li><a href="userroles" title="UserRoles"><span class="symbol resource"></span>UserRoles</a></li>
     <li><a href="usertemplateimporteridentityprovidermapper" title="UserTemplateImporterIdentityProviderMapper"><span class="symbol resource"></span>UserTemplateImporterIdentityProviderMapper</a></li>
     <li><a href="userspermissions" title="UsersPermissions"><span class="symbol resource"></span>UsersPermissions</a></li>
@@ -49,6 +50,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getauthenticationexecution" title="GetAuthenticationExecution"><span class="symbol function"></span>GetAuthenticationExecution</a></li>
+    <li><a href="getauthenticationflow" title="GetAuthenticationFlow"><span class="symbol function"></span>GetAuthenticationFlow</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getrealm" title="GetRealm"><span class="symbol function"></span>GetRealm</a></li>
     <li><a href="getrealmkeys" title="GetRealmKeys"><span class="symbol function"></span>GetRealmKeys</a></li>
@@ -65,6 +67,6 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>4.0.1</dd>
 </dl>
 

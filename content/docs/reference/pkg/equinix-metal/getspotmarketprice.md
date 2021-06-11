@@ -35,8 +35,8 @@ class MyStack : Stack
     {
         var example = Output.Create(EquinixMetal.GetSpotMarketPrice.InvokeAsync(new EquinixMetal.GetSpotMarketPriceArgs
         {
-            Facility = "ewr1",
-            Plan = "c1.small.x86",
+            Facility = "ny5",
+            Plan = "c3.small.x86",
         }));
     }
 
@@ -53,15 +53,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "ny5"
 		_, err := equinix - metal.GetSpotMarketPrice(ctx, &equinix-metal.GetSpotMarketPriceArgs{
-			Facility: "ewr1",
-			Plan:     "c1.small.x86",
+			Facility: &opt0,
+			Plan:     "c3.small.x86",
 		}, nil)
 		if err != nil {
 			return err
@@ -81,8 +82,8 @@ func main() {
 import pulumi
 import pulumi_equinix_metal as equinix_metal
 
-example = equinix_metal.get_spot_market_price(facility="ewr1",
-    plan="c1.small.x86")
+example = equinix_metal.get_spot_market_price(facility="ny5",
+    plan="c3.small.x86")
 ```
 
 
@@ -97,8 +98,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as metal from "@pulumi/metal";
 
 const example = pulumi.output(metal.getSpotMarketPrice({
-    facility: "ewr1",
-    plan: "c1.small.x86",
+    facility: "ny5",
+    plan: "c3.small.x86",
 }, { async: true }));
 ```
 
@@ -120,17 +121,20 @@ const example = pulumi.output(metal.getSpotMarketPrice({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSpotMarketPrice<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSpotMarketPriceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSpotMarketPriceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSpotMarketPrice<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSpotMarketPriceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSpotMarketPriceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spot_market_price(</span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpotMarketPriceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spot_market_price(</span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpotMarketPriceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketPrice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSpotMarketPriceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSpotMarketPriceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketPrice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetSpotMarketPriceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSpotMarketPriceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetSpotMarketPrice` in the Go SDK.
 
@@ -139,7 +143,7 @@ const example = pulumi.output(metal.getSpotMarketPrice({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSpotMarketPrice </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSpotMarketPriceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSpotMarketPriceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSpotMarketPriceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSpotMarketPriceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -151,15 +155,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="facility_csharp">
-<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the facility.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
@@ -167,20 +162,28 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the plan.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="facility_go">
-<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facility_csharp">
+<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the facility.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_csharp">
+<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -189,20 +192,28 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the plan.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="facility_nodejs">
-<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facility_go">
+<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the facility.
-{{% /md %}}</dd><dt class="property-required"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_go">
+<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -211,20 +222,28 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the plan.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facility_nodejs">
+<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the facility.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_nodejs">
+<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="facility_python">
-<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the facility.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -233,7 +252,24 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the plan.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facility_python">
+<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the facility.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_python">
+<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -247,14 +283,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="facility_csharp">
-<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -280,19 +308,27 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Current spot market price for given plan in given facility.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="facility_go">
-<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
+        <span id="facility_csharp">
+<a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metro_csharp">
+<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -318,19 +354,27 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Current spot market price for given plan in given facility.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="facility_nodejs">
-<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+        <span id="facility_go">
+<a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metro_go">
+<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -356,19 +400,27 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Current spot market price for given plan in given facility.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="facility_nodejs">
+<a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metro_nodejs">
+<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="facility_python">
-<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -394,7 +446,23 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Current spot market price for given plan in given facility.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="facility_python">
+<a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="metro_python">
+<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

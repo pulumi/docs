@@ -23,7 +23,7 @@ Provides an Elastic IP resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Single EIP associated with an instance
 
 
 {{< example csharp >}}
@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -112,6 +112,439 @@ const lb = new aws.ec2.Eip("lb", {
 
 
 
+### Multiple EIPs associated with a single network interface
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var multi_ip = new Aws.Ec2.NetworkInterface("multi-ip", new Aws.Ec2.NetworkInterfaceArgs
+        {
+            SubnetId = aws_subnet.Main.Id,
+            PrivateIps = 
+            {
+                "10.0.0.10",
+                "10.0.0.11",
+            },
+        });
+        var one = new Aws.Ec2.Eip("one", new Aws.Ec2.EipArgs
+        {
+            Vpc = true,
+            NetworkInterface = multi_ip.Id,
+            AssociateWithPrivateIp = "10.0.0.10",
+        });
+        var two = new Aws.Ec2.Eip("two", new Aws.Ec2.EipArgs
+        {
+            Vpc = true,
+            NetworkInterface = multi_ip.Id,
+            AssociateWithPrivateIp = "10.0.0.11",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewNetworkInterface(ctx, "multi_ip", &ec2.NetworkInterfaceArgs{
+			SubnetId: pulumi.Any(aws_subnet.Main.Id),
+			PrivateIps: pulumi.StringArray{
+				pulumi.String("10.0.0.10"),
+				pulumi.String("10.0.0.11"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewEip(ctx, "one", &ec2.EipArgs{
+			Vpc:                    pulumi.Bool(true),
+			NetworkInterface:       multi_ip.ID(),
+			AssociateWithPrivateIp: pulumi.String("10.0.0.10"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewEip(ctx, "two", &ec2.EipArgs{
+			Vpc:                    pulumi.Bool(true),
+			NetworkInterface:       multi_ip.ID(),
+			AssociateWithPrivateIp: pulumi.String("10.0.0.11"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+multi_ip = aws.ec2.NetworkInterface("multi-ip",
+    subnet_id=aws_subnet["main"]["id"],
+    private_ips=[
+        "10.0.0.10",
+        "10.0.0.11",
+    ])
+one = aws.ec2.Eip("one",
+    vpc=True,
+    network_interface=multi_ip.id,
+    associate_with_private_ip="10.0.0.10")
+two = aws.ec2.Eip("two",
+    vpc=True,
+    network_interface=multi_ip.id,
+    associate_with_private_ip="10.0.0.11")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const multi_ip = new aws.ec2.NetworkInterface("multi-ip", {
+    subnetId: aws_subnet.main.id,
+    privateIps: [
+        "10.0.0.10",
+        "10.0.0.11",
+    ],
+});
+const one = new aws.ec2.Eip("one", {
+    vpc: true,
+    networkInterface: multi_ip.id,
+    associateWithPrivateIp: "10.0.0.10",
+});
+const two = new aws.ec2.Eip("two", {
+    vpc: true,
+    networkInterface: multi_ip.id,
+    associateWithPrivateIp: "10.0.0.11",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Attaching an EIP to an Instance with a pre-assigned private ip (VPC Only)
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Ec2.Vpc("default", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+            EnableDnsHostnames = true,
+        });
+        var gw = new Aws.Ec2.InternetGateway("gw", new Aws.Ec2.InternetGatewayArgs
+        {
+            VpcId = @default.Id,
+        });
+        var tfTestSubnet = new Aws.Ec2.Subnet("tfTestSubnet", new Aws.Ec2.SubnetArgs
+        {
+            VpcId = @default.Id,
+            CidrBlock = "10.0.0.0/24",
+            MapPublicIpOnLaunch = true,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                gw,
+            },
+        });
+        var foo = new Aws.Ec2.Instance("foo", new Aws.Ec2.InstanceArgs
+        {
+            Ami = "ami-5189a661",
+            InstanceType = "t2.micro",
+            PrivateIp = "10.0.0.12",
+            SubnetId = tfTestSubnet.Id,
+        });
+        var bar = new Aws.Ec2.Eip("bar", new Aws.Ec2.EipArgs
+        {
+            Vpc = true,
+            Instance = foo.Id,
+            AssociateWithPrivateIp = "10.0.0.12",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                gw,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewVpc(ctx, "_default", &ec2.VpcArgs{
+			CidrBlock:          pulumi.String("10.0.0.0/16"),
+			EnableDnsHostnames: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		gw, err := ec2.NewInternetGateway(ctx, "gw", &ec2.InternetGatewayArgs{
+			VpcId: _default.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		tfTestSubnet, err := ec2.NewSubnet(ctx, "tfTestSubnet", &ec2.SubnetArgs{
+			VpcId:               _default.ID(),
+			CidrBlock:           pulumi.String("10.0.0.0/24"),
+			MapPublicIpOnLaunch: pulumi.Bool(true),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			gw,
+		}))
+		if err != nil {
+			return err
+		}
+		foo, err := ec2.NewInstance(ctx, "foo", &ec2.InstanceArgs{
+			Ami:          pulumi.String("ami-5189a661"),
+			InstanceType: pulumi.String("t2.micro"),
+			PrivateIp:    pulumi.String("10.0.0.12"),
+			SubnetId:     tfTestSubnet.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewEip(ctx, "bar", &ec2.EipArgs{
+			Vpc:                    pulumi.Bool(true),
+			Instance:               foo.ID(),
+			AssociateWithPrivateIp: pulumi.String("10.0.0.12"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			gw,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+default = aws.ec2.Vpc("default",
+    cidr_block="10.0.0.0/16",
+    enable_dns_hostnames=True)
+gw = aws.ec2.InternetGateway("gw", vpc_id=default.id)
+tf_test_subnet = aws.ec2.Subnet("tfTestSubnet",
+    vpc_id=default.id,
+    cidr_block="10.0.0.0/24",
+    map_public_ip_on_launch=True,
+    opts=pulumi.ResourceOptions(depends_on=[gw]))
+foo = aws.ec2.Instance("foo",
+    ami="ami-5189a661",
+    instance_type="t2.micro",
+    private_ip="10.0.0.12",
+    subnet_id=tf_test_subnet.id)
+bar = aws.ec2.Eip("bar",
+    vpc=True,
+    instance=foo.id,
+    associate_with_private_ip="10.0.0.12",
+    opts=pulumi.ResourceOptions(depends_on=[gw]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const _default = new aws.ec2.Vpc("default", {
+    cidrBlock: "10.0.0.0/16",
+    enableDnsHostnames: true,
+});
+const gw = new aws.ec2.InternetGateway("gw", {vpcId: _default.id});
+const tfTestSubnet = new aws.ec2.Subnet("tfTestSubnet", {
+    vpcId: _default.id,
+    cidrBlock: "10.0.0.0/24",
+    mapPublicIpOnLaunch: true,
+}, {
+    dependsOn: [gw],
+});
+const foo = new aws.ec2.Instance("foo", {
+    ami: "ami-5189a661",
+    instanceType: "t2.micro",
+    privateIp: "10.0.0.12",
+    subnetId: tfTestSubnet.id,
+});
+const bar = new aws.ec2.Eip("bar", {
+    vpc: true,
+    instance: foo.id,
+    associateWithPrivateIp: "10.0.0.12",
+}, {
+    dependsOn: [gw],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Allocating EIP from the BYOIP pool
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var byoip_ip = new Aws.Ec2.Eip("byoip-ip", new Aws.Ec2.EipArgs
+        {
+            PublicIpv4Pool = "ipv4pool-ec2-012345",
+            Vpc = true,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewEip(ctx, "byoip_ip", &ec2.EipArgs{
+			PublicIpv4Pool: pulumi.String("ipv4pool-ec2-012345"),
+			Vpc:            pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+byoip_ip = aws.ec2.Eip("byoip-ip",
+    public_ipv4_pool="ipv4pool-ec2-012345",
+    vpc=True)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const byoip_ip = new aws.ec2.Eip("byoip-ip", {
+    publicIpv4Pool: "ipv4pool-ec2-012345",
+    vpc: true,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -123,19 +556,35 @@ const lb = new aws.ec2.Eip("lb", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">EipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">EipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">associate_with_private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_border_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">associate_with_private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_border_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[EipArgs]</a></span> = None<span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEip</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">EipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Eip</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEip</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">EipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Eip</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EipArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Eip</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EipArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,46 +595,44 @@ const lb = new aws.ec2.Eip("lb", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EipArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EipArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -194,35 +641,27 @@ const lb = new aws.ec2.Eip("lb", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EipArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -234,25 +673,19 @@ const lb = new aws.ec2.Eip("lb", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">EipArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -269,15 +702,22 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="associatewithprivateip_csharp">
 <a href="#associatewithprivateip_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_csharp">
@@ -286,7 +726,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
@@ -304,7 +744,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterface_csharp">
@@ -331,8 +771,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_csharp">
 <a href="#vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -347,15 +794,22 @@ the Elastic IP address is associated with the primary private IP address.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="associatewithprivateip_go">
 <a href="#associatewithprivateip_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_go">
@@ -364,7 +818,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
@@ -382,7 +836,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterface_go">
@@ -409,8 +863,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_go">
 <a href="#vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -425,15 +886,22 @@ the Elastic IP address is associated with the primary private IP address.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="associatewithprivateip_nodejs">
 <a href="#associatewithprivateip_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>With<wbr>Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_nodejs">
@@ -442,7 +910,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
@@ -460,7 +928,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterface_nodejs">
@@ -487,8 +955,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_nodejs">
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -503,15 +978,22 @@ the Elastic IP address is associated with the primary private IP address.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="associate_with_private_ip_python">
 <a href="#associate_with_private_ip_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>with_<wbr>private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_owned_ipv4_pool_python">
@@ -520,7 +1002,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
@@ -538,7 +1020,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_python">
@@ -565,8 +1047,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_python">
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -594,7 +1083,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associationid_csharp">
 <a href="#associationid_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -602,7 +1092,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrierip_csharp">
 <a href="#carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -610,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerownedip_csharp">
@@ -685,7 +1176,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associationid_go">
 <a href="#associationid_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -693,7 +1185,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrierip_go">
 <a href="#carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -701,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerownedip_go">
@@ -776,7 +1269,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associationid_nodejs">
 <a href="#associationid_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Id</a>
@@ -784,7 +1278,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrierip_nodejs">
 <a href="#carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
@@ -792,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerownedip_nodejs">
@@ -867,7 +1362,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="association_id_python">
 <a href="#association_id_python" style="color: inherit; text-decoration: inherit;">association_<wbr>id</a>
@@ -875,7 +1371,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrier_ip_python">
 <a href="#carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
@@ -883,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_owned_ip_python">
@@ -957,20 +1454,41 @@ Get an existing Eip resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EipState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Eip</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EipState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Eip</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_with_private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">carrier_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_border_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Eip</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">allocation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">associate_with_private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">carrier_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_owned_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_border_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Eip</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEip<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EipState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Eip</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEip<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EipState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Eip</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Eip</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EipState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Eip</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EipState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1075,13 +1593,23 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_address_csharp">
+<a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allocationid_csharp">
 <a href="#state_allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatewithprivateip_csharp">
 <a href="#state_associatewithprivateip_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -1089,9 +1617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associationid_csharp">
@@ -1100,7 +1626,8 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrierip_csharp">
 <a href="#state_carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -1108,7 +1635,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_csharp">
@@ -1126,7 +1653,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
@@ -1153,7 +1680,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterface_csharp">
@@ -1216,8 +1743,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_csharp">
+<a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_csharp">
 <a href="#state_vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -1232,13 +1766,23 @@ the Elastic IP address is associated with the primary private IP address.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_address_go">
+<a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allocationid_go">
 <a href="#state_allocationid_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatewithprivateip_go">
 <a href="#state_associatewithprivateip_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -1246,9 +1790,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associationid_go">
@@ -1257,7 +1799,8 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrierip_go">
 <a href="#state_carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -1265,7 +1808,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_go">
@@ -1283,7 +1826,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
@@ -1310,7 +1853,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterface_go">
@@ -1373,8 +1916,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_go">
+<a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_go">
 <a href="#state_vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -1389,13 +1939,23 @@ the Elastic IP address is associated with the primary private IP address.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_address_nodejs">
+<a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allocationid_nodejs">
 <a href="#state_allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatewithprivateip_nodejs">
 <a href="#state_associatewithprivateip_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -1403,9 +1963,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associationid_nodejs">
@@ -1414,7 +1972,8 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrierip_nodejs">
 <a href="#state_carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
@@ -1422,7 +1981,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_nodejs">
@@ -1440,7 +1999,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
@@ -1467,7 +2026,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterface_nodejs">
@@ -1530,8 +2089,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tagsall_nodejs">
+<a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_nodejs">
 <a href="#state_vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -1546,13 +2112,23 @@ the Elastic IP address is associated with the primary private IP address.
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_address_python">
+<a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_allocation_id_python">
 <a href="#state_allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associate_with_private_ip_python">
 <a href="#state_associate_with_private_ip_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>with_<wbr>private_<wbr>ip</a>
@@ -1560,9 +2136,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
+    <dd>{{% md %}}User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_association_id_python">
@@ -1571,7 +2145,8 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrier_ip_python">
 <a href="#state_carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
@@ -1579,7 +2154,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The carrier IP address.
+    <dd>{{% md %}}Carrier IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_owned_ip_python">
@@ -1597,7 +2172,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+    <dd>{{% md %}}ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
@@ -1624,7 +2199,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    <dd>{{% md %}}Location from which the IP address is advertised. Use this parameter to limit the address to this location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interface_python">
@@ -1687,8 +2262,15 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_all_python">
+<a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_python">
 <a href="#state_vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>

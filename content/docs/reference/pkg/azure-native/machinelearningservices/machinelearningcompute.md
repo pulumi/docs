@@ -37,9 +37,9 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AKSArgs
             {
-                { "computeType", "AKS" },
+                ComputeType = "AKS",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -56,7 +56,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AKS{
+				ComputeType: "AKS",
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -71,9 +99,9 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AKS",
-    },
+    properties=azure_native.machinelearningservices.AKSArgs(
+        compute_type="AKS",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -125,28 +153,28 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputeArgs
             {
-                { "computeType", "AmlCompute" },
-                { "properties", 
+                ComputeType = "AmlCompute",
+                Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputePropertiesArgs
                 {
-                    { "enableNodePublicIp", true },
-                    { "isolatedNetwork", false },
-                    { "osType", "Windows" },
-                    { "remoteLoginPortPublicAccess", "NotSpecified" },
-                    { "scaleSettings", new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
+                    EnableNodePublicIp = true,
+                    IsolatedNetwork = false,
+                    OsType = "Windows",
+                    RemoteLoginPortPublicAccess = "NotSpecified",
+                    ScaleSettings = new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 1,
                         MinNodeCount = 0,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
-                    } },
-                    { "virtualMachineImage", new AzureNative.MachineLearningServices.Inputs.VirtualMachineImageArgs
+                    },
+                    VirtualMachineImage = new AzureNative.MachineLearningServices.Inputs.VirtualMachineImageArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
-                    } },
-                    { "vmPriority", "Dedicated" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    },
+                    VmPriority = "Dedicated",
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -163,7 +191,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AmlCompute{
+				ComputeType: "AmlCompute",
+				Properties: machinelearningservices.AmlComputeProperties{
+					EnableNodePublicIp:          true,
+					IsolatedNetwork:             false,
+					OsType:                      "Windows",
+					RemoteLoginPortPublicAccess: "NotSpecified",
+					ScaleSettings: machinelearningservices.ScaleSettings{
+						MaxNodeCount:                1,
+						MinNodeCount:                0,
+						NodeIdleTimeBeforeScaleDown: "PT5M",
+					},
+					VirtualMachineImage: machinelearningservices.VirtualMachineImage{
+						Id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
+					},
+					VmPriority: "Dedicated",
+					VmSize:     "STANDARD_NC6",
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -178,25 +250,25 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AmlCompute",
-        "properties": {
-            "enableNodePublicIp": True,
-            "isolatedNetwork": False,
-            "osType": "Windows",
-            "remoteLoginPortPublicAccess": "NotSpecified",
-            "scaleSettings": azure_native.machinelearningservices.ScaleSettingsArgs(
+    properties=azure_native.machinelearningservices.AmlComputeArgs(
+        compute_type="AmlCompute",
+        properties=azure_native.machinelearningservices.AmlComputePropertiesArgs(
+            enable_node_public_ip=True,
+            isolated_network=False,
+            os_type="Windows",
+            remote_login_port_public_access="NotSpecified",
+            scale_settings=azure_native.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=1,
                 min_node_count=0,
                 node_idle_time_before_scale_down="PT5M",
             ),
-            "virtualMachineImage": azure_native.machinelearningservices.VirtualMachineImageArgs(
+            virtual_machine_image=azure_native.machinelearningservices.VirtualMachineImageArgs(
                 id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
             ),
-            "vmPriority": "Dedicated",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+            vm_priority="Dedicated",
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -264,9 +336,9 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.DataFactoryArgs
             {
-                { "computeType", "DataFactory" },
+                ComputeType = "DataFactory",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -283,7 +355,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.DataFactory{
+				ComputeType: "DataFactory",
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -298,9 +398,9 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "DataFactory",
-    },
+    properties=azure_native.machinelearningservices.DataFactoryArgs(
+        compute_type="DataFactory",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -352,28 +452,28 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstanceArgs
             {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
+                ComputeType = "ComputeInstance",
+                Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstancePropertiesArgs
                 {
-                    { "applicationSharingPolicy", "Personal" },
-                    { "computeInstanceAuthorizationType", "personal" },
-                    { "personalComputeInstanceSettings", new AzureNative.MachineLearningServices.Inputs.PersonalComputeInstanceSettingsArgs
+                    ApplicationSharingPolicy = "Personal",
+                    ComputeInstanceAuthorizationType = "personal",
+                    PersonalComputeInstanceSettings = new AzureNative.MachineLearningServices.Inputs.PersonalComputeInstanceSettingsArgs
                     {
                         AssignedUser = new AzureNative.MachineLearningServices.Inputs.AssignedUserArgs
                         {
                             ObjectId = "00000000-0000-0000-0000-000000000000",
                             TenantId = "00000000-0000-0000-0000-000000000000",
                         },
-                    } },
-                    { "sshSettings", new AzureNative.MachineLearningServices.Inputs.ComputeInstanceSshSettingsArgs
+                    },
+                    SshSettings = new AzureNative.MachineLearningServices.Inputs.ComputeInstanceSshSettingsArgs
                     {
                         SshPublicAccess = "Disabled",
-                    } },
-                    { "subnet", "test-subnet-resource-id" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    },
+                    Subnet = "test-subnet-resource-id",
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -390,7 +490,50 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.ComputeInstance{
+				ComputeType: "ComputeInstance",
+				Properties: machinelearningservices.ComputeInstanceProperties{
+					ApplicationSharingPolicy:         "Personal",
+					ComputeInstanceAuthorizationType: "personal",
+					PersonalComputeInstanceSettings: machinelearningservices.PersonalComputeInstanceSettings{
+						AssignedUser: machinelearningservices.AssignedUser{
+							ObjectId: "00000000-0000-0000-0000-000000000000",
+							TenantId: "00000000-0000-0000-0000-000000000000",
+						},
+					},
+					SshSettings: machinelearningservices.ComputeInstanceSshSettings{
+						SshPublicAccess: "Disabled",
+					},
+					Subnet: "test-subnet-resource-id",
+					VmSize: "STANDARD_NC6",
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -405,24 +548,24 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "applicationSharingPolicy": "Personal",
-            "computeInstanceAuthorizationType": "personal",
-            "personalComputeInstanceSettings": azure_native.machinelearningservices.PersonalComputeInstanceSettingsArgs(
+    properties=azure_native.machinelearningservices.ComputeInstanceArgs(
+        compute_type="ComputeInstance",
+        properties=azure_native.machinelearningservices.ComputeInstancePropertiesArgs(
+            application_sharing_policy="Personal",
+            compute_instance_authorization_type="personal",
+            personal_compute_instance_settings=azure_native.machinelearningservices.PersonalComputeInstanceSettingsArgs(
                 assigned_user=azure_native.machinelearningservices.AssignedUserArgs(
                     object_id="00000000-0000-0000-0000-000000000000",
                     tenant_id="00000000-0000-0000-0000-000000000000",
                 ),
             ),
-            "sshSettings": azure_native.machinelearningservices.ComputeInstanceSshSettingsArgs(
+            ssh_settings=azure_native.machinelearningservices.ComputeInstanceSshSettingsArgs(
                 ssh_public_access="Disabled",
             ),
-            "subnet": "test-subnet-resource-id",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+            subnet="test-subnet-resource-id",
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -489,13 +632,13 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstanceArgs
             {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
+                ComputeType = "ComputeInstance",
+                Properties = new AzureNative.MachineLearningServices.Inputs.ComputeInstancePropertiesArgs
                 {
-                    { "vmSize", "STANDARD_NC6" },
-                } },
+                    VmSize = "STANDARD_NC6",
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -512,7 +655,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.ComputeInstance{
+				ComputeType: "ComputeInstance",
+				Properties: machinelearningservices.ComputeInstanceProperties{
+					VmSize: "STANDARD_NC6",
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -527,12 +701,12 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "vmSize": "STANDARD_NC6",
-        },
-    },
+    properties=azure_native.machinelearningservices.ComputeInstanceArgs(
+        compute_type="ComputeInstance",
+        properties=azure_native.machinelearningservices.ComputeInstancePropertiesArgs(
+            vm_size="STANDARD_NC6",
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -587,15 +761,15 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AKSArgs
             {
-                { "computeType", "AKS" },
-                { "description", "some compute" },
-                { "properties", 
+                ComputeType = "AKS",
+                Description = "some compute",
+                Properties = new AzureNative.MachineLearningServices.Inputs.AKSPropertiesArgs
                 {
-                    { "agentCount", 4 },
-                } },
-                { "resourceId", "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2" },
+                    AgentCount = 4,
+                },
+                ResourceId = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -612,7 +786,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AKS{
+				ComputeType: "AKS",
+				Description: "some compute",
+				Properties: machinelearningservices.AKSProperties{
+					AgentCount: 4,
+				},
+				ResourceId: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -627,14 +834,14 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AKS",
-        "description": "some compute",
-        "properties": {
-            "agentCount": 4,
-        },
-        "resourceId": "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
-    },
+    properties=azure_native.machinelearningservices.AKSArgs(
+        compute_type="AKS",
+        description="some compute",
+        properties=azure_native.machinelearningservices.AKSPropertiesArgs(
+            agent_count=4,
+        ),
+        resource_id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -691,19 +898,19 @@ class MyStack : Stack
         {
             ComputeName = "compute123",
             Location = "eastus",
-            Properties = 
+            Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputeArgs
             {
-                { "computeType", "AmlCompute" },
-                { "description", "some compute" },
-                { "properties", 
+                ComputeType = "AmlCompute",
+                Description = "some compute",
+                Properties = new AzureNative.MachineLearningServices.Inputs.AmlComputePropertiesArgs
                 {
-                    { "scaleSettings", new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
+                    ScaleSettings = new AzureNative.MachineLearningServices.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 4,
                         MinNodeCount = 4,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
-                    } },
-                } },
+                    },
+                },
             },
             ResourceGroupName = "testrg123",
             WorkspaceName = "workspaces123",
@@ -720,7 +927,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
+			ComputeName: pulumi.String("compute123"),
+			Location:    pulumi.String("eastus"),
+			Properties: machinelearningservices.AmlCompute{
+				ComputeType: "AmlCompute",
+				Description: "some compute",
+				Properties: machinelearningservices.AmlComputeProperties{
+					ScaleSettings: machinelearningservices.ScaleSettings{
+						MaxNodeCount:                4,
+						MinNodeCount:                4,
+						NodeIdleTimeBeforeScaleDown: "PT5M",
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			WorkspaceName:     pulumi.String("workspaces123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -735,17 +978,17 @@ import pulumi_azure_native as azure_native
 machine_learning_compute = azure_native.machinelearningservices.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
-    properties={
-        "computeType": "AmlCompute",
-        "description": "some compute",
-        "properties": {
-            "scaleSettings": azure_native.machinelearningservices.ScaleSettingsArgs(
+    properties=azure_native.machinelearningservices.AmlComputeArgs(
+        compute_type="AmlCompute",
+        description="some compute",
+        properties=azure_native.machinelearningservices.AmlComputePropertiesArgs(
+            scale_settings=azure_native.machinelearningservices.ScaleSettingsArgs(
                 max_node_count=4,
                 min_node_count=4,
                 node_idle_time_before_scale_down="PT5M",
             ),
-        },
-    },
+        ),
+    ),
     resource_group_name="testrg123",
     workspace_name="workspaces123")
 
@@ -799,19 +1042,33 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AKSArgs, AmlComputeArgs, ComputeInstanceArgs, DataFactoryArgs, DataLakeAnalyticsArgs, DatabricksArgs, HDInsightArgs, VirtualMachineArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">compute_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AKSArgs, AmlComputeArgs, ComputeInstanceArgs, DataFactoryArgs, DataLakeAnalyticsArgs, DatabricksArgs, HDInsightArgs, VirtualMachineArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                           <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningCompute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningCompute</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningCompute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningCompute</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningCompute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MachineLearningComputeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -822,46 +1079,44 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -872,33 +1127,25 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -910,25 +1157,19 @@ const machineLearningCompute = new azure_native.machinelearningservices.MachineL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">MachineLearningComputeArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1109,7 +1350,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1366,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aks">AKS</a> | <a href="#amlcompute">Aml<wbr>Compute</a> | <a href="#computeinstance">Compute<wbr>Instance</a> | <a href="#datafactory">Data<wbr>Factory</a> | <a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics</a> | <a href="#databricks">Databricks</a> | <a href="#hdinsight">HDInsight</a> | <a href="#virtualmachine">Virtual<wbr>Machine</a></span>
+        <span class="property-type"><a href="#aks">AKSArgs</a> | <a href="#amlcompute">Aml<wbr>Compute<wbr>Args</a> | <a href="#computeinstance">Compute<wbr>Instance<wbr>Args</a> | <a href="#datafactory">Data<wbr>Factory<wbr>Args</a> | <a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics<wbr>Args</a> | <a href="#databricks">Databricks<wbr>Args</a> | <a href="#hdinsight">HDInsight<wbr>Args</a> | <a href="#virtualmachine">Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1374,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksproperties">AKSProperties</a></span>
+        <span class="property-type"><a href="#aksproperties">AKSProperties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1868,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1900,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties</a></span>
+        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2102,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2604,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties</a></span>
+        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2862,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2878,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2886,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image</a></span>
+        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3128,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3160,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3530,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3538,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodestatecounts_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>State<wbr>Counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3586,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3594,7 +3835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3602,7 +3843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3610,7 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4080,7 +4321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties</a></span>
+        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4688,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4696,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts</a></span>
+        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4704,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4712,7 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4922,7 +5163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4954,7 +5195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5252,7 +5493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceapplicationresponse">Compute<wbr>Instance<wbr>Application<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#computeinstanceapplicationresponse">Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5260,7 +5501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5268,7 +5509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</a></span>
+        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5276,7 +5517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5284,7 +5525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastoperation_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5316,7 +5557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5324,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5332,7 +5573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5340,7 +5581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5924,7 +6165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6110,7 +6351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6346,7 +6587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6378,7 +6619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6598,7 +6839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties</a></span>
+        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6866,7 +7107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6898,7 +7139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7208,7 +7449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7346,7 +7587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties</a></span>
+        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7468,7 +7709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7646,7 +7887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7678,7 +7919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7824,7 +8065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8052,7 +8293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8126,7 +8367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8412,7 +8653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User</a></span>
+        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8462,7 +8703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
+        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9212,7 +9453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9220,7 +9461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9294,7 +9535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9302,7 +9543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9360,7 +9601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute</a></span>
+        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9410,7 +9651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10672,7 +10913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties</a></span>
+        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10910,7 +11151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11104,7 +11345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11136,7 +11377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties</a></span>
+        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11298,7 +11539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

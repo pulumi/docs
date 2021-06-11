@@ -77,9 +77,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -197,19 +197,50 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">automatic_channel_upgrade</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">automatic_channel_upgrade</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">dns_prefix_private_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                      <span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKubernetesCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKubernetesCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KubernetesCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KubernetesClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -220,46 +251,44 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -268,35 +297,27 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -308,25 +329,19 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">KubernetesClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -350,15 +365,6 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dnsprefix_csharp">
-<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -413,6 +419,24 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsprefix_csharp">
+<a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsprefixprivatecluster_csharp">
+<a href="#dnsprefixprivatecluster_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix<wbr>Private<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepodsecuritypolicy_csharp">
@@ -570,15 +594,6 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dnsprefix_go">
-<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -631,6 +646,24 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsprefix_go">
+<a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsprefixprivatecluster_go">
+<a href="#dnsprefixprivatecluster_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix<wbr>Private<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepodsecuritypolicy_go">
@@ -783,18 +816,9 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#defaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dnsprefix_nodejs">
-<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -810,7 +834,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#addonprofile_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +852,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#autoscalerprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,6 +875,24 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsprefix_nodejs">
+<a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsprefixprivatecluster_nodejs">
+<a href="#dnsprefixprivatecluster_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix<wbr>Private<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablepodsecuritypolicy_nodejs">
 <a href="#enablepodsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pod<wbr>Security<wbr>Policy</a>
 </span>
@@ -863,7 +905,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +923,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +950,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +994,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#rolebasedaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Based<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +1003,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +1030,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1004,15 +1046,6 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="dns_prefix_python">
-<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -1067,6 +1100,24 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information [can be found in the documentation](https://docs.microsoft.com/en-us/azure/aks/azure-disk-customer-managed-keys).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_prefix_python">
+<a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_prefix_private_cluster_python">
+<a href="#dns_prefix_private_cluster_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix_<wbr>private_<wbr>cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_pod_security_policy_python">
@@ -1527,20 +1578,54 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KubernetesClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KubernetesCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KubernetesClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KubernetesCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">, </span><span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">, </span><span class="nx">automatic_channel_upgrade</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kube_admin_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_admin_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeAdminConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kube_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">addon_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAddonProfileArgs]</span> = None<span class="p">,</span>
+        <span class="nx">api_server_authorized_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_scaler_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterAutoScalerProfileArgs]</span> = None<span class="p">,</span>
+        <span class="nx">automatic_channel_upgrade</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_node_pool</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterDefaultNodePoolArgs]</span> = None<span class="p">,</span>
+        <span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dns_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dns_prefix_private_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">kube_admin_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">kube_admin_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeAdminConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kube_config_raw</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">kube_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
+        <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">role_based_access_control</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterRoleBasedAccessControlArgs]</span> = None<span class="p">,</span>
+        <span class="nx">service_principal</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterServicePrincipalArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterWindowsProfileArgs]</span> = None<span class="p">) -&gt;</span> KubernetesCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KubernetesClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KubernetesClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KubernetesCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KubernetesCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KubernetesClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KubernetesCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KubernetesClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1706,6 +1791,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsprefixprivatecluster_csharp">
+<a href="#state_dnsprefixprivatecluster_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix<wbr>Private<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablepodsecuritypolicy_csharp">
@@ -1989,6 +2083,15 @@ The following state arguments are supported:
     <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dnsprefixprivatecluster_go">
+<a href="#state_dnsprefixprivatecluster_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix<wbr>Private<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enablepodsecuritypolicy_go">
 <a href="#state_enablepodsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
 </span>
@@ -2211,7 +2314,7 @@ The following state arguments are supported:
 <a href="#state_addonprofile_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_autoscalerprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_defaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Node<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,6 +2371,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsprefixprivatecluster_nodejs">
+<a href="#state_dnsprefixprivatecluster_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix<wbr>Private<wbr>Cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablepodsecuritypolicy_nodejs">
@@ -2291,7 +2403,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2309,7 +2421,7 @@ The following state arguments are supported:
 <a href="#state_kubeadminconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2439,7 @@ The following state arguments are supported:
 <a href="#state_kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2448,7 @@ The following state arguments are supported:
 <a href="#state_kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2466,7 @@ The following state arguments are supported:
 <a href="#state_linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2493,7 @@ The following state arguments are supported:
 <a href="#state_networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2443,7 +2555,7 @@ The following state arguments are supported:
 <a href="#state_rolebasedaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Based<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2452,7 +2564,7 @@ The following state arguments are supported:
 <a href="#state_serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2479,7 +2591,7 @@ The following state arguments are supported:
 <a href="#state_windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2549,6 +2661,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dns_prefix_private_cluster_python">
+<a href="#state_dns_prefix_private_cluster_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix_<wbr>private_<wbr>cluster</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_pod_security_policy_python">
@@ -2807,6 +2928,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ingressapplicationgateway_csharp">
+<a href="#ingressapplicationgateway_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubedashboard_csharp">
 <a href="#kubedashboard_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboard</a>
 </span>
@@ -2856,6 +2986,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ingressapplicationgateway_go">
+<a href="#ingressapplicationgateway_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubedashboard_go">
 <a href="#kubedashboard_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboard</a>
 </span>
@@ -2882,7 +3021,7 @@ The following state arguments are supported:
 <a href="#aciconnectorlinux_nodejs" style="color: inherit; text-decoration: inherit;">aci<wbr>Connector<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `aci_connector_linux` block. For more details, please visit [Create and configure an AKS cluster to use virtual nodes](https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2891,7 +3030,7 @@ The following state arguments are supported:
 <a href="#azurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block as defined below. For more details please visit [Understand Azure Policy for Azure Kubernetes Service](https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2900,16 +3039,25 @@ The following state arguments are supported:
 <a href="#httpapplicationrouting_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressapplicationgateway_nodejs">
+<a href="#ingressapplicationgateway_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubedashboard_nodejs">
 <a href="#kubedashboard_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2918,7 +3066,7 @@ The following state arguments are supported:
 <a href="#omsagent_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
 {{% /md %}}</dd></dl>
@@ -2952,6 +3100,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_application_gateway_python">
+<a href="#ingress_application_gateway_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kube_dashboard_python">
@@ -3207,6 +3364,366 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to deploy the Application Gateway ingress controller to this Kubernetes Cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="effectivegatewayid_csharp">
+<a href="#effectivegatewayid_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewayid_csharp">
+<a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressapplicationgatewayidentities_csharp">
+<a href="#ingressapplicationgatewayidentities_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetcidr_csharp">
+<a href="#subnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR to be used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to deploy the Application Gateway ingress controller to this Kubernetes Cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="effectivegatewayid_go">
+<a href="#effectivegatewayid_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewayid_go">
+<a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressapplicationgatewayidentities_go">
+<a href="#ingressapplicationgatewayidentities_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">[]Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetcidr_go">
+<a href="#subnetcidr_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR to be used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to deploy the Application Gateway ingress controller to this Kubernetes Cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="effectivegatewayid_nodejs">
+<a href="#effectivegatewayid_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewayid_nodejs">
+<a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingressapplicationgatewayidentities_nodejs">
+<a href="#ingressapplicationgatewayidentities_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetcidr_nodejs">
+<a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR to be used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to deploy the Application Gateway ingress controller to this Kubernetes Cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="effective_gateway_id_python">
+<a href="#effective_gateway_id_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gateway_id_python">
+<a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ingress_application_gateway_identities_python">
+<a href="#ingress_application_gateway_identities_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_cidr_python">
+<a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subnet CIDR to be used to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet on which to create an Application Gateway, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID for the Service Principal.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID for the Service Principal.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Client ID for the Service Principal.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Client ID for the Service Principal.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</h4>
 
 {{% choosable language csharp %}}
@@ -3350,7 +3867,7 @@ The following state arguments are supported:
 <a href="#omsagentidentities_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
@@ -3527,6 +4044,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emptybulkdeletemax_csharp">
+<a href="#emptybulkdeletemax_csharp" style="color: inherit; text-decoration: inherit;">Empty<wbr>Bulk<wbr>Delete<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of empty nodes that can be deleted at the same time. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expander_csharp">
 <a href="#expander_csharp" style="color: inherit; text-decoration: inherit;">Expander</a>
 </span>
@@ -3543,6 +4069,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxnodeprovisioningtime_csharp">
+<a href="#maxnodeprovisioningtime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provisioning<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maximum time the autoscaler waits for a node to be provisioned. Defaults to `15m`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunreadynodes_csharp">
+<a href="#maxunreadynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unready<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum Number of allowed unready nodes. Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunreadypercentage_csharp">
+<a href="#maxunreadypercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unready<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Maximum percentage of unready nodes the cluster autoscaler will stop if the percentage is exceeded. Defaults to `45`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newpodscaleupdelay_csharp">
@@ -3648,6 +4201,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emptybulkdeletemax_go">
+<a href="#emptybulkdeletemax_go" style="color: inherit; text-decoration: inherit;">Empty<wbr>Bulk<wbr>Delete<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of empty nodes that can be deleted at the same time. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expander_go">
 <a href="#expander_go" style="color: inherit; text-decoration: inherit;">Expander</a>
 </span>
@@ -3664,6 +4226,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxnodeprovisioningtime_go">
+<a href="#maxnodeprovisioningtime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provisioning<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maximum time the autoscaler waits for a node to be provisioned. Defaults to `15m`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunreadynodes_go">
+<a href="#maxunreadynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unready<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum Number of allowed unready nodes. Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunreadypercentage_go">
+<a href="#maxunreadypercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unready<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Maximum percentage of unready nodes the cluster autoscaler will stop if the percentage is exceeded. Defaults to `45`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newpodscaleupdelay_go">
@@ -3769,6 +4358,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="emptybulkdeletemax_nodejs">
+<a href="#emptybulkdeletemax_nodejs" style="color: inherit; text-decoration: inherit;">empty<wbr>Bulk<wbr>Delete<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of empty nodes that can be deleted at the same time. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expander_nodejs">
 <a href="#expander_nodejs" style="color: inherit; text-decoration: inherit;">expander</a>
 </span>
@@ -3785,6 +4383,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxnodeprovisioningtime_nodejs">
+<a href="#maxnodeprovisioningtime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Provisioning<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maximum time the autoscaler waits for a node to be provisioned. Defaults to `15m`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunreadynodes_nodejs">
+<a href="#maxunreadynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unready<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum Number of allowed unready nodes. Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunreadypercentage_nodejs">
+<a href="#maxunreadypercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unready<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum percentage of unready nodes the cluster autoscaler will stop if the percentage is exceeded. Defaults to `45`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newpodscaleupdelay_nodejs">
@@ -3890,6 +4515,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Detect similar node groups and balance the number of nodes between them. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="empty_bulk_delete_max_python">
+<a href="#empty_bulk_delete_max_python" style="color: inherit; text-decoration: inherit;">empty_<wbr>bulk_<wbr>delete_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of empty nodes that can be deleted at the same time. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="expander_python">
 <a href="#expander_python" style="color: inherit; text-decoration: inherit;">expander</a>
 </span>
@@ -3906,6 +4540,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_node_provisioning_time_python">
+<a href="#max_node_provisioning_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>provisioning_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Maximum time the autoscaler waits for a node to be provisioned. Defaults to `15m`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_unready_nodes_python">
+<a href="#max_unready_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unready_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum Number of allowed unready nodes. Defaults to `3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_unready_percentage_python">
+<a href="#max_unready_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unready_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Maximum percentage of unready nodes the cluster autoscaler will stop if the percentage is exceeded. Defaults to `45`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="new_pod_scale_up_delay_python">
@@ -4559,7 +5220,7 @@ The following state arguments are supported:
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5637,7 +6298,7 @@ The following state arguments are supported:
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block. Only one is currently allowed. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -5943,7 +6604,7 @@ The following state arguments are supported:
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `load_balancer_profile` block. This can only be specified when `load_balancer_sku` is set to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6393,7 +7054,7 @@ The following state arguments are supported:
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block.
 {{% /md %}}</dd></dl>
@@ -6433,6 +7094,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azurerbacenabled_csharp">
+<a href="#azurerbacenabled_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Rbac<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_csharp">
@@ -6493,6 +7163,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurerbacenabled_go">
+<a href="#azurerbacenabled_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Rbac<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientappid_go">
 <a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
 </span>
@@ -6551,6 +7230,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azurerbacenabled_nodejs">
+<a href="#azurerbacenabled_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Rbac<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clientappid_nodejs">
 <a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
 </span>
@@ -6607,6 +7295,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="azure_rbac_enabled_python">
+<a href="#azure_rbac_enabled_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>rbac_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_app_id_python">

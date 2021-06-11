@@ -127,7 +127,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -440,7 +440,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -637,19 +637,38 @@ const cache = new azure_native.storagecache.Cache("cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">directory_services_settings</span><span class="p">:</span> <span class="nx">Optional[CacheDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[CacheEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[CacheIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[CacheNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[CacheSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[CacheSkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">directory_services_settings</span><span class="p">:</span> <span class="nx">Optional[CacheDirectorySettingsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[CacheEncryptionSettingsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[CacheIdentityArgs]</span> = None<span class="p">,</span>
+          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[CacheNetworkSettingsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">,</span>
+          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[CacheSecuritySettingsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[CacheSkuArgs]</span> = None<span class="p">,</span>
+          <span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -660,46 +679,44 @@ const cache = new azure_native.storagecache.Cache("cache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -710,33 +727,25 @@ const cache = new azure_native.storagecache.Cache("cache", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -748,25 +757,19 @@ const cache = new azure_native.storagecache.Cache("cache", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1027,7 +1030,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryservicessettings_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Services<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectorysettings">Cache<wbr>Directory<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cachedirectorysettings">Cache<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1038,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1046,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity</a></span>
+        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1062,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#networksettings_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1078,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1086,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku</a></span>
+        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2282,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2332,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2414,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3060,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">Nfs<wbr>Access<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">Nfs<wbr>Access<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3110,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3564,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4040,7 +4043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4430,7 +4433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4512,7 +4515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4686,7 +4689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">Nfs<wbr>Access<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#nfsaccessrule">Nfs<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4768,7 +4771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">

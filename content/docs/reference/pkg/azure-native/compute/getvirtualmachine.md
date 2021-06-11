@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.compute.getVirtualMachine functio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine.
-API Version: 2020-12-01.
+API Version: 2021-03-01.
 
 
 
@@ -22,17 +22,20 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_machine(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualMachineResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_machine(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualMachineResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualMachine` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -75,7 +78,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -103,7 +106,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -131,7 +134,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -159,7 +162,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expand expression to apply on the operation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the virtual machine that is managed by the platform and can change outside of control plane operations. 'UserData' retrieves the UserData property as part of the VM model view that was provided by the user during the VM Create/Update operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -252,7 +255,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingprofile_csharp">
 <a href="#billingprofile_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile</a>
@@ -382,6 +385,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="scheduledeventsprofile_csharp">
+<a href="#scheduledeventsprofile_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Events<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="securityprofile_csharp">
 <a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
 </span>
@@ -405,6 +416,14 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachinescaleset_csharp">
 <a href="#virtualmachinescaleset_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
@@ -504,7 +523,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingprofile_go">
 <a href="#billingprofile_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile</a>
@@ -634,6 +653,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="scheduledeventsprofile_go">
+<a href="#scheduledeventsprofile_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Events<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="securityprofile_go">
 <a href="#securityprofile_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
 </span>
@@ -657,6 +684,14 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachinescaleset_go">
 <a href="#virtualmachinescaleset_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
@@ -756,7 +791,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingprofile_nodejs">
 <a href="#billingprofile_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile</a>
@@ -886,6 +921,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="scheduledeventsprofile_nodejs">
+<a href="#scheduledeventsprofile_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Events<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="securityprofile_nodejs">
 <a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
 </span>
@@ -909,6 +952,14 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachinescaleset_nodejs">
 <a href="#virtualmachinescaleset_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
@@ -1008,7 +1059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billing_profile_python">
 <a href="#billing_profile_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile</a>
@@ -1138,6 +1189,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="scheduled_events_profile_python">
+<a href="#scheduled_events_profile_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>events_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="security_profile_python">
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span>
@@ -1161,6 +1220,14 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machine_scale_set_python">
 <a href="#virtual_machine_scale_set_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set</a>
@@ -1520,7 +1587,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apierrorbaseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Error<wbr>Base<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apierrorbaseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Error<wbr>Base<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Api error details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1595,7 @@ The following output properties are available:
 <a href="#innererror_csharp" style="color: inherit; text-decoration: inherit;">Innererror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Api inner error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1652,7 +1719,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apierrorbaseresponse">Sequence[Api<wbr>Error<wbr>Base<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apierrorbaseresponse">Sequence[Api<wbr>Error<wbr>Base<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Api error details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1727,7 @@ The following output properties are available:
 <a href="#innererror_python" style="color: inherit; text-decoration: inherit;">innererror</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Api inner error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1708,7 +1775,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apierrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apierrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The errors that were encountered during execution of the operation. The details array contains the list of them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1912,7 +1979,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apierrorresponse">Api<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apierrorresponse">Api<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The errors that were encountered during execution of the operation. The details array contains the list of them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2036,7 +2103,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2120,7 +2187,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2256,6 +2323,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteoption_csharp">
+<a href="#deleteoption_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="detachoption_csharp">
 <a href="#detachoption_csharp" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
 </span>
@@ -2276,7 +2351,7 @@ The following output properties are available:
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2359,7 @@ The following output properties are available:
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2308,7 +2383,7 @@ The following output properties are available:
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2363,6 +2438,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_go">
+<a href="#deleteoption_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detachoption_go">
 <a href="#detachoption_go" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
@@ -2472,6 +2555,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteoption_nodejs">
+<a href="#deleteoption_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="detachoption_nodejs">
 <a href="#detachoption_nodejs" style="color: inherit; text-decoration: inherit;">detach<wbr>Option</a>
 </span>
@@ -2580,6 +2671,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delete_option_python">
+<a href="#delete_option_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="detach_option_python">
 <a href="#detach_option_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>option</a>
 </span>
@@ -2600,7 +2699,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2608,7 +2707,7 @@ The following output properties are available:
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2632,7 +2731,7 @@ The following output properties are available:
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2656,7 +2755,7 @@ The following output properties are available:
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2692,7 +2791,7 @@ The following output properties are available:
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2718,7 +2817,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2738,7 +2837,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2758,7 +2857,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2778,7 +2877,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</h4>
@@ -2844,7 +2943,7 @@ The following output properties are available:
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the disk encryption key, which is a Key Vault Secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2959,7 @@ The following output properties are available:
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2928,7 +3027,7 @@ The following output properties are available:
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the disk encryption key, which is a Key Vault Secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2944,7 +3043,7 @@ The following output properties are available:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2960,7 +3059,7 @@ The following output properties are available:
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2976,7 +3075,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3044,7 +3143,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Sequence[Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Sequence[Disk<wbr>Encryption<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3060,7 +3159,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3162,7 +3261,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3174,7 +3273,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3186,7 +3285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3198,7 +3297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagereferenceresponse">Image<wbr>Reference<wbr>Response</h4>
@@ -3696,7 +3795,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3756,7 +3855,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3780,7 +3879,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3840,7 +3939,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3856,7 +3955,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apierrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apierrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The errors that were encountered during execution of the operation. The details array contains the list of them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4132,7 +4231,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apierrorresponse">Api<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apierrorresponse">Api<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The errors that were encountered during execution of the operation. The details array contains the list of them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4236,7 +4335,7 @@ The following output properties are available:
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4252,7 +4351,7 @@ The following output properties are available:
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4344,7 +4443,7 @@ The following output properties are available:
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4360,7 +4459,7 @@ The following output properties are available:
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4372,17 +4471,33 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="assessmentmode_csharp">
+<a href="#assessmentmode_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="patchmode_csharp">
 <a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessmentmode_go">
+<a href="#assessmentmode_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchmode_go">
 <a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
@@ -4390,11 +4505,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessmentmode_nodejs">
+<a href="#assessmentmode_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchmode_nodejs">
 <a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
@@ -4402,11 +4525,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessment_mode_python">
+<a href="#assessment_mode_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patch_mode_python">
 <a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
@@ -4414,7 +4545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="maintenanceredeploystatusresponse">Maintenance<wbr>Redeploy<wbr>Status<wbr>Response</h4>
@@ -4672,7 +4803,7 @@ The following output properties are available:
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4756,7 +4887,7 @@ The following output properties are available:
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4784,6 +4915,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="deleteoption_csharp">
+<a href="#deleteoption_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -4803,6 +4942,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_go">
+<a href="#deleteoption_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4824,6 +4971,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="deleteoption_nodejs">
+<a href="#deleteoption_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -4843,6 +4998,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="delete_option_python">
+<a href="#delete_option_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4868,17 +5031,49 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="networkapiversion_csharp">
+<a href="#networkapiversion_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaceconfigurations_csharp">
+<a href="#networkinterfaceconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Configuration<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the networking configurations that will be used to create the virtual machine networking resources.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfacereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource Ids for the network interfaces associated with the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="networkapiversion_go">
+<a href="#networkapiversion_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaceconfigurations_go">
+<a href="#networkinterfaceconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceconfigurationresponse">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the networking configurations that will be used to create the virtual machine networking resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -4892,6 +5087,22 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="networkapiversion_nodejs">
+<a href="#networkapiversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfaceconfigurations_nodejs">
+<a href="#networkinterfaceconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the networking configurations that will be used to create the virtual machine networking resources.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
@@ -4904,11 +5115,27 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="network_api_version_python">
+<a href="#network_api_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>api_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_interface_configurations_python">
+<a href="#network_interface_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the networking configurations that will be used to create the virtual machine networking resources.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacereferenceresponse">Sequence[Network<wbr>Interface<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfacereferenceresponse">Sequence[Network<wbr>Interface<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of resource Ids for the network interfaces associated with the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4936,11 +5163,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteoption_csharp">
+<a href="#deleteoption_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diffdisksettings_csharp">
 <a href="#diffdisksettings_csharp" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4956,7 +5191,7 @@ The following output properties are available:
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4964,7 +5199,7 @@ The following output properties are available:
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4972,7 +5207,7 @@ The following output properties are available:
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4996,7 +5231,7 @@ The following output properties are available:
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5027,6 +5262,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_go">
+<a href="#deleteoption_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diffdisksettings_go">
 <a href="#diffdisksettings_go" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
@@ -5120,6 +5363,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deleteoption_nodejs">
+<a href="#deleteoption_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diffdisksettings_nodejs">
 <a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
 </span>
@@ -5212,11 +5463,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delete_option_python">
+<a href="#delete_option_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="diff_disk_settings_python">
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5232,7 +5491,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5240,7 +5499,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5248,7 +5507,7 @@ The following output properties are available:
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5272,7 +5531,7 @@ The following output properties are available:
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5298,7 +5557,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -5306,7 +5565,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowextensionoperations_csharp">
 <a href="#allowextensionoperations_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Extension<wbr>Operations</a>
@@ -5322,7 +5581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -5330,15 +5589,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_csharp">
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireguestprovisionsignal_csharp">
 <a href="#requireguestprovisionsignal_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Guest<wbr>Provision<wbr>Signal</a>
@@ -5352,7 +5611,7 @@ The following output properties are available:
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5360,7 +5619,7 @@ The following output properties are available:
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5374,7 +5633,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -5382,7 +5641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowextensionoperations_go">
 <a href="#allowextensionoperations_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Extension<wbr>Operations</a>
@@ -5398,7 +5657,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -5406,7 +5665,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_go">
 <a href="#linuxconfiguration_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
@@ -5414,7 +5673,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireguestprovisionsignal_go">
 <a href="#requireguestprovisionsignal_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Guest<wbr>Provision<wbr>Signal</a>
@@ -5450,7 +5709,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -5458,7 +5717,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowextensionoperations_nodejs">
 <a href="#allowextensionoperations_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Extension<wbr>Operations</a>
@@ -5474,7 +5733,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -5482,7 +5741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxconfiguration_nodejs">
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
@@ -5490,7 +5749,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireguestprovisionsignal_nodejs">
 <a href="#requireguestprovisionsignal_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Guest<wbr>Provision<wbr>Signal</a>
@@ -5526,7 +5785,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -5534,7 +5793,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_extension_operations_python">
 <a href="#allow_extension_operations_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>extension_<wbr>operations</a>
@@ -5550,7 +5809,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the host OS name of the virtual machine. <br><br> This name cannot be updated after the VM is created. <br><br> **Max-length (Windows):** 15 characters <br><br> **Max-length (Linux):** 64 characters. <br><br> For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-name-rules).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -5558,15 +5817,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file, for more information see [Custom Data on Azure VMs](https://azure.microsoft.com/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_configuration_python">
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_guest_provision_signal_python">
 <a href="#require_guest_provision_signal_python" style="color: inherit; text-decoration: inherit;">require_<wbr>guest_<wbr>provision_<wbr>signal</a>
@@ -5580,7 +5839,7 @@ The following output properties are available:
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5588,7 +5847,7 @@ The following output properties are available:
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5599,6 +5858,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessmentmode_csharp">
+<a href="#assessmentmode_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehotpatching_csharp">
 <a href="#enablehotpatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
@@ -5614,11 +5881,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessmentmode_go">
+<a href="#assessmentmode_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehotpatching_go">
 <a href="#enablehotpatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
@@ -5634,11 +5909,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessmentmode_nodejs">
+<a href="#assessmentmode_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehotpatching_nodejs">
 <a href="#enablehotpatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hotpatching</a>
@@ -5654,11 +5937,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="assessment_mode_python">
+<a href="#assessment_mode_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_hotpatching_python">
 <a href="#enable_hotpatching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hotpatching</a>
@@ -5674,7 +5965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planresponse">Plan<wbr>Response</h4>
@@ -5825,6 +6116,142 @@ The following output properties are available:
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="publicipaddressskuname_csharp">
+<a href="#publicipaddressskuname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressskutier_csharp">
+<a href="#publicipaddressskutier_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku tier{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="publicipaddressskuname_go">
+<a href="#publicipaddressskuname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressskutier_go">
+<a href="#publicipaddressskutier_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku tier{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="publicipaddressskuname_nodejs">
+<a href="#publicipaddressskuname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Sku<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressskutier_nodejs">
+<a href="#publicipaddressskutier_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku tier{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="public_ip_address_sku_name_python">
+<a href="#public_ip_address_sku_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>sku_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_address_sku_tier_python">
+<a href="#public_ip_address_sku_tier_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>sku_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify public IP sku tier{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="terminatenotificationprofile_csharp">
+<a href="#terminatenotificationprofile_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="terminatenotificationprofile_go">
+<a href="#terminatenotificationprofile_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="terminatenotificationprofile_nodejs">
+<a href="#terminatenotificationprofile_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="terminate_notification_profile_python">
+<a href="#terminate_notification_profile_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="securityprofileresponse">Security<wbr>Profile<wbr>Response</h4>
 
 
@@ -5852,7 +6279,7 @@ The following output properties are available:
 <a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5936,7 +6363,7 @@ The following output properties are available:
 <a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5952,7 +6379,7 @@ The following output properties are available:
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5988,7 +6415,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6006,7 +6433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -6026,7 +6453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -6046,7 +6473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -6066,7 +6493,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -6088,15 +6515,15 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_csharp">
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6104,9 +6531,9 @@ The following output properties are available:
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6118,7 +6545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskresponse">[]Data<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_go">
 <a href="#imagereference_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -6134,7 +6561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskresponse">OSDisk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -6146,7 +6573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_nodejs">
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
@@ -6162,7 +6589,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskresponse">OSDisk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -6172,15 +6599,15 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_reference_python">
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6188,9 +6615,9 @@ The following output properties are available:
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">OSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskresponse">OSDisk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
@@ -6243,6 +6670,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Terminate Scheduled event is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notbeforetimeout_csharp">
+<a href="#notbeforetimeout_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Terminate Scheduled event is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notbeforetimeout_go">
+<a href="#notbeforetimeout_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Terminate Scheduled event is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notbeforetimeout_nodejs">
+<a href="#notbeforetimeout_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the Terminate Scheduled event is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="not_before_timeout_python">
+<a href="#not_before_timeout_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</h4>
@@ -6424,7 +6935,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6432,7 +6943,7 @@ The following output properties are available:
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6484,7 +6995,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6492,7 +7003,7 @@ The following output properties are available:
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6560,7 +7071,7 @@ The following output properties are available:
 <a href="#extensionhandlers_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensionhandlerinstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Extension<wbr>Handler<wbr>Instance<wbr>View<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineextensionhandlerinstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Extension<wbr>Handler<wbr>Instance<wbr>View<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension handler instance view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6568,7 +7079,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6644,7 +7155,7 @@ The following output properties are available:
 <a href="#extension_handlers_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensionhandlerinstanceviewresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Handler<wbr>Instance<wbr>View<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensionhandlerinstanceviewresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Handler<wbr>Instance<wbr>View<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension handler instance view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6652,7 +7163,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6676,7 +7187,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extension handler status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6760,7 +7271,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extension handler status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6800,7 +7311,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6808,7 +7319,7 @@ The following output properties are available:
 <a href="#substatuses_csharp" style="color: inherit; text-decoration: inherit;">Substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6932,7 +7443,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6940,7 +7451,7 @@ The following output properties are available:
 <a href="#substatuses_python" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7036,7 +7547,7 @@ The following output properties are available:
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension instance view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7384,7 +7895,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension instance view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7440,7 +7951,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health status information for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7476,7 +7987,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health status information for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7516,7 +8027,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7624,7 +8135,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Virtual<wbr>Machine<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Virtual<wbr>Machine<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7732,7 +8243,7 @@ The following output properties are available:
 <a href="#vmhealth_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinehealthstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Health<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinehealthstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Health<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health status for the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7740,7 +8251,7 @@ The following output properties are available:
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7756,7 +8267,7 @@ The following output properties are available:
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskinstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Instance<wbr>View<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskinstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Instance<wbr>View<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine disk information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7764,7 +8275,7 @@ The following output properties are available:
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The extensions information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7780,7 +8291,7 @@ The following output properties are available:
 <a href="#maintenanceredeploystatus_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Redeploy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenanceredeploystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Maintenance<wbr>Redeploy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenanceredeploystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Maintenance<wbr>Redeploy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Maintenance Operation status on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7804,7 +8315,7 @@ The following output properties are available:
 <a href="#patchstatus_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] The status of virtual machine patch operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7836,7 +8347,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7844,7 +8355,7 @@ The following output properties are available:
 <a href="#vmagent_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineagentinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Agent<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineagentinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Agent<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VM Agent running on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8128,7 +8639,7 @@ The following output properties are available:
 <a href="#vm_health_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinehealthstatusresponse">Virtual<wbr>Machine<wbr>Health<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinehealthstatusresponse">Virtual<wbr>Machine<wbr>Health<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health status for the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8136,7 +8647,7 @@ The following output properties are available:
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsinstanceviewresponse">Boot<wbr>Diagnostics<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsinstanceviewresponse">Boot<wbr>Diagnostics<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8152,7 +8663,7 @@ The following output properties are available:
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskinstanceviewresponse">Sequence[Disk<wbr>Instance<wbr>View<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskinstanceviewresponse">Sequence[Disk<wbr>Instance<wbr>View<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine disk information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8160,7 +8671,7 @@ The following output properties are available:
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceviewresponse">Sequence[Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The extensions information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8176,7 +8687,7 @@ The following output properties are available:
 <a href="#maintenance_redeploy_status_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>redeploy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenanceredeploystatusresponse">Maintenance<wbr>Redeploy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#maintenanceredeploystatusresponse">Maintenance<wbr>Redeploy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Maintenance Operation status on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8200,7 +8711,7 @@ The following output properties are available:
 <a href="#patch_status_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] The status of virtual machine patch operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8232,7 +8743,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8240,9 +8751,761 @@ The following output properties are available:
 <a href="#vm_agent_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineagentinstanceviewresponse">Virtual<wbr>Machine<wbr>Agent<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineagentinstanceviewresponse">Virtual<wbr>Machine<wbr>Agent<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VM Agent running on the virtual machine.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachineiptagresponse">Virtual<wbr>Machine<wbr>Ip<wbr>Tag<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="iptagtype_csharp">
+<a href="#iptagtype_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tag<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP tag type. Example: FirstPartyUsage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP tag associated with the public IP. Example: SQL, Storage etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="iptagtype_go">
+<a href="#iptagtype_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tag<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP tag type. Example: FirstPartyUsage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP tag associated with the public IP. Example: SQL, Storage etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="iptagtype_nodejs">
+<a href="#iptagtype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tag<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP tag type. Example: FirstPartyUsage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP tag associated with the public IP. Example: SQL, Storage etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ip_tag_type_python">
+<a href="#ip_tag_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tag_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP tag type. Example: FirstPartyUsage.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP tag associated with the public IP. Example: SQL, Storage etc.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachinenetworkinterfaceconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network interface configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_csharp">
+<a href="#deleteoption_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssettings_csharp">
+<a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfacednssettingsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dscpconfiguration_csharp">
+<a href="#dscpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableacceleratednetworking_csharp">
+<a href="#enableacceleratednetworking_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablefpga_csharp">
+<a href="#enablefpga_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableipforwarding_csharp">
+<a href="#enableipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>IPForwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether IP forwarding enabled on this NIC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networksecuritygroup_csharp">
+<a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceipconfigurationresponse">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network interface configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_go">
+<a href="#deleteoption_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssettings_go">
+<a href="#dnssettings_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfacednssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dscpconfiguration_go">
+<a href="#dscpconfiguration_go" style="color: inherit; text-decoration: inherit;">Dscp<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableacceleratednetworking_go">
+<a href="#enableacceleratednetworking_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablefpga_go">
+<a href="#enablefpga_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableipforwarding_go">
+<a href="#enableipforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>IPForwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether IP forwarding enabled on this NIC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networksecuritygroup_go">
+<a href="#networksecuritygroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceipconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network interface configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_nodejs">
+<a href="#deleteoption_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssettings_nodejs">
+<a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfacednssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dscpconfiguration_nodejs">
+<a href="#dscpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">dscp<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableacceleratednetworking_nodejs">
+<a href="#enableacceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accelerated<wbr>Networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablefpga_nodejs">
+<a href="#enablefpga_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableipforwarding_nodejs">
+<a href="#enableipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>IPForwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether IP forwarding enabled on this NIC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networksecuritygroup_nodejs">
+<a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfaceipconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network interface configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_option_python">
+<a href="#delete_option_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the network interface when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_settings_python">
+<a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterfacednssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dscp_configuration_python">
+<a href="#dscp_configuration_python" style="color: inherit; text-decoration: inherit;">dscp_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_accelerated_networking_python">
+<a href="#enable_accelerated_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accelerated_<wbr>networking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_fpga_python">
+<a href="#enable_fpga_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_ip_forwarding_python">
+<a href="#enable_ip_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ip_<wbr>forwarding</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether IP forwarding enabled on this NIC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_security_group_python">
+<a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachinenetworkinterfacednssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of DNS servers IP addresses{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachinenetworkinterfaceipconfigurationresponse">Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationgatewaybackendaddresspools_csharp">
+<a href="#applicationgatewaybackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationsecuritygroups_csharp">
+<a href="#applicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerbackendaddresspools_csharp">
+<a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressversion_csharp">
+<a href="#privateipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressconfiguration_csharp">
+<a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationgatewaybackendaddresspools_go">
+<a href="#applicationgatewaybackendaddresspools_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationsecuritygroups_go">
+<a href="#applicationsecuritygroups_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerbackendaddresspools_go">
+<a href="#loadbalancerbackendaddresspools_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressversion_go">
+<a href="#privateipaddressversion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressconfiguration_go">
+<a href="#publicipaddressconfiguration_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationgatewaybackendaddresspools_nodejs">
+<a href="#applicationgatewaybackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationsecuritygroups_nodejs">
+<a href="#applicationsecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerbackendaddresspools_nodejs">
+<a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddressversion_nodejs">
+<a href="#privateipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressconfiguration_nodejs">
+<a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="application_gateway_backend_address_pools_python">
+<a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="application_security_groups_python">
+<a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_backend_address_pools_python">
+<a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary network interface in case the virtual machine has more than 1 network interface.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_version_python">
+<a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_address_configuration_python">
+<a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinepatchstatusresponse">Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response</h4>
@@ -8256,7 +9519,7 @@ The following output properties are available:
 <a href="#configurationstatuses_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The enablement status of the specified patchMode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8264,7 +9527,7 @@ The following output properties are available:
 <a href="#availablepatchsummary_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Patch<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availablepatchsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Available<wbr>Patch<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availablepatchsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Available<wbr>Patch<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The available patch summary of the latest assessment operation for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8272,7 +9535,7 @@ The following output properties are available:
 <a href="#lastpatchinstallationsummary_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Patch<wbr>Installation<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lastpatchinstallationsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Last<wbr>Patch<wbr>Installation<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#lastpatchinstallationsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Last<wbr>Patch<wbr>Installation<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The installation summary of the latest installation operation for the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8340,7 +9603,7 @@ The following output properties are available:
 <a href="#configuration_statuses_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The enablement status of the specified patchMode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8348,7 +9611,7 @@ The following output properties are available:
 <a href="#available_patch_summary_python" style="color: inherit; text-decoration: inherit;">available_<wbr>patch_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availablepatchsummaryresponse">Available<wbr>Patch<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availablepatchsummaryresponse">Available<wbr>Patch<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The available patch summary of the latest assessment operation for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8356,9 +9619,369 @@ The following output properties are available:
 <a href="#last_patch_installation_summary_python" style="color: inherit; text-decoration: inherit;">last_<wbr>patch_<wbr>installation_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lastpatchinstallationsummaryresponse">Last<wbr>Patch<wbr>Installation<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#lastpatchinstallationsummaryresponse">Last<wbr>Patch<wbr>Installation<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The installation summary of the latest installation operation for the virtual machine.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachinepublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publicIP address configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_csharp">
+<a href="#deleteoption_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the public IP address when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssettings_csharp">
+<a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressdnssettingsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idletimeoutinminutes_csharp">
+<a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iptags_csharp">
+<a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineiptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ip<wbr>Tag<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressversion_csharp">
+<a href="#publicipaddressversion_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_csharp">
+<a href="#publicipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the public IP allocation type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipprefix_csharp">
+<a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publicIP address configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_go">
+<a href="#deleteoption_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the public IP address when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssettings_go">
+<a href="#dnssettings_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressdnssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idletimeoutinminutes_go">
+<a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iptags_go">
+<a href="#iptags_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineiptagresponse">[]Virtual<wbr>Machine<wbr>Ip<wbr>Tag<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressversion_go">
+<a href="#publicipaddressversion_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_go">
+<a href="#publicipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAllocation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the public IP allocation type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipprefix_go">
+<a href="#publicipprefix_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publicIP address configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deleteoption_nodejs">
+<a href="#deleteoption_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the public IP address when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnssettings_nodejs">
+<a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressdnssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idletimeoutinminutes_nodejs">
+<a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iptags_nodejs">
+<a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineiptagresponse">Virtual<wbr>Machine<wbr>Ip<wbr>Tag<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddressversion_nodejs">
+<a href="#publicipaddressversion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_nodejs">
+<a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the public IP allocation type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicipprefix_nodejs">
+<a href="#publicipprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publicIP address configuration name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_option_python">
+<a href="#delete_option_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify what happens to the public IP address when the VM is deleted{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_settings_python">
+<a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinepublicipaddressdnssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="idle_timeout_in_minutes_python">
+<a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The idle timeout of the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_tags_python">
+<a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineiptagresponse">Sequence[Virtual<wbr>Machine<wbr>Ip<wbr>Tag<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_address_version_python">
+<a href="#public_ip_address_version_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_allocation_method_python">
+<a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify the public IP allocation type{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_prefix_python">
+<a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachinepublicipaddressdnssettingsconfigurationresponse">Virtual<wbr>Machine<wbr>Public<wbr>IPAddress<wbr>Dns<wbr>Settings<wbr>Configuration<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainnamelabel_csharp">
+<a href="#domainnamelabel_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainnamelabel_go">
+<a href="#domainnamelabel_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domainnamelabel_nodejs">
+<a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_name_label_python">
+<a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response</h4>
@@ -8372,7 +9995,7 @@ The following output properties are available:
 <a href="#listeners_csharp" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8408,7 +10031,7 @@ The following output properties are available:
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8508,7 +10131,7 @@ The following output properties are available:
 <a href="#additionalunattendcontent_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8524,7 +10147,7 @@ The following output properties are available:
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8542,13 +10165,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrm_csharp">
 <a href="#winrm_csharp" style="color: inherit; text-decoration: inherit;">Win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8594,7 +10217,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrm_go">
 <a href="#winrm_go" style="color: inherit; text-decoration: inherit;">Win<wbr>RM</a>
@@ -8646,7 +10269,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrm_nodejs">
 <a href="#winrm_nodejs" style="color: inherit; text-decoration: inherit;">win<wbr>RM</a>
@@ -8664,7 +10287,7 @@ The following output properties are available:
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8680,7 +10303,7 @@ The following output properties are available:
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8698,13 +10321,13 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="win_rm_python">
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}

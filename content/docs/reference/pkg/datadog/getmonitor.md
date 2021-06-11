@@ -11,58 +11,6 @@ meta_desc: "Documentation for the datadog.getMonitor function with examples, inp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to retrieve information about an existing monitor for use in other resources.
-## Schema
-
-### Optional
-
-- **id** (String) The ID of this resource.
-- **monitor_tags_filter** (List of String) A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
-- **name_filter** (String) A monitor name to limit the search.
-- **tags_filter** (List of String) A list of tags to limit the search. This filters on the monitor scope.
-
-### Read-only
-
-- **enable_logs_sample** (Boolean) Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.
-- **escalation_message** (String) Message included with a re-notification for this monitor.
-- **evaluation_delay** (Number) Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.
-- **include_tags** (Boolean) Whether or not notifications from the monitor automatically inserts its triggering tags into the title.
-- **locked** (Boolean) Whether or not changes to the monitor are restricted to the creator or admins.
-- **message** (String) Message included with notifications for this monitor
-- **monitor_threshold_windows** (List of Object) Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors. (see below for nested schema)
-- **monitor_thresholds** (List of Object) Alert thresholds of the monitor. (see below for nested schema)
-- **name** (String) Name of the monitor
-- **new_host_delay** (Number) Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.
-- **no_data_timeframe** (Number) The number of minutes before the monitor notifies when data stops reporting.
-- **notify_audit** (Boolean) Whether or not tagged users are notified on changes to the monitor.
-- **notify_no_data** (Boolean) Whether or not this monitor notifies when data stops reporting.
-- **query** (String) Query of the monitor.
-- **renotify_interval** (Number) The number of minutes after the last notification before the monitor re-notifies on the current status.
-- **require_full_window** (Boolean) Whether or not the monitor needs a full window of data before it is evaluated.
-- **tags** (Set of String) List of tags associated with the monitor.
-- **threshold_windows** (Map of String, Deprecated) Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
-- **thresholds** (Map of String, Deprecated) Alert thresholds of the monitor.
-- **timeout_h** (Number) Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.
-- **type** (String) Type of the monitor.
-
-<a id="nestedatt--monitor_threshold_windows"></a>
-### Nested Schema for `monitor_threshold_windows`
-
-Read-only:
-
-- **recovery_window** (String)
-- **trigger_window** (String)
-
-<a id="nestedatt--monitor_thresholds"></a>
-### Nested Schema for `monitor_thresholds`
-
-Read-only:
-
-- **critical** (String)
-- **critical_recovery** (String)
-- **ok** (String)
-- **unknown** (String)
-- **warning** (String)
-- **warning_recovery** (String)
 
 
 {{% examples %}}
@@ -108,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -157,7 +105,7 @@ import * as datadog from "@pulumi/datadog";
 const test = pulumi.output(datadog.getMonitor({
     monitorTagsFilters: ["foo:bar"],
     nameFilter: "My awesome monitor",
-}, { async: true }));
+}));
 ```
 
 
@@ -178,17 +126,20 @@ const test = pulumi.output(datadog.getMonitor({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitorArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitor(</span><span class="nx">monitor_tags_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitorResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_monitor(</span><span class="nx">monitor_tags_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">name_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">tags_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMonitorResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitorResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitorArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMonitor` in the Go SDK.
 
@@ -197,7 +148,7 @@ const test = pulumi.output(datadog.getMonitor({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMonitor </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -215,7 +166,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namefilter_csharp">
 <a href="#namefilter_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -223,7 +175,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsfilters_csharp">
 <a href="#tagsfilters_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -231,7 +184,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -243,7 +197,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namefilter_go">
 <a href="#namefilter_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -251,7 +206,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsfilters_go">
 <a href="#tagsfilters_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -259,7 +215,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,7 +228,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namefilter_nodejs">
 <a href="#namefilter_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Filter</a>
@@ -279,7 +237,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsfilters_nodejs">
 <a href="#tagsfilters_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Filters</a>
@@ -287,7 +246,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -299,7 +259,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_filter_python">
 <a href="#name_filter_python" style="color: inherit; text-decoration: inherit;">name_<wbr>filter</a>
@@ -307,7 +268,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_filters_python">
 <a href="#tags_filters_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>filters</a>
@@ -315,7 +277,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -336,7 +299,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="escalationmessage_csharp">
 <a href="#escalationmessage_csharp" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
@@ -344,7 +308,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with a re-notification for this monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluationdelay_csharp">
 <a href="#evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
@@ -352,7 +317,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="groupbysimplemonitor_csharp">
+<a href="#groupbysimplemonitor_csharp" style="color: inherit; text-decoration: inherit;">Groupby<wbr>Simple<wbr>Monitor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to trigger one alert if any source breaches a threshold.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -369,7 +344,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not notifications from the monitor automatically inserts its triggering tags into the title.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -377,7 +353,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not changes to the monitor are restricted to the creator or admins.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -385,7 +362,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with notifications for this monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorthresholdwindows_csharp">
 <a href="#monitorthresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
@@ -393,7 +371,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorthresholds_csharp">
 <a href="#monitorthresholds_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
@@ -401,7 +380,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -409,7 +389,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="newhostdelay_csharp">
 <a href="#newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
@@ -417,7 +398,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodatatimeframe_csharp">
 <a href="#nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -425,7 +407,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes before the monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifyaudit_csharp">
 <a href="#notifyaudit_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
@@ -433,7 +416,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not tagged users are notified on changes to the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifynodata_csharp">
 <a href="#notifynodata_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
@@ -441,7 +425,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not this monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -449,7 +434,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Query of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renotifyinterval_csharp">
 <a href="#renotifyinterval_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
@@ -457,7 +443,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requirefullwindow_csharp">
 <a href="#requirefullwindow_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
@@ -465,7 +452,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -473,7 +461,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}List of tags associated with the monitor.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholdwindows_csharp">
 <a href="#thresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
@@ -481,7 +470,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors. **Deprecated.** Define `monitor_threshold_windows` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholds_csharp">
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -489,7 +479,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor. **Deprecated.** Define `monitor_thresholds` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="timeouth_csharp">
 <a href="#timeouth_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
@@ -497,7 +488,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -505,7 +497,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitortagsfilters_csharp">
 <a href="#monitortagsfilters_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Tags<wbr>Filters</a>
@@ -513,7 +506,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namefilter_csharp">
 <a href="#namefilter_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -521,7 +515,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfilters_csharp">
 <a href="#tagsfilters_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -529,7 +524,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -541,7 +537,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="escalationmessage_go">
 <a href="#escalationmessage_go" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
@@ -549,7 +546,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with a re-notification for this monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluationdelay_go">
 <a href="#evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
@@ -557,7 +555,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="groupbysimplemonitor_go">
+<a href="#groupbysimplemonitor_go" style="color: inherit; text-decoration: inherit;">Groupby<wbr>Simple<wbr>Monitor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to trigger one alert if any source breaches a threshold.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -574,7 +582,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not notifications from the monitor automatically inserts its triggering tags into the title.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -582,7 +591,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not changes to the monitor are restricted to the creator or admins.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -590,7 +600,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with notifications for this monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorthresholdwindows_go">
 <a href="#monitorthresholdwindows_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
@@ -598,7 +609,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorthresholds_go">
 <a href="#monitorthresholds_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
@@ -606,7 +618,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -614,7 +627,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="newhostdelay_go">
 <a href="#newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
@@ -622,7 +636,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodatatimeframe_go">
 <a href="#nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -630,7 +645,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes before the monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifyaudit_go">
 <a href="#notifyaudit_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
@@ -638,7 +654,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not tagged users are notified on changes to the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifynodata_go">
 <a href="#notifynodata_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
@@ -646,7 +663,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not this monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -654,7 +672,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Query of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renotifyinterval_go">
 <a href="#renotifyinterval_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
@@ -662,7 +681,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requirefullwindow_go">
 <a href="#requirefullwindow_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
@@ -670,7 +690,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -678,7 +699,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}List of tags associated with the monitor.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholdwindows_go">
 <a href="#thresholdwindows_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
@@ -686,7 +708,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors. **Deprecated.** Define `monitor_threshold_windows` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholds_go">
 <a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -694,7 +717,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor. **Deprecated.** Define `monitor_thresholds` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="timeouth_go">
 <a href="#timeouth_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
@@ -702,7 +726,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -710,7 +735,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitortagsfilters_go">
 <a href="#monitortagsfilters_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Tags<wbr>Filters</a>
@@ -718,7 +744,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namefilter_go">
 <a href="#namefilter_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Filter</a>
@@ -726,7 +753,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfilters_go">
 <a href="#tagsfilters_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Filters</a>
@@ -734,7 +762,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -746,7 +775,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="escalationmessage_nodejs">
 <a href="#escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
@@ -754,7 +784,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with a re-notification for this monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluationdelay_nodejs">
 <a href="#evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
@@ -762,7 +793,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="groupbysimplemonitor_nodejs">
+<a href="#groupbysimplemonitor_nodejs" style="color: inherit; text-decoration: inherit;">groupby<wbr>Simple<wbr>Monitor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to trigger one alert if any source breaches a threshold.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -779,7 +820,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not notifications from the monitor automatically inserts its triggering tags into the title.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -787,7 +829,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not changes to the monitor are restricted to the creator or admins.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -795,7 +838,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with notifications for this monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorthresholdwindows_nodejs">
 <a href="#monitorthresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Threshold<wbr>Windows</a>
@@ -803,7 +847,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorthresholds_nodejs">
 <a href="#monitorthresholds_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Thresholds</a>
@@ -811,7 +856,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -819,7 +865,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="newhostdelay_nodejs">
 <a href="#newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
@@ -827,7 +874,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodatatimeframe_nodejs">
 <a href="#nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
@@ -835,7 +883,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes before the monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifyaudit_nodejs">
 <a href="#notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
@@ -843,7 +892,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not tagged users are notified on changes to the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifynodata_nodejs">
 <a href="#notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
@@ -851,7 +901,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not this monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -859,7 +910,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Query of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renotifyinterval_nodejs">
 <a href="#renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
@@ -867,7 +919,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requirefullwindow_nodejs">
 <a href="#requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
@@ -875,7 +928,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -883,7 +937,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}List of tags associated with the monitor.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholdwindows_nodejs">
 <a href="#thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
@@ -891,7 +946,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors. **Deprecated.** Define `monitor_threshold_windows` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholds_nodejs">
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -899,7 +955,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor. **Deprecated.** Define `monitor_thresholds` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="timeouth_nodejs">
 <a href="#timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
@@ -907,7 +964,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -915,7 +973,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitortagsfilters_nodejs">
 <a href="#monitortagsfilters_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Tags<wbr>Filters</a>
@@ -923,7 +982,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namefilter_nodejs">
 <a href="#namefilter_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Filter</a>
@@ -931,7 +991,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfilters_nodejs">
 <a href="#tagsfilters_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Filters</a>
@@ -939,7 +1000,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -951,7 +1013,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="escalation_message_python">
 <a href="#escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
@@ -959,7 +1022,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with a re-notification for this monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evaluation_delay_python">
 <a href="#evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
@@ -967,7 +1031,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="groupby_simple_monitor_python">
+<a href="#groupby_simple_monitor_python" style="color: inherit; text-decoration: inherit;">groupby_<wbr>simple_<wbr>monitor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to trigger one alert if any source breaches a threshold.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -984,7 +1058,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not notifications from the monitor automatically inserts its triggering tags into the title.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -992,7 +1067,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not changes to the monitor are restricted to the creator or admins.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1000,7 +1076,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Message included with notifications for this monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitor_threshold_windows_python">
 <a href="#monitor_threshold_windows_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>threshold_<wbr>windows</a>
@@ -1008,7 +1085,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitor_thresholds_python">
 <a href="#monitor_thresholds_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>thresholds</a>
@@ -1016,7 +1094,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1024,7 +1103,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Name of the monitor
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="new_host_delay_python">
 <a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
@@ -1032,7 +1112,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="no_data_timeframe_python">
 <a href="#no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
@@ -1040,7 +1121,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes before the monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notify_audit_python">
 <a href="#notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
@@ -1048,7 +1130,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not tagged users are notified on changes to the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notify_no_data_python">
 <a href="#notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
@@ -1056,7 +1139,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not this monitor notifies when data stops reporting.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1064,7 +1148,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Query of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renotify_interval_python">
 <a href="#renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
@@ -1072,7 +1157,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The number of minutes after the last notification before the monitor re-notifies on the current status.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="require_full_window_python">
 <a href="#require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
@@ -1080,7 +1166,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Whether or not the monitor needs a full window of data before it is evaluated.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1088,7 +1175,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}List of tags associated with the monitor.
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="threshold_windows_python">
 <a href="#threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
@@ -1096,7 +1184,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
+    <dd>{{% md %}}Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors. **Deprecated.** Define `monitor_threshold_windows` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="thresholds_python">
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -1104,7 +1193,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
+    <dd>{{% md %}}Alert thresholds of the monitor. **Deprecated.** Define `monitor_thresholds` list with one element instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="timeout_h_python">
 <a href="#timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
@@ -1112,7 +1202,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1120,7 +1211,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Type of the monitor.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitor_tags_filters_python">
 <a href="#monitor_tags_filters_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>tags_<wbr>filters</a>
@@ -1128,7 +1220,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_filter_python">
 <a href="#name_filter_python" style="color: inherit; text-decoration: inherit;">name_<wbr>filter</a>
@@ -1136,7 +1229,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A monitor name to limit the search.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_filters_python">
 <a href="#tags_filters_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>filters</a>
@@ -1144,7 +1238,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of tags to limit the search. This filters on the monitor scope.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

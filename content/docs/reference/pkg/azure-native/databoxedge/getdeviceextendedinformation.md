@@ -22,17 +22,19 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeviceExtendedInformation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceExtendedInformationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceExtendedInformationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeviceExtendedInformation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceExtendedInformationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceExtendedInformationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device_extended_information(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceExtendedInformationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device_extended_information(</span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceExtendedInformationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeviceExtendedInformation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDeviceExtendedInformationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDeviceExtendedInformationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeviceExtendedInformation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetDeviceExtendedInformationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDeviceExtendedInformationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetDeviceExtendedInformation` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDeviceExtendedInformation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceExtendedInformationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceExtendedInformationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceExtendedInformationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceExtendedInformationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -672,7 +674,7 @@ The following output properties are available:
 <a href="#bmcdefaultuserpassword_csharp" style="color: inherit; text-decoration: inherit;">Bmc<wbr>Default<wbr>User<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +682,7 @@ The following output properties are available:
 <a href="#hcsdatavolumebitlockerexternalkey_csharp" style="color: inherit; text-decoration: inherit;">Hcs<wbr>Data<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +690,7 @@ The following output properties are available:
 <a href="#hcsinternalvolumebitlockerexternalkey_csharp" style="color: inherit; text-decoration: inherit;">Hcs<wbr>Internal<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +698,7 @@ The following output properties are available:
 <a href="#rotatekeyfordatavolumebitlocker_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Key<wbr>For<wbr>Data<wbr>Volume<wbr>Bitlocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +706,7 @@ The following output properties are available:
 <a href="#rotatekeysforseddrivesserialized_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Keys<wbr>For<wbr>Sed<wbr>Drives<wbr>Serialized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +714,7 @@ The following output properties are available:
 <a href="#sedencryptionexternalkey_csharp" style="color: inherit; text-decoration: inherit;">Sed<wbr>Encryption<wbr>External<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +722,7 @@ The following output properties are available:
 <a href="#sedencryptionexternalkeyid_csharp" style="color: inherit; text-decoration: inherit;">Sed<wbr>Encryption<wbr>External<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +730,7 @@ The following output properties are available:
 <a href="#systemvolumebitlockerrecoverykey_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Volume<wbr>Bit<wbr>Locker<wbr>Recovery<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -876,7 +878,7 @@ The following output properties are available:
 <a href="#bmc_default_user_password_python" style="color: inherit; text-decoration: inherit;">bmc_<wbr>default_<wbr>user_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +886,7 @@ The following output properties are available:
 <a href="#hcs_data_volume_bit_locker_external_key_python" style="color: inherit; text-decoration: inherit;">hcs_<wbr>data_<wbr>volume_<wbr>bit_<wbr>locker_<wbr>external_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +894,7 @@ The following output properties are available:
 <a href="#hcs_internal_volume_bit_locker_external_key_python" style="color: inherit; text-decoration: inherit;">hcs_<wbr>internal_<wbr>volume_<wbr>bit_<wbr>locker_<wbr>external_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +902,7 @@ The following output properties are available:
 <a href="#rotate_key_for_data_volume_bitlocker_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>key_<wbr>for_<wbr>data_<wbr>volume_<wbr>bitlocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +910,7 @@ The following output properties are available:
 <a href="#rotate_keys_for_sed_drives_serialized_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>keys_<wbr>for_<wbr>sed_<wbr>drives_<wbr>serialized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +918,7 @@ The following output properties are available:
 <a href="#sed_encryption_external_key_python" style="color: inherit; text-decoration: inherit;">sed_<wbr>encryption_<wbr>external_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +926,7 @@ The following output properties are available:
 <a href="#sed_encryption_external_key_id_python" style="color: inherit; text-decoration: inherit;">sed_<wbr>encryption_<wbr>external_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +934,7 @@ The following output properties are available:
 <a href="#system_volume_bit_locker_recovery_key_python" style="color: inherit; text-decoration: inherit;">system_<wbr>volume_<wbr>bit_<wbr>locker_<wbr>recovery_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -948,7 +950,7 @@ The following output properties are available:
 <a href="#encryptedsecret_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1010,7 @@ The following output properties are available:
 <a href="#encrypted_secret_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

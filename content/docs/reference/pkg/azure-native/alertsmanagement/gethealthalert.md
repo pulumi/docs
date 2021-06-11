@@ -22,17 +22,19 @@ API Version: 2020-08-04-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHealthAlert<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHealthAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetHealthAlertResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHealthAlert<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHealthAlertArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetHealthAlertResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_health_alert(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetHealthAlertResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_health_alert(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetHealthAlertResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHealthAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHealthAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupHealthAlertResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHealthAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHealthAlertArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupHealthAlertResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupHealthAlert` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-08-04-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetHealthAlert </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetHealthAlertResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetHealthAlertArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetHealthAlertResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetHealthAlertArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -608,7 +610,7 @@ The following output properties are available:
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -644,7 +646,7 @@ The following output properties are available:
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -744,7 +746,7 @@ The following output properties are available:
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +830,7 @@ The following output properties are available:
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

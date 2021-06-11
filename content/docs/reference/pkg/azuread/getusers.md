@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -110,7 +110,7 @@ const users = pulumi.output(azuread.getUsers({
         "kat@hashicorp.com",
         "byte@hashicorp.com",
     ],
-}, { async: true }));
+}));
 ```
 
 
@@ -131,17 +131,21 @@ const users = pulumi.output(azuread.getUsers({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetUsersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">ignore_missing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mail_nicknames</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_principal_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">ignore_missing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">mail_nicknames</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">user_principal_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetUsersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUsersResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetUsers` in the Go SDK.
 
@@ -150,7 +154,7 @@ const users = pulumi.output(azuread.getUsers({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetUsers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -585,16 +589,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutableid_csharp">
 <a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_csharp">
 <a href="#mail_csharp" style="color: inherit; text-decoration: inherit;">Mail</a>
@@ -621,6 +625,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremisesimmutableid_csharp">
+<a href="#onpremisesimmutableid_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_csharp">
@@ -679,16 +692,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutableid_go">
 <a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_go">
 <a href="#mail_go" style="color: inherit; text-decoration: inherit;">Mail</a>
@@ -715,6 +728,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremisesimmutableid_go">
+<a href="#onpremisesimmutableid_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_go">
@@ -773,16 +795,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutableid_nodejs">
 <a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_nodejs">
 <a href="#mail_nodejs" style="color: inherit; text-decoration: inherit;">mail</a>
@@ -809,6 +831,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremisesimmutableid_nodejs">
+<a href="#onpremisesimmutableid_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Immutable<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_nodejs">
@@ -867,16 +898,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-required property-deprecated"
+            title="Required, Deprecated">
         <span id="immutable_id_python">
 <a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(**Deprecated**) The value used to associate an on-premises Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `onpremises_immutable_id` and will be removed in version 2.0 of the AzureAD provider{{% /md %}}</p></dd><dt class="property-required"
             title="Required">
         <span id="mail_python">
 <a href="#mail_python" style="color: inherit; text-decoration: inherit;">mail</a>
@@ -903,6 +934,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="onpremises_immutable_id_python">
+<a href="#onpremises_immutable_id_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>immutable_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremises_sam_account_name_python">
@@ -953,6 +993,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

@@ -78,7 +78,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -276,7 +276,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -541,7 +541,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -707,19 +707,48 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_shared_key_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_nfs_v3</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_policy</span><span class="p">:</span> <span class="nx">Optional[KeyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sas_policy</span><span class="p">:</span> <span class="nx">Optional[SasPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">,</span>
+                   <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">allow_shared_key_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_nfs_v3</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">key_policy</span><span class="p">:</span> <span class="nx">Optional[KeyPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">,</span>
+                   <span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">,</span>
+                   <span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">sas_policy</span><span class="p">:</span> <span class="nx">Optional[SasPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -730,46 +759,44 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -780,33 +807,25 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -818,25 +837,19 @@ const storageAccount = new azure_native.storage.StorageAccount("storageAccount",
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1249,7 +1262,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1302,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#azurefilesidentitybasedauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides the identity based authentication settings for Azure Files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1310,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomain">Custom<wbr>Domain</a></span>
+        <span class="property-type"><a href="#customdomain">Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1334,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1342,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1350,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1366,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#keypolicy_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy</a></span>
+        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1398,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkruleset_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network rule set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1406,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#routingpreference_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference</a></span>
+        <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1414,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#saspolicy_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy</a></span>
+        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1656,9 +1669,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keycreationtime_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#keycreationtimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastgeofailovertime_csharp">
 <a href="#lastgeofailovertime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Geo<wbr>Failover<wbr>Time</a>
@@ -1796,9 +1809,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keycreationtime_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastgeofailovertime_go">
 <a href="#lastgeofailovertime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Geo<wbr>Failover<wbr>Time</a>
@@ -1936,9 +1949,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keycreationtime_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="#keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastgeofailovertime_nodejs">
 <a href="#lastgeofailovertime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Geo<wbr>Failover<wbr>Time</a>
@@ -2076,9 +2089,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_creation_time_python" style="color: inherit; text-decoration: inherit;">key_<wbr>creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type"><a href="#keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the list of storage account keys creation time.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Storage account keys creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_geo_failover_time_python">
 <a href="#last_geo_failover_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>geo_<wbr>failover_<wbr>time</a>
@@ -2704,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties</a></span>
+        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2786,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2860,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobranges_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">Blob<wbr>Restore<wbr>Range<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3064,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3480,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionidentity_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3488,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services</a></span>
+        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3758,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionidentity_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3766,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3782,7 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4108,7 +4121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4116,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4124,7 +4137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4132,7 +4145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4254,7 +4267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4262,7 +4275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4270,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4278,7 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4512,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internetendpoints_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4520,7 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftendpoints_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5266,7 +5279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5339,6 +5352,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
     <dd>UserAssigned</dd><dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
     <dd>SystemAssigned,UserAssigned</dd></dl>
+{{% /choosable %}}
+
+<h4 id="keycreationtimeresponse">Key<wbr>Creation<wbr>Time<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key1_csharp">
+<a href="#key1_csharp" style="color: inherit; text-decoration: inherit;">Key1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key2_csharp">
+<a href="#key2_csharp" style="color: inherit; text-decoration: inherit;">Key2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key1_go">
+<a href="#key1_go" style="color: inherit; text-decoration: inherit;">Key1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key2_go">
+<a href="#key2_go" style="color: inherit; text-decoration: inherit;">Key2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key1_nodejs">
+<a href="#key1_nodejs" style="color: inherit; text-decoration: inherit;">key1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key2_nodejs">
+<a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key1_python">
+<a href="#key1_python" style="color: inherit; text-decoration: inherit;">key1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key2_python">
+<a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keypolicy">Key<wbr>Policy</h4>
@@ -5992,7 +6087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">IPRule[]</a></span>
+        <span class="property-type"><a href="#iprule">IPRule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6000,7 +6095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessrules_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessrule">Resource<wbr>Access<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#resourceaccessrule">Resource<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6008,7 +6103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6170,7 +6265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6178,7 +6273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessrules_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessruleresponse">Resource<wbr>Access<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourceaccessruleresponse">Resource<wbr>Access<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6186,7 +6281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6364,7 +6459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6388,7 +6483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}

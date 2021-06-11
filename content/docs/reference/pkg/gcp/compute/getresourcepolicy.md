@@ -49,8 +49,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -77,17 +77,20 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getResourcePolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetResourcePolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetResourcePolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getResourcePolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetResourcePolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetResourcePolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_policy(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourcePolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_policy(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourcePolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupResourcePolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupResourcePolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupResourcePolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupResourcePolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupResourcePolicy` in the Go SDK.
 
@@ -96,7 +99,7 @@ func main() {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetResourcePolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetResourcePolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetResourcePolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetResourcePolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetResourcePolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -241,6 +244,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of this Resource Policy.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="groupplacementpolicies_csharp">
 <a href="#groupplacementpolicies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policies</a>
 </span>
@@ -257,6 +269,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="instanceschedulepolicies_csharp">
+<a href="#instanceschedulepolicies_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicy">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -303,6 +323,15 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of this Resource Policy.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="groupplacementpolicies_go">
 <a href="#groupplacementpolicies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policies</a>
 </span>
@@ -319,6 +348,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="instanceschedulepolicies_go">
+<a href="#instanceschedulepolicies_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicy">[]Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -365,6 +402,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of this Resource Policy.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="groupplacementpolicies_nodejs">
 <a href="#groupplacementpolicies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policies</a>
 </span>
@@ -381,6 +427,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="instanceschedulepolicies_nodejs">
+<a href="#instanceschedulepolicies_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Schedule<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicy">Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -427,6 +481,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of this Resource Policy.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="group_placement_policies_python">
 <a href="#group_placement_policies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policies</a>
 </span>
@@ -443,6 +506,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="instance_schedule_policies_python">
+<a href="#instance_schedule_policies_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>schedule_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicy">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -608,6 +679,290 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getresourcepolicyinstanceschedulepolicy">Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationtime_csharp">
+<a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmstartschedules_csharp">
+<a href="#vmstartschedules_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Start<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstartschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmstopschedules_csharp">
+<a href="#vmstopschedules_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Stop<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstopschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationtime_go">
+<a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmstartschedules_go">
+<a href="#vmstartschedules_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Start<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstartschedule">[]Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmstopschedules_go">
+<a href="#vmstopschedules_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Stop<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstopschedule">[]Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expirationtime_nodejs">
+<a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmstartschedules_nodejs">
+<a href="#vmstartschedules_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Start<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstartschedule">Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vmstopschedules_nodejs">
+<a href="#vmstopschedules_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Stop<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstopschedule">Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="expiration_time_python">
+<a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vm_start_schedules_python">
+<a href="#vm_start_schedules_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>start_<wbr>schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstartschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vm_stop_schedules_python">
+<a href="#vm_stop_schedules_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>stop_<wbr>schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getresourcepolicyinstanceschedulepolicyvmstopschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getresourcepolicyinstanceschedulepolicyvmstartschedule">Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getresourcepolicyinstanceschedulepolicyvmstopschedule">Get<wbr>Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getresourcepolicysnapshotschedulepolicy">Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</h4>
 
 
@@ -619,7 +974,7 @@ The following output properties are available:
 <a href="#retentionpolicies_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyretentionpolicy">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyretentionpolicy">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +982,7 @@ The following output properties are available:
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -635,7 +990,7 @@ The following output properties are available:
 <a href="#snapshotproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicysnapshotproperty">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicysnapshotproperty">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Property&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -703,7 +1058,7 @@ The following output properties are available:
 <a href="#retention_policies_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyretentionpolicy">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyretentionpolicy">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -711,7 +1066,7 @@ The following output properties are available:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -719,7 +1074,7 @@ The following output properties are available:
 <a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicysnapshotproperty">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicysnapshotproperty">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -819,7 +1174,7 @@ The following output properties are available:
 <a href="#dailyschedules_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduledailyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduledailyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -827,7 +1182,7 @@ The following output properties are available:
 <a href="#hourlyschedules_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedulehourlyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedulehourlyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +1190,7 @@ The following output properties are available:
 <a href="#weeklyschedules_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyschedule">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +1258,7 @@ The following output properties are available:
 <a href="#daily_schedules_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduledailyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduledailyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -911,7 +1266,7 @@ The following output properties are available:
 <a href="#hourly_schedules_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedulehourlyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyschedulehourlyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +1274,7 @@ The following output properties are available:
 <a href="#weekly_schedules_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1103,7 +1458,7 @@ The following output properties are available:
 <a href="#dayofweeks_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1494,7 @@ The following output properties are available:
 <a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getresourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Sequence[Get<wbr>Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

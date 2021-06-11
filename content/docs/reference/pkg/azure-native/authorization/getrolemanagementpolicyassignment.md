@@ -22,17 +22,19 @@ API Version: 2020-10-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRoleManagementPolicyAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRoleManagementPolicyAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRoleManagementPolicyAssignmentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRoleManagementPolicyAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRoleManagementPolicyAssignmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRoleManagementPolicyAssignmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_role_management_policy_assignment(</span><span class="nx">role_management_policy_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRoleManagementPolicyAssignmentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_role_management_policy_assignment(</span><span class="nx">role_management_policy_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                          <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRoleManagementPolicyAssignmentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoleManagementPolicyAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRoleManagementPolicyAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRoleManagementPolicyAssignmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoleManagementPolicyAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRoleManagementPolicyAssignmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRoleManagementPolicyAssignmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRoleManagementPolicyAssignment` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-10-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRoleManagementPolicyAssignment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRoleManagementPolicyAssignmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRoleManagementPolicyAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRoleManagementPolicyAssignmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRoleManagementPolicyAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -396,7 +398,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -404,7 +406,7 @@ The following output properties are available:
 <a href="#roledefinition_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -412,7 +414,7 @@ The following output properties are available:
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -480,7 +482,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +490,7 @@ The following output properties are available:
 <a href="#role_definition_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +498,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -512,7 +514,7 @@ The following output properties are available:
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#principalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +598,7 @@ The following output properties are available:
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

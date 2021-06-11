@@ -111,10 +111,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/hdinsight"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -323,19 +323,39 @@ const exampleHBaseCluster = new azure.hdinsight.HBaseCluster("exampleHBaseCluste
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[HBaseClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterComponentVersionArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterGatewayArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMetastoresArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMonitorArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterRolesArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterStorageAccountGen2Args]</span> = None<span class="p">,</span>
+                 <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[HBaseClusterStorageAccountArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHBaseCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HBaseCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHBaseCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HBaseCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HBaseCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HBaseClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -346,46 +366,44 @@ const exampleHBaseCluster = new azure.hdinsight.HBaseCluster("exampleHBaseCluste
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HBaseClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">HBaseClusterArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -394,35 +412,27 @@ const exampleHBaseCluster = new azure.hdinsight.HBaseCluster("exampleHBaseCluste
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HBaseClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -434,25 +444,19 @@ const exampleHBaseCluster = new azure.hdinsight.HBaseCluster("exampleHBaseCluste
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">HBaseClusterArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -740,7 +744,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -749,7 +753,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -767,7 +771,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -794,7 +798,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermetastores">HBase<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#hbaseclustermetastores">HBase<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +807,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermonitor">HBase<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#hbaseclustermonitor">HBase<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +825,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
+        <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +834,7 @@ The HBaseCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterstorageaccount">HBase<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#hbaseclusterstorageaccount">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,20 +1121,38 @@ Get an existing HBaseCluster resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">HBaseClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HBaseCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">HBaseClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HBaseCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[HBaseClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HBaseCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterComponentVersionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterGatewayArgs]</span> = None<span class="p">,</span>
+        <span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMetastoresArgs]</span> = None<span class="p">,</span>
+        <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterMonitorArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterRolesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HBaseClusterStorageAccountGen2Args]</span> = None<span class="p">,</span>
+        <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[HBaseClusterStorageAccountArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HBaseCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHBaseCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">HBaseClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HBaseCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHBaseCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HBaseClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HBaseCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HBaseCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">HBaseClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HBaseCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">HBaseClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1542,7 +1564,7 @@ The following state arguments are supported:
 <a href="#state_componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#hbaseclustercomponentversion">HBase<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#hbaseclustergateway">HBase<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermetastores">HBase<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#hbaseclustermetastores">HBase<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermonitor">HBase<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#hbaseclustermonitor">HBase<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#hbaseclusterroles">HBase<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
+        <span class="property-type"><a href="#hbaseclusterstorageaccountgen2">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterstorageaccount">HBase<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#hbaseclusterstorageaccount">HBase<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2080,7 +2102,7 @@ The following state arguments are supported:
 <a href="#ambari_nodejs" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermetastoresambari">HBase<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
+        <span class="property-type"><a href="#hbaseclustermetastoresambari">HBase<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2111,7 @@ The following state arguments are supported:
 <a href="#hive_nodejs" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermetastoreshive">HBase<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
+        <span class="property-type"><a href="#hbaseclustermetastoreshive">HBase<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2120,7 @@ The following state arguments are supported:
 <a href="#oozie_nodejs" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclustermetastoresoozie">HBase<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
+        <span class="property-type"><a href="#hbaseclustermetastoresoozie">HBase<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2782,7 +2804,7 @@ The following state arguments are supported:
 <a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterrolesheadnode">HBase<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
+        <span class="property-type"><a href="#hbaseclusterrolesheadnode">HBase<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -2791,7 +2813,7 @@ The following state arguments are supported:
 <a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterrolesworkernode">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernode">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2800,7 +2822,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hbaseclusterroleszookeepernode">HBase<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
+        <span class="property-type"><a href="#hbaseclusterroleszookeepernode">HBase<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3101,6 +3123,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscale_csharp">
+<a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Autoscale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscale">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mininstancecount_csharp">
@@ -3177,6 +3208,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscale_go">
+<a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Autoscale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscale">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale</a></span>
+    </dt>
+    <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mininstancecount_go">
@@ -3253,6 +3293,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscale_nodejs">
+<a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">autoscale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscale">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mininstancecount_nodejs">
@@ -3329,6 +3378,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscale_python">
+<a href="#autoscale_python" style="color: inherit; text-decoration: inherit;">autoscale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscale">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="min_instance_count_python">
@@ -3374,6 +3432,276 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hbaseclusterrolesworkernodeautoscale">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recurrence_csharp">
+<a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrence">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `recurrence` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recurrence_go">
+<a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrence">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence</a></span>
+    </dt>
+    <dd>{{% md %}}A `recurrence` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recurrence_nodejs">
+<a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrence">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `recurrence` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recurrence_python">
+<a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrence">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `recurrence` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hbaseclusterrolesworkernodeautoscalerecurrence">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedules_csharp">
+<a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrenceschedule">List&lt;HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `schedule` blocks as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the autoscale schedule times.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedules_go">
+<a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrenceschedule">[]HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `schedule` blocks as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the autoscale schedule times.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedules_nodejs">
+<a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrenceschedule">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `schedule` blocks as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the autoscale schedule times.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="schedules_python">
+<a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hbaseclusterrolesworkernodeautoscalerecurrenceschedule">Sequence[HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `schedule` blocks as defined below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the autoscale schedule times.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="hbaseclusterrolesworkernodeautoscalerecurrenceschedule">HBase<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The days of the week to perform autoscale.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetinstancecount_csharp">
+<a href="#targetinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of worker nodes to autoscale at the specified time.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time of day to perform the autoscale in 24hour format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The days of the week to perform autoscale.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetinstancecount_go">
+<a href="#targetinstancecount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of worker nodes to autoscale at the specified time.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time of day to perform the autoscale in 24hour format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The days of the week to perform autoscale.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="targetinstancecount_nodejs">
+<a href="#targetinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of worker nodes to autoscale at the specified time.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time of day to perform the autoscale in 24hour format.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The days of the week to perform autoscale.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of worker nodes to autoscale at the specified time.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time of day to perform the autoscale in 24hour format.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

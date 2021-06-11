@@ -141,9 +141,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -302,9 +302,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -686,9 +686,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -930,9 +930,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1093,6 +1093,153 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
 
 
 
+### Auto Scaling group with Warm Pool
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLaunchTemplate = new Aws.Ec2.LaunchTemplate("exampleLaunchTemplate", new Aws.Ec2.LaunchTemplateArgs
+        {
+            NamePrefix = "example",
+            ImageId = data.Aws_ami.Example.Id,
+            InstanceType = "c5.large",
+        });
+        var exampleGroup = new Aws.AutoScaling.Group("exampleGroup", new Aws.AutoScaling.GroupArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1a",
+            },
+            DesiredCapacity = 1,
+            MaxSize = 5,
+            MinSize = 1,
+            WarmPool = new Aws.AutoScaling.Inputs.GroupWarmPoolArgs
+            {
+                PoolState = "Stopped",
+                MinSize = 1,
+                MaxGroupPreparedCapacity = 10,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewLaunchTemplate(ctx, "exampleLaunchTemplate", &ec2.LaunchTemplateArgs{
+			NamePrefix:   pulumi.String("example"),
+			ImageId:      pulumi.Any(data.Aws_ami.Example.Id),
+			InstanceType: pulumi.String("c5.large"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = autoscaling.NewGroup(ctx, "exampleGroup", &autoscaling.GroupArgs{
+			AvailabilityZones: pulumi.StringArray{
+				pulumi.String("us-east-1a"),
+			},
+			DesiredCapacity: pulumi.Int(1),
+			MaxSize:         pulumi.Int(5),
+			MinSize:         pulumi.Int(1),
+			WarmPool: &autoscaling.GroupWarmPoolArgs{
+				PoolState:                pulumi.String("Stopped"),
+				MinSize:                  pulumi.Int(1),
+				MaxGroupPreparedCapacity: pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_launch_template = aws.ec2.LaunchTemplate("exampleLaunchTemplate",
+    name_prefix="example",
+    image_id=data["aws_ami"]["example"]["id"],
+    instance_type="c5.large")
+example_group = aws.autoscaling.Group("exampleGroup",
+    availability_zones=["us-east-1a"],
+    desired_capacity=1,
+    max_size=5,
+    min_size=1,
+    warm_pool=aws.autoscaling.GroupWarmPoolArgs(
+        pool_state="Stopped",
+        min_size=1,
+        max_group_prepared_capacity=10,
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("exampleLaunchTemplate", {
+    namePrefix: "example",
+    imageId: data.aws_ami.example.id,
+    instanceType: "c5.large",
+});
+const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    maxSize: 5,
+    minSize: 1,
+    warmPool: {
+        poolState: "Stopped",
+        minSize: 1,
+        maxGroupPreparedCapacity: 10,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -1104,19 +1251,59 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Group</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Group</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">instance_refresh</span><span class="p">:</span> <span class="nx">Optional[GroupInstanceRefreshArgs]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">force_delete_warm_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">instance_refresh</span><span class="p">:</span> <span class="nx">Optional[GroupInstanceRefreshArgs]</span> = None<span class="p">,</span>
+          <span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">,</span>
+          <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">,</span>
+          <span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">,</span>
+          <span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">warm_pool</span><span class="p">:</span> <span class="nx">Optional[GroupWarmPoolArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Group</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Group</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1127,46 +1314,44 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1175,35 +1360,27 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1215,25 +1392,19 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1265,8 +1436,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
@@ -1328,6 +1498,14 @@ even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcedeletewarmpool_csharp">
+<a href="#forcedeletewarmpool_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete<wbr>Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_csharp">
 <a href="#healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -1567,6 +1745,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmpool_csharp">
+<a href="#warmpool_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1588,8 +1776,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
@@ -1651,6 +1838,14 @@ even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forcedeletewarmpool_go">
+<a href="#forcedeletewarmpool_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete<wbr>Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_go">
 <a href="#healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -1890,6 +2085,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmpool_go">
+<a href="#warmpool_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1911,8 +2116,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
@@ -1975,6 +2179,14 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="forcedeletewarmpool_nodejs">
+<a href="#forcedeletewarmpool_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete<wbr>Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="healthcheckgraceperiod_nodejs">
 <a href="#healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
 </span>
@@ -1997,7 +2209,7 @@ behavior and potentially leaves resources dangling.
 <a href="#initiallifecyclehooks_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Lifecycle<wbr>Hooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -2012,7 +2224,7 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
 <a href="#instancerefresh_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
@@ -2032,7 +2244,7 @@ when this Auto Scaling Group is updated. Defined below.
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2293,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <a href="#mixedinstancespolicy_nodejs" style="color: inherit; text-decoration: inherit;">mixed<wbr>Instances<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2148,7 +2360,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">Group<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#grouptag">Group<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,6 +2425,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmpool_nodejs">
+<a href="#warmpool_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2234,8 +2456,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
@@ -2297,6 +2518,14 @@ even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_delete_warm_pool_python">
+<a href="#force_delete_warm_pool_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete_<wbr>warm_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_grace_period_python">
 <a href="#health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
@@ -2536,6 +2765,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warm_pool_python">
+<a href="#warm_pool_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2638,20 +2877,57 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Group</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Group</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">instance_refresh</span><span class="p">:</span> <span class="nx">Optional[GroupInstanceRefreshArgs]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">force_delete_warm_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_refresh</span><span class="p">:</span> <span class="nx">Optional[GroupInstanceRefreshArgs]</span> = None<span class="p">,</span>
+        <span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">,</span>
+        <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">,</span>
+        <span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">,</span>
+        <span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">warm_pool</span><span class="p">:</span> <span class="nx">Optional[GroupWarmPoolArgs]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Group</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Group</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2825,6 +3101,14 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcedeletewarmpool_csharp">
+<a href="#state_forcedeletewarmpool_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete<wbr>Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_healthcheckgraceperiod_csharp">
 <a href="#state_healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
 </span>
@@ -2942,8 +3226,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mixedinstancespolicy_csharp">
@@ -3082,6 +3365,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_warmpool_csharp">
+<a href="#state_warmpool_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3156,6 +3449,14 @@ even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forcedeletewarmpool_go">
+<a href="#state_forcedeletewarmpool_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete<wbr>Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_go">
 <a href="#state_healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -3274,8 +3575,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mixedinstancespolicy_go">
@@ -3414,6 +3714,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_warmpool_go">
+<a href="#state_warmpool_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3489,6 +3799,14 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_forcedeletewarmpool_nodejs">
+<a href="#state_forcedeletewarmpool_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete<wbr>Warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_healthcheckgraceperiod_nodejs">
 <a href="#state_healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
 </span>
@@ -3511,7 +3829,7 @@ behavior and potentially leaves resources dangling.
 <a href="#state_initiallifecyclehooks_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Lifecycle<wbr>Hooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook[]</a></span>
+        <span class="property-type"><a href="#groupinitiallifecyclehook">Group<wbr>Initial<wbr>Lifecycle<wbr>Hook<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
@@ -3526,7 +3844,7 @@ a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.L
 <a href="#state_instancerefresh_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this block is configured, start an
 [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
@@ -3546,7 +3864,7 @@ when this Auto Scaling Group is updated. Defined below.
 <a href="#state_launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#grouplaunchtemplate">Group<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3606,15 +3924,14 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mixedinstancespolicy_nodejs">
 <a href="#state_mixedinstancespolicy_nodejs" style="color: inherit; text-decoration: inherit;">mixed<wbr>Instances<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicy">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3681,7 +3998,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptag">Group<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#grouptag">Group<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3746,6 +4063,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_warmpool_nodejs">
+<a href="#state_warmpool_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3820,6 +4147,14 @@ even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_delete_warm_pool_python">
+<a href="#state_force_delete_warm_pool_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete_<wbr>warm_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_grace_period_python">
 <a href="#state_health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
@@ -3938,8 +4273,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
-(See also Waiting for Capacity below.)
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mixed_instances_policy_python">
@@ -4078,6 +4412,16 @@ for exactly this number of healthy instances from this Auto Scaling Group in
 all attached load balancers on both create and update operations. (Takes
 precedence over `min_elb_capacity` behavior.)
 (See also Waiting for Capacity below.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_warm_pool_python">
+<a href="#state_warm_pool_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupwarmpool">Group<wbr>Warm<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+to the specified Auto Scaling group. Defined below
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4416,7 +4760,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override default parameters for Instance Refresh.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4731,7 +5075,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplate">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4740,7 +5084,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#instancesdistribution_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicyinstancesdistribution">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Instances<wbr>Distribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
 {{% /md %}}</dd></dl>
@@ -4806,7 +5150,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
+    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`, `capacity-optimized-prioritized`. Default: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstancepools_csharp">
@@ -4864,7 +5208,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
+    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`, `capacity-optimized-prioritized`. Default: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstancepools_go">
@@ -4922,7 +5266,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
+    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`, `capacity-optimized-prioritized`. Default: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstancepools_nodejs">
@@ -4980,7 +5324,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`. Default: `lowest-price`.
+    <dd>{{% md %}}How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`, `capacity-optimized-prioritized`. Default: `lowest-price`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_instance_pools_python">
@@ -5055,7 +5399,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5064,7 +5408,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverride">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
 {{% /md %}}</dd></dl>
@@ -5298,7 +5642,7 @@ precedence over `min_elb_capacity` behavior.)
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5597,6 +5941,132 @@ Amazon EC2 instances launched via this ASG
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="groupwarmpool">Group<wbr>Warm<wbr>Pool</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxgrouppreparedcapacity_csharp">
+<a href="#maxgrouppreparedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Group<wbr>Prepared<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minsize_csharp">
+<a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="poolstate_csharp">
+<a href="#poolstate_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxgrouppreparedcapacity_go">
+<a href="#maxgrouppreparedcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Group<wbr>Prepared<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minsize_go">
+<a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="poolstate_go">
+<a href="#poolstate_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxgrouppreparedcapacity_nodejs">
+<a href="#maxgrouppreparedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Group<wbr>Prepared<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minsize_nodejs">
+<a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="poolstate_nodejs">
+<a href="#poolstate_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_group_prepared_capacity_python">
+<a href="#max_group_prepared_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>group_<wbr>prepared_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_size_python">
+<a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pool_state_python">
+<a href="#pool_state_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

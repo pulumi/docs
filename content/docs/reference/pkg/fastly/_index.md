@@ -21,12 +21,31 @@ A Pulumi package for creating and managing fastly cloud resources.
     <li><a href="servicedynamicsnippetcontentv1" title="ServiceDynamicSnippetContentv1"><span class="symbol resource"></span>ServiceDynamicSnippetContentv1</a></li>
     <li><a href="servicewafconfiguration" title="ServiceWafConfiguration"><span class="symbol resource"></span>ServiceWafConfiguration</a></li>
     <li><a href="servicev1" title="Servicev1"><span class="symbol resource"></span>Servicev1</a></li>
+    <li><a href="tlsactivation" title="TlsActivation"><span class="symbol resource"></span>TlsActivation</a></li>
+    <li><a href="tlscertificate" title="TlsCertificate"><span class="symbol resource"></span>TlsCertificate</a></li>
+    <li><a href="tlsplatformcertificate" title="TlsPlatformCertificate"><span class="symbol resource"></span>TlsPlatformCertificate</a></li>
+    <li><a href="tlsprivatekey" title="TlsPrivateKey"><span class="symbol resource"></span>TlsPrivateKey</a></li>
+    <li><a href="tlssubscription" title="TlsSubscription"><span class="symbol resource"></span>TlsSubscription</a></li>
+    <li><a href="tlssubscriptionvalidation" title="TlsSubscriptionValidation"><span class="symbol resource"></span>TlsSubscriptionValidation</a></li>
     <li><a href="userv1" title="Userv1"><span class="symbol resource"></span>Userv1</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getfastlyipranges" title="GetFastlyIpRanges"><span class="symbol function"></span>GetFastlyIpRanges</a></li>
+    <li><a href="gettlsactivation" title="GetTlsActivation"><span class="symbol function"></span>GetTlsActivation</a></li>
+    <li><a href="gettlsactivationids" title="GetTlsActivationIds"><span class="symbol function"></span>GetTlsActivationIds</a></li>
+    <li><a href="gettlscertificate" title="GetTlsCertificate"><span class="symbol function"></span>GetTlsCertificate</a></li>
+    <li><a href="gettlscertificateids" title="GetTlsCertificateIds"><span class="symbol function"></span>GetTlsCertificateIds</a></li>
+    <li><a href="gettlsconfiguration" title="GetTlsConfiguration"><span class="symbol function"></span>GetTlsConfiguration</a></li>
+    <li><a href="gettlsconfigurationids" title="GetTlsConfigurationIds"><span class="symbol function"></span>GetTlsConfigurationIds</a></li>
+    <li><a href="gettlsdomain" title="GetTlsDomain"><span class="symbol function"></span>GetTlsDomain</a></li>
+    <li><a href="gettlsplatformcertificate" title="GetTlsPlatformCertificate"><span class="symbol function"></span>GetTlsPlatformCertificate</a></li>
+    <li><a href="gettlsplatformcertificateids" title="GetTlsPlatformCertificateIds"><span class="symbol function"></span>GetTlsPlatformCertificateIds</a></li>
+    <li><a href="gettlsprivatekey" title="GetTlsPrivateKey"><span class="symbol function"></span>GetTlsPrivateKey</a></li>
+    <li><a href="gettlsprivatekeyids" title="GetTlsPrivateKeyIds"><span class="symbol function"></span>GetTlsPrivateKeyIds</a></li>
+    <li><a href="gettlssubscription" title="GetTlsSubscription"><span class="symbol function"></span>GetTlsSubscription</a></li>
+    <li><a href="gettlssubscriptionids" title="GetTlsSubscriptionIds"><span class="symbol function"></span>GetTlsSubscriptionIds</a></li>
     <li><a href="getwafrules" title="GetWafRules"><span class="symbol function"></span>GetWafRules</a></li>
 </ul>
 
@@ -39,6 +58,6 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.15.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

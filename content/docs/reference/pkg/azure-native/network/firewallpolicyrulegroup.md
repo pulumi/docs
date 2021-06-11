@@ -41,14 +41,14 @@ class MyStack : Stack
             RuleGroupName = "ruleGroup1",
             Rules = 
             {
-                
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleArgs
                 {
-                    { "action", new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
                         Type = "Deny",
-                    } },
-                    { "name", "Example-Filter-Rule" },
-                    { "ruleConditions", 
+                    },
+                    Name = "Example-Filter-Rule",
+                    RuleConditions = 
                     {
                         
                         {
@@ -71,8 +71,8 @@ class MyStack : Stack
                                 "10.1.25.0/24",
                             } },
                         },
-                    } },
-                    { "ruleType", "FirewallPolicyFilterRule" },
+                    },
+                    RuleType = "FirewallPolicyFilterRule",
                 },
             },
         });
@@ -105,12 +105,12 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
     priority=110,
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
-    rules=[{
-        "action": azure_native.network.FirewallPolicyFilterRuleActionArgs(
+    rules=[azure_native.network.FirewallPolicyFilterRuleArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleActionArgs(
             type="Deny",
         ),
-        "name": "Example-Filter-Rule",
-        "ruleConditions": [{
+        name="Example-Filter-Rule",
+        rule_conditions=[{
             "destinationAddresses": ["*"],
             "destinationPorts": ["*"],
             "ipProtocols": ["TCP"],
@@ -118,8 +118,8 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
             "ruleConditionType": "NetworkRuleCondition",
             "sourceAddresses": ["10.1.25.0/24"],
         }],
-        "ruleType": "FirewallPolicyFilterRule",
-    }])
+        rule_type="FirewallPolicyFilterRule",
+    )])
 
 ```
 
@@ -185,14 +185,14 @@ class MyStack : Stack
             RuleGroupName = "ruleGroup1",
             Rules = 
             {
-                
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleArgs
                 {
-                    { "action", new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
                         Type = "Deny",
-                    } },
-                    { "name", "Example-Filter-Rule" },
-                    { "ruleConditions", 
+                    },
+                    Name = "Example-Filter-Rule",
+                    RuleConditions = 
                     {
                         
                         {
@@ -215,8 +215,8 @@ class MyStack : Stack
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
                             } },
                         },
-                    } },
-                    { "ruleType", "FirewallPolicyFilterRule" },
+                    },
+                    RuleType = "FirewallPolicyFilterRule",
                 },
             },
         });
@@ -249,12 +249,12 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
     priority=110,
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
-    rules=[{
-        "action": azure_native.network.FirewallPolicyFilterRuleActionArgs(
+    rules=[azure_native.network.FirewallPolicyFilterRuleArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleActionArgs(
             type="Deny",
         ),
-        "name": "Example-Filter-Rule",
-        "ruleConditions": [{
+        name="Example-Filter-Rule",
+        rule_conditions=[{
             "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
             "destinationPorts": ["*"],
             "ipProtocols": ["TCP"],
@@ -262,8 +262,8 @@ firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firew
             "ruleConditionType": "NetworkRuleCondition",
             "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
         }],
-        "ruleType": "FirewallPolicyFilterRule",
-    }])
+        rule_type="FirewallPolicyFilterRule",
+    )])
 
 ```
 
@@ -319,19 +319,32 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[FirewallPolicyFilterRuleArgs, FirewallPolicyNatRuleArgs]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[FirewallPolicyFilterRuleArgs, FirewallPolicyNatRuleArgs]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -342,46 +355,44 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -392,33 +403,25 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -430,25 +433,19 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -637,7 +634,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule | Firewall<wbr>Policy<wbr>Nat<wbr>Rule[]</span>
+        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Args | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1040,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1314,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1516,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition | Nat<wbr>Rule<wbr>Condition | Network<wbr>Rule<wbr>Condition[]</span>
+        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Args | Nat<wbr>Rule<wbr>Condition<wbr>Args | Network<wbr>Rule<wbr>Condition<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response[]</span>
+        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args | Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args | Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition</a></span>
+        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -25,17 +25,19 @@ meta_desc: "Documentation for the mongodbatlas.getNetworkContainer function with
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNetworkContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNetworkContainerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNetworkContainerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNetworkContainerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_container(</span><span class="nx">container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkContainerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_container(</span><span class="nx">container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkContainerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNetworkContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupNetworkContainerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNetworkContainerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupNetworkContainerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupNetworkContainer` in the Go SDK.
 
@@ -44,7 +46,7 @@ meta_desc: "Documentation for the mongodbatlas.getNetworkContainer function with
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNetworkContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetNetworkContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNetworkContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNetworkContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNetworkContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -250,6 +252,15 @@ The following output properties are available:
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vnetname_csharp">
 <a href="#vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
 </span>
@@ -367,6 +378,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetname_go">
@@ -488,6 +508,15 @@ The following output properties are available:
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vnetname_nodejs">
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
@@ -605,6 +634,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Atlas AWS region name for where this container will exist.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Atlas GCP regions where the container resides.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnet_name_python">

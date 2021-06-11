@@ -18,6 +18,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="aadiam/" title="aadiam"><span class="symbol module"></span>aadiam</a></li>
     <li><a href="addons/" title="addons"><span class="symbol module"></span>addons</a></li>
     <li><a href="advisor/" title="advisor"><span class="symbol module"></span>advisor</a></li>
+    <li><a href="agfoodplatform/" title="agfoodplatform"><span class="symbol module"></span>agfoodplatform</a></li>
     <li><a href="alertsmanagement/" title="alertsmanagement"><span class="symbol module"></span>alertsmanagement</a></li>
     <li><a href="analysisservices/" title="analysisservices"><span class="symbol module"></span>analysisservices</a></li>
     <li><a href="apimanagement/" title="apimanagement"><span class="symbol module"></span>apimanagement</a></li>
@@ -30,6 +31,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="autonomousdevelopmentplatform/" title="autonomousdevelopmentplatform"><span class="symbol module"></span>autonomousdevelopmentplatform</a></li>
     <li><a href="avs/" title="avs"><span class="symbol module"></span>avs</a></li>
     <li><a href="azureactivedirectory/" title="azureactivedirectory"><span class="symbol module"></span>azureactivedirectory</a></li>
+    <li><a href="azurearcdata/" title="azurearcdata"><span class="symbol module"></span>azurearcdata</a></li>
     <li><a href="azuredata/" title="azuredata"><span class="symbol module"></span>azuredata</a></li>
     <li><a href="azurestack/" title="azurestack"><span class="symbol module"></span>azurestack</a></li>
     <li><a href="azurestackhci/" title="azurestackhci"><span class="symbol module"></span>azurestackhci</a></li>
@@ -80,6 +82,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="digitaltwins/" title="digitaltwins"><span class="symbol module"></span>digitaltwins</a></li>
     <li><a href="documentdb/" title="documentdb"><span class="symbol module"></span>documentdb</a></li>
     <li><a href="domainregistration/" title="domainregistration"><span class="symbol module"></span>domainregistration</a></li>
+    <li><a href="dynamics365fraudprotection/" title="dynamics365fraudprotection"><span class="symbol module"></span>dynamics365fraudprotection</a></li>
     <li><a href="edgeorder/" title="edgeorder"><span class="symbol module"></span>edgeorder</a></li>
     <li><a href="elastic/" title="elastic"><span class="symbol module"></span>elastic</a></li>
     <li><a href="engagementfabric/" title="engagementfabric"><span class="symbol module"></span>engagementfabric</a></li>
@@ -109,6 +112,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="labservices/" title="labservices"><span class="symbol module"></span>labservices</a></li>
     <li><a href="logic/" title="logic"><span class="symbol module"></span>logic</a></li>
     <li><a href="logz/" title="logz"><span class="symbol module"></span>logz</a></li>
+    <li><a href="m365securityandcompliance/" title="m365securityandcompliance"><span class="symbol module"></span>m365securityandcompliance</a></li>
     <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
     <li><a href="machinelearningcompute/" title="machinelearningcompute"><span class="symbol module"></span>machinelearningcompute</a></li>
     <li><a href="machinelearningexperimentation/" title="machinelearningexperimentation"><span class="symbol module"></span>machinelearningexperimentation</a></li>
@@ -168,11 +172,14 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
     <li><a href="subscription/" title="subscription"><span class="symbol module"></span>subscription</a></li>
     <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
+    <li><a href="testbase/" title="testbase"><span class="symbol module"></span>testbase</a></li>
     <li><a href="timeseriesinsights/" title="timeseriesinsights"><span class="symbol module"></span>timeseriesinsights</a></li>
+    <li><a href="videoanalyzer/" title="videoanalyzer"><span class="symbol module"></span>videoanalyzer</a></li>
     <li><a href="virtualmachineimages/" title="virtualmachineimages"><span class="symbol module"></span>virtualmachineimages</a></li>
     <li><a href="visualstudio/" title="visualstudio"><span class="symbol module"></span>visualstudio</a></li>
     <li><a href="vmwarecloudsimple/" title="vmwarecloudsimple"><span class="symbol module"></span>vmwarecloudsimple</a></li>
     <li><a href="web/" title="web"><span class="symbol module"></span>web</a></li>
+    <li><a href="webpubsub/" title="webpubsub"><span class="symbol module"></span>webpubsub</a></li>
     <li><a href="windowsesu/" title="windowsesu"><span class="symbol module"></span>windowsesu</a></li>
     <li><a href="windowsiot/" title="windowsiot"><span class="symbol module"></span>windowsiot</a></li>
 </ul>
@@ -189,6 +196,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.11.0</dd>
 </dl>
 

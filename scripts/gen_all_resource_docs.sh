@@ -33,6 +33,7 @@ REPOS=(
     "fastly"
     "f5bigip"
     "gcp"
+    "google-native"
     "github"
     "gitlab"
     "hcloud"
@@ -63,6 +64,7 @@ REPOS=(
     "tls"
     "vault"
     "venafi"
+    "yandex"
 )
 
 branch=$(git rev-parse --abbrev-ref HEAD)

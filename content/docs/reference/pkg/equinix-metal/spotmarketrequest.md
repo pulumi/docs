@@ -41,7 +41,7 @@ class MyStack : Stack
             MaxBidPrice = 0.03,
             Facilities = 
             {
-                "ewr1",
+                "ny5",
             },
             DevicesMin = 1,
             DevicesMax = 1,
@@ -49,8 +49,8 @@ class MyStack : Stack
             {
                 Hostname = "testspot",
                 BillingCycle = "hourly",
-                OperatingSystem = "coreos_stable",
-                Plan = "t1.small.x86",
+                OperatingSystem = "ubuntu_20_04",
+                Plan = "c3.small.x86",
             },
         });
     }
@@ -68,8 +68,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -78,15 +78,15 @@ func main() {
 			ProjectId:   pulumi.Any(local.Project_id),
 			MaxBidPrice: pulumi.Float64(0.03),
 			Facilities: pulumi.StringArray{
-				pulumi.String("ewr1"),
+				pulumi.String("ny5"),
 			},
 			DevicesMin: pulumi.Int(1),
 			DevicesMax: pulumi.Int(1),
 			InstanceParameters: &equinix - metal.SpotMarketRequestInstanceParametersArgs{
 				Hostname:        pulumi.String("testspot"),
 				BillingCycle:    pulumi.String("hourly"),
-				OperatingSystem: pulumi.String("coreos_stable"),
-				Plan:            pulumi.String("t1.small.x86"),
+				OperatingSystem: pulumi.String("ubuntu_20_04"),
+				Plan:            pulumi.String("c3.small.x86"),
 			},
 		})
 		if err != nil {
@@ -111,14 +111,14 @@ import pulumi_equinix_metal as equinix_metal
 req = equinix_metal.SpotMarketRequest("req",
     project_id=local["project_id"],
     max_bid_price=0.03,
-    facilities=["ewr1"],
+    facilities=["ny5"],
     devices_min=1,
     devices_max=1,
     instance_parameters=equinix_metal.SpotMarketRequestInstanceParametersArgs(
         hostname="testspot",
         billing_cycle="hourly",
-        operating_system="coreos_stable",
-        plan="t1.small.x86",
+        operating_system="ubuntu_20_04",
+        plan="c3.small.x86",
     ))
 ```
 
@@ -137,14 +137,14 @@ import * as equinix_metal from "@pulumi/equinix-metal";
 const req = new equinix_metal.SpotMarketRequest("req", {
     projectId: local.project_id,
     maxBidPrice: 0.03,
-    facilities: ["ewr1"],
+    facilities: ["ny5"],
     devicesMin: 1,
     devicesMax: 1,
     instanceParameters: {
         hostname: "testspot",
         billingCycle: "hourly",
-        operatingSystem: "coreos_stable",
-        plan: "t1.small.x86",
+        operatingSystem: "ubuntu_20_04",
+        plan: "c3.small.x86",
     },
 });
 ```
@@ -166,19 +166,33 @@ const req = new equinix_metal.SpotMarketRequest("req", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+                      <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpotMarketRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpotMarketRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -213,22 +227,32 @@ const req = new equinix_metal.SpotMarketRequest("req", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SpotMarketRequestArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -237,7 +261,7 @@ const req = new equinix_metal.SpotMarketRequest("req", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -261,7 +285,7 @@ const req = new equinix_metal.SpotMarketRequest("req", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -330,15 +354,6 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="facilities_csharp">
-<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="instanceparameters_csharp">
 <a href="#instanceparameters_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
 </span>
@@ -364,6 +379,24 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facilities_csharp">
+<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_csharp">
+<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordevices_csharp">
@@ -397,15 +430,6 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="facilities_go">
-<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="instanceparameters_go">
 <a href="#instanceparameters_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
 </span>
@@ -431,6 +455,24 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facilities_go">
+<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_go">
+<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordevices_go">
@@ -464,20 +506,11 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="facilities_nodejs">
-<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="instanceparameters_nodejs">
 <a href="#instanceparameters_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd><dt class="property-required"
@@ -498,6 +531,24 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facilities_nodejs">
+<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_nodejs">
+<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordevices_nodejs">
@@ -531,15 +582,6 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="facilities_python">
-<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="instance_parameters_python">
 <a href="#instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
 </span>
@@ -565,6 +607,24 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="facilities_python">
+<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_python">
+<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_devices_python">
@@ -640,20 +700,30 @@ Get an existing SpotMarketRequest resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SpotMarketRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpotMarketRequest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SpotMarketRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpotMarketRequest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotMarketRequest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">,</span>
+        <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotMarketRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SpotMarketRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SpotMarketRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpotMarketRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SpotMarketRequestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpotMarketRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SpotMarketRequestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -803,6 +873,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_metro_csharp">
+<a href="#state_metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -870,6 +949,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_metro_go">
+<a href="#state_metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -923,7 +1011,7 @@ The following state arguments are supported:
 <a href="#state_instanceparameters_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,6 +1023,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_nodejs">
+<a href="#state_metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
@@ -1002,6 +1099,15 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_python">
+<a href="#state_metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">

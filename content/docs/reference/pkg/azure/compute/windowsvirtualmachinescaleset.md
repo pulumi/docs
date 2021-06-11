@@ -113,10 +113,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -301,19 +301,71 @@ const exampleWindowsVirtualMachineScaleSet = new azure.compute.WindowsVirtualMac
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">additional_unattend_contents</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetAdditionalUnattendContentArgs]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticInstanceRepairArgs]</span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetSecretArgs]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetSourceImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetTerminateNotificationArgs]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">winrm_listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetWinrmListenerArgs]]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                  <span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAdditionalCapabilitiesArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">additional_unattend_contents</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetAdditionalUnattendContentArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticInstanceRepairArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetBootDiagnosticsArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetDataDiskArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">enable_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetExtensionArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                  <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+                                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetOsDiskArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetPlanArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                  <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetSecretArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetSourceImageReferenceArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetTerminateNotificationArgs]</span> = None<span class="p">,</span>
+                                  <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">winrm_listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetWinrmListenerArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WindowsVirtualMachineScaleSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WindowsVirtualMachineScaleSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -324,46 +376,44 @@ const exampleWindowsVirtualMachineScaleSet = new azure.compute.WindowsVirtualMac
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -372,35 +422,27 @@ const exampleWindowsVirtualMachineScaleSet = new azure.compute.WindowsVirtualMac
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -412,25 +454,19 @@ const exampleWindowsVirtualMachineScaleSet = new azure.compute.WindowsVirtualMac
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">WindowsVirtualMachineScaleSetArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -660,7 +696,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -1078,7 +1114,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -1314,7 +1350,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1323,7 +1359,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1350,7 +1386,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1395,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#additionalunattendcontents_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_unattend_content` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1404,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#automaticinstancerepair_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Instance<wbr>Repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_instance_repair` block as defined below. To enable the automatic instance repair, this Virtual Machine Scale Set must have a valid `health_probe_id` or an [Application Health Extension](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1413,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#automaticosupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_os_upgrade_policy` block as defined below. This can only be specified when `upgrade_mode` is set to `Automatic`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1422,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1413,7 +1449,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1494,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetextension">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetextension">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `extension` blocks as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1521,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1532,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -1539,7 +1575,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1620,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1638,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1629,7 +1665,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#sourceimagereference_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1683,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#terminatenotification_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terminate_notification` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1710,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
 <a href="#winrmlisteners_nodejs" style="color: inherit; text-decoration: inherit;">winrm<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1950,7 @@ The WindowsVirtualMachineScaleSet resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -2215,20 +2251,69 @@ Get an existing WindowsVirtualMachineScaleSet resource's state with the given na
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WindowsVirtualMachineScaleSetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">WindowsVirtualMachineScaleSet</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">WindowsVirtualMachineScaleSetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">WindowsVirtualMachineScaleSet</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">additional_unattend_contents</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetAdditionalUnattendContentArgs]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticInstanceRepairArgs]</span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetSecretArgs]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetSourceImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetTerminateNotificationArgs]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">winrm_listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetWinrmListenerArgs]]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> WindowsVirtualMachineScaleSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAdditionalCapabilitiesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">additional_unattend_contents</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetAdditionalUnattendContentArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticInstanceRepairArgs]</span> = None<span class="p">,</span>
+        <span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetBootDiagnosticsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetDataDiskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetExtensionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetOsDiskArgs]</span> = None<span class="p">,</span>
+        <span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetPlanArgs]</span> = None<span class="p">,</span>
+        <span class="nx">platform_fault_domain_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetSecretArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetSourceImageReferenceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[WindowsVirtualMachineScaleSetTerminateNotificationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">winrm_listeners</span><span class="p">:</span> <span class="nx">Optional[Sequence[WindowsVirtualMachineScaleSetWinrmListenerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> WindowsVirtualMachineScaleSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWindowsVirtualMachineScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WindowsVirtualMachineScaleSetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WindowsVirtualMachineScaleSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWindowsVirtualMachineScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">WindowsVirtualMachineScaleSetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WindowsVirtualMachineScaleSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WindowsVirtualMachineScaleSetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">WindowsVirtualMachineScaleSet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">WindowsVirtualMachineScaleSetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2510,7 +2595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -2937,7 +3022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -3191,7 +3276,7 @@ The following state arguments are supported:
 <a href="#state_additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3200,7 +3285,7 @@ The following state arguments are supported:
 <a href="#state_additionalunattendcontents_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_unattend_content` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3227,7 +3312,7 @@ The following state arguments are supported:
 <a href="#state_automaticinstancerepair_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Instance<wbr>Repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticinstancerepair">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_instance_repair` block as defined below. To enable the automatic instance repair, this Virtual Machine Scale Set must have a valid `health_probe_id` or an [Application Health Extension](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3236,7 +3321,7 @@ The following state arguments are supported:
 <a href="#state_automaticosupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetautomaticosupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_os_upgrade_policy` block as defined below. This can only be specified when `upgrade_mode` is set to `Automatic`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3245,7 +3330,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetbootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3272,7 +3357,7 @@ The following state arguments are supported:
 <a href="#state_datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetdatadisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3317,7 +3402,7 @@ The following state arguments are supported:
 <a href="#state_extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetextension">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetextension">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `extension` blocks as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3344,7 +3429,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3364,7 +3449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -3398,7 +3483,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterface">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3407,7 +3492,7 @@ The following state arguments are supported:
 <a href="#state_osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3425,7 +3510,7 @@ The following state arguments are supported:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetplan">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3479,7 +3564,7 @@ The following state arguments are supported:
 <a href="#state_rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetrollingupgradepolicy">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3497,7 +3582,7 @@ The following state arguments are supported:
 <a href="#state_secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetsecret">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3533,7 +3618,7 @@ The following state arguments are supported:
 <a href="#state_sourceimagereference_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetsourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3551,7 +3636,7 @@ The following state arguments are supported:
 <a href="#state_terminatenotification_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetterminatenotification">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terminate_notification` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3587,7 +3672,7 @@ The following state arguments are supported:
 <a href="#state_winrmlisteners_nodejs" style="color: inherit; text-decoration: inherit;">winrm<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetwinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Winrm<wbr>Listener<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3791,7 +3876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine Scale Set. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -4292,7 +4377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautomaticosupgrade_csharp">
@@ -4301,7 +4386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4314,7 +4399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautomaticosupgrade_go">
@@ -4323,7 +4408,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4336,7 +4421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautomaticosupgrade_nodejs">
@@ -4345,7 +4430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4358,7 +4443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should automatic rollbacks be disabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should automatic rollbacks be disabled?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_automatic_os_upgrade_python">
@@ -4367,7 +4452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available?
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5378,7 +5463,7 @@ The following state arguments are supported:
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfiguration">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfiguration">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -5738,7 +5823,7 @@ The following state arguments are supported:
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `public_ip_address` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5981,7 +6066,7 @@ The following state arguments are supported:
 <a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_tag` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6278,7 +6363,7 @@ The following state arguments are supported:
 <a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6760,7 +6845,7 @@ The following state arguments are supported:
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinescalesetsecretcertificate">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinescalesetsecretcertificate">Windows<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"

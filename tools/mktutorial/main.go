@@ -22,7 +22,6 @@ import (
 	"os/exec"
 	"path/filepath"
 	"regexp"
-	"sort"
 	"strings"
 
 	"github.com/pkg/errors"
@@ -61,18 +60,6 @@ func main() {
 		exitErr("gathering tutorials: %v", err)
 	}
 	fmt.Printf("\tGathered %d tutorials.\n", len(tuts))
-
-	// Emit the shortcode indexes; one global index and another per-cloud index.
-	shortcodesDir := filepath.Join(docsRoot, "shortcodes")
-	fmt.Printf("Generating shortcode pages...\n")
-	if err = emitGlobalIndexShortcode(shortcodesDir, tuts); err != nil {
-		exitErr("emitting global index shortcode: %v", err)
-	}
-	for _, cloud := range clouds {
-		if err = emitCloudIndexShortcode(shortcodesDir, cloud, tuts); err != nil {
-			exitErr("emitting cloud %s index shortcode: %v", cloud, err)
-		}
-	}
 
 	// And now finally create the actual tutorial pages, primarily by copying the tutorial READMEs.
 	fmt.Printf("Generating template pages...\n")
@@ -207,9 +194,8 @@ func gatherTutorials(root string) ([]tutorial, error) {
 }
 
 const (
-	gitHubBaseURL                 = "https://github.com/pulumi/examples"
-	gitHubUserContentBaseURL      = "https://raw.githubusercontent.com/pulumi/examples"
-	tutorialsIndexShortcodePrefix = "tutorials-index"
+	gitHubBaseURL            = "https://github.com/pulumi/examples"
+	gitHubUserContentBaseURL = "https://raw.githubusercontent.com/pulumi/examples"
 )
 
 var (
@@ -265,128 +251,6 @@ func cleanMarkdownBody(name, body string) string {
 	}
 
 	return result
-}
-
-func makeLangMap(tutorials []tutorial, include []string, exclude []string) (map[string][]tutorial, int) {
-	// Split tutorials out into respective languages.
-	tuts := map[string][]tutorial{
-		"js": nil,
-		"ts": nil,
-		"py": nil,
-		"go": nil,
-		"cs": nil,
-	}
-	var c int
-	for _, tut := range tutorials {
-		cloud := tut.Cloud
-		lang := tut.Language
-		if _, has := tuts[lang]; has {
-			// Filter out any specific included or excluded clouds.
-			if len(include) > 0 {
-				var found bool
-				for _, incl := range include {
-					if incl == cloud {
-						found = true
-						break
-					}
-				}
-				if !found {
-					continue
-				}
-			}
-			if len(exclude) > 0 {
-				var found bool
-				for _, excl := range exclude {
-					if excl == cloud {
-						found = true
-						break
-					}
-				}
-				if found {
-					continue
-				}
-			}
-			tuts[lang] = append(tuts[lang], tut)
-			c++
-		}
-	}
-
-	// Sort the tutorials: first by cloud then by title.
-	for _, ts := range tuts {
-		sort.Slice(ts, func(i, j int) bool {
-			if ts[i].Cloud == ts[j].Cloud {
-				if ts[i].Language == ts[j].Language {
-					return ts[i].Title < ts[j].Title
-				}
-				return ts[i].Language < ts[j].Language
-			}
-			return ts[i].Cloud < ts[j].Cloud
-		})
-	}
-
-	return tuts, c
-}
-
-func emitGlobalIndexShortcode(root string, tutorials []tutorial) error {
-	// Open the global shortcode file.
-	fn := tutorialsIndexShortcodePrefix + ".html"
-	path := filepath.Join(root, fn)
-	if err := os.MkdirAll(filepath.Dir(path), 0700); err != nil {
-		return err
-	}
-	f, err := os.Create(path)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	// Get the full list of tutorials, by language, excluding some of them.
-	tuts, c := makeLangMap(tutorials, clouds, nil)
-
-	// Render the template using the tutorials data.
-	if err = globalIndexTemplate.FRender(f, map[string]interface{}{
-		// Note: We combine JS and TS together as they are largely interchangable, and displaying a
-		// seperate JavaScript section with a very small selection isn't particularly "helpful".
-		"TypeScriptTutorials": append(tuts["ts"], tuts["js"]...),
-		"PythonTutorials":     tuts["py"],
-		"GoTutorials":         tuts["go"],
-		"CSharpTutorials":     tuts["cs"],
-	}); err != nil {
-		return err
-	}
-	fmt.Printf("\tEmitted global index: %s (%d tutorials).\n", fn, c)
-	return nil
-}
-
-func emitCloudIndexShortcode(root, cloud string, tutorials []tutorial) error {
-	// Open the cloud-specific shortcode file.
-	fn := tutorialsIndexShortcodePrefix + "-" + cloud + ".html"
-	path := filepath.Join(root, fn)
-	if err := os.MkdirAll(filepath.Dir(path), 0700); err != nil {
-		return err
-	}
-	f, err := os.Create(path)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	// Filter the tutorials down to just this cloud.
-	tuts, c := makeLangMap(tutorials, []string{cloud}, nil)
-
-	// Render the template using the tutorials data.
-	if err = cloudIndexTemplate.FRender(f, map[string]interface{}{
-		// Note: We combine JS and TS together as they are largely interchangable, and displaying a
-		// seperate JavaScript section with a very small selection isn't particularly "helpful".
-		"TypeScriptTutorials": append(tuts["ts"], tuts["js"]...),
-		"PythonTutorials":     tuts["py"],
-		"GoTutorials":         tuts["go"],
-		"CSharpTutorials":     tuts["cs"],
-	}); err != nil {
-		return err
-	}
-	fmt.Printf("\tEmitted cloud index: %s (%d tutorials).\n", fn, c)
-	return nil
 }
 
 func emitTutorialDocs(root string, tutorials []tutorial) error {

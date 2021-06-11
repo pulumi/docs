@@ -72,10 +72,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/media"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -183,19 +183,33 @@ const exampleServiceAccount = new azure.media.ServiceAccount("exampleServiceAcco
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">storage_authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">,</span>
+            <span class="nx">key_delivery_access_control</span><span class="p">:</span> <span class="nx">Optional[AccountKeyDeliveryAccessControlArgs]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountStorageAccountArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">storage_authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -206,46 +220,44 @@ const exampleServiceAccount = new azure.media.ServiceAccount("exampleServiceAcco
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -254,35 +266,27 @@ const exampleServiceAccount = new azure.media.ServiceAccount("exampleServiceAcco
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -294,25 +298,19 @@ const exampleServiceAccount = new azure.media.ServiceAccount("exampleServiceAcco
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -356,6 +354,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keydeliveryaccesscontrol_csharp">
+<a href="#keydeliveryaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -391,7 +398,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -423,6 +429,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keydeliveryaccesscontrol_go">
+<a href="#keydeliveryaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -460,7 +475,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -480,7 +494,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstorageaccount">Account<wbr>Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#accountstorageaccount">Account<wbr>Storage<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -489,9 +503,18 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keydeliveryaccesscontrol_nodejs">
+<a href="#keydeliveryaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -529,7 +552,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -561,6 +583,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_delivery_access_control_python">
+<a href="#key_delivery_access_control_python" style="color: inherit; text-decoration: inherit;">key_<wbr>delivery_<wbr>access_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -598,7 +629,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -665,20 +695,30 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Account</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Account</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">storage_authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">key_delivery_access_control</span><span class="p">:</span> <span class="nx">Optional[AccountKeyDeliveryAccessControlArgs]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountStorageAccountArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccountState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccountState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Account</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccountState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Account</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccountState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -792,6 +832,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_keydeliveryaccesscontrol_csharp">
+<a href="#state_keydeliveryaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -845,7 +894,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -859,6 +907,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keydeliveryaccesscontrol_go">
+<a href="#state_keydeliveryaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -914,7 +971,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -925,9 +981,18 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keydeliveryaccesscontrol_nodejs">
+<a href="#state_keydeliveryaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Delivery<wbr>Access<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -961,7 +1026,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#state_storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstorageaccount">Account<wbr>Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#accountstorageaccount">Account<wbr>Storage<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +1048,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -997,6 +1061,15 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_key_delivery_access_control_python">
+<a href="#state_key_delivery_access_control_python" style="color: inherit; text-decoration: inherit;">key_<wbr>delivery_<wbr>access_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1052,7 +1125,6 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1188,6 +1260,96 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Media Services Account. Possible value is  `SystemAssigned`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountkeydeliveryaccesscontrol">Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallowlists_csharp">
+<a href="#ipallowlists_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allow<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallowlists_go">
+<a href="#ipallowlists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allow<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipallowlists_nodejs">
+<a href="#ipallowlists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allow<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Default Action to use when no rules match from `ip_allow_list`. Possible values are `Allow` and `Deny`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_allow_lists_python">
+<a href="#ip_allow_lists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allow_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Delivery.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

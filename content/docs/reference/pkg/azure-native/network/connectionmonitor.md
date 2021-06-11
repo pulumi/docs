@@ -103,7 +103,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -359,7 +359,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -584,19 +584,40 @@ const connectionMonitor = new azure_native.network.ConnectionMonitor("connection
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[ConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorOutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorTestGroupArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">connection_monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[ConnectionMonitorDestinationArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorEndpointArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">migrate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">monitoring_interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorOutputArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ConnectionMonitorSourceArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                      <span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionMonitorTestGroupArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -607,46 +628,44 @@ const connectionMonitor = new azure_native.network.ConnectionMonitor("connection
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -657,33 +676,25 @@ const connectionMonitor = new azure_native.network.ConnectionMonitor("connection
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -695,25 +706,19 @@ const connectionMonitor = new azure_native.network.ConnectionMonitor("connection
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConnectionMonitorArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1014,7 +1019,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitordestination">Connection<wbr>Monitor<wbr>Destination</a></span>
+        <span class="property-type"><a href="#connectionmonitordestination">Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1027,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpoint">Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpoint">Connection<wbr>Monitor<wbr>Endpoint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1067,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoroutput">Connection<wbr>Monitor<wbr>Output[]</a></span>
+        <span class="property-type"><a href="#connectionmonitoroutput">Connection<wbr>Monitor<wbr>Output<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1075,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsource">Connection<wbr>Monitor<wbr>Source</a></span>
+        <span class="property-type"><a href="#connectionmonitorsource">Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1091,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestconfiguration">Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#connectionmonitortestconfiguration">Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1099,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestgroup">Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#connectionmonitortestgroup">Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1893,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2031,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2299,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2523,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2835,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3005,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader[]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3215,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3437,7 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspacesettings_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3519,7 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspacesettings_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4261,7 +4266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4269,7 +4274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4285,7 +4290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4293,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4565,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4573,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4589,7 +4594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4597,7 +4602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -15,6 +15,8 @@ Explore the resources and functions of the azure.containerservice module.
     <li><a href="kubernetescluster" title="KubernetesCluster"><span class="symbol resource"></span>KubernetesCluster</a></li>
     <li><a href="kubernetesclusternodepool" title="KubernetesClusterNodePool"><span class="symbol resource"></span>KubernetesClusterNodePool</a></li>
     <li><a href="registry" title="Registry"><span class="symbol resource"></span>Registry</a></li>
+    <li><a href="registryscopemap" title="RegistryScopeMap"><span class="symbol resource"></span>RegistryScopeMap</a></li>
+    <li><a href="registrytoken" title="RegistryToken"><span class="symbol resource"></span>RegistryToken</a></li>
     <li><a href="registrywebhook" title="RegistryWebhook"><span class="symbol resource"></span>RegistryWebhook</a></li>
     <li><a href="registrywebook" title="RegistryWebook"><span class="symbol resource"></span>RegistryWebook</a></li>
 </ul>
@@ -25,6 +27,8 @@ Explore the resources and functions of the azure.containerservice module.
     <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="symbol function"></span>GetKubernetesCluster</a></li>
     <li><a href="getkubernetesserviceversions" title="GetKubernetesServiceVersions"><span class="symbol function"></span>GetKubernetesServiceVersions</a></li>
     <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
+    <li><a href="getregistryscopemap" title="GetRegistryScopeMap"><span class="symbol function"></span>GetRegistryScopeMap</a></li>
+    <li><a href="getregistrytoken" title="GetRegistryToken"><span class="symbol function"></span>GetRegistryToken</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,6 +40,6 @@ Explore the resources and functions of the azure.containerservice module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.56.0</dd>
+	<dd>4.6.0</dd>
 </dl>
 

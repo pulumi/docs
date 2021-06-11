@@ -18,19 +18,43 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,46 +65,44 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
+    </dt>
+    <dd>The arguments to resource properties.</dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,35 +111,27 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -129,25 +143,19 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -514,7 +522,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authconfig_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auth config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -531,7 +539,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cacheconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">Domain<wbr>Cache<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Domain<wbr>Cache<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -540,7 +548,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#certificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -548,7 +556,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#httpheaderconfigs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">Domain<wbr>Http<wbr>Header<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -566,7 +574,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#page404config_nodejs" style="color: inherit; text-decoration: inherit;">page404Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config</a></span>
+        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error page config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -584,7 +592,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#parameterfilterconfig_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Filter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameter filter config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -602,7 +610,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#referconfig_nodejs" style="color: inherit; text-decoration: inherit;">refer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refer config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -880,20 +888,40 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1330,7 +1358,7 @@ The following state arguments are supported:
 <a href="#state_authconfig_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auth config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1347,7 +1375,7 @@ The following state arguments are supported:
 <a href="#state_cacheconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">Domain<wbr>Cache<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Domain<wbr>Cache<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1365,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_certificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_httpheaderconfigs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">Domain<wbr>Http<wbr>Header<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1400,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_page404config_nodejs" style="color: inherit; text-decoration: inherit;">page404Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config</a></span>
+        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error page config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1418,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_parameterfilterconfig_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Filter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameter filter config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1436,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_referconfig_nodejs" style="color: inherit; text-decoration: inherit;">refer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refer config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"

@@ -27,17 +27,19 @@ meta_desc: "Documentation for the mongodbatlas.getCluster function with examples
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -46,7 +48,7 @@ meta_desc: "Documentation for the mongodbatlas.getCluster function with examples
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -198,13 +200,22 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="biconnector_csharp">
 <a href="#biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterbiconnector">Get<wbr>Cluster<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="biconnectorconfig_csharp">
+<a href="#biconnectorconfig_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterbiconnectorconfig">Get<wbr>Cluster<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-"
@@ -424,7 +435,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerinstancesizename_csharp">
@@ -561,13 +572,22 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="biconnector_go">
 <a href="#biconnector_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterbiconnector">Get<wbr>Cluster<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="biconnectorconfig_go">
+<a href="#biconnectorconfig_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterbiconnectorconfig">Get<wbr>Cluster<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-"
@@ -787,7 +807,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerinstancesizename_go">
@@ -924,13 +944,22 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="biconnector_nodejs">
 <a href="#biconnector_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterbiconnector">Get<wbr>Cluster<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="biconnectorconfig_nodejs">
+<a href="#biconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterbiconnectorconfig">Get<wbr>Cluster<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-"
@@ -1150,7 +1179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerinstancesizename_nodejs">
@@ -1287,13 +1316,22 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Legacy Option, Indicates whether Atlas continuous backups are enabled for the cluster.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="bi_connector_python">
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterbiconnector">Get<wbr>Cluster<wbr>Bi<wbr>Connector</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details. **DEPRECATED** Use `bi_connector_config` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use bi_connector_config instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="bi_connector_config_python">
+<a href="#bi_connector_config_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterbiconnectorconfig">Get<wbr>Cluster<wbr>Bi<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-"
@@ -1513,7 +1551,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance.
+    <dd>{{% md %}}**(DEPRECATED)** Indicates whether the Amazon EBS encryption is enabled. This feature encrypts the server’s root volume for both data at rest within the volume and data moving between the volume and the instance. By default this attribute is always enabled, per deprecation process showing the real value at `provider_encrypt_ebs_volume_flag` computed attribute.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_instance_size_name_python">
@@ -1702,6 +1740,98 @@ The following output properties are available:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="getclusterbiconnectorconfig">Get<wbr>Cluster<wbr>Bi<wbr>Connector<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="readpreference_csharp">
+<a href="#readpreference_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="readpreference_go">
+<a href="#readpreference_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="readpreference_nodejs">
+<a href="#readpreference_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not BI Connector for Atlas is enabled on the cluster.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="read_preference_python">
+<a href="#read_preference_python" style="color: inherit; text-decoration: inherit;">read_<wbr>preference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="getclusterconnectionstrings">Get<wbr>Cluster<wbr>Connection<wbr>Strings</h4>
 
 
@@ -1737,7 +1867,7 @@ The following output properties are available:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpoint">List&lt;Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpoint">List&lt;Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1917,7 +2047,7 @@ The following output properties are available:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpoint">Sequence[Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpoint">Sequence[Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1965,7 +2095,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpointendpoint">List&lt;Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpointendpoint">List&lt;Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2073,7 +2203,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpointendpoint">Sequence[Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterconnectionstringsprivateendpointendpoint">Sequence[Get<wbr>Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2335,7 +2465,7 @@ The following output properties are available:
 <a href="#regionsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Regions<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">List&lt;Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">List&lt;Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2455,7 +2585,7 @@ The following output properties are available:
 <a href="#regions_configs_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">Sequence[Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">Sequence[Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2705,7 +2835,7 @@ The following output properties are available:
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">List&lt;Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">List&lt;Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2909,7 +3039,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2966,7 +3096,7 @@ The following output properties are available:
 <a href="#policyitems_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">List&lt;Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">List&lt;Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3029,7 +3159,7 @@ The following output properties are available:
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
