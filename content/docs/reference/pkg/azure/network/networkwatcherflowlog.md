@@ -296,11 +296,13 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
 <span class="k">def </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogRetentionPolicyArgs]</span> = None<span class="p">,</span>
                           <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                           <span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogTrafficAnalyticsArgs]</span> = None<span class="p">,</span>
                           <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -486,6 +488,24 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trafficanalytics_csharp">
 <a href="#trafficanalytics_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics</a>
 </span>
@@ -560,6 +580,24 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficanalytics_go">
@@ -638,6 +676,24 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trafficanalytics_nodejs">
 <a href="#trafficanalytics_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Analytics</a>
 </span>
@@ -712,6 +768,24 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_analytics_python">
@@ -805,11 +879,13 @@ Get an existing NetworkWatcherFlowLog resource's state with the given name, ID, 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogRetentionPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogTrafficAnalyticsArgs]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> NetworkWatcherFlowLog</code></pre></div>
 {{% /choosable %}}
@@ -933,6 +1009,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_location_csharp">
+<a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_networksecuritygroupid_csharp">
 <a href="#state_networksecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
@@ -978,6 +1063,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_trafficanalytics_csharp">
 <a href="#state_trafficanalytics_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics</a>
 </span>
@@ -1007,6 +1101,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_location_go">
+<a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksecuritygroupid_go">
@@ -1054,6 +1157,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_trafficanalytics_go">
 <a href="#state_trafficanalytics_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics</a>
 </span>
@@ -1083,6 +1195,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_location_nodejs">
+<a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksecuritygroupid_nodejs">
@@ -1130,6 +1251,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_trafficanalytics_nodejs">
 <a href="#state_trafficanalytics_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Analytics</a>
 </span>
@@ -1159,6 +1289,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_location_python">
+<a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location where the Network Watcher Flow Log resides. Changing this forces a new resource to be created. Defaults to the `location` of the Network Watcher.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_security_group_id_python">
@@ -1204,6 +1343,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Network Watcher Flow Log.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_analytics_python">

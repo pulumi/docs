@@ -211,6 +211,8 @@ const exampleDatasetAzureBlob = new azure.datafactory.DatasetAzureBlob("exampleD
                      <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">dynamic_filename_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">dynamic_path_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -402,6 +404,24 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The description for the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dynamicfilenameenabled_csharp">
+<a href="#dynamicfilenameenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_csharp">
+<a href="#dynamicpathenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
 </span>
@@ -512,6 +532,24 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Dataset.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicfilenameenabled_go">
+<a href="#dynamicfilenameenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_go">
+<a href="#dynamicpathenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
@@ -626,6 +664,24 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The description for the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dynamicfilenameenabled_nodejs">
+<a href="#dynamicfilenameenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_nodejs">
+<a href="#dynamicpathenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
@@ -736,6 +792,24 @@ The DatasetAzureBlob resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Dataset.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_filename_enabled_python">
+<a href="#dynamic_filename_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>filename_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_path_enabled_python">
+<a href="#dynamic_path_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>path_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
@@ -868,6 +942,8 @@ Get an existing DatasetAzureBlob resource's state with the given name, ID, and o
         <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dynamic_filename_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">dynamic_path_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1024,6 +1100,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The description for the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dynamicfilenameenabled_csharp">
+<a href="#state_dynamicfilenameenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicpathenabled_csharp">
+<a href="#state_dynamicpathenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filename_csharp">
 <a href="#state_filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
 </span>
@@ -1134,6 +1228,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Dataset.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicfilenameenabled_go">
+<a href="#state_dynamicfilenameenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicpathenabled_go">
+<a href="#state_dynamicpathenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_go">
@@ -1248,6 +1360,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The description for the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dynamicfilenameenabled_nodejs">
+<a href="#state_dynamicfilenameenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamicpathenabled_nodejs">
+<a href="#state_dynamicpathenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filename_nodejs">
 <a href="#state_filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
@@ -1358,6 +1488,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Dataset.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamic_filename_enabled_python">
+<a href="#state_dynamic_filename_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>filename_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dynamic_path_enabled_python">
+<a href="#state_dynamic_path_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>path_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_python">

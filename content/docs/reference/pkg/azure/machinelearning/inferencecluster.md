@@ -597,7 +597,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -624,7 +624,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -673,7 +673,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -700,7 +700,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -749,7 +749,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -776,7 +776,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -825,7 +825,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -852,7 +852,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1071,7 +1071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_csharp">
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_go">
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1223,7 +1223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_nodejs">
@@ -1268,7 +1268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1299,7 +1299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.
+    <dd>{{% md %}}The description of the Machine Learning compute. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_cluster_id_python">
@@ -1344,7 +1344,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `ssl` block as defined below.
+    <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1377,7 +1377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The certificate for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_csharp">
@@ -1386,7 +1386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cname of the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The cname of the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
@@ -1395,7 +1395,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key content for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The key content for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="leafdomainlabel_csharp">
+<a href="#leafdomainlabel_csharp" style="color: inherit; text-decoration: inherit;">Leaf<wbr>Domain<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The leaf domain label for the ssl configuration. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwriteexistingdomain_csharp">
+<a href="#overwriteexistingdomain_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Existing<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to overwrite existing leaf domain. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname` Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1408,7 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The certificate for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_go">
@@ -1417,7 +1435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cname of the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The cname of the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
@@ -1426,7 +1444,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key content for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The key content for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="leafdomainlabel_go">
+<a href="#leafdomainlabel_go" style="color: inherit; text-decoration: inherit;">Leaf<wbr>Domain<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The leaf domain label for the ssl configuration. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwriteexistingdomain_go">
+<a href="#overwriteexistingdomain_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Existing<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to overwrite existing leaf domain. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname` Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1439,7 +1475,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The certificate for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_nodejs">
@@ -1448,7 +1484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cname of the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The cname of the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
@@ -1457,7 +1493,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key content for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The key content for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="leafdomainlabel_nodejs">
+<a href="#leafdomainlabel_nodejs" style="color: inherit; text-decoration: inherit;">leaf<wbr>Domain<wbr>Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The leaf domain label for the ssl configuration. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwriteexistingdomain_nodejs">
+<a href="#overwriteexistingdomain_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to overwrite existing leaf domain. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname` Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1470,7 +1524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The certificate for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_python">
@@ -1479,7 +1533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cname of the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The cname of the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
@@ -1488,7 +1542,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key content for the ssl configuration. Changing this forces a new Machine Learning Inference Cluster to be created.
+    <dd>{{% md %}}The key content for the ssl configuration.Conflicts with `ssl.0.leaf_domain_label`,`ssl.0.overwrite_existing_domain`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="leaf_domain_label_python">
+<a href="#leaf_domain_label_python" style="color: inherit; text-decoration: inherit;">leaf_<wbr>domain_<wbr>label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The leaf domain label for the ssl configuration. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname`. Changing this forces a new Machine Learning Inference Cluster to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="overwrite_existing_domain_python">
+<a href="#overwrite_existing_domain_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to overwrite existing leaf domain. Conflicts with `ssl.0.cert`,`ssl.0.key`,`ssl.0.cname` Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

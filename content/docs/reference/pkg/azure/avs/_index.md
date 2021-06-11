@@ -12,6 +12,7 @@ Explore the resources and functions of the azure.avs module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="expressrouteauthorization" title="ExpressRouteAuthorization"><span class="symbol resource"></span>ExpressRouteAuthorization</a></li>
     <li><a href="privatecloud" title="PrivateCloud"><span class="symbol resource"></span>PrivateCloud</a></li>
 </ul>
 
@@ -29,6 +30,6 @@ Explore the resources and functions of the azure.avs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.6.0</dd>
+	<dd>4.7.0</dd>
 </dl>
 

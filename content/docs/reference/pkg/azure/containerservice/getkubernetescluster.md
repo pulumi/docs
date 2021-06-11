@@ -2297,7 +2297,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}If the Public IPs for the nodes in this Agent Pool are enabled.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -2342,6 +2343,15 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodepublicipprefixid_csharp">
+<a href="#nodepublicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -2460,7 +2470,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}If the Public IPs for the nodes in this Agent Pool are enabled.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcount_go">
 <a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -2505,6 +2516,15 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodepublicipprefixid_go">
+<a href="#nodepublicipprefixid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetaints_go">
 <a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -2623,7 +2643,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}If the Public IPs for the nodes in this Agent Pool are enabled.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcount_nodejs">
 <a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
@@ -2668,6 +2689,15 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nodepublicipprefixid_nodejs">
+<a href="#nodepublicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -2786,7 +2816,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}If the Public IPs for the nodes in this Agent Pool are enabled.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_count_python">
 <a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
@@ -2831,6 +2862,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="node_public_ip_prefix_id_python">
+<a href="#node_public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>ip_<wbr>prefix_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_taints_python">
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>

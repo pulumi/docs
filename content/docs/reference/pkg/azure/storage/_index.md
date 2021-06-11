@@ -21,6 +21,7 @@ Explore the resources and functions of the azure.storage module.
     <li><a href="datalakegen2path" title="DataLakeGen2Path"><span class="symbol resource"></span>DataLakeGen2Path</a></li>
     <li><a href="encryptionscope" title="EncryptionScope"><span class="symbol resource"></span>EncryptionScope</a></li>
     <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
+    <li><a href="objectreplication" title="ObjectReplication"><span class="symbol resource"></span>ObjectReplication</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
     <li><a href="sharedirectory" title="ShareDirectory"><span class="symbol resource"></span>ShareDirectory</a></li>
@@ -56,6 +57,6 @@ Explore the resources and functions of the azure.storage module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.6.0</dd>
+	<dd>4.7.0</dd>
 </dl>
 

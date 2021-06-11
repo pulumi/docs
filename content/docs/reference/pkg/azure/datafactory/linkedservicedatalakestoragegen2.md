@@ -191,6 +191,7 @@ const exampleLinkedServiceDataLakeStorageGen2 = new azure.datafactory.LinkedServ
                                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                      <span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                      <span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                      <span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                      <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                      <span class="nx">use_managed_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
@@ -423,6 +424,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageaccountkey_csharp">
+<a href="#storageaccountkey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenant_csharp">
 <a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
 </span>
@@ -543,6 +553,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountkey_go">
+<a href="#storageaccountkey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_go">
@@ -667,6 +686,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageaccountkey_nodejs">
+<a href="#storageaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenant_nodejs">
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
@@ -789,6 +817,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storage_account_key_python">
+<a href="#storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenant_python">
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
@@ -889,6 +926,7 @@ Get an existing LinkedServiceDataLakeStorageGen2 resource's state with the given
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">use_managed_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LinkedServiceDataLakeStorageGen2</code></pre></div>
@@ -1095,6 +1133,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccountkey_csharp">
+<a href="#state_storageaccountkey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tenant_csharp">
 <a href="#state_tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
 </span>
@@ -1215,6 +1262,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storageaccountkey_go">
+<a href="#state_storageaccountkey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_go">
@@ -1339,6 +1395,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccountkey_nodejs">
+<a href="#state_storageaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tenant_nodejs">
 <a href="#state_tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
@@ -1459,6 +1524,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_account_key_python">
+<a href="#state_storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Storage Account Key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_python">

@@ -29,7 +29,8 @@ Manages a Customer Managed Key for a Kusto Cluster.
                               <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                              <span class="nx">key_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                              <span class="nx">key_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">user_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ClusterCustomerManagedKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterCustomerManagedKeyArgs</a></span><span class="p">,</span>
@@ -193,6 +194,15 @@ The ClusterCustomerManagedKey resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="useridentity_csharp">
+<a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -233,6 +243,15 @@ The ClusterCustomerManagedKey resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="useridentity_go">
+<a href="#useridentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -273,6 +292,15 @@ The ClusterCustomerManagedKey resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="useridentity_nodejs">
+<a href="#useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -313,6 +341,15 @@ The ClusterCustomerManagedKey resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_identity_python">
+<a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -390,7 +427,8 @@ Get an existing ClusterCustomerManagedKey resource's state with the given name, 
         <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">key_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ClusterCustomerManagedKey</code></pre></div>
+        <span class="nx">key_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ClusterCustomerManagedKey</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -537,6 +575,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_useridentity_csharp">
+<a href="#state_useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -577,6 +624,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_useridentity_go">
+<a href="#state_useridentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -617,6 +673,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_useridentity_nodejs">
+<a href="#state_useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -657,6 +722,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_identity_python">
+<a href="#state_user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity that has access to the Key Vault Key. If not specified, system assigned identity will be used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

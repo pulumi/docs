@@ -412,6 +412,15 @@ The following output properties are available:
     <dd>{{% md %}}A map of Kubernetes Labels applied to each Node in this Node Pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="nodepublicipprefixid_csharp">
+<a href="#nodepublicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
 </span>
@@ -645,6 +654,15 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes Labels applied to each Node in this Node Pool.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="nodepublicipprefixid_go">
+<a href="#nodepublicipprefixid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetaints_go">
@@ -882,6 +900,15 @@ The following output properties are available:
     <dd>{{% md %}}A map of Kubernetes Labels applied to each Node in this Node Pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="nodepublicipprefixid_nodejs">
+<a href="#nodepublicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
 </span>
@@ -1115,6 +1142,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes Labels applied to each Node in this Node Pool.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="node_public_ip_prefix_id_python">
+<a href="#node_public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>ip_<wbr>prefix_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Agent Pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_taints_python">

@@ -214,6 +214,7 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
                       <span class="nx">dns_prefix_private_cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">enable_pod_security_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterIdentityArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">,</span>
                       <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">,</span>
                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -453,7 +454,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletidentities_csharp">
+<a href="#kubeletidentities_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesversion_csharp">
@@ -551,7 +561,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_csharp">
@@ -680,7 +690,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletidentities_go">
+<a href="#kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesversion_go">
@@ -778,7 +797,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_go">
@@ -907,7 +926,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletidentities_nodejs">
+<a href="#kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesversion_nodejs">
@@ -1005,7 +1033,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_nodejs">
@@ -1134,7 +1162,16 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_identities_python">
+<a href="#kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_version_python">
@@ -1232,7 +1269,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_tier_python">
@@ -1326,15 +1363,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="kubeletidentities_csharp">
-<a href="#kubeletidentities_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="privatefqdn_csharp">
 <a href="#privatefqdn_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
 </span>
@@ -1399,15 +1427,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="kubeletidentities_go">
-<a href="#kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_go">
@@ -1476,15 +1495,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="kubeletidentities_nodejs">
-<a href="#kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
-    </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="privatefqdn_nodejs">
 <a href="#privatefqdn_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Fqdn</a>
 </span>
@@ -1549,15 +1559,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">Sequence[Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="kubelet_identities_python">
-<a href="#kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
-    </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_fqdn_python">
@@ -1825,7 +1826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeadminconfigraw_csharp">
@@ -1870,7 +1871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesversion_csharp">
@@ -1986,7 +1987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_csharp">
@@ -2115,7 +2116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeadminconfigraw_go">
@@ -2160,7 +2161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesversion_go">
@@ -2276,7 +2277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_go">
@@ -2405,7 +2406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeadminconfigraw_nodejs">
@@ -2450,7 +2451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesversion_nodejs">
@@ -2566,7 +2567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_nodejs">
@@ -2695,7 +2696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kube_admin_config_raw_python">
@@ -2740,7 +2741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterkubeletidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A `kubelet_identity` block as defined below.
+    <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_version_python">
@@ -2856,7 +2857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `service_principal` block as documented below.
+    <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_tier_python">
@@ -3396,6 +3397,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayname_csharp">
+<a href="#gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Application Gateway to be used or created in the Nodepool Resource Group, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ingressapplicationgatewayidentities_csharp">
 <a href="#ingressapplicationgatewayidentities_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
 </span>
@@ -3452,6 +3462,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewayname_go">
+<a href="#gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Application Gateway to be used or created in the Nodepool Resource Group, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressapplicationgatewayidentities_go">
@@ -3512,6 +3531,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayname_nodejs">
+<a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Application Gateway to be used or created in the Nodepool Resource Group, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ingressapplicationgatewayidentities_nodejs">
 <a href="#ingressapplicationgatewayidentities_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
 </span>
@@ -3570,6 +3598,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-existing) page for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gateway_name_python">
+<a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Application Gateway to be used or created in the Nodepool Resource Group, which in turn will be integrated with the ingress controller of this Kubernetes Cluster. See [this](https://docs.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new) page for further details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ingress_application_gateway_identities_python">
 <a href="#ingress_application_gateway_identities_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway_<wbr>identities</a>
 </span>
@@ -3609,7 +3646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
@@ -3618,7 +3655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_csharp">
@@ -3640,7 +3677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
@@ -3649,7 +3686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_go">
@@ -3671,7 +3708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
@@ -3680,7 +3717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_nodejs">
@@ -3702,7 +3739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
@@ -3711,7 +3748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identity_id_python">
@@ -3915,7 +3952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
@@ -3924,7 +3961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_csharp">
@@ -3946,7 +3983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
@@ -3955,7 +3992,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_go">
@@ -3977,7 +4014,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
@@ -3986,7 +4023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_nodejs">
@@ -4008,7 +4045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
@@ -4017,7 +4054,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identity_id_python">
@@ -4716,7 +4753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`.
+    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_csharp">
@@ -4762,6 +4799,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepublicipprefixid_csharp">
+<a href="#nodepublicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. `enable_node_public_ip` should be `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_csharp">
@@ -4907,7 +4953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`.
+    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_go">
@@ -4953,6 +4999,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepublicipprefixid_go">
+<a href="#nodepublicipprefixid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. `enable_node_public_ip` should be `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_go">
@@ -5098,7 +5153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`.
+    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_nodejs">
@@ -5144,6 +5199,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodepublicipprefixid_nodejs">
+<a href="#nodepublicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>Ip<wbr>Prefix<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. `enable_node_public_ip` should be `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_nodejs">
@@ -5289,7 +5353,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`.
+    <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_count_python">
@@ -5335,6 +5399,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in the Default Node Pool. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="node_public_ip_prefix_id_python">
+<a href="#node_public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>ip_<wbr>prefix_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. `enable_node_public_ip` should be `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_taints_python">
@@ -6121,7 +6194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
@@ -6130,7 +6203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_csharp">
@@ -6139,7 +6212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a user assigned identity.
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6152,7 +6225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
@@ -6161,7 +6234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_go">
@@ -6170,7 +6243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a user assigned identity.
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6183,7 +6256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
@@ -6192,7 +6265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityid_nodejs">
@@ -6201,7 +6274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of a user assigned identity.
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6214,7 +6287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Client ID for the Service Principal.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
@@ -6223,7 +6296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the user-defined Managed Identity used by the OMS Agents.
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identity_id_python">
@@ -6232,7 +6305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of a user assigned identity.
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets. If not specified a Managed Identity is created automatically.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7102,7 +7175,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_csharp">
@@ -7169,7 +7242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_go">
@@ -7236,7 +7309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_nodejs">
@@ -7303,7 +7376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is Role Based Access Control based on Azure AD enabled?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_app_id_python">

@@ -240,6 +240,7 @@ const exampleDatasetDelimitedText = new azure.datafactory.DatasetDelimitedText("
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                          <span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                          <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">azure_blob_fs_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobFsLocationArgs]</span> = None<span class="p">,</span>
                          <span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">,</span>
                          <span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">compression_codec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -433,13 +434,22 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureblobfslocation_csharp">
+<a href="#azureblobfslocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Fs<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azureblobstoragelocation_csharp">
 <a href="#azureblobstoragelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_csharp">
@@ -626,13 +636,22 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureblobfslocation_go">
+<a href="#azureblobfslocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Fs<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azureblobstoragelocation_go">
 <a href="#azureblobstoragelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_go">
@@ -819,13 +838,22 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azureblobfslocation_nodejs">
+<a href="#azureblobfslocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Fs<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azureblobstoragelocation_nodejs">
 <a href="#azureblobstoragelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columndelimiter_nodejs">
@@ -1012,13 +1040,22 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="azure_blob_fs_location_python">
+<a href="#azure_blob_fs_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>fs_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azure_blob_storage_location_python">
 <a href="#azure_blob_storage_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_delimiter_python">
@@ -1230,6 +1267,7 @@ Get an existing DatasetDelimitedText resource's state with the given name, ID, a
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_blob_fs_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobFsLocationArgs]</span> = None<span class="p">,</span>
         <span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetDelimitedTextAzureBlobStorageLocationArgs]</span> = None<span class="p">,</span>
         <span class="nx">column_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">compression_codec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1379,13 +1417,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_azureblobfslocation_csharp">
+<a href="#state_azureblobfslocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Fs<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_azureblobstoragelocation_csharp">
 <a href="#state_azureblobstoragelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columndelimiter_csharp">
@@ -1572,13 +1619,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_azureblobfslocation_go">
+<a href="#state_azureblobfslocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Fs<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_azureblobstoragelocation_go">
 <a href="#state_azureblobstoragelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columndelimiter_go">
@@ -1765,13 +1821,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_azureblobfslocation_nodejs">
+<a href="#state_azureblobfslocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Fs<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_azureblobstoragelocation_nodejs">
 <a href="#state_azureblobstoragelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columndelimiter_nodejs">
@@ -1958,13 +2023,22 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Dataset.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_azure_blob_fs_location_python">
+<a href="#state_azure_blob_fs_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>fs_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_azure_blob_storage_location_python">
 <a href="#state_azure_blob_storage_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
+    <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_column_delimiter_python">
@@ -2139,6 +2213,132 @@ The following state arguments are supported:
 
 
 
+<h4 id="datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="filesystem_csharp">
+<a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage data lake gen2 file system on the Azure Blob Storage Account hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filename of the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The folder path to the file.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="filesystem_go">
+<a href="#filesystem_go" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage data lake gen2 file system on the Azure Blob Storage Account hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filename of the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The folder path to the file.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="filesystem_nodejs">
+<a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage data lake gen2 file system on the Azure Blob Storage Account hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filename of the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The folder path to the file.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="file_system_python">
+<a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage data lake gen2 file system on the Azure Blob Storage Account hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="filename_python">
+<a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filename of the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The folder path to the file.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</h4>
 
 {{% choosable language csharp %}}
@@ -2159,7 +2359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the file on the web server.
+    <dd>{{% md %}}The filename of the file.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
@@ -2168,7 +2368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path to the file on the web server.
+    <dd>{{% md %}}The folder path to the file.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2190,7 +2390,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the file on the web server.
+    <dd>{{% md %}}The filename of the file.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
@@ -2199,7 +2399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path to the file on the web server.
+    <dd>{{% md %}}The folder path to the file.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2221,7 +2421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the file on the web server.
+    <dd>{{% md %}}The filename of the file.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
@@ -2230,7 +2430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The folder path to the file on the web server.
+    <dd>{{% md %}}The folder path to the file.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2252,7 +2452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The filename of the file on the web server.
+    <dd>{{% md %}}The filename of the file.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
@@ -2261,7 +2461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The folder path to the file on the web server.
+    <dd>{{% md %}}The folder path to the file.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
