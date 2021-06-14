@@ -13,6 +13,335 @@ meta_desc: "Documentation for the spotinst.ElastigroupAzureV3 resource with exam
 Provides a Spotinst elastigroup Azure resource.
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testAzureGroup = new SpotInst.ElastigroupAzureV3("testAzureGroup", new SpotInst.ElastigroupAzureV3Args
+        {
+            DesiredCapacity = 1,
+            Images = 
+            {
+                new SpotInst.Inputs.ElastigroupAzureV3ImageArgs
+                {
+                    Marketplaces = 
+                    {
+                        new SpotInst.Inputs.ElastigroupAzureV3ImageMarketplaceArgs
+                        {
+                            Offer = "UbuntuServer",
+                            Publisher = "Canonical",
+                            Sku = "18.04-LTS",
+                            Version = "latest",
+                        },
+                    },
+                },
+            },
+            Login = new SpotInst.Inputs.ElastigroupAzureV3LoginArgs
+            {
+                SshPublicKey = "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
+                UserName = "admin",
+            },
+            MaxSize = 1,
+            MinSize = 0,
+            Network = new SpotInst.Inputs.ElastigroupAzureV3NetworkArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new SpotInst.Inputs.ElastigroupAzureV3NetworkNetworkInterfaceArgs
+                    {
+                        AdditionalIpConfigs = 
+                        {
+                            new SpotInst.Inputs.ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArgs
+                            {
+                                PrivateIPVersion = "IPv4",
+                                Name = "SecondaryIPConfig",
+                            },
+                        },
+                        ApplicationSecurityGroup = 
+                        {
+                            
+                            {
+                                { "name", "ApplicationSecurityGroupName" },
+                                { "resourceGroupName", "ResourceGroup" },
+                            },
+                        },
+                        AssignPublicIp = false,
+                        IsPrimary = true,
+                        SubnetName = "default",
+                    },
+                },
+                ResourceGroupName = "ResourceGroup",
+                VirtualNetworkName = "VirtualNetworkName",
+            },
+            OdSizes = 
+            {
+                "standard_a1_v1",
+                "standard_a1_v2",
+            },
+            Os = "Linux",
+            Region = "eastus",
+            ResourceGroupName = "spotinst-azure",
+            SpotSizes = 
+            {
+                "standard_a1_v1",
+                "standard_a1_v2",
+            },
+            Strategy = new SpotInst.Inputs.ElastigroupAzureV3StrategyArgs
+            {
+                DrainingTimeout = 300,
+                FallbackToOnDemand = true,
+                OdCount = 1,
+                SpotPercentage = 65,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := spotinst.NewElastigroupAzureV3(ctx, "testAzureGroup", &spotinst.ElastigroupAzureV3Args{
+			DesiredCapacity: pulumi.Int(1),
+			Images: spotinst.ElastigroupAzureV3ImageArray{
+				&spotinst.ElastigroupAzureV3ImageArgs{
+					Marketplaces: spotinst.ElastigroupAzureV3ImageMarketplaceArray{
+						&spotinst.ElastigroupAzureV3ImageMarketplaceArgs{
+							Offer:     pulumi.String("UbuntuServer"),
+							Publisher: pulumi.String("Canonical"),
+							Sku:       pulumi.String("18.04-LTS"),
+							Version:   pulumi.String("latest"),
+						},
+					},
+				},
+			},
+			Login: &spotinst.ElastigroupAzureV3LoginArgs{
+				SshPublicKey: pulumi.String("33a2s1f3g5a1df5g1ad3f2g1adfg56dfg=="),
+				UserName:     pulumi.String("admin"),
+			},
+			MaxSize: pulumi.Int(1),
+			MinSize: pulumi.Int(0),
+			Network: &spotinst.ElastigroupAzureV3NetworkArgs{
+				NetworkInterfaces: spotinst.ElastigroupAzureV3NetworkNetworkInterfaceArray{
+					&spotinst.ElastigroupAzureV3NetworkNetworkInterfaceArgs{
+						AdditionalIpConfigs: spotinst.ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArray{
+							&spotinst.ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArgs{
+								PrivateIPVersion: pulumi.String("IPv4"),
+								Name:             pulumi.String("SecondaryIPConfig"),
+							},
+						},
+						ApplicationSecurityGroup: pulumi.StringMapArray{
+							pulumi.StringMap{
+								"name":              pulumi.String("ApplicationSecurityGroupName"),
+								"resourceGroupName": pulumi.String("ResourceGroup"),
+							},
+						},
+						AssignPublicIp: pulumi.Bool(false),
+						IsPrimary:      pulumi.Bool(true),
+						SubnetName:     pulumi.String("default"),
+					},
+				},
+				ResourceGroupName:  pulumi.String("ResourceGroup"),
+				VirtualNetworkName: pulumi.String("VirtualNetworkName"),
+			},
+			OdSizes: pulumi.StringArray{
+				pulumi.String("standard_a1_v1"),
+				pulumi.String("standard_a1_v2"),
+			},
+			Os:                pulumi.String("Linux"),
+			Region:            pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("spotinst-azure"),
+			SpotSizes: pulumi.StringArray{
+				pulumi.String("standard_a1_v1"),
+				pulumi.String("standard_a1_v2"),
+			},
+			Strategy: &spotinst.ElastigroupAzureV3StrategyArgs{
+				DrainingTimeout:    pulumi.Int(300),
+				FallbackToOnDemand: pulumi.Bool(true),
+				OdCount:            pulumi.Int(1),
+				SpotPercentage:     pulumi.Int(65),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_spotinst as spotinst
+
+test_azure_group = spotinst.ElastigroupAzureV3("testAzureGroup",
+    desired_capacity=1,
+    images=[spotinst.ElastigroupAzureV3ImageArgs(
+        marketplaces=[spotinst.ElastigroupAzureV3ImageMarketplaceArgs(
+            offer="UbuntuServer",
+            publisher="Canonical",
+            sku="18.04-LTS",
+            version="latest",
+        )],
+    )],
+    login=spotinst.ElastigroupAzureV3LoginArgs(
+        ssh_public_key="33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
+        user_name="admin",
+    ),
+    max_size=1,
+    min_size=0,
+    network=spotinst.ElastigroupAzureV3NetworkArgs(
+        network_interfaces=[{
+            "additionalIpConfigs": [{
+                "PrivateIPVersion": "IPv4",
+                "name": "SecondaryIPConfig",
+            }],
+            "applicationSecurityGroup": [{
+                "name": "ApplicationSecurityGroupName",
+                "resource_group_name": "ResourceGroup",
+            }],
+            "assignPublicIp": False,
+            "isPrimary": True,
+            "subnetName": "default",
+        }],
+        resource_group_name="ResourceGroup",
+        virtual_network_name="VirtualNetworkName",
+    ),
+    od_sizes=[
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    os="Linux",
+    region="eastus",
+    resource_group_name="spotinst-azure",
+    spot_sizes=[
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    strategy=spotinst.ElastigroupAzureV3StrategyArgs(
+        draining_timeout=300,
+        fallback_to_on_demand=True,
+        od_count=1,
+        spot_percentage=65,
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const testAzureGroup = new spotinst.ElastigroupAzureV3("test_azure_group", {
+    desiredCapacity: 1,
+    // --- IMAGE ---------------------------------------------------------
+    images: [{
+        marketplaces: [{
+            offer: "UbuntuServer",
+            publisher: "Canonical",
+            sku: "18.04-LTS",
+            version: "latest",
+        }],
+    }],
+    // --- LOGIN ---------------------------------------------------------
+    login: {
+        sshPublicKey: "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
+        userName: "admin",
+    },
+    maxSize: 1,
+    // --- CAPACITY ------------------------------------------------------
+    minSize: 0,
+    // --- NETWORK -------------------------------------------------------
+    network: {
+        networkInterfaces: [{
+            additionalIpConfigs: [{
+                PrivateIPVersion: "IPv4",
+                name: "SecondaryIPConfig",
+            }],
+            applicationSecurityGroups: [{
+                name: "ApplicationSecurityGroupName",
+                resourceGroupName: "ResourceGroup",
+            }],
+            assignPublicIp: false,
+            isPrimary: true,
+            subnetName: "default",
+        }],
+        resourceGroupName: "ResourceGroup",
+        virtualNetworkName: "VirtualNetworkName",
+    },
+    // --- INSTANCE TYPES ------------------------------------------------
+    odSizes: [
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    os: "Linux",
+    region: "eastus",
+    resourceGroupName: "spotinst-azure",
+    spotSizes: [
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    // --- STRATEGY ------------------------------------------------------
+    strategy: {
+        drainingTimeout: 300,
+        fallbackToOnDemand: true,
+        odCount: 1,
+        spotPercentage: 65,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ElastigroupAzureV3 Resource {#create}
@@ -193,7 +522,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
@@ -211,8 +540,8 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotsizes_csharp">
 <a href="#spotsizes_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Sizes</a>
@@ -283,7 +612,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -314,7 +643,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
@@ -332,8 +661,8 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotsizes_go">
 <a href="#spotsizes_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Sizes</a>
@@ -404,7 +733,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -435,7 +764,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
@@ -453,8 +782,8 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotsizes_nodejs">
 <a href="#spotsizes_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Sizes</a>
@@ -525,7 +854,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -556,7 +885,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
@@ -574,8 +903,8 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spot_sizes_python">
 <a href="#spot_sizes_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>sizes</a>
@@ -646,7 +975,7 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -897,7 +1226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
@@ -924,7 +1253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
@@ -942,8 +1271,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotsizes_csharp">
 <a href="#state_spotsizes_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Sizes</a>
@@ -1018,7 +1347,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
@@ -1045,7 +1374,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
@@ -1063,8 +1392,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotsizes_go">
 <a href="#state_spotsizes_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Sizes</a>
@@ -1139,7 +1468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
@@ -1166,7 +1495,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
@@ -1184,8 +1513,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotsizes_nodejs">
 <a href="#state_spotsizes_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Sizes</a>
@@ -1260,7 +1589,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
@@ -1287,7 +1616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux"`, `"Windows"`.
+    <dd>{{% md %}}Type of the operating system. Valid values: `"Linux"`, `"Windows"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
@@ -1305,8 +1634,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_sizes_python">
 <a href="#state_spot_sizes_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>sizes</a>
@@ -1438,8 +1767,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1460,8 +1789,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1482,8 +1811,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1504,8 +1833,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupazurev3imagemarketplace">Elastigroup<wbr>Azure<wbr>V3Image<wbr>Marketplace</h4>
@@ -1811,8 +2140,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_csharp">
 <a href="#virtualnetworkname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -1841,8 +2170,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_go">
 <a href="#virtualnetworkname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Name</a>
@@ -1871,8 +2200,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_nodejs">
 <a href="#virtualnetworkname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Name</a>
@@ -1901,8 +2230,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Vnet Resource Group Name.
-{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_name_python">
 <a href="#virtual_network_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>name</a>
@@ -1951,6 +2280,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceadditionalipconfig">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationsecuritygroups_csharp">
+<a href="#applicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceapplicationsecuritygroup">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Application<wbr>Security<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}- List of Application Security Groups that will be associated to the primary ip configuration of the network interface.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1989,6 +2327,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceadditionalipconfig">[]Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Additional<wbr>Ip<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationsecuritygroups_go">
+<a href="#applicationsecuritygroups_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceapplicationsecuritygroup">[]Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Application<wbr>Security<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}- List of Application Security Groups that will be associated to the primary ip configuration of the network interface.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2027,6 +2374,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceadditionalipconfig">Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationsecuritygroups_nodejs">
+<a href="#applicationsecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceapplicationsecuritygroup">Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Application<wbr>Security<wbr>Group<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}- List of Application Security Groups that will be associated to the primary ip configuration of the network interface.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2065,6 +2421,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceadditionalipconfig">Sequence[Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="application_security_groups_python">
+<a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3networknetworkinterfaceapplicationsecuritygroup">Sequence[Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Application<wbr>Security<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}- List of Application Security Groups that will be associated to the primary ip configuration of the network interface.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2079,7 +2444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipversion_csharp">
@@ -2088,7 +2453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ip configuration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2101,7 +2466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipversion_go">
@@ -2110,7 +2475,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ip configuration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2123,7 +2488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipversion_nodejs">
@@ -2132,7 +2497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ip configuration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2145,7 +2510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP configuration name.
+    <dd>{{% md %}}- The name of the Application Security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_version_python">
@@ -2154,8 +2519,98 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ip configuration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupazurev3networknetworkinterfaceapplicationsecuritygroup">Elastigroup<wbr>Azure<wbr>V3Network<wbr>Network<wbr>Interface<wbr>Application<wbr>Security<wbr>Group</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupazurev3strategy">Elastigroup<wbr>Azure<wbr>V3Strategy</h4>

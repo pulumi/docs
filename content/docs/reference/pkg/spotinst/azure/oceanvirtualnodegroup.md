@@ -191,10 +191,10 @@ example = spotinst.azure.OceanVirtualNodeGroup("example",
         value="label_value",
     )],
     launch_specifications=[spotinst.azure.OceanVirtualNodeGroupLaunchSpecificationArgs(
-        os_disk=spotinst.azure.OceanVirtualNodeGroupLaunchSpecificationOsDiskArgs(
-            size_gb=100,
-            type="Standard_LRS",
-        ),
+        os_disk={
+            "sizeGb": 100,
+            "type": "Standard_LRS",
+        },
         tags=[spotinst.azure.OceanVirtualNodeGroupLaunchSpecificationTagArgs(
             key="label_key",
             value="label_value",
