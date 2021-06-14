@@ -50,6 +50,6 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/hashicorp/terraform-provider-azuread).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.2.1</dd>
 </dl>
 

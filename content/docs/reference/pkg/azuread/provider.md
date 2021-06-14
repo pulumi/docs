@@ -170,16 +170,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="metadatahost_csharp">
 <a href="#metadatahost_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_csharp">
 <a href="#clientcertificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -243,8 +243,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
-automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_csharp">
@@ -262,7 +261,7 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecli_csharp">
@@ -289,21 +288,21 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="metadatahost_go">
 <a href="#metadatahost_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_go">
 <a href="#clientcertificatepassword_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -367,8 +366,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
-automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_go">
@@ -386,7 +384,7 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecli_go">
@@ -413,21 +411,21 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="metadatahost_nodejs">
 <a href="#metadatahost_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_nodejs">
 <a href="#clientcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Password</a>
@@ -491,8 +489,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
-automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_nodejs">
@@ -510,7 +507,7 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecli_nodejs">
@@ -537,21 +534,21 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required property-deprecated"
-            title="Required, Deprecated">
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
         <span id="metadata_host_python">
 <a href="#metadata_host_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The `metadata_host` provider attribute is deprecated and will be removed in version 2.0{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}[DEPRECATED] The Hostname which should be used for the Azure Metadata Service.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_password_python">
 <a href="#client_certificate_password_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>password</a>
@@ -615,8 +612,7 @@ Certificate
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
-automatically.
+    <dd>{{% md %}}The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically.
  It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partner_id_python">
@@ -634,7 +630,7 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except MSI.
+    <dd>{{% md %}}The Tenant ID which should be used. Works with all authentication methods except Managed Identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_cli_python">
@@ -661,7 +657,7 @@ automatically.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
+    <dd>{{% md %}}Allow Managed Identity to be used for Authentication.
  It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
