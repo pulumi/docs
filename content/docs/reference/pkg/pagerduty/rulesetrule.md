@@ -12,328 +12,6 @@ meta_desc: "Documentation for the pagerduty.RulesetRule resource with examples, 
 
 An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event-rules) allows you to set actions that should be taken on events that meet your designated rule criteria.
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using Pagerduty = Pulumi.Pagerduty;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fooTeam = new Pagerduty.Team("fooTeam", new Pagerduty.TeamArgs
-        {
-        });
-        var fooRuleset = new Pagerduty.Ruleset("fooRuleset", new Pagerduty.RulesetArgs
-        {
-            Team = new Pagerduty.Inputs.RulesetTeamArgs
-            {
-                Id = fooTeam.Id,
-            },
-        });
-        var fooRulesetRule = new Pagerduty.RulesetRule("fooRulesetRule", new Pagerduty.RulesetRuleArgs
-        {
-            Ruleset = fooRuleset.Id,
-            Position = 0,
-            Disabled = false,
-            TimeFrame = new Pagerduty.Inputs.RulesetRuleTimeFrameArgs
-            {
-                ScheduledWeeklies = 
-                {
-                    new Pagerduty.Inputs.RulesetRuleTimeFrameScheduledWeeklyArgs
-                    {
-                        Weekdays = 
-                        {
-                            3,
-                            7,
-                        },
-                        Timezone = "America/Los_Angeles",
-                        StartTime = 1000000,
-                        Duration = 3600000,
-                    },
-                },
-            },
-            Conditions = new Pagerduty.Inputs.RulesetRuleConditionsArgs
-            {
-                Operator = "and",
-                Subconditions = 
-                {
-                    new Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs
-                    {
-                        Operator = "contains",
-                        Parameters = 
-                        {
-                            new Pagerduty.Inputs.RulesetRuleConditionsSubconditionParameterArgs
-                            {
-                                Value = "disk space",
-                                Path = "payload.summary",
-                            },
-                        },
-                    },
-                    new Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs
-                    {
-                        Operator = "contains",
-                        Parameters = 
-                        {
-                            new Pagerduty.Inputs.RulesetRuleConditionsSubconditionParameterArgs
-                            {
-                                Value = "db",
-                                Path = "payload.source",
-                            },
-                        },
-                    },
-                },
-            },
-            Variables = 
-            {
-                new Pagerduty.Inputs.RulesetRuleVariableArgs
-                {
-                    Type = "regex",
-                    Name = "Src",
-                    Parameters = 
-                    {
-                        new Pagerduty.Inputs.RulesetRuleVariableParameterArgs
-                        {
-                            Value = "(.*)",
-                            Path = "payload.source",
-                        },
-                    },
-                },
-            },
-            Actions = new Pagerduty.Inputs.RulesetRuleActionsArgs
-            {
-                Routes = 
-                {
-                    new Pagerduty.Inputs.RulesetRuleActionsRouteArgs
-                    {
-                        Value = "P5DTL0K",
-                    },
-                },
-                Severities = 
-                {
-                    new Pagerduty.Inputs.RulesetRuleActionsSeverityArgs
-                    {
-                        Value = "warning",
-                    },
-                },
-                Annotates = 
-                {
-                    new Pagerduty.Inputs.RulesetRuleActionsAnnotateArgs
-                    {
-                        Value = "From Terraform",
-                    },
-                },
-                Extractions = 
-                {
-                    new Pagerduty.Inputs.RulesetRuleActionsExtractionArgs
-                    {
-                        Target = "dedup_key",
-                        Source = "details.host",
-                        Regex = "(.*)",
-                    },
-                    new Pagerduty.Inputs.RulesetRuleActionsExtractionArgs
-                    {
-                        Target = "summary",
-                        Template = "Warning: Disk Space Low on {{Src}}",
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_pagerduty as pagerduty
-
-foo_team = pagerduty.Team("fooTeam")
-foo_ruleset = pagerduty.Ruleset("fooRuleset", team=pagerduty.RulesetTeamArgs(
-    id=foo_team.id,
-))
-foo_ruleset_rule = pagerduty.RulesetRule("fooRulesetRule",
-    ruleset=foo_ruleset.id,
-    position=0,
-    disabled=False,
-    time_frame=pagerduty.RulesetRuleTimeFrameArgs(
-        scheduled_weeklies=[pagerduty.RulesetRuleTimeFrameScheduledWeeklyArgs(
-            weekdays=[
-                3,
-                7,
-            ],
-            timezone="America/Los_Angeles",
-            start_time="1000000",
-            duration=3600000,
-        )],
-    ),
-    conditions=pagerduty.RulesetRuleConditionsArgs(
-        operator="and",
-        subconditions=[
-            pagerduty.RulesetRuleConditionsSubconditionArgs(
-                operator="contains",
-                parameters=[pagerduty.RulesetRuleConditionsSubconditionParameterArgs(
-                    value="disk space",
-                    path="payload.summary",
-                )],
-            ),
-            pagerduty.RulesetRuleConditionsSubconditionArgs(
-                operator="contains",
-                parameters=[pagerduty.RulesetRuleConditionsSubconditionParameterArgs(
-                    value="db",
-                    path="payload.source",
-                )],
-            ),
-        ],
-    ),
-    variables=[pagerduty.RulesetRuleVariableArgs(
-        type="regex",
-        name="Src",
-        parameters=[pagerduty.RulesetRuleVariableParameterArgs(
-            value="(.*)",
-            path="payload.source",
-        )],
-    )],
-    actions=pagerduty.RulesetRuleActionsArgs(
-        routes=[pagerduty.RulesetRuleActionsRouteArgs(
-            value="P5DTL0K",
-        )],
-        severities=[pagerduty.RulesetRuleActionsSeverityArgs(
-            value="warning",
-        )],
-        annotates=[pagerduty.RulesetRuleActionsAnnotateArgs(
-            value="From Terraform",
-        )],
-        extractions=[
-            pagerduty.RulesetRuleActionsExtractionArgs(
-                target="dedup_key",
-                source="details.host",
-                regex="(.*)",
-            ),
-            pagerduty.RulesetRuleActionsExtractionArgs(
-                target="summary",
-                template="Warning: Disk Space Low on {{Src}}",
-            ),
-        ],
-    ))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as pagerduty from "@pulumi/pagerduty";
-
-const fooTeam = new pagerduty.Team("fooTeam", {});
-const fooRuleset = new pagerduty.Ruleset("fooRuleset", {team: {
-    id: fooTeam.id,
-}});
-const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
-    ruleset: fooRuleset.id,
-    position: 0,
-    disabled: "false",
-    timeFrame: {
-        scheduledWeeklies: [{
-            weekdays: [
-                3,
-                7,
-            ],
-            timezone: "America/Los_Angeles",
-            startTime: "1000000",
-            duration: "3600000",
-        }],
-    },
-    conditions: {
-        operator: "and",
-        subconditions: [
-            {
-                operator: "contains",
-                parameters: [{
-                    value: "disk space",
-                    path: "payload.summary",
-                }],
-            },
-            {
-                operator: "contains",
-                parameters: [{
-                    value: "db",
-                    path: "payload.source",
-                }],
-            },
-        ],
-    },
-    variables: [{
-        type: "regex",
-        name: "Src",
-        parameters: [{
-            value: "(.*)",
-            path: "payload.source",
-        }],
-    }],
-    actions: {
-        routes: [{
-            value: "P5DTL0K",
-        }],
-        severities: [{
-            value: "warning",
-        }],
-        annotates: [{
-            value: "From Terraform",
-        }],
-        extractions: [
-            {
-                target: "dedup_key",
-                source: "details.host",
-                regex: "(.*)",
-            },
-            {
-                target: "summary",
-                template: "Warning: Disk Space Low on {{Src}}",
-            },
-        ],
-    },
-});
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Create a RulesetRule Resource {#create}
@@ -377,25 +55,19 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -407,25 +79,19 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -437,33 +103,25 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -475,25 +133,19 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">RulesetRuleArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -1997,7 +1649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
+    <dd>{{% md %}}The `seconds`,`minutes`, or `hours` the `threshold_time_amount` should be measured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdvalue_csharp">
@@ -2037,7 +1689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
+    <dd>{{% md %}}The `seconds`,`minutes`, or `hours` the `threshold_time_amount` should be measured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdvalue_go">
@@ -2077,7 +1729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
+    <dd>{{% md %}}The `seconds`,`minutes`, or `hours` the `threshold_time_amount` should be measured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdvalue_nodejs">
@@ -2117,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The `minutes`,`hours`, or `days` that the `threshold_time_amount` should be measured.
+    <dd>{{% md %}}The `seconds`,`minutes`, or `hours` the `threshold_time_amount` should be measured.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_value_python">
@@ -2569,8 +2221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2591,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2613,8 +2263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2635,8 +2284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulesetruletimeframescheduledweekly">Ruleset<wbr>Rule<wbr>Time<wbr>Frame<wbr>Scheduled<wbr>Weekly</h4>
@@ -2650,7 +2298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length of time the schedule will be active.  Unix timestamp in milliseconds.
+    <dd>{{% md %}}Length of time the schedule will be active in milliseconds. For example `duration = 2 * 60 * 60 * 1000` if you want your rule to apply for 2 hours, from the specified `start_time`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
@@ -2659,8 +2307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -2668,7 +2315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timezone for the given schedule.
+    <dd>{{% md %}}[The name of the timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for the given schedule, which will be used to determine UTC offset including adjustment for daylight saving time. For example: `timezone = "America/Toronto"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
@@ -2690,7 +2337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length of time the schedule will be active.  Unix timestamp in milliseconds.
+    <dd>{{% md %}}Length of time the schedule will be active in milliseconds. For example `duration = 2 * 60 * 60 * 1000` if you want your rule to apply for 2 hours, from the specified `start_time`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
@@ -2699,8 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -2708,7 +2354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timezone for the given schedule.
+    <dd>{{% md %}}[The name of the timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for the given schedule, which will be used to determine UTC offset including adjustment for daylight saving time. For example: `timezone = "America/Toronto"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
@@ -2730,7 +2376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Length of time the schedule will be active.  Unix timestamp in milliseconds.
+    <dd>{{% md %}}Length of time the schedule will be active in milliseconds. For example `duration = 2 * 60 * 60 * 1000` if you want your rule to apply for 2 hours, from the specified `start_time`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
@@ -2739,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -2748,7 +2393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timezone for the given schedule.
+    <dd>{{% md %}}[The name of the timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for the given schedule, which will be used to determine UTC offset including adjustment for daylight saving time. For example: `timezone = "America/Toronto"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
@@ -2770,7 +2415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length of time the schedule will be active.  Unix timestamp in milliseconds.
+    <dd>{{% md %}}Length of time the schedule will be active in milliseconds. For example `duration = 2 * 60 * 60 * 1000` if you want your rule to apply for 2 hours, from the specified `start_time`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
@@ -2779,8 +2424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time when the schedule will start. Unix timestamp in milliseconds. For example, if you have a rule with a `start_time` of `0` and a `duration` of `60,000` then that rule would be active from `00:00` to `00:01`. If the `start_time` was `3,600,000` the it would be active starting at `01:00`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -2788,7 +2432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timezone for the given schedule.
+    <dd>{{% md %}}[The name of the timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for the given schedule, which will be used to determine UTC offset including adjustment for daylight saving time. For example: `timezone = "America/Toronto"`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_python">
