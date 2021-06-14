@@ -39,6 +39,7 @@ method code. The list of codes are listed here: https://tools.ietf.org/html/rfc8
 Custom values are also supported. Example: `auth_method = ["swk"]`
 * `geo` - (Optional) A list of country codes. Example: `geo = ["US"]`
 * `login_method` - (Optional) A list of identity provider ids. Example: `login_method = [cloudflare_access_identity_provider.my_idp.id]`
+* `device_posture` - (Optional) A list of device_posture integration_uids. Example: `device_posture = [cloudflare_device_posture_rule.my_posture_rule.id]`
 * `gsuite` - (Optional) Use GSuite as the authentication mechanism. Example:
   
   ```hcl
@@ -1164,6 +1165,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_csharp">
+<a href="#devicepostures_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
 </span>
@@ -1301,6 +1310,14 @@ full list.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicepostures_go">
+<a href="#devicepostures_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1444,6 +1461,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_nodejs">
+<a href="#devicepostures_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
@@ -1581,6 +1606,14 @@ full list.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_postures_python">
+<a href="#device_postures_python" style="color: inherit; text-decoration: inherit;">device_<wbr>postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,6 +2241,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_csharp">
+<a href="#devicepostures_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
 </span>
@@ -2345,6 +2386,14 @@ full list.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicepostures_go">
+<a href="#devicepostures_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2488,6 +2537,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_nodejs">
+<a href="#devicepostures_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
@@ -2625,6 +2682,14 @@ full list.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_postures_python">
+<a href="#device_postures_python" style="color: inherit; text-decoration: inherit;">device_<wbr>postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3252,6 +3317,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_csharp">
+<a href="#devicepostures_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
 </span>
@@ -3389,6 +3462,14 @@ full list.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicepostures_go">
+<a href="#devicepostures_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,6 +3613,14 @@ full list.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_nodejs">
+<a href="#devicepostures_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
@@ -3669,6 +3758,14 @@ full list.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_postures_python">
+<a href="#device_postures_python" style="color: inherit; text-decoration: inherit;">device_<wbr>postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

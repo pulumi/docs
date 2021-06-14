@@ -52,6 +52,16 @@ class MyStack : Stack
                     },
                 },
             },
+            Requires = 
+            {
+                new Cloudflare.Inputs.AccessPolicyRequireArgs
+                {
+                    Emails = 
+                    {
+                        "test@example.com",
+                    },
+                },
+            },
         });
         // Allowing `test@example.com` to access but only when coming from a
         // specific IP.
@@ -74,10 +84,13 @@ class MyStack : Stack
             },
             Requires = 
             {
-                { "ips", 
+                new Cloudflare.Inputs.AccessPolicyRequireArgs
                 {
-                    @var.Office_ip,
-                } },
+                    Ips = 
+                    {
+                        @var.Office_ip,
+                    },
+                },
             },
         });
     }
@@ -91,60 +104,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudflare.NewAccessPolicy(ctx, "testPolicyAccessPolicy", &cloudflare.AccessPolicyArgs{
-			ApplicationId: pulumi.String("cb029e245cfdd66dc8d2e570d5dd3322"),
-			ZoneId:        pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
-			Name:          pulumi.String("staging policy"),
-			Precedence:    pulumi.Int(1),
-			Decision:      pulumi.String("allow"),
-			Includes: cloudflare.AccessPolicyIncludeArray{
-				&cloudflare.AccessPolicyIncludeArgs{
-					Emails: pulumi.StringArray{
-						pulumi.String("test@example.com"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		_, err = cloudflare.NewAccessPolicy(ctx, "testPolicyIndex_accessPolicyAccessPolicy", &cloudflare.AccessPolicyArgs{
-			ApplicationId: pulumi.String("cb029e245cfdd66dc8d2e570d5dd3322"),
-			ZoneId:        pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
-			Name:          pulumi.String("staging policy"),
-			Precedence:    pulumi.Int(1),
-			Decision:      pulumi.String("allow"),
-			Includes: cloudflare.AccessPolicyIncludeArray{
-				&cloudflare.AccessPolicyIncludeArgs{
-					Emails: pulumi.StringArray{
-						pulumi.String("test@example.com"),
-					},
-				},
-			},
-			Requires: cloudflare.AccessPolicyRequireArray{
-				Ips: cloudflare.AccessPolicyRequireArgs{
-					pulumi.Any(_var.Office_ip),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -164,6 +124,9 @@ test_policy_access_policy = cloudflare.AccessPolicy("testPolicyAccessPolicy",
     decision="allow",
     includes=[cloudflare.AccessPolicyIncludeArgs(
         emails=["test@example.com"],
+    )],
+    requires=[cloudflare.AccessPolicyRequireArgs(
+        emails=["test@example.com"],
     )])
 # Allowing `test@example.com` to access but only when coming from a
 # specific IP.
@@ -176,9 +139,9 @@ test_policy_index_access_policy_access_policy = cloudflare.AccessPolicy("testPol
     includes=[cloudflare.AccessPolicyIncludeArgs(
         emails=["test@example.com"],
     )],
-    requires={
-        "ips": [var["office_ip"]],
-    })
+    requires=[cloudflare.AccessPolicyRequireArgs(
+        ips=[var["office_ip"]],
+    )])
 ```
 
 
@@ -202,6 +165,9 @@ const testPolicyAccessPolicy = new cloudflare.AccessPolicy("testPolicyAccessPoli
     includes: [{
         emails: ["test@example.com"],
     }],
+    requires: [{
+        emails: ["test@example.com"],
+    }],
 });
 // Allowing `test@example.com` to access but only when coming from a
 // specific IP.
@@ -214,9 +180,9 @@ const testPolicyIndex_accessPolicyAccessPolicy = new cloudflare.AccessPolicy("te
     includes: [{
         emails: ["test@example.com"],
     }],
-    requires: {
+    requires: [{
         ips: [_var.office_ip],
-    },
+    }],
 });
 ```
 
@@ -1310,6 +1276,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_csharp">
+<a href="#devicepostures_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
 </span>
@@ -1447,6 +1421,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicepostures_go">
+<a href="#devicepostures_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,6 +1572,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_nodejs">
+<a href="#devicepostures_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
@@ -1727,6 +1717,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_postures_python">
+<a href="#device_postures_python" style="color: inherit; text-decoration: inherit;">device_<wbr>postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,6 +2352,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_csharp">
+<a href="#devicepostures_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
 </span>
@@ -2491,6 +2497,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicepostures_go">
+<a href="#devicepostures_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,6 +2648,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_nodejs">
+<a href="#devicepostures_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
@@ -2771,6 +2793,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_postures_python">
+<a href="#device_postures_python" style="color: inherit; text-decoration: inherit;">device_<wbr>postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3398,6 +3428,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_csharp">
+<a href="#devicepostures_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
 </span>
@@ -3535,6 +3573,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicepostures_go">
+<a href="#devicepostures_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3678,6 +3724,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicepostures_nodejs">
+<a href="#devicepostures_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
 </span>
@@ -3815,6 +3869,14 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_postures_python">
+<a href="#device_postures_python" style="color: inherit; text-decoration: inherit;">device_<wbr>postures</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -46,11 +46,33 @@ class MyStack : Stack
                 {
                     Address = "192.0.2.1",
                     Enabled = false,
+                    Headers = 
+                    {
+                        new Cloudflare.Inputs.LoadBalancerPoolOriginHeaderArgs
+                        {
+                            Header = "Host",
+                            Values = 
+                            {
+                                "example-1",
+                            },
+                        },
+                    },
                     Name = "example-1",
                 },
                 new Cloudflare.Inputs.LoadBalancerPoolOriginArgs
                 {
                     Address = "192.0.2.2",
+                    Headers = 
+                    {
+                        new Cloudflare.Inputs.LoadBalancerPoolOriginHeaderArgs
+                        {
+                            Header = "Host",
+                            Values = 
+                            {
+                                "example-2",
+                            },
+                        },
+                    },
                     Name = "example-2",
                 },
             },
@@ -86,11 +108,27 @@ func main() {
 				&cloudflare.LoadBalancerPoolOriginArgs{
 					Address: pulumi.String("192.0.2.1"),
 					Enabled: pulumi.Bool(false),
-					Name:    pulumi.String("example-1"),
+					Headers: cloudflare.LoadBalancerPoolOriginHeaderArray{
+						&cloudflare.LoadBalancerPoolOriginHeaderArgs{
+							Header: pulumi.String("Host"),
+							Values: pulumi.StringArray{
+								pulumi.String("example-1"),
+							},
+						},
+					},
+					Name: pulumi.String("example-1"),
 				},
 				&cloudflare.LoadBalancerPoolOriginArgs{
 					Address: pulumi.String("192.0.2.2"),
-					Name:    pulumi.String("example-2"),
+					Headers: cloudflare.LoadBalancerPoolOriginHeaderArray{
+						&cloudflare.LoadBalancerPoolOriginHeaderArgs{
+							Header: pulumi.String("Host"),
+							Values: pulumi.StringArray{
+								pulumi.String("example-2"),
+							},
+						},
+					},
+					Name: pulumi.String("example-2"),
 				},
 			},
 		})
@@ -122,10 +160,18 @@ foo = cloudflare.LoadBalancerPool("foo",
         cloudflare.LoadBalancerPoolOriginArgs(
             address="192.0.2.1",
             enabled=False,
+            headers=[cloudflare.LoadBalancerPoolOriginHeaderArgs(
+                header="Host",
+                values=["example-1"],
+            )],
             name="example-1",
         ),
         cloudflare.LoadBalancerPoolOriginArgs(
             address="192.0.2.2",
+            headers=[cloudflare.LoadBalancerPoolOriginHeaderArgs(
+                header="Host",
+                values=["example-2"],
+            )],
             name="example-2",
         ),
     ])
@@ -152,10 +198,18 @@ const foo = new cloudflare.LoadBalancerPool("foo", {
         {
             address: "192.0.2.1",
             enabled: false,
+            headers: [{
+                header: "Host",
+                values: ["example-1"],
+            }],
             name: "example-1",
         },
         {
             address: "192.0.2.2",
+            headers: [{
+                header: "Host",
+                values: ["example-2"],
+            }],
             name: "example-2",
         },
     ],
@@ -1303,6 +1357,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpooloriginheader">List&lt;Load<wbr>Balancer<wbr>Pool<wbr>Origin<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
@@ -1341,6 +1404,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpooloriginheader">[]Load<wbr>Balancer<wbr>Pool<wbr>Origin<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
@@ -1383,6 +1455,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpooloriginheader">Load<wbr>Balancer<wbr>Pool<wbr>Origin<wbr>Header<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
@@ -1423,6 +1504,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpooloriginheader">Sequence[Load<wbr>Balancer<wbr>Pool<wbr>Origin<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
@@ -1430,6 +1520,96 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The weight (0.01 - 1.00) of this origin, relative to other origins in the pool. Equal values mean equal weighting. A weight of 0 means traffic will not be sent to this origin, but health is still checked. Default: 1.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="loadbalancerpooloriginheader">Load<wbr>Balancer<wbr>Pool<wbr>Origin<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="header_csharp">
+<a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of string values for the header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="header_go">
+<a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of string values for the header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="header_nodejs">
+<a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of string values for the header.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="header_python">
+<a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The header name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of string values for the header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

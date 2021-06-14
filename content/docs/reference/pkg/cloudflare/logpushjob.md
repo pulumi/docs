@@ -179,15 +179,6 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ownershipchallenge_csharp">
-<a href="#ownershipchallenge_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
@@ -222,6 +213,16 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logpush job to create. Must match the regular expression `^[a-zA-Z0-9\-\.]*$`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownershipchallenge_csharp">
+<a href="#ownershipchallenge_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -244,15 +245,6 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ownershipchallenge_go">
-<a href="#ownershipchallenge_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
@@ -289,6 +281,16 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logpush job to create. Must match the regular expression `^[a-zA-Z0-9\-\.]*$`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownershipchallenge_go">
+<a href="#ownershipchallenge_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -311,15 +313,6 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ownershipchallenge_nodejs">
-<a href="#ownershipchallenge_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Challenge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
@@ -356,6 +349,16 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logpush job to create. Must match the regular expression `^[a-zA-Z0-9\-\.]*$`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownershipchallenge_nodejs">
+<a href="#ownershipchallenge_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Challenge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -378,15 +381,6 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ownership_challenge_python">
-<a href="#ownership_challenge_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>challenge</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
@@ -423,6 +417,16 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logpush job to create. Must match the regular expression `^[a-zA-Z0-9\-\.]*$`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ownership_challenge_python">
+<a href="#ownership_challenge_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>challenge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -667,7 +671,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
@@ -734,7 +739,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
@@ -801,7 +807,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
@@ -868,7 +875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Ownership challenge token to prove destination ownership. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
+    <dd>{{% md %}}Ownership challenge token to prove destination ownership, required when destination is Amazon S3, Google Cloud Storage,
+Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">

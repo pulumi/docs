@@ -33,10 +33,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Generate a service token that will renew if terraform is ran within 30 days of expiration
         var myApp = new Cloudflare.AccessServiceToken("myApp", new Cloudflare.AccessServiceTokenArgs
         {
             AccountId = "d41d8cd98f00b204e9800998ecf8427e",
-            Name = "CI/CD app",
+            MinDaysForRenewal = 30,
+            Name = "CI/CD app renewed",
         });
     }
 
@@ -60,8 +62,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudflare.NewAccessServiceToken(ctx, "myApp", &cloudflare.AccessServiceTokenArgs{
-			AccountId: pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
-			Name:      pulumi.String("CI/CD app"),
+			AccountId:         pulumi.String("d41d8cd98f00b204e9800998ecf8427e"),
+			MinDaysForRenewal: pulumi.Int(30),
+			Name:              pulumi.String("CI/CD app renewed"),
 		})
 		if err != nil {
 			return err
@@ -81,9 +84,11 @@ func main() {
 import pulumi
 import pulumi_cloudflare as cloudflare
 
+# Generate a service token that will renew if terraform is ran within 30 days of expiration
 my_app = cloudflare.AccessServiceToken("myApp",
     account_id="d41d8cd98f00b204e9800998ecf8427e",
-    name="CI/CD app")
+    min_days_for_renewal=30,
+    name="CI/CD app renewed")
 ```
 
 
@@ -97,9 +102,11 @@ my_app = cloudflare.AccessServiceToken("myApp",
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
+// Generate a service token that will renew if terraform is ran within 30 days of expiration
 const myApp = new cloudflare.AccessServiceToken("my_app", {
     accountId: "d41d8cd98f00b204e9800998ecf8427e",
-    name: "CI/CD app",
+    minDaysForRenewal: 30,
+    name: "CI/CD app renewed",
 });
 ```
 
@@ -128,6 +135,7 @@ const myApp = new cloudflare.AccessServiceToken("my_app", {
 <span class="k">def </span><span class="nx">AccessServiceToken</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">min_days_for_renewal</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -277,6 +285,14 @@ The AccessServiceToken resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The ID of the account where the Access Service is being created. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mindaysforrenewal_csharp">
+<a href="#mindaysforrenewal_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Days<wbr>For<wbr>Renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
@@ -307,6 +323,14 @@ The AccessServiceToken resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}The ID of the account where the Access Service is being created. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mindaysforrenewal_go">
+<a href="#mindaysforrenewal_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Days<wbr>For<wbr>Renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -339,6 +363,14 @@ The AccessServiceToken resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The ID of the account where the Access Service is being created. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mindaysforrenewal_nodejs">
+<a href="#mindaysforrenewal_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Days<wbr>For<wbr>Renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
@@ -369,6 +401,14 @@ The AccessServiceToken resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}The ID of the account where the Access Service is being created. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_days_for_renewal_python">
+<a href="#min_days_for_renewal_python" style="color: inherit; text-decoration: inherit;">min_<wbr>days_<wbr>for_<wbr>renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -408,6 +448,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expiresat_csharp">
+<a href="#expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -436,6 +485,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secret for interacting with Access protocols.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="expiresat_go">
+<a href="#expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -468,6 +526,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expiresat_nodejs">
+<a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -498,6 +565,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="expires_at_python">
+<a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -526,6 +602,8 @@ Get an existing AccessServiceToken resource's state with the given name, ID, and
         <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">expires_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">min_days_for_renewal</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessServiceToken</code></pre></div>
 {{% /choosable %}}
@@ -667,6 +745,23 @@ The following state arguments are supported:
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expiresat_csharp">
+<a href="#state_expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mindaysforrenewal_csharp">
+<a href="#state_mindaysforrenewal_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Days<wbr>For<wbr>Renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -715,6 +810,23 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expiresat_go">
+<a href="#state_expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mindaysforrenewal_go">
+<a href="#state_mindaysforrenewal_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Days<wbr>For<wbr>Renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -765,6 +877,23 @@ The following state arguments are supported:
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expiresat_nodejs">
+<a href="#state_expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mindaysforrenewal_nodejs">
+<a href="#state_mindaysforrenewal_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Days<wbr>For<wbr>Renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -813,6 +942,23 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A secret for interacting with Access protocols.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expires_at_python">
+<a href="#state_expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Date when the token expires
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_min_days_for_renewal_python">
+<a href="#state_min_days_for_renewal_python" style="color: inherit; text-decoration: inherit;">min_<wbr>days_<wbr>for_<wbr>renewal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
