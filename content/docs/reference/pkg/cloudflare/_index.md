@@ -34,6 +34,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="customhostnamefallbackorigin" title="CustomHostnameFallbackOrigin"><span class="symbol resource"></span>CustomHostnameFallbackOrigin</a></li>
     <li><a href="custompages" title="CustomPages"><span class="symbol resource"></span>CustomPages</a></li>
     <li><a href="customssl" title="CustomSsl"><span class="symbol resource"></span>CustomSsl</a></li>
+    <li><a href="deviceposturerule" title="DevicePostureRule"><span class="symbol resource"></span>DevicePostureRule</a></li>
     <li><a href="filter" title="Filter"><span class="symbol resource"></span>Filter</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="healthcheck" title="Healthcheck"><span class="symbol resource"></span>Healthcheck</a></li>
@@ -51,6 +52,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="ratelimit" title="RateLimit"><span class="symbol resource"></span>RateLimit</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
     <li><a href="spectrumapplication" title="SpectrumApplication"><span class="symbol resource"></span>SpectrumApplication</a></li>
+    <li><a href="teamslist" title="TeamsList"><span class="symbol resource"></span>TeamsList</a></li>
     <li><a href="wafgroup" title="WafGroup"><span class="symbol resource"></span>WafGroup</a></li>
     <li><a href="wafoverride" title="WafOverride"><span class="symbol resource"></span>WafOverride</a></li>
     <li><a href="wafpackage" title="WafPackage"><span class="symbol resource"></span>WafPackage</a></li>
@@ -86,6 +88,6 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 
