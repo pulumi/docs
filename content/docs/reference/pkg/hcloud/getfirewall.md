@@ -535,7 +535,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`
+    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationips_csharp">
+<a href="#destinationips_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -562,7 +571,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `in`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -575,7 +584,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`
+    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationips_go">
+<a href="#destinationips_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -602,7 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `in`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -615,7 +633,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`
+    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationips_nodejs">
+<a href="#destinationips_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -642,7 +669,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `in`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -655,7 +682,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`
+    <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_ips_python">
+<a href="#destination_ips_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `out`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -682,7 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule
+    <dd>{{% md %}}(Required, List) List of CIDRs that are allowed within this Firewall Rule (when `direction` is `in`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
