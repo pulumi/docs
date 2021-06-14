@@ -2745,7 +2745,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minute of day the entry will become invalid on.
+    <dd>{{% md %}}Day of the week the entry will become invalid on
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionhour_csharp">
@@ -2763,7 +2763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minute of day the entry will become invalid on.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlifespan_csharp">
 <a href="#maxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lifespan</a>
@@ -2793,7 +2794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minute of day the entry will become invalid on.
+    <dd>{{% md %}}Day of the week the entry will become invalid on
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionhour_go">
@@ -2811,7 +2812,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minute of day the entry will become invalid on.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlifespan_go">
 <a href="#maxlifespan_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lifespan</a>
@@ -2841,7 +2843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minute of day the entry will become invalid on.
+    <dd>{{% md %}}Day of the week the entry will become invalid on
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionhour_nodejs">
@@ -2859,7 +2861,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minute of day the entry will become invalid on.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlifespan_nodejs">
 <a href="#maxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lifespan</a>
@@ -2889,7 +2892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minute of day the entry will become invalid on.
+    <dd>{{% md %}}Day of the week the entry will become invalid on
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eviction_hour_python">
@@ -2907,7 +2910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minute of day the entry will become invalid on.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_lifespan_python">
 <a href="#max_lifespan_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lifespan</a>

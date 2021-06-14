@@ -25,6 +25,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 <ul class="api">
     <li><a href="attributeimporteridentityprovidermapper" title="AttributeImporterIdentityProviderMapper"><span class="symbol resource"></span>AttributeImporterIdentityProviderMapper</a></li>
     <li><a href="attributetoroleidentitymapper" title="AttributeToRoleIdentityMapper"><span class="symbol resource"></span>AttributeToRoleIdentityMapper</a></li>
+    <li><a href="customidentityprovidermapping" title="CustomIdentityProviderMapping"><span class="symbol resource"></span>CustomIdentityProviderMapping</a></li>
     <li><a href="customuserfederation" title="CustomUserFederation"><span class="symbol resource"></span>CustomUserFederation</a></li>
     <li><a href="defaultgroups" title="DefaultGroups"><span class="symbol resource"></span>DefaultGroups</a></li>
     <li><a href="genericclientprotocolmapper" title="GenericClientProtocolMapper"><span class="symbol resource"></span>GenericClientProtocolMapper</a></li>
@@ -51,6 +52,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 <ul class="api">
     <li><a href="getauthenticationexecution" title="GetAuthenticationExecution"><span class="symbol function"></span>GetAuthenticationExecution</a></li>
     <li><a href="getauthenticationflow" title="GetAuthenticationFlow"><span class="symbol function"></span>GetAuthenticationFlow</a></li>
+    <li><a href="getclientdescriptionconverter" title="GetClientDescriptionConverter"><span class="symbol function"></span>GetClientDescriptionConverter</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getrealm" title="GetRealm"><span class="symbol function"></span>GetRealm</a></li>
     <li><a href="getrealmkeys" title="GetRealmKeys"><span class="symbol function"></span>GetRealmKeys</a></li>
@@ -67,6 +69,6 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.1</dd>
+	<dd>4.1.0</dd>
 </dl>
 
