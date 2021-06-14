@@ -11,6 +11,43 @@ meta_desc: "Documentation for the spotinst.aws.ManagedInstance resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst AWS ManagedInstance resource.
+## Managed Instance Action
+
+* `managed_instance_action` - (Optional)
+    * `type` - (Required) String, Action type. Supported action types: `pause`, `resume`, `recycle`.
+
+Usage:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		return nil
+	})
+}
+```
 
 
 {{% examples %}}
@@ -163,6 +200,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
                     <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">managed_instance_action</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceManagedInstanceActionArgs]</span> = None<span class="p">,</span>
                     <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
@@ -524,6 +562,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedinstanceaction_csharp">
+<a href="#managedinstanceaction_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminstancelifetime_csharp">
 <a href="#minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
@@ -909,6 +955,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedinstanceaction_go">
+<a href="#managedinstanceaction_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minimuminstancelifetime_go">
 <a href="#minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
 </span>
@@ -1292,6 +1346,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedinstanceaction_nodejs">
+<a href="#managedinstanceaction_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminstancelifetime_nodejs">
 <a href="#minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
@@ -1677,6 +1739,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managed_instance_action_python">
+<a href="#managed_instance_action_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minimum_instance_lifetime_python">
 <a href="#minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
 </span>
@@ -1938,6 +2008,7 @@ Get an existing ManagedInstance resource's state with the given name, ID, and op
         <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">life_cycle</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceLoadBalancerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">managed_instance_action</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceManagedInstanceActionArgs]</span> = None<span class="p">,</span>
         <span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
@@ -2247,6 +2318,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_managedinstanceaction_csharp">
+<a href="#state_managedinstanceaction_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimuminstancelifetime_csharp">
 <a href="#state_minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
@@ -2632,6 +2711,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_managedinstanceaction_go">
+<a href="#state_managedinstanceaction_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minimuminstancelifetime_go">
 <a href="#state_minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
 </span>
@@ -3016,6 +3103,14 @@ Default `"spot"`.
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_managedinstanceaction_nodejs">
+<a href="#state_managedinstanceaction_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minimuminstancelifetime_nodejs">
 <a href="#state_minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
 </span>
@@ -3399,6 +3494,14 @@ Default `"spot"`.
     </dt>
     <dd>{{% md %}}List of load balancers configs.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_managed_instance_action_python">
+<a href="#state_managed_instance_action_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_instance_lifetime_python">
 <a href="#state_minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
@@ -4512,6 +4615,60 @@ Default: lb-123456
     </dt>
     <dd>{{% md %}}The Multai load target set ID.
 Default: ts-123456
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedinstancemanagedinstanceaction">Managed<wbr>Instance<wbr>Managed<wbr>Instance<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -73,11 +73,11 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
     ],
     instanceTypesWeights: [
         {
-            instanceType: "c3.large",
+            instanceType: "m3.xlarge",
             weight: 10,
         },
         {
-            instanceType: "c4.xlarge",
+            instanceType: "m3.2xlarge",
             weight: 16,
         },
     ],
@@ -407,7 +407,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_csharp">
@@ -455,7 +455,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_csharp">
@@ -766,7 +766,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multaitargetsets_csharp">
@@ -837,7 +837,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_csharp">
@@ -1078,7 +1078,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_go">
@@ -1126,7 +1126,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_go">
@@ -1437,7 +1437,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multaitargetsets_go">
@@ -1508,7 +1508,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_go">
@@ -1749,7 +1749,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_nodejs">
@@ -1797,7 +1797,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_nodejs">
@@ -2108,7 +2108,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multaitargetsets_nodejs">
@@ -2179,7 +2179,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_nodejs">
@@ -2420,7 +2420,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_python">
@@ -2468,7 +2468,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_credits_python">
@@ -2779,7 +2779,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multai_target_sets_python">
@@ -2850,7 +2850,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_availability_zones_python">
@@ -3339,7 +3339,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_csharp">
@@ -3677,7 +3677,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multaitargetsets_csharp">
@@ -3721,7 +3721,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_csharp">
@@ -3757,7 +3757,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_csharp">
@@ -4010,7 +4010,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_go">
@@ -4348,7 +4348,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multaitargetsets_go">
@@ -4392,7 +4392,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_go">
@@ -4428,7 +4428,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_go">
@@ -4681,7 +4681,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_nodejs">
@@ -5019,7 +5019,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multaitargetsets_nodejs">
@@ -5063,7 +5063,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_nodejs">
@@ -5099,7 +5099,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_nodejs">
@@ -5352,7 +5352,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
+    <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs. Valid values: `instance`, `weight`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_credits_python">
@@ -5690,7 +5690,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime in hours. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multai_target_sets_python">
@@ -5734,7 +5734,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
+    <dd>{{% md %}}Select a prediction strategy. Valid values: `balanced`, `costOriented`, `equalAzDistribution`, `availabilityOriented`. You can read more in our documentation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persist_block_devices_python">
@@ -5770,7 +5770,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
+    <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used. Valid values: "default", "dedicated" .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_availability_zones_python">
