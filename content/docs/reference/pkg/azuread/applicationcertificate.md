@@ -14,6 +14,335 @@ Manages a certificate associated with an Application within Azure Active Directo
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Using a certificate from Azure Key Vault
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApplication = new AzureAD.Application("exampleApplication", new AzureAD.ApplicationArgs
+        {
+        });
+        var exampleCertificate = new Azure.KeyVault.Certificate("exampleCertificate", new Azure.KeyVault.CertificateArgs
+        {
+            KeyVaultId = azurerm_key_vault.Example.Id,
+            CertificatePolicy = new Azure.KeyVault.Inputs.CertificateCertificatePolicyArgs
+            {
+                IssuerParameters = new Azure.KeyVault.Inputs.CertificateCertificatePolicyIssuerParametersArgs
+                {
+                    Name = "Self",
+                },
+                KeyProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicyKeyPropertiesArgs
+                {
+                    Exportable = true,
+                    KeySize = 2048,
+                    KeyType = "RSA",
+                    ReuseKey = true,
+                },
+                LifetimeActions = 
+                {
+                    new Azure.KeyVault.Inputs.CertificateCertificatePolicyLifetimeActionArgs
+                    {
+                        Action = new Azure.KeyVault.Inputs.CertificateCertificatePolicyLifetimeActionActionArgs
+                        {
+                            ActionType = "AutoRenew",
+                        },
+                        Trigger = new Azure.KeyVault.Inputs.CertificateCertificatePolicyLifetimeActionTriggerArgs
+                        {
+                            DaysBeforeExpiry = 30,
+                        },
+                    },
+                },
+                SecretProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicySecretPropertiesArgs
+                {
+                    ContentType = "application/x-pkcs12",
+                },
+                X509CertificateProperties = new Azure.KeyVault.Inputs.CertificateCertificatePolicyX509CertificatePropertiesArgs
+                {
+                    ExtendedKeyUsages = 
+                    {
+                        "1.3.6.1.5.5.7.3.2",
+                    },
+                    KeyUsages = 
+                    {
+                        "dataEncipherment",
+                        "digitalSignature",
+                        "keyCertSign",
+                        "keyEncipherment",
+                    },
+                    SubjectAlternativeNames = new Azure.KeyVault.Inputs.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs
+                    {
+                        DnsNames = 
+                        {
+                            "internal.contoso.com",
+                            "domain.hello.world",
+                        },
+                    },
+                    Subject = exampleApplication.Name.Apply(name => $"CN={name}"),
+                    ValidityInMonths = 12,
+                },
+            },
+        });
+        var exampleApplicationCertificate = new AzureAD.ApplicationCertificate("exampleApplicationCertificate", new AzureAD.ApplicationCertificateArgs
+        {
+            ApplicationObjectId = exampleApplication.Id,
+            Type = "AsymmetricX509Cert",
+            Encoding = "hex",
+            Value = exampleCertificate.CertificateData,
+            EndDate = exampleCertificate.CertificateAttributes.Apply(certificateAttributes => certificateAttributes[0].Expires),
+            StartDate = exampleCertificate.CertificateAttributes.Apply(certificateAttributes => certificateAttributes[0].NotBefore),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi-azuread/sdk/v4/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApplication, err := azuread.NewApplication(ctx, "exampleApplication", nil)
+		if err != nil {
+			return err
+		}
+		exampleCertificate, err := keyvault.NewCertificate(ctx, "exampleCertificate", &keyvault.CertificateArgs{
+			KeyVaultId: pulumi.Any(azurerm_key_vault.Example.Id),
+			CertificatePolicy: &keyvault.CertificateCertificatePolicyArgs{
+				IssuerParameters: &keyvault.CertificateCertificatePolicyIssuerParametersArgs{
+					Name: pulumi.String("Self"),
+				},
+				KeyProperties: &keyvault.CertificateCertificatePolicyKeyPropertiesArgs{
+					Exportable: pulumi.Bool(true),
+					KeySize:    pulumi.Int(2048),
+					KeyType:    pulumi.String("RSA"),
+					ReuseKey:   pulumi.Bool(true),
+				},
+				LifetimeActions: keyvault.CertificateCertificatePolicyLifetimeActionArray{
+					&keyvault.CertificateCertificatePolicyLifetimeActionArgs{
+						Action: &keyvault.CertificateCertificatePolicyLifetimeActionActionArgs{
+							ActionType: pulumi.String("AutoRenew"),
+						},
+						Trigger: &keyvault.CertificateCertificatePolicyLifetimeActionTriggerArgs{
+							DaysBeforeExpiry: pulumi.Int(30),
+						},
+					},
+				},
+				SecretProperties: &keyvault.CertificateCertificatePolicySecretPropertiesArgs{
+					ContentType: pulumi.String("application/x-pkcs12"),
+				},
+				X509CertificateProperties: &keyvault.CertificateCertificatePolicyX509CertificatePropertiesArgs{
+					ExtendedKeyUsages: pulumi.StringArray{
+						pulumi.String("1.3.6.1.5.5.7.3.2"),
+					},
+					KeyUsages: pulumi.StringArray{
+						pulumi.String("dataEncipherment"),
+						pulumi.String("digitalSignature"),
+						pulumi.String("keyCertSign"),
+						pulumi.String("keyEncipherment"),
+					},
+					SubjectAlternativeNames: &keyvault.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs{
+						DnsNames: pulumi.StringArray{
+							pulumi.String("internal.contoso.com"),
+							pulumi.String("domain.hello.world"),
+						},
+					},
+					Subject: exampleApplication.Name.ApplyT(func(name string) (string, error) {
+						return fmt.Sprintf("%v%v", "CN=", name), nil
+					}).(pulumi.StringOutput),
+					ValidityInMonths: pulumi.Int(12),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = azuread.NewApplicationCertificate(ctx, "exampleApplicationCertificate", &azuread.ApplicationCertificateArgs{
+			ApplicationObjectId: exampleApplication.ID(),
+			Type:                pulumi.String("AsymmetricX509Cert"),
+			Encoding:            pulumi.String("hex"),
+			Value:               exampleCertificate.CertificateData,
+			EndDate: exampleCertificate.CertificateAttributes.ApplyT(func(certificateAttributes []keyvault.CertificateCertificateAttribute) (string, error) {
+				return certificateAttributes[0].Expires, nil
+			}).(pulumi.StringOutput),
+			StartDate: exampleCertificate.CertificateAttributes.ApplyT(func(certificateAttributes []keyvault.CertificateCertificateAttribute) (string, error) {
+				return certificateAttributes[0].NotBefore, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_azuread as azuread
+
+example_application = azuread.Application("exampleApplication")
+example_certificate = azure.keyvault.Certificate("exampleCertificate",
+    key_vault_id=azurerm_key_vault["example"]["id"],
+    certificate_policy=azure.keyvault.CertificateCertificatePolicyArgs(
+        issuer_parameters=azure.keyvault.CertificateCertificatePolicyIssuerParametersArgs(
+            name="Self",
+        ),
+        key_properties={
+            "exportable": True,
+            "key_size": 2048,
+            "key_type": "RSA",
+            "reuseKey": True,
+        },
+        lifetime_actions=[azure.keyvault.CertificateCertificatePolicyLifetimeActionArgs(
+            action=azure.keyvault.CertificateCertificatePolicyLifetimeActionActionArgs(
+                action_type="AutoRenew",
+            ),
+            trigger=azure.keyvault.CertificateCertificatePolicyLifetimeActionTriggerArgs(
+                days_before_expiry=30,
+            ),
+        )],
+        secret_properties=azure.keyvault.CertificateCertificatePolicySecretPropertiesArgs(
+            content_type="application/x-pkcs12",
+        ),
+        x509_certificate_properties=azure.keyvault.CertificateCertificatePolicyX509CertificatePropertiesArgs(
+            extended_key_usages=["1.3.6.1.5.5.7.3.2"],
+            key_usages=[
+                "dataEncipherment",
+                "digitalSignature",
+                "keyCertSign",
+                "keyEncipherment",
+            ],
+            subject_alternative_names=azure.keyvault.CertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs(
+                dns_names=[
+                    "internal.contoso.com",
+                    "domain.hello.world",
+                ],
+            ),
+            subject=example_application.name.apply(lambda name: f"CN={name}"),
+            validity_in_months=12,
+        ),
+    ))
+example_application_certificate = azuread.ApplicationCertificate("exampleApplicationCertificate",
+    application_object_id=example_application.id,
+    type="AsymmetricX509Cert",
+    encoding="hex",
+    value=example_certificate.certificate_data,
+    end_date=example_certificate.certificate_attributes[0].expires,
+    start_date=example_certificate.certificate_attributes[0].not_before)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as azuread from "@pulumi/azuread";
+
+const exampleApplication = new azuread.Application("exampleApplication", {});
+const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
+    keyVaultId: azurerm_key_vault.example.id,
+    certificatePolicy: {
+        issuerParameters: {
+            name: "Self",
+        },
+        keyProperties: {
+            exportable: true,
+            keySize: 2048,
+            keyType: "RSA",
+            reuseKey: true,
+        },
+        lifetimeActions: [{
+            action: {
+                actionType: "AutoRenew",
+            },
+            trigger: {
+                daysBeforeExpiry: 30,
+            },
+        }],
+        secretProperties: {
+            contentType: "application/x-pkcs12",
+        },
+        x509CertificateProperties: {
+            extendedKeyUsages: ["1.3.6.1.5.5.7.3.2"],
+            keyUsages: [
+                "dataEncipherment",
+                "digitalSignature",
+                "keyCertSign",
+                "keyEncipherment",
+            ],
+            subjectAlternativeNames: {
+                dnsNames: [
+                    "internal.contoso.com",
+                    "domain.hello.world",
+                ],
+            },
+            subject: pulumi.interpolate`CN=${exampleApplication.name}`,
+            validityInMonths: 12,
+        },
+    },
+});
+const exampleApplicationCertificate = new azuread.ApplicationCertificate("exampleApplicationCertificate", {
+    applicationObjectId: exampleApplication.id,
+    type: "AsymmetricX509Cert",
+    encoding: "hex",
+    value: exampleCertificate.certificateData,
+    endDate: exampleCertificate.certificateAttributes.apply(certificateAttributes => certificateAttributes[0].expires),
+    startDate: exampleCertificate.certificateAttributes.apply(certificateAttributes => certificateAttributes[0].notBefore),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ApplicationCertificate Resource {#create}
