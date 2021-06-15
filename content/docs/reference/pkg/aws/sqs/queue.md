@@ -68,6 +68,68 @@ func main() {
 }
 ```
 
+## High-throughput FIFO queue
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const terraformQueue = new aws.sqs.Queue("terraform_queue", {
+    deduplicationScope: "messageGroup",
+    fifoQueue: true,
+    fifoThroughputLimit: "perMessageGroupId",
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+terraform_queue = aws.sqs.Queue("terraformQueue",
+    deduplication_scope="messageGroup",
+    fifo_queue=True,
+    fifo_throughput_limit="perMessageGroupId")
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var terraformQueue = new Aws.Sqs.Queue("terraformQueue", new Aws.Sqs.QueueArgs
+        {
+            DeduplicationScope = "messageGroup",
+            FifoQueue = true,
+            FifoThroughputLimit = "perMessageGroupId",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sqs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sqs.NewQueue(ctx, "terraformQueue", &sqs.QueueArgs{
+			DeduplicationScope:  pulumi.String("messageGroup"),
+			FifoQueue:           pulumi.Bool(true),
+			FifoThroughputLimit: pulumi.String("perMessageGroupId"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 ## Server-side encryption (SSE)
 
 ```typescript
@@ -289,8 +351,10 @@ const queue = new aws.sqs.Queue("queue", {
 <span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">content_based_deduplication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">deduplication_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">delay_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">fifo_queue</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">fifo_throughput_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">kms_data_key_reuse_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">kms_master_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">max_message_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -441,6 +505,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deduplicationscope_csharp">
+<a href="#deduplicationscope_csharp" style="color: inherit; text-decoration: inherit;">Deduplication<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delayseconds_csharp">
 <a href="#delayseconds_csharp" style="color: inherit; text-decoration: inherit;">Delay<wbr>Seconds</a>
 </span>
@@ -457,6 +530,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fifothroughputlimit_csharp">
+<a href="#fifothroughputlimit_csharp" style="color: inherit; text-decoration: inherit;">Fifo<wbr>Throughput<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsdatakeyreuseperiodseconds_csharp">
@@ -546,7 +628,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -555,7 +637,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilitytimeoutseconds_csharp">
@@ -580,6 +662,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deduplicationscope_go">
+<a href="#deduplicationscope_go" style="color: inherit; text-decoration: inherit;">Deduplication<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delayseconds_go">
 <a href="#delayseconds_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>Seconds</a>
 </span>
@@ -596,6 +687,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fifothroughputlimit_go">
+<a href="#fifothroughputlimit_go" style="color: inherit; text-decoration: inherit;">Fifo<wbr>Throughput<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsdatakeyreuseperiodseconds_go">
@@ -685,7 +785,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -694,7 +794,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilitytimeoutseconds_go">
@@ -719,6 +819,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deduplicationscope_nodejs">
+<a href="#deduplicationscope_nodejs" style="color: inherit; text-decoration: inherit;">deduplication<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delayseconds_nodejs">
 <a href="#delayseconds_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>Seconds</a>
 </span>
@@ -735,6 +844,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fifothroughputlimit_nodejs">
+<a href="#fifothroughputlimit_nodejs" style="color: inherit; text-decoration: inherit;">fifo<wbr>Throughput<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsdatakeyreuseperiodseconds_nodejs">
@@ -824,7 +942,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -833,7 +951,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibilitytimeoutseconds_nodejs">
@@ -858,6 +976,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deduplication_scope_python">
+<a href="#deduplication_scope_python" style="color: inherit; text-decoration: inherit;">deduplication_<wbr>scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="delay_seconds_python">
 <a href="#delay_seconds_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>seconds</a>
 </span>
@@ -874,6 +1001,15 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fifo_throughput_limit_python">
+<a href="#fifo_throughput_limit_python" style="color: inherit; text-decoration: inherit;">fifo_<wbr>throughput_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_data_key_reuse_period_seconds_python">
@@ -963,7 +1099,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -972,7 +1108,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_timeout_seconds_python">
@@ -1010,7 +1146,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1031,7 +1176,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1052,7 +1206,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1073,7 +1236,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1094,8 +1266,10 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">content_based_deduplication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">deduplication_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">delay_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">fifo_queue</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">fifo_throughput_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kms_data_key_reuse_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">kms_master_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">max_message_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1107,6 +1281,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
         <span class="nx">redrive_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">visibility_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
 {{% /choosable %}}
 
@@ -1238,6 +1413,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deduplicationscope_csharp">
+<a href="#state_deduplicationscope_csharp" style="color: inherit; text-decoration: inherit;">Deduplication<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_delayseconds_csharp">
 <a href="#state_delayseconds_csharp" style="color: inherit; text-decoration: inherit;">Delay<wbr>Seconds</a>
 </span>
@@ -1254,6 +1438,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fifothroughputlimit_csharp">
+<a href="#state_fifothroughputlimit_csharp" style="color: inherit; text-decoration: inherit;">Fifo<wbr>Throughput<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsdatakeyreuseperiodseconds_csharp">
@@ -1343,7 +1536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -1352,7 +1545,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibilitytimeoutseconds_csharp">
@@ -1386,6 +1588,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deduplicationscope_go">
+<a href="#state_deduplicationscope_go" style="color: inherit; text-decoration: inherit;">Deduplication<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_delayseconds_go">
 <a href="#state_delayseconds_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>Seconds</a>
 </span>
@@ -1402,6 +1613,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fifothroughputlimit_go">
+<a href="#state_fifothroughputlimit_go" style="color: inherit; text-decoration: inherit;">Fifo<wbr>Throughput<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsdatakeyreuseperiodseconds_go">
@@ -1491,7 +1711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -1500,7 +1720,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibilitytimeoutseconds_go">
@@ -1534,6 +1763,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deduplicationscope_nodejs">
+<a href="#state_deduplicationscope_nodejs" style="color: inherit; text-decoration: inherit;">deduplication<wbr>Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_delayseconds_nodejs">
 <a href="#state_delayseconds_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>Seconds</a>
 </span>
@@ -1550,6 +1788,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fifothroughputlimit_nodejs">
+<a href="#state_fifothroughputlimit_nodejs" style="color: inherit; text-decoration: inherit;">fifo<wbr>Throughput<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsdatakeyreuseperiodseconds_nodejs">
@@ -1639,7 +1886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -1648,7 +1895,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibilitytimeoutseconds_nodejs">
@@ -1682,6 +1938,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_deduplication_scope_python">
+<a href="#state_deduplication_scope_python" style="color: inherit; text-decoration: inherit;">deduplication_<wbr>scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_delay_seconds_python">
 <a href="#state_delay_seconds_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>seconds</a>
 </span>
@@ -1698,6 +1963,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fifo_throughput_limit_python">
+<a href="#state_fifo_throughput_limit_python" style="color: inherit; text-decoration: inherit;">fifo_<wbr>throughput_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_data_key_reuse_period_seconds_python">
@@ -1787,7 +2061,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the queue. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -1796,7 +2070,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Same as `id`: The URL for the created Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_timeout_seconds_python">

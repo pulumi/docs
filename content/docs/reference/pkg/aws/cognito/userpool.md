@@ -1391,6 +1391,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customdomain_csharp">
+<a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
@@ -1398,6 +1416,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="estimatednumberofusers_csharp">
+<a href="#estimatednumberofusers_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Number<wbr>Of<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1439,6 +1466,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customdomain_go">
+<a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
@@ -1446,6 +1491,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="estimatednumberofusers_go">
+<a href="#estimatednumberofusers_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Number<wbr>Of<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1487,6 +1541,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customdomain_nodejs">
+<a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
@@ -1494,6 +1566,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="estimatednumberofusers_nodejs">
+<a href="#estimatednumberofusers_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Number<wbr>Of<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1535,6 +1616,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="custom_domain_python">
+<a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
@@ -1542,6 +1641,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="estimated_number_of_users_python">
+<a href="#estimated_number_of_users_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>number_<wbr>of_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1584,11 +1692,14 @@ Get an existing UserPool resource's state with the given name, ID, and optional 
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">estimated_number_of_users</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">last_modified_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1771,6 +1882,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customdomain_csharp">
+<a href="#state_customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deviceconfiguration_csharp">
 <a href="#state_deviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
 </span>
@@ -1778,6 +1898,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_csharp">
+<a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailconfiguration_csharp">
@@ -1814,6 +1943,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_estimatednumberofusers_csharp">
+<a href="#state_estimatednumberofusers_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Number<wbr>Of<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaconfig_csharp">
@@ -2018,6 +2156,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customdomain_go">
+<a href="#state_customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deviceconfiguration_go">
 <a href="#state_deviceconfiguration_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
 </span>
@@ -2025,6 +2172,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailconfiguration_go">
@@ -2061,6 +2217,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_estimatednumberofusers_go">
+<a href="#state_estimatednumberofusers_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Number<wbr>Of<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaconfig_go">
@@ -2265,6 +2430,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customdomain_nodejs">
+<a href="#state_customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deviceconfiguration_nodejs">
 <a href="#state_deviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Configuration</a>
 </span>
@@ -2272,6 +2446,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailconfiguration_nodejs">
@@ -2308,6 +2491,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_estimatednumberofusers_nodejs">
+<a href="#state_estimatednumberofusers_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Number<wbr>Of<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaconfig_nodejs">
@@ -2512,6 +2704,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_custom_domain_python">
+<a href="#state_custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_device_configuration_python">
 <a href="#state_device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
 </span>
@@ -2519,6 +2720,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Holds the domain prefix if the user pool has a domain associated with it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_configuration_python">
@@ -2555,6 +2765,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_estimated_number_of_users_python">
+<a href="#state_estimated_number_of_users_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>number_<wbr>of_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}A number estimating the size of the user pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambda_config_python">
@@ -3373,6 +3592,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customemailsender_csharp">
+<a href="#customemailsender_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Email<wbr>Sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomemailsender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Email<wbr>Sender<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A custom email sender AWS Lambda trigger. See custom_email_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="custommessage_csharp">
 <a href="#custommessage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Message</a>
 </span>
@@ -3382,6 +3610,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom Message AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customsmssender_csharp">
+<a href="#customsmssender_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sms<wbr>Sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomsmssender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Sms<wbr>Sender<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defineauthchallenge_csharp">
 <a href="#defineauthchallenge_csharp" style="color: inherit; text-decoration: inherit;">Define<wbr>Auth<wbr>Challenge</a>
 </span>
@@ -3389,6 +3626,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postauthentication_csharp">
@@ -3467,6 +3713,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customemailsender_go">
+<a href="#customemailsender_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Email<wbr>Sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomemailsender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Email<wbr>Sender</a></span>
+    </dt>
+    <dd>{{% md %}}A custom email sender AWS Lambda trigger. See custom_email_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="custommessage_go">
 <a href="#custommessage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Message</a>
 </span>
@@ -3476,6 +3731,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom Message AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customsmssender_go">
+<a href="#customsmssender_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sms<wbr>Sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomsmssender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Sms<wbr>Sender</a></span>
+    </dt>
+    <dd>{{% md %}}A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defineauthchallenge_go">
 <a href="#defineauthchallenge_go" style="color: inherit; text-decoration: inherit;">Define<wbr>Auth<wbr>Challenge</a>
 </span>
@@ -3483,6 +3747,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postauthentication_go">
@@ -3561,6 +3834,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customemailsender_nodejs">
+<a href="#customemailsender_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Email<wbr>Sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomemailsender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Email<wbr>Sender<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A custom email sender AWS Lambda trigger. See custom_email_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="custommessage_nodejs">
 <a href="#custommessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Message</a>
 </span>
@@ -3570,6 +3852,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom Message AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customsmssender_nodejs">
+<a href="#customsmssender_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sms<wbr>Sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomsmssender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Sms<wbr>Sender<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="defineauthchallenge_nodejs">
 <a href="#defineauthchallenge_nodejs" style="color: inherit; text-decoration: inherit;">define<wbr>Auth<wbr>Challenge</a>
 </span>
@@ -3577,6 +3868,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postauthentication_nodejs">
@@ -3655,6 +3955,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="custom_email_sender_python">
+<a href="#custom_email_sender_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>email_<wbr>sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomemailsender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Email<wbr>Sender<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A custom email sender AWS Lambda trigger. See custom_email_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="custom_message_python">
 <a href="#custom_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message</a>
 </span>
@@ -3664,6 +3973,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Custom Message AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="custom_sms_sender_python">
+<a href="#custom_sms_sender_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sms_<wbr>sender</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoollambdaconfigcustomsmssender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Sms<wbr>Sender<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="define_auth_challenge_python">
 <a href="#define_auth_challenge_python" style="color: inherit; text-decoration: inherit;">define_<wbr>auth_<wbr>challenge</a>
 </span>
@@ -3671,6 +3989,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_authentication_python">
@@ -3734,6 +4061,186 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userpoollambdaconfigcustomemailsender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Email<wbr>Sender</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambdaarn_csharp">
+<a href="#lambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambdaversion_csharp">
+<a href="#lambdaversion_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambdaarn_go">
+<a href="#lambdaarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambdaversion_go">
+<a href="#lambdaversion_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambdaarn_nodejs">
+<a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambdaversion_nodejs">
+<a href="#lambdaversion_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambda_arn_python">
+<a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambda_version_python">
+<a href="#lambda_version_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userpoollambdaconfigcustomsmssender">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Custom<wbr>Sms<wbr>Sender</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambdaarn_csharp">
+<a href="#lambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambdaversion_csharp">
+<a href="#lambdaversion_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambdaarn_go">
+<a href="#lambdaarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambdaversion_go">
+<a href="#lambdaversion_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambdaarn_nodejs">
+<a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambdaversion_nodejs">
+<a href="#lambdaversion_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="lambda_arn_python">
+<a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}he Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lambda_version_python">
+<a href="#lambda_version_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

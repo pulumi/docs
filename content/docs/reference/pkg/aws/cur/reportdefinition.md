@@ -318,7 +318,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compression_csharp">
@@ -327,7 +327,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_csharp">
@@ -336,7 +336,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reportname_csharp">
@@ -372,7 +372,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalartifacts_csharp">
@@ -381,7 +381,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshclosedreports_csharp">
@@ -399,7 +399,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3prefix_csharp">
@@ -421,7 +421,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compression_go">
@@ -430,7 +430,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_go">
@@ -439,7 +439,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reportname_go">
@@ -475,7 +475,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalartifacts_go">
@@ -484,7 +484,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshclosedreports_go">
@@ -502,7 +502,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3prefix_go">
@@ -524,7 +524,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compression_nodejs">
@@ -533,7 +533,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_nodejs">
@@ -542,7 +542,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reportname_nodejs">
@@ -578,7 +578,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalartifacts_nodejs">
@@ -587,7 +587,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshclosedreports_nodejs">
@@ -605,7 +605,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3prefix_nodejs">
@@ -627,7 +627,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compression_python">
@@ -636,7 +636,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="format_python">
@@ -645,7 +645,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="report_name_python">
@@ -681,7 +681,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_artifacts_python">
@@ -690,7 +690,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_closed_reports_python">
@@ -708,7 +708,7 @@ The ReportDefinition resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_prefix_python">
@@ -731,6 +731,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -742,6 +751,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -755,6 +773,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -766,6 +793,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -794,6 +830,7 @@ Get an existing ReportDefinition resource's state with the given name, ID, and o
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">additional_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">additional_schema_elements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">compression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">refresh_closed_reports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -921,7 +958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_additionalschemaelements_csharp">
@@ -930,7 +967,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compression_csharp">
@@ -939,7 +985,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_csharp">
@@ -948,7 +994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshclosedreports_csharp">
@@ -975,7 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_csharp">
@@ -1011,7 +1057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1024,7 +1070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_additionalschemaelements_go">
@@ -1033,7 +1079,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compression_go">
@@ -1042,7 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_go">
@@ -1051,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshclosedreports_go">
@@ -1078,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_go">
@@ -1114,7 +1169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1127,7 +1182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_additionalschemaelements_nodejs">
@@ -1136,7 +1191,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compression_nodejs">
@@ -1145,7 +1209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_nodejs">
@@ -1154,7 +1218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshclosedreports_nodejs">
@@ -1181,7 +1245,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_nodejs">
@@ -1217,7 +1281,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1230,7 +1294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be OVERWRITE_REPORT.
+    <dd>{{% md %}}A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_additional_schema_elements_python">
@@ -1239,7 +1303,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of schema elements. Valid values are: RESOURCES.
+    <dd>{{% md %}}A list of schema elements. Valid values are: `RESOURCES`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the cur report.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compression_python">
@@ -1248,7 +1321,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
+    <dd>{{% md %}}Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_python">
@@ -1257,7 +1330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
+    <dd>{{% md %}}Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_closed_reports_python">
@@ -1284,7 +1357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3_bucket_python">
@@ -1320,7 +1393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
+    <dd>{{% md %}}The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

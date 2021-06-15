@@ -773,6 +773,248 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {logCo
 
 
 
+### Associate Web ACL (v2)
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "API_KEY",
+        });
+        var exampleWebAcl = new Aws.WafV2.WebAcl("exampleWebAcl", new Aws.WafV2.WebAclArgs
+        {
+            Description = "Example of a managed rule.",
+            Scope = "REGIONAL",
+            DefaultAction = new Aws.WafV2.Inputs.WebAclDefaultActionArgs
+            {
+                Allow = ,
+            },
+            Rules = 
+            {
+                new Aws.WafV2.Inputs.WebAclRuleArgs
+                {
+                    Name = "rule-1",
+                    Priority = 1,
+                    OverrideAction = new Aws.WafV2.Inputs.WebAclRuleOverrideActionArgs
+                    {
+                        Block = 
+                        {
+                            ,
+                        },
+                    },
+                    Statement = new Aws.WafV2.Inputs.WebAclRuleStatementArgs
+                    {
+                        ManagedRuleGroupStatement = new Aws.WafV2.Inputs.WebAclRuleStatementManagedRuleGroupStatementArgs
+                        {
+                            Name = "AWSManagedRulesCommonRuleSet",
+                            VendorName = "AWS",
+                        },
+                    },
+                    VisibilityConfig = new Aws.WafV2.Inputs.WebAclRuleVisibilityConfigArgs
+                    {
+                        CloudwatchMetricsEnabled = false,
+                        MetricName = "friendly-rule-metric-name",
+                        SampledRequestsEnabled = false,
+                    },
+                },
+            },
+            VisibilityConfig = new Aws.WafV2.Inputs.WebAclVisibilityConfigArgs
+            {
+                CloudwatchMetricsEnabled = false,
+                MetricName = "friendly-metric-name",
+                SampledRequestsEnabled = false,
+            },
+        });
+        var exampleWebAclAssociation = new Aws.WafV2.WebAclAssociation("exampleWebAclAssociation", new Aws.WafV2.WebAclAssociationArgs
+        {
+            ResourceArn = exampleGraphQLApi.Arn,
+            WebAclArn = exampleWebAcl.Arn,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
+			AuthenticationType: pulumi.String("API_KEY"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleWebAcl, err := wafv2.NewWebAcl(ctx, "exampleWebAcl", &wafv2.WebAclArgs{
+			Description: pulumi.String("Example of a managed rule."),
+			Scope:       pulumi.String("REGIONAL"),
+			DefaultAction: &wafv2.WebAclDefaultActionArgs{
+				Allow: nil,
+			},
+			Rules: wafv2.WebAclRuleArray{
+				&wafv2.WebAclRuleArgs{
+					Name:     pulumi.String("rule-1"),
+					Priority: pulumi.Int(1),
+					OverrideAction: &wafv2.WebAclRuleOverrideActionArgs{
+						Block: pulumi.MapArray{
+							nil,
+						},
+					},
+					Statement: &wafv2.WebAclRuleStatementArgs{
+						ManagedRuleGroupStatement: &wafv2.WebAclRuleStatementManagedRuleGroupStatementArgs{
+							Name:       pulumi.String("AWSManagedRulesCommonRuleSet"),
+							VendorName: pulumi.String("AWS"),
+						},
+					},
+					VisibilityConfig: &wafv2.WebAclRuleVisibilityConfigArgs{
+						CloudwatchMetricsEnabled: pulumi.Bool(false),
+						MetricName:               pulumi.String("friendly-rule-metric-name"),
+						SampledRequestsEnabled:   pulumi.Bool(false),
+					},
+				},
+			},
+			VisibilityConfig: &wafv2.WebAclVisibilityConfigArgs{
+				CloudwatchMetricsEnabled: pulumi.Bool(false),
+				MetricName:               pulumi.String("friendly-metric-name"),
+				SampledRequestsEnabled:   pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = wafv2.NewWebAclAssociation(ctx, "exampleWebAclAssociation", &wafv2.WebAclAssociationArgs{
+			ResourceArn: exampleGraphQLApi.Arn,
+			WebAclArn:   exampleWebAcl.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", authentication_type="API_KEY")
+example_web_acl = aws.wafv2.WebAcl("exampleWebAcl",
+    description="Example of a managed rule.",
+    scope="REGIONAL",
+    default_action=aws.wafv2.WebAclDefaultActionArgs(
+        allow=aws.wafv2.WebAclDefaultActionAllowArgs(),
+    ),
+    rules=[aws.wafv2.WebAclRuleArgs(
+        name="rule-1",
+        priority=1,
+        override_action=aws.wafv2.WebAclRuleOverrideActionArgs(
+            block=[{}],
+        ),
+        statement=aws.wafv2.WebAclRuleStatementArgs(
+            managed_rule_group_statement=aws.wafv2.WebAclRuleStatementManagedRuleGroupStatementArgs(
+                name="AWSManagedRulesCommonRuleSet",
+                vendor_name="AWS",
+            ),
+        ),
+        visibility_config={
+            "cloudwatchMetricsEnabled": False,
+            "metric_name": "friendly-rule-metric-name",
+            "sampledRequestsEnabled": False,
+        },
+    )],
+    visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
+        cloudwatch_metrics_enabled=False,
+        metric_name="friendly-metric-name",
+        sampled_requests_enabled=False,
+    ))
+example_web_acl_association = aws.wafv2.WebAclAssociation("exampleWebAclAssociation",
+    resource_arn=example_graph_ql_api.arn,
+    web_acl_arn=example_web_acl.arn)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {authenticationType: "API_KEY"});
+const exampleWebAcl = new aws.wafv2.WebAcl("exampleWebAcl", {
+    description: "Example of a managed rule.",
+    scope: "REGIONAL",
+    defaultAction: {
+        allow: {},
+    },
+    rules: [{
+        name: "rule-1",
+        priority: 1,
+        overrideAction: {
+            block: [{}],
+        },
+        statement: {
+            managedRuleGroupStatement: {
+                name: "AWSManagedRulesCommonRuleSet",
+                vendorName: "AWS",
+            },
+        },
+        visibilityConfig: {
+            cloudwatchMetricsEnabled: false,
+            metricName: "friendly-rule-metric-name",
+            sampledRequestsEnabled: false,
+        },
+    }],
+    visibilityConfig: {
+        cloudwatchMetricsEnabled: false,
+        metricName: "friendly-metric-name",
+        sampledRequestsEnabled: false,
+    },
+});
+const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclAssociation", {
+    resourceArn: exampleGraphQLApi.arn,
+    webAclArn: exampleWebAcl.arn,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

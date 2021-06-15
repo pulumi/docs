@@ -582,6 +582,7 @@ const example = new aws.transfer.Server("example", {
 <span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">endpoint_details</span><span class="p">:</span> <span class="nx">Optional[ServerEndpointDetailsArgs]</span> = None<span class="p">,</span>
            <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -732,6 +733,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endpointdetails_csharp">
 <a href="#endpointdetails_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Details</a>
 </span>
@@ -852,6 +862,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointdetails_go">
@@ -976,6 +995,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="endpointdetails_nodejs">
 <a href="#endpointdetails_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Details</a>
 </span>
@@ -1096,6 +1124,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_details_python">
@@ -1389,6 +1426,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint_details</span><span class="p">:</span> <span class="nx">Optional[ServerEndpointDetailsArgs]</span> = None<span class="p">,</span>
         <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1531,6 +1569,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_csharp">
+<a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
@@ -1682,6 +1729,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_domain_go">
+<a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
@@ -1831,6 +1887,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_domain_nodejs">
+<a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
@@ -1978,6 +2043,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when `protocols` is set to `FTPS`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_domain_python">
+<a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers. Valid values are: `S3` and `EFS`. The default value is `S3`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">

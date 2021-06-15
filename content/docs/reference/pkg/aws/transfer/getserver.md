@@ -228,6 +228,15 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
@@ -337,6 +346,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of any certificate.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
@@ -450,6 +468,15 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of any certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
@@ -559,6 +586,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of any certificate.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The domain of the storage system that is used for file transfers.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">

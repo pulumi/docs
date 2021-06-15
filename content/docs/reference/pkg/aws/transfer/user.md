@@ -297,6 +297,7 @@ const fooUser = new aws.transfer.User("fooUser", {
          <span class="nx">home_directory_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserHomeDirectoryMappingArgs]]</span> = None<span class="p">,</span>
          <span class="nx">home_directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">posix_profile</span><span class="p">:</span> <span class="nx">Optional[UserPosixProfileArgs]</span> = None<span class="p">,</span>
          <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -473,7 +474,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">List&lt;User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homedirectorytype_csharp">
@@ -494,13 +495,23 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="posixprofile_csharp">
+<a href="#posixprofile_csharp" style="color: inherit; text-decoration: inherit;">Posix<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
 <a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
@@ -508,7 +519,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -556,7 +568,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homedirectorytype_go">
@@ -577,13 +589,23 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="posixprofile_go">
+<a href="#posixprofile_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
 <a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
@@ -591,7 +613,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -639,7 +662,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homedirectorytype_nodejs">
@@ -660,13 +683,23 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="posixprofile_nodejs">
+<a href="#posixprofile_nodejs" style="color: inherit; text-decoration: inherit;">posix<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
 <a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
@@ -674,7 +707,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -722,7 +756,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">Sequence[User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="home_directory_type_python">
@@ -743,13 +777,23 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="posix_profile_python">
+<a href="#posix_profile_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
 <a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
@@ -757,7 +801,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -872,6 +917,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
         <span class="nx">home_directory_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserHomeDirectoryMappingArgs]]</span> = None<span class="p">,</span>
         <span class="nx">home_directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posix_profile</span><span class="p">:</span> <span class="nx">Optional[UserPosixProfileArgs]</span> = None<span class="p">,</span>
         <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1013,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">List&lt;User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homedirectorytype_csharp">
@@ -1032,6 +1078,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_posixprofile_csharp">
+<a href="#state_posixprofile_csharp" style="color: inherit; text-decoration: inherit;">Posix<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
@@ -1058,7 +1113,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
 <a href="#state_tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
@@ -1066,7 +1122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1105,7 +1162,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homedirectorytype_go">
@@ -1124,6 +1181,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_posixprofile_go">
+<a href="#state_posixprofile_go" style="color: inherit; text-decoration: inherit;">Posix<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
@@ -1150,7 +1216,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
 <a href="#state_tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
@@ -1158,7 +1225,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1197,7 +1265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homedirectorytype_nodejs">
@@ -1216,6 +1284,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_posixprofile_nodejs">
+<a href="#state_posixprofile_nodejs" style="color: inherit; text-decoration: inherit;">posix<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
@@ -1242,7 +1319,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
 <a href="#state_tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
@@ -1250,7 +1328,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -1289,7 +1368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userhomedirectorymapping">Sequence[User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_home_directory_type_python">
@@ -1308,6 +1387,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_posix_profile_python">
+<a href="#state_posix_profile_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userposixprofile">User<wbr>Posix<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
@@ -1334,7 +1422,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
 <a href="#state_tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
@@ -1342,7 +1431,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_python">
 <a href="#state_user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -1450,6 +1540,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents the map target.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userposixprofile">User<wbr>Posix<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gid_csharp">
+<a href="#gid_csharp" style="color: inherit; text-decoration: inherit;">Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The POSIX group ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The POSIX user ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secondarygids_csharp">
+<a href="#secondarygids_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Gids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The secondary POSIX group IDs used for all EFS operations by this user.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gid_go">
+<a href="#gid_go" style="color: inherit; text-decoration: inherit;">Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The POSIX group ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The POSIX user ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secondarygids_go">
+<a href="#secondarygids_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Gids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The secondary POSIX group IDs used for all EFS operations by this user.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gid_nodejs">
+<a href="#gid_nodejs" style="color: inherit; text-decoration: inherit;">gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The POSIX group ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The POSIX user ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secondarygids_nodejs">
+<a href="#secondarygids_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Gids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The secondary POSIX group IDs used for all EFS operations by this user.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="gid_python">
+<a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The POSIX group ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The POSIX user ID used for all EFS operations by this user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secondary_gids_python">
+<a href="#secondary_gids_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The secondary POSIX group IDs used for all EFS operations by this user.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

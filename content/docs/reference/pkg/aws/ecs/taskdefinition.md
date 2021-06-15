@@ -607,6 +607,140 @@ const service = new aws.ecs.TaskDefinition("service", {
 
 
 
+### Example Using `fsx_windows_file_server_volume_configuration`
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.SecretsManager.SecretVersion("test", new Aws.SecretsManager.SecretVersionArgs
+        {
+            SecretId = aws_secretsmanager_secret.Test.Id,
+            SecretString = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "username", "admin" },
+                { "password", aws_directory_service_directory.Test.Password },
+            }),
+        });
+        var service = new Aws.Ecs.TaskDefinition("service", new Aws.Ecs.TaskDefinitionArgs
+        {
+            Family = "service",
+            ContainerDefinitions = File.ReadAllText("task-definitions/service.json"),
+            Volumes = 
+            {
+                new Aws.Ecs.Inputs.TaskDefinitionVolumeArgs
+                {
+                    Name = "service-storage",
+                    FsxWindowsFileServerVolumeConfiguration = new Aws.Ecs.Inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs
+                    {
+                        FileSystemId = aws_fsx_windows_file_system.Test.Id,
+                        RootDirectory = "\\data",
+                        AuthorizationConfig = new Aws.Ecs.Inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs
+                        {
+                            CredentialsParameter = test.Arn,
+                            Domain = aws_directory_service_directory.Test.Name,
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+test = aws.secretsmanager.SecretVersion("test",
+    secret_id=aws_secretsmanager_secret["test"]["id"],
+    secret_string=json.dumps({
+        "username": "admin",
+        "password": aws_directory_service_directory["test"]["password"],
+    }))
+service = aws.ecs.TaskDefinition("service",
+    family="service",
+    container_definitions=(lambda path: open(path).read())("task-definitions/service.json"),
+    volumes=[aws.ecs.TaskDefinitionVolumeArgs(
+        name="service-storage",
+        fsx_windows_file_server_volume_configuration=aws.ecs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs(
+            file_system_id=aws_fsx_windows_file_system["test"]["id"],
+            root_directory="\\data",
+            authorization_config=aws.ecs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs(
+                credentials_parameter=test.arn,
+                domain=aws_directory_service_directory["test"]["name"],
+            ),
+        ),
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * from "fs";
+
+const test = new aws.secretsmanager.SecretVersion("test", {
+    secretId: aws_secretsmanager_secret.test.id,
+    secretString: JSON.stringify({
+        username: "admin",
+        password: aws_directory_service_directory.test.password,
+    }),
+});
+const service = new aws.ecs.TaskDefinition("service", {
+    family: "service",
+    containerDefinitions: fs.readFileSync("task-definitions/service.json"),
+    volumes: [{
+        name: "service-storage",
+        fsxWindowsFileServerVolumeConfiguration: {
+            fileSystemId: aws_fsx_windows_file_system.test.id,
+            rootDirectory: "\\data",
+            authorizationConfig: {
+                credentialsParameter: test.arn,
+                domain: aws_directory_service_directory.test.name,
+            },
+        },
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Example Using `container_definitions` and `inference_accelerator`
 
 
@@ -820,6 +954,7 @@ const test = new aws.ecs.TaskDefinition("test", {
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">ephemeral_storage</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionEphemeralStorageArgs]</span> = None<span class="p">,</span>
                    <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">,</span>
@@ -990,6 +1125,15 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorage_csharp">
+<a href="#ephemeralstorage_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="executionrolearn_csharp">
 <a href="#executionrolearn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Role<wbr>Arn</a>
 </span>
@@ -1136,6 +1280,15 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ephemeralstorage_go">
+<a href="#ephemeralstorage_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionrolearn_go">
@@ -1286,6 +1439,15 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ephemeralstorage_nodejs">
+<a href="#ephemeralstorage_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="executionrolearn_nodejs">
 <a href="#executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
@@ -1432,6 +1594,15 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ephemeral_storage_python">
+<a href="#ephemeral_storage_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="execution_role_arn_python">
@@ -1698,6 +1869,7 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ephemeral_storage</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionEphemeralStorageArgs]</span> = None<span class="p">,</span>
         <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">,</span>
@@ -1850,6 +2022,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ephemeralstorage_csharp">
+<a href="#state_ephemeralstorage_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_executionrolearn_csharp">
@@ -2018,6 +2199,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ephemeralstorage_go">
+<a href="#state_ephemeralstorage_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_executionrolearn_go">
 <a href="#state_executionrolearn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Role<wbr>Arn</a>
 </span>
@@ -2182,6 +2372,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ephemeralstorage_nodejs">
+<a href="#state_ephemeralstorage_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_executionrolearn_nodejs">
@@ -2350,6 +2549,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ephemeral_storage_python">
+<a href="#state_ephemeral_storage_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_execution_role_arn_python">
 <a href="#state_execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
@@ -2494,6 +2702,60 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="taskdefinitionephemeralstorage">Task<wbr>Definition<wbr>Ephemeral<wbr>Storage</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sizeingib_csharp">
+<a href="#sizeingib_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Gib</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sizeingib_go">
+<a href="#sizeingib_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Gib</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sizeingib_nodejs">
+<a href="#sizeingib_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Gib</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="size_in_gib_python">
+<a href="#size_in_gib_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gib</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="taskdefinitioninferenceaccelerator">Task<wbr>Definition<wbr>Inference<wbr>Accelerator</h4>
 
@@ -2834,6 +3096,15 @@ parameter of container definition in the `mountPoints` section.
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fsxwindowsfileservervolumeconfiguration_csharp">
+<a href="#fsxwindowsfileservervolumeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostpath_csharp">
 <a href="#hostpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Path</a>
 </span>
@@ -2873,6 +3144,15 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsxwindowsfileservervolumeconfiguration_go">
+<a href="#fsxwindowsfileservervolumeconfiguration_go" style="color: inherit; text-decoration: inherit;">Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpath_go">
@@ -2916,6 +3196,15 @@ parameter of container definition in the `mountPoints` section.
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fsxwindowsfileservervolumeconfiguration_nodejs">
+<a href="#fsxwindowsfileservervolumeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostpath_nodejs">
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
 </span>
@@ -2955,6 +3244,15 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an EFS volume. Detailed below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsx_windows_file_server_volume_configuration_python">
+<a href="#fsx_windows_file_server_volume_configuration_python" style="color: inherit; text-decoration: inherit;">fsx_<wbr>windows_<wbr>file_<wbr>server_<wbr>volume_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for an FSX Windows File Server volume. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_path_python">
@@ -3176,7 +3474,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the EFS File System.
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationconfig_csharp">
@@ -3185,7 +3483,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for authorization for the Amazon EFS file system. Detailed below.
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdirectory_csharp">
@@ -3194,7 +3492,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter. This argument is ignored when using `authorization_config`.
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryption_csharp">
@@ -3225,7 +3523,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the EFS File System.
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationconfig_go">
@@ -3234,7 +3532,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for authorization for the Amazon EFS file system. Detailed below.
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdirectory_go">
@@ -3243,7 +3541,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter. This argument is ignored when using `authorization_config`.
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryption_go">
@@ -3274,7 +3572,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the EFS File System.
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationconfig_nodejs">
@@ -3283,7 +3581,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for authorization for the Amazon EFS file system. Detailed below.
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootdirectory_nodejs">
@@ -3292,7 +3590,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter. This argument is ignored when using `authorization_config`.
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryption_nodejs">
@@ -3323,7 +3621,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the EFS File System.
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_config_python">
@@ -3332,7 +3630,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for authorization for the Amazon EFS file system. Detailed below.
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_directory_python">
@@ -3341,7 +3639,7 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter. This argument is ignored when using `authorization_config`.
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transit_encryption_python">
@@ -3450,6 +3748,222 @@ parameter of container definition in the `mountPoints` section.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not to use the Amazon ECS task IAM role defined in a task definition when mounting the Amazon EFS file system. If enabled, transit encryption must be enabled in the EFSVolumeConfiguration. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="taskdefinitionvolumefsxwindowsfileservervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationconfig_csharp">
+<a href="#authorizationconfig_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filesystemid_csharp">
+<a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rootdirectory_csharp">
+<a href="#rootdirectory_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationconfig_go">
+<a href="#authorizationconfig_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filesystemid_go">
+<a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rootdirectory_go">
+<a href="#rootdirectory_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorizationconfig_nodejs">
+<a href="#authorizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="filesystemid_nodejs">
+<a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rootdirectory_nodejs">
+<a href="#rootdirectory_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="authorization_config_python">
+<a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="file_system_id_python">
+<a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon FSx for Windows File Server file system ID to use.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="root_directory_python">
+<a href="#root_directory_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="taskdefinitionvolumefsxwindowsfileservervolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Fsx<wbr>Windows<wbr>File<wbr>Server<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="credentialsparameter_csharp">
+<a href="#credentialsparameter_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="credentialsparameter_go">
+<a href="#credentialsparameter_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="credentialsparameter_nodejs">
+<a href="#credentialsparameter_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="credentials_parameter_python">
+<a href="#credentials_parameter_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>parameter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
