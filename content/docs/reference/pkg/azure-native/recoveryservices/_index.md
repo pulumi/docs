@@ -37,6 +37,7 @@ Explore the resources and functions of the azure-native.recoveryservices module.
     <li><a href="getprotectioncontainer" title="GetProtectionContainer"><span class="symbol function"></span>GetProtectionContainer</a></li>
     <li><a href="getprotectionintent" title="GetProtectionIntent"><span class="symbol function"></span>GetProtectionIntent</a></li>
     <li><a href="getprotectionpolicy" title="GetProtectionPolicy"><span class="symbol function"></span>GetProtectionPolicy</a></li>
+    <li><a href="getrecoverypointaccesstoken" title="GetRecoveryPointAccessToken"><span class="symbol function"></span>GetRecoveryPointAccessToken</a></li>
     <li><a href="getreplicationfabric" title="GetReplicationFabric"><span class="symbol function"></span>GetReplicationFabric</a></li>
     <li><a href="getreplicationmigrationitem" title="GetReplicationMigrationItem"><span class="symbol function"></span>GetReplicationMigrationItem</a></li>
     <li><a href="getreplicationnetworkmapping" title="GetReplicationNetworkMapping"><span class="symbol function"></span>GetReplicationNetworkMapping</a></li>
@@ -58,6 +59,6 @@ Explore the resources and functions of the azure-native.recoveryservices module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

@@ -23,6 +23,7 @@ Explore the resources and functions of the azure-native.notificationhubs module.
     <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
     <li><a href="getnotificationhub" title="GetNotificationHub"><span class="symbol function"></span>GetNotificationHub</a></li>
     <li><a href="getnotificationhubauthorizationrule" title="GetNotificationHubAuthorizationRule"><span class="symbol function"></span>GetNotificationHubAuthorizationRule</a></li>
+    <li><a href="getnotificationhubpnscredentials" title="GetNotificationHubPnsCredentials"><span class="symbol function"></span>GetNotificationHubPnsCredentials</a></li>
     <li><a href="listnamespacekeys" title="ListNamespaceKeys"><span class="symbol function"></span>ListNamespaceKeys</a></li>
     <li><a href="listnotificationhubkeys" title="ListNotificationHubKeys"><span class="symbol function"></span>ListNotificationHubKeys</a></li>
 </ul>
@@ -34,6 +35,6 @@ Explore the resources and functions of the azure-native.notificationhubs module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

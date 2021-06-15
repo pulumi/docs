@@ -103,6 +103,7 @@ Explore the resources and functions of the azure-native.apimanagement module.
     <li><a href="gettagbyoperation" title="GetTagByOperation"><span class="symbol function"></span>GetTagByOperation</a></li>
     <li><a href="gettagbyproduct" title="GetTagByProduct"><span class="symbol function"></span>GetTagByProduct</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getusersharedaccesstoken" title="GetUserSharedAccessToken"><span class="symbol function"></span>GetUserSharedAccessToken</a></li>
     <li><a href="listauthorizationserversecrets" title="ListAuthorizationServerSecrets"><span class="symbol function"></span>ListAuthorizationServerSecrets</a></li>
     <li><a href="listdelegationsettingsecrets" title="ListDelegationSettingSecrets"><span class="symbol function"></span>ListDelegationSettingSecrets</a></li>
     <li><a href="listgatewaykeys" title="ListGatewayKeys"><span class="symbol function"></span>ListGatewayKeys</a></li>
@@ -121,6 +122,6 @@ Explore the resources and functions of the azure-native.apimanagement module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

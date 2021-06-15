@@ -148,14 +148,14 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
             "testCategory": azure_native.machinelearningservices.LabelCategoryArgs(
                 allow_multi_select=False,
                 classes={
-                    "testClass1": azure_native.machinelearningservices.LabelClassArgs(
-                        display_name="testClass1",
-                        subclasses={
+                    "testClass1": {
+                        "displayName": "testClass1",
+                        "subclasses": {
                             "testclass1-1": azure_native.machinelearningservices.LabelClassArgs(
                                 display_name="testClass1-1",
                             ),
                         },
-                    ),
+                    },
                     "testClass2": azure_native.machinelearningservices.LabelClassArgs(
                         display_name="testClass2",
                     ),

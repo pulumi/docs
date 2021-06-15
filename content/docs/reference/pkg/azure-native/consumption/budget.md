@@ -2746,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:consumption:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
+$ pulumi import azure-native:consumption:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/TestBudget 
 ```
 
 
