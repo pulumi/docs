@@ -39,11 +39,11 @@ within a [generic CI/CD system]({{< relref "other" >}}).
         <h4 class="no-anchor">CircleCI</h4>
     </a>
     <a href="{{< relref codefresh >}}">
-        <img style="width: 120px;" src="/logos/tech/ci-cd/codefresh.svg" alt="Codefresh">
+        <img src="/logos/tech/ci-cd/codefresh.svg" alt="Codefresh">
         <h4 class="no-anchor">Codefresh</h4>
     </a>
     <a href="{{< relref github-actions >}}">
-        <img style="width: 120px;" src="/logos/tech/ci-cd/github-actions.svg" alt="GitHub Actions">
+        <img src="/logos/tech/ci-cd/github-actions.svg" alt="GitHub Actions">
         <h4 class="no-anchor">GitHub Actions</h4>
     </a>
     <a href="{{< relref gitlab-ci >}}">
