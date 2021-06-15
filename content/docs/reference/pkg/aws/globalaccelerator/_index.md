@@ -16,6 +16,11 @@ Explore the resources and functions of the aws.globalaccelerator module.
     <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getaccelerator" title="GetAccelerator"><span class="symbol function"></span>GetAccelerator</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +30,6 @@ Explore the resources and functions of the aws.globalaccelerator module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.8.0</dd>
 </dl>
 

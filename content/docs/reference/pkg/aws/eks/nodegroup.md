@@ -730,7 +730,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_csharp">
@@ -905,7 +905,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_go">
@@ -1080,7 +1080,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_nodejs">
@@ -1255,7 +1255,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_python">
@@ -1767,7 +1767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_csharp">
@@ -1969,7 +1969,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_go">
@@ -2171,7 +2171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_nodejs">
@@ -2373,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taints_python">

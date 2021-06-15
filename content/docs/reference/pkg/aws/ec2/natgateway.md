@@ -19,7 +19,7 @@ Provides a resource to create a VPC NAT Gateway.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Public NAT
 
 
 {{< example csharp >}}
@@ -32,9 +32,122 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gw = new Aws.Ec2.NatGateway("gw", new Aws.Ec2.NatGatewayArgs
+        var example = new Aws.Ec2.NatGateway("example", new Aws.Ec2.NatGatewayArgs
         {
-            AllocationId = aws_eip.Nat.Id,
+            AllocationId = aws_eip.Example.Id,
+            SubnetId = aws_subnet.Example.Id,
+            Tags = 
+            {
+                { "Name", "gw NAT" },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_internet_gateway.Example,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewNatGateway(ctx, "example", &ec2.NatGatewayArgs{
+			AllocationId: pulumi.Any(aws_eip.Example.Id),
+			SubnetId:     pulumi.Any(aws_subnet.Example.Id),
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("gw NAT"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aws_internet_gateway.Example,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.NatGateway("example",
+    allocation_id=aws_eip["example"]["id"],
+    subnet_id=aws_subnet["example"]["id"],
+    tags={
+        "Name": "gw NAT",
+    },
+    opts=pulumi.ResourceOptions(depends_on=[aws_internet_gateway["example"]]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2.NatGateway("example", {
+    allocationId: aws_eip.example.id,
+    subnetId: aws_subnet.example.id,
+    tags: {
+        Name: "gw NAT",
+    },
+}, {
+    dependsOn: [aws_internet_gateway.example],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Private NAT
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.NatGateway("example", new Aws.Ec2.NatGatewayArgs
+        {
+            ConnectivityType = "private",
             SubnetId = aws_subnet.Example.Id,
         });
     }
@@ -58,9 +171,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ec2.NewNatGateway(ctx, "gw", &ec2.NatGatewayArgs{
-			AllocationId: pulumi.Any(aws_eip.Nat.Id),
-			SubnetId:     pulumi.Any(aws_subnet.Example.Id),
+		_, err := ec2.NewNatGateway(ctx, "example", &ec2.NatGatewayArgs{
+			ConnectivityType: pulumi.String("private"),
+			SubnetId:         pulumi.Any(aws_subnet.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -80,8 +193,8 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-gw = aws.ec2.NatGateway("gw",
-    allocation_id=aws_eip["nat"]["id"],
+example = aws.ec2.NatGateway("example",
+    connectivity_type="private",
     subnet_id=aws_subnet["example"]["id"])
 ```
 
@@ -96,8 +209,8 @@ gw = aws.ec2.NatGateway("gw",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const gw = new aws.ec2.NatGateway("gw", {
-    allocationId: aws_eip.nat.id,
+const example = new aws.ec2.NatGateway("example", {
+    connectivityType: "private",
     subnetId: aws_subnet.example.id,
 });
 ```
@@ -127,6 +240,7 @@ const gw = new aws.ec2.NatGateway("gw", {
 <span class="k">def </span><span class="nx">NatGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">allocation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
@@ -259,15 +373,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allocationid_csharp">
-<a href="#allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
@@ -275,6 +380,24 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subnet ID of the subnet in which to place the gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allocationid_csharp">
+<a href="#allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectivitytype_csharp">
+<a href="#connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -299,15 +422,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allocationid_go">
-<a href="#allocationid_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
@@ -315,6 +429,24 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subnet ID of the subnet in which to place the gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allocationid_go">
+<a href="#allocationid_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectivitytype_go">
+<a href="#connectivitytype_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -339,15 +471,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allocationid_nodejs">
-<a href="#allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
@@ -355,6 +478,24 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subnet ID of the subnet in which to place the gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allocationid_nodejs">
+<a href="#allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectivitytype_nodejs">
+<a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -379,15 +520,6 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allocation_id_python">
-<a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
@@ -395,6 +527,24 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Subnet ID of the subnet in which to place the gateway.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allocation_id_python">
+<a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectivity_type_python">
+<a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -596,6 +746,7 @@ Get an existing NatGateway resource's state with the given name, ID, and optiona
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">allocation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -720,7 +871,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectivitytype_csharp">
+<a href="#state_connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_csharp">
@@ -787,7 +947,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectivitytype_go">
+<a href="#state_connectivitytype_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_go">
@@ -854,7 +1023,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectivitytype_nodejs">
+<a href="#state_connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_nodejs">
@@ -921,7 +1099,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway.
+    <dd>{{% md %}}The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectivity_type_python">
+<a href="#state_connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interface_id_python">

@@ -171,6 +171,7 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -207,6 +208,7 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -243,6 +245,7 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -279,6 +282,7 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -377,6 +381,7 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_csharp">
@@ -493,6 +498,7 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_go">
@@ -609,6 +615,7 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_nodejs">
@@ -725,6 +732,7 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+* `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_python">
@@ -859,6 +867,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="s3objectacl_csharp">
+<a href="#s3objectacl_csharp" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -891,6 +907,14 @@ The following output properties are available:
             title="Required">
         <span id="s3bucketname_go">
 <a href="#s3bucketname_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="s3objectacl_go">
+<a href="#s3objectacl_go" style="color: inherit; text-decoration: inherit;">S3Object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -931,6 +955,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="s3objectacl_nodejs">
+<a href="#s3objectacl_nodejs" style="color: inherit; text-decoration: inherit;">s3Object<wbr>Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -963,6 +995,14 @@ The following output properties are available:
             title="Required">
         <span id="s3_bucket_name_python">
 <a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="s3_object_acl_python">
+<a href="#s3_object_acl_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>object_<wbr>acl</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

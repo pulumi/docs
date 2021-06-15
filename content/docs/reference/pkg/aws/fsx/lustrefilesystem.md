@@ -141,6 +141,7 @@ const example = new aws.fsx.LustreFileSystem("example", {
                      <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">data_compression_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">deployment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">drive_cache_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">export_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -338,6 +339,15 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datacompressiontype_csharp">
+<a href="#datacompressiontype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Compression<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deploymenttype_csharp">
 <a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
 </span>
@@ -502,6 +512,15 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datacompressiontype_go">
+<a href="#datacompressiontype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Compression<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_go">
@@ -670,6 +689,15 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datacompressiontype_nodejs">
+<a href="#datacompressiontype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Compression<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="deploymenttype_nodejs">
 <a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
 </span>
@@ -834,6 +862,15 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_compression_type_python">
+<a href="#data_compression_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>compression_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_type_python">
@@ -1237,6 +1274,7 @@ Get an existing LustreFileSystem resource's state with the given name, ID, and o
         <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">data_compression_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">deployment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">drive_cache_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1411,6 +1449,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_datacompressiontype_csharp">
+<a href="#state_datacompressiontype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Compression<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymenttype_csharp">
@@ -1633,6 +1680,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datacompressiontype_go">
+<a href="#state_datacompressiontype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Compression<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deploymenttype_go">
 <a href="#state_deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
 </span>
@@ -1853,6 +1909,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datacompressiontype_nodejs">
+<a href="#state_datacompressiontype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Compression<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_deploymenttype_nodejs">
 <a href="#state_deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
 </span>
@@ -2071,6 +2136,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automatic_backup_retention_days` to be set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_data_compression_type_python">
+<a href="#state_data_compression_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>compression_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_type_python">

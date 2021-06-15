@@ -417,6 +417,15 @@ The following output properties are available:
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="connectivitytype_csharp">
+<a href="#connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connectivity type of the NAT Gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -503,6 +512,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="connectivitytype_go">
+<a href="#connectivitytype_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connectivity type of the NAT Gateway.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -593,6 +611,15 @@ The following output properties are available:
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="connectivitytype_nodejs">
+<a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connectivity type of the NAT Gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -679,6 +706,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="connectivity_type_python">
+<a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The connectivity type of the NAT Gateway.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">

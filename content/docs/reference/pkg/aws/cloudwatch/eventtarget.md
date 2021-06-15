@@ -2500,7 +2500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_csharp">
@@ -2558,7 +2558,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_go">
@@ -2616,7 +2616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_nodejs">
@@ -2674,7 +2674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
+    <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_configuration_python">
@@ -2978,7 +2978,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
-* You can have as many as 10 key-value pairs.
+* You can have as many as 100 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
 {{% /md %}}</dd></dl>
@@ -3003,7 +3003,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
-* You can have as many as 10 key-value pairs.
+* You can have as many as 100 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
 {{% /md %}}</dd></dl>
@@ -3028,7 +3028,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
-* You can have as many as 10 key-value pairs.
+* You can have as many as 100 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
 {{% /md %}}</dd></dl>
@@ -3053,7 +3053,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key value pairs specified in the form of JSONPath (for example, time = $.time)
-* You can have as many as 10 key-value pairs.
+* You can have as many as 100 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
 {{% /md %}}</dd></dl>

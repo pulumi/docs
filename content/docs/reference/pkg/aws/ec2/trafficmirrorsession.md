@@ -49,6 +49,7 @@ class MyStack : Stack
         {
             Description = "traffic mirror session - example",
             NetworkInterfaceId = aws_instance.Test.Primary_network_interface_id,
+            SessionNumber = 1,
             TrafficMirrorFilterId = filter.Id,
             TrafficMirrorTargetId = target.Id,
         });
@@ -91,6 +92,7 @@ func main() {
 		_, err = ec2.NewTrafficMirrorSession(ctx, "session", &ec2.TrafficMirrorSessionArgs{
 			Description:           pulumi.String("traffic mirror session - example"),
 			NetworkInterfaceId:    pulumi.Any(aws_instance.Test.Primary_network_interface_id),
+			SessionNumber:         pulumi.Int(1),
 			TrafficMirrorFilterId: filter.ID(),
 			TrafficMirrorTargetId: target.ID(),
 		})
@@ -119,6 +121,7 @@ target = aws.ec2.TrafficMirrorTarget("target", network_load_balancer_arn=aws_lb[
 session = aws.ec2.TrafficMirrorSession("session",
     description="traffic mirror session - example",
     network_interface_id=aws_instance["test"]["primary_network_interface_id"],
+    session_number=1,
     traffic_mirror_filter_id=filter.id,
     traffic_mirror_target_id=target.id)
 ```
@@ -142,6 +145,7 @@ const target = new aws.ec2.TrafficMirrorTarget("target", {networkLoadBalancerArn
 const session = new aws.ec2.TrafficMirrorSession("session", {
     description: "traffic mirror session - example",
     networkInterfaceId: aws_instance.test.primary_network_interface_id,
+    sessionNumber: 1,
     trafficMirrorFilterId: filter.id,
     trafficMirrorTargetId: target.id,
 });
