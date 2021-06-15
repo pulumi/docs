@@ -11,12 +11,14 @@ Explore the resources and functions of the azure-native.databricks module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="vnetpeering" title="VNetPeering"><span class="symbol resource"></span>VNetPeering</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
     <li><a href="getvnetpeering" title="GetvNetPeering"><span class="symbol function"></span>GetvNetPeering</a></li>
 </ul>
@@ -28,6 +30,6 @@ Explore the resources and functions of the azure-native.databricks module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

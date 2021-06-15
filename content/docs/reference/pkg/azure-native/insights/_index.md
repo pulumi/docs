@@ -55,10 +55,13 @@ Explore the resources and functions of the azure-native.insights module.
     <li><a href="getdatacollectionendpoint" title="GetDataCollectionEndpoint"><span class="symbol function"></span>GetDataCollectionEndpoint</a></li>
     <li><a href="getdatacollectionrule" title="GetDataCollectionRule"><span class="symbol function"></span>GetDataCollectionRule</a></li>
     <li><a href="getdatacollectionruleassociation" title="GetDataCollectionRuleAssociation"><span class="symbol function"></span>GetDataCollectionRuleAssociation</a></li>
+    <li><a href="getdiagnosticservicetokenreadonly" title="GetDiagnosticServiceTokenReadOnly"><span class="symbol function"></span>GetDiagnosticServiceTokenReadOnly</a></li>
+    <li><a href="getdiagnosticservicetokenreadwrite" title="GetDiagnosticServiceTokenReadWrite"><span class="symbol function"></span>GetDiagnosticServiceTokenReadWrite</a></li>
     <li><a href="getdiagnosticsetting" title="GetDiagnosticSetting"><span class="symbol function"></span>GetDiagnosticSetting</a></li>
     <li><a href="getexportconfiguration" title="GetExportConfiguration"><span class="symbol function"></span>GetExportConfiguration</a></li>
     <li><a href="getfavorite" title="GetFavorite"><span class="symbol function"></span>GetFavorite</a></li>
     <li><a href="getguestdiagnosticssettingsassociation" title="GetGuestDiagnosticsSettingsAssociation"><span class="symbol function"></span>GetGuestDiagnosticsSettingsAssociation</a></li>
+    <li><a href="getlivetoken" title="GetLiveToken"><span class="symbol function"></span>GetLiveToken</a></li>
     <li><a href="getlogprofile" title="GetLogProfile"><span class="symbol function"></span>GetLogProfile</a></li>
     <li><a href="getmanagementgroupdiagnosticsetting" title="GetManagementGroupDiagnosticSetting"><span class="symbol function"></span>GetManagementGroupDiagnosticSetting</a></li>
     <li><a href="getmetricalert" title="GetMetricAlert"><span class="symbol function"></span>GetMetricAlert</a></li>
@@ -84,6 +87,6 @@ Explore the resources and functions of the azure-native.insights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

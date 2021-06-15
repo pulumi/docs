@@ -552,7 +552,7 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
                 <span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookReceiverArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupInitArgs</a></span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -600,7 +600,7 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ActionGroupInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

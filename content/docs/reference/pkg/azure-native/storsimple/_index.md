@@ -29,6 +29,7 @@ Explore the resources and functions of the azure-native.storsimple module.
     <li><a href="getbackupschedule" title="GetBackupSchedule"><span class="symbol function"></span>GetBackupSchedule</a></li>
     <li><a href="getbandwidthsetting" title="GetBandwidthSetting"><span class="symbol function"></span>GetBandwidthSetting</a></li>
     <li><a href="getmanager" title="GetManager"><span class="symbol function"></span>GetManager</a></li>
+    <li><a href="getmanagerdevicepublicencryptionkey" title="GetManagerDevicePublicEncryptionKey"><span class="symbol function"></span>GetManagerDevicePublicEncryptionKey</a></li>
     <li><a href="getmanagerextendedinfo" title="GetManagerExtendedInfo"><span class="symbol function"></span>GetManagerExtendedInfo</a></li>
     <li><a href="getstorageaccountcredential" title="GetStorageAccountCredential"><span class="symbol function"></span>GetStorageAccountCredential</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
@@ -46,6 +47,6 @@ Explore the resources and functions of the azure-native.storsimple module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

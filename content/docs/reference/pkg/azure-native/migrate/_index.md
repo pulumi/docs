@@ -36,6 +36,7 @@ Explore the resources and functions of the azure-native.migrate module.
     <li><a href="getmoveresource" title="GetMoveResource"><span class="symbol function"></span>GetMoveResource</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectkeys" title="GetProjectKeys"><span class="symbol function"></span>GetProjectKeys</a></li>
     <li><a href="getservercollector" title="GetServerCollector"><span class="symbol function"></span>GetServerCollector</a></li>
     <li><a href="getsolution" title="GetSolution"><span class="symbol function"></span>GetSolution</a></li>
     <li><a href="getsolutionconfig" title="GetSolutionConfig"><span class="symbol function"></span>GetSolutionConfig</a></li>
@@ -49,6 +50,6 @@ Explore the resources and functions of the azure-native.migrate module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

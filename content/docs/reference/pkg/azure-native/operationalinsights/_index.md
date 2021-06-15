@@ -35,9 +35,9 @@ Explore the resources and functions of the azure-native.operationalinsights modu
     <li><a href="getquery" title="GetQuery"><span class="symbol function"></span>GetQuery</a></li>
     <li><a href="getquerypack" title="GetQueryPack"><span class="symbol function"></span>GetQueryPack</a></li>
     <li><a href="getsavedsearch" title="GetSavedSearch"><span class="symbol function"></span>GetSavedSearch</a></li>
+    <li><a href="getsharedkeys" title="GetSharedKeys"><span class="symbol function"></span>GetSharedKeys</a></li>
     <li><a href="getstorageinsightconfig" title="GetStorageInsightConfig"><span class="symbol function"></span>GetStorageInsightConfig</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
-    <li><a href="listworkspacekeys" title="ListWorkspaceKeys"><span class="symbol function"></span>ListWorkspaceKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -47,6 +47,6 @@ Explore the resources and functions of the azure-native.operationalinsights modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 

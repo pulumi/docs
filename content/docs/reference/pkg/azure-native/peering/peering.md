@@ -2565,7 +2565,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Cdn</dd><dt>Internal</dt>
     <dd>Internal</dd><dt>Ix</dt>
     <dd>Ix</dd><dt>Ix<wbr>Rs</dt>
-    <dd>IxRs</dd></dl>
+    <dd>IxRs</dd><dt>Voice</dt>
+    <dd>Voice</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2575,7 +2576,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Cdn</dd><dt>Direct<wbr>Peering<wbr>Type<wbr>Internal</dt>
     <dd>Internal</dd><dt>Direct<wbr>Peering<wbr>Type<wbr>Ix</dt>
     <dd>Ix</dd><dt>Direct<wbr>Peering<wbr>Type<wbr>Ix<wbr>Rs</dt>
-    <dd>IxRs</dd></dl>
+    <dd>IxRs</dd><dt>Direct<wbr>Peering<wbr>Type<wbr>Voice</dt>
+    <dd>Voice</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2585,7 +2587,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Cdn</dd><dt>Internal</dt>
     <dd>Internal</dd><dt>Ix</dt>
     <dd>Ix</dd><dt>Ix<wbr>Rs</dt>
-    <dd>IxRs</dd></dl>
+    <dd>IxRs</dd><dt>Voice</dt>
+    <dd>Voice</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2595,7 +2598,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Cdn</dd><dt>INTERNAL</dt>
     <dd>Internal</dd><dt>IX</dt>
     <dd>Ix</dd><dt>IX_RS</dt>
-    <dd>IxRs</dd></dl>
+    <dd>IxRs</dd><dt>VOICE</dt>
+    <dd>Voice</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exchangeconnection">Exchange<wbr>Connection</h4>

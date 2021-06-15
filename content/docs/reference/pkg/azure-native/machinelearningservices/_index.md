@@ -65,6 +65,7 @@ Explore the resources and functions of the azure-native.machinelearningservices 
     <li><a href="getonlinedeployment" title="GetOnlineDeployment"><span class="symbol function"></span>GetOnlineDeployment</a></li>
     <li><a href="getonlinedeploymentlogs" title="GetOnlineDeploymentLogs"><span class="symbol function"></span>GetOnlineDeploymentLogs</a></li>
     <li><a href="getonlineendpoint" title="GetOnlineEndpoint"><span class="symbol function"></span>GetOnlineEndpoint</a></li>
+    <li><a href="getonlineendpointtoken" title="GetOnlineEndpointToken"><span class="symbol function"></span>GetOnlineEndpointToken</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
     <li><a href="getworkspaceconnection" title="GetWorkspaceConnection"><span class="symbol function"></span>GetWorkspaceConnection</a></li>
@@ -86,6 +87,6 @@ Explore the resources and functions of the azure-native.machinelearningservices 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.11.0</dd>
+	<dd>1.12.0</dd>
 </dl>
 
