@@ -581,6 +581,7 @@ const fooMdbMysqlCluster = new yandex.MdbMysqlCluster("fooMdbMysqlCluster", {
                     <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbMysqlClusterHostArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                    <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[MdbMysqlClusterMaintenanceWindowArgs]</span> = None<span class="p">,</span>
                     <span class="nx">mysql_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -836,6 +837,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mysqlconfig_csharp">
 <a href="#mysqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Config</a>
 </span>
@@ -992,6 +1002,15 @@ is not provided, the default provider folder is used.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlconfig_go">
@@ -1152,6 +1171,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mysqlconfig_nodejs">
 <a href="#mysqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Config</a>
 </span>
@@ -1308,6 +1336,15 @@ is not provided, the default provider folder is used.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_config_python">
@@ -1537,6 +1574,7 @@ Get an existing MdbMysqlCluster resource's state with the given name, ID, and op
         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbMysqlClusterHostArgs]]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[MdbMysqlClusterMaintenanceWindowArgs]</span> = None<span class="p">,</span>
         <span class="nx">mysql_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1758,6 +1796,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maintenancewindow_csharp">
+<a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_mysqlconfig_csharp">
 <a href="#state_mysqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Config</a>
 </span>
@@ -1941,6 +1988,15 @@ is not provided, the default provider folder is used.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_go">
+<a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlconfig_go">
@@ -2128,6 +2184,15 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maintenancewindow_nodejs">
+<a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_mysqlconfig_nodejs">
 <a href="#state_mysqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Config</a>
 </span>
@@ -2311,6 +2376,15 @@ is not provided, the default provider folder is used.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the MySQL cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenance_window_python">
+<a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance policy of the MySQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_config_python">
@@ -2797,6 +2871,132 @@ is not provided, the default provider folder is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet, to which the host belongs. The subnet must be a part of the network to which the cluster belongs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="mdbmysqlclustermaintenancewindow">Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Allowed values: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Allowed value is between 0 and 23.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Allowed values: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Allowed value is between 0 and 23.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Allowed values: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Allowed value is between 0 and 23.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Allowed values: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Allowed value is between 0 and 23.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -1928,7 +1928,8 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -2020,7 +2021,8 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -2112,7 +2114,8 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -2204,7 +2207,8 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -3132,6 +3136,15 @@ it will wait until the instance stops itself or becomes unhealthy.
     <dd>{{% md %}}List of dns records.  The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address to assign to the instance. If empty, the address is automatically assigned from the specified subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipv4_csharp">
 <a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
 </span>
@@ -3148,6 +3161,15 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6address_csharp">
+<a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6dnsrecords_csharp">
 <a href="#ipv6dnsrecords_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Dns<wbr>Records</a>
@@ -3216,6 +3238,15 @@ it will wait until the instance stops itself or becomes unhealthy.
     <dd>{{% md %}}List of dns records.  The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address to assign to the instance. If empty, the address is automatically assigned from the specified subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipv4_go">
 <a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
 </span>
@@ -3232,6 +3263,15 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6address_go">
+<a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6dnsrecords_go">
 <a href="#ipv6dnsrecords_go" style="color: inherit; text-decoration: inherit;">Ipv6Dns<wbr>Records</a>
@@ -3300,6 +3340,15 @@ it will wait until the instance stops itself or becomes unhealthy.
     <dd>{{% md %}}List of dns records.  The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address to assign to the instance. If empty, the address is automatically assigned from the specified subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipv4_nodejs">
 <a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
 </span>
@@ -3316,6 +3365,15 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6address_nodejs">
+<a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6dnsrecords_nodejs">
 <a href="#ipv6dnsrecords_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Dns<wbr>Records</a>
@@ -3384,6 +3442,15 @@ it will wait until the instance stops itself or becomes unhealthy.
     <dd>{{% md %}}List of dns records.  The structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IP address to assign to the instance. If empty, the address is automatically assigned from the specified subnet.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipv4_python">
 <a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
 </span>
@@ -3400,6 +3467,15 @@ it will wait until the instance stops itself or becomes unhealthy.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Manual set static IPv6 address.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_dns_records_python">
 <a href="#ipv6_dns_records_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>dns_<wbr>records</a>

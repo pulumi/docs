@@ -482,6 +482,14 @@ The following output properties are available:
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbclickhouseclustermaintenancewindow">Get<wbr>Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="mlmodels_csharp">
 <a href="#mlmodels_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Models</a>
 </span>
@@ -723,6 +731,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbclickhouseclustermaintenancewindow">Get<wbr>Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mlmodels_go">
 <a href="#mlmodels_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Models</a>
@@ -966,6 +982,14 @@ The following output properties are available:
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbclickhouseclustermaintenancewindow">Get<wbr>Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="mlmodels_nodejs">
 <a href="#mlmodels_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Models</a>
 </span>
@@ -1207,6 +1231,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbclickhouseclustermaintenancewindow">Get<wbr>Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ml_models_python">
 <a href="#ml_models_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>models</a>
@@ -4202,7 +4234,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Required) Whether to use Yandex Object Storage for storing ClickHouse data. Can be either `true` or `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4214,7 +4247,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Required) Whether to use Yandex Object Storage for storing ClickHouse data. Can be either `true` or `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4226,7 +4260,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Required) Whether to use Yandex Object Storage for storing ClickHouse data. Can be either `true` or `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4238,7 +4273,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Required) Whether to use Yandex Object Storage for storing ClickHouse data. Can be either `true` or `false`.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getmdbclickhouseclusterdatabase">Get<wbr>Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Database</h4>
@@ -4319,7 +4355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
@@ -4350,7 +4386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
@@ -4381,7 +4417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
@@ -4412,7 +4448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">
@@ -4474,7 +4510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
@@ -4532,7 +4568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
@@ -4590,7 +4626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
@@ -4648,7 +4684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
@@ -4658,6 +4694,134 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone where the ClickHouse host will be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getmdbclickhouseclustermaintenancewindow">Get<wbr>Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4683,7 +4847,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
@@ -4714,7 +4878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
@@ -4745,7 +4909,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
@@ -4776,7 +4940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">

@@ -25,21 +25,384 @@ Manages a Kafka cluster within the Yandex.Cloud. For more information, see
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Yandex = Pulumi.Yandex;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooVpcNetwork = new Yandex.VpcNetwork("fooVpcNetwork", new Yandex.VpcNetworkArgs
+        {
+        });
+        var fooVpcSubnet = new Yandex.VpcSubnet("fooVpcSubnet", new Yandex.VpcSubnetArgs
+        {
+            NetworkId = fooVpcNetwork.Id,
+            V4CidrBlocks = 
+            {
+                "10.5.0.0/24",
+            },
+            Zone = "ru-central1-a",
+        });
+        var fooMdbKafkaCluster = new Yandex.MdbKafkaCluster("fooMdbKafkaCluster", new Yandex.MdbKafkaClusterArgs
+        {
+            Config = new Yandex.Inputs.MdbKafkaClusterConfigArgs
+            {
+                AssignPublicIp = false,
+                BrokersCount = 1,
+                Kafka = new Yandex.Inputs.MdbKafkaClusterConfigKafkaArgs
+                {
+                    KafkaConfig = new Yandex.Inputs.MdbKafkaClusterConfigKafkaKafkaConfigArgs
+                    {
+                        CompressionType = "COMPRESSION_TYPE_ZSTD",
+                        DefaultReplicationFactor = 1,
+                        LogFlushIntervalMessages = 1024,
+                        LogFlushIntervalMs = 1000,
+                        LogFlushSchedulerIntervalMs = 1000,
+                        LogPreallocate = true,
+                        LogRetentionBytes = 1073741824,
+                        LogRetentionHours = 168,
+                        LogRetentionMinutes = 10080,
+                        LogRetentionMs = 86400000,
+                        LogSegmentBytes = 134217728,
+                        NumPartitions = 10,
+                    },
+                    Resources = new Yandex.Inputs.MdbKafkaClusterConfigKafkaResourcesArgs
+                    {
+                        DiskSize = 32,
+                        DiskTypeId = "network-ssd",
+                        ResourcePresetId = "s2.micro",
+                    },
+                },
+                UnmanagedTopics = false,
+                Version = "2.6",
+                Zones = 
+                {
+                    "ru-central1-a",
+                },
+            },
+            Environment = "PRESTABLE",
+            NetworkId = fooVpcNetwork.Id,
+            SubnetIds = 
+            {
+                fooVpcSubnet.Id,
+            },
+            Topics = 
+            {
+                new Yandex.Inputs.MdbKafkaClusterTopicArgs
+                {
+                    Name = "input",
+                    Partitions = 2,
+                    ReplicationFactor = 1,
+                    TopicConfig = new Yandex.Inputs.MdbKafkaClusterTopicTopicConfigArgs
+                    {
+                        CompressionType = "COMPRESSION_TYPE_LZ4",
+                        DeleteRetentionMs = 86400000,
+                        FileDeleteDelayMs = 60000,
+                        FlushMessages = 128,
+                        FlushMs = 1000,
+                        MaxMessageBytes = 1048588,
+                        MinCompactionLagMs = 0,
+                        MinInsyncReplicas = 1,
+                        Preallocate = true,
+                        RetentionBytes = 10737418240,
+                        RetentionMs = 604800000,
+                        SegmentBytes = 268435456,
+                    },
+                },
+                new Yandex.Inputs.MdbKafkaClusterTopicArgs
+                {
+                    Name = "output",
+                    Partitions = 6,
+                    ReplicationFactor = 1,
+                    TopicConfig = new Yandex.Inputs.MdbKafkaClusterTopicTopicConfigArgs
+                    {
+                        CompressionType = "COMPRESSION_TYPE_GZIP",
+                        MaxMessageBytes = 1048588,
+                        Preallocate = false,
+                        SegmentBytes = 536870912,
+                    },
+                },
+            },
+            Users = 
+            {
+                new Yandex.Inputs.MdbKafkaClusterUserArgs
+                {
+                    Name = "producer-application",
+                    Password = "password",
+                    Permissions = 
+                    {
+                        new Yandex.Inputs.MdbKafkaClusterUserPermissionArgs
+                        {
+                            Role = "ACCESS_ROLE_PRODUCER",
+                            TopicName = "input",
+                        },
+                    },
+                },
+                new Yandex.Inputs.MdbKafkaClusterUserArgs
+                {
+                    Name = "worker",
+                    Password = "",
+                    Permissions = 
+                    {
+                        new Yandex.Inputs.MdbKafkaClusterUserPermissionArgs
+                        {
+                            Role = "ACCESS_ROLE_CONSUMER",
+                            TopicName = "input",
+                        },
+                        new Yandex.Inputs.MdbKafkaClusterUserPermissionArgs
+                        {
+                            Role = "ACCESS_ROLE_PRODUCER",
+                            TopicName = "output",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooVpcNetwork, err := yandex.NewVpcNetwork(ctx, "fooVpcNetwork", nil)
+		if err != nil {
+			return err
+		}
+		fooVpcSubnet, err := yandex.NewVpcSubnet(ctx, "fooVpcSubnet", &yandex.VpcSubnetArgs{
+			NetworkId: fooVpcNetwork.ID(),
+			V4CidrBlocks: pulumi.StringArray{
+				pulumi.String("10.5.0.0/24"),
+			},
+			Zone: pulumi.String("ru-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewMdbKafkaCluster(ctx, "fooMdbKafkaCluster", &yandex.MdbKafkaClusterArgs{
+			Config: &yandex.MdbKafkaClusterConfigArgs{
+				AssignPublicIp: pulumi.Bool(false),
+				BrokersCount:   pulumi.Int(1),
+				Kafka: &yandex.MdbKafkaClusterConfigKafkaArgs{
+					KafkaConfig: &yandex.MdbKafkaClusterConfigKafkaKafkaConfigArgs{
+						CompressionType:             pulumi.String("COMPRESSION_TYPE_ZSTD"),
+						DefaultReplicationFactor:    pulumi.Int(1),
+						LogFlushIntervalMessages:    pulumi.Int(1024),
+						LogFlushIntervalMs:          pulumi.Int(1000),
+						LogFlushSchedulerIntervalMs: pulumi.Int(1000),
+						LogPreallocate:              pulumi.Bool(true),
+						LogRetentionBytes:           pulumi.Int(1073741824),
+						LogRetentionHours:           pulumi.Int(168),
+						LogRetentionMinutes:         pulumi.Int(10080),
+						LogRetentionMs:              pulumi.Int(86400000),
+						LogSegmentBytes:             pulumi.Int(134217728),
+						NumPartitions:               pulumi.Int(10),
+					},
+					Resources: &yandex.MdbKafkaClusterConfigKafkaResourcesArgs{
+						DiskSize:         pulumi.Int(32),
+						DiskTypeId:       pulumi.String("network-ssd"),
+						ResourcePresetId: pulumi.String("s2.micro"),
+					},
+				},
+				UnmanagedTopics: pulumi.Bool(false),
+				Version:         pulumi.String("2.6"),
+				Zones: pulumi.StringArray{
+					pulumi.String("ru-central1-a"),
+				},
+			},
+			Environment: pulumi.String("PRESTABLE"),
+			NetworkId:   fooVpcNetwork.ID(),
+			SubnetIds: pulumi.StringArray{
+				fooVpcSubnet.ID(),
+			},
+			Topics: yandex.MdbKafkaClusterTopicArray{
+				&yandex.MdbKafkaClusterTopicArgs{
+					Name:              pulumi.String("input"),
+					Partitions:        pulumi.Int(2),
+					ReplicationFactor: pulumi.Int(1),
+					TopicConfig: &yandex.MdbKafkaClusterTopicTopicConfigArgs{
+						CompressionType:    pulumi.String("COMPRESSION_TYPE_LZ4"),
+						DeleteRetentionMs:  pulumi.Int(86400000),
+						FileDeleteDelayMs:  pulumi.Int(60000),
+						FlushMessages:      pulumi.Int(128),
+						FlushMs:            pulumi.Int(1000),
+						MaxMessageBytes:    pulumi.Int(1048588),
+						MinCompactionLagMs: pulumi.Int(0),
+						MinInsyncReplicas:  pulumi.Int(1),
+						Preallocate:        pulumi.Bool(true),
+						RetentionBytes:     pulumi.Int(10737418240),
+						RetentionMs:        pulumi.Int(604800000),
+						SegmentBytes:       pulumi.Int(268435456),
+					},
+				},
+				&yandex.MdbKafkaClusterTopicArgs{
+					Name:              pulumi.String("output"),
+					Partitions:        pulumi.Int(6),
+					ReplicationFactor: pulumi.Int(1),
+					TopicConfig: &yandex.MdbKafkaClusterTopicTopicConfigArgs{
+						CompressionType: pulumi.String("COMPRESSION_TYPE_GZIP"),
+						MaxMessageBytes: pulumi.Int(1048588),
+						Preallocate:     pulumi.Bool(false),
+						SegmentBytes:    pulumi.Int(536870912),
+					},
+				},
+			},
+			Users: yandex.MdbKafkaClusterUserArray{
+				&yandex.MdbKafkaClusterUserArgs{
+					Name:     pulumi.String("producer-application"),
+					Password: pulumi.String("password"),
+					Permissions: yandex.MdbKafkaClusterUserPermissionArray{
+						&yandex.MdbKafkaClusterUserPermissionArgs{
+							Role:      pulumi.String("ACCESS_ROLE_PRODUCER"),
+							TopicName: pulumi.String("input"),
+						},
+					},
+				},
+				&yandex.MdbKafkaClusterUserArgs{
+					Name:     pulumi.String("worker"),
+					Password: pulumi.String(""),
+					Permissions: yandex.MdbKafkaClusterUserPermissionArray{
+						&yandex.MdbKafkaClusterUserPermissionArgs{
+							Role:      pulumi.String("ACCESS_ROLE_CONSUMER"),
+							TopicName: pulumi.String("input"),
+						},
+						&yandex.MdbKafkaClusterUserPermissionArgs{
+							Role:      pulumi.String("ACCESS_ROLE_PRODUCER"),
+							TopicName: pulumi.String("output"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_yandex as yandex
+
+foo_vpc_network = yandex.VpcNetwork("fooVpcNetwork")
+foo_vpc_subnet = yandex.VpcSubnet("fooVpcSubnet",
+    network_id=foo_vpc_network.id,
+    v4_cidr_blocks=["10.5.0.0/24"],
+    zone="ru-central1-a")
+foo_mdb_kafka_cluster = yandex.MdbKafkaCluster("fooMdbKafkaCluster",
+    config=yandex.MdbKafkaClusterConfigArgs(
+        assign_public_ip=False,
+        brokers_count=1,
+        kafka=yandex.MdbKafkaClusterConfigKafkaArgs(
+            kafka_config=yandex.MdbKafkaClusterConfigKafkaKafkaConfigArgs(
+                compression_type="COMPRESSION_TYPE_ZSTD",
+                default_replication_factor=1,
+                log_flush_interval_messages=1024,
+                log_flush_interval_ms=1000,
+                log_flush_scheduler_interval_ms=1000,
+                log_preallocate=True,
+                log_retention_bytes=1073741824,
+                log_retention_hours=168,
+                log_retention_minutes=10080,
+                log_retention_ms=86400000,
+                log_segment_bytes=134217728,
+                num_partitions=10,
+            ),
+            resources=yandex.MdbKafkaClusterConfigKafkaResourcesArgs(
+                disk_size=32,
+                disk_type_id="network-ssd",
+                resource_preset_id="s2.micro",
+            ),
+        ),
+        unmanaged_topics=False,
+        version="2.6",
+        zones=["ru-central1-a"],
+    ),
+    environment="PRESTABLE",
+    network_id=foo_vpc_network.id,
+    subnet_ids=[foo_vpc_subnet.id],
+    topics=[
+        yandex.MdbKafkaClusterTopicArgs(
+            name="input",
+            partitions=2,
+            replication_factor=1,
+            topic_config=yandex.MdbKafkaClusterTopicTopicConfigArgs(
+                compression_type="COMPRESSION_TYPE_LZ4",
+                delete_retention_ms=86400000,
+                file_delete_delay_ms=60000,
+                flush_messages=128,
+                flush_ms=1000,
+                max_message_bytes=1048588,
+                min_compaction_lag_ms=0,
+                min_insync_replicas=1,
+                preallocate=True,
+                retention_bytes=10737418240,
+                retention_ms=604800000,
+                segment_bytes=268435456,
+            ),
+        ),
+        yandex.MdbKafkaClusterTopicArgs(
+            name="output",
+            partitions=6,
+            replication_factor=1,
+            topic_config=yandex.MdbKafkaClusterTopicTopicConfigArgs(
+                compression_type="COMPRESSION_TYPE_GZIP",
+                max_message_bytes=1048588,
+                preallocate=False,
+                segment_bytes=536870912,
+            ),
+        ),
+    ],
+    users=[
+        yandex.MdbKafkaClusterUserArgs(
+            name="producer-application",
+            password="password",
+            permissions=[yandex.MdbKafkaClusterUserPermissionArgs(
+                role="ACCESS_ROLE_PRODUCER",
+                topic_name="input",
+            )],
+        ),
+        yandex.MdbKafkaClusterUserArgs(
+            name="worker",
+            password="",
+            permissions=[
+                yandex.MdbKafkaClusterUserPermissionArgs(
+                    role="ACCESS_ROLE_CONSUMER",
+                    topic_name="input",
+                ),
+                yandex.MdbKafkaClusterUserPermissionArgs(
+                    role="ACCESS_ROLE_PRODUCER",
+                    topic_name="output",
+                ),
+            ],
+        ),
+    ])
+```
+
 
 {{< /example >}}
 
@@ -64,6 +427,7 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
         kafka: {
             kafkaConfig: {
                 compressionType: "COMPRESSION_TYPE_ZSTD",
+                defaultReplicationFactor: 1,
                 logFlushIntervalMessages: 1024,
                 logFlushIntervalMs: 1000,
                 logFlushSchedulerIntervalMs: 1000,
@@ -73,6 +437,7 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
                 logRetentionMinutes: 10080,
                 logRetentionMs: 86400000,
                 logSegmentBytes: 134217728,
+                numPartitions: 10,
             },
             resources: {
                 diskSize: 32,
@@ -86,7 +451,7 @@ const fooMdbKafkaCluster = new yandex.MdbKafkaCluster("foo", {
     },
     environment: "PRESTABLE",
     networkId: fooVpcNetwork.id,
-    subnetId: [fooVpcSubnet.id],
+    subnetIds: [fooVpcSubnet.id],
     topics: [
         {
             name: "input",
@@ -398,7 +763,8 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -509,7 +875,8 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -620,7 +987,8 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -731,7 +1099,8 @@ The MdbKafkaCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1223,7 +1592,8 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_csharp">
 <a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -1371,7 +1741,8 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_go">
 <a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -1519,7 +1890,8 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_nodejs">
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1667,7 +2039,8 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_python">
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -2078,6 +2451,14 @@ For more information see `status` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaultreplicationfactor_csharp">
+<a href="#defaultreplicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="logflushintervalmessages_csharp">
 <a href="#logflushintervalmessages_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Flush<wbr>Interval<wbr>Messages</a>
 </span>
@@ -2150,6 +2531,14 @@ For more information see `status` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numpartitions_csharp">
+<a href="#numpartitions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="socketreceivebufferbytes_csharp">
 <a href="#socketreceivebufferbytes_csharp" style="color: inherit; text-decoration: inherit;">Socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
@@ -2183,6 +2572,14 @@ For more information see `status` field of JSON representation in [the official 
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultreplicationfactor_go">
+<a href="#defaultreplicationfactor_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,6 +2655,14 @@ For more information see `status` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numpartitions_go">
+<a href="#numpartitions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="socketreceivebufferbytes_go">
 <a href="#socketreceivebufferbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
@@ -2291,6 +2696,14 @@ For more information see `status` field of JSON representation in [the official 
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultreplicationfactor_nodejs">
+<a href="#defaultreplicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Replication<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,6 +2779,14 @@ For more information see `status` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="numpartitions_nodejs">
+<a href="#numpartitions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Partitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="socketreceivebufferbytes_nodejs">
 <a href="#socketreceivebufferbytes_nodejs" style="color: inherit; text-decoration: inherit;">socket<wbr>Receive<wbr>Buffer<wbr>Bytes</a>
 </span>
@@ -2399,6 +2820,14 @@ For more information see `status` field of JSON representation in [the official 
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_replication_factor_python">
+<a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2468,6 +2897,14 @@ For more information see `status` field of JSON representation in [the official 
             title="Optional">
         <span id="log_segment_bytes_python">
 <a href="#log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>segment_<wbr>bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="num_partitions_python">
+<a href="#num_partitions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>partitions</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -2844,7 +3281,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+    <dd>{{% md %}}The ID of the subnet, to which the host belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
@@ -2902,7 +3339,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+    <dd>{{% md %}}The ID of the subnet, to which the host belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
@@ -2960,7 +3397,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+    <dd>{{% md %}}The ID of the subnet, to which the host belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
@@ -3018,7 +3455,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IDs of the subnets, to which the Kafka cluster belongs.
+    <dd>{{% md %}}The ID of the subnet, to which the host belongs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">

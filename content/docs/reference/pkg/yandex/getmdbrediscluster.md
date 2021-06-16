@@ -380,6 +380,14 @@ The following output properties are available:
     <dd>{{% md %}}A set of key/value label pairs to assign to the Redis cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbredisclustermaintenancewindow">Get<wbr>Mdb<wbr>Redis<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -533,6 +541,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the Redis cluster.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbredisclustermaintenancewindow">Get<wbr>Mdb<wbr>Redis<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -688,6 +704,14 @@ The following output properties are available:
     <dd>{{% md %}}A set of key/value label pairs to assign to the Redis cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbredisclustermaintenancewindow">Get<wbr>Mdb<wbr>Redis<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -842,6 +866,14 @@ The following output properties are available:
     <dd>{{% md %}}A set of key/value label pairs to assign to the Redis cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbredisclustermaintenancewindow">Get<wbr>Mdb<wbr>Redis<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -918,6 +950,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="databases_csharp">
+<a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of databases (changing requires redis-server restart).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="maxmemorypolicy_csharp">
 <a href="#maxmemorypolicy_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Policy</a>
 </span>
@@ -925,6 +966,33 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis key eviction policy for a dataset that reaches maximum memory.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notifykeyspaceevents_csharp">
+<a href="#notifykeyspaceevents_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Keyspace<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Select the events that Redis will notify among a set of classes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowloglogslowerthan_csharp">
+<a href="#slowloglogslowerthan_csharp" style="color: inherit; text-decoration: inherit;">Slowlog<wbr>Log<wbr>Slower<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Log slow queries below this number in microseconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowlogmaxlen_csharp">
+<a href="#slowlogmaxlen_csharp" style="color: inherit; text-decoration: inherit;">Slowlog<wbr>Max<wbr>Len</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Slow queries log length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_csharp">
@@ -949,6 +1017,15 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="databases_go">
+<a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of databases (changing requires redis-server restart).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="maxmemorypolicy_go">
 <a href="#maxmemorypolicy_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Policy</a>
 </span>
@@ -956,6 +1033,33 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis key eviction policy for a dataset that reaches maximum memory.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notifykeyspaceevents_go">
+<a href="#notifykeyspaceevents_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Keyspace<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Select the events that Redis will notify among a set of classes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowloglogslowerthan_go">
+<a href="#slowloglogslowerthan_go" style="color: inherit; text-decoration: inherit;">Slowlog<wbr>Log<wbr>Slower<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Log slow queries below this number in microseconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowlogmaxlen_go">
+<a href="#slowlogmaxlen_go" style="color: inherit; text-decoration: inherit;">Slowlog<wbr>Max<wbr>Len</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Slow queries log length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_go">
@@ -980,6 +1084,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="databases_nodejs">
+<a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of databases (changing requires redis-server restart).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="maxmemorypolicy_nodejs">
 <a href="#maxmemorypolicy_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Policy</a>
 </span>
@@ -987,6 +1100,33 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis key eviction policy for a dataset that reaches maximum memory.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notifykeyspaceevents_nodejs">
+<a href="#notifykeyspaceevents_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Keyspace<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Select the events that Redis will notify among a set of classes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowloglogslowerthan_nodejs">
+<a href="#slowloglogslowerthan_nodejs" style="color: inherit; text-decoration: inherit;">slowlog<wbr>Log<wbr>Slower<wbr>Than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Log slow queries below this number in microseconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowlogmaxlen_nodejs">
+<a href="#slowlogmaxlen_nodejs" style="color: inherit; text-decoration: inherit;">slowlog<wbr>Max<wbr>Len</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Slow queries log length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_nodejs">
@@ -1011,6 +1151,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="databases_python">
+<a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of databases (changing requires redis-server restart).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="maxmemory_policy_python">
 <a href="#maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>policy</a>
 </span>
@@ -1018,6 +1167,33 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis key eviction policy for a dataset that reaches maximum memory.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notify_keyspace_events_python">
+<a href="#notify_keyspace_events_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>keyspace_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Select the events that Redis will notify among a set of classes.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowlog_log_slower_than_python">
+<a href="#slowlog_log_slower_than_python" style="color: inherit; text-decoration: inherit;">slowlog_<wbr>log_<wbr>slower_<wbr>than</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Log slow queries below this number in microseconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="slowlog_max_len_python">
+<a href="#slowlog_max_len_python" style="color: inherit; text-decoration: inherit;">slowlog_<wbr>max_<wbr>len</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Slow queries log length.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_python">
@@ -1204,6 +1380,134 @@ be a part of the network to which the cluster belongs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone where the Redis host will be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getmdbredisclustermaintenancewindow">Get<wbr>Mdb<wbr>Redis<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

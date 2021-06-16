@@ -1028,6 +1028,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="autoscalingconfig_csharp">
+<a href="#autoscalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdataprocclusterclusterconfigsubclusterspecautoscalingconfig">Get<wbr>Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Optional autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hostscount_csharp">
 <a href="#hostscount_csharp" style="color: inherit; text-decoration: inherit;">Hosts<wbr>Count</a>
 </span>
@@ -1085,6 +1094,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="autoscalingconfig_go">
+<a href="#autoscalingconfig_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdataprocclusterclusterconfigsubclusterspecautoscalingconfig">Get<wbr>Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Optional autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostscount_go">
 <a href="#hostscount_go" style="color: inherit; text-decoration: inherit;">Hosts<wbr>Count</a>
@@ -1144,6 +1162,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="autoscalingconfig_nodejs">
+<a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdataprocclusterclusterconfigsubclusterspecautoscalingconfig">Get<wbr>Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Optional autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hostscount_nodejs">
 <a href="#hostscount_nodejs" style="color: inherit; text-decoration: inherit;">hosts<wbr>Count</a>
 </span>
@@ -1202,6 +1229,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="autoscaling_config_python">
+<a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdataprocclusterclusterconfigsubclusterspecautoscalingconfig">Get<wbr>Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Optional autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosts_count_python">
 <a href="#hosts_count_python" style="color: inherit; text-decoration: inherit;">hosts_<wbr>count</a>
 </span>
@@ -1254,6 +1290,278 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet, to which hosts of the subcluster belong.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getdataprocclusterclusterconfigsubclusterspecautoscalingconfig">Get<wbr>Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpuutilizationtarget_csharp">
+<a href="#cpuutilizationtarget_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decommissiontimeout_csharp">
+<a href="#decommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxhostscount_csharp">
+<a href="#maxhostscount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hosts<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="measurementduration_csharp">
+<a href="#measurementduration_csharp" style="color: inherit; text-decoration: inherit;">Measurement<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="preemptible_csharp">
+<a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stabilizationduration_csharp">
+<a href="#stabilizationduration_csharp" style="color: inherit; text-decoration: inherit;">Stabilization<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmupduration_csharp">
+<a href="#warmupduration_csharp" style="color: inherit; text-decoration: inherit;">Warmup<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpuutilizationtarget_go">
+<a href="#cpuutilizationtarget_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decommissiontimeout_go">
+<a href="#decommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxhostscount_go">
+<a href="#maxhostscount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hosts<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="measurementduration_go">
+<a href="#measurementduration_go" style="color: inherit; text-decoration: inherit;">Measurement<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="preemptible_go">
+<a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stabilizationduration_go">
+<a href="#stabilizationduration_go" style="color: inherit; text-decoration: inherit;">Stabilization<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmupduration_go">
+<a href="#warmupduration_go" style="color: inherit; text-decoration: inherit;">Warmup<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpuutilizationtarget_nodejs">
+<a href="#cpuutilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decommissiontimeout_nodejs">
+<a href="#decommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxhostscount_nodejs">
+<a href="#maxhostscount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hosts<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="measurementduration_nodejs">
+<a href="#measurementduration_nodejs" style="color: inherit; text-decoration: inherit;">measurement<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="preemptible_nodejs">
+<a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stabilizationduration_nodejs">
+<a href="#stabilizationduration_nodejs" style="color: inherit; text-decoration: inherit;">stabilization<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmupduration_nodejs">
+<a href="#warmupduration_nodejs" style="color: inherit; text-decoration: inherit;">warmup<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cpu_utilization_target_python">
+<a href="#cpu_utilization_target_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="decommission_timeout_python">
+<a href="#decommission_timeout_python" style="color: inherit; text-decoration: inherit;">decommission_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_hosts_count_python">
+<a href="#max_hosts_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hosts_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="measurement_duration_python">
+<a href="#measurement_duration_python" style="color: inherit; text-decoration: inherit;">measurement_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="preemptible_python">
+<a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stabilization_duration_python">
+<a href="#stabilization_duration_python" style="color: inherit; text-decoration: inherit;">stabilization_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmup_duration_python">
+<a href="#warmup_duration_python" style="color: inherit; text-decoration: inherit;">warmup_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
