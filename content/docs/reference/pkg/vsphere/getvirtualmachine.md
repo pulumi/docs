@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v4/go/vsphere"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -179,6 +179,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
                         <span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                         <span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                        <span class="nx">replace_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -190,6 +191,8 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
                         <span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[GetVirtualMachineVapp]</span> = None<span class="p">,</span>
+                        <span class="nx">vbs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                        <span class="nx">vvtd_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualMachineResult</code></pre></div>
 {{% /choosable %}}
 
@@ -505,6 +508,14 @@ For default datacenters, use the `id` attribute from an empty
 virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replacetrigger_csharp">
+<a href="#replacetrigger_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runtoolsscriptsafterpoweron_csharp">
 <a href="#runtoolsscriptsafterpoweron_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
@@ -592,6 +603,22 @@ scan for disk attributes and controller types on. Default: `1`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbsenabled_csharp">
+<a href="#vbsenabled_csharp" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtdenabled_csharp">
+<a href="#vvtdenabled_csharp" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -888,6 +915,14 @@ For default datacenters, use the `id` attribute from an empty
 virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replacetrigger_go">
+<a href="#replacetrigger_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runtoolsscriptsafterpoweron_go">
 <a href="#runtoolsscriptsafterpoweron_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
@@ -975,6 +1010,22 @@ scan for disk attributes and controller types on. Default: `1`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbsenabled_go">
+<a href="#vbsenabled_go" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtdenabled_go">
+<a href="#vvtdenabled_go" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1271,6 +1322,14 @@ For default datacenters, use the `id` attribute from an empty
 virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replacetrigger_nodejs">
+<a href="#replacetrigger_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runtoolsscriptsafterpoweron_nodejs">
 <a href="#runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
@@ -1358,6 +1417,22 @@ scan for disk attributes and controller types on. Default: `1`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbsenabled_nodejs">
+<a href="#vbsenabled_nodejs" style="color: inherit; text-decoration: inherit;">vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtdenabled_nodejs">
+<a href="#vvtdenabled_nodejs" style="color: inherit; text-decoration: inherit;">vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1654,6 +1729,14 @@ For default datacenters, use the `id` attribute from an empty
 virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="replace_trigger_python">
+<a href="#replace_trigger_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="run_tools_scripts_after_power_on_python">
 <a href="#run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
 </span>
@@ -1741,6 +1824,22 @@ scan for disk attributes and controller types on. Default: `1`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vbs_enabled_python">
+<a href="#vbs_enabled_python" style="color: inherit; text-decoration: inherit;">vbs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vvtd_enabled_python">
+<a href="#vvtd_enabled_python" style="color: inherit; text-decoration: inherit;">vvtd_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1850,6 +1949,21 @@ are scanned for disks. The sub-attributes are:
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
 `e1000`, `e1000e`, `pcnet32`, `sriov`, `vmxnet2`, or `vmxnet3`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Information about each of the network interfaces on this 
+virtual machine or template. These are sorted by device bus order so that they
+can be applied to a `vsphere.VirtualMachine` resource in the order the resource
+expects while cloning. This is useful for discovering certain network interface
+settings while performing a linked clone, as all settings that are output by this
+data source must be the same on the destination virtual machine as the source.
+The sub-attributes are:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scsibussharing_csharp">
@@ -2140,6 +2254,14 @@ guest_id is a non-specific operating system, like `otherGuest`.
 virtual machine.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="replacetrigger_csharp">
+<a href="#replacetrigger_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="runtoolsscriptsafterpoweron_csharp">
 <a href="#runtoolsscriptsafterpoweron_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
@@ -2217,6 +2339,22 @@ virtual machine.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vbsenabled_csharp">
+<a href="#vbsenabled_csharp" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vvtdenabled_csharp">
+<a href="#vvtdenabled_csharp" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,6 +2455,21 @@ are scanned for disks. The sub-attributes are:
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
 `e1000`, `e1000e`, `pcnet32`, `sriov`, `vmxnet2`, or `vmxnet3`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinenetworkinterface">[]Get<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}Information about each of the network interfaces on this 
+virtual machine or template. These are sorted by device bus order so that they
+can be applied to a `vsphere.VirtualMachine` resource in the order the resource
+expects while cloning. This is useful for discovering certain network interface
+settings while performing a linked clone, as all settings that are output by this
+data source must be the same on the destination virtual machine as the source.
+The sub-attributes are:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scsibussharing_go">
@@ -2607,6 +2760,14 @@ guest_id is a non-specific operating system, like `otherGuest`.
 virtual machine.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="replacetrigger_go">
+<a href="#replacetrigger_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="runtoolsscriptsafterpoweron_go">
 <a href="#runtoolsscriptsafterpoweron_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
@@ -2684,6 +2845,22 @@ virtual machine.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vbsenabled_go">
+<a href="#vbsenabled_go" style="color: inherit; text-decoration: inherit;">Vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vvtdenabled_go">
+<a href="#vvtdenabled_go" style="color: inherit; text-decoration: inherit;">Vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2784,6 +2961,21 @@ are scanned for disks. The sub-attributes are:
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
 `e1000`, `e1000e`, `pcnet32`, `sriov`, `vmxnet2`, or `vmxnet3`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinenetworkinterface">Get<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}Information about each of the network interfaces on this 
+virtual machine or template. These are sorted by device bus order so that they
+can be applied to a `vsphere.VirtualMachine` resource in the order the resource
+expects while cloning. This is useful for discovering certain network interface
+settings while performing a linked clone, as all settings that are output by this
+data source must be the same on the destination virtual machine as the source.
+The sub-attributes are:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scsibussharing_nodejs">
@@ -3074,6 +3266,14 @@ guest_id is a non-specific operating system, like `otherGuest`.
 virtual machine.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="replacetrigger_nodejs">
+<a href="#replacetrigger_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="runtoolsscriptsafterpoweron_nodejs">
 <a href="#runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
@@ -3151,6 +3351,22 @@ virtual machine.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vbsenabled_nodejs">
+<a href="#vbsenabled_nodejs" style="color: inherit; text-decoration: inherit;">vbs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vvtdenabled_nodejs">
+<a href="#vvtdenabled_nodejs" style="color: inherit; text-decoration: inherit;">vvtd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3251,6 +3467,21 @@ are scanned for disks. The sub-attributes are:
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
 `e1000`, `e1000e`, `pcnet32`, `sriov`, `vmxnet2`, or `vmxnet3`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinenetworkinterface">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}Information about each of the network interfaces on this 
+virtual machine or template. These are sorted by device bus order so that they
+can be applied to a `vsphere.VirtualMachine` resource in the order the resource
+expects while cloning. This is useful for discovering certain network interface
+settings while performing a linked clone, as all settings that are output by this
+data source must be the same on the destination virtual machine as the source.
+The sub-attributes are:
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scsi_bus_sharing_python">
@@ -3541,6 +3772,14 @@ guest_id is a non-specific operating system, like `otherGuest`.
 virtual machine.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="replace_trigger_python">
+<a href="#replace_trigger_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="run_tools_scripts_after_power_on_python">
 <a href="#run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
 </span>
@@ -3618,6 +3857,22 @@ virtual machine.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vbs_enabled_python">
+<a href="#vbs_enabled_python" style="color: inherit; text-decoration: inherit;">vbs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="vvtd_enabled_python">
+<a href="#vvtd_enabled_python" style="color: inherit; text-decoration: inherit;">vvtd_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3825,6 +4080,306 @@ virtual machine.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getvirtualmachinenetworkinterface">Get<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adaptertype_csharp">
+<a href="#adaptertype_csharp" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network interface types for each network interface found 
+on the virtual machine, in device bus order. Will be one of `e1000`, `e1000e` or
+`vmxnet3`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthsharecount_csharp">
+<a href="#bandwidthsharecount_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The share count for this network interface when the 
+share level is custom.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="macaddress_csharp">
+<a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MAC address of this network interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed object reference ID of the network this interface is 
+connected to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthlimit_csharp">
+<a href="#bandwidthlimit_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper bandwidth limit of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthreservation_csharp">
+<a href="#bandwidthreservation_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth reservation of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthsharelevel_csharp">
+<a href="#bandwidthsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth share allocation level for this interface. 
+Can be one of `low`, `normal`, `high`, or `custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adaptertype_go">
+<a href="#adaptertype_go" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network interface types for each network interface found 
+on the virtual machine, in device bus order. Will be one of `e1000`, `e1000e` or
+`vmxnet3`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthsharecount_go">
+<a href="#bandwidthsharecount_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The share count for this network interface when the 
+share level is custom.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="macaddress_go">
+<a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MAC address of this network interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed object reference ID of the network this interface is 
+connected to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthlimit_go">
+<a href="#bandwidthlimit_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper bandwidth limit of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthreservation_go">
+<a href="#bandwidthreservation_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth reservation of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthsharelevel_go">
+<a href="#bandwidthsharelevel_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth share allocation level for this interface. 
+Can be one of `low`, `normal`, `high`, or `custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adaptertype_nodejs">
+<a href="#adaptertype_nodejs" style="color: inherit; text-decoration: inherit;">adapter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network interface types for each network interface found 
+on the virtual machine, in device bus order. Will be one of `e1000`, `e1000e` or
+`vmxnet3`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidthsharecount_nodejs">
+<a href="#bandwidthsharecount_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The share count for this network interface when the 
+share level is custom.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="macaddress_nodejs">
+<a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MAC address of this network interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed object reference ID of the network this interface is 
+connected to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthlimit_nodejs">
+<a href="#bandwidthlimit_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The upper bandwidth limit of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthreservation_nodejs">
+<a href="#bandwidthreservation_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth reservation of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthsharelevel_nodejs">
+<a href="#bandwidthsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth share allocation level for this interface. 
+Can be one of `low`, `normal`, `high`, or `custom`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="adapter_type_python">
+<a href="#adapter_type_python" style="color: inherit; text-decoration: inherit;">adapter_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network interface types for each network interface found 
+on the virtual machine, in device bus order. Will be one of `e1000`, `e1000e` or
+`vmxnet3`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="bandwidth_share_count_python">
+<a href="#bandwidth_share_count_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>share_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The share count for this network interface when the 
+share level is custom.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The MAC address of this network interface.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The managed object reference ID of the network this interface is 
+connected to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidth_limit_python">
+<a href="#bandwidth_limit_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper bandwidth limit of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidth_reservation_python">
+<a href="#bandwidth_reservation_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>reservation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth reservation of this network interface, 
+in Mbits/sec.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidth_share_level_python">
+<a href="#bandwidth_share_level_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>share_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth share allocation level for this interface. 
+Can be one of `low`, `normal`, `high`, or `custom`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
