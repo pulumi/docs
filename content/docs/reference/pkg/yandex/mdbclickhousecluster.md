@@ -220,6 +220,10 @@ class MyStack : Stack
                     Zone = "ru-central1-a",
                 },
             },
+            MaintenanceWindow = new Yandex.Inputs.MdbClickhouseClusterMaintenanceWindowArgs
+            {
+                Type = "ANYTIME",
+            },
             MlModels = 
             {
                 new Yandex.Inputs.MdbClickhouseClusterMlModelArgs
@@ -445,6 +449,9 @@ func main() {
 					Zone:     pulumi.String("ru-central1-a"),
 				},
 			},
+			MaintenanceWindow: &yandex.MdbClickhouseClusterMaintenanceWindowArgs{
+				Type: pulumi.String("ANYTIME"),
+			},
 			MlModels: yandex.MdbClickhouseClusterMlModelArray{
 				&yandex.MdbClickhouseClusterMlModelArgs{
 					Name: pulumi.String("test_model"),
@@ -634,6 +641,9 @@ foo_mdb_clickhouse_cluster = yandex.MdbClickhouseCluster("fooMdbClickhouseCluste
         type="CLICKHOUSE",
         zone="ru-central1-a",
     )],
+    maintenance_window=yandex.MdbClickhouseClusterMaintenanceWindowArgs(
+        type="ANYTIME",
+    ),
     ml_models=[yandex.MdbClickhouseClusterMlModelArgs(
         name="test_model",
         type="ML_MODEL_TYPE_CATBOOST",
@@ -812,6 +822,9 @@ const fooMdbClickhouseCluster = new yandex.MdbClickhouseCluster("foo", {
         type: "CLICKHOUSE",
         zone: "ru-central1-a",
     }],
+    maintenanceWindow: {
+        type: "ANYTIME",
+    },
     mlModels: [{
         name: "test_model",
         type: "ML_MODEL_TYPE_CATBOOST",
@@ -883,6 +896,7 @@ const fooMdbClickhouseCluster = new yandex.MdbClickhouseCluster("foo", {
                          <span class="nx">format_schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbClickhouseClusterFormatSchemaArgs]]</span> = None<span class="p">,</span>
                          <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbClickhouseClusterHostArgs]]</span> = None<span class="p">,</span>
                          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                         <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[MdbClickhouseClusterMaintenanceWindowArgs]</span> = None<span class="p">,</span>
                          <span class="nx">ml_models</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbClickhouseClusterMlModelArgs]]</span> = None<span class="p">,</span>
                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1149,6 +1163,14 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mlmodels_csharp">
 <a href="#mlmodels_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Models</a>
 </span>
@@ -1368,6 +1390,14 @@ is not provided, the default provider folder is used.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlmodels_go">
 <a href="#mlmodels_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Models</a>
@@ -1589,6 +1619,14 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="mlmodels_nodejs">
 <a href="#mlmodels_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Models</a>
 </span>
@@ -1809,6 +1847,14 @@ is not provided, the default provider folder is used.
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ml_models_python">
 <a href="#ml_models_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>models</a>
 </span>
@@ -1925,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -1943,7 +1989,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1966,7 +2012,7 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -1984,7 +2030,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2007,7 +2053,7 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -2025,7 +2071,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2048,7 +2094,7 @@ For more information see `status` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -2066,7 +2112,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2102,6 +2148,7 @@ Get an existing MdbClickhouseCluster resource's state with the given name, ID, a
         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbClickhouseClusterHostArgs]]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[MdbClickhouseClusterMaintenanceWindowArgs]</span> = None<span class="p">,</span>
         <span class="nx">ml_models</span><span class="p">:</span> <span class="nx">Optional[Sequence[MdbClickhouseClusterMlModelArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2340,7 +2387,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,6 +2408,14 @@ For more information see `health` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_csharp">
+<a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mlmodels_csharp">
 <a href="#state_mlmodels_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Models</a>
@@ -2440,7 +2495,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2644,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,6 +2665,14 @@ For more information see `health` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_go">
+<a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mlmodels_go">
 <a href="#state_mlmodels_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Models</a>
@@ -2689,7 +2752,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2838,7 +2901,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,6 +2922,14 @@ For more information see `health` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_nodejs">
+<a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mlmodels_nodejs">
 <a href="#state_mlmodels_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Models</a>
@@ -2938,7 +3009,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3087,7 +3158,7 @@ is not provided, the default provider folder is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Aggregated health of the cluster. Can be either `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
+    <dd>{{% md %}}Aggregated health of the cluster. Can be `ALIVE`, `DEGRADED`, `DEAD` or `HEALTH_UNKNOWN`.
 For more information see `health` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3108,6 +3179,14 @@ For more information see `health` field of JSON representation in [the official 
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the ClickHouse cluster.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenance_window_python">
+<a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ml_models_python">
 <a href="#state_ml_models_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>models</a>
@@ -3187,7 +3266,7 @@ For more information see `health` field of JSON representation in [the official 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the cluster. Can be either `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
+    <dd>{{% md %}}Status of the cluster. Can be `CREATING`, `STARTING`, `RUNNING`, `UPDATING`, `STOPPING`, `STOPPED`, `ERROR` or `STATUS_UNKNOWN`.
 For more information see `status` field of JSON representation in [the official documentation](https://cloud.yandex.com/docs/managed-clickhouse/api-ref/Cluster/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6192,7 +6271,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
@@ -6223,7 +6302,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
@@ -6254,7 +6333,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
@@ -6285,7 +6364,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">
@@ -6309,7 +6388,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
@@ -6368,7 +6447,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
@@ -6427,7 +6506,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
@@ -6486,7 +6565,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
@@ -6536,6 +6615,132 @@ For more information see [the official documentation](https://cloud.yandex.com/d
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="mdbclickhouseclustermaintenancewindow">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Day of week for maintenance window if window type is weekly. Possible values: `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="mdbclickhouseclustermlmodel">Mdb<wbr>Clickhouse<wbr>Cluster<wbr>Ml<wbr>Model</h4>
 
 {{% choosable language csharp %}}
@@ -6556,7 +6761,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
@@ -6587,7 +6792,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
@@ -6618,7 +6823,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
@@ -6649,7 +6854,7 @@ For more information see [the official documentation](https://cloud.yandex.com/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the model.
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">

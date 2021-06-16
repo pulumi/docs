@@ -527,6 +527,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbmysqlclustermaintenancewindow">Get<wbr>Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window settings of the MySQL cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="mysqlconfig_csharp">
 <a href="#mysqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Config</a>
 </span>
@@ -706,6 +715,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbmysqlclustermaintenancewindow">Get<wbr>Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window settings of the MySQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mysqlconfig_go">
@@ -889,6 +907,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbmysqlclustermaintenancewindow">Get<wbr>Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window settings of the MySQL cluster. The structure is documented below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="mysqlconfig_nodejs">
 <a href="#mysqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Config</a>
 </span>
@@ -1068,6 +1095,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmdbmysqlclustermaintenancewindow">Get<wbr>Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window settings of the MySQL cluster. The structure is documented below.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mysql_config_python">
@@ -1568,6 +1604,134 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets whether the host should get a public IP address on creation. Changing this parameter for an existing host is not supported at the moment
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getmdbmysqlclustermaintenancewindow">Get<wbr>Mdb<wbr>Mysql<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Value is one of: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Values is between 0 and 23.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Value is one of: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Values is between 0 and 23.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Value is one of: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Values is between 0 and 23.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Day of the week (in `DDD` format). Value is one of: "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Hour of the day in UTC (in `HH` format). Values is between 0 and 23.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of maintenance window. Can be either `ANYTIME` or `WEEKLY`. A day and hour of window need to be specified with weekly window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

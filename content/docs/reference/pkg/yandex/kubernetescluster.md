@@ -174,7 +174,7 @@ zonal_cluster_resource_name = yandex.KubernetesCluster("zonalClusterResourceName
     master=yandex.KubernetesClusterMasterArgs(
         maintenance_policy={
             "autoUpgrade": True,
-            "maintenanceWindow": [{
+            "maintenance_window": [{
                 "duration": "3h",
                 "startTime": "15:00",
             }],

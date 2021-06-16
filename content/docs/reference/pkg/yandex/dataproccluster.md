@@ -100,7 +100,6 @@ class MyStack : Stack
             ZoneId = "ru-central1-b",
             ClusterConfig = new Yandex.Inputs.DataprocClusterClusterConfigArgs
             {
-                VersionId = "1.0",
                 Hadoop = new Yandex.Inputs.DataprocClusterClusterConfigHadoopArgs
                 {
                     Services = 
@@ -131,7 +130,7 @@ class MyStack : Stack
                         {
                             ResourcePresetId = "s2.small",
                             DiskTypeId = "network-hdd",
-                            DiskSize = 16,
+                            DiskSize = 20,
                         },
                         SubnetId = fooVpcSubnet.Id,
                         HostsCount = 1,
@@ -144,10 +143,45 @@ class MyStack : Stack
                         {
                             ResourcePresetId = "s2.small",
                             DiskTypeId = "network-hdd",
-                            DiskSize = 16,
+                            DiskSize = 20,
                         },
                         SubnetId = fooVpcSubnet.Id,
                         HostsCount = 2,
+                    },
+                    new Yandex.Inputs.DataprocClusterClusterConfigSubclusterSpecArgs
+                    {
+                        Name = "compute",
+                        Role = "COMPUTENODE",
+                        Resources = new Yandex.Inputs.DataprocClusterClusterConfigSubclusterSpecResourcesArgs
+                        {
+                            ResourcePresetId = "s2.small",
+                            DiskTypeId = "network-hdd",
+                            DiskSize = 20,
+                        },
+                        SubnetId = fooVpcSubnet.Id,
+                        HostsCount = 2,
+                    },
+                    new Yandex.Inputs.DataprocClusterClusterConfigSubclusterSpecArgs
+                    {
+                        Name = "compute_autoscaling",
+                        Role = "COMPUTENODE",
+                        Resources = new Yandex.Inputs.DataprocClusterClusterConfigSubclusterSpecResourcesArgs
+                        {
+                            ResourcePresetId = "s2.small",
+                            DiskTypeId = "network-hdd",
+                            DiskSize = 20,
+                        },
+                        SubnetId = fooVpcSubnet.Id,
+                        HostsCount = 2,
+                        AutoscalingConfig = new Yandex.Inputs.DataprocClusterClusterConfigSubclusterSpecAutoscalingConfigArgs
+                        {
+                            MaxHostsCount = 10,
+                            MeasurementDuration = 60,
+                            WarmupDuration = 60,
+                            StabilizationDuration = 120,
+                            Preemptible = false,
+                            DecommissionTimeout = 60,
+                        },
                     },
                 },
             },
@@ -211,7 +245,6 @@ foo_dataproc_cluster = yandex.DataprocCluster("fooDataprocCluster",
     service_account_id=dataproc_iam_service_account.id,
     zone_id="ru-central1-b",
     cluster_config=yandex.DataprocClusterClusterConfigArgs(
-        version_id="1.0",
         hadoop=yandex.DataprocClusterClusterConfigHadoopArgs(
             services=[
                 "HDFS",
@@ -233,7 +266,7 @@ foo_dataproc_cluster = yandex.DataprocCluster("fooDataprocCluster",
                 resources=yandex.DataprocClusterClusterConfigSubclusterSpecResourcesArgs(
                     resource_preset_id="s2.small",
                     disk_type_id="network-hdd",
-                    disk_size=16,
+                    disk_size=20,
                 ),
                 subnet_id=foo_vpc_subnet.id,
                 hosts_count=1,
@@ -244,10 +277,40 @@ foo_dataproc_cluster = yandex.DataprocCluster("fooDataprocCluster",
                 resources=yandex.DataprocClusterClusterConfigSubclusterSpecResourcesArgs(
                     resource_preset_id="s2.small",
                     disk_type_id="network-hdd",
-                    disk_size=16,
+                    disk_size=20,
                 ),
                 subnet_id=foo_vpc_subnet.id,
                 hosts_count=2,
+            ),
+            yandex.DataprocClusterClusterConfigSubclusterSpecArgs(
+                name="compute",
+                role="COMPUTENODE",
+                resources=yandex.DataprocClusterClusterConfigSubclusterSpecResourcesArgs(
+                    resource_preset_id="s2.small",
+                    disk_type_id="network-hdd",
+                    disk_size=20,
+                ),
+                subnet_id=foo_vpc_subnet.id,
+                hosts_count=2,
+            ),
+            yandex.DataprocClusterClusterConfigSubclusterSpecArgs(
+                name="compute_autoscaling",
+                role="COMPUTENODE",
+                resources=yandex.DataprocClusterClusterConfigSubclusterSpecResourcesArgs(
+                    resource_preset_id="s2.small",
+                    disk_type_id="network-hdd",
+                    disk_size=20,
+                ),
+                subnet_id=foo_vpc_subnet.id,
+                hosts_count=2,
+                autoscaling_config=yandex.DataprocClusterClusterConfigSubclusterSpecAutoscalingConfigArgs(
+                    max_hosts_count=10,
+                    measurement_duration=60,
+                    warmup_duration=60,
+                    stabilization_duration=120,
+                    preemptible=False,
+                    decommission_timeout=60,
+                ),
             ),
         ],
     ),
@@ -304,7 +367,6 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
     serviceAccountId: dataprocIamServiceAccount.id,
     zoneId: "ru-central1-b",
     clusterConfig: {
-        versionId: "1.0",
         hadoop: {
             services: [
                 "HDFS",
@@ -326,7 +388,7 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
                 resources: {
                     resourcePresetId: "s2.small",
                     diskTypeId: "network-hdd",
-                    diskSize: 16,
+                    diskSize: 20,
                 },
                 subnetId: fooVpcSubnet.id,
                 hostsCount: 1,
@@ -337,10 +399,40 @@ const fooDataprocCluster = new yandex.DataprocCluster("fooDataprocCluster", {
                 resources: {
                     resourcePresetId: "s2.small",
                     diskTypeId: "network-hdd",
-                    diskSize: 16,
+                    diskSize: 20,
                 },
                 subnetId: fooVpcSubnet.id,
                 hostsCount: 2,
+            },
+            {
+                name: "compute",
+                role: "COMPUTENODE",
+                resources: {
+                    resourcePresetId: "s2.small",
+                    diskTypeId: "network-hdd",
+                    diskSize: 20,
+                },
+                subnetId: fooVpcSubnet.id,
+                hostsCount: 2,
+            },
+            {
+                name: "compute_autoscaling",
+                role: "COMPUTENODE",
+                resources: {
+                    resourcePresetId: "s2.small",
+                    diskTypeId: "network-hdd",
+                    diskSize: 20,
+                },
+                subnetId: fooVpcSubnet.id,
+                hostsCount: 2,
+                autoscalingConfig: {
+                    maxHostsCount: 10,
+                    measurementDuration: 60,
+                    warmupDuration: 60,
+                    stabilizationDuration: 120,
+                    preemptible: false,
+                    decommissionTimeout: 60,
+                },
             },
         ],
     },
@@ -1917,6 +2009,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the subnet, to which hosts of the subcluster belong. Subnets of all the subclusters must belong to the same VPC network.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="autoscalingconfig_csharp">
+<a href="#autoscalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocclusterclusterconfigsubclusterspecautoscalingconfig">Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1973,6 +2074,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet, to which hosts of the subcluster belong. Subnets of all the subclusters must belong to the same VPC network.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autoscalingconfig_go">
+<a href="#autoscalingconfig_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocclusterclusterconfigsubclusterspecautoscalingconfig">Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Autoscaling configuration for compute subclusters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -2033,6 +2143,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the subnet, to which hosts of the subcluster belong. Subnets of all the subclusters must belong to the same VPC network.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="autoscalingconfig_nodejs">
+<a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocclusterclusterconfigsubclusterspecautoscalingconfig">Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -2091,6 +2210,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the subnet, to which hosts of the subcluster belong. Subnets of all the subclusters must belong to the same VPC network.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="autoscaling_config_python">
+<a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataprocclusterclusterconfigsubclusterspecautoscalingconfig">Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Autoscaling configuration for compute subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -2098,6 +2226,276 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) ID of a new Data Proc cluster.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="dataprocclusterclusterconfigsubclusterspecautoscalingconfig">Dataproc<wbr>Cluster<wbr>Cluster<wbr>Config<wbr>Subcluster<wbr>Spec<wbr>Autoscaling<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxhostscount_csharp">
+<a href="#maxhostscount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hosts<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpuutilizationtarget_csharp">
+<a href="#cpuutilizationtarget_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decommissiontimeout_csharp">
+<a href="#decommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurementduration_csharp">
+<a href="#measurementduration_csharp" style="color: inherit; text-decoration: inherit;">Measurement<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_csharp">
+<a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stabilizationduration_csharp">
+<a href="#stabilizationduration_csharp" style="color: inherit; text-decoration: inherit;">Stabilization<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmupduration_csharp">
+<a href="#warmupduration_csharp" style="color: inherit; text-decoration: inherit;">Warmup<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxhostscount_go">
+<a href="#maxhostscount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hosts<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpuutilizationtarget_go">
+<a href="#cpuutilizationtarget_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decommissiontimeout_go">
+<a href="#decommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurementduration_go">
+<a href="#measurementduration_go" style="color: inherit; text-decoration: inherit;">Measurement<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_go">
+<a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stabilizationduration_go">
+<a href="#stabilizationduration_go" style="color: inherit; text-decoration: inherit;">Stabilization<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmupduration_go">
+<a href="#warmupduration_go" style="color: inherit; text-decoration: inherit;">Warmup<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxhostscount_nodejs">
+<a href="#maxhostscount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hosts<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpuutilizationtarget_nodejs">
+<a href="#cpuutilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decommissiontimeout_nodejs">
+<a href="#decommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurementduration_nodejs">
+<a href="#measurementduration_nodejs" style="color: inherit; text-decoration: inherit;">measurement<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_nodejs">
+<a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stabilizationduration_nodejs">
+<a href="#stabilizationduration_nodejs" style="color: inherit; text-decoration: inherit;">stabilization<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmupduration_nodejs">
+<a href="#warmupduration_nodejs" style="color: inherit; text-decoration: inherit;">warmup<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="max_hosts_count_python">
+<a href="#max_hosts_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hosts_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of nodes in autoscaling subclusters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_utilization_target_python">
+<a href="#cpu_utilization_target_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Defines an autoscaling rule based on the average CPU utilization of the instance group. If not set default autoscaling metric will be used.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decommission_timeout_python">
+<a href="#decommission_timeout_python" style="color: inherit; text-decoration: inherit;">decommission_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout to gracefully decommission nodes during downscaling. In seconds.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="measurement_duration_python">
+<a href="#measurement_duration_python" style="color: inherit; text-decoration: inherit;">measurement_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Time in seconds allotted for averaging metrics.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="preemptible_python">
+<a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool flag -- whether to use preemptible compute instances. Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time if their resources are needed by Compute. For more information, see [Preemptible Virtual Machines](https://cloud.yandex.com/docs/compute/concepts/preemptible-vm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stabilization_duration_python">
+<a href="#stabilization_duration_python" style="color: inherit; text-decoration: inherit;">stabilization_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum amount of time in seconds allotted for monitoring before Instance Groups can reduce the number of instances in the group. During this time, the group size doesn't decrease, even if the new metric values indicate that it should.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmup_duration_python">
+<a href="#warmup_duration_python" style="color: inherit; text-decoration: inherit;">warmup_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The warmup time of the instance in seconds. During this time, traffic is sent to the instance, but instance metrics are not collected.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

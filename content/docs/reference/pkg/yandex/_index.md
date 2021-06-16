@@ -14,6 +14,8 @@ A Pulumi package for creating and managing yandex cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="albbackendgroup" title="AlbBackendGroup"><span class="symbol resource"></span>AlbBackendGroup</a></li>
+    <li><a href="albhttprouter" title="AlbHttpRouter"><span class="symbol resource"></span>AlbHttpRouter</a></li>
     <li><a href="albtargetgroup" title="AlbTargetGroup"><span class="symbol resource"></span>AlbTargetGroup</a></li>
     <li><a href="apigateway" title="ApiGateway"><span class="symbol resource"></span>ApiGateway</a></li>
     <li><a href="computedisk" title="ComputeDisk"><span class="symbol resource"></span>ComputeDisk</a></li>
@@ -64,6 +66,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="storagebucket" title="StorageBucket"><span class="symbol resource"></span>StorageBucket</a></li>
     <li><a href="storageobject" title="StorageObject"><span class="symbol resource"></span>StorageObject</a></li>
     <li><a href="vpcaddress" title="VpcAddress"><span class="symbol resource"></span>VpcAddress</a></li>
+    <li><a href="vpcdefaultsecuritygroup" title="VpcDefaultSecurityGroup"><span class="symbol resource"></span>VpcDefaultSecurityGroup</a></li>
     <li><a href="vpcnetwork" title="VpcNetwork"><span class="symbol resource"></span>VpcNetwork</a></li>
     <li><a href="vpcroutetable" title="VpcRouteTable"><span class="symbol resource"></span>VpcRouteTable</a></li>
     <li><a href="vpcsecuritygroup" title="VpcSecurityGroup"><span class="symbol resource"></span>VpcSecurityGroup</a></li>
@@ -74,6 +77,8 @@ A Pulumi package for creating and managing yandex cloud resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getalbbackendgroup" title="GetAlbBackendGroup"><span class="symbol function"></span>GetAlbBackendGroup</a></li>
+    <li><a href="getalbhttprouter" title="GetAlbHttpRouter"><span class="symbol function"></span>GetAlbHttpRouter</a></li>
     <li><a href="getalbtargetgroup" title="GetAlbTargetGroup"><span class="symbol function"></span>GetAlbTargetGroup</a></li>
     <li><a href="getapigateway" title="GetApiGateway"><span class="symbol function"></span>GetApiGateway</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
@@ -128,6 +133,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
