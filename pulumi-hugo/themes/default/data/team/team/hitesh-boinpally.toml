@@ -1,9 +1,7 @@
 id = "hitesh-boinpally"
 name = "Hitesh Boinpally"
-title = "Software Engineer Intern"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "hiteshboinpally"
